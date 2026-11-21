@@ -14282,6 +14282,23 @@ Level: 45
 Rattata
 Level: 46
 
+=== TRAINER_GANG_YELL_MARLA ===
+Name: MARLA
+Class: Team Yell
+Pic: Lass Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Nickit
+Level: 10
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Purrloin
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_GANG_MAXIE ===
 Name: MAXIE
 Class: Magma Leader

@@ -40,6 +40,11 @@ PewterCity_Gym_EventScript_Liam::
 	msgbox PewterCity_Gym_Text_LiamPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+PewterCity_Gym_EventScript_Marla::
+	trainerbattle_single TRAINER_GANG_YELL_MARLA, PewterCity_Gym_Text_MarlaIntro, PewterCity_Gym_Text_MarlaDefeat
+	msgbox PewterCity_Gym_Text_MarlaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 PewterCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
@@ -144,6 +149,18 @@ PewterCity_Gym_Text_LiamDefeat::
 PewterCity_Gym_Text_LiamPostBattle::
 	.string "You're pretty hot.\n"
 	.string "…But not as hot as PIERS!$"
+
+PewterCity_Gym_Text_MarlaIntro::
+	.string "Oi! Nobody gets to PIERS without\n"
+	.string "gettin' past TEAM YELL first!$"
+
+PewterCity_Gym_Text_MarlaDefeat::
+	.string "Ugh… Can't even yell\n"
+	.string "loud enough to win!$"
+
+PewterCity_Gym_Text_MarlaPostBattle::
+	.string "Fine, go on. PIERS'll show ya\n"
+	.string "what real noise sounds like!$"
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
 	.string "Hiya!\n"

@@ -15,6 +15,7 @@ Basis: RHH's pokeemerald-expansion 1.17.2 (https://github.com/rh-hideout/pokeeme
 | Team-Magma-Rüpel ORAS (Overworld) | `magma_grunt_oras.png` | *bitte nachtragen* |
 | Nezz/Piers (Overworld) | `piers.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Team-Yell-Rüpel (Overworld) | `yell_grunt.png` | vom User geliefert, Künstler *bitte nachtragen* |
+| Team-Yell-Rüpelin (Overworld) | `yell_grunt_f.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Bromley/Guzma (Overworld + Kampfbild) | `guzma.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Flordelis/Lysandre (Overworld + Kampfbild) | `lysandre.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Team-Galaktik-Rüpel (Overworld) | `galactic_grunt.png` | vom User geliefert, Künstler *bitte nachtragen* |

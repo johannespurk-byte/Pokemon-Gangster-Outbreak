@@ -671,8 +671,9 @@
 //       MAX_TRAINERS_COUNT_FRLG can be increased but will take up additional saveblock space
 
 #define TRAINER_GANG_MAXIE                         660 // Gangster Outbreak: Celadon gym partner
+#define TRAINER_GANG_YELL_MARLA                    661 // Gangster Outbreak: Team Yell grunt in the Pewter gym
 
-#define TRAINERS_COUNT_FRLG                      661
+#define TRAINERS_COUNT_FRLG                      662
 #define MAX_TRAINERS_COUNT_FRLG                  768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_FRLG_H
