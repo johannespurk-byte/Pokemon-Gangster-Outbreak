@@ -37,6 +37,7 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn_Frlg::
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	special HealPlayerParty
+	special GangItems_Recharge
 	return
 
 EventScript_PkmnCenterNurse_CheckTrainerTowerAndUnionRoom_Frlg::
@@ -77,18 +78,20 @@ Movement_Bow::
 	step_end
 
 Text_WelcomeWantToHealPkmn_Frlg::
-	.string "Welcome to our POKéMON CENTER!\p"
-	.string "Would you like me to heal your\n"
-	.string "POKéMON back to perfect health?$"
+	.string "BZZT… HEAL-BOT ONLINE.\p"
+	.string "The nurses fled when the city fell.\n"
+	.string "This unit remains operational.\p"
+	.string "Restore POKéMON and recharge\n"
+	.string "your gadgets?$"
 
 Text_TakeYourPkmnForFewSeconds_Frlg::
-	.string "Okay, I'll take your POKéMON for a\n"
-	.string "few seconds.$"
+	.string "Scanning POKéMON…\n"
+	.string "Please stand by.$"
 
 Text_WeHopeToSeeYouAgain_Frlg::
-	.string "We hope to see you again!$"
+	.string "HEAL-BOT returning to standby.$"
 
 Text_RestoredPkmnToFullHealth_Frlg::
-	.string "Thank you for waiting.\n"
-	.string "We've restored your POKéMON to\l"
-	.string "full health.$"
+	.string "Treatment complete. POKéMON restored,\n"
+	.string "POKé VIAL and AUTO-REPEL\l"
+	.string "recharged.$"

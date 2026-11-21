@@ -1,13 +1,13 @@
 gText_HowMayIServeYou::
-	.string "Welcome!\p"
-	.string "How may I serve you?$"
+	.string "KLONK! VENDING MACHINE READY.\p"
+	.string "Insert money. Choose product.$"
 
 gText_PleaseComeAgain::
-	.string "Please come again!$"
+	.string "BRRR… Thank you. Stay dangerous.$"
 
 gText_PlayerWhatCanIDoForYou::
-	.string "{PLAYER}{KUN}, welcome!\p"
-	.string "What can I do for you?$"
+	.string "KLONK! Hello, {PLAYER}{KUN}.\p"
+	.string "Insert money. Choose product.$"
 
 Pokemart_DefaultItemList::
 	.2byte ITEM_ULTRA_BALL
