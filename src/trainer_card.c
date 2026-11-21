@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_custom.h"
 #include "scanline_effect.h"
 #include "palette.h"
 #include "task.h"
@@ -1898,6 +1899,15 @@ static void CreateTrainerCardTrainerPic(void)
     if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers)
     {
         CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass),
+                    TRUE,
+                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
+                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
+                    8,
+                    WIN_TRAINER_PIC);
+    }
+    else if (!sData->isLink && PlayerCustom_UsesCustomPic(sData->trainerCard.gender))
+    {
+        CreateTrainerCardTrainerPicSprite(TRAINER_PIC_PLAYER_CUSTOM,
                     TRUE,
                     sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
                     sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],

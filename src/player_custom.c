@@ -4,6 +4,7 @@
 #include "palette.h"
 #include "player_custom.h"
 #include "sprite.h"
+#include "data.h"
 #include "constants/event_objects.h"
 #include "constants/rgb.h"
 
@@ -21,6 +22,11 @@ struct PlayerPartData
     u8 neck[18];
     u8 stateHead;
     bool8 female;
+    u16 frontPic;      // enum TrainerPicID
+    u16 backPic;       // enum TrainerPicID (heroes' own, villains borrow one)
+    bool8 ownBackPic;
+    u8 frontRoles[16]; // per palette colour: role << 2 | shade (role 0 = keep)
+    u8 backRoles[16];
 };
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HilbertNormal;
@@ -49,6 +55,10 @@ EWRAM_DATA struct ObjectEventGraphicsInfo gPlayerCustomGraphicsInfo[PLAYER_CUSTO
 EWRAM_DATA u16 gPlayerCustomPalette[16] = {0};
 static EWRAM_DATA u8 sPlayerCustomGfx[NUM_WALK_FRAMES * FRAME_SIZE_16x32] ALIGNED(4) = {0};
 static EWRAM_DATA u32 sComposedMagic = 0;
+EWRAM_DATA struct TrainerFrontPicInfo gPlayerCustomFrontPicInfo = {0};
+EWRAM_DATA struct TrainerBackPicInfo gPlayerCustomBackPicInfo = {0};
+static EWRAM_DATA u16 sPlayerCustomFrontPal[16] = {0};
+static EWRAM_DATA u16 sPlayerCustomBackPal[16] = {0};
 static EWRAM_DATA struct PlayerLook sComposedLook = {0};
 
 static const struct SpriteFrameImage sPicTable_PlayerCustomNormal[] = {
@@ -212,6 +222,48 @@ static void SetupGraphicsInfo(u32 state, const struct ObjectEventGraphicsInfo *b
     gPlayerCustomGraphicsInfo[state].images = images;
 }
 
+enum { PIC_ROLE_KEEP, PIC_ROLE_SKIN, PIC_ROLE_HAIR, PIC_ROLE_HAT, PIC_ROLE_TOP, PIC_ROLE_BOTTOM, PIC_ROLE_COUNT };
+static const u8 sPicRoleFirstSlot[PIC_ROLE_COUNT] = {0, SLOT_SKIN, SLOT_HAIR, SLOT_HAT, SLOT_TOP, SLOT_BOTTOM};
+
+// Recolour a trainer pic palette with the colours of the composed overworld palette
+static void RecolorPicPalette(u16 *dest, const u16 *src, const u8 *roles, const bool8 *roleOn)
+{
+    u32 i;
+
+    for (i = 0; i < 16; i++)
+    {
+        u32 role = roles[i] >> 2;
+        dest[i] = src[i];
+        if (role != PIC_ROLE_KEEP && role < PIC_ROLE_COUNT && roleOn[role])
+            dest[i] = gPlayerCustomPalette[sPicRoleFirstSlot[role] + (roles[i] & 3)];
+    }
+}
+
+static void ComposeTrainerPics(const struct PlayerLook *look)
+{
+    const struct PlayerPartData *outfit = &sPlayerParts[look->outfit];
+    bool8 headChanged = (look->head != look->outfit);
+    bool8 roleOn[PIC_ROLE_COUNT];
+
+    // front pic: the outfit's trainer, head colours from the chosen head, clothes only if recoloured
+    roleOn[PIC_ROLE_KEEP] = FALSE;
+    roleOn[PIC_ROLE_SKIN] = headChanged || look->colors[PLAYER_COLOR_SKIN] != 0;
+    roleOn[PIC_ROLE_HAIR] = headChanged || look->colors[PLAYER_COLOR_HAIR] != 0;
+    roleOn[PIC_ROLE_HAT] = headChanged || look->colors[PLAYER_COLOR_HAT] != 0;
+    roleOn[PIC_ROLE_TOP] = look->colors[PLAYER_COLOR_TOP] != 0;
+    roleOn[PIC_ROLE_BOTTOM] = look->colors[PLAYER_COLOR_BOTTOM] != 0;
+    memcpy(&gPlayerCustomFrontPicInfo, gTrainerPicInfo[outfit->frontPic].frontPic, sizeof(gPlayerCustomFrontPicInfo));
+    RecolorPicPalette(sPlayerCustomFrontPal, gTrainerPicInfo[outfit->frontPic].frontPic->paletteData, outfit->frontRoles, roleOn);
+    gPlayerCustomFrontPicInfo.paletteData = sPlayerCustomFrontPal;
+
+    // back pic: a borrowed hero back pic takes all colours of the outfit
+    if (!outfit->ownBackPic)
+        roleOn[PIC_ROLE_TOP] = roleOn[PIC_ROLE_BOTTOM] = roleOn[PIC_ROLE_SKIN] = roleOn[PIC_ROLE_HAIR] = roleOn[PIC_ROLE_HAT] = TRUE;
+    memcpy(&gPlayerCustomBackPicInfo, gTrainerPicInfo[outfit->backPic].backPic, sizeof(gPlayerCustomBackPicInfo));
+    RecolorPicPalette(sPlayerCustomBackPal, gTrainerPicInfo[outfit->backPic].backPic->paletteData, outfit->backRoles, roleOn);
+    gPlayerCustomBackPicInfo.paletteData = sPlayerCustomBackPal;
+}
+
 static void ComposeAll(void)
 {
     struct PlayerLook look;
@@ -224,6 +276,7 @@ static void ComposeAll(void)
 
     ComposeWalkFrames(look.head, look.outfit, sPlayerCustomGfx);
     ComposePalette(&look, gPlayerCustomPalette);
+    ComposeTrainerPics(&look);
 
     SetupGraphicsInfo(PLAYER_CUSTOM_STATE_NORMAL,    &gObjectEventGraphicsInfo_HilbertNormal,    sPicTable_PlayerCustomNormal);
     SetupGraphicsInfo(PLAYER_CUSTOM_STATE_BIKE,      &gObjectEventGraphicsInfo_HilbertMachBike,  sPlayerPartStatePics[stateHead][PLAYER_CUSTOM_STATE_BIKE]);
@@ -254,6 +307,15 @@ void PlayerCustom_RefreshLoadedPalette(void)
         LoadPalette(gPlayerCustomPalette, OBJ_PLTT_ID(index), PLTT_SIZE_4BPP);
         UpdateSpritePaletteWithWeather(index, FALSE);
     }
+}
+
+// TRUE when the player's own trainer pic should be the builder's TRAINER_PIC_PLAYER_CUSTOM
+bool32 PlayerCustom_UsesCustomPic(enum Gender gender)
+{
+    if (!PlayerCustom_IsEnabled() || gender != gSaveBlock2Ptr->playerGender)
+        return FALSE;
+    PlayerCustom_EnsureComposed();
+    return TRUE;
 }
 
 // ---------------------------------------------------------------------------- save data

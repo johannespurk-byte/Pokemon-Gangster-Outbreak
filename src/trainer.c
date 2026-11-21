@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_custom.h"
 #include "constants/trainers.h"
 
 static enum TrainerPicID GetEmeraldTrainerPic(enum Gender gender)
@@ -17,6 +18,9 @@ static enum TrainerPicID GetKantoTrainerPic(enum Gender gender)
 
 enum TrainerPicID GetPlayerTrainerPic(enum Gender gender, enum GameVersion version)
 {
+    if (version == GAME_VERSION && PlayerCustom_UsesCustomPic(gender))
+        return TRAINER_PIC_PLAYER_CUSTOM;
+
     switch (version)
     {
         case VERSION_SAPPHIRE:

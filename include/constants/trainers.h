@@ -193,6 +193,8 @@ enum __attribute__((packed)) TrainerPicID
     TRAINER_PIC_VICTOR,
     TRAINER_PIC_GLORIA,
 
+    // Player built with the character builder (front/back info assembled in EWRAM, see player_custom.c)
+    TRAINER_PIC_PLAYER_CUSTOM,
     // Villain teams (Gangster Outbreak)
     TRAINER_PIC_CYRUS,
     TRAINER_PIC_PLASMA_GRUNT_M_BW2,

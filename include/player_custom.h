@@ -42,6 +42,7 @@ u8 PlayerCustom_GetAvatarFlag(u16 graphicsId);
 enum Gender PlayerCustom_GetGender(void);
 void PlayerCustom_EnsureComposed(void);
 void PlayerCustom_RefreshLoadedPalette(void);
+bool32 PlayerCustom_UsesCustomPic(enum Gender gender);
 
 // Data for the builder screen
 const u8 *PlayerCustom_GetPartName(u8 part);

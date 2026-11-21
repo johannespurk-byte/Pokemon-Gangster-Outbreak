@@ -661,8 +661,12 @@ const union AnimCmd *const sBackAnims_OldManPokedude[] = {
         .animation = anim,                                                                   \
     }}
 
+extern struct TrainerFrontPicInfo gPlayerCustomFrontPicInfo;
+extern struct TrainerBackPicInfo gPlayerCustomBackPicInfo;
+
 const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
 {
+    [TRAINER_PIC_PLAYER_CUSTOM] = {.frontPic = &gPlayerCustomFrontPicInfo, .backPic = &gPlayerCustomBackPicInfo},
     [TRAINER_PIC_NONE] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_None, gTrainerPalette_None),

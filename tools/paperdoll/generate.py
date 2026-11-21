@@ -54,6 +54,31 @@ TEMPLATES = [
     ("aqua_f", "AQUA♀", "people/team_aqua/aqua_member_f.png", True, "lucas"),
     ("archie", "ARCHIE", "people/team_aqua/archie.png", False, "lucas"),
 ]
+# trainer pics: (front pic id, front palette symbol, back pic id, back palette symbol); villains borrow a hero back pic
+PICS_FOR = {
+    "red": ("RED", "Red", "RED", "Red"), "leaf": ("LEAF", "Leaf", "LEAF", "Leaf"),
+    "lucas": ("LUCAS", "Lucas", "LUCAS", "Lucas"), "dawn": ("DAWN", "Dawn", "DAWN", "Dawn"),
+    "hilbert": ("HILBERT", "Hilbert", "HILBERT", "Hilbert"), "hilda": ("HILDA", "Hilda", "HILDA", "Hilda"),
+    "nate": ("NATE", "Nate", "NATE", "Nate"), "rosa": ("ROSA", "Rosa", "ROSA", "Rosa"),
+    "calem": ("CALEM", "Calem", "CALEM", "Calem"), "serena": ("SERENA", "Serena", "SERENA", "Serena"),
+    "elio": ("ELIO", "Elio", "ELIO", "Elio"), "selene": ("SELENE", "Selene", "SELENE", "Selene"),
+    "victor": ("VICTOR", "Victor", "VICTOR", "Victor"), "gloria": ("GLORIA", "Gloria", "GLORIA", "Gloria"),
+    "rocket_m": ("ROCKET_GRUNT_M_FRLG", "RocketGruntMFrlg", "HILBERT", "Hilbert"),
+    "rocket_f": ("ROCKET_GRUNT_F_FRLG", "RocketGruntFFrlg", "HILDA", "Hilda"),
+    "giovanni": ("LEADER_GIOVANNI_FRLG", "LeaderGiovanniFrlg", "NATE", "Nate"),
+    "cyrus": ("CYRUS", "Cyrus", "NATE", "Nate"),
+    "magma_oras": ("MAGMA_GRUNT_M", "MagmaGruntM", "HILBERT", "Hilbert"),
+    "magma_m": ("MAGMA_GRUNT_M", "MagmaGruntM", "HILBERT", "Hilbert"),
+    "magma_f": ("MAGMA_GRUNT_F", "MagmaGruntF", "HILDA", "Hilda"),
+    "maxie": ("MAGMA_LEADER_MAXIE", "MagmaLeaderMaxie", "NATE", "Nate"),
+    "aqua_m": ("AQUA_GRUNT_M", "AquaGruntM", "HILBERT", "Hilbert"),
+    "aqua_f": ("AQUA_GRUNT_F", "AquaGruntF", "HILDA", "Hilda"),
+    "archie": ("AQUA_LEADER_ARCHIE", "AquaLeaderArchie", "LUCAS", "Lucas"),
+}
+# pic palette roles: 0 keep, 1 skin, 2 hair, 3 hat, 4 top, 5 bottom (stored as role << 2 | shade)
+PIC_ROLES = {"skin": 1, "hair": 2, "hat": 3, "top": 4, "bottom": 5}
+SLOT_ROLE = {s: r for r, slots in SLOTS.items() for s in slots}
+
 STATE_HEADS = ["lucas", "dawn", "hilbert", "hilda", "nate", "rosa", "calem", "serena", "elio", "selene", "victor", "gloria"]
 STATES = [("bike", "mach_bike", 9), ("surf", "surfing", 6), ("fish", "fishing", 12), ("fieldmove", "field_move", 5)]
 
@@ -144,7 +169,48 @@ def standardise(name):
             count[v][s] += 1
         out.append(g)
     by_index = {v: max(c, key=c.get) for v, c in count.items()}
+    standardise.origpal[name] = pal
     return out, stdpal, by_index, necks
+
+
+standardise.origpal = {}
+
+
+def pal_path(symbol, back):
+    import re
+    src = open("src/data/graphics/trainers.h").read()
+    var = ("gTrainerBackPicPalette_" if back else "gTrainerPalette_") + symbol
+    m = re.search(re.escape(var) + r'\[\] = INCGFX_U16\("([^"]+)"', src)
+    assert m, var
+    path = m.group(1)
+    if path.endswith(".pal"):
+        return read_jasc(path)
+    p = Image.open(path).getpalette()
+    return [tuple(p[i * 3:i * 3 + 3]) for i in range(16)]
+
+
+def pic_roles(ow_name, picpal, by_index):
+    """match each pic palette colour to the closest walking-sheet colour of the same character"""
+    ow = standardise.origpal[ow_name]
+    roles = [0] * 16
+    members = {}
+    for i in range(1, 16):
+        best, bestd = None, 1e9
+        for idx, slot in by_index.items():
+            role = SLOT_ROLE.get(slot)
+            if role not in PIC_ROLES:
+                continue
+            d = sum((a - b) ** 2 for a, b in zip(picpal[i], ow[idx]))
+            if d < bestd:
+                best, bestd = role, d
+        if best is not None and bestd < 60 ** 2:
+            members.setdefault(best, []).append(i)
+    for role, idxs in members.items():
+        n = len(SLOTS[role])
+        idxs.sort(key=lambda i: -lum(picpal[i]))
+        for k, i in enumerate(idxs):
+            roles[i] = (PIC_ROLES[role] << 2) | min(n - 1, k * n // len(idxs))
+    return roles
 
 
 def save_sheet(frames, pal, path):
@@ -172,6 +238,12 @@ def main():
     for name, *_ in TEMPLATES:
         frames, pal, by_index, necks = standardise(name)
         std[name] = (pal, by_index, necks)
+    picinfo = {}
+    for name, *_ in TEMPLATES:
+        fpic, fsym, bpic, bsym = PICS_FOR[name]
+        back_owner = next(t[0] for t in TEMPLATES if PICS_FOR[t[0]][1] == bsym)
+        picinfo[name] = (fpic, pic_roles(name, pal_path(fsym, False), std[name][1]),
+                         bpic, pic_roles(back_owner, pal_path(bsym, True), std[back_owner][1]), back_owner == name)
         save_sheet(frames, pal, OUT + name + ".png")
     for name in STATE_HEADS:
         pal, by_index, _ = std[name]
@@ -228,6 +300,12 @@ def main():
         L.append("        .neck = {%s}," % ", ".join(str(n) for n in necks))
         L.append("        .stateHead = PLAYER_STATE_HEAD_%s," % state_head.upper())
         L.append("        .female = %s," % ("TRUE" if female else "FALSE"))
+        fpic, froles, bpic, broles, ownback = picinfo[name]
+        L.append("        .frontPic = TRAINER_PIC_%s," % fpic)
+        L.append("        .backPic = TRAINER_PIC_%s," % bpic)
+        L.append("        .ownBackPic = %s," % ("TRUE" if ownback else "FALSE"))
+        L.append("        .frontRoles = {%s}," % ", ".join(str(r) for r in froles))
+        L.append("        .backRoles = {%s}," % ", ".join(str(r) for r in broles))
         L.append("    },")
     L.append("};")
     open(HEADER, "w").write("\n".join(L) + "\n")

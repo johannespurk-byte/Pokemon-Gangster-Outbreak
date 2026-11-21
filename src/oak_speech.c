@@ -2225,12 +2225,45 @@ static void DestroyPikachuOrPlatformSprites(u8 taskId, u8 spriteType)
     }
 }
 
+// Gangster Outbreak: show the character builder's front pic (4bpp 64x64) in the 8bpp 64x96 pic area
+static void LoadCustomPlayerPic(u16 tileOffset)
+{
+    const struct TrainerFrontPicInfo *front = gTrainerPicInfo[TRAINER_PIC_PLAYER_CUSTOM].frontPic;
+    u8 *pic4 = AllocZeroed(max(GetDecompressedDataSize(front->imageData), TRAINER_PIC_SIZE));
+    u8 *pic8 = AllocZeroed(0x60 * TILE_SIZE_8BPP);
+    u32 tile, i;
+
+    DecompressDataWithHeaderWram(front->imageData, pic4);
+    // 64x64 = 8x8 tiles, placed in the bottom 8 tile rows of the 8x12 area; colours use BG palette 4
+    for (tile = 0; tile < 64; tile++)
+    {
+        u8 *src = pic4 + tile * TILE_SIZE_4BPP;
+        u8 *dst = pic8 + ((tile / 8 + 4) * 8 + tile % 8) * TILE_SIZE_8BPP;
+        for (i = 0; i < TILE_SIZE_4BPP; i++)
+        {
+            u8 lo = src[i] & 0xF, hi = src[i] >> 4;
+            dst[i * 2] = lo ? BG_PLTT_ID(4) + lo : 0;
+            dst[i * 2 + 1] = hi ? BG_PLTT_ID(4) + hi : 0;
+        }
+    }
+    LoadPalette(front->paletteData, BG_PLTT_ID(4), PLTT_SIZE_4BPP);
+    CpuCopy16(pic8, (void *)VRAM + 0x600 + tileOffset, 0x60 * TILE_SIZE_8BPP);
+    Free(pic4);
+    Free(pic8);
+}
+
 static void LoadTrainerPic(u16 whichPic, u16 tileOffset)
 {
     u32 i;
 
+    if ((whichPic == MALE_PLAYER_PIC || whichPic == FEMALE_PLAYER_PIC) && PlayerCustom_UsesCustomPic(gSaveBlock2Ptr->playerGender))
+        whichPic = 0xFF; // marker for the builder's pic
+
     switch (whichPic)
     {
+    case 0xFF:
+        LoadCustomPlayerPic(tileOffset);
+        break;
     case MALE_PLAYER_PIC:
         LoadPalette(sOakSpeech_Red_Pal, BG_PLTT_ID(4), sizeof(sOakSpeech_Red_Pal));
         DecompressDataWithHeaderVram(sOakSpeech_Red_Tiles, (void *)VRAM + 0x600 + tileOffset);

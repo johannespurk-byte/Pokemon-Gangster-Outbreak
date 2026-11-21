@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_custom.h"
 #include "malloc.h"
 #include "apprentice.h"
 #include "battle.h"
@@ -5660,6 +5661,8 @@ enum TrainerPicID FacilityClassToPicIndex(u16 facilityClass)
 
 enum TrainerPicID PlayerGenderToFrontTrainerPicId(enum Gender playerGender)
 {
+    if (PlayerCustom_UsesCustomPic(playerGender))
+        return TRAINER_PIC_PLAYER_CUSTOM;
     if (playerGender != MALE)
         return FacilityClassToPicIndex(IS_FRLG ? FACILITY_CLASS_LEAF : FACILITY_CLASS_MAY);
     else
