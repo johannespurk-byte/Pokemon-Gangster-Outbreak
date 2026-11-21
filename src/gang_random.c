@@ -9,6 +9,7 @@
 #include "constants/pokedex.h"
 #include "constants/species.h"
 #include "constants/trainers.h"
+#include "constants/opponents.h"
 #include "data.h"
 
 // Gangster Outbreak: per-save randomizer (see gang_random.h)
@@ -18,6 +19,7 @@
 #define STAGE1_FALLBACK_LEVEL     25  // first evolution without a level (stone, trade, ...)
 #define STAGE2_FALLBACK_LEVEL     40  // second evolution without a level
 #define MAX_PICK_TRIES            64
+#define MIN_TRAINER_PARTY_SIZE    3
 
 enum
 {
@@ -26,6 +28,7 @@ enum
     SALT_PICK,
     SALT_BRANCH,
     SALT_LEGEND,
+    SALT_EXTRA_MON,
 };
 
 static u32 GetSeed(void)
@@ -219,6 +222,31 @@ static void ChangeSpecies(struct Pokemon *mon, enum Species species)
     CalculateMonStats(mon);
 }
 
+// Trainers with fewer than MIN_TRAINER_PARTY_SIZE Pokémon get random extra ones at their strongest level
+static void FillUpTrainerParty(struct Pokemon *party, u16 trainerNum)
+{
+    u32 i, count = 0;
+    u8 level = 1;
+
+    if (trainerNum == TRAINER_RIVAL_OAKS_LAB_SQUIRTLE || trainerNum == TRAINER_RIVAL_OAKS_LAB_BULBASAUR
+     || trainerNum == TRAINER_RIVAL_OAKS_LAB_CHARMANDER)
+        return; // the tutorial battle against Silver stays one on one
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&party[i], MON_DATA_SPECIES) == SPECIES_NONE)
+            break;
+        level = max(level, GetMonData(&party[i], MON_DATA_LEVEL));
+        count++;
+    }
+    for (i = count; i < MIN_TRAINER_PARTY_SIZE; i++)
+    {
+        enum Species species = PickSpecies(level, Hash(SALT_EXTRA_MON, trainerNum, i, 0), trainerNum);
+        if (species == SPECIES_NONE)
+            species = SPECIES_RATTATA;
+        CreateMon(&party[i], species, level, Random32(), OTID_STRUCT_RANDOM_NO_SHINY);
+    }
+}
+
 void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
     u32 i, trainerClass;
@@ -242,4 +270,5 @@ void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum)
         if (species != SPECIES_NONE)
             ChangeSpecies(&party[i], species);
     }
+    FillUpTrainerParty(party, trainerNum);
 }
