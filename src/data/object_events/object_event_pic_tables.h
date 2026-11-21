@@ -2993,6 +2993,14 @@ static const struct SpriteFrameImage sPicTable_SkullGrunt[] = {
     overworld_ascending_frames(gObjectEventPic_SkullGrunt, 4, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_Piers[] = {
+    overworld_ascending_frames(gObjectEventPic_Piers, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_YellGrunt[] = {
+    overworld_ascending_frames(gObjectEventPic_YellGrunt, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_MagmaGruntOras[] = {
     overworld_ascending_frames(gObjectEventPic_MagmaGruntOras, 2, 4),
 };

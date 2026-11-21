@@ -488,6 +488,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaField
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cyrus;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkullGrunt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YellGrunt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Piers;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagmaGruntOras;
 
 extern struct ObjectEventGraphicsInfo gPlayerCustomGraphicsInfo[];
@@ -968,6 +970,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GLORIA_FIELD_MOVE] = &gObjectEventGraphicsInfo_GloriaFieldMove,
     [OBJ_EVENT_GFX_CYRUS] = &gObjectEventGraphicsInfo_Cyrus,
     [OBJ_EVENT_GFX_SKULL_GRUNT] = &gObjectEventGraphicsInfo_SkullGrunt,
+    [OBJ_EVENT_GFX_YELL_GRUNT] = &gObjectEventGraphicsInfo_YellGrunt,
+    [OBJ_EVENT_GFX_PIERS] = &gObjectEventGraphicsInfo_Piers,
     [OBJ_EVENT_GFX_MAGMA_GRUNT_ORAS] = &gObjectEventGraphicsInfo_MagmaGruntOras,
     [OBJ_EVENT_GFX_PLAYER_CUSTOM_NORMAL]     = &gPlayerCustomGraphicsInfo[0],
     [OBJ_EVENT_GFX_PLAYER_CUSTOM_BIKE]       = &gPlayerCustomGraphicsInfo[1],
