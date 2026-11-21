@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_difficulty.h"
 #include "data.h"
 #include "main.h"
 #include "battle.h"
@@ -2218,11 +2219,23 @@ void CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Traine
     Free(trainerGen);
 }
 
+// Gangster Outbreak: scale opponents to the chosen difficulty (not partners, not in tests)
+static void ApplyGangDifficultyToParty(struct Pokemon *party)
+{
+    u32 i;
+
+    if (TESTING)
+        return;
+    for (i = 0; i < PARTY_SIZE; i++)
+        GangDifficulty_ApplyToTrainerMon(&party[i]);
+}
+
 static void CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
     if (!GetTrainerStructFromId(trainerNum)->overrideTrainer)
     {
         CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum));
+        ApplyGangDifficultyToParty(party);
         return;
     }
 
@@ -2236,6 +2249,7 @@ static void CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     if (tempTrainer.partySize == 0)
         tempTrainer.partySize = origTrainer->partySize;
     CreateNPCTrainerPartyFromTrainer(party, (const struct Trainer *)(&tempTrainer));
+    ApplyGangDifficultyToParty(party);
 }
 
 void CreateTrainerPartyForPlayer(void)

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_difficulty.h"
 #include "player_custom.h"
 #include "bg.h"
 #include "data.h"
@@ -1484,6 +1485,8 @@ static void Builder_Destroy(void)
     TRY_FREE_AND_SET_NULL(sBuilder);
 }
 
+static void Task_OakSpeech_StartDifficultyMenu(u8 taskId);
+
 static void Task_OakSpeech_HandleBuilderInput(u8 taskId)
 {
     u32 row = sBuilder->cursor;
@@ -1529,11 +1532,90 @@ static void Task_OakSpeech_HandleBuilderInput(u8 taskId)
             return;
         }
         PlayerCustom_SetLook(&sBuilder->look); // also sets the player's gender from the chosen head
-        gTasks[taskId].tMenuWindowId = sBuilder->windowId;
+        ClearStdWindowAndFrameToTransparent(sBuilder->windowId, TRUE);
+        RemoveWindow(sBuilder->windowId);
         Builder_Destroy();
-        gTasks[taskId].func = Task_OakSpeech_ClearGenderWindows;
+        gTasks[taskId].func = Task_OakSpeech_StartDifficultyMenu;
     }
 }
+
+//------------------------------------------------------------------------------
+// Gangster Outbreak: difficulty selection right after the character builder
+//------------------------------------------------------------------------------
+
+#define tDifficultyCursor data[3]
+
+static const struct WindowTemplate sDifficultyWindowTemplate =
+{
+    .bg = 0,
+    .tilemapLeft = 5,
+    .tilemapTop = 2,
+    .width = 20,
+    .height = 8,
+    .paletteNum = 15,
+    .baseBlock = 545,
+};
+
+static void Difficulty_Draw(u8 taskId)
+{
+    static const u8 sColors[3] = {1, 2, 3};
+    static const u8 sRecommendedColors[3] = {1, 4, 5};
+    u8 windowId = gTasks[taskId].tMenuWindowId;
+    u32 i;
+
+    FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
+    for (i = 0; i < GANG_DIFFICULTY_COUNT; i++)
+    {
+        u32 y = 1 + i * 16;
+        if (i == (u32)gTasks[taskId].tDifficultyCursor)
+            AddTextPrinterParameterized3(windowId, FONT_NORMAL, 0, y, sColors, TEXT_SKIP_DRAW, COMPOUND_STRING("{RIGHT_ARROW}"));
+        AddTextPrinterParameterized3(windowId, FONT_NORMAL, 10, y, sColors, TEXT_SKIP_DRAW, GangDifficulty_GetName(i));
+        if (i == GANG_DIFFICULTY_RECOMMENDED)
+            AddTextPrinterParameterized3(windowId, FONT_SMALL, 96, y + 2, sRecommendedColors, TEXT_SKIP_DRAW, COMPOUND_STRING("(RECOMMENDED)"));
+    }
+    CopyWindowToVram(windowId, COPYWIN_GFX);
+    // description of the highlighted difficulty in the text box
+    OakSpeechPrintMessage(GangDifficulty_GetDescription(gTasks[taskId].tDifficultyCursor), 0, FALSE);
+}
+
+static void Task_OakSpeech_HandleDifficultyInput(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    if (JOY_NEW(DPAD_UP))
+    {
+        tDifficultyCursor = (tDifficultyCursor == 0) ? GANG_DIFFICULTY_COUNT - 1 : tDifficultyCursor - 1;
+        PlaySE(SE_SELECT);
+        Difficulty_Draw(taskId);
+    }
+    else if (JOY_NEW(DPAD_DOWN))
+    {
+        tDifficultyCursor = (tDifficultyCursor + 1) % GANG_DIFFICULTY_COUNT;
+        PlaySE(SE_SELECT);
+        Difficulty_Draw(taskId);
+    }
+    else if (JOY_NEW(A_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+        GangDifficulty_Set(tDifficultyCursor);
+        gTasks[taskId].func = Task_OakSpeech_ClearGenderWindows; // removes tMenuWindowId and the text box
+    }
+}
+
+static void Task_OakSpeech_StartDifficultyMenu(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    tMenuWindowId = AddWindow(&sDifficultyWindowTemplate);
+    PutWindowTilemap(tMenuWindowId);
+    DrawStdFrameWithCustomTileAndPalette(tMenuWindowId, TRUE, STD_WINDOW_BASE_TILE_NUM, 14);
+    tDifficultyCursor = GANG_DIFFICULTY_RECOMMENDED;
+    Difficulty_Draw(taskId);
+    CopyWindowToVram(tMenuWindowId, COPYWIN_FULL);
+    gTasks[taskId].func = Task_OakSpeech_HandleDifficultyInput;
+}
+
+#undef tDifficultyCursor
 
 static void UNUSED Task_OakSpeech_ShowGenderOptions_Original(u8 taskId);
 
