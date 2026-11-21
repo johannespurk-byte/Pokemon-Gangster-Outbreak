@@ -12,4 +12,12 @@ void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum);
 // Gangster Outbreak loot (gang_loot.c): take a Pokémon from a beaten normal trainer
 void GangLoot_RememberParty(struct Pokemon *party); // called when a trainer party is created
 
+// Gangster Outbreak items (gang_items.c): Poké Vial and Auto-Repel with 1 + one charge per Gym Badge
+#define GANG_AUTO_REPEL_STEPS 250
+u32 GangItems_GetVialCharges(void);
+u32 GangItems_GetRepelCharges(void);
+void GangItems_UseVialCharge(void);
+void GangItems_UseRepelCharge(void);
+void GangItems_Recharge(void);
+
 #endif // GUARD_GANG_RANDOM_H

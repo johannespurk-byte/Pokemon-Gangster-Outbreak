@@ -7314,6 +7314,39 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_Glimmoranite,
     },
 
+// Gangster Outbreak: reusable items with charges (1 + one per Gym Badge, refilled by HEAL-BOTs)
+    [ITEM_POKE_VIAL] =
+    {
+        .name = ITEM_NAME("Poké Vial"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Heals your whole\n"
+            "team. Recharged by\n"
+            "HEAL-BOTs."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_PokeVial,
+        .iconPic = gItemIcon_PokeVial,
+        .iconPalette = gItemIconPalette_PokeVial,
+    },
+
+    [ITEM_AUTO_REPEL] =
+    {
+        .name = ITEM_NAME("Auto-Repel"),
+        .price = 0,
+        .importance = 1,
+        .description = COMPOUND_STRING(
+            "Keeps weak wild\n"
+            "POKéMON away. Re-\n"
+            "charged by HEAL-BOTs."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_AutoRepel,
+        .iconPic = gItemIcon_AutoRepel,
+        .iconPalette = gItemIconPalette_AutoRepel,
+    },
+
 // Gems
 #if I_PRICE >= GEN_9
     #define GEM_PRICE 15000

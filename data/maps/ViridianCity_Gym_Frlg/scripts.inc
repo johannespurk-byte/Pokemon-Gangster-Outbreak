@@ -91,6 +91,13 @@ ViridianCity_Gym_EventScript_GangIntroAfterBattle::
 	special EnableNationalPokedex
 	textcolor NPC_TEXT_COLOR_MALE
 	giveitem_msg ViridianCity_Gym_Text_GangIntroReceivedBalls, ITEM_POKE_BALL, 5
+	msgbox ViridianCity_Gym_Text_GangIntroGiovanniCandies
+	giveitem_msg ViridianCity_Gym_Text_GangIntroReceivedCandies, ITEM_RARE_CANDY, 30
+	msgbox ViridianCity_Gym_Text_GangIntroGiovanniGadgets
+	giveitem ITEM_POKE_VIAL
+	giveitem ITEM_AUTO_REPEL
+	special GangItems_Recharge
+	msgbox ViridianCity_Gym_Text_GangIntroGiovanniGadgets2
 	msgbox ViridianCity_Gym_Text_GangIntroMission
 	closemessage
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
@@ -457,3 +464,24 @@ ViridianCity_Gym_Text_GiovanniHQ::
 	.string "here, recruit?\p"
 	.string "Come back when you've collected\n"
 	.string "seven BADGES. Not a moment sooner.$"
+
+ViridianCity_Gym_Text_GangIntroGiovanniCandies::
+	.string "GIOVANNI: And something to make\n"
+	.string "your POKéMON grow up fast.$"
+
+ViridianCity_Gym_Text_GangIntroReceivedCandies::
+	.string "{PLAYER} received\n"
+	.string "30 RARE CANDIES!$"
+
+ViridianCity_Gym_Text_GangIntroGiovanniGadgets::
+	.string "GIOVANNI: Two gadgets from our labs.\n"
+	.string "Don't lose them.$"
+
+ViridianCity_Gym_Text_GangIntroGiovanniGadgets2::
+	.string "GIOVANNI: The POKé VIAL heals your\n"
+	.string "team, the AUTO-REPEL keeps weak\l"
+	.string "POKéMON off your back.\p"
+	.string "They hold one charge for now. Every\n"
+	.string "GYM BADGE you win adds another one.\p"
+	.string "The HEAL-BOTs in the old POKéMON\n"
+	.string "CENTERS recharge them.$"

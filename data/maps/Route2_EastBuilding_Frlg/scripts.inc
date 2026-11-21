@@ -18,7 +18,10 @@ Route2_EastBuilding_EventScript_Aide::
 	msgbox Route2_EastBuilding_Text_GreatHereYouGo
 	checkitemspace ITEM_HM05
 	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
+	checkitem ITEM_HM05
+	goto_if_eq VAR_RESULT, TRUE, Gang_Route2_EastBuilding_SkipITEM_HM05
 	giveitem_msg Route2_EastBuilding_Text_ReceivedHM05FromAide, ITEM_HM05
+Gang_Route2_EastBuilding_SkipITEM_HM05:
 	setflag FLAG_GOT_HM05
 	msgbox Route2_EastBuilding_Text_ExplainHM05
 	release

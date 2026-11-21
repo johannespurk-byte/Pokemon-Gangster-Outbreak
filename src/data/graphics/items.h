@@ -1011,6 +1011,12 @@ const u16 gItemIconPalette_Tatsugirinite[] = INCGFX_U16("graphics/items/icon_pal
 const u32 gItemIcon_Glimmoranite[] = INCGFX_U32("graphics/items/icons/glimmoranite.png", ".4bpp.smol");
 const u16 gItemIconPalette_Glimmoranite[] = INCGFX_U16("graphics/items/icon_palettes/glimmoranite.pal", ".gbapal");
 
+// Gangster Outbreak
+const u32 gItemIcon_PokeVial[] = INCGFX_U32("graphics/items/icons/poke_vial.png", ".4bpp.smol");
+const u16 gItemIconPalette_PokeVial[] = INCGFX_U16("graphics/items/icon_palettes/poke_vial.pal", ".gbapal");
+const u32 gItemIcon_AutoRepel[] = INCGFX_U32("graphics/items/icons/auto_repel.png", ".4bpp.smol");
+const u16 gItemIconPalette_AutoRepel[] = INCGFX_U16("graphics/items/icon_palettes/auto_repel.pal", ".gbapal");
+
 // Gems
 
 const u32 gItemIcon_TypeGem[] = INCGFX_U32("graphics/items/icons/type_gem.png", ".4bpp.smol");

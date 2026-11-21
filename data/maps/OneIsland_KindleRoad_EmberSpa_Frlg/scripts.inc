@@ -30,7 +30,10 @@ OneIsland_KindleRoad_EmberSpa_EventScript_RockSmashMan::
 	faceplayer
 	goto_if_set FLAG_GOT_HM06, OneIsland_KindleRoad_EmberSpa_EventScript_AlreadyGotHM06
 	msgbox OneIsland_KindleRoad_EmberSpa_Text_UsedThisToMakeEmberSpa
+	checkitem ITEM_HM06
+	goto_if_eq VAR_RESULT, TRUE, Gang_OneIsland_KindleRoad_EmberSpa_SkipITEM_HM06
 	giveitem ITEM_HM06
+Gang_OneIsland_KindleRoad_EmberSpa_SkipITEM_HM06:
 	setflag FLAG_GOT_HM06
 	msgbox OneIsland_KindleRoad_EmberSpa_Text_ExplainHM06
 	release

@@ -184,6 +184,8 @@ Route22_EventScript_LateRival::
 	call_if_eq VAR_STARTER_MON, 2, Route22_EventScript_LateRivalSquirtle
 	call_if_eq VAR_STARTER_MON, 1, Route22_EventScript_LateRivalBulbasaur
 	call_if_eq VAR_STARTER_MON, 0, Route22_EventScript_LateRivalCharmander
+	call EventScript_GangRivalGivesHM06
+	call EventScript_GangRivalGivesHM07
 	msgbox Route22_Text_LateRivalPostBattle
 	closemessage
 	delay 10

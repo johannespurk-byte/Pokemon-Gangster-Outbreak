@@ -1,4 +1,6 @@
 #include "global.h"
+#include "gang_random.h"
+#include "script_pokemon_util.h"
 #include "item_use.h"
 #include "battle.h"
 #include "battle_anim.h"
@@ -744,6 +746,49 @@ static void Task_AccessPokemonBoxLink(u8 taskId)
 {
     ScriptContext_SetupScript(EventScript_AccessPokemonBoxLink);
     DestroyTask(taskId);
+}
+
+// Gangster Outbreak: Poké Vial and Auto-Repel (charges: see gang_items.c)
+static void ShowGangItemMessage(u8 taskId, const u8 *text)
+{
+    StringExpandPlaceholders(gStringVar4, text);
+    if (!gTasks[taskId].tUsingRegisteredKeyItem)
+        DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
+    else
+        DisplayItemMessageOnField(taskId, gStringVar4, Task_CloseCantUseKeyItemMessage);
+}
+
+void ItemUseOutOfBattle_PokeVial(u8 taskId)
+{
+    if (GangItems_GetVialCharges() == 0)
+    {
+        ShowGangItemMessage(taskId, COMPOUND_STRING("The POKé VIAL is empty.\nRecharge it at a HEAL-BOT.{PAUSE_UNTIL_PRESS}"));
+        return;
+    }
+    GangItems_UseVialCharge();
+    HealPlayerParty();
+    PlaySE(SE_USE_ITEM);
+    ConvertIntToDecimalStringN(gStringVar1, GangItems_GetVialCharges(), STR_CONV_MODE_LEFT_ALIGN, 2);
+    ShowGangItemMessage(taskId, COMPOUND_STRING("Your team is fully healed!\nCharges left: {STR_VAR_1}{PAUSE_UNTIL_PRESS}"));
+}
+
+void ItemUseOutOfBattle_AutoRepel(u8 taskId)
+{
+    if (REPEL_STEP_COUNT != 0)
+    {
+        ShowGangItemMessage(taskId, gText_RepelEffectsLingered);
+        return;
+    }
+    if (GangItems_GetRepelCharges() == 0)
+    {
+        ShowGangItemMessage(taskId, COMPOUND_STRING("The AUTO-REPEL is empty.\nRecharge it at a HEAL-BOT.{PAUSE_UNTIL_PRESS}"));
+        return;
+    }
+    GangItems_UseRepelCharge();
+    VarSet(VAR_REPEL_STEP_COUNT, GANG_AUTO_REPEL_STEPS);
+    PlaySE(SE_REPEL);
+    ConvertIntToDecimalStringN(gStringVar1, GangItems_GetRepelCharges(), STR_CONV_MODE_LEFT_ALIGN, 2);
+    ShowGangItemMessage(taskId, COMPOUND_STRING("Weak wild POKéMON stay away now.\nCharges left: {STR_VAR_1}{PAUSE_UNTIL_PRESS}"));
 }
 
 void ItemUseOutOfBattle_CoinCase(u8 taskId)

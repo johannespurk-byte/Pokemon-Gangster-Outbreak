@@ -1033,6 +1033,10 @@ extern const u16 gItemIconPalette_Baxcalibrite[];
 extern const u32 gItemIcon_Tatsugirinite[];
 extern const u16 gItemIconPalette_Tatsugirinite[];
 extern const u32 gItemIcon_Glimmoranite[];
+extern const u32 gItemIcon_PokeVial[];
+extern const u16 gItemIconPalette_PokeVial[];
+extern const u32 gItemIcon_AutoRepel[];
+extern const u16 gItemIconPalette_AutoRepel[];
 extern const u16 gItemIconPalette_Glimmoranite[];
 
 // Gems

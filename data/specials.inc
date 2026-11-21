@@ -641,3 +641,4 @@ gSpecials::
 	def_special GangIntro_GiveRandomStarter
 	def_special GangLoot_Prepare
 	def_special GangLoot_Take
+	def_special GangItems_Recharge
