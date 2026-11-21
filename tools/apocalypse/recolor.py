@@ -54,6 +54,18 @@ def outdoor(rgb):
     return snap(blend(rgb, RUST, 0.16))
 
 
+def battle_outdoor(rgb):
+    r, g, b = (v / 255 for v in rgb)
+    h, s, v = colorsys.rgb_to_hsv(r, g, b)
+    deg = hue_deg(h)
+    if (s > 0.12 and 170 <= deg < 255 and v > 0.72) or (v > 0.78 and s < 0.45):
+        # bright sky / pale backdrop -> ash-orange haze
+        h, s, v = 18 / 360, min(0.55, s * 0.9 + 0.15), v * 0.80
+        rgb = [c * 255 for c in colorsys.hsv_to_rgb(h, s, v)]
+        return snap(blend(rgb, RUST, 0.10))
+    return outdoor(rgb)
+
+
 def indoor(rgb):
     r, g, b = (v / 255 for v in rgb)
     h, s, v = colorsys.rgb_to_hsv(r, g, b)
@@ -89,6 +101,27 @@ def read_original(path):
     return subprocess.run(['git', '-C', ROOT, 'show', '%s:%s' % (BASE_REF, path)], capture_output=True, text=True, check=True).stdout
 
 
+# battle backgrounds (graphics/battle_environment/<name>/<file>.pal): outdoor ones get the full look
+BATTLE_PALETTES = {
+    'tall_grass/palette.pal': 'battle', 'long_grass/palette.pal': 'battle', 'sand/palette.pal': 'battle',
+    'water/palette.pal': 'battle', 'pond_water/palette.pal': 'battle', 'rock/palette.pal': 'battle',
+    'plain/palette.pal': 'battle', 'sky/palette.pal': 'battle',
+    'cave/palette.pal': 'indoor', 'building/palette.pal': 'indoor', 'building/gym.pal': 'indoor',
+    'building/leader.pal': 'indoor',
+}
+
+
+def recolor_file(rel, fn, out_root):
+    lines = read_original(rel).replace('\r', '').split('\n')
+    count = int(lines[2])
+    colors = [tuple(int(v) for v in l.split()) for l in lines[3:3 + count]]
+    new = [c if i % 16 == 0 else fn(c) for i, c in enumerate(colors)]  # color 0 of each palette is transparent
+    dst = os.path.join(out_root, rel)
+    os.makedirs(os.path.dirname(dst), exist_ok=True)
+    with open(dst, 'w', newline='\r\n') as f:
+        f.write('JASC-PAL\n0100\n%d\n' % count + ''.join('%d %d %d\n' % c for c in new))
+
+
 def main():
     out_root = ROOT
     if '--out' in sys.argv:
@@ -109,6 +142,9 @@ def main():
             with open(dst, 'w', newline='\r\n') as f:
                 f.write('JASC-PAL\n0100\n16\n' + ''.join('%d %d %d\n' % c for c in new))
         print(kind, path)
+    for rel, kind in sorted(BATTLE_PALETTES.items()):
+        recolor_file('graphics/battle_environment/' + rel, battle_outdoor if kind == 'battle' else indoor, out_root)
+        print('battle', kind, rel)
 
 
 if __name__ == '__main__':
