@@ -287,8 +287,9 @@ struct Pokedex
     /*0x0C*/ u32 unknown3;
     /*0x10*/ u8 gangsterDifficulty; // Gangster Outbreak: enum GangDifficulty
     /*0x11*/ u8 gangsterNewGamePlus; // Gangster Outbreak: bit 7 = NEW GAME+ unlocked, bits 0-2 = hardest cleared difficulty
+    /*0x12*/ u8 gangsterRandomSeed[4]; // Gangster Outbreak: seed of the per-save Pokémon randomizer
 #if FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK2 == FALSE
-    /*0x12*/ u8 filler[0x66]; // Previously Dex Flags, feel free to remove.
+    /*0x16*/ u8 filler[0x62]; // Previously Dex Flags, feel free to remove.
 #endif //FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK2
 };
 

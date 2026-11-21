@@ -1,5 +1,6 @@
 #include "global.h"
 #include "gang_difficulty.h"
+#include "gang_random.h"
 #include "clock.h"
 #include "new_game.h"
 #include "random.h"
@@ -244,6 +245,7 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+    GangRandom_NewSeed(); // Gangster Outbreak: every save (also NEW GAME+) gets its own random Pokémon
     if (newGamePlus)
     {
         NewGamePlus_RestoreAfterReset(newGamePlusBackup);

@@ -1,5 +1,6 @@
 #include "global.h"
 #include "gang_difficulty.h"
+#include "gang_random.h"
 #include "data.h"
 #include "main.h"
 #include "battle.h"
@@ -2235,6 +2236,7 @@ static void CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     if (!GetTrainerStructFromId(trainerNum)->overrideTrainer)
     {
         CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum));
+        GangRandom_RandomizeTrainerParty(party, trainerNum);
         ApplyGangDifficultyToParty(party);
         return;
     }
@@ -2249,6 +2251,7 @@ static void CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     if (tempTrainer.partySize == 0)
         tempTrainer.partySize = origTrainer->partySize;
     CreateNPCTrainerPartyFromTrainer(party, (const struct Trainer *)(&tempTrainer));
+    GangRandom_RandomizeTrainerParty(party, trainerNum);
     ApplyGangDifficultyToParty(party);
 }
 
