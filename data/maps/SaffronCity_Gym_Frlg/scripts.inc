@@ -96,13 +96,10 @@ SaffronCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 SaffronCity_Gym_Text_SabrinaIntro::
-	.string "I had a vision of your arrival.\p"
-	.string "I have had psychic powers since\n"
-	.string "I was a child.\p"
-	.string "It started when a spoon I\n"
-	.string "carelessly tossed, bent.\p"
-	.string "I dislike battling, but if you wish,\n"
-	.string "I will show you my powers!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "I am LYSANDRE of TEAM FLARE.\p"
+	.string "This world is ugly. Only the chosen\n"
+	.string "deserve to see its beautiful end.\p"
+	.string "Prove that you are one of them!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 SaffronCity_Gym_Text_SabrinaDefeat::
 	.string "This loss shocks me!\n"
@@ -113,10 +110,8 @@ SaffronCity_Gym_Text_SabrinaDefeat::
 	.string "CAPO RANK.$"
 
 SaffronCity_Gym_Text_SabrinaPostBattle::
-	.string "Psychic power isn't something that\n"
-	.string "only a few people have.\p"
-	.string "Everyone has psychic power.\n"
-	.string "People just don't realize it.$"
+	.string "You are beautiful in your own way.\n"
+	.string "TEAM FLARE salutes you.$"
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
 	.string "The CAPO RANK makes POKéMON up\n"
@@ -129,7 +124,7 @@ SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
 
 SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
 	.string "{PLAYER} received TM04 from\n"
-	.string "SABRINA.$"
+	.string "LYSANDRE.$"
 
 SaffronCity_Gym_Text_ExplainTM04::
 	.string "TM04 is CALM MIND.\p"
@@ -140,7 +135,7 @@ SaffronCity_Gym_Text_BagFullOfOtherItems::
 	.string "Your BAG is full of other items.$"
 
 SaffronCity_Gym_Text_AmandaIntro::
-	.string "SABRINA is far younger than I,\n"
+	.string "LYSANDRE is far younger than I,\n"
 	.string "but she has earned my respect.$"
 
 SaffronCity_Gym_Text_AmandaDefeat::
@@ -149,7 +144,7 @@ SaffronCity_Gym_Text_AmandaDefeat::
 SaffronCity_Gym_Text_AmandaPostBattle::
 	.string "In a battle of equals, the one\n"
 	.string "with the stronger will wins.\p"
-	.string "If you wish to beat SABRINA, focus\n"
+	.string "If you wish to beat LYSANDRE, focus\n"
 	.string "and will yourself to victory.$"
 
 SaffronCity_Gym_Text_JohanIntro::
@@ -184,7 +179,7 @@ SaffronCity_Gym_Text_TyronDefeat::
 	.string "I don't believe this!$"
 
 SaffronCity_Gym_Text_TyronPostBattle::
-	.string "SABRINA just wiped out the KARATE\n"
+	.string "LYSANDRE just wiped out the KARATE\n"
 	.string "MASTER next door.$"
 
 SaffronCity_Gym_Text_TashaIntro::
@@ -199,7 +194,7 @@ SaffronCity_Gym_Text_TashaPostBattle::
 	.string "place.$"
 
 SaffronCity_Gym_Text_CameronIntro::
-	.string "SABRINA is young, but she's also\n"
+	.string "LYSANDRE is young, but she's also\n"
 	.string "our highly skilled LEADER.\p"
 	.string "You won't reach her easily!$"
 
@@ -218,7 +213,7 @@ SaffronCity_Gym_Text_CameronPostBattle::
 SaffronCity_Gym_Text_PrestonIntro::
 	.string "SAFFRON POKéMON GYM is famous for\n"
 	.string "training psychics.\p"
-	.string "You want to see SABRINA, don't\n"
+	.string "You want to see LYSANDRE, don't\n"
 	.string "you? I can tell!$"
 
 SaffronCity_Gym_Text_PrestonDefeat::
@@ -231,7 +226,7 @@ SaffronCity_Gym_Text_PrestonPostBattle::
 SaffronCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
 	.string "Champ in the making!\p"
-	.string "SABRINA's POKéMON use psychic\n"
+	.string "LYSANDRE's POKéMON use psychic\n"
 	.string "power instead of force.\p"
 	.string "FIGHTING POKéMON are especially\n"
 	.string "weak against PSYCHIC POKéMON.\p"
@@ -245,13 +240,13 @@ SaffronCity_Gym_Text_GymGuyPostVictory::
 
 SaffronCity_Gym_Text_GymStatue::
 	.string "SAFFRON POKéMON GYM\n"
-	.string "LEADER: SABRINA\p"
+	.string "LEADER: LYSANDRE\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}$"
 
 SaffronCity_Gym_Text_GymStatuePlayerWon::
 	.string "SAFFRON POKéMON GYM\n"
-	.string "LEADER: SABRINA\p"
+	.string "LEADER: LYSANDRE\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

@@ -82,20 +82,11 @@ PewterCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 PewterCity_Gym_Text_BrockIntro::
-	.string "So, you're here. I'm BROCK.\n"
-	.string "I'm PEWTER's GYM LEADER.\p"
-	.string "My rock-hard willpower is evident\n"
-	.string "even in my POKéMON.\p"
-	.string "My POKéMON are all rock hard, and\n"
-	.string "have true-grit determination.\p"
-	.string "That's right - my POKéMON are all\n"
-	.string "the ROCK type!\p"
-	.string "Fuhaha! You're going to challenge\n"
-	.string "me knowing that you'll lose?\p"
-	.string "That's the TRAINER's honor that\n"
-	.string "compels you to challenge me.\p"
-	.string "Fine, then!\n"
-	.string "Show me your best!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "I'm PIERS, boss of TEAM YELL.\n"
+	.string "Our gang used to cheer for the\l"
+	.string "GYM challengers in GALAR.\p"
+	.string "Now we run this GYM. Show me some\n"
+	.string "noise, GIOVANNI's new blood!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PewterCity_Gym_Text_BrockDefeat::
 	.string "I took you for granted, and so\n"
@@ -118,7 +109,7 @@ PewterCity_Gym_Text_TakeThisWithYou::
 
 PewterCity_Gym_Text_ReceivedTM39FromBrock::
 	.string "{PLAYER} received TM39\n"
-	.string "from BROCK.$"
+	.string "from PIERS.$"
 
 PewterCity_Gym_Text_ExplainTM39::
 	.string "A TM, Technical Machine, contains a\n"
@@ -134,13 +125,8 @@ PewterCity_Gym_Text_ExplainTM39::
 	.string "lowers its SPEED.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
-	.string "There are all kinds of TRAINERS in\n"
-	.string "this huge world of ours.\p"
-	.string "You appear to be very gifted as a\n"
-	.string "POKéMON TRAINER.\p"
-	.string "So let me make a suggestion.\p"
-	.string "Go to the GYM in CERULEAN and test\n"
-	.string "your abilities.$"
+	.string "Heh. TEAM YELL will cheer for you\n"
+	.string "from now on. Don't let us down.$"
 
 PewterCity_Gym_Text_DontHaveRoomForThis::
 	.string "You don't have room for this.$"
@@ -148,7 +134,7 @@ PewterCity_Gym_Text_DontHaveRoomForThis::
 PewterCity_Gym_Text_LiamIntro::
 	.string "Stop right there, kid!\p"
 	.string "You're ten thousand light-years \n"
-	.string "from facing BROCK!$"
+	.string "from facing PIERS!$"
 
 PewterCity_Gym_Text_LiamDefeat::
 	.string "Darn!\p"
@@ -157,7 +143,7 @@ PewterCity_Gym_Text_LiamDefeat::
 
 PewterCity_Gym_Text_LiamPostBattle::
 	.string "You're pretty hot.\n"
-	.string "…But not as hot as BROCK!$"
+	.string "…But not as hot as PIERS!$"
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
 	.string "Hiya!\n"
@@ -190,13 +176,13 @@ PewterCity_Gym_Text_YoureChampMaterial::
 
 PewterCity_Gym_Text_GymStatue::
 	.string "PEWTER POKéMON GYM\n"
-	.string "LEADER: BROCK\p"
+	.string "LEADER: PIERS\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}$"
 
 PewterCity_Gym_Text_GymStatuePlayerWon::
 	.string "PEWTER POKéMON GYM\n"
-	.string "LEADER: BROCK\p"
+	.string "LEADER: PIERS\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

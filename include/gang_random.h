@@ -8,6 +8,7 @@
 void GangRandom_NewSeed(void);
 enum Species GangRandom_WildSpecies(enum Species tableSpecies, u8 level);
 void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum);
+bool32 GangRandom_IsBossTrainer(u16 trainerNum);
 
 // Gangster Outbreak loot (gang_loot.c): take a Pokémon from a beaten normal trainer
 void GangLoot_RememberParty(struct Pokemon *party); // called when a trainer party is created

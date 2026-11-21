@@ -286,21 +286,14 @@ VermilionCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 VermilionCity_Gym_Text_LtSurgeIntro::
-	.string "Hey, kid! What do you think you're\n"
-	.string "doing here?\p"
-	.string "You won't live long in combat!\n"
-	.string "Not with your puny power!\p"
-	.string "I tell you, kid, electric POKéMON\n"
-	.string "saved me during the war!\p"
-	.string "They zapped my enemies into\n"
-	.string "paralysis!\p"
-	.string "The same as I'll do to you!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "I'm ARCHER, executive of the NEW\n"
+	.string "TEAM ROCKET from JOHTO.\p"
+	.string "GIOVANNI left us behind. I'll see\n"
+	.string "if his new recruit is any better!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 VermilionCity_Gym_Text_LtSurgePostBattle::
-	.string "A little word of advice, kid!\p"
-	.string "Electricity is sure powerful!\p"
-	.string "But, it's useless against GROUND-\n"
-	.string "type POKéMON!$"
+	.string "The NEW TEAM ROCKET bows to you.\n"
+	.string "Tell GIOVANNI we're waiting.$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
 	.string "The SOLDIER RANK cranks up your\n"
@@ -312,7 +305,7 @@ VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
 
 VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
 	.string "{PLAYER} received TM34\n"
-	.string "from LT. SURGE.$"
+	.string "from ARCHER.$"
 
 VermilionCity_Gym_Text_ExplainTM34::
 	.string "TM34 contains SHOCK WAVE!\p"
@@ -327,7 +320,7 @@ VermilionCity_Gym_Text_LtSurgeDefeat::
 	.string "Fine, then, take the SOLDIER RANK!$"
 
 VermilionCity_Gym_Text_TuckerIntro::
-	.string "When I was in the Army, LT. SURGE\n"
+	.string "When I was in the Army, ARCHER\n"
 	.string "was my strict CO.\p"
 	.string "He was a hard taskmaster.$"
 
@@ -337,7 +330,7 @@ VermilionCity_Gym_Text_TuckerDefeat::
 
 VermilionCity_Gym_Text_TuckerPostBattle::
 	.string "It's not easy opening that door.\p"
-	.string "LT. SURGE was always famous for\n"
+	.string "ARCHER was always famous for\n"
 	.string "his cautious nature in the Army.$"
 
 VermilionCity_Gym_Text_BailyIntro::
@@ -350,7 +343,7 @@ VermilionCity_Gym_Text_BailyDefeat::
 
 VermilionCity_Gym_Text_BailyPostBattle::
 	.string "Okay, I'll talk!\p"
-	.string "LT. SURGE said he hid door\n"
+	.string "ARCHER said he hid door\n"
 	.string "switches inside something.$"
 
 VermilionCity_Gym_Text_DwayneIntro::
@@ -362,7 +355,7 @@ VermilionCity_Gym_Text_DwayneDefeat::
 	.string "Surprised me!$"
 
 VermilionCity_Gym_Text_DwaynePostBattle::
-	.string "LT. SURGE installed the traps in\n"
+	.string "ARCHER installed the traps in\n"
 	.string "the GYM himself.\p"
 	.string "He set up double locks everywhere.\n"
 	.string "Let me give you a hint.\p"
@@ -372,7 +365,7 @@ VermilionCity_Gym_Text_DwaynePostBattle::
 VermilionCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
 	.string "Champ in the making!\p"
-	.string "LT. SURGE has a nickname.\p"
+	.string "ARCHER has a nickname.\p"
 	.string "People refer to him as the\n"
 	.string "Lightning American!\p"
 	.string "He's an expert on electric\n"
@@ -380,7 +373,7 @@ VermilionCity_Gym_Text_GymGuyAdvice::
 	.string "BIRD/WATER-type POKéMON match\n"
 	.string "poorly against the ELECTRIC type.\p"
 	.string "Beware of paralysis, too.\p"
-	.string "LT. SURGE is very cautious.\p"
+	.string "ARCHER is very cautious.\p"
 	.string "He's locked himself in, so it won't\n"
 	.string "be easy getting to him.$"
 
@@ -390,13 +383,13 @@ VermilionCity_Gym_Text_GymGuyPostVictory::
 
 VermilionCity_Gym_Text_GymStatue::
 	.string "VERMILION POKéMON GYM\n"
-	.string "LEADER: LT. SURGE\p"
+	.string "LEADER: ARCHER\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}$"
 
 VermilionCity_Gym_Text_GymStatuePlayerWon::
 	.string "VERMILION POKéMON GYM\n"
-	.string "LEADER: LT. SURGE\p"
+	.string "LEADER: ARCHER\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

@@ -549,6 +549,11 @@ enum TrainerClassID
     TRAINER_CLASS_RUIN_MANIAC_FRLG,
     TRAINER_CLASS_LADY_FRLG,
     TRAINER_CLASS_PAINTER_FRLG,
+    TRAINER_CLASS_TEAM_PLASMA, // Gangster Outbreak
+    TRAINER_CLASS_TEAM_GALACTIC, // Gangster Outbreak
+    TRAINER_CLASS_TEAM_SKULL, // Gangster Outbreak
+    TRAINER_CLASS_TEAM_YELL, // Gangster Outbreak
+    TRAINER_CLASS_TEAM_FLARE, // Gangster Outbreak
 
     TRAINER_CLASS_COUNT,
 };

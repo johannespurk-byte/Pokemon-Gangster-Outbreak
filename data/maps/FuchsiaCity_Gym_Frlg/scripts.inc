@@ -90,17 +90,9 @@ FuchsiaCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 FuchsiaCity_Gym_Text_KogaIntro::
-	.string "KOGA: Fwahahaha!\p"
-	.string "A mere child like you dares to\n"
-	.string "challenge me?\p"
-	.string "The very idea makes me shiver\n"
-	.string "with mirth!\p"
-	.string "Very well, I shall show you true\n"
-	.string "terror as a ninja master.\p"
-	.string "Poison brings steady doom.\n"
-	.string "Sleep renders foes helpless.\p"
-	.string "Despair to the creeping horror of\n"
-	.string "POISON-type POKéMON!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "I am GHETSIS of TEAM PLASMA.\p"
+	.string "POKéMON exist to serve the ones\n"
+	.string "who rule. Kneel before my power!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 FuchsiaCity_Gym_Text_KogaDefeat::
 	.string "Humph!\n"
@@ -109,11 +101,8 @@ FuchsiaCity_Gym_Text_KogaDefeat::
 	.string "Take the HITMAN RANK!$"
 
 FuchsiaCity_Gym_Text_KogaPostBattle::
-	.string "When afflicted by TOXIC, a POKéMON\n"
-	.string "suffers more and more.\p"
-	.string "It suffers worsening damage as the\n"
-	.string "battle wears on!\p"
-	.string "It will surely terrorize foes!$"
+	.string "Hmph. Even I can use a pawn as\n"
+	.string "strong as you.$"
 
 FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
 	.string "Now that you have the HITMAN RANK,\n"
@@ -125,7 +114,7 @@ FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
 
 FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
 	.string "{PLAYER} received TM06\n"
-	.string "from KOGA.$"
+	.string "from GHETSIS.$"
 
 FuchsiaCity_Gym_Text_KogaExplainTM06::
 	.string "Sealed within that TM06 lies\n"
@@ -164,7 +153,7 @@ FuchsiaCity_Gym_Text_KirkDefeat::
 FuchsiaCity_Gym_Text_KirkPostBattle::
 	.string "Even though I've lost, I will keep\n"
 	.string "training according to the teachings\l"
-	.string "of KOGA, my ninja master.$"
+	.string "of GHETSIS, my ninja master.$"
 
 FuchsiaCity_Gym_Text_NateIntro::
 	.string "Let's see you beat my special\n"
@@ -194,7 +183,7 @@ FuchsiaCity_Gym_Text_PhilPostBattle::
 
 FuchsiaCity_Gym_Text_EdgarIntro::
 	.string "I also study the way of the ninja\n"
-	.string "with Master KOGA!\p"
+	.string "with Master GHETSIS!\p"
 	.string "Ninja have a long history of using\n"
 	.string "animals!$"
 
@@ -205,7 +194,7 @@ FuchsiaCity_Gym_Text_EdgarPostBattle::
 	.string "I still have much to learn.$"
 
 FuchsiaCity_Gym_Text_ShawnIntro::
-	.string "Master KOGA comes from a long line\n"
+	.string "Master GHETSIS comes from a long line\n"
 	.string "of ninjas.\p"
 	.string "What did you descend from?$"
 
@@ -224,7 +213,7 @@ FuchsiaCity_Gym_Text_GymGuyAdvice::
 	.string "Champ in the making!\p"
 	.string "FUCHSIA GYM is a tricked-up place.\n"
 	.string "It's riddled with invisible walls!\p"
-	.string "KOGA might appear close, but he's\n"
+	.string "GHETSIS might appear close, but he's\n"
 	.string "blocked off.\p"
 	.string "You have to find gaps in the walls\n"
 	.string "to reach him.$"
@@ -235,13 +224,13 @@ FuchsiaCity_Gym_Text_GymGuyPostVictory::
 
 FuchsiaCity_Gym_Text_GymStatue::
 	.string "FUCHSIA POKéMON GYM\n"
-	.string "LEADER: KOGA\p"
+	.string "LEADER: GHETSIS\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}$"
 
 FuchsiaCity_Gym_Text_GymStatuePlayerWon::
 	.string "FUCHSIA POKéMON GYM\n"
-	.string "LEADER: KOGA\p"
+	.string "LEADER: GHETSIS\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

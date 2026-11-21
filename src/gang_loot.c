@@ -30,6 +30,8 @@ static const u8 sText_None[] = _("NONE");
 
 static bool32 IsLootTrainer(u16 trainerNum)
 {
+    if (GangRandom_IsBossTrainer(trainerNum))
+        return FALSE;
     switch (GetTrainerClassFromId(trainerNum))
     {
     case TRAINER_CLASS_LEADER:

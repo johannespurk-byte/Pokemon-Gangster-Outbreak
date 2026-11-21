@@ -222,6 +222,26 @@ static void ChangeSpecies(struct Pokemon *mon, enum Species species)
     CalculateMonStats(mon);
 }
 
+// Gym bosses (the villain teams and Giovanni) keep their signature teams and their Pokémon
+bool32 GangRandom_IsBossTrainer(u16 trainerNum)
+{
+    switch (trainerNum)
+    {
+    case TRAINER_LEADER_BROCK:
+    case TRAINER_LEADER_MISTY:
+    case TRAINER_LEADER_LT_SURGE:
+    case TRAINER_LEADER_ERIKA:
+    case TRAINER_GANG_MAXIE:
+    case TRAINER_LEADER_KOGA:
+    case TRAINER_LEADER_SABRINA:
+    case TRAINER_LEADER_BLAINE:
+    case TRAINER_LEADER_GIOVANNI:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
 // Trainers with fewer than MIN_TRAINER_PARTY_SIZE Pokémon get random extra ones at their strongest level
 static void FillUpTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
@@ -252,6 +272,8 @@ void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum)
     u32 i, trainerClass;
 
     if (TESTING || (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_FRONTIER | BATTLE_TYPE_RECORDED)))
+        return;
+    if (GangRandom_IsBossTrainer(trainerNum))
         return;
     trainerClass = GetTrainerClassFromId(trainerNum);
     for (i = 0; i < PARTY_SIZE; i++)

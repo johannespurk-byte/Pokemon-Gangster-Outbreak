@@ -70,13 +70,10 @@ CeruleanCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 CeruleanCity_Gym_Text_MistyIntro::
-	.string "Hi, you're a new face!\p"
-	.string "Only those TRAINERS who have a\n"
-	.string "policy about POKéMON can turn pro.\p"
-	.string "What is your approach when you\n"
-	.string "catch and train POKéMON?\p"
-	.string "My policy is an all-out offensive\n"
-	.string "with WATER-type POKéMON!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "GUZMA! That's my name, the guy who\n"
+	.string "beats you down and keeps on going!\p"
+	.string "TEAM SKULL owns this GYM now.\n"
+	.string "Let's see if you're worth it!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 CeruleanCity_Gym_Text_ExplainTM03::
 	.string "TM03 teaches WATER PULSE.\p"
@@ -95,7 +92,7 @@ CeruleanCity_Gym_Text_ExplainCascadeBadge::
 
 CeruleanCity_Gym_Text_ReceivedTM03FromMisty::
 	.string "{PLAYER} received TM03\n"
-	.string "from MISTY.$"
+	.string "from GUZMA.$"
 
 CeruleanCity_Gym_Text_BetterMakeRoomForThis::
 	.string "You better make room for this!$"
@@ -110,7 +107,7 @@ CeruleanCity_Gym_Text_MistyDefeat::
 CeruleanCity_Gym_Text_DianaIntro::
 	.string "What? You?\n"
 	.string "I'm more than good enough for you!\p"
-	.string "MISTY won't have to be bothered.$"
+	.string "GUZMA won't have to be bothered.$"
 
 CeruleanCity_Gym_Text_DianaDefeat::
 	.string "You overwhelmed me!$"
@@ -128,7 +125,7 @@ CeruleanCity_Gym_Text_LuisDefeat::
 	.string "That can't be!$"
 
 CeruleanCity_Gym_Text_LuisPostBattle::
-	.string "MISTY is a TRAINER who's going to\n"
+	.string "GUZMA is a TRAINER who's going to\n"
 	.string "keep improving.\p"
 	.string "She won't lose to someone like you!$"
 
@@ -136,7 +133,7 @@ CeruleanCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
 	.string "Champ in the making!\p"
 	.string "Let me give you some advice!\p"
-	.string "The LEADER, MISTY, is a pro who\n"
+	.string "The LEADER, GUZMA, is a pro who\n"
 	.string "uses WATER-type POKéMON.\p"
 	.string "You can drain all their water with\n"
 	.string "GRASS-type POKéMON.\p"
@@ -144,20 +141,20 @@ CeruleanCity_Gym_Text_GymGuyAdvice::
 	.string "POKéMON and zap them!$"
 
 CeruleanCity_Gym_Text_WeMakePrettyGoodTeam::
-	.string "You beat MISTY!\n"
+	.string "You beat GUZMA!\n"
 	.string "See, what'd I tell ya?\p"
 	.string "You and me, kid, we make a pretty\n"
 	.string "darn-good team!$"
 
 CeruleanCity_Gym_Text_GymStatue::
 	.string "CERULEAN POKéMON GYM\n"
-	.string "LEADER: MISTY\p"
+	.string "LEADER: GUZMA\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}$"
 
 CeruleanCity_Gym_Text_GymStatuePlayerWon::
 	.string "CERULEAN POKéMON GYM\n"
-	.string "LEADER: MISTY\p"
+	.string "LEADER: GUZMA\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

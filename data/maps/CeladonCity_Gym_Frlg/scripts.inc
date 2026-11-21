@@ -3,7 +3,15 @@ CeladonCity_Gym_Frlg_MapScripts::
 
 CeladonCity_Gym_EventScript_Erika::
 	famechecker FAMECHECKER_ERIKA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
-	trainerbattle_single TRAINER_LEADER_ERIKA, CeladonCity_Gym_Text_ErikaIntro, CeladonCity_Gym_Text_ErikaDefeat, CeladonCity_Gym_EventScript_DefeatedErika, NO_MUSIC
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_ERIKA, CeladonCity_Gym_EventScript_ArchieMaxieBeaten
+	msgbox CeladonCity_Gym_Text_ErikaIntro
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, CeladonCity_Gym_EventScript_ArchieMaxieNeedTwo
+	trainerbattle_two_trainers TRAINER_LEADER_ERIKA, CeladonCity_Gym_Text_ErikaDefeat, TRAINER_GANG_MAXIE, CeladonCity_Gym_Text_MaxieDefeat
+	goto CeladonCity_Gym_EventScript_DefeatedErika
+CeladonCity_Gym_EventScript_ArchieMaxieBeaten::
 	goto_if_unset FLAG_GOT_TM19_FROM_ERIKA, CeladonCity_Gym_EventScript_GiveTM19
 	famechecker FAMECHECKER_ERIKA, 4
 	msgbox CeladonCity_Gym_Text_ErikaPostBattle
@@ -84,20 +92,10 @@ CeladonCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 CeladonCity_Gym_Text_ErikaIntro::
-	.string "Hello…\n"
-	.string "Lovely weather, isn't it?\l"
-	.string "It's so pleasant…\p"
-	.string "…Oh, dear…\n"
-	.string "I must have dozed off. Welcome.\p"
-	.string "My name is ERIKA.\n"
-	.string "I am the LEADER of CELADON GYM.\p"
-	.string "I am a student of the art of\n"
-	.string "flower arranging.\p"
-	.string "My POKéMON are solely of the\n"
-	.string "GRASS type.\p"
-	.string "…Oh, I'm sorry, I had no idea that\n"
-	.string "you wished to challenge me.\p"
-	.string "Very well, but I shall not lose.{PLAY_BGM MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "ARCHIE: Bwahahaha! TEAM AQUA wants\n"
+	.string "the sea, TEAM MAGMA wants the land.\p"
+	.string "MAXIE: For once we fight together.\n"
+	.string "Two bosses, one GYM. Ready?$"
 
 CeladonCity_Gym_Text_ErikaDefeat::
 	.string "Oh!\n"
@@ -107,10 +105,8 @@ CeladonCity_Gym_Text_ErikaDefeat::
 	.string "ENFORCER RANK.$"
 
 CeladonCity_Gym_Text_ErikaPostBattle::
-	.string "You are cataloging POKéMON?\n"
-	.string "I must say I'm impressed.\p"
-	.string "I would never collect POKéMON if\n"
-	.string "they were unattractive.$"
+	.string "ARCHIE: Land or sea, you rule both\n"
+	.string "now. Bwahahaha!$"
 
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
 	.string "The ENFORCER RANK will make\n"
@@ -121,7 +117,7 @@ CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
 
 CeladonCity_Gym_Text_ReceivedTM19FromErika::
 	.string "{PLAYER} received TM19\n"
-	.string "from ERIKA.$"
+	.string "from ARCHIE.$"
 
 CeladonCity_Gym_Text_ExplainTM19::
 	.string "TM19 contains GIGA DRAIN.\p"
@@ -143,7 +139,7 @@ CeladonCity_Gym_Text_KayDefeat::
 
 CeladonCity_Gym_Text_KayPostBattle::
 	.string "Bleaah!\n"
-	.string "I hope ERIKA wipes you out!$"
+	.string "I hope ARCHIE wipes you out!$"
 
 CeladonCity_Gym_Text_BridgetIntro::
 	.string "Oh, welcome.\n"
@@ -166,7 +162,7 @@ CeladonCity_Gym_Text_TinaDefeat::
 	.string "You're an eye-opener!$"
 
 CeladonCity_Gym_Text_TinaPostBattle::
-	.string "Oh, you were looking at ERIKA…\n"
+	.string "Oh, you were looking at ARCHIE…\n"
 	.string "You weren't looking at me…$"
 
 CeladonCity_Gym_Text_TamiaIntro::
@@ -194,7 +190,7 @@ CeladonCity_Gym_Text_LisaDefeat::
 	.string "You!$"
 
 CeladonCity_Gym_Text_LisaPostBattle::
-	.string "Our LEADER ERIKA might be quiet,\n"
+	.string "Our LEADER ARCHIE might be quiet,\n"
 	.string "but she's famous around here.$"
 
 CeladonCity_Gym_Text_LoriIntro::
@@ -225,13 +221,25 @@ CeladonCity_Gym_Text_MaryPostBattle::
 
 CeladonCity_Gym_Text_GymStatue::
 	.string "CELADON POKéMON GYM\n"
-	.string "LEADER: ERIKA\p"
+	.string "LEADER: ARCHIE\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}$"
 
 CeladonCity_Gym_Text_GymStatuePlayerWon::
 	.string "CELADON POKéMON GYM\n"
-	.string "LEADER: ERIKA\p"
+	.string "LEADER: ARCHIE\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}, {PLAYER}$"
 
+
+CeladonCity_Gym_EventScript_ArchieMaxieNeedTwo::
+	msgbox CeladonCity_Gym_Text_NeedTwo
+	release
+	end
+
+CeladonCity_Gym_Text_MaxieDefeat::
+	.string "MAXIE: Fuhahaha… Remarkable.$"
+
+CeladonCity_Gym_Text_NeedTwo::
+	.string "ARCHIE: Come back with at least two\n"
+	.string "POKéMON that can still fight!$"

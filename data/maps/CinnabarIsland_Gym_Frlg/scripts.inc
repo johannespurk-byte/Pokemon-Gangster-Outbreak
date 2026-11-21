@@ -710,14 +710,11 @@ CinnabarIsland_Gym_EventScript_OpenDoor6::
 	return
 
 CinnabarIsland_Gym_Text_BlaineIntro::
-	.string "Hah!\p"
-	.string "I am BLAINE, the red-hot LEADER\n"
-	.string "of CINNABAR GYM!\p"
-	.string "My fiery POKéMON are all rough\n"
-	.string "and ready with intense heat!\p"
-	.string "They incinerate all challengers!\p"
-	.string "Hah!\n"
-	.string "You better have BURN HEAL!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "I am CYRUS, leader of TEAM\n"
+	.string "GALACTIC.\p"
+	.string "Spirit and emotion are flaws.\n"
+	.string "I will erase them and remake the\l"
+	.string "universe. Starting with you.{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 CinnabarIsland_Gym_Text_BlaineDefeat::
 	.string "I have burned down to nothing!\n"
@@ -737,13 +734,11 @@ CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
 
 CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine::
 	.string "{PLAYER} received TM38\n"
-	.string "from BLAINE.$"
+	.string "from CYRUS.$"
 
 CinnabarIsland_Gym_Text_BlainePostBattle::
-	.string "TM38 contains FIRE BLAST.\n"
-	.string "Teach it to FIRE-type POKéMON.\p"
-	.string "VULPIX or CHARMELEON would be\n"
-	.string "ideal for that move.$"
+	.string "Your spirit beat my logic.\n"
+	.string "Fascinating… and unacceptable.$"
 
 CinnabarIsland_Gym_Text_MakeSpaceForThis::
 	.string "Make space for this, child!$"
@@ -797,18 +792,18 @@ CinnabarIsland_Gym_Text_RamonPostBattle::
 	.string "I'd use that!$"
 
 CinnabarIsland_Gym_Text_DerekIntro::
-	.string "I know why BLAINE became a\n"
+	.string "I know why CYRUS became a\n"
 	.string "TRAINER.$"
 
 CinnabarIsland_Gym_Text_DerekDefeat::
 	.string "Ow!$"
 
 CinnabarIsland_Gym_Text_DerekPostBattle::
-	.string "Our LEADER, BLAINE, became lost\n"
+	.string "Our LEADER, CYRUS, became lost\n"
 	.string "in the mountains but good.\p"
 	.string "Night fell when a fiery bird\n"
 	.string "POKéMON appeared.\p"
-	.string "Its light allowed BLAINE to find\n"
+	.string "Its light allowed CYRUS to find\n"
 	.string "his way down safely.$"
 
 CinnabarIsland_Gym_Text_DustyIntro::
@@ -838,7 +833,7 @@ CinnabarIsland_Gym_Text_ZacPostBattle::
 CinnabarIsland_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
 	.string "Champ in the making!\p"
-	.string "The hotheaded BLAINE is a FIRE\n"
+	.string "The hotheaded CYRUS is a FIRE\n"
 	.string "POKéMON pro.\p"
 	.string "Douse his spirits with water!\p"
 	.string "You'd better take some\n"
@@ -850,13 +845,13 @@ CinnabarIsland_Gym_Text_GymGuyPostVictory::
 
 CinnabarIsland_Gym_Text_GymStatue::
 	.string "CINNABAR POKéMON GYM\n"
-	.string "LEADER: BLAINE\p"
+	.string "LEADER: CYRUS\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}$"
 
 CinnabarIsland_Gym_Text_GymStatuePlayerWon::
 	.string "CINNABAR POKéMON GYM\n"
-	.string "LEADER: BLAINE\p"
+	.string "LEADER: CYRUS\p"
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}, {PLAYER}$"
 

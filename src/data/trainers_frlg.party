@@ -745,8 +745,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LASS_KAY ===
 Name: KAY
-Class: Lass Frlg
-Pic: Lass Frlg
+Class: Team Aqua
+Pic: Aqua Grunt F
 Gender: Male
 Music: Cute
 Double Battle: No
@@ -762,8 +762,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LASS_LISA ===
 Name: LISA
-Class: Lass Frlg
-Pic: Lass Frlg
+Class: Team Magma
+Pic: Magma Grunt F
 Gender: Male
 Music: Cute
 Double Battle: No
@@ -898,8 +898,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SAILOR_DWAYNE ===
 Name: DWAYNE
-Class: Sailor Frlg
-Pic: Sailor Frlg
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -915,7 +915,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CAMPER_LIAM ===
 Name: LIAM
-Class: Camper Frlg
+Class: Team Yell
 Pic: Camper Frlg
 Gender: Male
 Music: Serious
@@ -1039,7 +1039,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PICNICKER_DIANA ===
 Name: DIANA
-Class: Picnicker Frlg
+Class: Team Skull
 Pic: Picnicker Frlg
 Gender: Male
 Music: Cute
@@ -1217,8 +1217,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PICNICKER_TINA ===
 Name: TINA
-Class: Picnicker Frlg
-Pic: Picnicker Frlg
+Class: Team Aqua
+Pic: Aqua Grunt F
 Gender: Male
 Music: Cute
 Double Battle: No
@@ -1503,7 +1503,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SUPER_NERD_ERIK ===
 Name: ERIK
-Class: Super Nerd Frlg
+Class: Team Galactic
 Pic: Super Nerd Frlg
 Gender: Male
 Music: Dangerous
@@ -1524,7 +1524,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SUPER_NERD_AVERY ===
 Name: AVERY
-Class: Super Nerd Frlg
+Class: Team Galactic
 Pic: Super Nerd Frlg
 Gender: Male
 Music: Dangerous
@@ -1549,7 +1549,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SUPER_NERD_DEREK ===
 Name: DEREK
-Class: Super Nerd Frlg
+Class: Team Galactic
 Pic: Super Nerd Frlg
 Gender: Male
 Music: Dangerous
@@ -1562,7 +1562,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SUPER_NERD_ZAC ===
 Name: ZAC
-Class: Super Nerd Frlg
+Class: Team Galactic
 Pic: Super Nerd Frlg
 Gender: Male
 Music: Dangerous
@@ -2303,7 +2303,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BURGLAR_QUINN ===
 Name: QUINN
-Class: Burglar Frlg
+Class: Team Galactic
 Pic: Burglar Frlg
 Gender: Male
 Music: Dangerous
@@ -2324,7 +2324,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BURGLAR_RAMON ===
 Name: RAMON
-Class: Burglar Frlg
+Class: Team Galactic
 Pic: Burglar Frlg
 Gender: Male
 Music: Dangerous
@@ -2337,7 +2337,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BURGLAR_DUSTY ===
 Name: DUSTY
-Class: Burglar Frlg
+Class: Team Galactic
 Pic: Burglar Frlg
 Gender: Male
 Music: Dangerous
@@ -2401,8 +2401,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ENGINEER_BAILY ===
 Name: BAILY
-Class: Engineer Frlg
-Pic: Engineer Frlg
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -2679,7 +2679,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SWIMMER_MALE_LUIS ===
 Name: LUIS
-Class: Swimmer M Frlg
+Class: Team Skull
 Pic: Swimmer M Frlg
 Gender: Male
 Music: Serious
@@ -3237,8 +3237,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BEAUTY_BRIDGET ===
 Name: BRIDGET
-Class: Beauty Frlg
-Pic: Beauty Frlg
+Class: Team Magma
+Pic: Magma Grunt F
 Gender: Male
 Music: Cute
 Double Battle: No
@@ -3262,8 +3262,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BEAUTY_TAMIA ===
 Name: TAMIA
-Class: Beauty Frlg
-Pic: Beauty Frlg
+Class: Team Aqua
+Pic: Aqua Grunt F
 Gender: Male
 Music: Cute
 Double Battle: No
@@ -3279,8 +3279,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BEAUTY_LORI ===
 Name: LORI
-Class: Beauty Frlg
-Pic: Beauty Frlg
+Class: Team Magma
+Pic: Magma Grunt F
 Gender: Male
 Music: Cute
 Double Battle: No
@@ -3524,7 +3524,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PSYCHIC_JOHAN ===
 Name: JOHAN
-Class: Psychic Frlg
+Class: Team Flare
 Pic: Psychic M Frlg
 Gender: Male
 Music: Serious
@@ -3549,7 +3549,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_PSYCHIC_TYRON ===
 Name: TYRON
-Class: Psychic Frlg
+Class: Team Flare
 Pic: Psychic M Frlg
 Gender: Male
 Music: Serious
@@ -3566,7 +3566,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_PSYCHIC_CAMERON ===
 Name: CAMERON
-Class: Psychic Frlg
+Class: Team Flare
 Pic: Psychic M Frlg
 Gender: Male
 Music: Serious
@@ -3587,7 +3587,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_PSYCHIC_PRESTON ===
 Name: PRESTON
-Class: Psychic Frlg
+Class: Team Flare
 Pic: Psychic M Frlg
 Gender: Male
 Music: Serious
@@ -3680,8 +3680,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JUGGLER_KIRK ===
 Name: KIRK
-Class: Juggler Frlg
-Pic: Juggler Frlg
+Class: Team Plasma
+Pic: Plasma Grunt M Bw2
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -3705,8 +3705,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JUGGLER_SHAWN ===
 Name: SHAWN
-Class: Juggler Frlg
-Pic: Juggler Frlg
+Class: Team Plasma
+Pic: Plasma Grunt M Bw2
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -3780,8 +3780,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JUGGLER_KAYDEN ===
 Name: KAYDEN
-Class: Juggler Frlg
-Pic: Juggler Frlg
+Class: Team Plasma
+Pic: Plasma Grunt M Bw2
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -3793,8 +3793,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JUGGLER_NATE ===
 Name: NATE
-Class: Juggler Frlg
-Pic: Juggler Frlg
+Class: Team Plasma
+Pic: Plasma Grunt M Bw2
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -3810,8 +3810,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TAMER_PHIL ===
 Name: PHIL
-Class: Tamer Frlg
-Pic: Tamer Frlg
+Class: Team Plasma
+Pic: Plasma Grunt M Bw2
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -3827,8 +3827,8 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_TAMER_EDGAR ===
 Name: EDGAR
-Class: Tamer Frlg
-Pic: Tamer Frlg
+Class: Team Plasma
+Pic: Plasma Grunt M Bw2
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -6432,8 +6432,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_COOLTRAINER_MARY ===
 Name: MARY
-Class: Cooltrainer Frlg
-Pic: Cooltrainer F Frlg
+Class: Team Aqua
+Pic: Aqua Grunt F
 Gender: Male
 Music: Serious
 Items: Super Potion
@@ -7035,7 +7035,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Wing Attack
 
 === TRAINER_LEADER_BROCK ===
-Name: BROCK
+Name: PIERS
 Class: Leader Frlg
 Pic: Leader Brock Frlg
 Gender: Male
@@ -7043,238 +7043,156 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Geodude
+Zigzagoon-Galar
 Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Defense Curl
 
-Onix
+Scraggy
+Level: 12
+
+Inkay
+Level: 13
+
+Linoone-Galar
 Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Bind
-- Rock Tomb
+
 
 === TRAINER_LEADER_MISTY ===
-Name: MISTY
+Name: GUZMA
 Class: Leader Frlg
 Pic: Leader Misty Frlg
 Gender: Male
-Music: Cute
-Items: Super Potion
+Music: Serious
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Staryu
+Spinarak
 Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Harden
-- Recover
-- Water Pulse
 
-Starmie
+Surskit
+Level: 18
+
+Dewpider
+Level: 19
+
+Wimpod
 Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Swift
-- Recover
-- Rapid Spin
-- Water Pulse
+
 
 === TRAINER_LEADER_LT_SURGE ===
-Name: LT. SURGE
-Class: Leader Frlg
-Pic: Leader Lt Surge Frlg
+Name: ARCHER
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
 Gender: Male
 Music: Serious
-Items: Super Potion / Full Heal
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Voltorb
+Zubat
 Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Sonic Boom
-- Tackle
-- Screech
-- Shock Wave
 
-Pikachu
-Level: 18
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Quick Attack
-- Thunder Wave
-- Double Team
-- Shock Wave
+Koffing
+Level: 22
 
-Raichu
+Houndour
+Level: 23
+
+Golbat
 Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Quick Attack
-- Thunder Wave
-- Double Team
-- Shock Wave
+
 
 === TRAINER_LEADER_ERIKA ===
-Name: ERIKA
-Class: Leader Frlg
-Pic: Leader Erika Frlg
+Name: ARCHIE
+Class: Aqua Leader
+Pic: Aqua Leader Archie
 Gender: Male
-Music: Cute
-Items: Hyper Potion / Full Heal
+Music: Serious
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Victreebel
-Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Stun Spore
-- Acid
-- Poison Powder
-- Giga Drain
+Carvanha
+Level: 27
 
-Tangela
-Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Powder
-- Constrict
-- Ingrain
-- Giga Drain
+Mightyena
+Level: 28
 
-Vileplume
+Sharpedo
 Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Sleep Powder
-- Acid
-- Stun Spore
-- Giga Drain
+
 
 === TRAINER_LEADER_KOGA ===
-Name: KOGA
+Name: GHETSIS
 Class: Leader Frlg
-Pic: Leader Koga Frlg
+Pic: Ghetsis Bw2
 Gender: Male
 Music: Serious
-Items: Hyper Potion / Hyper Potion / Full Heal
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Koffing
-Level: 37
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Self Destruct
-- Sludge
-- Smokescreen
-- Toxic
+Cofagrigus
+Level: 38
 
-Muk
+Bouffalant
+Level: 38
+
+Seismitoad
 Level: 39
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Minimize
-- Sludge
-- Acid Armor
-- Toxic
 
-Koffing
-Level: 37
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Self Destruct
-- Sludge
-- Smokescreen
-- Toxic
+Bisharp
+Level: 40
 
-Weezing
+Eelektross
+Level: 41
+
+Hydreigon
 Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Sludge
-- Smokescreen
-- Toxic
+
 
 === TRAINER_LEADER_BLAINE ===
-Name: BLAINE
+Name: CYRUS
 Class: Leader Frlg
-Pic: Leader Blaine Frlg
+Pic: Cyrus
 Gender: Male
 Music: Serious
-Items: Hyper Potion / Hyper Potion / Full Heal
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Growlithe
+Houndoom
 Level: 42
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Bite
-- Roar
-- Take Down
-- Fire Blast
 
-Ponyta
-Level: 40
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Stomp
-- Bounce
-- Fire Spin
-- Fire Blast
+Crobat
+Level: 43
 
-Rapidash
-Level: 42
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Stomp
-- Bounce
-- Fire Spin
-- Fire Blast
+Honchkrow
+Level: 44
 
-Arcanine
+Gyarados
+Level: 45
+
+Weavile
 Level: 47
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Bite
-- Roar
-- Take Down
-- Fire Blast
+
 
 === TRAINER_LEADER_SABRINA ===
-Name: SABRINA
+Name: LYSANDRE
 Class: Leader Frlg
 Pic: Leader Sabrina Frlg
 Gender: Male
-Music: Cute
-Items: Hyper Potion / Hyper Potion / Full Heal
+Music: Serious
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Kadabra
+Mienshao
 Level: 38
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Psybeam
-- Reflect
-- Future Sight
-- Calm Mind
 
-Mr Mime
-Level: 37
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Barrier
-- Psybeam
-- Baton Pass
-- Calm Mind
+Honchkrow
+Level: 39
 
-Venomoth
-Level: 38
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Psybeam
-- Gust
-- Leech Life
-- Supersonic
+Pyroar
+Level: 40
 
-Alakazam
+Gyarados
 Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Psychic
-- Recover
-- Future Sight
-- Calm Mind
+
 
 === TRAINER_GENTLEMAN_THOMAS ===
 Name: THOMAS
@@ -7312,8 +7230,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GENTLEMAN_TUCKER ===
 Name: TUCKER
-Class: Gentleman Frlg
-Pic: Gentleman Frlg
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -8133,7 +8051,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CHANNELER_AMANDA ===
 Name: AMANDA
-Class: Channeler Frlg
+Class: Team Flare
 Pic: Channeler Frlg
 Gender: Male
 Music: Dangerous
@@ -8150,7 +8068,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CHANNELER_STACY ===
 Name: STACY
-Class: Channeler Frlg
+Class: Team Flare
 Pic: Channeler Frlg
 Gender: Male
 Music: Dangerous
@@ -8163,7 +8081,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_CHANNELER_TASHA ===
 Name: TASHA
-Class: Channeler Frlg
+Class: Team Flare
 Pic: Channeler Frlg
 Gender: Male
 Music: Dangerous
@@ -14363,3 +14281,22 @@ Level: 45
 
 Rattata
 Level: 46
+
+=== TRAINER_GANG_MAXIE ===
+Name: MAXIE
+Class: Magma Leader
+Pic: Magma Leader Maxie
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Numel
+Level: 27
+
+Mightyena
+Level: 28
+
+Camerupt
+Level: 29
+
