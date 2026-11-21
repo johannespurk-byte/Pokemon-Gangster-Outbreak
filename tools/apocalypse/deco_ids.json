@@ -1,37 +1,59 @@
 {
   "data/tilesets/secondary/viridian_city_frlg": {
     "barrel_dirt": {
+      "cols": 1,
       "metatiles": [
         744
       ],
       "solid": true
     },
     "barrel_road": {
+      "cols": 1,
       "metatiles": [
         745
       ],
       "solid": true
     },
     "barrier_dirt": {
+      "cols": 1,
       "metatiles": [
         743
       ],
       "solid": true
     },
     "barrier_road": {
+      "cols": 1,
       "metatiles": [
         742
       ],
       "solid": true
     },
     "car_dirt": {
+      "cols": 2,
       "metatiles": [
         740,
         741
       ],
       "solid": true
     },
+    "car_flipped_dirt": {
+      "cols": 2,
+      "metatiles": [
+        763,
+        764
+      ],
+      "solid": true
+    },
+    "car_flipped_road": {
+      "cols": 2,
+      "metatiles": [
+        761,
+        762
+      ],
+      "solid": true
+    },
     "car_road": {
+      "cols": 2,
       "metatiles": [
         738,
         739
@@ -39,48 +61,204 @@
       "solid": true
     },
     "crack_a": {
+      "cols": 1,
       "metatiles": [
         747
       ],
       "solid": false
     },
     "crack_b": {
+      "cols": 1,
       "metatiles": [
         748
       ],
       "solid": false
     },
     "crack_c": {
+      "cols": 1,
       "metatiles": [
         749
       ],
       "solid": false
     },
+    "crater_road": {
+      "cols": 2,
+      "metatiles": [
+        765,
+        766,
+        767,
+        768
+      ],
+      "solid": true
+    },
     "graffiti_road": {
+      "cols": 1,
       "metatiles": [
         750
       ],
       "solid": false
     },
+    "gym_rocket_r": {
+      "cols": 1,
+      "metatiles": [
+        779
+      ],
+      "solid": null,
+      "source": 339
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        777
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        778
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        774
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        775
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        776
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "house_wall_graffiti_a": {
+      "cols": 1,
+      "metatiles": [
+        772
+      ],
+      "solid": null,
+      "source": 657
+    },
+    "house_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        773
+      ],
+      "solid": null,
+      "source": 659
+    },
+    "house_window_boarded": {
+      "cols": 1,
+      "metatiles": [
+        769
+      ],
+      "solid": null,
+      "source": 678
+    },
+    "house_window_left_boarded": {
+      "cols": 1,
+      "metatiles": [
+        770
+      ],
+      "solid": null,
+      "source": 677
+    },
+    "house_window_right_boarded": {
+      "cols": 1,
+      "metatiles": [
+        771
+      ],
+      "solid": null,
+      "source": 679
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        780
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        781
+      ],
+      "solid": null,
+      "source": 88
+    },
     "rubble_a": {
+      "cols": 1,
       "metatiles": [
         735
       ],
       "solid": true
     },
     "rubble_b": {
+      "cols": 1,
       "metatiles": [
         736
       ],
       "solid": true
     },
     "rubble_road": {
+      "cols": 1,
       "metatiles": [
         737
       ],
       "solid": true
     },
+    "sandbags_dirt": {
+      "cols": 1,
+      "metatiles": [
+        759
+      ],
+      "solid": true
+    },
+    "sandbags_road": {
+      "cols": 1,
+      "metatiles": [
+        760
+      ],
+      "solid": true
+    },
+    "scrap_heap_a": {
+      "cols": 2,
+      "metatiles": [
+        751,
+        752,
+        753,
+        754
+      ],
+      "solid": true
+    },
+    "scrap_heap_b": {
+      "cols": 2,
+      "metatiles": [
+        755,
+        756,
+        757,
+        758
+      ],
+      "solid": true
+    },
     "tires_dirt": {
+      "cols": 1,
       "metatiles": [
         746
       ],
