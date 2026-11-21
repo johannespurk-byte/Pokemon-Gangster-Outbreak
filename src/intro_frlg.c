@@ -20,8 +20,10 @@
 #include "task.h"
 #include "title_screen.h"
 #include "trig.h"
+#include "trainer_pokemon_sprites.h"
 #include "util.h"
 #include "constants/rgb.h"
+#include "constants/trainers.h"
 #include "constants/songs.h"
 #include "constants/sound.h"
 
@@ -29,6 +31,9 @@
     The intro is grouped into the following scenes
     - Copyright screen
     - GF Logo
+    - Gangster Outbreak: night city, gang grunts walk in and line up (IntroCB_GangCity)
+
+    The original FRLG scenes below are no longer reached:
     Scene 1. Brief close up shot of grass
     Scene 2. A panning wide shot followed by a close-up of Gengar/Nidorino
     Scene 3. A fight between Gengar/Nidorino
@@ -201,6 +206,10 @@ static void SpriteCB_Star(struct Sprite *sprite);
 static void SpriteCB_SparklesSmall_Star(struct Sprite *sprite);
 static void SpriteCB_SparklesSmall_Name(struct Sprite *sprite);
 static void SpriteCB_SparklesBig(struct Sprite *sprite);
+
+// Gangster Outbreak city scene
+static void IntroCB_GangCity(struct IntroSequenceData * ptr);
+static void GangCity_FreeSprites(void);
 
 // Scene 1
 static void IntroCB_Scene1(struct IntroSequenceData * ptr);
@@ -1271,7 +1280,7 @@ static void IntroCB_GF_RevealLogo(struct IntroSequenceData * this)
         if (++this->timer > 20)
         {
             SetGpuReg(REG_OFFSET_BLDCNT, 0);
-            SetIntroCB(this, IntroCB_Scene1);
+            SetIntroCB(this, IntroCB_GangCity);
         }
         break;
     }
@@ -1899,11 +1908,224 @@ static void Scene3_GengarZoom(struct IntroSequenceData * this)
     }
 }
 
+//------------------------------------------------------------------------------
+// Gangster Outbreak: night city scene
+//------------------------------------------------------------------------------
+
+#define BG_CITY          3
+#define PALSLOT_CITY     1
+#define CITY_PAN_SPEED   0x40 // background scroll per frame (1/256 px)
+#define GANG_WALK_SPEED  3    // px per frame
+#define GANG_ENTER_DELAY 32   // frames between two grunts
+#define GANG_HOLD_FRAMES 200  // frames the finished line-up stays on screen
+
+static const u16 sCity_Pal[] = INCGFX_U16("graphics/intro_frlg/city/bg.png", ".gbapal");
+static const u8 sCity_Gfx[]  = INCGFX_U8("graphics/intro_frlg/city/bg.png", ".4bpp.smol");
+static const u8 sCity_Map[]  = INCBIN_U8( "graphics/intro_frlg/city/bg.bin.smolTM");
+
+static const struct BgTemplate sBgTemplates_City[] = {
+    {
+        .bg = BG_CITY,
+        .charBaseIndex = 0,
+        .mapBaseIndex = 31,
+        .screenSize = 0,
+        .paletteMode = 0,
+        .priority = 3,
+        .baseTile = 0x000
+    },
+};
+
+struct GangMember
+{
+    u16 trainerPic;
+    s16 x; // sprite centre once lined up
+    s16 y;
+};
+
+// Back row first (drawn behind), then the front row. Members left of the centre walk in from the left.
+static const struct GangMember sGangLineup[] = {
+    { TRAINER_PIC_ROCKET_GRUNT_F_FRLG,  48,  90 },
+    { TRAINER_PIC_MAGMA_GRUNT_F,        96,  90 },
+    { TRAINER_PIC_AQUA_GRUNT_F,        144,  90 },
+    { TRAINER_PIC_PLASMA_GRUNT_F_BW2,  192,  90 },
+    { TRAINER_PIC_ROCKET_GRUNT_M_FRLG,  26, 116 },
+    { TRAINER_PIC_MAGMA_GRUNT_M,        84, 116 },
+    { TRAINER_PIC_AQUA_GRUNT_M,        156, 116 },
+    { TRAINER_PIC_PLASMA_GRUNT_M_BW2,  214, 116 },
+};
+
+// Walk order: alternate sides, back row before the front row
+static const u8 sGangEnterOrder[] = { 0, 3, 1, 2, 4, 7, 5, 6 };
+
+static EWRAM_DATA u16 sGangSpriteIds[ARRAY_COUNT(sGangLineup)] = {0};
+static EWRAM_DATA bool8 sGangSpritesActive = FALSE;
+
+#define sTargetX data[0]
+#define sSpeed   data[1]
+
+static void SpriteCB_GangWalkIn(struct Sprite *sprite)
+{
+    sprite->x += sprite->sSpeed;
+    if ((sprite->sSpeed > 0 && sprite->x >= sprite->sTargetX)
+     || (sprite->sSpeed < 0 && sprite->x <= sprite->sTargetX))
+    {
+        sprite->x = sprite->sTargetX;
+        sprite->sSpeed = 0;
+        sprite->callback = SpriteCallbackDummy;
+    }
+}
+
+static bool32 GangCity_IsAnyoneWalking(void)
+{
+    u32 i;
+
+    for (i = 0; i < ARRAY_COUNT(sGangLineup); i++)
+    {
+        if (sGangSpriteIds[i] != 0xFFFF && gSprites[sGangSpriteIds[i]].callback == SpriteCB_GangWalkIn)
+            return TRUE;
+    }
+    return FALSE;
+}
+
+static void GangCity_CreateSprites(void)
+{
+    u32 i;
+
+    for (i = 0; i < ARRAY_COUNT(sGangLineup); i++)
+    {
+        // Wait off screen on the side the grunt will walk in from
+        s16 startX = sGangLineup[i].x < DISPLAY_WIDTH / 2 ? -40 : DISPLAY_WIDTH + 40;
+        u16 spriteId = CreateTrainerPicSprite(sGangLineup[i].trainerPic, TRUE, startX, sGangLineup[i].y, 0, sGangLineup[i].trainerPic); // palette tag must equal the trainer pic tag
+
+        sGangSpriteIds[i] = spriteId;
+        if (spriteId == 0xFFFF)
+            continue;
+        // Front row in front of the back row
+        gSprites[spriteId].subpriority = i < ARRAY_COUNT(sGangLineup) / 2 ? 2 : 1;
+        gSprites[spriteId].oam.priority = 1;
+        gSprites[spriteId].sTargetX = sGangLineup[i].x;
+    }
+    sGangSpritesActive = TRUE;
+}
+
+static void GangCity_StartWalk(u32 index)
+{
+    u16 spriteId = sGangSpriteIds[index];
+
+    if (spriteId == 0xFFFF)
+        return;
+    gSprites[spriteId].sSpeed = sGangLineup[index].x < DISPLAY_WIDTH / 2 ? GANG_WALK_SPEED : -GANG_WALK_SPEED;
+    gSprites[spriteId].callback = SpriteCB_GangWalkIn;
+}
+
+#undef sTargetX
+#undef sSpeed
+
+static void GangCity_FreeSprites(void)
+{
+    u32 i;
+
+    if (!sGangSpritesActive)
+        return;
+    for (i = 0; i < ARRAY_COUNT(sGangLineup); i++)
+    {
+        if (sGangSpriteIds[i] != 0xFFFF)
+            FreeAndDestroyTrainerPicSprite(sGangSpriteIds[i]);
+        sGangSpriteIds[i] = 0xFFFF;
+    }
+    sGangSpritesActive = FALSE;
+}
+
+static void GangCity_Task_PanCity(u8 taskId)
+{
+    ChangeBgX(BG_CITY, CITY_PAN_SPEED, BG_COORD_ADD);
+}
+
+static void IntroCB_GangCity(struct IntroSequenceData * this)
+{
+    switch (this->state)
+    {
+    case 0:
+        SetVBlankCallback(NULL);
+        LoadPalette(sCity_Pal, BG_PLTT_ID(PALSLOT_CITY), PLTT_SIZE_4BPP);
+        BlendPalettes(PALETTES_ALL & ~1, 16, RGB_WHITE);
+        InitBgsFromTemplates(0, sBgTemplates_City, ARRAY_COUNT(sBgTemplates_City));
+        DecompressAndCopyTileDataToVram(BG_CITY, sCity_Gfx, 0, 0, 0);
+        DecompressAndCopyTileDataToVram(BG_CITY, sCity_Map, 0, 0, 1);
+        HideBg(0);
+        HideBg(1);
+        HideBg(2);
+        ResetBgPositions();
+        // No letterbox: the GF scene's window would cut off the sky and the street
+        ClearGpuRegBits(REG_OFFSET_DISPCNT, DISPCNT_WIN0_ON | DISPCNT_WIN1_ON);
+        this->state++;
+        break;
+    case 1:
+        if (!FreeTempTileDataBuffersIfPossible())
+        {
+            ShowBg(BG_CITY);
+            GangCity_CreateSprites();
+            BlendPalettes(PALETTES_ALL & ~1, 16, RGB_WHITE);
+            CreateTask(GangCity_Task_PanCity, 0);
+            SetVBlankCallback(VBlankCB_Intro);
+            BeginNormalPaletteFade(PALETTES_ALL & ~1, -2, 16, 0, RGB_WHITE);
+            this->state++;
+        }
+        break;
+    case 2:
+        if (!gPaletteFade.active)
+        {
+            m4aSongNumStart(MUS_RG_INTRO_FIGHT);
+            this->timer = 0;
+            this->data[2] = 0; // next grunt in sGangEnterOrder
+            this->state++;
+        }
+        break;
+    case 3:
+        // Grunts walk in one after another
+        if (++this->timer >= GANG_ENTER_DELAY)
+        {
+            this->timer = 0;
+            GangCity_StartWalk(sGangEnterOrder[this->data[2]]);
+            if (++this->data[2] >= ARRAY_COUNT(sGangEnterOrder))
+                this->state++;
+        }
+        break;
+    case 4:
+        if (!GangCity_IsAnyoneWalking())
+        {
+            // Everyone is in place: white flash
+            BlendPalettes(PALETTES_ALL & ~1, 12, RGB_WHITE);
+            BeginNormalPaletteFade(PALETTES_ALL & ~1, 0, 12, 0, RGB_WHITE);
+            PlaySE(SE_M_DETECT);
+            this->timer = 0;
+            this->state++;
+        }
+        break;
+    case 5:
+        if (++this->timer >= GANG_HOLD_FRAMES)
+        {
+            BeginNormalPaletteFade(PALETTES_ALL & ~1, 1, 0, 16, RGB_WHITE);
+            this->state++;
+        }
+        break;
+    case 6:
+        if (!gPaletteFade.active)
+        {
+            DestroyTask(FindTaskIdByFunc(GangCity_Task_PanCity));
+            GangCity_FreeSprites();
+            SetIntroCB(this, IntroCB_ExitToTitleScreen);
+        }
+        break;
+    }
+}
+
 static void IntroCB_ExitToTitleScreen(struct IntroSequenceData * this)
 {
     switch (this->state)
     {
     case 0:
+        GangCity_FreeSprites();
         FillPalette(RGB_BLACK, 0, PLTT_SIZE);
         this->state++;
         break;
