@@ -113,11 +113,11 @@ bool32 BeginNormalPaletteFade(u32 selectedPalettes, s8 delay, u8 startY, u8 targ
     }
     else
     {
-        gPaletteFade.deltaY = 2;
+        gPaletteFade.deltaY = 8; // Vanilla is 2, 4x for faster screen fades
 
         if (delay < 0)
         {
-            gPaletteFade.deltaY += (delay * -1);
+            gPaletteFade.deltaY = min(8 + (delay * -1), 15);
             delay = 0;
         }
 
@@ -156,11 +156,11 @@ bool32 BeginTimeOfDayPaletteFade(u32 selectedPalettes, s8 delay, u8 startY, u8 t
     if (gPaletteFade.active)
         return FALSE;
 
-    gPaletteFade.deltaY = 2;
+    gPaletteFade.deltaY = 8; // Vanilla is 2, 4x for faster screen fades
 
     if (delay < 0)
     {
-        gPaletteFade.deltaY += (delay * -1);
+        gPaletteFade.deltaY = min(8 + (delay * -1), 15);
         delay = 0;
     }
 
@@ -211,7 +211,7 @@ void ResetPaletteFadeControl(void)
     gPaletteFade.softwareFadeFinishing = FALSE;
     gPaletteFade.softwareFadeFinishingCounter = 0;
     gPaletteFade.objPaletteToggle = 0;
-    gPaletteFade.deltaY = 2;
+    gPaletteFade.deltaY = 8; // Vanilla is 2, 4x for faster screen fades
 }
 
 // Like normal palette fade, but respects sprite/tile palettes immune to time of day fading
@@ -518,7 +518,7 @@ void UnfadePlttBuffer(u32 selectedPalettes)
 
 void BeginFastPaletteFade(u32 submode)
 {
-    gPaletteFade.deltaY = 2;
+    gPaletteFade.deltaY = 8; // Vanilla is 2, 4x for faster screen fades
     BeginFastPaletteFadeInternal(submode);
 }
 

@@ -988,6 +988,15 @@ static void Cmd_delay(void)
 {
     sBattleAnimScriptPtr++;
     sAnimFramesToWait = sBattleAnimScriptPtr[0];
+#if B_ANIM_SPEED_MULTIPLIER > 1
+    // Script delays run once per frame, so shorten them to match the extra ticks in BattleMainCB2
+    if (sAnimFramesToWait > 0 && gMain.inBattle && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
+    {
+        sAnimFramesToWait /= B_ANIM_SPEED_MULTIPLIER;
+        if (sAnimFramesToWait == 0)
+            sAnimFramesToWait = 1;
+    }
+#endif
     if (sAnimFramesToWait == 0)
         sAnimFramesToWait = -1;
     sBattleAnimScriptPtr++;
