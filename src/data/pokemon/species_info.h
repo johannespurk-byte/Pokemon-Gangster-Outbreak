@@ -95,6 +95,9 @@
 #define FLIP    0
 #define NO_FLIP 1
 
+// Gangster Outbreak: species_info_tribunal_arma.h re-initializes fields of the species above on purpose
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Woverride-init"
 const struct SpeciesInfo gSpeciesInfo[] =
 {
     [SPECIES_NONE] =
@@ -159,6 +162,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     #include "species_info/gen_7_families.h"
     #include "species_info/gen_8_families.h"
     #include "species_info/gen_9_families.h"
+
+    // Pokémon Tribunal Arma: base stats, abilities, types and single-player evolutions
+    // (skipped in test builds, the battle tests are written for vanilla data)
+    #include "species_info_tribunal_arma.h"
 
     [SPECIES_EGG] =
     {
@@ -247,6 +254,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     */
 };
+#pragma GCC diagnostic pop
 
 const struct EggData gEggDatas[EGG_ID_COUNT] =
 {
