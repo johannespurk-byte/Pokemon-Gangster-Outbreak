@@ -628,11 +628,49 @@
 #define TRAINER_CHAMPION_REMATCH_CHARMANDER        622
 #define TRAINER_CUE_BALL_PAXTON                    623
 
+// Gangster Outbreak: gang trainers on the routes (tools/route_trainers.py)
+#define TRAINER_GANGTRAINER_ROUTE1_1               624
+#define TRAINER_GANGTRAINER_ROUTE1_2               625
+#define TRAINER_GANGTRAINER_ROUTE1_3               626
+#define TRAINER_GANGTRAINER_ROUTE1_4               627
+#define TRAINER_GANGTRAINER_ROUTE1_5               628
+#define TRAINER_GANGTRAINER_ROUTE2_1               629
+#define TRAINER_GANGTRAINER_ROUTE2_2               630
+#define TRAINER_GANGTRAINER_ROUTE2_3               631
+#define TRAINER_GANGTRAINER_ROUTE2_4               632
+#define TRAINER_GANGTRAINER_ROUTE2_5               633
+#define TRAINER_GANGTRAINER_ROUTE4_1               634
+#define TRAINER_GANGTRAINER_ROUTE4_2               635
+#define TRAINER_GANGTRAINER_ROUTE4_3               636
+#define TRAINER_GANGTRAINER_ROUTE4_4               637
+#define TRAINER_GANGTRAINER_ROUTE5_1               638
+#define TRAINER_GANGTRAINER_ROUTE5_2               639
+#define TRAINER_GANGTRAINER_ROUTE5_3               640
+#define TRAINER_GANGTRAINER_ROUTE5_4               641
+#define TRAINER_GANGTRAINER_ROUTE5_5               642
+#define TRAINER_GANGTRAINER_ROUTE7_1               643
+#define TRAINER_GANGTRAINER_ROUTE7_2               644
+#define TRAINER_GANGTRAINER_ROUTE7_3               645
+#define TRAINER_GANGTRAINER_ROUTE7_4               646
+#define TRAINER_GANGTRAINER_ROUTE7_5               647
+#define TRAINER_GANGTRAINER_ROUTE18_1              648
+#define TRAINER_GANGTRAINER_ROUTE18_2              649
+#define TRAINER_GANGTRAINER_ROUTE22_1              650
+#define TRAINER_GANGTRAINER_ROUTE22_2              651
+#define TRAINER_GANGTRAINER_ROUTE22_3              652
+#define TRAINER_GANGTRAINER_ROUTE22_4              653
+#define TRAINER_GANGTRAINER_ROUTE22_5              654
+#define TRAINER_GANGTRAINER_ROUTE23_1              655
+#define TRAINER_GANGTRAINER_ROUTE23_2              656
+#define TRAINER_GANGTRAINER_ROUTE23_3              657
+#define TRAINER_GANGTRAINER_ROUTE23_4              658
+#define TRAINER_GANGTRAINER_ROUTE23_5              659
+
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT_FRLG can be increased but will take up additional saveblock space
 
-#define TRAINERS_COUNT_FRLG                      624
+#define TRAINERS_COUNT_FRLG                      660
 #define MAX_TRAINERS_COUNT_FRLG                  768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_FRLG_H

@@ -299,3 +299,75 @@ Route22_Text_LeagueGateSign::
 	.string "POKéMON LEAGUE\n"
 	.string "Front Gate$"
 
+
+@ Gangster Outbreak: gang trainers (tools/route_trainers.py)
+Route22_EventScript_GangTrainer1::
+	trainerbattle_single TRAINER_GANGTRAINER_ROUTE22_1, Route22_Text_GangTrainer1Intro, Route22_Text_GangTrainer1Defeat
+	msgbox Route22_Text_GangTrainer1Post, MSGBOX_AUTOCLOSE
+	end
+
+Route22_Text_GangTrainer1Intro:
+	.string "The city burned and I got\nstronger. Wanna see?$"
+
+Route22_Text_GangTrainer1Defeat:
+	.string "Ugh! Who taught you to\nfight like that?$"
+
+Route22_Text_GangTrainer1Post:
+	.string "Word travels fast. Everyone\nwill know your name soon.$"
+
+Route22_EventScript_GangTrainer2::
+	trainerbattle_single TRAINER_GANGTRAINER_ROUTE22_2, Route22_Text_GangTrainer2Intro, Route22_Text_GangTrainer2Defeat
+	msgbox Route22_Text_GangTrainer2Post, MSGBOX_AUTOCLOSE
+	end
+
+Route22_Text_GangTrainer2Intro:
+	.string "The city burned and I got\nstronger. Wanna see?$"
+
+Route22_Text_GangTrainer2Defeat:
+	.string "Ugh! Who taught you to\nfight like that?$"
+
+Route22_Text_GangTrainer2Post:
+	.string "Keep walking. This road's\nyours… for now.$"
+
+Route22_EventScript_GangTrainer3::
+	trainerbattle_single TRAINER_GANGTRAINER_ROUTE22_3, Route22_Text_GangTrainer3Intro, Route22_Text_GangTrainer3Defeat
+	msgbox Route22_Text_GangTrainer3Post, MSGBOX_AUTOCLOSE
+	end
+
+Route22_Text_GangTrainer3Intro:
+	.string "You look like easy money.\nHand it over!$"
+
+Route22_Text_GangTrainer3Defeat:
+	.string "Ugh! Who taught you to\nfight like that?$"
+
+Route22_Text_GangTrainer3Post:
+	.string "Keep walking. This road's\nyours… for now.$"
+
+Route22_EventScript_GangTrainer4::
+	trainerbattle_single TRAINER_GANGTRAINER_ROUTE22_4, Route22_Text_GangTrainer4Intro, Route22_Text_GangTrainer4Defeat
+	msgbox Route22_Text_GangTrainer4Post, MSGBOX_AUTOCLOSE
+	end
+
+Route22_Text_GangTrainer4Intro:
+	.string "Rocket's gone, so the streets\nbelong to whoever's toughest!$"
+
+Route22_Text_GangTrainer4Defeat:
+	.string "All right, all right!\nYou made your point!$"
+
+Route22_Text_GangTrainer4Post:
+	.string "Word travels fast. Everyone\nwill know your name soon.$"
+
+Route22_EventScript_GangTrainer5::
+	trainerbattle_single TRAINER_GANGTRAINER_ROUTE22_5, Route22_Text_GangTrainer5Intro, Route22_Text_GangTrainer5Defeat
+	msgbox Route22_Text_GangTrainer5Post, MSGBOX_AUTOCLOSE
+	end
+
+Route22_Text_GangTrainer5Intro:
+	.string "The city burned and I got\nstronger. Wanna see?$"
+
+Route22_Text_GangTrainer5Defeat:
+	.string "Heh… Not bad, punk.$"
+
+Route22_Text_GangTrainer5Post:
+	.string "GIOVANNI's crew, huh?\nI should've known.$"
+

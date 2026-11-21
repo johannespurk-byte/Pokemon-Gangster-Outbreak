@@ -13787,3 +13787,579 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 Muk
 Level: 39
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_GANGTRAINER_ROUTE1_1 ===
+Name: FUZZ
+Class: Rocker Frlg
+Pic: Rocker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE1_2 ===
+Name: LULU
+Class: Lass Frlg
+Pic: Lass Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE1_3 ===
+Name: SCARLET
+Class: Beauty Frlg
+Pic: Beauty Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE1_4 ===
+Name: BRICK
+Class: Hiker Frlg
+Pic: Hiker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE1_5 ===
+Name: PEARL
+Class: Lass Frlg
+Pic: Lass Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE2_1 ===
+Name: AMP
+Class: Rocker Frlg
+Pic: Rocker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE2_2 ===
+Name: BUTCH
+Class: Camper Frlg
+Pic: Camper Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE2_3 ===
+Name: SADIE
+Class: Picnicker Frlg
+Pic: Picnicker Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE2_4 ===
+Name: DIESEL
+Class: Biker Frlg
+Pic: Biker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE2_5 ===
+Name: RIOT
+Class: Rocker Frlg
+Pic: Rocker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE4_1 ===
+Name: VELVET
+Class: Beauty Frlg
+Pic: Beauty Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 13
+
+Rattata
+Level: 14
+
+=== TRAINER_GANGTRAINER_ROUTE4_2 ===
+Name: NICKY
+Class: Youngster Frlg
+Pic: Youngster Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 13
+
+Rattata
+Level: 14
+
+=== TRAINER_GANGTRAINER_ROUTE4_3 ===
+Name: HEX
+Class: Rocker Frlg
+Pic: Rocker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 13
+
+Rattata
+Level: 14
+
+=== TRAINER_GANGTRAINER_ROUTE4_4 ===
+Name: RAZOR
+Class: Biker Frlg
+Pic: Biker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 13
+
+Rattata
+Level: 14
+
+=== TRAINER_GANGTRAINER_ROUTE5_1 ===
+Name: ROXY
+Class: Lass Frlg
+Pic: Lass Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 17
+
+Rattata
+Level: 18
+
+=== TRAINER_GANGTRAINER_ROUTE5_2 ===
+Name: IVY
+Class: Beauty Frlg
+Pic: Beauty Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 17
+
+Rattata
+Level: 18
+
+=== TRAINER_GANGTRAINER_ROUTE5_3 ===
+Name: RYU
+Class: Black Belt Frlg
+Pic: Black Belt Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 17
+
+Rattata
+Level: 18
+
+=== TRAINER_GANGTRAINER_ROUTE5_4 ===
+Name: BOULDER
+Class: Hiker Frlg
+Pic: Hiker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 17
+
+Rattata
+Level: 18
+
+=== TRAINER_GANGTRAINER_ROUTE5_5 ===
+Name: TRIX
+Class: Picnicker Frlg
+Pic: Picnicker Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 17
+
+Rattata
+Level: 18
+
+=== TRAINER_GANGTRAINER_ROUTE7_1 ===
+Name: NOVA
+Class: Picnicker Frlg
+Pic: Picnicker Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 22
+
+Rattata
+Level: 23
+
+Rattata
+Level: 24
+
+=== TRAINER_GANGTRAINER_ROUTE7_2 ===
+Name: ROSE
+Class: Beauty Frlg
+Pic: Beauty Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 22
+
+Rattata
+Level: 23
+
+Rattata
+Level: 24
+
+=== TRAINER_GANGTRAINER_ROUTE7_3 ===
+Name: SLASH
+Class: Rocker Frlg
+Pic: Rocker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 22
+
+Rattata
+Level: 23
+
+Rattata
+Level: 24
+
+=== TRAINER_GANGTRAINER_ROUTE7_4 ===
+Name: SPIKE
+Class: Biker Frlg
+Pic: Biker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 22
+
+Rattata
+Level: 23
+
+Rattata
+Level: 24
+
+=== TRAINER_GANGTRAINER_ROUTE7_5 ===
+Name: DUKE
+Class: Camper Frlg
+Pic: Camper Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 22
+
+Rattata
+Level: 23
+
+Rattata
+Level: 24
+
+=== TRAINER_GANGTRAINER_ROUTE18_1 ===
+Name: KNUCKLES
+Class: Biker Frlg
+Pic: Biker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 29
+
+Rattata
+Level: 30
+
+Rattata
+Level: 31
+
+=== TRAINER_GANGTRAINER_ROUTE18_2 ===
+Name: STONE
+Class: Hiker Frlg
+Pic: Hiker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 29
+
+Rattata
+Level: 30
+
+Rattata
+Level: 31
+
+=== TRAINER_GANGTRAINER_ROUTE22_1 ===
+Name: DAISY
+Class: Lass Frlg
+Pic: Lass Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE22_2 ===
+Name: RUST
+Class: Biker Frlg
+Pic: Biker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE22_3 ===
+Name: TANK
+Class: Biker Frlg
+Pic: Biker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE22_4 ===
+Name: PEARL
+Class: Lass Frlg
+Pic: Lass Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE22_5 ===
+Name: VIPER
+Class: Biker Frlg
+Pic: Biker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 6
+
+Rattata
+Level: 7
+
+=== TRAINER_GANGTRAINER_ROUTE23_1 ===
+Name: LULU
+Class: Lass Frlg
+Pic: Lass Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 44
+
+Rattata
+Level: 45
+
+Rattata
+Level: 46
+
+=== TRAINER_GANGTRAINER_ROUTE23_2 ===
+Name: IVY
+Class: Beauty Frlg
+Pic: Beauty Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 44
+
+Rattata
+Level: 45
+
+Rattata
+Level: 46
+
+=== TRAINER_GANGTRAINER_ROUTE23_3 ===
+Name: GRAVEL
+Class: Hiker Frlg
+Pic: Hiker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 44
+
+Rattata
+Level: 45
+
+Rattata
+Level: 46
+
+=== TRAINER_GANGTRAINER_ROUTE23_4 ===
+Name: SCARLET
+Class: Beauty Frlg
+Pic: Beauty Frlg
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 44
+
+Rattata
+Level: 45
+
+Rattata
+Level: 46
+
+=== TRAINER_GANGTRAINER_ROUTE23_5 ===
+Name: GRAVEL
+Class: Hiker Frlg
+Pic: Hiker Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move
+
+Rattata
+Level: 44
+
+Rattata
+Level: 45
+
+Rattata
+Level: 46

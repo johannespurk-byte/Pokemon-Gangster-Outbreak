@@ -95,3 +95,61 @@ Route4_Text_PeopleLikeAndRespectBrock::
 	.string "People like and respect him.\p"
 	.string "I want to become a GYM LEADER\n"
 	.string "like him.$"
+
+@ Gangster Outbreak: gang trainers (tools/route_trainers.py)
+Route4_EventScript_GangTrainer1::
+	trainerbattle_single TRAINER_GANGTRAINER_ROUTE4_1, Route4_Text_GangTrainer1Intro, Route4_Text_GangTrainer1Defeat
+	msgbox Route4_Text_GangTrainer1Post, MSGBOX_AUTOCLOSE
+	end
+
+Route4_Text_GangTrainer1Intro:
+	.string "This is our turf now.\nPay the toll or get lost!$"
+
+Route4_Text_GangTrainer1Defeat:
+	.string "All right, all right!\nYou made your point!$"
+
+Route4_Text_GangTrainer1Post:
+	.string "Keep walking. This road's\nyours… for now.$"
+
+Route4_EventScript_GangTrainer2::
+	trainerbattle_single TRAINER_GANGTRAINER_ROUTE4_2, Route4_Text_GangTrainer2Intro, Route4_Text_GangTrainer2Defeat
+	msgbox Route4_Text_GangTrainer2Post, MSGBOX_AUTOCLOSE
+	end
+
+Route4_Text_GangTrainer2Intro:
+	.string "Nobody walks through here\nwithout a fight!$"
+
+Route4_Text_GangTrainer2Defeat:
+	.string "My gang's gonna hear\nabout this…$"
+
+Route4_Text_GangTrainer2Post:
+	.string "Keep walking. This road's\nyours… for now.$"
+
+Route4_EventScript_GangTrainer3::
+	trainerbattle_single TRAINER_GANGTRAINER_ROUTE4_3, Route4_Text_GangTrainer3Intro, Route4_Text_GangTrainer3Defeat
+	msgbox Route4_Text_GangTrainer3Post, MSGBOX_AUTOCLOSE
+	end
+
+Route4_Text_GangTrainer3Intro:
+	.string "Heh, fresh meat for my\nPOKéMON!$"
+
+Route4_Text_GangTrainer3Defeat:
+	.string "My gang's gonna hear\nabout this…$"
+
+Route4_Text_GangTrainer3Post:
+	.string "GIOVANNI's crew, huh?\nI should've known.$"
+
+Route4_EventScript_GangTrainer4::
+	trainerbattle_single TRAINER_GANGTRAINER_ROUTE4_4, Route4_Text_GangTrainer4Intro, Route4_Text_GangTrainer4Defeat
+	msgbox Route4_Text_GangTrainer4Post, MSGBOX_AUTOCLOSE
+	end
+
+Route4_Text_GangTrainer4Intro:
+	.string "Wrong road, kid.\nThis one's ours.$"
+
+Route4_Text_GangTrainer4Defeat:
+	.string "Heh… Not bad, punk.$"
+
+Route4_Text_GangTrainer4Post:
+	.string "Ever since the outbreak,\nonly the strong survive.$"
+
