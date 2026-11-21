@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_difficulty.h"
 #include "main.h"
 #include "credits.h"
 #include "event_data.h"
@@ -31,6 +32,7 @@ int GameClear(void)
         FlagSet(FLAG_SYS_GAME_CLEAR);
     }
 
+    NewGamePlus_OnHallOfFame(); // Gangster Outbreak: unlock NEW GAME+ (saved with the Hall of Fame)
     if (GetGameStat(GAME_STAT_FIRST_HOF_PLAY_TIME) == 0)
         SetGameStat(GAME_STAT_FIRST_HOF_PLAY_TIME, (gSaveBlock2Ptr->playTimeHours << 16) | (gSaveBlock2Ptr->playTimeMinutes << 8) | gSaveBlock2Ptr->playTimeSeconds);
 
@@ -108,6 +110,7 @@ bool8 EnterHallOfFame(void)
         gHasHallOfFameRecords = FALSE;
         FlagSet(FLAG_SYS_GAME_CLEAR);
     }
+    NewGamePlus_OnHallOfFame(); // Gangster Outbreak: unlock NEW GAME+ (saved with the Hall of Fame)
     if (GetGameStat(GAME_STAT_FIRST_HOF_PLAY_TIME) == 0)
     {
         SetGameStat(GAME_STAT_FIRST_HOF_PLAY_TIME, (gSaveBlock2Ptr->playTimeHours << 16) | (gSaveBlock2Ptr->playTimeMinutes << 8) | gSaveBlock2Ptr->playTimeSeconds);

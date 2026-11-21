@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_difficulty.h"
 #include "trainer_pokemon_sprites.h"
 #include "bg.h"
 #include "constants/rgb.h"
@@ -265,6 +266,10 @@ static const u8 gText_MainMenuNewGame[] = _("NEW GAME");
 static const u8 gText_MainMenuContinue[] = _("CONTINUE");
 static const u8 gText_MainMenuOption[] = _("OPTION");
 static const u8 gText_MainMenuMysteryGift[] = _("MYSTERY GIFT");
+static const u8 gText_MainMenuNewGamePlus[] = _("NEW GAME+"); // Gangster Outbreak
+
+// Gangster Outbreak: with NEW GAME+ unlocked (and Mystery Gift off) the 4-entry menu shows NEW GAME+ in the Mystery Gift slot
+static EWRAM_DATA bool8 sShowNewGamePlus = FALSE;
 static const u8 gText_MainMenuMysteryGift2[] = _("MYSTERY GIFT");
 static const u8 gText_MainMenuMysteryEvents[] = _("MYSTERY EVENTS");
 static const u8 gText_WirelessNotConnected[] = _("The Wireless Adapter is not\nconnected.");
@@ -662,8 +667,14 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
         {
         case SAVE_STATUS_OK:
             tMenuType = HAS_SAVED_GAME;
+            sShowNewGamePlus = FALSE;
             if (IsMysteryGiftEnabled())
                 tMenuType++;
+            else if (NewGamePlus_IsUnlocked())
+            {
+                tMenuType = HAS_MYSTERY_GIFT;
+                sShowNewGamePlus = TRUE;
+            }
             gTasks[taskId].func = Task_MainMenuCheckBattery;
             break;
         case SAVE_STATUS_CORRUPT:
@@ -837,7 +848,7 @@ static void Task_DisplayMainMenu(u8 taskId)
             FillWindowPixelBuffer(5, PIXEL_FILL(0xA));
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
             AddTextPrinterParameterized3(3, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
-            AddTextPrinterParameterized3(4, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuMysteryGift);
+            AddTextPrinterParameterized3(4, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, sShowNewGamePlus ? gText_MainMenuNewGamePlus : gText_MainMenuMysteryGift);
             AddTextPrinterParameterized3(5, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
             MainMenu_FormatSavegameText();
             PutWindowTilemap(2);
@@ -971,6 +982,7 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
         ClearStdWindowAndFrame(6, TRUE);
         ClearStdWindowAndFrame(7, TRUE);
         wirelessAdapterConnected = IsWirelessAdapterConnected();
+        gNewGamePlusPending = FALSE; // only the NEW GAME+ entry sets it again
         switch (gTasks[taskId].tMenuType)
         {
         case HAS_NO_SAVED_GAME:
@@ -1012,6 +1024,12 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
                 action = ACTION_NEW_GAME;
                 break;
             case 2:
+                if (sShowNewGamePlus)
+                {
+                    action = ACTION_NEW_GAME;
+                    gNewGamePlusPending = TRUE;
+                    break;
+                }
                 action = ACTION_MYSTERY_GIFT;
                 if (!wirelessAdapterConnected)
                 {

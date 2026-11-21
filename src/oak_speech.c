@@ -1559,6 +1559,7 @@ static const struct WindowTemplate sDifficultyWindowTemplate =
 static void Difficulty_Draw(u8 taskId)
 {
     static const u8 sColors[3] = {1, 2, 3};
+    static const u8 sLockedColors[3] = {1, 3, 1};
     static const u8 sRecommendedColors[3] = {1, 4, 5};
     u8 windowId = gTasks[taskId].tMenuWindowId;
     u32 i;
@@ -1567,11 +1568,13 @@ static void Difficulty_Draw(u8 taskId)
     for (i = 0; i < GANG_DIFFICULTY_COUNT; i++)
     {
         u32 y = 1 + i * 16;
+        bool32 locked = i < GangDifficulty_GetMinSelectable(); // NEW GAME+: no going easier
         if (i == (u32)gTasks[taskId].tDifficultyCursor)
             AddTextPrinterParameterized3(windowId, FONT_NORMAL, 0, y, sColors, TEXT_SKIP_DRAW, COMPOUND_STRING("{RIGHT_ARROW}"));
-        AddTextPrinterParameterized3(windowId, FONT_NORMAL, 10, y, sColors, TEXT_SKIP_DRAW, GangDifficulty_GetName(i));
-        if (i == GANG_DIFFICULTY_RECOMMENDED)
-            AddTextPrinterParameterized3(windowId, FONT_SMALL, 96, y + 2, sRecommendedColors, TEXT_SKIP_DRAW, COMPOUND_STRING("(RECOMMENDED)"));
+        AddTextPrinterParameterized3(windowId, FONT_NORMAL, 10, y, locked ? sLockedColors : sColors, TEXT_SKIP_DRAW, GangDifficulty_GetName(i));
+        if (i == GangDifficulty_GetDefaultSelection())
+            AddTextPrinterParameterized3(windowId, FONT_SMALL, 96, y + 2, sRecommendedColors, TEXT_SKIP_DRAW,
+                                         gNewGamePlusPending ? COMPOUND_STRING("(NEXT LEVEL)") : COMPOUND_STRING("(RECOMMENDED)"));
     }
     CopyWindowToVram(windowId, COPYWIN_GFX);
     // description of the highlighted difficulty in the text box
@@ -1582,15 +1585,17 @@ static void Task_OakSpeech_HandleDifficultyInput(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+    s32 min = GangDifficulty_GetMinSelectable();
+
     if (JOY_NEW(DPAD_UP))
     {
-        tDifficultyCursor = (tDifficultyCursor == 0) ? GANG_DIFFICULTY_COUNT - 1 : tDifficultyCursor - 1;
+        tDifficultyCursor = (tDifficultyCursor <= min) ? GANG_DIFFICULTY_COUNT - 1 : tDifficultyCursor - 1;
         PlaySE(SE_SELECT);
         Difficulty_Draw(taskId);
     }
     else if (JOY_NEW(DPAD_DOWN))
     {
-        tDifficultyCursor = (tDifficultyCursor + 1) % GANG_DIFFICULTY_COUNT;
+        tDifficultyCursor = (tDifficultyCursor + 1 >= GANG_DIFFICULTY_COUNT) ? min : tDifficultyCursor + 1;
         PlaySE(SE_SELECT);
         Difficulty_Draw(taskId);
     }
@@ -1609,7 +1614,7 @@ static void Task_OakSpeech_StartDifficultyMenu(u8 taskId)
     tMenuWindowId = AddWindow(&sDifficultyWindowTemplate);
     PutWindowTilemap(tMenuWindowId);
     DrawStdFrameWithCustomTileAndPalette(tMenuWindowId, TRUE, STD_WINDOW_BASE_TILE_NUM, 14);
-    tDifficultyCursor = GANG_DIFFICULTY_RECOMMENDED;
+    tDifficultyCursor = GangDifficulty_GetDefaultSelection();
     Difficulty_Draw(taskId);
     CopyWindowToVram(tMenuWindowId, COPYWIN_FULL);
     gTasks[taskId].func = Task_OakSpeech_HandleDifficultyInput;

@@ -1,6 +1,9 @@
 #include "global.h"
 #include "gang_difficulty.h"
+#include "load_save.h"
+#include "malloc.h"
 #include "pokemon.h"
+#include "pokemon_storage_system.h"
 #include "constants/abilities.h"
 #include "constants/items.h"
 
@@ -169,4 +172,119 @@ void GangDifficulty_ApplyToTrainerMon(struct Pokemon *mon)
     }
     SetMonData(mon, MON_DATA_HELD_ITEM, &item);
     CalculateMonStats(mon);
+}
+
+//------------------------------------------------------------------------------
+// NEW GAME+
+//------------------------------------------------------------------------------
+
+#define NG_PLUS_UNLOCKED      0x80
+#define NG_PLUS_CLEARED_MASK  0x07
+
+EWRAM_DATA bool8 gNewGamePlusPending = FALSE;
+
+bool32 NewGamePlus_IsUnlocked(void)
+{
+    return (gSaveBlock2Ptr->pokedex.gangsterNewGamePlus & NG_PLUS_UNLOCKED) != 0;
+}
+
+static enum GangDifficulty NewGamePlus_GetClearedDifficulty(void)
+{
+    u32 cleared = gSaveBlock2Ptr->pokedex.gangsterNewGamePlus & NG_PLUS_CLEARED_MASK;
+    return cleared < GANG_DIFFICULTY_COUNT ? cleared : GANG_DIFFICULTY_RECRUIT;
+}
+
+void NewGamePlus_OnHallOfFame(void)
+{
+    enum GangDifficulty cleared = GangDifficulty_Get();
+
+    if (NewGamePlus_IsUnlocked() && NewGamePlus_GetClearedDifficulty() > cleared)
+        cleared = NewGamePlus_GetClearedDifficulty();
+    gSaveBlock2Ptr->pokedex.gangsterNewGamePlus = NG_PLUS_UNLOCKED | cleared;
+}
+
+enum GangDifficulty GangDifficulty_GetMinSelectable(void)
+{
+    return gNewGamePlusPending ? NewGamePlus_GetClearedDifficulty() : GANG_DIFFICULTY_RECRUIT;
+}
+
+enum GangDifficulty GangDifficulty_GetDefaultSelection(void)
+{
+    if (gNewGamePlusPending)
+    {
+        enum GangDifficulty next = NewGamePlus_GetClearedDifficulty() + 1;
+        return next < GANG_DIFFICULTY_COUNT ? next : GANG_DIFFICULTY_COUNT - 1;
+    }
+    return GANG_DIFFICULTY_RECOMMENDED;
+}
+
+// Everything from SaveBlock1 that survives into the NEW GAME+ (ClearSav1() wipes the block)
+struct NewGamePlusBackup
+{
+    u8 partyCount;
+    struct Pokemon party[PARTY_SIZE];
+    u32 money;
+    u16 registeredItem;
+    struct ItemSlot pcItems[PC_ITEMS_COUNT];
+    struct Bag bag;
+    u8 dexSeen[NUM_DEX_FLAG_BYTES];
+    u8 dexCaught[NUM_DEX_FLAG_BYTES];
+};
+
+void *NewGamePlus_BackupBeforeReset(void)
+{
+    struct NewGamePlusBackup *backup = AllocZeroed(sizeof(*backup));
+
+    backup->partyCount = gSaveBlock1Ptr->playerPartyCount;
+    memcpy(backup->party, gSaveBlock1Ptr->playerParty, sizeof(backup->party));
+    backup->money = gSaveBlock1Ptr->money; // still encrypted with the kept encryption key
+    backup->registeredItem = gSaveBlock1Ptr->registeredItem;
+    memcpy(backup->pcItems, gSaveBlock1Ptr->pcItems, sizeof(backup->pcItems));
+    memcpy(&backup->bag, &gSaveBlock1Ptr->bag, sizeof(backup->bag));
+    memcpy(backup->dexSeen, gSaveBlock1Ptr->dexSeen, sizeof(backup->dexSeen));
+    memcpy(backup->dexCaught, gSaveBlock1Ptr->dexCaught, sizeof(backup->dexCaught));
+    return backup;
+}
+
+void NewGamePlus_RestoreAfterReset(void *data)
+{
+    struct NewGamePlusBackup *backup = data;
+
+    gSaveBlock1Ptr->playerPartyCount = backup->partyCount;
+    memcpy(gSaveBlock1Ptr->playerParty, backup->party, sizeof(backup->party));
+    gSaveBlock1Ptr->money = backup->money;
+    gSaveBlock1Ptr->registeredItem = ITEM_NONE;
+    memcpy(gSaveBlock1Ptr->pcItems, backup->pcItems, sizeof(backup->pcItems));
+    memcpy(&gSaveBlock1Ptr->bag, &backup->bag, sizeof(backup->bag));
+    // key items would let the player skip or break story events
+    memset(gSaveBlock1Ptr->bag.keyItems, 0, sizeof(gSaveBlock1Ptr->bag.keyItems));
+    memcpy(gSaveBlock1Ptr->dexSeen, backup->dexSeen, sizeof(backup->dexSeen));
+    memcpy(gSaveBlock1Ptr->dexCaught, backup->dexCaught, sizeof(backup->dexCaught));
+    Free(backup);
+    LoadPlayerParty();
+}
+
+// The player keeps their trainer ID; their own Pokémon get the new name as original trainer so they obey
+void NewGamePlus_UpdateOriginalTrainerNames(void)
+{
+    u32 trainerId = gSaveBlock2Ptr->playerTrainerId[0]
+                  | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+                  | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+                  | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+    u32 i, box, pos;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
+        if (GetMonData(mon, MON_DATA_SANITY_HAS_SPECIES) && GetMonData(mon, MON_DATA_OT_ID) == trainerId)
+            SetMonData(mon, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
+    }
+    for (box = 0; box < TOTAL_BOXES_COUNT; box++)
+    {
+        for (pos = 0; pos < IN_BOX_COUNT; pos++)
+        {
+            if (GetBoxMonDataAt(box, pos, MON_DATA_SANITY_HAS_SPECIES) && GetBoxMonDataAt(box, pos, MON_DATA_OT_ID) == trainerId)
+                SetBoxMonDataAt(box, pos, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
+        }
+    }
 }

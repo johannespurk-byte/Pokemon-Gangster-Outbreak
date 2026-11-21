@@ -286,8 +286,9 @@ struct Pokedex
     /*0x08*/ u32 spindaPersonality; // set when you first see Spinda
     /*0x0C*/ u32 unknown3;
     /*0x10*/ u8 gangsterDifficulty; // Gangster Outbreak: enum GangDifficulty
+    /*0x11*/ u8 gangsterNewGamePlus; // Gangster Outbreak: bit 7 = NEW GAME+ unlocked, bits 0-2 = hardest cleared difficulty
 #if FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK2 == FALSE
-    /*0x11*/ u8 filler[0x67]; // Previously Dex Flags, feel free to remove.
+    /*0x12*/ u8 filler[0x66]; // Previously Dex Flags, feel free to remove.
 #endif //FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK2
 };
 

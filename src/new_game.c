@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_difficulty.h"
 #include "clock.h"
 #include "new_game.h"
 #include "random.h"
@@ -163,6 +164,11 @@ void NewGameInitData(void)
 #if IS_FRLG
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
 #endif
+    // Gangster Outbreak NEW GAME+: keep party, boxes, Pokédex, money and items, trainer ID and encryption key
+    bool32 newGamePlus = gNewGamePlusPending && NewGamePlus_IsUnlocked();
+    void *newGamePlusBackup = newGamePlus ? NewGamePlus_BackupBeforeReset() : NULL;
+
+    gNewGamePlusPending = FALSE;
     if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
         RtcReset();
 
@@ -170,17 +176,20 @@ void NewGameInitData(void)
     StringCopy(rivalName, gSaveBlock1Ptr->rivalName);
 #endif
     gDifferentSaveFile = TRUE;
-    gSaveBlock2Ptr->encryptionKey = 0;
+    if (!newGamePlus)
+        gSaveBlock2Ptr->encryptionKey = 0;
     ZeroPlayerPartyMons();
     ZeroEnemyPartyMons();
-    ResetPokedex();
+    if (!newGamePlus)
+        ResetPokedex();
     ClearFrontierRecord();
     ClearSav1();
     ClearSav3();
     ClearAllMail();
     gSaveBlock2Ptr->specialSaveWarpFlags = 0;
     gSaveBlock2Ptr->gcnLinkFlags = 0;
-    InitPlayerTrainerId();
+    if (!newGamePlus)
+        InitPlayerTrainerId();
     PlayTimeCounter_Reset();
     ClearPokedexFlags();
     InitEventData();
@@ -198,7 +207,8 @@ void NewGameInitData(void)
     InitLotadSizeRecord();
     gPartiesCount[B_TRAINER_PLAYER] = 0;
     ZeroPlayerPartyMons();
-    ResetPokemonStorageSystem();
+    if (!newGamePlus)
+        ResetPokemonStorageSystem();
     DeactivateAllRoamers();
     gSaveBlock1Ptr->registeredItem = ITEM_NONE;
     ClearBag();
@@ -234,6 +244,11 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+    if (newGamePlus)
+    {
+        NewGamePlus_RestoreAfterReset(newGamePlusBackup);
+        NewGamePlus_UpdateOriginalTrainerNames();
+    }
 }
 
 static void ResetMiniGamesRecords(void)
