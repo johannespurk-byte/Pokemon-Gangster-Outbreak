@@ -7338,8 +7338,8 @@ const struct ItemInfo gItemsInfo[] =
         .importance = 1,
         .description = COMPOUND_STRING(
             "Keeps weak wild\n"
-            "POKéMON away. Re-\n"
-            "charged by HEAL-BOTs."),
+            "POKéMON away. The\n"
+            "HEAL-BOTs refill it."),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_AutoRepel,
