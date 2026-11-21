@@ -34,6 +34,15 @@ ViridianCity_EventScript_TryUnlockGym::
 	goto_if_unset FLAG_BADGE06_GET, Common_EventScript_NopReturn
 	goto_if_unset FLAG_BADGE07_GET, Common_EventScript_NopReturn
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR, 1
+	@ Gangster Outbreak: the gym members turn on the recruit for the final test
+	cleartrainerflag TRAINER_TAMER_JASON
+	cleartrainerflag TRAINER_TAMER_COLE
+	cleartrainerflag TRAINER_BLACK_BELT_ATSUSHI
+	cleartrainerflag TRAINER_BLACK_BELT_KIYO
+	cleartrainerflag TRAINER_BLACK_BELT_TAKASHI
+	cleartrainerflag TRAINER_COOLTRAINER_SAMUEL
+	cleartrainerflag TRAINER_COOLTRAINER_YUJI
+	cleartrainerflag TRAINER_COOLTRAINER_WARREN
 	return
 
 ViridianCity_EventScript_GymDoorLocked::

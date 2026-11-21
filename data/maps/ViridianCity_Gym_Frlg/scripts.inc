@@ -1,7 +1,117 @@
 ViridianCity_Gym_Frlg_MapScripts::
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, ViridianCity_Gym_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ViridianCity_Gym_OnFrame
 	.byte 0
 
+@ Gangster Outbreak: the game starts here, in Giovanni's hideout.
+@ VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB is 0 only before the opening scene.
+ViridianCity_Gym_OnWarp::
+	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 0, ViridianCity_Gym_EventScript_FaceGiovanni
+	.2byte 0
+
+ViridianCity_Gym_EventScript_FaceGiovanni::
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	end
+
+ViridianCity_Gym_OnFrame::
+	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 0, ViridianCity_Gym_EventScript_GangIntro
+	.2byte 0
+
+ViridianCity_Gym_EventScript_GangIntro::
+	lockall
+	setrespawn HEAL_LOCATION_VIRIDIAN_CITY
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F, 1
+	call EventScript_SetViridianGymTrainers
+	delay 30
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox ViridianCity_Gym_Text_GangIntroWelcome
+	closemessage
+	setflag FLAG_SYS_POKEMON_GET
+	special GangIntro_GiveRandomStarter
+	bufferspeciesname STR_VAR_1, VAR_0x8004
+	copyvar VAR_0x800A, VAR_0x8005
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message ViridianCity_Gym_Text_GangIntroReceivedMon
+	waitmessage
+	waitfanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, ViridianCity_Gym_EventScript_GangIntroSilver
+	setvar VAR_0x8004, 0
+	call Common_EventScript_NameReceivedPartyMon
+ViridianCity_Gym_EventScript_GangIntroSilver::
+	bufferspeciesname STR_VAR_2, VAR_0x800A
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox ViridianCity_Gym_Text_GangIntroGiovanniSilver
+	closemessage
+	turnobject LOCALID_PLAYER, DIR_EAST
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	msgbox ViridianCity_Gym_Text_GangIntroSilverChallenge
+	closemessage
+	switch VAR_STARTER_MON
+	case 1, ViridianCity_Gym_EventScript_GangIntroBattleBulbasaur
+	case 2, ViridianCity_Gym_EventScript_GangIntroBattleSquirtle
+	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_CHARMANDER, RIVAL_BATTLE_TUTORIAL, ViridianCity_Gym_Text_GangIntroSilverDefeat, ViridianCity_Gym_Text_GangIntroSilverVictory
+	goto ViridianCity_Gym_EventScript_GangIntroAfterBattle
+	end
+
+ViridianCity_Gym_EventScript_GangIntroBattleBulbasaur::
+	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_BULBASAUR, RIVAL_BATTLE_TUTORIAL, ViridianCity_Gym_Text_GangIntroSilverDefeat, ViridianCity_Gym_Text_GangIntroSilverVictory
+	goto ViridianCity_Gym_EventScript_GangIntroAfterBattle
+	end
+
+ViridianCity_Gym_EventScript_GangIntroBattleSquirtle::
+	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_SQUIRTLE, RIVAL_BATTLE_TUTORIAL, ViridianCity_Gym_Text_GangIntroSilverDefeat, ViridianCity_Gym_Text_GangIntroSilverVictory
+	goto ViridianCity_Gym_EventScript_GangIntroAfterBattle
+	end
+
+ViridianCity_Gym_EventScript_GangIntroAfterBattle::
+	special HealPlayerParty
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox ViridianCity_Gym_Text_GangIntroSilverLeaves
+	closemessage
+	playbgm MUS_RG_RIVAL_EXIT, 0
+	fadescreen FADE_TO_BLACK
+	setflag FLAG_BEAT_RIVAL_IN_OAKS_LAB
+	removeobject LOCALID_VIRIDIAN_GYM_SILVER
+	playse SE_EXIT
+	fadescreen FADE_FROM_BLACK
+	fadedefaultbgm
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	msgbox ViridianCity_Gym_Text_GangIntroGiovanniDex
+	closemessage
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	message ViridianCity_Gym_Text_GangIntroReceivedDex
+	waitmessage
+	waitfanfare
+	call EventScript_RestorePrevTextColor
+	setflag FLAG_SYS_POKEDEX_GET
+	special SetUnlockedPokedexFlags
+	special EnableNationalPokedex
+	textcolor NPC_TEXT_COLOR_MALE
+	giveitem_msg ViridianCity_Gym_Text_GangIntroReceivedBalls, ITEM_POKE_BALL, 5
+	msgbox ViridianCity_Gym_Text_GangIntroMission
+	closemessage
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
+	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 2
+	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1
+	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 1
+	setvar VAR_MAP_SCENE_ROUTE22, 1
+	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
+	setvar VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1
+	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 1
+	setflag FLAG_PALLET_LADY_NOT_BLOCKING_SIGN
+	releaseall
+	end
+
+@ Before the player has 7 badges, Giovanni only talks.
+ViridianCity_Gym_EventScript_GiovanniHQ::
+	msgbox ViridianCity_Gym_Text_GiovanniHQ, MSGBOX_NPC
+	end
+
 ViridianCity_Gym_EventScript_Giovanni::
+	goto_if_unset FLAG_BADGE07_GET, ViridianCity_Gym_EventScript_GiovanniHQ
 	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_GIOVANNI, ViridianCity_Gym_Text_GiovanniIntro, ViridianCity_Gym_Text_GiovanniDefeat, ViridianCity_Gym_EventScript_DefeatedGiovanni, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM26_FROM_GIOVANNI, ViridianCity_Gym_EventScript_GiveTM26
@@ -275,3 +385,75 @@ ViridianCity_Gym_Text_GymStatuePlayerWon::
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}, {PLAYER}$"
 
+
+ViridianCity_Gym_Text_GangIntroWelcome::
+	.string "GIOVANNI: So, you're awake.\n"
+	.string "Welcome to what's left of my empire.\p"
+	.string "TEAM ROCKET fell. The grunts ran,\n"
+	.string "the hideouts were raided.\p"
+	.string "But this GYM is still mine. From here,\n"
+	.string "we rebuild. And you, {PLAYER}, are\l"
+	.string "our newest recruit.\p"
+	.string "A recruit needs a partner.\n"
+	.string "Take this one. Don't disappoint me.$"
+
+ViridianCity_Gym_Text_GangIntroReceivedMon::
+	.string "{PLAYER} received\n"
+	.string "{STR_VAR_1} from GIOVANNI!$"
+
+ViridianCity_Gym_Text_GangIntroGiovanniSilver::
+	.string "GIOVANNI: SILVER. You will train\n"
+	.string "alongside the recruit.\p"
+	.string "Pick your own partner.\n"
+	.string "Choose wisely.$"
+
+ViridianCity_Gym_Text_GangIntroSilverChallenge::
+	.string "{RIVAL}: Hmph. I'll take {STR_VAR_2}.\n"
+	.string "It's strong against yours.\p"
+	.string "Father thinks you're special?\n"
+	.string "Let's see about that!$"
+
+ViridianCity_Gym_Text_GangIntroSilverDefeat::
+	.string "{RIVAL}: Tch...\n"
+	.string "Beginner's luck!$"
+
+ViridianCity_Gym_Text_GangIntroSilverVictory::
+	.string "{RIVAL}: Ha! Weak.\n"
+	.string "Just like I thought.$"
+
+ViridianCity_Gym_Text_GangIntroSilverLeaves::
+	.string "{RIVAL}: Don't get comfortable.\n"
+	.string "I'll be the one who takes over\l"
+	.string "this family, not some recruit!$"
+
+ViridianCity_Gym_Text_GangIntroGiovanniDex::
+	.string "GIOVANNI: My son has fire.\n"
+	.string "Good. You'll need it too.\p"
+	.string "Take this. A POKéDEX - stolen from\n"
+	.string "a certain professor in PALLET TOWN.\p"
+	.string "Our people upgraded it. It records\n"
+	.string "every POKéMON in the world.$"
+
+ViridianCity_Gym_Text_GangIntroReceivedDex::
+	.string "{PLAYER} received the\n"
+	.string "NATIONAL POKéDEX from GIOVANNI!$"
+
+ViridianCity_Gym_Text_GangIntroReceivedBalls::
+	.string "{PLAYER} received\n"
+	.string "five POKé BALLS!$"
+
+ViridianCity_Gym_Text_GangIntroMission::
+	.string "GIOVANNI: Your mission is simple.\p"
+	.string "Go out into KANTO. Catch POKéMON.\n"
+	.string "Beat every GYM LEADER you meet.\p"
+	.string "Make the name of our family feared\n"
+	.string "again. Come back with seven BADGES,\l"
+	.string "and I'll test you myself.\p"
+	.string "ROUTE 2 lies north of VIRIDIAN.\n"
+	.string "Now go.$"
+
+ViridianCity_Gym_Text_GiovanniHQ::
+	.string "GIOVANNI: What are you still doing\n"
+	.string "here, recruit?\p"
+	.string "Come back when you've collected\n"
+	.string "seven BADGES. Not a moment sooner.$"
