@@ -1,0 +1,16 @@
+# Credits – Pokémon Gangster Outbreak
+
+Basis: RHH's pokeemerald-expansion 1.17.2 (https://github.com/rh-hideout/pokeemerald-expansion)
+
+## Spielerfiguren Gen 2 und 4–8 (aus Pokémon Tribunal Arma übernommen)
+- Kampfbilder vorne Gen 5–8: Pokémon Showdown (auf 64×64 skaliert)
+- Kampfbilder hinten Hilbert, Hilda, Calem, Serena und Overworld-Sprites Gen 4–8: pokeemerald-rogue (Pokabbie)
+- Nate, Rosa, Elio, Victor, Selene, Gloria (hinten): umgefärbt aus den obigen
+
+## Schurkenteams
+| Sprite | Datei(en) | Künstler |
+|---|---|---|
+| Zyrus (Kampfbild + Overworld) | `cyrus.png` | RHcks |
+| Team-Skull-Rüpel (Overworld) | `skull_grunt.png` | *bitte nachtragen* (evtl. mid117) |
+| Team-Magma-Rüpel ORAS (Overworld) | `magma_grunt_oras.png` | *bitte nachtragen* |
+| Neo-Team-Plasma: Rüpel m/w, Achromas, G-Cis, Weiser, Violaceus, Schattentriade (Kampfbilder) | `plasma_*`, `colress`, `ghetsis_bw2`, `zinzolin`, `shadow_triad` | *bitte nachtragen* |

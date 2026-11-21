@@ -12,6 +12,24 @@ const u16 gTrainerBackPicPalette_Ethan[] = INCGFX_U16("graphics/trainers/back_pi
 const u16 gTrainerBackPicPalette_Lyra[] = INCGFX_U16("graphics/trainers/back_pics/lyra_back.png", ".gbapal");
 const u16 gTrainerBackPicPalette_Lucas[] = INCGFX_U16("graphics/trainers/back_pics/lucas_back.png", ".gbapal");
 const u16 gTrainerBackPicPalette_Dawn[] = INCGFX_U16("graphics/trainers/back_pics/dawn_back.png", ".gbapal");
+// Villain teams (Gangster Outbreak). Credits: see CREDITS_GANGSTER_OUTBREAK.md
+const u32 gTrainerFrontPic_Cyrus[] = INCGFX_U32("graphics/trainers/front_pics/cyrus.png", ".4bpp.smol");
+const u16 gTrainerPalette_Cyrus[] = INCGFX_U16("graphics/trainers/front_pics/cyrus.png", ".gbapal");
+const u32 gTrainerFrontPic_PlasmaGruntMBw2[] = INCGFX_U32("graphics/trainers/front_pics/plasma_grunt_m_bw2.png", ".4bpp.smol");
+const u16 gTrainerPalette_PlasmaGruntMBw2[] = INCGFX_U16("graphics/trainers/front_pics/plasma_grunt_m_bw2.png", ".gbapal");
+const u32 gTrainerFrontPic_PlasmaGruntFBw2[] = INCGFX_U32("graphics/trainers/front_pics/plasma_grunt_f_bw2.png", ".4bpp.smol");
+const u16 gTrainerPalette_PlasmaGruntFBw2[] = INCGFX_U16("graphics/trainers/front_pics/plasma_grunt_f_bw2.png", ".gbapal");
+const u32 gTrainerFrontPic_Colress[] = INCGFX_U32("graphics/trainers/front_pics/colress.png", ".4bpp.smol");
+const u16 gTrainerPalette_Colress[] = INCGFX_U16("graphics/trainers/front_pics/colress.png", ".gbapal");
+const u32 gTrainerFrontPic_GhetsisBw2[] = INCGFX_U32("graphics/trainers/front_pics/ghetsis_bw2.png", ".4bpp.smol");
+const u16 gTrainerPalette_GhetsisBw2[] = INCGFX_U16("graphics/trainers/front_pics/ghetsis_bw2.png", ".gbapal");
+const u32 gTrainerFrontPic_PlasmaSage[] = INCGFX_U32("graphics/trainers/front_pics/plasma_sage.png", ".4bpp.smol");
+const u16 gTrainerPalette_PlasmaSage[] = INCGFX_U16("graphics/trainers/front_pics/plasma_sage.png", ".gbapal");
+const u32 gTrainerFrontPic_Zinzolin[] = INCGFX_U32("graphics/trainers/front_pics/zinzolin.png", ".4bpp.smol");
+const u16 gTrainerPalette_Zinzolin[] = INCGFX_U16("graphics/trainers/front_pics/zinzolin.png", ".gbapal");
+const u32 gTrainerFrontPic_ShadowTriad[] = INCGFX_U32("graphics/trainers/front_pics/shadow_triad.png", ".4bpp.smol");
+const u16 gTrainerPalette_ShadowTriad[] = INCGFX_U16("graphics/trainers/front_pics/shadow_triad.png", ".gbapal");
+
 const u32 gTrainerFrontPic_Hilbert[] = INCGFX_U32("graphics/trainers/front_pics/hilbert.png", ".4bpp.smol");
 const u16 gTrainerPalette_Hilbert[] = INCGFX_U16("graphics/trainers/front_pics/hilbert.png", ".gbapal");
 const u8 gTrainerBackPic_Hilbert[] = INCGFX_U8("graphics/trainers/back_pics/hilbert_back.png", ".4bpp");
@@ -1308,4 +1326,38 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_VICTOR] = PLAYER_CHAR_PIC(Victor),
     [TRAINER_PIC_GLORIA] = PLAYER_CHAR_PIC(Gloria),
 #undef PLAYER_CHAR_PIC
+
+    // Villain teams (Gangster Outbreak)
+    [TRAINER_PIC_CYRUS] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Cyrus, gTrainerPalette_Cyrus),
+    },
+    [TRAINER_PIC_PLASMA_GRUNT_M_BW2] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PlasmaGruntMBw2, gTrainerPalette_PlasmaGruntMBw2),
+    },
+    [TRAINER_PIC_PLASMA_GRUNT_F_BW2] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PlasmaGruntFBw2, gTrainerPalette_PlasmaGruntFBw2),
+    },
+    [TRAINER_PIC_COLRESS] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Colress, gTrainerPalette_Colress),
+    },
+    [TRAINER_PIC_GHETSIS_BW2] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_GhetsisBw2, gTrainerPalette_GhetsisBw2),
+    },
+    [TRAINER_PIC_PLASMA_SAGE] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PlasmaSage, gTrainerPalette_PlasmaSage),
+    },
+    [TRAINER_PIC_ZINZOLIN] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Zinzolin, gTrainerPalette_Zinzolin),
+    },
+    [TRAINER_PIC_SHADOW_TRIAD] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_ShadowTriad, gTrainerPalette_ShadowTriad),
+    },
 };

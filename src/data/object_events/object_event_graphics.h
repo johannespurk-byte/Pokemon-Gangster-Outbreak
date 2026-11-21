@@ -1,3 +1,11 @@
+// Villain teams (Gangster Outbreak). Credits: see CREDITS_GANGSTER_OUTBREAK.md
+const u32 gObjectEventPic_Cyrus[] = INCGFX_U32("graphics/object_events/pics/people/cyrus.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_Cyrus[] = INCGFX_U16("graphics/object_events/pics/people/cyrus.png", ".gbapal");
+const u32 gObjectEventPic_SkullGrunt[] = INCGFX_U32("graphics/object_events/pics/people/skull_grunt.png", ".4bpp", "-mwidth 4 -mheight 4");
+const u16 gObjectEventPal_SkullGrunt[] = INCGFX_U16("graphics/object_events/pics/people/skull_grunt.png", ".gbapal");
+const u32 gObjectEventPic_MagmaGruntOras[] = INCGFX_U32("graphics/object_events/pics/people/magma_grunt_oras.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_MagmaGruntOras[] = INCGFX_U16("graphics/object_events/pics/people/magma_grunt_oras.png", ".gbapal");
+
 // Player characters of other generations (ported from Tribunal Arma)
 const u32 gObjectEventPic_EthanNormal[] = INCGFX_U32("graphics/object_events/pics/ethan/walking.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPal_Ethan[] = INCGFX_U16("graphics/object_events/pics/ethan/walking.png", ".gbapal");

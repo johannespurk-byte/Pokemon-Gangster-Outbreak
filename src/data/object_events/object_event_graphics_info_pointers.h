@@ -486,6 +486,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SeleneField
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_VictorFieldMove;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GloriaFieldMove;
 
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cyrus;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkullGrunt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagmaGruntOras;
+
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
@@ -960,6 +964,9 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SELENE_FIELD_MOVE] = &gObjectEventGraphicsInfo_SeleneFieldMove,
     [OBJ_EVENT_GFX_VICTOR_FIELD_MOVE] = &gObjectEventGraphicsInfo_VictorFieldMove,
     [OBJ_EVENT_GFX_GLORIA_FIELD_MOVE] = &gObjectEventGraphicsInfo_GloriaFieldMove,
+    [OBJ_EVENT_GFX_CYRUS] = &gObjectEventGraphicsInfo_Cyrus,
+    [OBJ_EVENT_GFX_SKULL_GRUNT] = &gObjectEventGraphicsInfo_SkullGrunt,
+    [OBJ_EVENT_GFX_MAGMA_GRUNT_ORAS] = &gObjectEventGraphicsInfo_MagmaGruntOras,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

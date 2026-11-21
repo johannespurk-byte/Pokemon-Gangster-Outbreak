@@ -499,6 +499,11 @@ enum
     OBJ_EVENT_GFX_VICTOR_FIELD_MOVE,
     OBJ_EVENT_GFX_GLORIA_FIELD_MOVE,
 
+    // Villain teams (Gangster Outbreak)
+    OBJ_EVENT_GFX_CYRUS,
+    OBJ_EVENT_GFX_SKULL_GRUNT,
+    OBJ_EVENT_GFX_MAGMA_GRUNT_ORAS,
+
     NUM_OBJ_EVENT_GFX,
 };
 
@@ -712,6 +717,10 @@ enum
 #define OBJ_EVENT_PAL_TAG_SELENE                     0x11FB
 #define OBJ_EVENT_PAL_TAG_VICTOR                     0x11FC
 #define OBJ_EVENT_PAL_TAG_GLORIA                     0x11FD
+// Villain teams (Gangster Outbreak)
+#define OBJ_EVENT_PAL_TAG_CYRUS                       0x1200
+#define OBJ_EVENT_PAL_TAG_SKULL_GRUNT                 0x1201
+#define OBJ_EVENT_PAL_TAG_MAGMA_GRUNT_ORAS            0x1202
 #define OBJ_EVENT_PAL_TAG_WHITE                   (OBJ_EVENT_PAL_TAG_NONE - 1)
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 

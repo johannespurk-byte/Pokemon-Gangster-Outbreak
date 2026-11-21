@@ -2984,3 +2984,15 @@ static const struct SpriteFrameImage sPicTable_GloriaFishing[] = {
 static const struct SpriteFrameImage sPicTable_GloriaFieldMove[] = {
     overworld_ascending_frames(gObjectEventPic_GloriaFieldMove, 4, 4),
 };
+
+static const struct SpriteFrameImage sPicTable_Cyrus[] = {
+    overworld_ascending_frames(gObjectEventPic_Cyrus, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_SkullGrunt[] = {
+    overworld_ascending_frames(gObjectEventPic_SkullGrunt, 4, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_MagmaGruntOras[] = {
+    overworld_ascending_frames(gObjectEventPic_MagmaGruntOras, 2, 4),
+};
