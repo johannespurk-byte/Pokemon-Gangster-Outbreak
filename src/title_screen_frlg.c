@@ -105,15 +105,16 @@ static const u32 sStreak_Gfx[] = INCGFX_U32("graphics/title_screen_frlg/leafgree
 #endif
 
 #ifdef FIRERED
-const u16 gGraphics_TitleScreen_GameTitleLogoPals[] = INCGFX_U16("graphics/title_screen_frlg/firered/game_title_logo.pal", ".gbapal");
-const u8 gGraphics_TitleScreen_GameTitleLogoTiles[] = INCGFX_U8("graphics/title_screen_frlg/firered/game_title_logo.png", ".8bpp.smol");
-const u8 gGraphics_TitleScreen_GameTitleLogoMap[] = INCBIN_U8("graphics/title_screen_frlg/firered/game_title_logo.bin.smolTM");
+// Gangster Outbreak: apocalyptic title screen (logo on BG0, scene + PRESS START on BG2)
+const u16 gGraphics_TitleScreen_GameTitleLogoPals[] = INCGFX_U16("graphics/title_screen_frlg/gangster/game_title_logo.pal", ".gbapal");
+const u8 gGraphics_TitleScreen_GameTitleLogoTiles[] = INCGFX_U8("graphics/title_screen_frlg/gangster/game_title_logo.png", ".8bpp.smol");
+const u8 gGraphics_TitleScreen_GameTitleLogoMap[] = INCBIN_U8("graphics/title_screen_frlg/gangster/game_title_logo.bin.smolTM");
 const u16 gGraphics_TitleScreen_BoxArtMonPals[] = INCGFX_U16("graphics/title_screen_frlg/firered/box_art_mon.pal", ".gbapal");
 const u8 gGraphics_TitleScreen_BoxArtMonTiles[] = INCGFX_U8("graphics/title_screen_frlg/firered/box_art_mon.png", ".4bpp.smol");
 const u8 gGraphics_TitleScreen_BoxArtMonMap[] = INCBIN_U8("graphics/title_screen_frlg/firered/box_art_mon.bin.smolTM");
-const u16 gGraphics_TitleScreen_BackgroundPals[] = INCGFX_U16("graphics/title_screen_frlg/firered/background.pal", ".gbapal");
-const u8 gGraphics_TitleScreen_CopyrightPressStartTiles[] = INCGFX_U8("graphics/title_screen_frlg/copyright_press_start.png", ".4bpp.smol");
-const u8 gGraphics_TitleScreen_CopyrightPressStartMap[] = INCBIN_U8("graphics/title_screen_frlg/copyright_press_start.bin.smolTM");
+const u16 gGraphics_TitleScreen_BackgroundPals[] = INCGFX_U16("graphics/title_screen_frlg/gangster/background.pal", ".gbapal");
+const u8 gGraphics_TitleScreen_CopyrightPressStartTiles[] = INCGFX_U8("graphics/title_screen_frlg/gangster/background.png", ".4bpp.smol");
+const u8 gGraphics_TitleScreen_CopyrightPressStartMap[] = INCBIN_U8("graphics/title_screen_frlg/gangster/background.bin.smolTM");
 const u16 gTitleScreen_Slash_Pal[] = INCGFX_U16("graphics/title_screen_frlg/firered/slash.pal", ".gbapal");
 #endif
 
@@ -407,14 +408,18 @@ void CB2_InitTitleScreenFrlg(void)
         DecompressAndCopyTileDataToVram(0, gGraphics_TitleScreen_GameTitleLogoTiles, 0, 0, 0);
         DecompressAndCopyTileDataToVram(0, gGraphics_TitleScreen_GameTitleLogoMap, 0, 0, 1);
         LoadPalette(gGraphics_TitleScreen_BoxArtMonPals, BG_PLTT_ID(13), PLTT_SIZE_4BPP);
+#ifndef FIRERED // Gangster Outbreak: no box art Pokemon, the scene on BG2 fills the screen
         DecompressAndCopyTileDataToVram(1, gGraphics_TitleScreen_BoxArtMonTiles, 0, 0, 0);
         DecompressAndCopyTileDataToVram(1, gGraphics_TitleScreen_BoxArtMonMap, 0, 0, 1);
+#endif
         LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
         DecompressAndCopyTileDataToVram(2, gGraphics_TitleScreen_CopyrightPressStartTiles, 0, 0, 0);
         DecompressAndCopyTileDataToVram(2, gGraphics_TitleScreen_CopyrightPressStartMap, 0, 0, 1);
         LoadPalette(gGraphics_TitleScreen_BackgroundPals, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+#ifndef FIRERED // Gangster Outbreak: BG3 stays empty (black) behind the scene
         DecompressAndCopyTileDataToVram(3, sBorderBgTiles, 0, 0, 0);
         DecompressAndCopyTileDataToVram(3, sBorderBgMap, 0, 0, 1);
+#endif
         LoadSpriteGfxAndPals();
         break;
     case 2:
