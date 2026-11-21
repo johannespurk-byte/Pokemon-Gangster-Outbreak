@@ -12,11 +12,15 @@ Ohne Nachfrage bei jeder Aufgabe:
    - Remote finden, der auf `johannespurk-byte/Pokemon-Gangster-Outbreak` zeigt (`origin` in der Cloud, `myhack` auf dem PC; `origin` auf dem PC ist rh-hideout – dorthin nie pushen).
    - `git fetch <remote> master` und `git merge --ff-only <remote>/master`.
    - Uncommittete lokale Änderungen nie verwerfen; geht kein Fast-Forward, dem User berichten statt zu erzwingen.
-2. **Nach jeder abgeschlossenen Änderung** (Build erfolgreich):
+2. **Vor dem Commit** wie die GitHub-CI bauen: `make firered UNUSED_ERROR=1` (geänderte .c-Dateien vorher `touch`en,
+   damit sie neu übersetzt werden). Die CI baut zusätzlich `leafgreen`, `emerald`, `release` und `check` – bei
+   größeren Änderungen auch diese lokal prüfen. Ungenutzte Funktionen/Variablen sind dort Fehler (`UNUSED` nutzen).
+3. **Nach jeder abgeschlossenen Änderung** (Build erfolgreich):
    - committen (aussagekräftige deutsche Commit-Message),
    - direkt nach `master` pushen und den Arbeits-Branch (`feature/spielerfiguren-gen2-8`) auf denselben Stand bringen,
    - vor dem Push erneut fetchen; hat jemand anderes inzwischen gepusht, mit `--ff-only` bzw. Rebase der eigenen Commits nachziehen, nie force-pushen.
-3. Generierte Dateien (z. B. `graphics/object_events/pics/player_parts/`, `src/data/player_custom_parts.h`) mitcommitten, wenn der Generator gelaufen ist – und vorher prüfen, dass sie korrekt sind (nicht alle gleich groß/leer).
+   - nach dem Push den GitHub-Actions-Lauf prüfen (`gh run list` / `gh run view`) und Fehler sofort beheben.
+4. Generierte Dateien (z. B. `graphics/object_events/pics/player_parts/`, `src/data/player_custom_parts.h`) mitcommitten, wenn der Generator gelaufen ist – und vorher prüfen, dass sie korrekt sind (nicht alle gleich groß/leer).
 
 ## ROM für den User
 
