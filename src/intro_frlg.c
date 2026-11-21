@@ -445,16 +445,17 @@ static const struct SpritePalette sSpritePalettes_GameFreakScene[] = {
     {0}
 };
 
+// Sparkles around "WARGUN" (screen y 88-104)
 static const struct Coords16 sTextSparkleCoords[] = {
-    { 72,  80},
-    {136,  74},
-    {168,  80},
-    {120,  80},
-    {104,  86},
-    { 88,  74},
-    {184,  74},
-    { 56,  86},
-    {152,  86}
+    { 88,  96},
+    {136,  90},
+    {152,  96},
+    {120,  96},
+    {104, 102},
+    { 96,  90},
+    {160,  90},
+    { 80, 102},
+    {144, 102}
 };
 
 static const struct OamData sOam_Star = {
@@ -1116,7 +1117,7 @@ static void IntroCB_Init(struct IntroSequenceData * this)
         DecompressDataWithHeaderWram(sGameFreakLogo_Gfx, this->gameFreakLogoGfx);
         FillBgTilemapBufferRect(BG_GF_TEXT_LOGO, 0x000, 0, 0, 32, 32, 17);
         FillWindowPixelBuffer(WIN_GF_TEXT_LOGO, PIXEL_FILL(0));
-        BlitBitmapToWindow(WIN_GF_TEXT_LOGO, this->gameFreakTextGfx, 0, 40, 144, 16);
+        BlitBitmapToWindow(WIN_GF_TEXT_LOGO, this->gameFreakTextGfx, 0, 56, 144, 16); // WARGUN below the crest
         PutWindowTilemap(WIN_GF_TEXT_LOGO);
         CopyWindowToVram(WIN_GF_TEXT_LOGO, COPYWIN_FULL);
         this->state++;
@@ -1240,8 +1241,8 @@ static void IntroCB_GF_RevealLogo(struct IntroSequenceData * this)
     case 2:
         if (!IsBlendTaskActive())
         {
-            BlitBitmapToWindow(WIN_GF_TEXT_LOGO, this->gameFreakLogoGfx, 0x38, 0x06, 0x20, 0x40);
-            BlitBitmapToWindow(WIN_GF_TEXT_LOGO, this->gameFreakTextGfx, 0x00, 0x28, 0x90, 0x10);
+            BlitBitmapToWindow(WIN_GF_TEXT_LOGO, this->gameFreakLogoGfx, 0x38, 0x00, 0x20, 0x40);
+            BlitBitmapToWindow(WIN_GF_TEXT_LOGO, this->gameFreakTextGfx, 0x00, 0x38, 0x90, 0x10);
             CopyWindowToVram(WIN_GF_TEXT_LOGO, COPYWIN_GFX);
             this->state++;
         }
@@ -2300,7 +2301,7 @@ static void GFScene_Task_NameSparklesBig(u8 taskId)
 
 static struct Sprite *GFScene_CreateLogoSprite(void)
 {
-    u8 spriteId = CreateSprite(&sSpriteTemplate_GameFreakLogoArt, 120, 70, 4);
+    u8 spriteId = CreateSprite(&sSpriteTemplate_GameFreakLogoArt, 120, 64, 4);
     return &gSprites[spriteId];
 }
 
