@@ -433,8 +433,8 @@ const u16 gTrainerPalette_BirdKeeperFrlg[] = INCGFX_U16("graphics/trainers/palet
 const u32 gTrainerFrontPic_BlackBeltFrlg[] = INCGFX_U32("graphics/trainers/front_pics/black_belt_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_BlackBeltFrlg[] = INCGFX_U16("graphics/trainers/palettes/black_belt_frlg.pal", ".gbapal");
 
-const u32 gTrainerFrontPic_RivalEarlyFrlg[] = INCGFX_U32("graphics/trainers/front_pics/rival_early_frlg.png", ".4bpp.smol");
-const u16 gTrainerPalette_RivalEarlyFrlg[] = INCGFX_U16("graphics/trainers/palettes/rival_early_frlg.pal", ".gbapal");
+const u32 gTrainerFrontPic_RivalEarlyFrlg[] = INCGFX_U32("graphics/trainers/front_pics/silver.png", ".4bpp.smol"); // Gangster Outbreak: rival Silver
+const u16 gTrainerPalette_RivalEarlyFrlg[] = INCGFX_U16("graphics/trainers/front_pics/silver.png", ".gbapal");
 
 const u32 gTrainerFrontPic_ScientistFrlg[] = INCGFX_U32("graphics/trainers/front_pics/scientist_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_ScientistFrlg[] = INCGFX_U16("graphics/trainers/palettes/scientist_frlg.pal", ".gbapal");
@@ -487,11 +487,11 @@ const u16 gTrainerPalette_LeaderSabrinaFrlg[] = INCGFX_U16("graphics/trainers/pa
 const u32 gTrainerFrontPic_GentlemanFrlg[] = INCGFX_U32("graphics/trainers/front_pics/gentleman_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_GentlemanFrlg[] = INCGFX_U16("graphics/trainers/palettes/gentleman_frlg.pal", ".gbapal");
 
-const u32 gTrainerFrontPic_RivalLateFrlg[] = INCGFX_U32("graphics/trainers/front_pics/rival_late_frlg.png", ".4bpp.smol");
-const u16 gTrainerPalette_RivalLateFrlg[] = INCGFX_U16("graphics/trainers/palettes/rival_late_frlg.pal", ".gbapal");
+const u32 gTrainerFrontPic_RivalLateFrlg[] = INCGFX_U32("graphics/trainers/front_pics/silver.png", ".4bpp.smol"); // Gangster Outbreak: rival Silver
+const u16 gTrainerPalette_RivalLateFrlg[] = INCGFX_U16("graphics/trainers/front_pics/silver.png", ".gbapal");
 
-const u32 gTrainerFrontPic_ChampionRivalFrlg[] = INCGFX_U32("graphics/trainers/front_pics/champion_rival_frlg.png", ".4bpp.smol");
-const u16 gTrainerPalette_ChampionRivalFrlg[] = INCGFX_U16("graphics/trainers/palettes/champion_rival_frlg.pal", ".gbapal");
+const u32 gTrainerFrontPic_ChampionRivalFrlg[] = INCGFX_U32("graphics/trainers/front_pics/silver.png", ".4bpp.smol"); // Gangster Outbreak: rival Silver
+const u16 gTrainerPalette_ChampionRivalFrlg[] = INCGFX_U16("graphics/trainers/front_pics/silver.png", ".gbapal");
 
 const u32 gTrainerFrontPic_ChannelerFrlg[] = INCGFX_U32("graphics/trainers/front_pics/channeler_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_ChannelerFrlg[] = INCGFX_U16("graphics/trainers/palettes/channeler_frlg.pal", ".gbapal");

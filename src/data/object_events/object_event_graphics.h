@@ -1,3 +1,5 @@
+// Rival Silver (Gangster Outbreak), outside the FRLG-only block so every build has the palette
+const u16 gObjectEventPal_Silver[] = INCGFX_U16("graphics/object_events/pics/people/silver.png", ".gbapal");
 // Villain teams (Gangster Outbreak). Credits: see CREDITS_GANGSTER_OUTBREAK.md
 const u32 gObjectEventPic_Cyrus[] = INCGFX_U32("graphics/object_events/pics/people/cyrus.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPal_Cyrus[] = INCGFX_U16("graphics/object_events/pics/people/cyrus.png", ".gbapal");
@@ -662,7 +664,8 @@ const u16 gObjectEventPic_GymGuy[] = INCGFX_U16("graphics/object_events/pics/peo
 const u16 gObjectEventPic_Man[] = INCGFX_U16("graphics/object_events/pics/people/man.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_Rocker[] = INCGFX_U16("graphics/object_events/pics/people/rocker.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_ProfOak[] = INCGFX_U16("graphics/object_events/pics/people/prof_oak.png", ".4bpp", "-mwidth 2 -mheight 4");
-const u16 gObjectEventPic_Blue[] = INCGFX_U16("graphics/object_events/pics/people/blue.png", ".4bpp", "-mwidth 2 -mheight 4");
+// Gangster Outbreak: the rival is Giovanni's son Silver (built with tools/paperdoll, own palette)
+const u16 gObjectEventPic_Blue[] = INCGFX_U16("graphics/object_events/pics/people/silver.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_NurseFrlg[] = INCGFX_U16("graphics/object_events/pics/people/nurse_frlg.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_CableClubReceptionist[] = INCGFX_U16("graphics/object_events/pics/people/cable_club_receptionist.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_UnionRoomReceptionist[] = INCGFX_U16("graphics/object_events/pics/people/union_room_receptionist.png", ".4bpp", "-mwidth 2 -mheight 4");

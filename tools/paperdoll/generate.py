@@ -286,12 +286,70 @@ def cname(name):
     return "".join(p.capitalize() for p in name.split("_"))
 
 
+# Fixed NPCs assembled with the builder: name -> (head, outfit, {role: base colour}); 9 walking frames, own palette.
+# Shades are computed exactly like ApplyColorPreset() in src/player_custom.c.
+BUILT_NPCS = {
+    # Giovanni's son Silver (stand-in until a hand-drawn overworld sheet exists)
+    "silver": ("maxie", "calem", {"hair": (200, 50, 40), "top": (48, 48, 56), "bottom": (50, 90, 200)}),
+}
+ROLE_SLOT_RANGE = {"hair": (4, 3), "skin": (2, 2), "hat": (7, 2), "top": (10, 3), "bottom": (13, 2)}
+
+
+def preset_shades(c, n):
+    out = []
+    for s in ([35, 0, -40] if n == 3 else [0, -35]):
+        if s > 0:
+            out.append(tuple(v + (255 - v) * s // 100 for v in c))
+        else:
+            out.append(tuple(v * (100 + s) // 100 for v in c))
+    return out
+
+
+def build_npc(name, head, outfit, colors, std_frames):
+    hf, hp = std_frames[head]
+    bf, bp = std_frames[outfit]
+    necks = std_frames[outfit + "_necks"]
+    pal = [hp[i] if (i in (1, 15) or 2 <= i < 9) else bp[i] for i in range(16)]
+    for role, c in colors.items():
+        first, n = ROLE_SLOT_RANGE[role]
+        for k, v in enumerate(preset_shades(c, n)):
+            pal[first + k] = v
+    frames = []
+    for k in range(9):
+        f = bf[k].copy()
+        fp, hpx = f.load(), hf[k].load()
+        for y in range(necks[k]):
+            for x in range(16):
+                fp[x, y] = hpx[x, y]
+        frames.append(f)
+    save_sheet(frames, pal, PICS + "people/%s.png" % name)
+
+
+def silver_front_pic():
+    """64x64 battle front pic from the 64x96 speech pic (8bpp, colours 96-111): crop to the top 64 rows of the body"""
+    im = Image.open("graphics/oak_speech/silver/pic.png")
+    pal = read_jasc("graphics/oak_speech/silver/pal.pal")
+    src = im.load()
+    top = 23  # first row of the hair
+    out = Image.new("P", (64, 64), 0)
+    out.putpalette([v for c in pal[:16] for v in c])
+    op = out.load()
+    for y in range(64):
+        for x in range(64):
+            v = src[x, top + y] if top + y < 96 else 0
+            op[x, y] = v - 96 if v >= 96 else 0
+    out.save("graphics/trainers/front_pics/silver.png")
+
+
 def main():
     os.makedirs(OUT + "states", exist_ok=True)
     std = {}
+    npc_frames = {}
     for name, *_ in TEMPLATES:
         frames, pal, by_index, necks = standardise(name)
         std[name] = (pal, by_index, necks)
+        npc_frames[name] = (frames, pal)
+        npc_frames[name + "_necks"] = necks
         save_sheet(frames, pal, OUT + name + ".png")
     picinfo = {}
     for name, *_ in TEMPLATES:
@@ -371,7 +429,10 @@ def main():
         for name, *_ in TEMPLATES:
             f.write("    PLAYER_PART_%s,\n" % name.upper())
         f.write("    PLAYER_PART_COUNT\n};\n\n#endif // GUARD_CONSTANTS_PLAYER_CUSTOM_H\n")
-    print("templates:", len(TEMPLATES), "state heads:", len(STATE_HEADS))
+    for npc, (head, outfit, colors) in BUILT_NPCS.items():
+        build_npc(npc, head, outfit, colors, npc_frames)
+    silver_front_pic()
+    print("templates:", len(TEMPLATES), "state heads:", len(STATE_HEADS), "built NPCs:", len(BUILT_NPCS))
 
 
 if __name__ == "__main__":

@@ -725,6 +725,7 @@ enum
 #define OBJ_EVENT_PAL_TAG_VICTOR                     0x11FC
 #define OBJ_EVENT_PAL_TAG_GLORIA                     0x11FD
 #define OBJ_EVENT_PAL_TAG_PLAYER_CUSTOM            0x1210
+#define OBJ_EVENT_PAL_TAG_SILVER                   0x1211
 // Villain teams (Gangster Outbreak)
 #define OBJ_EVENT_PAL_TAG_CYRUS                       0x1200
 #define OBJ_EVENT_PAL_TAG_SKULL_GRUNT                 0x1201
