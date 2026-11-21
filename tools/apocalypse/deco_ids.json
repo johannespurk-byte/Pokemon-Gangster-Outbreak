@@ -1,0 +1,90 @@
+{
+  "data/tilesets/secondary/viridian_city_frlg": {
+    "barrel_dirt": {
+      "metatiles": [
+        744
+      ],
+      "solid": true
+    },
+    "barrel_road": {
+      "metatiles": [
+        745
+      ],
+      "solid": true
+    },
+    "barrier_dirt": {
+      "metatiles": [
+        743
+      ],
+      "solid": true
+    },
+    "barrier_road": {
+      "metatiles": [
+        742
+      ],
+      "solid": true
+    },
+    "car_dirt": {
+      "metatiles": [
+        740,
+        741
+      ],
+      "solid": true
+    },
+    "car_road": {
+      "metatiles": [
+        738,
+        739
+      ],
+      "solid": true
+    },
+    "crack_a": {
+      "metatiles": [
+        747
+      ],
+      "solid": false
+    },
+    "crack_b": {
+      "metatiles": [
+        748
+      ],
+      "solid": false
+    },
+    "crack_c": {
+      "metatiles": [
+        749
+      ],
+      "solid": false
+    },
+    "graffiti_road": {
+      "metatiles": [
+        750
+      ],
+      "solid": false
+    },
+    "rubble_a": {
+      "metatiles": [
+        735
+      ],
+      "solid": true
+    },
+    "rubble_b": {
+      "metatiles": [
+        736
+      ],
+      "solid": true
+    },
+    "rubble_road": {
+      "metatiles": [
+        737
+      ],
+      "solid": true
+    },
+    "tires_dirt": {
+      "metatiles": [
+        746
+      ],
+      "solid": true
+    }
+  }
+}

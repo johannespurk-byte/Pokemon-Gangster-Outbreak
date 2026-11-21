@@ -93,9 +93,13 @@ def main():
     out_root = ROOT
     if '--out' in sys.argv:
         out_root = sys.argv[sys.argv.index('--out') + 1]
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import deco
     for path, kind in sorted(tileset_dirs().items()):
         fn = outdoor if kind == 'outdoor' else indoor
         for i in range(16):
+            if path in deco.TILESETS and i == deco.DECO_PAL_SLOT:
+                continue  # deco palette is written by deco.py
             rel = '%s/palettes/%02d.pal' % (path, i)
             lines = read_original(rel).split('\n')
             colors = [tuple(int(v) for v in l.split()) for l in lines[3:19]]
