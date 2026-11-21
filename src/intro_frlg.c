@@ -212,7 +212,7 @@ static void IntroCB_GangCity(struct IntroSequenceData * ptr);
 static void GangCity_FreeSprites(void);
 
 // Scene 1
-static void IntroCB_Scene1(struct IntroSequenceData * ptr);
+static void UNUSED IntroCB_Scene1(struct IntroSequenceData * ptr); // original FRLG scenes, replaced by IntroCB_GangCity
 static void Scene1_Task_AnimateGrass(u8 taskId);
 static void Scene1_StartGrassScrolling(void);
 static void Scene1_Task_BgZoom(u8 taskId);
@@ -1287,7 +1287,7 @@ static void IntroCB_GF_RevealLogo(struct IntroSequenceData * this)
     }
 }
 
-static void IntroCB_Scene1(struct IntroSequenceData * this)
+static void UNUSED IntroCB_Scene1(struct IntroSequenceData * this)
 {
     switch (this->state)
     {
