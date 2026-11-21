@@ -17,7 +17,7 @@ import os, sys
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from spec import SPEC, PAL_FILES  # noqa: E402
+from spec import SPEC, PAL_FILES, PIC_ROLE_FIX  # noqa: E402
 
 PICS = "graphics/object_events/pics/"
 OUT = PICS + "player_parts/"
@@ -189,25 +189,79 @@ def pal_path(symbol, back):
     return [tuple(p[i * 3:i * 3 + 3]) for i in range(16)]
 
 
-def pic_roles(ow_name, picpal, by_index):
-    """match each pic palette colour to the closest walking-sheet colour of the same character"""
+def pic_gfx_path(symbol, back):
+    import re
+    src = open("src/data/graphics/trainers.h").read()
+    var = ("gTrainerBackPic_" if back else "gTrainerFrontPic_") + symbol
+    m = re.search(re.escape(var) + r'\[\] = INCGFX_U(?:8|32)\("([^"]+)"', src)
+    assert m, var
+    return m.group(1)
+
+
+def is_skin(c):
+    r, g, b = c
+    return r >= 0xa0 and r > g > b and 0.45 <= b / r <= 0.8 and 0.6 <= g / r <= 0.92
+
+
+def pic_roles(ow_name, symbol, back):
+    """sort each colour of a trainer pic into a role by its colour and where it is used on the body
+    (head / torso / legs); colours used all over the body (outlines, shared shades) are kept.
+    PIC_ROLE_FIX in spec.py corrects single colours by hand."""
+    pal = pal_path(symbol, back)
+    im = Image.open(pic_gfx_path(symbol, back)).crop((0, 0, 64, 64))
+    px = im.load()
+    bbox = im.point(lambda v: 255 if v else 0).getbbox()
+    top, height = bbox[1], bbox[3] - bbox[1]
+    zones = {}
+    for y in range(64):
+        for x in range(64):
+            v = px[x, y]
+            if v:
+                ny = (y - top) / height
+                if back:
+                    z = "head" if ny < 0.5 else "torso"
+                else:
+                    z = "head" if ny < 0.25 else "torso" if ny < 0.55 else "legs" if ny < 0.92 else "feet"
+                zones.setdefault(v, {}).setdefault(z, 0)
+                zones[v][z] += 1
     ow = standardise.origpal[ow_name]
-    roles = [0] * 16
+    sp = SPEC[ow_name]
     members = {}
     for i in range(1, 16):
-        best, bestd = None, 1e9
-        for idx, slot in by_index.items():
-            role = SLOT_ROLE.get(slot)
-            if role not in PIC_ROLES:
-                continue
-            d = sum((a - b) ** 2 for a, b in zip(picpal[i], ow[idx]))
-            if d < bestd:
-                best, bestd = role, d
-        if best is not None and bestd < 60 ** 2:
-            members.setdefault(best, []).append(i)
+        if i not in zones:
+            continue
+        c = pal[i]
+        z = zones[i]
+        total = sum(z.values())
+        main, cnt = max(z.items(), key=lambda kv: kv[1])
+        role = None
+        if lum(c) < 45 or min(c) > 225:
+            role = None
+        elif is_skin(c):
+            role = "skin"
+        elif cnt >= 0.7 * total:
+            if main == "head":
+                # hat or hair: closest colour of the walking sheet decides
+                best, bestd = "hair", 1e9
+                for r in ("hat", "hair"):
+                    for idx in (sp.get("hat", []) if r == "hat" else range(1, 16)):
+                        if r == "hair" and (idx in sp.get("hat", []) or idx in sp.get("skin", []) or idx in sp.get("outline", []) or idx in sp.get("white", [])):
+                            continue
+                        d = sum((a - b) ** 2 for a, b in zip(c, ow[idx]))
+                        if d < bestd:
+                            best, bestd = r, d
+                role = best
+            elif main == "torso":
+                role = "top"
+            elif main == "legs":
+                role = "bottom"
+        role = PIC_ROLE_FIX.get((symbol, back), {}).get(i, role)
+        if role:
+            members.setdefault(role, []).append(i)
+    roles = [0] * 16
     for role, idxs in members.items():
         n = len(SLOTS[role])
-        idxs.sort(key=lambda i: -lum(picpal[i]))
+        idxs.sort(key=lambda i: -lum(pal[i]))
         for k, i in enumerate(idxs):
             roles[i] = (PIC_ROLES[role] << 2) | min(n - 1, k * n // len(idxs))
     return roles
@@ -243,8 +297,8 @@ def main():
     for name, *_ in TEMPLATES:
         fpic, fsym, bpic, bsym = PICS_FOR[name]
         back_owner = next(t[0] for t in TEMPLATES if PICS_FOR[t[0]][1] == bsym)
-        picinfo[name] = (fpic, pic_roles(name, pal_path(fsym, False), std[name][1]),
-                         bpic, pic_roles(back_owner, pal_path(bsym, True), std[back_owner][1]), back_owner == name)
+        picinfo[name] = (fpic, pic_roles(name, fsym, False),
+                         bpic, pic_roles(back_owner, bsym, True), back_owner == name)
     for name in STATE_HEADS:
         pal, by_index, _ = std[name]
         for short, suffix, nframes in STATES:
