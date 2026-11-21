@@ -4,6 +4,9 @@ gOtherText_NewName::
 gNameChoice_Green::
 	.string "GREEN$"
 
+gNameChoice_Silver::
+	.string "SILVER$"
+
 gNameChoice_Red::
 	.string "RED$"
 
@@ -187,57 +190,63 @@ gPikachuIntro_Text_Page3::
 	.string "adventure begin!$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
-	.string "Hello, there!\n"
-	.string "Glad to meet you!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is OAK.\p"
-	.string "People affectionately refer to me\n"
-	.string "as the POKéMON PROFESSOR.\p$"
+	.string "…So. You have finally arrived.\p"
+	.string "Welcome to the world of POKéMON.\p"
+	.string "My name is GIOVANNI.\p"
+	.string "Once, the whole world trembled at\n"
+	.string "the name of TEAM ROCKET.\p$"
 
 gOakSpeech_Text_ThisWorld::
 	.string "This world…$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
-	.string "…is inhabited far and wide by\n"
-	.string "creatures called POKéMON.\p$"
+	.string "…was supposed to kneel before\n"
+	.string "TEAM ROCKET.\p$"
 
 gOakSpeech_Text_IStudyPokemon::
-	.string "For some people, POKéMON are pets.\n"
-	.string "Others use them for battling.\p"
-	.string "As for myself…\p"
-	.string "I study POKéMON as a profession.\p$"
+	.string "But our plan to rule the world\n"
+	.string "ended in catastrophe.\p"
+	.string "My grunts scattered. My hideouts\n"
+	.string "burned to the ground.\p"
+	.string "Now the gangs fight over the ruins\n"
+	.string "of what we left behind.\p"
+	.string "But I have not given up…\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
+	.string "I have been watching you.\p"
+	.string "You are the chosen one. You will\n"
+	.string "usher in a new era.\p"
 	.string "But first, tell me a little about\n"
 	.string "yourself.\p$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
-	.string "Let's begin with your name.\n"
-	.string "What is it?\p$"
+	.string "What do they call you on the\n"
+	.string "streets?\p$"
 
 gOakSpeech_Text_SoYourNameIsPlayer::
 	.string "Right…\n"
 	.string "So your name is {PLAYER}.$"
 
 gOakSpeech_Text_WhatWasHisName::
-	.string "This is my grandson.\p"
-	.string "He's been your rival since you both\n"
-	.string "were babies.\p"
-	.string "…Erm, what was his name now?$"
+	.string "This is my son.\p"
+	.string "He believes TEAM ROCKET's legacy\n"
+	.string "belongs to him alone.\p"
+	.string "He will be your rival.\p"
+	.string "Tell me… what name does he go by?$"
 
 gOakSpeech_Text_YourRivalsNameWhatWasIt::
-	.string "Your rival's name, what was it now?$"
+	.string "Your rival's name, what is it?$"
 
 gOakSpeech_Text_ConfirmRivalName::
-	.string "…Er, was it {RIVAL}?$"
+	.string "…{RIVAL}, you say?$"
 
 gOakSpeech_Text_RememberRivalsName::
-	.string "That's right! I remember now!\n"
-	.string "His name is {RIVAL}!\p$"
+	.string "Yes. His name is {RIVAL}.\n"
+	.string "Remember it well.\p$"
 
 gOakSpeech_Text_LetsGo::
 	.string "{PLAYER}!\p"
-	.string "Your very own POKéMON legend is\n"
-	.string "about to unfold!\p"
-	.string "A world of dreams and adventures\n"
-	.string "with POKéMON awaits! Let's go!$"
+	.string "Rise from the ashes of\n"
+	.string "TEAM ROCKET!\p"
+	.string "Your legend in the underworld is\n"
+	.string "about to begin. Go!$"

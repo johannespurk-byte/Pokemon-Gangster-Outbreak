@@ -24,7 +24,7 @@
 
 #if IS_FRLG
 
-#define INTRO_SPECIES SPECIES_NIDORAN_F
+#define INTRO_SPECIES SPECIES_PERSIAN // Gangster Outbreak: Giovanni's Persian
 
 enum
 {
@@ -132,10 +132,11 @@ static const u16 sOakSpeech_Leaf_Pal[] = INCGFX_U16("graphics/oak_speech/leaf/pa
 static const u32 sOakSpeech_Leaf_Tiles[] = INCGFX_U32("graphics/oak_speech/leaf/pic.png", ".8bpp.smol");
 static const u16 sOakSpeech_Red_Pal[] = INCGFX_U16("graphics/oak_speech/red/pal.pal", ".gbapal");
 static const u32 sOakSpeech_Red_Tiles[] = INCGFX_U32("graphics/oak_speech/red/pic.png", ".8bpp.smol");
-static const u16 sOakSpeech_Oak_Pal[] = INCGFX_U16("graphics/oak_speech/oak/pal.pal", ".gbapal");
-static const u32 sOakSpeech_Oak_Tiles[] = INCGFX_U32("graphics/oak_speech/oak/pic.png", ".8bpp.smol");
-static const u16 sOakSpeech_Rival_Pal[] = INCGFX_U16("graphics/oak_speech/rival/pal.pal", ".gbapal");
-static const u32 sOakSpeech_Rival_Tiles[] = INCGFX_U32("graphics/oak_speech/rival/pic.png", ".8bpp.smol");
+// Gangster Outbreak: Giovanni gives the speech; his son (the rival) is a silhouette until a sprite exists
+static const u16 sOakSpeech_Oak_Pal[] = INCGFX_U16("graphics/oak_speech/giovanni/pal.pal", ".gbapal");
+static const u32 sOakSpeech_Oak_Tiles[] = INCGFX_U32("graphics/oak_speech/giovanni/pic.png", ".8bpp.smol");
+static const u16 sOakSpeech_Rival_Pal[] = INCGFX_U16("graphics/oak_speech/silver_silhouette/pal.pal", ".gbapal");
+static const u32 sOakSpeech_Rival_Tiles[] = INCGFX_U32("graphics/oak_speech/silver_silhouette/pic.png", ".8bpp.smol");
 static const u16 sOakSpeech_Platform_Pal[] = INCGFX_U16("graphics/oak_speech/platform.pal", ".gbapal");
 static const u16 sPikachuIntro_Pikachu_Pal[] = INCGFX_U16("graphics/oak_speech/pikachu_intro/pikachu.pal", ".gbapal");
 static const u32 sOakSpeech_Platform_Gfx[] = INCGFX_U32("graphics/oak_speech/platform.png", ".4bpp.smol");
@@ -652,7 +653,7 @@ static const u8 *const sFemaleNameChoices[] =
 static const u8 *const sRivalNameChoices[] =
 {
 #if defined(FIRERED)
-    gNameChoice_Green,
+    gNameChoice_Silver, // Gangster Outbreak: Giovanni's son
     gNameChoice_Gary,
     gNameChoice_Kaz,
     gNameChoice_Toru
