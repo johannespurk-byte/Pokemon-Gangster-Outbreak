@@ -95,6 +95,44 @@ def battle_text(colors):
     return [snap(c) if i else c for i, c in enumerate(out)]
 
 
+# ---- bag screen (menu_male/menu_female.pal: palette 0 = screen graphics, palette 1 = item list text)
+BAG_SCREEN = {
+    1: (60, 52, 52),      # white box parts (description box, item icon box)
+    2: (64, 56, 56), 3: (48, 40, 40), 4: (40, 32, 32), 5: (24, 20, 24),
+    6: (96, 16, 16), 7: (176, 40, 32), 8: (128, 24, 24),  # frame lines
+    9: (32, 24, 28), 10: (48, 36, 40),                   # item list panel
+    11: (232, 48, 32),                                   # pocket dot
+    12: (88, 20, 20), 13: (44, 12, 14),                  # background stripes
+    14: (176, 48, 32),                                   # title bar
+    15: (8, 4, 8),
+}
+BAG_TEXT = {
+    1: TEXT, 2: (24, 20, 24), 3: (88, 80, 80),           # item text, -, shadow / grayed text
+    4: (176, 48, 32), 9: (176, 48, 32), 10: (48, 36, 40),
+    11: (60, 12, 12), 12: (152, 24, 24), 13: (200, 48, 32),
+}
+
+
+def bag_menu(colors):
+    out = list(colors)
+    for i, c in BAG_SCREEN.items():
+        out[i] = c
+    for i, c in BAG_TEXT.items():
+        out[16 + i] = c
+    return [snap(c) if i % 16 else c for i, c in enumerate(out)]
+
+
+def bag_sprite(colors):
+    """Green backpack -> black leather duffel with a red accent."""
+    out = list(colors)
+    greens = sorted(range(1, 11), key=lambda i: -sum(colors[i]))  # light -> dark
+    ramp = [(200, 48, 32), (120, 112, 112), (96, 88, 88), (80, 72, 72), (64, 56, 56),
+            (48, 42, 42), (36, 30, 30), (26, 22, 22), (16, 12, 12), (8, 6, 6)]
+    for i, c in zip(greens, ramp):
+        out[i] = c
+    return [snap(c) if i else c for i, c in enumerate(out)]
+
+
 def main():
     for rel in ('graphics/text_window/message_box.png', 'graphics/text_window/name_box.png',
                 'graphics/text_window/std.png'):
@@ -106,6 +144,9 @@ def main():
     do_pal('graphics/interface/std_menu.pal', theme_palette)
     do_pal('graphics/battle_interface/textbox_0.pal', battle_textbox_0)
     do_pal('graphics/battle_interface/text.pal', battle_text)
+    do_pal('graphics/bag/menu_male.pal', bag_menu)
+    do_pal('graphics/bag/menu_female.pal', bag_menu)
+    do_pal('graphics/bag/bag.pal', bag_sprite)
 
 
 if __name__ == '__main__':
