@@ -27,6 +27,10 @@ const u32 gTrainerFrontPic_PlasmaSage[] = INCGFX_U32("graphics/trainers/front_pi
 const u16 gTrainerPalette_PlasmaSage[] = INCGFX_U16("graphics/trainers/front_pics/plasma_sage.png", ".gbapal");
 const u32 gTrainerFrontPic_Zinzolin[] = INCGFX_U32("graphics/trainers/front_pics/zinzolin.png", ".4bpp.smol");
 const u16 gTrainerPalette_Zinzolin[] = INCGFX_U16("graphics/trainers/front_pics/zinzolin.png", ".gbapal");
+const u32 gTrainerFrontPic_Guzma[] = INCGFX_U32("graphics/trainers/front_pics/guzma.png", ".4bpp.smol");
+const u16 gTrainerPalette_Guzma[] = INCGFX_U16("graphics/trainers/front_pics/guzma.png", ".gbapal");
+const u32 gTrainerFrontPic_Lysandre[] = INCGFX_U32("graphics/trainers/front_pics/lysandre.png", ".4bpp.smol");
+const u16 gTrainerPalette_Lysandre[] = INCGFX_U16("graphics/trainers/front_pics/lysandre.png", ".gbapal");
 const u32 gTrainerFrontPic_ShadowTriad[] = INCGFX_U32("graphics/trainers/front_pics/shadow_triad.png", ".4bpp.smol");
 const u16 gTrainerPalette_ShadowTriad[] = INCGFX_U16("graphics/trainers/front_pics/shadow_triad.png", ".gbapal");
 
@@ -1363,5 +1367,13 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_SHADOW_TRIAD] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_ShadowTriad, gTrainerPalette_ShadowTriad),
+    },
+    [TRAINER_PIC_LYSANDRE] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Lysandre, gTrainerPalette_Lysandre),
+    },
+    [TRAINER_PIC_GUZMA] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Guzma, gTrainerPalette_Guzma),
     },
 };

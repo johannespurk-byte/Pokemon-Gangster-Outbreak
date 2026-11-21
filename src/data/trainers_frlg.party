@@ -7059,7 +7059,7 @@ Level: 14
 === TRAINER_LEADER_MISTY ===
 Name: GUZMA
 Class: Leader Frlg
-Pic: Leader Misty Frlg
+Pic: Guzma
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -7175,7 +7175,7 @@ Level: 47
 === TRAINER_LEADER_SABRINA ===
 Name: LYSANDRE
 Class: Leader Frlg
-Pic: Leader Sabrina Frlg
+Pic: Lysandre
 Gender: Male
 Music: Serious
 Double Battle: No
