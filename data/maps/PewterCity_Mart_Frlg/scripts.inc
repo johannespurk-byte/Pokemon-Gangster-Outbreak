@@ -14,7 +14,7 @@ PewterCity_Mart_EventScript_Clerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart PewterCity_Mart_Items
+	call EventScript_GangMart
 	msgbox gText_PleaseComeAgain
 	release
 	end

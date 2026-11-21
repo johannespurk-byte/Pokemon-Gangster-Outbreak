@@ -43,7 +43,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Clerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart IndigoPlateau_PokemonCenter_1F_Items
+	call EventScript_GangMart
 	msgbox gText_PleaseComeAgain
 	release
 	end

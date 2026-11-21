@@ -642,3 +642,4 @@ gSpecials::
 	def_special GangLoot_Prepare
 	def_special GangLoot_Take
 	def_special GangItems_Recharge
+	def_special GangItems_CountBadges

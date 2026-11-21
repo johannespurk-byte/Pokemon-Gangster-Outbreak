@@ -55,7 +55,7 @@ ViridianCity_Mart_EventScript_Clerk::
 	goto_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1, ViridianCity_Mart_EventScript_SayHiToOak
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart ViridianCity_Mart_Items
+	call EventScript_GangMart
 	msgbox gText_PleaseComeAgain
 	release
 	end

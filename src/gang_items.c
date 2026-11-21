@@ -6,16 +6,27 @@
 // Gangster Outbreak: the Poké Vial and the Auto-Repel hold 1 charge plus one per Gym Badge.
 // HEAL-BOTs (the Pokémon Center nurses) refill them.
 
-static u32 GetMaxCharges(void)
+static u32 CountBadges(void)
 {
-    u32 flag, charges = 1;
+    u32 flag, count = 0;
 
     for (flag = FLAG_BADGE01_GET; flag <= FLAG_BADGE08_GET; flag++)
     {
         if (FlagGet(flag))
-            charges++;
+            count++;
     }
-    return charges;
+    return count;
+}
+
+static u32 GetMaxCharges(void)
+{
+    return 1 + CountBadges();
+}
+
+// Special for the shared mart stock (data/scripts/gang_mart.inc): VAR_RESULT = number of Gym Badges
+void GangItems_CountBadges(void)
+{
+    gSpecialVar_Result = CountBadges();
 }
 
 u32 GangItems_GetVialCharges(void)
