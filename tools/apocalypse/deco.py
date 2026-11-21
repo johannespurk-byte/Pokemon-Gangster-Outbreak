@@ -21,9 +21,19 @@ NUM_METATILES_IN_PRIMARY = 640
 LAYER_TYPE_COVERED = 1
 
 # secondary tileset dir -> ground metatiles (primary ids) the props stand on
-TILESETS = {
-    'data/tilesets/secondary/viridian_city_frlg': {'dirt': 1, 'road': 366},
-}
+GROUNDS = {'dirt': 1, 'road': 366}
+# Viridian uses fixed grounds (hand-placed props refer to them); the other cities detect their most common
+# free ground metatiles automatically (None) and get every prop for each of them.
+AUTO_GROUND_COUNT = 3
+TILESETS = {'data/tilesets/secondary/viridian_city_frlg': GROUNDS}
+TILESETS.update({'data/tilesets/secondary/%s' % name: None for name in (
+    'pallet_town_frlg', 'pewter_city_frlg', 'cerulean_city_frlg', 'vermilion_city_frlg',
+    'lavender_town_frlg', 'celadon_city_frlg', 'fuchsia_city_frlg', 'saffron_city_frlg', 'cinnabar_island_frlg',
+    'indigo_plateau_frlg')})
+MAX_SECONDARY_TILES = 1024 - 640
+VARIANT_TILE_RESERVE = 40  # keep room for boarded windows / graffiti in tight tilesets
+MAX_SECONDARY_METATILES = 1024 - 640
+VARIANT_METATILE_RESERVE = 60
 
 # index: colour
 DECO_PAL = [
@@ -427,7 +437,16 @@ def ov_rocket_r(orig, rng):
     return out
 
 
-# name -> (source metatile, overlay, seed)
+# name -> (source metatile, overlay, seed). Primary buildings (gym, mart, Pokémon Center) exist in every city.
+COMMON_VARIANTS = [
+    ('gym_window_a_boarded', 336, ov_boards, 2),
+    ('gym_window_b_boarded', 337, ov_boards, 2),
+    ('gym_window_c_boarded', 342, ov_boards, 2),
+    ('gym_wall_graffiti', 344, ov_graffiti, 5),
+    ('gym_wall_graffiti_b', 350, ov_graffiti, 12),
+    ('mart_wall_graffiti', 64, ov_graffiti, 7),
+    ('pc_wall_graffiti', 88, ov_graffiti, 4),
+]
 VARIANTS = {
     'data/tilesets/secondary/viridian_city_frlg': [
         ('house_window_boarded', 678, ov_boards, 1),
@@ -435,16 +454,12 @@ VARIANTS = {
         ('house_window_right_boarded', 679, ov_boards, 1),
         ('house_wall_graffiti_a', 657, ov_graffiti, 3),
         ('house_wall_graffiti_b', 659, ov_graffiti, 9),
-        ('gym_window_a_boarded', 336, ov_boards, 2),
-        ('gym_window_b_boarded', 337, ov_boards, 2),
-        ('gym_window_c_boarded', 342, ov_boards, 2),
-        ('gym_wall_graffiti', 344, ov_graffiti, 5),
-        ('gym_wall_graffiti_b', 350, ov_graffiti, 12),
-        ('gym_rocket_r', 339, ov_rocket_r, 0),
-        ('mart_wall_graffiti', 64, ov_graffiti, 7),
-        ('pc_wall_graffiti', 88, ov_graffiti, 4),
-    ],
+    ] + COMMON_VARIANTS[:5] + [
+        ('gym_rocket_r', 339, ov_rocket_r, 0),  # Giovanni's HQ
+    ] + COMMON_VARIANTS[5:],
 }
+AUTO_WINDOW_MIN_GLASS = 10  # other cities: every metatile with this many glass pixels gets a boarded variant
+
 
 
 def read_pal_text(text):
@@ -478,6 +493,47 @@ def canvas_tiles(c):
     return metas
 
 
+def auto_grounds(tileset):
+    """Most common free, plain ground metatiles on the Kanto maps that use this tileset."""
+    import collections, re
+    layouts = json.load(open(os.path.join(ROOT, 'data/layouts/layouts.json')))['layouts']
+    headers = open(os.path.join(ROOT, 'src/data/tilesets/headers.h')).read()
+    gfx = open(os.path.join(ROOT, 'src/data/tilesets/graphics.h')).read()
+
+    def path_of(sym):
+        m = re.search(r'const struct Tileset %s =\s*\{(.*?)\};' % re.escape(sym), headers, re.S)
+        tiles = re.search(r'\.tiles = (\w+)', m.group(1)).group(1)
+        return re.search(r'%s\[\] = INCGFX_U32\("([^"]+)/tiles\.png"' % re.escape(tiles), gfx).group(1)
+
+    prim_meta = git_bytes('data/tilesets/primary/general_frlg/metatiles.bin')
+    prim_attr = git_bytes('data/tilesets/primary/general_frlg/metatile_attributes.bin')
+    sec_meta = git_bytes(tileset + '/metatiles.bin')
+    sec_attr = git_bytes(tileset + '/metatile_attributes.bin')
+
+    def plain(mid):
+        if mid < NUM_METATILES_IN_PRIMARY:
+            meta, attr, i = prim_meta, prim_attr, mid
+        else:
+            meta, attr, i = sec_meta, sec_attr, mid - NUM_METATILES_IN_PRIMARY
+            if i * 16 >= len(meta):
+                return False
+        a = struct.unpack_from('<I', attr, i * 4)[0]
+        top = struct.unpack_from('<8H', meta, i * 16)[4:]
+        return (a & 0x1FF) == 0 and ((a >> 24) & 7) == 0 and all(e & 0x3FF == 0 for e in top)
+
+    count = collections.Counter()
+    for l in layouts:
+        if l.get('layout_version') != 'frlg' or l['primary_tileset'] != 'gTileset_General_Frlg':
+            continue
+        if path_of(l['secondary_tileset']) != tileset or not re.match(r'^LAYOUT_(ROUTE|[A-Z]+_(CITY|TOWN|ISLAND)|INDIGO)', l['id']):
+            continue
+        raw = git_bytes(l['blockdata_filepath'])
+        for v in struct.unpack('<%dH' % (len(raw) // 2), raw):
+            if (v >> 10) & 3 == 0:
+                count[v & 0x3FF] += 1
+    return [mid for mid, _ in count.most_common() if plain(mid)][:AUTO_GROUND_COUNT]
+
+
 def build(tileset, grounds, preview_list=None):
     tiles_img = Image.open(BytesIO(git_bytes(tileset + '/tiles.png')))
     metatiles = bytearray(git_bytes(tileset + '/metatiles.bin'))
@@ -502,9 +558,31 @@ def build(tileset, grounds, preview_list=None):
         return NUM_TILES_IN_PRIMARY + lookup[pixels]
 
     ids = {}
-    for name, fn, seed, ground, solid in PROPS:
+    if grounds is None:
+        auto = auto_grounds(tileset)
+        seen = set()
+        jobs = []
+        for name, fn, seed, ground, solid in PROPS:
+            base = name.replace('_dirt', '').replace('_road', '')
+            if base in seen:
+                continue
+            seen.add(base)
+            for gmid in auto:
+                jobs.append(('%s@%d' % (base, gmid), fn, seed, gmid, solid))
+    else:
+        jobs = [(name, fn, seed, grounds[ground], solid) for name, fn, seed, ground, solid in PROPS]
+
+    for name, fn, seed, ground_mid, solid in jobs:
         c = fn(seed)
-        ground_entries = struct.unpack_from('<4H', prim_meta, grounds[ground] * 16)
+        new_tiles = {q for quads in canvas_tiles(c) for q in quads if q not in lookup}
+        if len(tile_data) + len(new_tiles) > MAX_SECONDARY_TILES - VARIANT_TILE_RESERVE:
+            continue  # tileset is full: leave this prop out here
+        if len(metatiles) // 16 + len(canvas_tiles(c)) > MAX_SECONDARY_METATILES - VARIANT_METATILE_RESERVE:
+            continue
+        if ground_mid < NUM_METATILES_IN_PRIMARY:
+            ground_entries = struct.unpack_from('<4H', prim_meta, ground_mid * 16)
+        else:
+            ground_entries = struct.unpack_from('<4H', metatiles, (ground_mid - NUM_METATILES_IN_PRIMARY) * 16)
         mids = []
         for quads in canvas_tiles(c):
             top = [tile_id(q) | (DECO_PAL_SLOT << 12) for q in quads]
@@ -513,8 +591,10 @@ def build(tileset, grounds, preview_list=None):
             attrs += struct.pack('<I', LAYER_TYPE_COVERED << 29)
             mids.append(mid)
         ids[name] = {'metatiles': mids, 'solid': solid, 'cols': c.w // 16}
+        if grounds is None:
+            ids[name]['ground_mid'] = ground_mid
         if preview_list is not None:
-            preview_list.append((name, c, ground))
+            preview_list.append((name, c, 'dirt'))
 
     build_variants(tileset, metatiles, attrs, tile_data, tile_id, ids)
 
@@ -536,6 +616,34 @@ def build(tileset, grounds, preview_list=None):
     with open(os.path.join(ROOT, tileset, 'palettes', '%02d.pal' % DECO_PAL_SLOT), 'w', newline='\r\n') as f:
         f.write('JASC-PAL\n0100\n16\n' + ''.join('%d %d %d\n' % c for c in DECO_PAL))
     return ids
+
+
+# Glass tiles of the standard Kanto house window (primary tileset, used by houses in every city).
+WINDOW_REFERENCE_METATILES = (677, 678, 679)  # Viridian house window (left, middle, right)
+
+
+def window_glass_tiles(tile_pixels):
+    vir = git_bytes('data/tilesets/secondary/viridian_city_frlg/metatiles.bin')
+    pal3 = read_pal_text(git_bytes('data/tilesets/primary/general_frlg/palettes/03.pal').decode())
+    tiles = set()
+    for mid in WINDOW_REFERENCE_METATILES:
+        for e in struct.unpack_from('<8H', vir, (mid - NUM_METATILES_IN_PRIMARY) * 16)[4:]:
+            t = e & 0x3FF
+            if t < NUM_TILES_IN_PRIMARY and (e >> 12) & 0xF == 3 and any(v and is_glass(pal3[v]) for v in tile_pixels(e)):
+                tiles.add(t)
+    return tiles
+
+
+def auto_window_variants(tileset, metatiles, base_count, tile_pixels):
+    """Every metatile of this city that shows the standard house window gets a boarded variant."""
+    glass_tiles = window_glass_tiles(tile_pixels)
+    out = []
+    for i in range(base_count):
+        entries = struct.unpack_from('<8H', metatiles, i * 16)
+        if any((e & 0x3FF) in glass_tiles for e in entries[4:]):
+            mid = NUM_METATILES_IN_PRIMARY + i
+            out.append(('window_%d' % mid, mid, ov_boards, mid))
+    return out
 
 
 def build_variants(tileset, metatiles, attrs, sec_tiles, tile_id, ids):
@@ -566,7 +674,12 @@ def build_variants(tileset, metatiles, attrs, sec_tiles, tile_id, ids):
         return px
 
     base_count = len(git_bytes(tileset + '/metatiles.bin')) // 16
-    for name, src, overlay, seed in VARIANTS.get(tileset, []):
+    variants = VARIANTS.get(tileset)
+    if variants is None:
+        variants = list(COMMON_VARIANTS) + auto_window_variants(tileset, metatiles, base_count, tile_pixels)
+    for name, src, overlay, seed in variants:
+        if len(sec_tiles) + 4 > MAX_SECONDARY_TILES:
+            break
         if src < NUM_METATILES_IN_PRIMARY:
             entries = struct.unpack_from('<8H', prim_meta, src * 16)
             attr = struct.unpack_from('<I', prim_attr, src * 4)[0]

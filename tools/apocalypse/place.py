@@ -9,7 +9,7 @@ Starts from the ORIGINAL map.bin in git (BASE_REF), so it can be re-run after ch
 - Auto props: scattered with a fixed seed. A solid prop is only placed if all walkable areas of the map stay
   connected and it keeps a distance from events, warps and the map edges (connections).
 """
-import json, os, random, struct, subprocess, sys
+import collections, json, os, random, re, struct, subprocess, sys
 from collections import deque
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -68,6 +68,61 @@ PLACEMENTS = {
 }
 
 
+# All other Kanto towns and routes are configured automatically.
+AUTO_LAYOUT = re.compile(r'^LAYOUT_(ROUTE([0-9]+)(_NORTH|_SOUTH)?|PALLET_TOWN|PEWTER_CITY|CERULEAN_CITY|VERMILION_CITY|'
+                         r'LAVENDER_TOWN|CELADON_CITY|FUCHSIA_CITY|SAFFRON_CITY|CINNABAR_ISLAND|INDIGO_PLATEAU_EXTERIOR)$')
+SOLID_PER_CELLS = 22     # one solid prop per this many free ground cells
+DECOR_PER_CELLS = 16     # one crack/graffiti per this many road cells
+SWAP_FRACTION = 0.6      # share of windows / walls that get boarded up or sprayed
+
+
+def auto_configs():
+    import glob
+    layouts = json.load(open(os.path.join(ROOT, 'data/layouts/layouts.json')))['layouts']
+    tileset_dirs = {}
+    for t in deco.TILESETS:
+        tileset_dirs[os.path.basename(t)] = t
+    maps = {}
+    for mj in glob.glob(os.path.join(ROOT, 'data/maps/*/map.json')):
+        m = json.load(open(mj))
+        maps.setdefault(m.get('layout'), os.path.relpath(mj, ROOT))
+    import recolor
+    out = {}
+    for l in layouts:
+        lid = l.get('id', '')
+        m = AUTO_LAYOUT.match(lid)
+        if not m or l.get('layout_version') != 'frlg' or l['primary_tileset'] != 'gTileset_General_Frlg':
+            continue
+        if m.group(2) and not 1 <= int(m.group(2)) <= 25:
+            continue
+        layout_dir = os.path.dirname(l['blockdata_filepath'])
+        if layout_dir in PLACEMENTS or lid not in maps:
+            continue
+        tileset = None
+        for t in deco.TILESETS:
+            if recolor_path(l['secondary_tileset']) == t:
+                tileset = t
+        if tileset is None:
+            continue
+        out[layout_dir] = {'map': maps[lid], 'tileset': tileset, 'width': l['width'], 'props': [],
+                           'swaps': 'all', 'auto': 'scaled', 'seed': sum(map(ord, lid))}
+    return out
+
+
+def recolor_path(symbol):
+    import recolor
+    if not hasattr(recolor_path, 'cache'):
+        recolor_path.cache = {}
+    if symbol not in recolor_path.cache:
+        import re as _re
+        headers = open(os.path.join(ROOT, 'src/data/tilesets/headers.h')).read()
+        gfx = open(os.path.join(ROOT, 'src/data/tilesets/graphics.h')).read()
+        mm = _re.search(r'const struct Tileset %s =\s*\{(.*?)\};' % _re.escape(symbol), headers, _re.S)
+        tiles = _re.search(r'\.tiles = (\w+)', mm.group(1)).group(1)
+        recolor_path.cache[symbol] = _re.search(r'%s\[\] = INCGFX_U32\("([^"]+)/tiles\.png"' % _re.escape(tiles), gfx).group(1)
+    return recolor_path.cache[symbol]
+
+
 class Grid:
     def __init__(self, blocks, width):
         self.b = blocks
@@ -117,10 +172,11 @@ def prop_cells(info, x, y):
 
 
 def fits(grid, info, ground, x, y):
+    allowed = (info['ground_mid'],) if 'ground_mid' in info else GROUND_IDS[ground]
     for cx, cy, _ in prop_cells(info, x, y):
         if not (0 <= cx < grid.w and 0 <= cy < grid.h):
             return False
-        if grid.mid(cx, cy) not in GROUND_IDS[ground] or grid.col(cx, cy):
+        if grid.mid(cx, cy) not in allowed or grid.col(cx, cy):
             return False
     return True
 
@@ -132,9 +188,11 @@ def put(grid, info, x, y):
 
 def main():
     all_ids = json.load(open(os.path.join(ROOT, 'tools/apocalypse/deco_ids.json')))
-    grounds = {name: ground for name, _, _, ground, _ in deco.PROPS}
+    grounds = collections.defaultdict(lambda: None, {name: ground for name, _, _, ground, _ in deco.PROPS})
     ok = True
-    for layout, cfg in PLACEMENTS.items():
+    configs = dict(PLACEMENTS)
+    configs.update(auto_configs())
+    for layout, cfg in configs.items():
         ids = all_ids[cfg['tileset']]
         rel = layout + '/map.bin'
         raw = subprocess.run(['git', '-C', ROOT, 'show', '%s:%s' % (BASE_REF, rel)], capture_output=True, check=True).stdout
@@ -148,7 +206,30 @@ def main():
                 print('SKIP %s %s at (%d,%d)' % (layout, prop, x, y))
                 ok = False
 
-        for x, y, name in cfg['swaps']:
+        if cfg['swaps'] == 'all':
+            rng_s = random.Random(cfg['seed'])
+            by_source = {info['source']: info for info in ids.values() if 'source' in info}
+            for i, v in enumerate(grid.b):
+                info = by_source.get(v & 0x3FF)
+                if info and rng_s.random() < SWAP_FRACTION:
+                    grid.b[i] = (v & ~0x3FF) | info['metatiles'][0]
+            cfg_swaps = []
+        else:
+            cfg_swaps = cfg['swaps']
+        if cfg.get('auto') == 'scaled':
+            gids = {info['ground_mid'] for info in ids.values() if 'ground_mid' in info} or set(GROUND_IDS['dirt'] + GROUND_IDS['road'])
+            free = sum(1 for y in range(grid.h) for x in range(grid.w) if grid.col(x, y) == 0 and grid.mid(x, y) in gids)
+            road = free
+            solid_names = [n for n, info in ids.items() if 'source' not in info and info['solid']]
+            decor_names = [n for n, info in ids.items() if 'source' not in info and not info['solid']]
+            decor_names = [n for n in decor_names if n.startswith('crack')] * 2 + [n for n in decor_names if n.startswith('graffiti')]
+            if 'ground_mid' in next(iter(ids.values()), {}) or any('ground_mid' in i for i in ids.values()):
+                decor_count_scale = 2  # mixed grounds: fewer cracks
+            else:
+                decor_count_scale = 1
+            cfg = dict(cfg, auto={'seed': cfg['seed'], 'solid': sorted(solid_names), 'count': free // SOLID_PER_CELLS,
+                                  'decor': sorted(decor_names), 'decor_count': road // (DECOR_PER_CELLS * decor_count_scale)})
+        for x, y, name in cfg_swaps:
             info = ids[name]
             cells = [(x, y)] if x is not None else [(cx, cy) for cy in range(grid.h) for cx in range(grid.w)]
             hit = 0

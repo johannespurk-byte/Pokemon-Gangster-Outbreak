@@ -1,4 +1,4556 @@
 {
+  "data/tilesets/secondary/celadon_city_frlg": {
+    "barrel@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        900
+      ],
+      "solid": true
+    },
+    "barrel@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        898
+      ],
+      "solid": true
+    },
+    "barrel@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        899
+      ],
+      "solid": true
+    },
+    "barrier@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        897
+      ],
+      "solid": true
+    },
+    "barrier@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        895
+      ],
+      "solid": true
+    },
+    "barrier@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        896
+      ],
+      "solid": true
+    },
+    "car@220": {
+      "cols": 2,
+      "ground_mid": 220,
+      "metatiles": [
+        893,
+        894
+      ],
+      "solid": true
+    },
+    "car@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        889,
+        890
+      ],
+      "solid": true
+    },
+    "car@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        891,
+        892
+      ],
+      "solid": true
+    },
+    "car_flipped@220": {
+      "cols": 2,
+      "ground_mid": 220,
+      "metatiles": [
+        947,
+        948
+      ],
+      "solid": true
+    },
+    "car_flipped@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        943,
+        944
+      ],
+      "solid": true
+    },
+    "car_flipped@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        945,
+        946
+      ],
+      "solid": true
+    },
+    "crack_a@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        906
+      ],
+      "solid": false
+    },
+    "crack_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        904
+      ],
+      "solid": false
+    },
+    "crack_a@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        905
+      ],
+      "solid": false
+    },
+    "crack_b@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        909
+      ],
+      "solid": false
+    },
+    "crack_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        907
+      ],
+      "solid": false
+    },
+    "crack_b@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        908
+      ],
+      "solid": false
+    },
+    "crack_c@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        912
+      ],
+      "solid": false
+    },
+    "crack_c@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        910
+      ],
+      "solid": false
+    },
+    "crack_c@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        911
+      ],
+      "solid": false
+    },
+    "graffiti@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        915
+      ],
+      "solid": false
+    },
+    "graffiti@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        913
+      ],
+      "solid": false
+    },
+    "graffiti@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        914
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        952
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        953
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        949
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        950
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        951
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        954
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        955
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        888
+      ],
+      "solid": true
+    },
+    "rubble@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        886
+      ],
+      "solid": true
+    },
+    "rubble@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        887
+      ],
+      "solid": true
+    },
+    "rubble_a@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        882
+      ],
+      "solid": true
+    },
+    "rubble_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        880
+      ],
+      "solid": true
+    },
+    "rubble_a@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        881
+      ],
+      "solid": true
+    },
+    "rubble_b@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        885
+      ],
+      "solid": true
+    },
+    "rubble_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        883
+      ],
+      "solid": true
+    },
+    "rubble_b@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        884
+      ],
+      "solid": true
+    },
+    "sandbags@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        942
+      ],
+      "solid": true
+    },
+    "sandbags@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        940
+      ],
+      "solid": true
+    },
+    "sandbags@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        941
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@220": {
+      "cols": 2,
+      "ground_mid": 220,
+      "metatiles": [
+        924,
+        925,
+        926,
+        927
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        916,
+        917,
+        918,
+        919
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        920,
+        921,
+        922,
+        923
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@220": {
+      "cols": 2,
+      "ground_mid": 220,
+      "metatiles": [
+        936,
+        937,
+        938,
+        939
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        928,
+        929,
+        930,
+        931
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        932,
+        933,
+        934,
+        935
+      ],
+      "solid": true
+    },
+    "tires@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        903
+      ],
+      "solid": true
+    },
+    "tires@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        901
+      ],
+      "solid": true
+    },
+    "tires@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        902
+      ],
+      "solid": true
+    }
+  },
+  "data/tilesets/secondary/cerulean_city_frlg": {
+    "barrel@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        792
+      ],
+      "solid": true
+    },
+    "barrel@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        793
+      ],
+      "solid": true
+    },
+    "barrel@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        794
+      ],
+      "solid": true
+    },
+    "barrier@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        789
+      ],
+      "solid": true
+    },
+    "barrier@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        790
+      ],
+      "solid": true
+    },
+    "barrier@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        791
+      ],
+      "solid": true
+    },
+    "car@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        783,
+        784
+      ],
+      "solid": true
+    },
+    "car@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        785,
+        786
+      ],
+      "solid": true
+    },
+    "car@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        787,
+        788
+      ],
+      "solid": true
+    },
+    "car_flipped@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        837,
+        838
+      ],
+      "solid": true
+    },
+    "car_flipped@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        839,
+        840
+      ],
+      "solid": true
+    },
+    "car_flipped@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        841,
+        842
+      ],
+      "solid": true
+    },
+    "crack_a@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        798
+      ],
+      "solid": false
+    },
+    "crack_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        799
+      ],
+      "solid": false
+    },
+    "crack_a@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        800
+      ],
+      "solid": false
+    },
+    "crack_b@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        801
+      ],
+      "solid": false
+    },
+    "crack_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        802
+      ],
+      "solid": false
+    },
+    "crack_b@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        803
+      ],
+      "solid": false
+    },
+    "crack_c@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        804
+      ],
+      "solid": false
+    },
+    "crack_c@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        805
+      ],
+      "solid": false
+    },
+    "crack_c@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        806
+      ],
+      "solid": false
+    },
+    "crater@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        843,
+        844,
+        845,
+        846
+      ],
+      "solid": true
+    },
+    "crater@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        847,
+        848,
+        849,
+        850
+      ],
+      "solid": true
+    },
+    "crater@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        851,
+        852,
+        853,
+        854
+      ],
+      "solid": true
+    },
+    "graffiti@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        807
+      ],
+      "solid": false
+    },
+    "graffiti@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        808
+      ],
+      "solid": false
+    },
+    "graffiti@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        809
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        858
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        859
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        855
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        856
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        857
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        860
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        861
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        780
+      ],
+      "solid": true
+    },
+    "rubble@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        781
+      ],
+      "solid": true
+    },
+    "rubble@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        782
+      ],
+      "solid": true
+    },
+    "rubble_a@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        774
+      ],
+      "solid": true
+    },
+    "rubble_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        775
+      ],
+      "solid": true
+    },
+    "rubble_a@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        776
+      ],
+      "solid": true
+    },
+    "rubble_b@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        777
+      ],
+      "solid": true
+    },
+    "rubble_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        778
+      ],
+      "solid": true
+    },
+    "rubble_b@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        779
+      ],
+      "solid": true
+    },
+    "sandbags@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        834
+      ],
+      "solid": true
+    },
+    "sandbags@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        835
+      ],
+      "solid": true
+    },
+    "sandbags@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        836
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        810,
+        811,
+        812,
+        813
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        814,
+        815,
+        816,
+        817
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        818,
+        819,
+        820,
+        821
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        822,
+        823,
+        824,
+        825
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        826,
+        827,
+        828,
+        829
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        830,
+        831,
+        832,
+        833
+      ],
+      "solid": true
+    },
+    "tires@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        795
+      ],
+      "solid": true
+    },
+    "tires@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        796
+      ],
+      "solid": true
+    },
+    "tires@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        797
+      ],
+      "solid": true
+    },
+    "window_694": {
+      "cols": 1,
+      "metatiles": [
+        862
+      ],
+      "solid": null,
+      "source": 694
+    },
+    "window_695": {
+      "cols": 1,
+      "metatiles": [
+        863
+      ],
+      "solid": null,
+      "source": 695
+    },
+    "window_701": {
+      "cols": 1,
+      "metatiles": [
+        864
+      ],
+      "solid": null,
+      "source": 701
+    },
+    "window_702": {
+      "cols": 1,
+      "metatiles": [
+        865
+      ],
+      "solid": null,
+      "source": 702
+    },
+    "window_703": {
+      "cols": 1,
+      "metatiles": [
+        866
+      ],
+      "solid": null,
+      "source": 703
+    },
+    "window_704": {
+      "cols": 1,
+      "metatiles": [
+        867
+      ],
+      "solid": null,
+      "source": 704
+    },
+    "window_756": {
+      "cols": 1,
+      "metatiles": [
+        868
+      ],
+      "solid": null,
+      "source": 756
+    },
+    "window_757": {
+      "cols": 1,
+      "metatiles": [
+        869
+      ],
+      "solid": null,
+      "source": 757
+    },
+    "window_758": {
+      "cols": 1,
+      "metatiles": [
+        870
+      ],
+      "solid": null,
+      "source": 758
+    },
+    "window_759": {
+      "cols": 1,
+      "metatiles": [
+        871
+      ],
+      "solid": null,
+      "source": 759
+    }
+  },
+  "data/tilesets/secondary/cinnabar_island_frlg": {
+    "barrel@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        724
+      ],
+      "solid": true
+    },
+    "barrel@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        723
+      ],
+      "solid": true
+    },
+    "barrel@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        722
+      ],
+      "solid": true
+    },
+    "barrier@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        721
+      ],
+      "solid": true
+    },
+    "barrier@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        720
+      ],
+      "solid": true
+    },
+    "barrier@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        719
+      ],
+      "solid": true
+    },
+    "car@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        717,
+        718
+      ],
+      "solid": true
+    },
+    "car@209": {
+      "cols": 2,
+      "ground_mid": 209,
+      "metatiles": [
+        715,
+        716
+      ],
+      "solid": true
+    },
+    "car@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        713,
+        714
+      ],
+      "solid": true
+    },
+    "car_flipped@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        771,
+        772
+      ],
+      "solid": true
+    },
+    "car_flipped@209": {
+      "cols": 2,
+      "ground_mid": 209,
+      "metatiles": [
+        769,
+        770
+      ],
+      "solid": true
+    },
+    "car_flipped@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        767,
+        768
+      ],
+      "solid": true
+    },
+    "crack_a@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        730
+      ],
+      "solid": false
+    },
+    "crack_a@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        729
+      ],
+      "solid": false
+    },
+    "crack_a@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        728
+      ],
+      "solid": false
+    },
+    "crack_b@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        733
+      ],
+      "solid": false
+    },
+    "crack_b@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        732
+      ],
+      "solid": false
+    },
+    "crack_b@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        731
+      ],
+      "solid": false
+    },
+    "crack_c@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        736
+      ],
+      "solid": false
+    },
+    "crack_c@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        735
+      ],
+      "solid": false
+    },
+    "crack_c@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        734
+      ],
+      "solid": false
+    },
+    "crater@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        781,
+        782,
+        783,
+        784
+      ],
+      "solid": true
+    },
+    "crater@209": {
+      "cols": 2,
+      "ground_mid": 209,
+      "metatiles": [
+        777,
+        778,
+        779,
+        780
+      ],
+      "solid": true
+    },
+    "crater@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        773,
+        774,
+        775,
+        776
+      ],
+      "solid": true
+    },
+    "graffiti@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        739
+      ],
+      "solid": false
+    },
+    "graffiti@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        738
+      ],
+      "solid": false
+    },
+    "graffiti@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        737
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        788
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        789
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        785
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        786
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        787
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        790
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        791
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        712
+      ],
+      "solid": true
+    },
+    "rubble@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        711
+      ],
+      "solid": true
+    },
+    "rubble@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        710
+      ],
+      "solid": true
+    },
+    "rubble_a@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        706
+      ],
+      "solid": true
+    },
+    "rubble_a@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        705
+      ],
+      "solid": true
+    },
+    "rubble_a@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        704
+      ],
+      "solid": true
+    },
+    "rubble_b@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        709
+      ],
+      "solid": true
+    },
+    "rubble_b@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        708
+      ],
+      "solid": true
+    },
+    "rubble_b@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        707
+      ],
+      "solid": true
+    },
+    "sandbags@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        766
+      ],
+      "solid": true
+    },
+    "sandbags@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        765
+      ],
+      "solid": true
+    },
+    "sandbags@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        764
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        748,
+        749,
+        750,
+        751
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@209": {
+      "cols": 2,
+      "ground_mid": 209,
+      "metatiles": [
+        744,
+        745,
+        746,
+        747
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        740,
+        741,
+        742,
+        743
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        760,
+        761,
+        762,
+        763
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@209": {
+      "cols": 2,
+      "ground_mid": 209,
+      "metatiles": [
+        756,
+        757,
+        758,
+        759
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        752,
+        753,
+        754,
+        755
+      ],
+      "solid": true
+    },
+    "tires@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        727
+      ],
+      "solid": true
+    },
+    "tires@209": {
+      "cols": 1,
+      "ground_mid": 209,
+      "metatiles": [
+        726
+      ],
+      "solid": true
+    },
+    "tires@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        725
+      ],
+      "solid": true
+    }
+  },
+  "data/tilesets/secondary/fuchsia_city_frlg": {
+    "barrel@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        851
+      ],
+      "solid": true
+    },
+    "barrel@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        850
+      ],
+      "solid": true
+    },
+    "barrel@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        852
+      ],
+      "solid": true
+    },
+    "barrier@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        848
+      ],
+      "solid": true
+    },
+    "barrier@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        847
+      ],
+      "solid": true
+    },
+    "barrier@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        849
+      ],
+      "solid": true
+    },
+    "car@212": {
+      "cols": 2,
+      "ground_mid": 212,
+      "metatiles": [
+        843,
+        844
+      ],
+      "solid": true
+    },
+    "car@220": {
+      "cols": 2,
+      "ground_mid": 220,
+      "metatiles": [
+        841,
+        842
+      ],
+      "solid": true
+    },
+    "car@228": {
+      "cols": 2,
+      "ground_mid": 228,
+      "metatiles": [
+        845,
+        846
+      ],
+      "solid": true
+    },
+    "car_flipped@212": {
+      "cols": 2,
+      "ground_mid": 212,
+      "metatiles": [
+        897,
+        898
+      ],
+      "solid": true
+    },
+    "car_flipped@220": {
+      "cols": 2,
+      "ground_mid": 220,
+      "metatiles": [
+        895,
+        896
+      ],
+      "solid": true
+    },
+    "car_flipped@228": {
+      "cols": 2,
+      "ground_mid": 228,
+      "metatiles": [
+        899,
+        900
+      ],
+      "solid": true
+    },
+    "crack_a@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        857
+      ],
+      "solid": false
+    },
+    "crack_a@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        856
+      ],
+      "solid": false
+    },
+    "crack_a@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        858
+      ],
+      "solid": false
+    },
+    "crack_b@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        860
+      ],
+      "solid": false
+    },
+    "crack_b@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        859
+      ],
+      "solid": false
+    },
+    "crack_b@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        861
+      ],
+      "solid": false
+    },
+    "crack_c@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        863
+      ],
+      "solid": false
+    },
+    "crack_c@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        862
+      ],
+      "solid": false
+    },
+    "crack_c@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        864
+      ],
+      "solid": false
+    },
+    "crater@212": {
+      "cols": 2,
+      "ground_mid": 212,
+      "metatiles": [
+        905,
+        906,
+        907,
+        908
+      ],
+      "solid": true
+    },
+    "crater@220": {
+      "cols": 2,
+      "ground_mid": 220,
+      "metatiles": [
+        901,
+        902,
+        903,
+        904
+      ],
+      "solid": true
+    },
+    "crater@228": {
+      "cols": 2,
+      "ground_mid": 228,
+      "metatiles": [
+        909,
+        910,
+        911,
+        912
+      ],
+      "solid": true
+    },
+    "graffiti@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        866
+      ],
+      "solid": false
+    },
+    "graffiti@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        865
+      ],
+      "solid": false
+    },
+    "graffiti@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        867
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        916
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        917
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        913
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        914
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        915
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        918
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        919
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        839
+      ],
+      "solid": true
+    },
+    "rubble@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        838
+      ],
+      "solid": true
+    },
+    "rubble@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        840
+      ],
+      "solid": true
+    },
+    "rubble_a@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        833
+      ],
+      "solid": true
+    },
+    "rubble_a@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        832
+      ],
+      "solid": true
+    },
+    "rubble_a@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        834
+      ],
+      "solid": true
+    },
+    "rubble_b@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        836
+      ],
+      "solid": true
+    },
+    "rubble_b@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        835
+      ],
+      "solid": true
+    },
+    "rubble_b@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        837
+      ],
+      "solid": true
+    },
+    "sandbags@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        893
+      ],
+      "solid": true
+    },
+    "sandbags@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        892
+      ],
+      "solid": true
+    },
+    "sandbags@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        894
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@212": {
+      "cols": 2,
+      "ground_mid": 212,
+      "metatiles": [
+        872,
+        873,
+        874,
+        875
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@220": {
+      "cols": 2,
+      "ground_mid": 220,
+      "metatiles": [
+        868,
+        869,
+        870,
+        871
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@228": {
+      "cols": 2,
+      "ground_mid": 228,
+      "metatiles": [
+        876,
+        877,
+        878,
+        879
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@212": {
+      "cols": 2,
+      "ground_mid": 212,
+      "metatiles": [
+        884,
+        885,
+        886,
+        887
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@220": {
+      "cols": 2,
+      "ground_mid": 220,
+      "metatiles": [
+        880,
+        881,
+        882,
+        883
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@228": {
+      "cols": 2,
+      "ground_mid": 228,
+      "metatiles": [
+        888,
+        889,
+        890,
+        891
+      ],
+      "solid": true
+    },
+    "tires@212": {
+      "cols": 1,
+      "ground_mid": 212,
+      "metatiles": [
+        854
+      ],
+      "solid": true
+    },
+    "tires@220": {
+      "cols": 1,
+      "ground_mid": 220,
+      "metatiles": [
+        853
+      ],
+      "solid": true
+    },
+    "tires@228": {
+      "cols": 1,
+      "ground_mid": 228,
+      "metatiles": [
+        855
+      ],
+      "solid": true
+    }
+  },
+  "data/tilesets/secondary/indigo_plateau_frlg": {
+    "barrel@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        835
+      ],
+      "solid": true
+    },
+    "barrel@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        836
+      ],
+      "solid": true
+    },
+    "barrel@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        834
+      ],
+      "solid": true
+    },
+    "barrier@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        832
+      ],
+      "solid": true
+    },
+    "barrier@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        833
+      ],
+      "solid": true
+    },
+    "barrier@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        831
+      ],
+      "solid": true
+    },
+    "car@16": {
+      "cols": 2,
+      "ground_mid": 16,
+      "metatiles": [
+        827,
+        828
+      ],
+      "solid": true
+    },
+    "car@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        829,
+        830
+      ],
+      "solid": true
+    },
+    "car@650": {
+      "cols": 2,
+      "ground_mid": 650,
+      "metatiles": [
+        825,
+        826
+      ],
+      "solid": true
+    },
+    "car_flipped@16": {
+      "cols": 2,
+      "ground_mid": 16,
+      "metatiles": [
+        881,
+        882
+      ],
+      "solid": true
+    },
+    "car_flipped@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        883,
+        884
+      ],
+      "solid": true
+    },
+    "car_flipped@650": {
+      "cols": 2,
+      "ground_mid": 650,
+      "metatiles": [
+        879,
+        880
+      ],
+      "solid": true
+    },
+    "crack_a@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        841
+      ],
+      "solid": false
+    },
+    "crack_a@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        842
+      ],
+      "solid": false
+    },
+    "crack_a@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        840
+      ],
+      "solid": false
+    },
+    "crack_b@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        844
+      ],
+      "solid": false
+    },
+    "crack_b@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        845
+      ],
+      "solid": false
+    },
+    "crack_b@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        843
+      ],
+      "solid": false
+    },
+    "crack_c@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        847
+      ],
+      "solid": false
+    },
+    "crack_c@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        848
+      ],
+      "solid": false
+    },
+    "crack_c@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        846
+      ],
+      "solid": false
+    },
+    "graffiti@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        850
+      ],
+      "solid": false
+    },
+    "graffiti@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        851
+      ],
+      "solid": false
+    },
+    "graffiti@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        849
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        888
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        889
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        885
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        886
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        887
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        890
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        891
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        823
+      ],
+      "solid": true
+    },
+    "rubble@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        824
+      ],
+      "solid": true
+    },
+    "rubble@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        822
+      ],
+      "solid": true
+    },
+    "rubble_a@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        817
+      ],
+      "solid": true
+    },
+    "rubble_a@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        818
+      ],
+      "solid": true
+    },
+    "rubble_a@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        816
+      ],
+      "solid": true
+    },
+    "rubble_b@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        820
+      ],
+      "solid": true
+    },
+    "rubble_b@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        821
+      ],
+      "solid": true
+    },
+    "rubble_b@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        819
+      ],
+      "solid": true
+    },
+    "sandbags@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        877
+      ],
+      "solid": true
+    },
+    "sandbags@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        878
+      ],
+      "solid": true
+    },
+    "sandbags@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        876
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@16": {
+      "cols": 2,
+      "ground_mid": 16,
+      "metatiles": [
+        856,
+        857,
+        858,
+        859
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        860,
+        861,
+        862,
+        863
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@650": {
+      "cols": 2,
+      "ground_mid": 650,
+      "metatiles": [
+        852,
+        853,
+        854,
+        855
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@16": {
+      "cols": 2,
+      "ground_mid": 16,
+      "metatiles": [
+        868,
+        869,
+        870,
+        871
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        872,
+        873,
+        874,
+        875
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@650": {
+      "cols": 2,
+      "ground_mid": 650,
+      "metatiles": [
+        864,
+        865,
+        866,
+        867
+      ],
+      "solid": true
+    },
+    "tires@16": {
+      "cols": 1,
+      "ground_mid": 16,
+      "metatiles": [
+        838
+      ],
+      "solid": true
+    },
+    "tires@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        839
+      ],
+      "solid": true
+    },
+    "tires@650": {
+      "cols": 1,
+      "ground_mid": 650,
+      "metatiles": [
+        837
+      ],
+      "solid": true
+    }
+  },
+  "data/tilesets/secondary/lavender_town_frlg": {
+    "barrel@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        878
+      ],
+      "solid": true
+    },
+    "barrel@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        876
+      ],
+      "solid": true
+    },
+    "barrel@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        877
+      ],
+      "solid": true
+    },
+    "barrier@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        875
+      ],
+      "solid": true
+    },
+    "barrier@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        873
+      ],
+      "solid": true
+    },
+    "barrier@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        874
+      ],
+      "solid": true
+    },
+    "car@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        871,
+        872
+      ],
+      "solid": true
+    },
+    "car@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        867,
+        868
+      ],
+      "solid": true
+    },
+    "car@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        869,
+        870
+      ],
+      "solid": true
+    },
+    "car_flipped@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        925,
+        926
+      ],
+      "solid": true
+    },
+    "car_flipped@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        921,
+        922
+      ],
+      "solid": true
+    },
+    "car_flipped@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        923,
+        924
+      ],
+      "solid": true
+    },
+    "crack_a@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        884
+      ],
+      "solid": false
+    },
+    "crack_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        882
+      ],
+      "solid": false
+    },
+    "crack_a@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        883
+      ],
+      "solid": false
+    },
+    "crack_b@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        887
+      ],
+      "solid": false
+    },
+    "crack_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        885
+      ],
+      "solid": false
+    },
+    "crack_b@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        886
+      ],
+      "solid": false
+    },
+    "crack_c@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        890
+      ],
+      "solid": false
+    },
+    "crack_c@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        888
+      ],
+      "solid": false
+    },
+    "crack_c@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        889
+      ],
+      "solid": false
+    },
+    "graffiti@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        893
+      ],
+      "solid": false
+    },
+    "graffiti@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        891
+      ],
+      "solid": false
+    },
+    "graffiti@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        892
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        930
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        931
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        927
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        928
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        929
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        932
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        933
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        866
+      ],
+      "solid": true
+    },
+    "rubble@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        864
+      ],
+      "solid": true
+    },
+    "rubble@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        865
+      ],
+      "solid": true
+    },
+    "rubble_a@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        860
+      ],
+      "solid": true
+    },
+    "rubble_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        858
+      ],
+      "solid": true
+    },
+    "rubble_a@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        859
+      ],
+      "solid": true
+    },
+    "rubble_b@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        863
+      ],
+      "solid": true
+    },
+    "rubble_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        861
+      ],
+      "solid": true
+    },
+    "rubble_b@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        862
+      ],
+      "solid": true
+    },
+    "sandbags@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        920
+      ],
+      "solid": true
+    },
+    "sandbags@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        918
+      ],
+      "solid": true
+    },
+    "sandbags@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        919
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        902,
+        903,
+        904,
+        905
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        894,
+        895,
+        896,
+        897
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        898,
+        899,
+        900,
+        901
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        914,
+        915,
+        916,
+        917
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        906,
+        907,
+        908,
+        909
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        910,
+        911,
+        912,
+        913
+      ],
+      "solid": true
+    },
+    "tires@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        881
+      ],
+      "solid": true
+    },
+    "tires@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        879
+      ],
+      "solid": true
+    },
+    "tires@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        880
+      ],
+      "solid": true
+    }
+  },
+  "data/tilesets/secondary/pallet_town_frlg": {
+    "barrel@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        748
+      ],
+      "solid": true
+    },
+    "barrel@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        747
+      ],
+      "solid": true
+    },
+    "barrel@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        749
+      ],
+      "solid": true
+    },
+    "barrier@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        745
+      ],
+      "solid": true
+    },
+    "barrier@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        744
+      ],
+      "solid": true
+    },
+    "barrier@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        746
+      ],
+      "solid": true
+    },
+    "car@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        740,
+        741
+      ],
+      "solid": true
+    },
+    "car@662": {
+      "cols": 2,
+      "ground_mid": 662,
+      "metatiles": [
+        738,
+        739
+      ],
+      "solid": true
+    },
+    "car@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        742,
+        743
+      ],
+      "solid": true
+    },
+    "car_flipped@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        794,
+        795
+      ],
+      "solid": true
+    },
+    "car_flipped@662": {
+      "cols": 2,
+      "ground_mid": 662,
+      "metatiles": [
+        792,
+        793
+      ],
+      "solid": true
+    },
+    "car_flipped@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        796,
+        797
+      ],
+      "solid": true
+    },
+    "crack_a@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        754
+      ],
+      "solid": false
+    },
+    "crack_a@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        753
+      ],
+      "solid": false
+    },
+    "crack_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        755
+      ],
+      "solid": false
+    },
+    "crack_b@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        757
+      ],
+      "solid": false
+    },
+    "crack_b@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        756
+      ],
+      "solid": false
+    },
+    "crack_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        758
+      ],
+      "solid": false
+    },
+    "crack_c@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        760
+      ],
+      "solid": false
+    },
+    "crack_c@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        759
+      ],
+      "solid": false
+    },
+    "crack_c@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        761
+      ],
+      "solid": false
+    },
+    "crater@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        802,
+        803,
+        804,
+        805
+      ],
+      "solid": true
+    },
+    "crater@662": {
+      "cols": 2,
+      "ground_mid": 662,
+      "metatiles": [
+        798,
+        799,
+        800,
+        801
+      ],
+      "solid": true
+    },
+    "crater@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        806,
+        807,
+        808,
+        809
+      ],
+      "solid": true
+    },
+    "graffiti@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        763
+      ],
+      "solid": false
+    },
+    "graffiti@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        762
+      ],
+      "solid": false
+    },
+    "graffiti@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        764
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        813
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        814
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        810
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        811
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        812
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        815
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        816
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        736
+      ],
+      "solid": true
+    },
+    "rubble@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        735
+      ],
+      "solid": true
+    },
+    "rubble@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        737
+      ],
+      "solid": true
+    },
+    "rubble_a@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        730
+      ],
+      "solid": true
+    },
+    "rubble_a@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        729
+      ],
+      "solid": true
+    },
+    "rubble_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        731
+      ],
+      "solid": true
+    },
+    "rubble_b@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        733
+      ],
+      "solid": true
+    },
+    "rubble_b@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        732
+      ],
+      "solid": true
+    },
+    "rubble_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        734
+      ],
+      "solid": true
+    },
+    "sandbags@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        790
+      ],
+      "solid": true
+    },
+    "sandbags@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        789
+      ],
+      "solid": true
+    },
+    "sandbags@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        791
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        769,
+        770,
+        771,
+        772
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@662": {
+      "cols": 2,
+      "ground_mid": 662,
+      "metatiles": [
+        765,
+        766,
+        767,
+        768
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        773,
+        774,
+        775,
+        776
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@17": {
+      "cols": 2,
+      "ground_mid": 17,
+      "metatiles": [
+        781,
+        782,
+        783,
+        784
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@662": {
+      "cols": 2,
+      "ground_mid": 662,
+      "metatiles": [
+        777,
+        778,
+        779,
+        780
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        785,
+        786,
+        787,
+        788
+      ],
+      "solid": true
+    },
+    "tires@17": {
+      "cols": 1,
+      "ground_mid": 17,
+      "metatiles": [
+        751
+      ],
+      "solid": true
+    },
+    "tires@662": {
+      "cols": 1,
+      "ground_mid": 662,
+      "metatiles": [
+        750
+      ],
+      "solid": true
+    },
+    "tires@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        752
+      ],
+      "solid": true
+    },
+    "window_665": {
+      "cols": 1,
+      "metatiles": [
+        817
+      ],
+      "solid": null,
+      "source": 665
+    },
+    "window_666": {
+      "cols": 1,
+      "metatiles": [
+        818
+      ],
+      "solid": null,
+      "source": 666
+    },
+    "window_667": {
+      "cols": 1,
+      "metatiles": [
+        819
+      ],
+      "solid": null,
+      "source": 667
+    },
+    "window_673": {
+      "cols": 1,
+      "metatiles": [
+        820
+      ],
+      "solid": null,
+      "source": 673
+    },
+    "window_674": {
+      "cols": 1,
+      "metatiles": [
+        821
+      ],
+      "solid": null,
+      "source": 674
+    }
+  },
+  "data/tilesets/secondary/pewter_city_frlg": {
+    "barrel@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        739
+      ],
+      "solid": true
+    },
+    "barrel@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        737
+      ],
+      "solid": true
+    },
+    "barrel@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        738
+      ],
+      "solid": true
+    },
+    "barrier@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        736
+      ],
+      "solid": true
+    },
+    "barrier@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        734
+      ],
+      "solid": true
+    },
+    "barrier@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        735
+      ],
+      "solid": true
+    },
+    "car@449": {
+      "cols": 2,
+      "ground_mid": 449,
+      "metatiles": [
+        732,
+        733
+      ],
+      "solid": true
+    },
+    "car@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        728,
+        729
+      ],
+      "solid": true
+    },
+    "car@9": {
+      "cols": 2,
+      "ground_mid": 9,
+      "metatiles": [
+        730,
+        731
+      ],
+      "solid": true
+    },
+    "crack_a@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        745
+      ],
+      "solid": false
+    },
+    "crack_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        743
+      ],
+      "solid": false
+    },
+    "crack_a@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        744
+      ],
+      "solid": false
+    },
+    "crack_b@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        748
+      ],
+      "solid": false
+    },
+    "crack_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        746
+      ],
+      "solid": false
+    },
+    "crack_b@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        747
+      ],
+      "solid": false
+    },
+    "crack_c@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        751
+      ],
+      "solid": false
+    },
+    "crack_c@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        749
+      ],
+      "solid": false
+    },
+    "crack_c@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        750
+      ],
+      "solid": false
+    },
+    "graffiti@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        754
+      ],
+      "solid": false
+    },
+    "graffiti@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        752
+      ],
+      "solid": false
+    },
+    "graffiti@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        753
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        761
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        762
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        758
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        759
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        760
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        763
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        764
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        727
+      ],
+      "solid": true
+    },
+    "rubble@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        725
+      ],
+      "solid": true
+    },
+    "rubble@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        726
+      ],
+      "solid": true
+    },
+    "rubble_a@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        721
+      ],
+      "solid": true
+    },
+    "rubble_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        719
+      ],
+      "solid": true
+    },
+    "rubble_a@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        720
+      ],
+      "solid": true
+    },
+    "rubble_b@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        724
+      ],
+      "solid": true
+    },
+    "rubble_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        722
+      ],
+      "solid": true
+    },
+    "rubble_b@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        723
+      ],
+      "solid": true
+    },
+    "sandbags@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        757
+      ],
+      "solid": true
+    },
+    "sandbags@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        755
+      ],
+      "solid": true
+    },
+    "sandbags@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        756
+      ],
+      "solid": true
+    },
+    "tires@449": {
+      "cols": 1,
+      "ground_mid": 449,
+      "metatiles": [
+        742
+      ],
+      "solid": true
+    },
+    "tires@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        740
+      ],
+      "solid": true
+    },
+    "tires@9": {
+      "cols": 1,
+      "ground_mid": 9,
+      "metatiles": [
+        741
+      ],
+      "solid": true
+    }
+  },
+  "data/tilesets/secondary/saffron_city_frlg": {
+    "barrel@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        858
+      ],
+      "solid": true
+    },
+    "barrel@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        859
+      ],
+      "solid": true
+    },
+    "barrel@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        860
+      ],
+      "solid": true
+    },
+    "barrier@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        855
+      ],
+      "solid": true
+    },
+    "barrier@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        856
+      ],
+      "solid": true
+    },
+    "barrier@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        857
+      ],
+      "solid": true
+    },
+    "car@745": {
+      "cols": 2,
+      "ground_mid": 745,
+      "metatiles": [
+        849,
+        850
+      ],
+      "solid": true
+    },
+    "car@748": {
+      "cols": 2,
+      "ground_mid": 748,
+      "metatiles": [
+        851,
+        852
+      ],
+      "solid": true
+    },
+    "car@756": {
+      "cols": 2,
+      "ground_mid": 756,
+      "metatiles": [
+        853,
+        854
+      ],
+      "solid": true
+    },
+    "crack_a@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        864
+      ],
+      "solid": false
+    },
+    "crack_a@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        865
+      ],
+      "solid": false
+    },
+    "crack_a@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        866
+      ],
+      "solid": false
+    },
+    "crack_b@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        867
+      ],
+      "solid": false
+    },
+    "crack_b@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        868
+      ],
+      "solid": false
+    },
+    "crack_b@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        869
+      ],
+      "solid": false
+    },
+    "crack_c@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        870
+      ],
+      "solid": false
+    },
+    "crack_c@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        871
+      ],
+      "solid": false
+    },
+    "crack_c@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        872
+      ],
+      "solid": false
+    },
+    "graffiti@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        873
+      ],
+      "solid": false
+    },
+    "graffiti@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        874
+      ],
+      "solid": false
+    },
+    "graffiti@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        875
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        894
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        895
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        891
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        892
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        893
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        896
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        897
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        846
+      ],
+      "solid": true
+    },
+    "rubble@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        847
+      ],
+      "solid": true
+    },
+    "rubble@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        848
+      ],
+      "solid": true
+    },
+    "rubble_a@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        840
+      ],
+      "solid": true
+    },
+    "rubble_a@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        841
+      ],
+      "solid": true
+    },
+    "rubble_a@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        842
+      ],
+      "solid": true
+    },
+    "rubble_b@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        843
+      ],
+      "solid": true
+    },
+    "rubble_b@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        844
+      ],
+      "solid": true
+    },
+    "rubble_b@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        845
+      ],
+      "solid": true
+    },
+    "sandbags@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        888
+      ],
+      "solid": true
+    },
+    "sandbags@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        889
+      ],
+      "solid": true
+    },
+    "sandbags@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        890
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@745": {
+      "cols": 2,
+      "ground_mid": 745,
+      "metatiles": [
+        876,
+        877,
+        878,
+        879
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@748": {
+      "cols": 2,
+      "ground_mid": 748,
+      "metatiles": [
+        880,
+        881,
+        882,
+        883
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@756": {
+      "cols": 2,
+      "ground_mid": 756,
+      "metatiles": [
+        884,
+        885,
+        886,
+        887
+      ],
+      "solid": true
+    },
+    "tires@745": {
+      "cols": 1,
+      "ground_mid": 745,
+      "metatiles": [
+        861
+      ],
+      "solid": true
+    },
+    "tires@748": {
+      "cols": 1,
+      "ground_mid": 748,
+      "metatiles": [
+        862
+      ],
+      "solid": true
+    },
+    "tires@756": {
+      "cols": 1,
+      "ground_mid": 756,
+      "metatiles": [
+        863
+      ],
+      "solid": true
+    }
+  },
+  "data/tilesets/secondary/vermilion_city_frlg": {
+    "barrel@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        828
+      ],
+      "solid": true
+    },
+    "barrel@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        826
+      ],
+      "solid": true
+    },
+    "barrel@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        827
+      ],
+      "solid": true
+    },
+    "barrier@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        825
+      ],
+      "solid": true
+    },
+    "barrier@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        823
+      ],
+      "solid": true
+    },
+    "barrier@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        824
+      ],
+      "solid": true
+    },
+    "car@1": {
+      "cols": 2,
+      "ground_mid": 1,
+      "metatiles": [
+        821,
+        822
+      ],
+      "solid": true
+    },
+    "car@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        817,
+        818
+      ],
+      "solid": true
+    },
+    "car@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        819,
+        820
+      ],
+      "solid": true
+    },
+    "car_flipped@1": {
+      "cols": 2,
+      "ground_mid": 1,
+      "metatiles": [
+        875,
+        876
+      ],
+      "solid": true
+    },
+    "car_flipped@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        871,
+        872
+      ],
+      "solid": true
+    },
+    "car_flipped@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        873,
+        874
+      ],
+      "solid": true
+    },
+    "crack_a@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        834
+      ],
+      "solid": false
+    },
+    "crack_a@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        832
+      ],
+      "solid": false
+    },
+    "crack_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        833
+      ],
+      "solid": false
+    },
+    "crack_b@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        837
+      ],
+      "solid": false
+    },
+    "crack_b@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        835
+      ],
+      "solid": false
+    },
+    "crack_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        836
+      ],
+      "solid": false
+    },
+    "crack_c@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        840
+      ],
+      "solid": false
+    },
+    "crack_c@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        838
+      ],
+      "solid": false
+    },
+    "crack_c@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        839
+      ],
+      "solid": false
+    },
+    "crater@1": {
+      "cols": 2,
+      "ground_mid": 1,
+      "metatiles": [
+        885,
+        886,
+        887,
+        888
+      ],
+      "solid": true
+    },
+    "crater@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        877,
+        878,
+        879,
+        880
+      ],
+      "solid": true
+    },
+    "crater@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        881,
+        882,
+        883,
+        884
+      ],
+      "solid": true
+    },
+    "graffiti@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        843
+      ],
+      "solid": false
+    },
+    "graffiti@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        841
+      ],
+      "solid": false
+    },
+    "graffiti@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        842
+      ],
+      "solid": false
+    },
+    "gym_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        892
+      ],
+      "solid": null,
+      "source": 344
+    },
+    "gym_wall_graffiti_b": {
+      "cols": 1,
+      "metatiles": [
+        893
+      ],
+      "solid": null,
+      "source": 350
+    },
+    "gym_window_a_boarded": {
+      "cols": 1,
+      "metatiles": [
+        889
+      ],
+      "solid": null,
+      "source": 336
+    },
+    "gym_window_b_boarded": {
+      "cols": 1,
+      "metatiles": [
+        890
+      ],
+      "solid": null,
+      "source": 337
+    },
+    "gym_window_c_boarded": {
+      "cols": 1,
+      "metatiles": [
+        891
+      ],
+      "solid": null,
+      "source": 342
+    },
+    "mart_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        894
+      ],
+      "solid": null,
+      "source": 64
+    },
+    "pc_wall_graffiti": {
+      "cols": 1,
+      "metatiles": [
+        895
+      ],
+      "solid": null,
+      "source": 88
+    },
+    "rubble@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        816
+      ],
+      "solid": true
+    },
+    "rubble@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        814
+      ],
+      "solid": true
+    },
+    "rubble@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        815
+      ],
+      "solid": true
+    },
+    "rubble_a@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        810
+      ],
+      "solid": true
+    },
+    "rubble_a@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        808
+      ],
+      "solid": true
+    },
+    "rubble_a@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        809
+      ],
+      "solid": true
+    },
+    "rubble_b@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        813
+      ],
+      "solid": true
+    },
+    "rubble_b@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        811
+      ],
+      "solid": true
+    },
+    "rubble_b@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        812
+      ],
+      "solid": true
+    },
+    "sandbags@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        870
+      ],
+      "solid": true
+    },
+    "sandbags@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        868
+      ],
+      "solid": true
+    },
+    "sandbags@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        869
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@1": {
+      "cols": 2,
+      "ground_mid": 1,
+      "metatiles": [
+        852,
+        853,
+        854,
+        855
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        844,
+        845,
+        846,
+        847
+      ],
+      "solid": true
+    },
+    "scrap_heap_a@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        848,
+        849,
+        850,
+        851
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@1": {
+      "cols": 2,
+      "ground_mid": 1,
+      "metatiles": [
+        864,
+        865,
+        866,
+        867
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@217": {
+      "cols": 2,
+      "ground_mid": 217,
+      "metatiles": [
+        856,
+        857,
+        858,
+        859
+      ],
+      "solid": true
+    },
+    "scrap_heap_b@8": {
+      "cols": 2,
+      "ground_mid": 8,
+      "metatiles": [
+        860,
+        861,
+        862,
+        863
+      ],
+      "solid": true
+    },
+    "tires@1": {
+      "cols": 1,
+      "ground_mid": 1,
+      "metatiles": [
+        831
+      ],
+      "solid": true
+    },
+    "tires@217": {
+      "cols": 1,
+      "ground_mid": 217,
+      "metatiles": [
+        829
+      ],
+      "solid": true
+    },
+    "tires@8": {
+      "cols": 1,
+      "ground_mid": 8,
+      "metatiles": [
+        830
+      ],
+      "solid": true
+    }
+  },
   "data/tilesets/secondary/viridian_city_frlg": {
     "barrel_dirt": {
       "cols": 1,
