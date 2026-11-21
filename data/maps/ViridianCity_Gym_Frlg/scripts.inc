@@ -236,7 +236,7 @@ ViridianCity_Gym_Text_GiovanniDefeat::
 	.string "Ha!\n"
 	.string "That was a truly intense fight.\l"
 	.string "You have won!\p"
-	.string "As proof, here is the EARTHBADGE!\n"
+	.string "Take my place - the KINGPIN RANK!\n"
 	.string "{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}$"
 
 ViridianCity_Gym_Text_GiovanniPostBattle::
@@ -251,7 +251,7 @@ ViridianCity_Gym_Text_GiovanniPostBattle::
 	.string "Farewell!$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
-	.string "The EARTHBADGE makes POKéMON of\n"
+	.string "The KINGPIN RANK makes POKéMON of\n"
 	.string "any level obey without question.\p"
 	.string "It is evidence of your mastery as\n"
 	.string "a POKéMON TRAINER.\p"
@@ -454,7 +454,8 @@ ViridianCity_Gym_Text_GangIntroMission::
 	.string "Go out into KANTO. Catch POKéMON.\n"
 	.string "Beat every GYM LEADER you meet.\p"
 	.string "Make the name of our family feared\n"
-	.string "again. Come back with seven BADGES,\l"
+	.string "again. Beat the GYM LEADERS to climb\l"
+	.string "the ranks. Reach UNDERBOSS,\l"
 	.string "and I'll test you myself.\p"
 	.string "ROUTE 2 lies north of VIRIDIAN.\n"
 	.string "Now go.$"
@@ -462,8 +463,9 @@ ViridianCity_Gym_Text_GangIntroMission::
 ViridianCity_Gym_Text_GiovanniHQ::
 	.string "GIOVANNI: What are you still doing\n"
 	.string "here, recruit?\p"
-	.string "Come back when you've collected\n"
-	.string "seven BADGES. Not a moment sooner.$"
+	.string "Come back when you've reached\n"
+	.string "the rank of UNDERBOSS. Not a\l"
+	.string "moment sooner.$"
 
 ViridianCity_Gym_Text_GangIntroGiovanniCandies::
 	.string "GIOVANNI: And something to make\n"
@@ -482,6 +484,6 @@ ViridianCity_Gym_Text_GangIntroGiovanniGadgets2::
 	.string "team, the AUTO-REPEL keeps weak\l"
 	.string "POKéMON off your back.\p"
 	.string "They hold one charge for now. Every\n"
-	.string "GYM BADGE you win adds another one.\p"
+	.string "rank you climb adds another one.\p"
 	.string "The HEAL-BOTs in the old POKéMON\n"
 	.string "CENTERS recharge them.$"

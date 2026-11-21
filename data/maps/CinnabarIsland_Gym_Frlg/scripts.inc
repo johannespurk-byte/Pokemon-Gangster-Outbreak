@@ -722,7 +722,7 @@ CinnabarIsland_Gym_Text_BlaineIntro::
 CinnabarIsland_Gym_Text_BlaineDefeat::
 	.string "I have burned down to nothing!\n"
 	.string "Not even ashes remain!\p"
-	.string "You have earned the VOLCANOBADGE.$"
+	.string "You've earned the UNDERBOSS RANK.$"
 
 CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
 	.string "FIRE BLAST is the ultimate fire\n"
@@ -731,7 +731,7 @@ CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
 
 CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
 	.string "Hah!\p"
-	.string "The VOLCANOBADGE heightens the\n"
+	.string "The UNDERBOSS RANK heightens the\n"
 	.string "SPECIAL stats of your POKéMON.\p"
 	.string "Here, you can have this, too!$"
 
@@ -875,7 +875,7 @@ CinnabarIsland_Gym_Text_QuizQuestion1::
 
 CinnabarIsland_Gym_Text_QuizQuestion2::
 	.string "There are nine certified POKéMON\n"
-	.string "LEAGUE BADGES?$"
+	.string "GANG RANKS?$"
 
 CinnabarIsland_Gym_Text_QuizQuestion3::
 	.string "POLIWAG evolves three times?$"
