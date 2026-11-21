@@ -238,13 +238,13 @@ def main():
     for name, *_ in TEMPLATES:
         frames, pal, by_index, necks = standardise(name)
         std[name] = (pal, by_index, necks)
+        save_sheet(frames, pal, OUT + name + ".png")
     picinfo = {}
     for name, *_ in TEMPLATES:
         fpic, fsym, bpic, bsym = PICS_FOR[name]
         back_owner = next(t[0] for t in TEMPLATES if PICS_FOR[t[0]][1] == bsym)
         picinfo[name] = (fpic, pic_roles(name, pal_path(fsym, False), std[name][1]),
                          bpic, pic_roles(back_owner, pal_path(bsym, True), std[back_owner][1]), back_owner == name)
-        save_sheet(frames, pal, OUT + name + ".png")
     for name in STATE_HEADS:
         pal, by_index, _ = std[name]
         for short, suffix, nframes in STATES:
