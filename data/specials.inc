@@ -639,3 +639,5 @@ gSpecials::
 	def_special StickerManGetBragFlags
 	def_special CheckAddCoins
 	def_special GangIntro_GiveRandomStarter
+	def_special GangLoot_Prepare
+	def_special GangLoot_Take

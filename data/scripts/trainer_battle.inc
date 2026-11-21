@@ -124,6 +124,7 @@ EventScript_ShowTrainerIntroMsg::
 
 EventScript_DoTrainerBattle::
 	dotrainerbattle
+	call EventScript_GangLoot
 EventScript_EndTrainerBattle::
 	gotobeatenscript
 	releaseall
@@ -178,10 +179,12 @@ EventSnippet_GotoPostBattleScript::
 
 EventSnippet_DoTrainerBattle::
 	dotrainerbattle
+	call EventScript_GangLoot
 	return
 
 EventSnippet_DoRematchTrainerBattle::
 	special BattleSetup_StartRematchBattle
+	call EventScript_GangLoot
 	return
 
 EventSnippet_EndTrainerBattle::
@@ -195,3 +198,53 @@ EventSnippet_NotEnoughMonsForDoubleBattle::
 	waitbuttonpress
 	release
 	end
+
+@ Gangster Outbreak: take one Pokémon from a beaten normal trainer
+EventScript_GangLoot::
+	special GangLoot_Prepare
+	goto_if_eq VAR_RESULT, 0, EventScript_GangLootDone
+	message Text_GangLootChoose
+	waitmessage
+	dynmultistack 0, 0, FALSE, 7, FALSE, 0, DYN_MULTICHOICE_CB_NONE
+	closemessage
+	goto_if_eq VAR_RESULT, MULTI_B_PRESSED, EventScript_GangLootDone
+	goto_if_ge VAR_RESULT, PARTY_SIZE * 2, EventScript_GangLootDone
+	copyvar VAR_0x8004, VAR_RESULT
+	special GangLoot_Take
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, EventScript_GangLootToParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, EventScript_GangLootToPC
+	msgbox Text_GangLootNoRoom, MSGBOX_DEFAULT
+	return
+
+EventScript_GangLootToParty::
+	playfanfare MUS_RG_CAUGHT
+	message Text_GangLootJoined
+	waitmessage
+	waitfanfare
+	waitbuttonpress
+	closemessage
+	return
+
+EventScript_GangLootToPC::
+	playfanfare MUS_RG_CAUGHT
+	message Text_GangLootToPC
+	waitmessage
+	waitfanfare
+	waitbuttonpress
+	closemessage
+EventScript_GangLootDone::
+	return
+
+Text_GangLootChoose:
+	.string "The loser's team is yours for the\n"
+	.string "taking. Which POKéMON do you take?$"
+
+Text_GangLootJoined:
+	.string "{STR_VAR_1} joined your gang!$"
+
+Text_GangLootToPC:
+	.string "{STR_VAR_1} was sent to the PC.$"
+
+Text_GangLootNoRoom:
+	.string "There's no room left for another\n"
+	.string "POKéMON. It got away…$"

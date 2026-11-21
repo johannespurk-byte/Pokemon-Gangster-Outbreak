@@ -3,6 +3,7 @@
 #include "gang_random.h"
 #include "pokemon.h"
 #include "random.h"
+#include "string_util.h"
 #include "constants/battle.h"
 #include "constants/moves.h"
 #include "constants/pokedex.h"
@@ -201,7 +202,13 @@ static bool32 IsRivalClass(u32 trainerClass)
 static void ChangeSpecies(struct Pokemon *mon, enum Species species)
 {
     u32 i, move = MOVE_NONE, pp = 0;
+    u8 nickname[POKEMON_NAME_LENGTH + 1];
+    enum Species original = GetMonData(mon, MON_DATA_SPECIES);
 
+    // trainer Pokémon without a real nickname carry their species name: rename them
+    GetMonData(mon, MON_DATA_NICKNAME, nickname);
+    if (StringCompare(nickname, GetSpeciesName(original)) == 0)
+        SetMonData(mon, MON_DATA_NICKNAME, GetSpeciesName(species));
     SetMonData(mon, MON_DATA_SPECIES, &species);
     for (i = 0; i < MAX_MON_MOVES; i++)
     {

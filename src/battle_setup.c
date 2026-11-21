@@ -2238,6 +2238,7 @@ static void CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
         CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum));
         GangRandom_RandomizeTrainerParty(party, trainerNum);
         ApplyGangDifficultyToParty(party);
+        GangLoot_RememberParty(party);
         return;
     }
 
@@ -2253,6 +2254,7 @@ static void CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     CreateNPCTrainerPartyFromTrainer(party, (const struct Trainer *)(&tempTrainer));
     GangRandom_RandomizeTrainerParty(party, trainerNum);
     ApplyGangDifficultyToParty(party);
+    GangLoot_RememberParty(party);
 }
 
 void CreateTrainerPartyForPlayer(void)
