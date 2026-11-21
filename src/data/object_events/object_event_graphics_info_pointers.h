@@ -490,6 +490,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cyrus;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkullGrunt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagmaGruntOras;
 
+extern struct ObjectEventGraphicsInfo gPlayerCustomGraphicsInfo[];
+
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
     [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
@@ -967,6 +969,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CYRUS] = &gObjectEventGraphicsInfo_Cyrus,
     [OBJ_EVENT_GFX_SKULL_GRUNT] = &gObjectEventGraphicsInfo_SkullGrunt,
     [OBJ_EVENT_GFX_MAGMA_GRUNT_ORAS] = &gObjectEventGraphicsInfo_MagmaGruntOras,
+    [OBJ_EVENT_GFX_PLAYER_CUSTOM_NORMAL]     = &gPlayerCustomGraphicsInfo[0],
+    [OBJ_EVENT_GFX_PLAYER_CUSTOM_BIKE]       = &gPlayerCustomGraphicsInfo[1],
+    [OBJ_EVENT_GFX_PLAYER_CUSTOM_SURF]       = &gPlayerCustomGraphicsInfo[2],
+    [OBJ_EVENT_GFX_PLAYER_CUSTOM_FISH]       = &gPlayerCustomGraphicsInfo[3],
+    [OBJ_EVENT_GFX_PLAYER_CUSTOM_FIELD_MOVE] = &gPlayerCustomGraphicsInfo[4],
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

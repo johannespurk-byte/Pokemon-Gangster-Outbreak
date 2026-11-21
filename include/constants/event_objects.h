@@ -499,6 +499,13 @@ enum
     OBJ_EVENT_GFX_VICTOR_FIELD_MOVE,
     OBJ_EVENT_GFX_GLORIA_FIELD_MOVE,
 
+    // Player built with the character builder (graphics info lives in EWRAM, see player_custom.c)
+    OBJ_EVENT_GFX_PLAYER_CUSTOM_NORMAL,
+    OBJ_EVENT_GFX_PLAYER_CUSTOM_BIKE,
+    OBJ_EVENT_GFX_PLAYER_CUSTOM_SURF,
+    OBJ_EVENT_GFX_PLAYER_CUSTOM_FISH,
+    OBJ_EVENT_GFX_PLAYER_CUSTOM_FIELD_MOVE,
+
     // Villain teams (Gangster Outbreak)
     OBJ_EVENT_GFX_CYRUS,
     OBJ_EVENT_GFX_SKULL_GRUNT,
@@ -717,6 +724,7 @@ enum
 #define OBJ_EVENT_PAL_TAG_SELENE                     0x11FB
 #define OBJ_EVENT_PAL_TAG_VICTOR                     0x11FC
 #define OBJ_EVENT_PAL_TAG_GLORIA                     0x11FD
+#define OBJ_EVENT_PAL_TAG_PLAYER_CUSTOM            0x1210
 // Villain teams (Gangster Outbreak)
 #define OBJ_EVENT_PAL_TAG_CYRUS                       0x1200
 #define OBJ_EVENT_PAL_TAG_SKULL_GRUNT                 0x1201

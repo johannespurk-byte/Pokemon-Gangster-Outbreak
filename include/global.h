@@ -605,7 +605,14 @@ struct SaveBlock2
              //u16 padding1:4;
              //u16 padding2;
     /*0x18*/ struct Pokedex pokedex;
-    /*0x90*/ u8 filler_90[0x8];
+    /*0x90*/ u8 playerLookHead;   // Gangster Outbreak character builder (see player_custom.c)
+    /*0x91*/ u8 playerLookOutfit;
+    /*0x92*/ u8 playerLookHair;
+    /*0x93*/ u8 playerLookSkin;
+    /*0x94*/ u8 playerLookHat;
+    /*0x95*/ u8 playerLookTop;
+    /*0x96*/ u8 playerLookBottom;
+    /*0x97*/ u8 playerLookEnabled;
     /*0x98*/ struct Time localTimeOffset;
     /*0xA0*/ struct Time lastBerryTreeUpdate;
     /*0xA8*/ u32 gcnLinkFlags; // Read by Pokémon Colosseum/XD

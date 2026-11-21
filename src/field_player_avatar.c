@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_custom.h"
 #include "main.h"
 #include "bike.h"
 #include "event_data.h"
@@ -1564,13 +1565,15 @@ void StopPlayerAvatar(void)
 u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
 {
     if (IS_FRLG)
-        return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gender);
+        return sPlayerAvatarGfxIds[state][gender]; // not the custom-built player look
     else
         return sRivalAvatarGfxIds[state][gender];
 }
 
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
 {
+    if (PlayerCustom_IsEnabled())
+        return PlayerCustom_GetGraphicsId(state);
     return sPlayerAvatarGfxIds[state][gender];
 }
 
@@ -1591,6 +1594,8 @@ u16 GetPlayerAvatarGraphicsIdByStateId(u8 state)
 
 enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
 {
+    if (PlayerCustom_IsCustomGraphicsId(gfxId))
+        return PlayerCustom_GetGender();
     switch (gfxId)
     {
     case OBJ_EVENT_GFX_MAY_NORMAL:
@@ -1669,6 +1674,9 @@ static u8 GetPlayerAvatarStateTransitionByGraphicsId(u16 graphicsId, u8 gender)
 {
     u8 i;
 
+    if (PlayerCustom_IsCustomGraphicsId(graphicsId))
+        return PlayerCustom_GetAvatarFlag(graphicsId);
+
     for (i = 0; i < ARRAY_COUNT(sPlayerAvatarGfxToStateFlag[0]); i++)
     {
         if (sPlayerAvatarGfxToStateFlag[gender][i].graphicsId == graphicsId)
@@ -1681,6 +1689,17 @@ u16 GetPlayerAvatarGraphicsIdByCurrentState(void)
 {
     u8 i;
     u8 flags = gPlayerAvatar.flags;
+
+    if (PlayerCustom_IsEnabled())
+    {
+        if (flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+            return OBJ_EVENT_GFX_PLAYER_CUSTOM_BIKE;
+        if (flags & (PLAYER_AVATAR_FLAG_SURFING | PLAYER_AVATAR_FLAG_UNDERWATER))
+            return OBJ_EVENT_GFX_PLAYER_CUSTOM_SURF;
+        if (flags & PLAYER_AVATAR_FLAG_ON_FOOT)
+            return OBJ_EVENT_GFX_PLAYER_CUSTOM_NORMAL;
+        return 0;
+    }
 
     for (i = 0; i < ARRAY_COUNT(sPlayerAvatarGfxToStateFlag[0]); i++)
     {

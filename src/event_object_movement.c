@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_custom.h"
 #include "malloc.h"
 #include "battle_anim.h"
 #include "battle_pyramid.h"
@@ -521,6 +522,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Cyrus,                   OBJ_EVENT_PAL_TAG_CYRUS},
     {gObjectEventPal_SkullGrunt,              OBJ_EVENT_PAL_TAG_SKULL_GRUNT},
     {gObjectEventPal_MagmaGruntOras,          OBJ_EVENT_PAL_TAG_MAGMA_GRUNT_ORAS},
+    {gPlayerCustomPalette,                  OBJ_EVENT_PAL_TAG_PLAYER_CUSTOM},
     {gObjectEventPal_Brendan,               OBJ_EVENT_PAL_TAG_BRENDAN},
     {gObjectEventPal_BrendanReflection,     OBJ_EVENT_PAL_TAG_BRENDAN_REFLECTION},
     {gObjectEventPal_BridgeReflection,      OBJ_EVENT_PAL_TAG_BRIDGE_REFLECTION},
@@ -3226,6 +3228,9 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)
 
     if (graphicsId >= NUM_OBJ_EVENT_GFX)
         graphicsId = OBJ_EVENT_GFX_NINJA_BOY;
+
+    if (PlayerCustom_IsCustomGraphicsId(graphicsId))
+        PlayerCustom_EnsureComposed(); // the builder's graphics info is assembled in EWRAM
 
     return gObjectEventGraphicsInfoPointers[graphicsId];
 }

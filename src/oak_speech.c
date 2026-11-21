@@ -1,4 +1,5 @@
 #include "global.h"
+#include "player_custom.h"
 #include "bg.h"
 #include "data.h"
 #include "decompress.h"
@@ -1290,7 +1291,262 @@ static void Task_OakSpeech_AskPlayerGender(u8 taskId)
     }
 }
 
+//------------------------------------------------------------------------------
+// Gangster Outbreak: character builder (replaces "Are you a boy or a girl?")
+//------------------------------------------------------------------------------
+
+enum
+{
+    BUILDER_ROW_HEAD,
+    BUILDER_ROW_OUTFIT,
+    BUILDER_ROW_HAIR,
+    BUILDER_ROW_SKIN,
+    BUILDER_ROW_HAT,
+    BUILDER_ROW_TOP,
+    BUILDER_ROW_BOTTOM,
+    BUILDER_ROW_DONE,
+    BUILDER_ROW_COUNT,
+};
+
+#define BUILDER_PAL_TAG      0x7A10
+#define BUILDER_ROW_HEIGHT   12
+#define BUILDER_TURN_FRAMES  72
+
+struct CharacterBuilder
+{
+    struct PlayerLook look;
+    u8 cursor;
+    u8 windowId;
+    u8 spriteId;
+    u8 facing;
+    u16 timer;
+    u16 pal[16];
+    struct SpriteFrameImage images[1];
+    struct SpriteTemplate spriteTemplate;
+    u8 gfx[18 * 2 * 4 * TILE_SIZE_4BPP] ALIGNED(4);
+};
+
+static EWRAM_DATA struct CharacterBuilder *sBuilder = NULL;
+
+static const struct WindowTemplate sBuilderWindowTemplate =
+{
+    .bg = 0,
+    .tilemapLeft = 15,
+    .tilemapTop = 1,
+    .width = 14,
+    .height = 12,
+    .paletteNum = 15,
+    .baseBlock = 545, // after the dialogue and standard window frame tiles
+};
+
+static const u8 *const sBuilderRowLabels[BUILDER_ROW_COUNT] =
+{
+    [BUILDER_ROW_HEAD]   = COMPOUND_STRING("HEAD"),
+    [BUILDER_ROW_OUTFIT] = COMPOUND_STRING("OUTFIT"),
+    [BUILDER_ROW_HAIR]   = COMPOUND_STRING("HAIR"),
+    [BUILDER_ROW_SKIN]   = COMPOUND_STRING("SKIN"),
+    [BUILDER_ROW_HAT]    = COMPOUND_STRING("HAT"),
+    [BUILDER_ROW_TOP]    = COMPOUND_STRING("TOP"),
+    [BUILDER_ROW_BOTTOM] = COMPOUND_STRING("BOTTOM"),
+    [BUILDER_ROW_DONE]   = COMPOUND_STRING("DONE"),
+};
+
+static const struct OamData sOam_BuilderPreview =
+{
+    .affineMode = ST_OAM_AFFINE_DOUBLE,
+    .shape = SPRITE_SHAPE(16x32),
+    .size = SPRITE_SIZE(16x32),
+    .priority = 0,
+};
+
+// Frame order of the walking sheets: 0 S, 1 N, 2 W, 3-4 S steps, 5-6 N steps, 7-8 W steps
+static const union AnimCmd sAnim_BuilderSouth[] = {ANIMCMD_FRAME(3, 10), ANIMCMD_FRAME(0, 10), ANIMCMD_FRAME(4, 10), ANIMCMD_FRAME(0, 10), ANIMCMD_JUMP(0)};
+static const union AnimCmd sAnim_BuilderWest[]  = {ANIMCMD_FRAME(7, 10), ANIMCMD_FRAME(2, 10), ANIMCMD_FRAME(8, 10), ANIMCMD_FRAME(2, 10), ANIMCMD_JUMP(0)};
+static const union AnimCmd sAnim_BuilderNorth[] = {ANIMCMD_FRAME(5, 10), ANIMCMD_FRAME(1, 10), ANIMCMD_FRAME(6, 10), ANIMCMD_FRAME(1, 10), ANIMCMD_JUMP(0)};
+static const union AnimCmd *const sAnims_BuilderPreview[] = {sAnim_BuilderSouth, sAnim_BuilderWest, sAnim_BuilderNorth, sAnim_BuilderWest};
+
+
+static u32 Builder_GetValueCount(u32 row)
+{
+    switch (row)
+    {
+    case BUILDER_ROW_HEAD:
+    case BUILDER_ROW_OUTFIT:
+        return PLAYER_PART_COUNT;
+    case BUILDER_ROW_DONE:
+        return 0;
+    default:
+        return PlayerCustom_GetColorPresetCount(row - BUILDER_ROW_HAIR);
+    }
+}
+
+static u8 *Builder_GetValuePtr(u32 row)
+{
+    if (row == BUILDER_ROW_HEAD)
+        return &sBuilder->look.head;
+    if (row == BUILDER_ROW_OUTFIT)
+        return &sBuilder->look.outfit;
+    return &sBuilder->look.colors[row - BUILDER_ROW_HAIR];
+}
+
+static const u8 *Builder_GetValueName(u32 row)
+{
+    u8 value = *Builder_GetValuePtr(row);
+    if (row == BUILDER_ROW_HEAD || row == BUILDER_ROW_OUTFIT)
+        return PlayerCustom_GetPartName(value);
+    return PlayerCustom_GetColorPresetName(row - BUILDER_ROW_HAIR, value);
+}
+
+static void Builder_DrawRows(void)
+{
+    static const u8 sColors[3] = {1, 2, 3};
+    u8 *str = gStringVar4;
+    u32 row;
+
+    FillWindowPixelBuffer(sBuilder->windowId, PIXEL_FILL(1));
+    for (row = 0; row < BUILDER_ROW_COUNT; row++)
+    {
+        u32 y = 1 + row * BUILDER_ROW_HEIGHT;
+        if (row == sBuilder->cursor)
+            AddTextPrinterParameterized3(sBuilder->windowId, FONT_SMALL, 0, y, sColors, TEXT_SKIP_DRAW, COMPOUND_STRING("{RIGHT_ARROW}"));
+        AddTextPrinterParameterized3(sBuilder->windowId, FONT_SMALL, 8, y, sColors, TEXT_SKIP_DRAW, sBuilderRowLabels[row]);
+        if (row != BUILDER_ROW_DONE)
+        {
+            str = StringCopy(gStringVar4, COMPOUND_STRING("{LEFT_ARROW}"));
+            str = StringCopy(str, Builder_GetValueName(row));
+            StringCopy(str, COMPOUND_STRING("{RIGHT_ARROW}"));
+            AddTextPrinterParameterized3(sBuilder->windowId, FONT_SMALL_NARROW, 46, y, sColors, TEXT_SKIP_DRAW, gStringVar4);
+        }
+    }
+    CopyWindowToVram(sBuilder->windowId, COPYWIN_GFX);
+}
+
+static void Builder_UpdatePreview(void)
+{
+    struct Sprite *sprite = &gSprites[sBuilder->spriteId];
+
+    PlayerCustom_BuildPreview(&sBuilder->look, sBuilder->gfx, sBuilder->pal);
+    LoadPalette(sBuilder->pal, OBJ_PLTT_ID(IndexOfSpritePaletteTag(BUILDER_PAL_TAG)), PLTT_SIZE_4BPP);
+    StartSpriteAnim(sprite, sBuilder->facing); // restart so the new frame graphics are copied
+}
+
+static void Builder_SetFacing(u32 facing)
+{
+    struct Sprite *sprite = &gSprites[sBuilder->spriteId];
+
+    sBuilder->facing = facing;
+    StartSpriteAnim(sprite, facing);
+    // OAM matrix: 0x80 = 2x zoom, negative = mirrored (east is the mirrored west animation)
+    SetOamMatrix(sprite->oam.matrixNum, facing == 3 ? -0x80 : 0x80, 0, 0, 0x80);
+}
+
+static void Builder_Start(void)
+{
+    struct SpritePalette palette;
+
+    sBuilder = AllocZeroed(sizeof(*sBuilder));
+    if (PlayerCustom_IsEnabled())
+        PlayerCustom_GetLook(&sBuilder->look);
+    else
+        sBuilder->look.head = sBuilder->look.outfit = PLAYER_PART_RED;
+    PlayerCustom_BuildPreview(&sBuilder->look, sBuilder->gfx, sBuilder->pal);
+
+    sBuilder->windowId = AddWindow(&sBuilderWindowTemplate);
+    PutWindowTilemap(sBuilder->windowId);
+    DrawStdFrameWithCustomTileAndPalette(sBuilder->windowId, TRUE, STD_WINDOW_BASE_TILE_NUM, 14);
+    Builder_DrawRows();
+    CopyWindowToVram(sBuilder->windowId, COPYWIN_FULL);
+
+    palette.data = sBuilder->pal;
+    palette.tag = BUILDER_PAL_TAG;
+    LoadSpritePalette(&palette);
+    sBuilder->images[0].data = sBuilder->gfx;
+    sBuilder->images[0].size = 2 * 4 * TILE_SIZE_4BPP;
+    sBuilder->images[0].relativeFrames = TRUE;
+    sBuilder->spriteTemplate.tileTag = TAG_NONE;
+    sBuilder->spriteTemplate.paletteTag = BUILDER_PAL_TAG;
+    sBuilder->spriteTemplate.oam = &sOam_BuilderPreview;
+    sBuilder->spriteTemplate.anims = sAnims_BuilderPreview;
+    sBuilder->spriteTemplate.images = sBuilder->images;
+    sBuilder->spriteTemplate.affineAnims = gDummySpriteAffineAnimTable;
+    sBuilder->spriteTemplate.callback = SpriteCallbackDummy;
+    sBuilder->spriteId = CreateSprite(&sBuilder->spriteTemplate, 64, 64, 0);
+    Builder_SetFacing(0);
+}
+
+static void Builder_Destroy(void)
+{
+    struct Sprite *sprite = &gSprites[sBuilder->spriteId];
+
+    FreeOamMatrix(sprite->oam.matrixNum);
+    DestroySprite(sprite);
+    FreeSpritePaletteByTag(BUILDER_PAL_TAG);
+    TRY_FREE_AND_SET_NULL(sBuilder);
+}
+
+static void Task_OakSpeech_HandleBuilderInput(u8 taskId)
+{
+    u32 row = sBuilder->cursor;
+    u32 count = Builder_GetValueCount(row);
+    u8 *value;
+
+    if (++sBuilder->timer >= BUILDER_TURN_FRAMES)
+    {
+        sBuilder->timer = 0;
+        Builder_SetFacing((sBuilder->facing + 1) % 4);
+    }
+
+    if (JOY_NEW(DPAD_UP))
+    {
+        sBuilder->cursor = (row == 0) ? BUILDER_ROW_COUNT - 1 : row - 1;
+        PlaySE(SE_SELECT);
+        Builder_DrawRows();
+    }
+    else if (JOY_NEW(DPAD_DOWN))
+    {
+        sBuilder->cursor = (row + 1) % BUILDER_ROW_COUNT;
+        PlaySE(SE_SELECT);
+        Builder_DrawRows();
+    }
+    else if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT) && count != 0)
+    {
+        value = Builder_GetValuePtr(row);
+        if (JOY_NEW(DPAD_RIGHT))
+            *value = (*value + 1) % count;
+        else
+            *value = (*value == 0) ? count - 1 : *value - 1;
+        PlaySE(SE_SELECT);
+        Builder_DrawRows();
+        Builder_UpdatePreview();
+    }
+    else if (JOY_NEW(A_BUTTON))
+    {
+        PlaySE(SE_SELECT);
+        if (row != BUILDER_ROW_DONE)
+        {
+            sBuilder->cursor = BUILDER_ROW_DONE;
+            Builder_DrawRows();
+            return;
+        }
+        PlayerCustom_SetLook(&sBuilder->look); // also sets the player's gender from the chosen head
+        gTasks[taskId].tMenuWindowId = sBuilder->windowId;
+        Builder_Destroy();
+        gTasks[taskId].func = Task_OakSpeech_ClearGenderWindows;
+    }
+}
+
+static void UNUSED Task_OakSpeech_ShowGenderOptions_Original(u8 taskId);
+
 static void Task_OakSpeech_ShowGenderOptions(u8 taskId)
+{
+    if (!IsTextPrinterActiveOnWindow(WIN_INTRO_TEXTBOX))
+    {
+        Builder_Start();
+        gTasks[taskId].func = Task_OakSpeech_HandleBuilderInput;
+    }
+}
+
+static void UNUSED Task_OakSpeech_ShowGenderOptions_Original(u8 taskId)
 {
     if (!IsTextPrinterActiveOnWindow(WIN_INTRO_TEXTBOX))
     {
