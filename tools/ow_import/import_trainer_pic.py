@@ -6,6 +6,7 @@ the figure is scaled down to fit 64x64 if needed and stands on the bottom edge.
 usage: import_trainer_pic.py [--outline] PIC.png OUT.png [x0 y0 x1 y1]
   x0 y0 x1 y1: optional crop box when the file holds several pictures
   --outline:   draw a dark 1-pixel outline around the figure (for scaled-down drawings without one)
+  --max=WxH:   largest figure size (default 64x64; the FRLG trainers are about 54x60)
   --tolerance=N: colours this close to the background also count as background (default 120 with --outline, else 0)
 """
 import os, sys
@@ -17,7 +18,7 @@ from import_sheet import remove_background, TRANSPARENT  # noqa: E402
 SIZE = 64
 
 
-def main(src, dst, box=None, outline=False, tolerance=None):
+def main(src, dst, box=None, outline=False, tolerance=None, max_w=SIZE, max_h=SIZE):
     im = Image.open(src).convert('RGBA')
     if box:
         im = im.crop(box)
@@ -26,8 +27,8 @@ def main(src, dst, box=None, outline=False, tolerance=None):
         tolerance = 120 if outline else 0
     remove_background(im, tolerance)
     im = im.crop(im.getbbox())
-    if im.width > SIZE or im.height > SIZE:
-        f = min(SIZE / im.width, SIZE / im.height)
+    if im.width > max_w or im.height > max_h:
+        f = min(max_w / im.width, max_h / im.height)
         im = im.resize((max(1, round(im.width * f)), max(1, round(im.height * f))), Image.BOX)
     canvas = Image.new('RGBA', (SIZE, SIZE), (0, 0, 0, 0))
     canvas.paste(im, ((SIZE - im.width) // 2, SIZE - im.height), im)
@@ -68,5 +69,6 @@ if __name__ == '__main__':
     args = sys.argv[1:]
     outline = '--outline' in args
     tolerance = next((int(a.split('=')[1]) for a in args if a.startswith('--tolerance=')), None)
+    mw, mh = next((tuple(int(v) for v in a.split('=')[1].split('x')) for a in args if a.startswith('--max=')), (SIZE, SIZE))
     args = [a for a in args if not a.startswith('--')]
-    main(args[0], args[1], tuple(int(v) for v in args[2:6]) if len(args) >= 6 else None, outline, tolerance)
+    main(args[0], args[1], tuple(int(v) for v in args[2:6]) if len(args) >= 6 else None, outline, tolerance, mw, mh)

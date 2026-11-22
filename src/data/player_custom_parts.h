@@ -653,7 +653,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_PIERS,
         .backPic = TRAINER_PIC_VICTOR,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        .frontRoles = {0, 0, 0, 0, 0, 20, 21, 0, 0, 0, 0, 21, 0, 0, 20, 0},
         .backRoles = {0, 0, 13, 12, 12, 8, 0, 13, 4, 5, 0, 0, 4, 17, 18, 16},
     },
     [PLAYER_PART_YELL_M] = {
@@ -666,7 +666,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_YELL_GRUNT_M,
         .backPic = TRAINER_PIC_VICTOR,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20},
+        .frontRoles = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         .backRoles = {0, 0, 13, 12, 12, 8, 0, 13, 4, 5, 0, 0, 4, 17, 18, 16},
     },
     [PLAYER_PART_YELL_F] = {
@@ -692,7 +692,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_GUZMA,
         .backPic = TRAINER_PIC_ELIO,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 0, 0, 0, 0, 5, 4, 0, 4, 5, 0, 8, 0, 0, 0},
+        .frontRoles = {0, 0, 0, 0, 0, 4, 5, 0, 0, 5, 4, 0, 0, 0, 0, 0},
         .backRoles = {0, 0, 0, 12, 13, 8, 0, 0, 4, 5, 0, 0, 4, 17, 18, 16},
     },
     [PLAYER_PART_SKULL] = {
@@ -705,7 +705,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_SKULL_GRUNT_M,
         .backPic = TRAINER_PIC_ELIO,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 8, 0, 0, 0, 0},
+        .frontRoles = {0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 9, 8, 0, 0, 0},
         .backRoles = {0, 0, 0, 12, 13, 8, 0, 0, 4, 5, 0, 0, 4, 17, 18, 16},
     },
     [PLAYER_PART_LYSANDRE] = {
@@ -718,7 +718,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_LYSANDRE,
         .backPic = TRAINER_PIC_CALEM,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 0, 9, 8, 0, 18, 5, 17, 4, 4, 4, 5, 0, 16, 0},
+        .frontRoles = {0, 0, 0, 9, 0, 0, 0, 17, 0, 5, 4, 4, 16, 18, 8, 5},
         .backRoles = {0, 0, 13, 12, 12, 8, 0, 0, 4, 5, 0, 0, 4, 17, 18, 16},
     },
     [PLAYER_PART_ARCHER] = {
@@ -731,7 +731,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_ARCHER,
         .backPic = TRAINER_PIC_LUCAS,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 0, 0, 0, 0, 0, 8, 0, 16, 0, 0, 0, 0, 0, 0},
+        .frontRoles = {0, 0, 0, 0, 0, 0, 0, 8, 16, 9, 0, 0, 0, 0, 0, 0},
         .backRoles = {0, 0, 4, 0, 0, 16, 5, 12, 17, 13, 18, 0, 8, 0, 0, 0},
     },
     [PLAYER_PART_GALACTIC_B] = {
@@ -744,7 +744,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_GALACTIC_GRUNT_M,
         .backPic = TRAINER_PIC_LUCAS,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 0, 0, 0, 10, 0, 0, 8, 9, 16, 0, 0, 0, 0, 0},
+        .frontRoles = {0, 20, 0, 0, 0, 0, 0, 8, 10, 0, 0, 9, 0, 0, 0, 0},
         .backRoles = {0, 0, 4, 0, 0, 16, 5, 12, 17, 13, 18, 0, 8, 0, 0, 0},
     },
 };
