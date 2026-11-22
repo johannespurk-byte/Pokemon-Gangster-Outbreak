@@ -464,6 +464,8 @@ class Gym:
                 x, y, move, sight = todo[name].pop(0)
                 o['x'], o['y'], o['movement_type'] = x, y, move
                 o['trainer_sight_or_berry_tree_id'] = str(sight)
+        drop = set(spec.get('drop_bg', ()))
+        data['bg_events'] = [b for b in data['bg_events'] if b.get('script', '').split('EventScript_')[-1] not in drop]
         # teleport pads: the door warps stay first (the city refers to them by number), then one warp per pad
         pads = [(x, y, ch) for y, row in enumerate(rows) for x, ch in enumerate(row) if ch in puzzle_art.PAD_IDS]
         if pads or spec.get('replace_pad_warps'):

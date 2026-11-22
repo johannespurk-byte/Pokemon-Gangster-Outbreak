@@ -235,10 +235,6 @@ CinnabarIsland_Gym_EventScript_Quiz1Correct::
 	end
 
 CinnabarIsland_Gym_EventScript_Quiz1Complete::
-	playse SE_UNLOCK
-	waitse
-	call CinnabarIsland_Gym_EventScript_OpenDoor1
-	special DrawWholeMapView
 	setflag FLAG_CINNABAR_GYM_QUIZ_1
 	return
 
@@ -311,10 +307,6 @@ CinnabarIsland_Gym_EventScript_Quiz2Correct::
 	end
 
 CinnabarIsland_Gym_EventScript_Quiz2Complete::
-	playse SE_UNLOCK
-	waitse
-	call CinnabarIsland_Gym_EventScript_OpenDoor2
-	special DrawWholeMapView
 	setflag FLAG_CINNABAR_GYM_QUIZ_2
 	return
 
@@ -392,10 +384,6 @@ CinnabarIsland_Gym_EventScript_Quiz3Correct::
 	end
 
 CinnabarIsland_Gym_EventScript_Quiz3Complete::
-	playse SE_UNLOCK
-	waitse
-	call CinnabarIsland_Gym_EventScript_OpenDoor3
-	special DrawWholeMapView
 	setflag FLAG_CINNABAR_GYM_QUIZ_3
 	return
 
@@ -464,10 +452,6 @@ CinnabarIsland_Gym_EventScript_Quiz4Correct::
 	end
 
 CinnabarIsland_Gym_EventScript_Quiz4Complete::
-	playse SE_UNLOCK
-	waitse
-	call CinnabarIsland_Gym_EventScript_OpenDoor4
-	special DrawWholeMapView
 	setflag FLAG_CINNABAR_GYM_QUIZ_4
 	return
 
@@ -536,10 +520,6 @@ CinnabarIsland_Gym_EventScript_Quiz5Correct::
 	end
 
 CinnabarIsland_Gym_EventScript_Quiz5Complete::
-	playse SE_UNLOCK
-	waitse
-	call CinnabarIsland_Gym_EventScript_OpenDoor5
-	special DrawWholeMapView
 	setflag FLAG_CINNABAR_GYM_QUIZ_5
 	return
 
@@ -608,10 +588,6 @@ CinnabarIsland_Gym_EventScript_Quiz6Correct::
 	end
 
 CinnabarIsland_Gym_EventScript_Quiz6Complete::
-	playse SE_UNLOCK
-	waitse
-	call CinnabarIsland_Gym_EventScript_OpenDoor6
-	special DrawWholeMapView
 	setflag FLAG_CINNABAR_GYM_QUIZ_6
 	return
 
@@ -654,59 +630,27 @@ CinnabarIsland_Gym_Movement_ZacApproachRight::
 	step_end
 
 CinnabarIsland_Gym_EventScript_OpenDoor1::
-	setmetatile 26,  8, METATILE_CinnabarGym_Floor_WallLeftCorner, 0
-	setmetatile 27,  8, METATILE_CinnabarGym_Floor_WallRightCorner, 0
-	setmetatile 26,  9, METATILE_CinnabarGym_Floor_WallLeftEdge, 0
-	setmetatile 27,  9, METATILE_CinnabarGym_Floor_WallRightEdge, 0
-	setmetatile 26, 10, METATILE_CinnabarGym_Floor_ShadeFull, 0
-	setmetatile 27, 10, METATILE_CinnabarGym_Floor, 0
-	setmetatile 28, 10, METATILE_CinnabarGym_Floor_ShadeDiagonal, 0
+	@ Gangster Outbreak: the quiz doors are gone, the rooms are linked by teleport pads
 	return
 
 CinnabarIsland_Gym_EventScript_OpenDoor2::
-	setmetatile 17,  8, METATILE_CinnabarGym_Floor_WallLeftCorner, 0
-	setmetatile 18,  8, METATILE_CinnabarGym_Floor_WallRightCorner, 0
-	setmetatile 17,  9, METATILE_CinnabarGym_Floor_WallLeftEdge, 0
-	setmetatile 18,  9, METATILE_CinnabarGym_Floor_WallRightEdge, 0
-	setmetatile 17, 10, METATILE_CinnabarGym_Floor_ShadeFull, 0
-	setmetatile 18, 10, METATILE_CinnabarGym_Floor, 0
-	setmetatile 19, 10, METATILE_CinnabarGym_Floor_ShadeDiagonal, 0
+	@ Gangster Outbreak: the quiz doors are gone, the rooms are linked by teleport pads
 	return
 
 CinnabarIsland_Gym_EventScript_OpenDoor3::
-	setmetatile 17, 15, METATILE_CinnabarGym_Floor_WallLeftCorner, 0
-	setmetatile 18, 15, METATILE_CinnabarGym_Floor_WallRightCorner, 0
-	setmetatile 17, 16, METATILE_CinnabarGym_Floor_WallLeftEdge, 0
-	setmetatile 18, 16, METATILE_CinnabarGym_Floor_WallRightEdge, 0
-	setmetatile 17, 17, METATILE_CinnabarGym_Floor_ShadeFull, 0
-	setmetatile 18, 17, METATILE_CinnabarGym_Floor, 0
-	setmetatile 19, 17, METATILE_CinnabarGym_Floor_ShadeDiagonal, 0
+	@ Gangster Outbreak: the quiz doors are gone, the rooms are linked by teleport pads
 	return
 
 CinnabarIsland_Gym_EventScript_OpenDoor4::
-	setmetatile 11, 21, METATILE_CinnabarGym_Wall_RetractedBarrier, 1
-	setmetatile 11, 22, METATILE_CinnabarGym_Floor_ShadeFull, 0
-	setmetatile 11, 23, METATILE_CinnabarGym_Floor, 0
+	@ Gangster Outbreak: the quiz doors are gone, the rooms are linked by teleport pads
 	return
 
 CinnabarIsland_Gym_EventScript_OpenDoor5::
-	setmetatile  5, 16, METATILE_CinnabarGym_Floor_WallLeftCorner, 0
-	setmetatile  6, 16, METATILE_CinnabarGym_Floor_WallRightCorner, 0
-	setmetatile  5, 17, METATILE_CinnabarGym_Floor_WallLeftEdge, 0
-	setmetatile  6, 17, METATILE_CinnabarGym_Floor_WallRightEdge, 0
-	setmetatile  5, 18, METATILE_CinnabarGym_Floor_ShadeFull, 0
-	setmetatile  6, 18, METATILE_CinnabarGym_Floor, 0
-	setmetatile  7, 18, METATILE_CinnabarGym_Floor_ShadeDiagonal, 0
+	@ Gangster Outbreak: the quiz doors are gone, the rooms are linked by teleport pads
 	return
 
 CinnabarIsland_Gym_EventScript_OpenDoor6::
-	setmetatile  5,  8, METATILE_CinnabarGym_Floor_WallLeftCorner, 0
-	setmetatile  6,  8, METATILE_CinnabarGym_Floor_WallRightCorner, 0
-	setmetatile  5,  9, METATILE_CinnabarGym_Floor_WallLeftEdge, 0
-	setmetatile  6,  9, METATILE_CinnabarGym_Floor_WallRightEdge, 0
-	setmetatile  5, 10, METATILE_CinnabarGym_Floor_ShadeFull, 0
-	setmetatile  6, 10, METATILE_CinnabarGym_Floor, 0
-	setmetatile  7, 10, METATILE_CinnabarGym_Floor_ShadeDiagonal, 0
+	@ Gangster Outbreak: the quiz doors are gone, the rooms are linked by teleport pads
 	return
 
 CinnabarIsland_Gym_Text_BlaineIntro::

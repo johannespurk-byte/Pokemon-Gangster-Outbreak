@@ -325,4 +325,43 @@ GYM_PUZZLES = {
         door=(14, 23), leader_front=(14, 12),
         objects={'Johan': (26, 2, 'MOVEMENT_TYPE_FACE_DOWN', 3)},
         barrier='laser'),
+    # Team Galactic's warp lab: every passage between the nine rooms is blocked by machines, the rooms are
+    # linked only by teleport pads. One chain leads to Cyrus (start -> right -> centre -> top middle ->
+    # middle left -> Cyrus), the others loop back or end in the split-off half of the middle-left room.
+    # The quiz is gone (its signs are removed, the door scripts no longer change the map).
+    'CINNABAR_ISLAND': dict(
+        rows=[
+            "KKKKK#KKKKKKKKKKKKKKKKKKKKKKKK",
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+            "KKK.....KKKKK..KK....#.......K",
+            "K.........KKK......a.#.....3.K",
+            "K......##.KKK........#...#...K",
+            "K.........KKK.9......K...#...K",
+            "K.......b.KKK........K..5....K",
+            "K.........KKK........K.......K",
+            "KKKKK##KKKKKKKKKK##KKKKKKK##KK",
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+            "KKK..#....KKKKK......KKK.....K",
+            "K....#.b..KKK......9.K..c....K",
+            "K....#....KKK..###...K.#...2.K",
+            "K.6..#....KKK.8......K...8...K",
+            "K....#..a.KKK........KKKKK###K",
+            "K....#....KKKKKKK##KKKKKKK###K",
+            "KKKKK##KKKKKKKKKKKKKKK.......K",
+            "KKKKKKKKKKKKKKK......K.1.....K",
+            "KKK.......KKK........K......2K",
+            "K.6.......KKK4...#...K.......K",
+            "K.........KKK....#...K.K...K.K",
+            "K..##....4KKK...1....K.......K",
+            "K..........#........5K3.....cK",
+            "K..........#.........K.......K",
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+        ],
+        door=(25, 22), leader_front=(5, 5),
+        drop_bg=['Quz1Left', 'Quz1Right'] + ['Quiz%d%s' % (n, side) for n in range(2, 7) for side in ('Left', 'Right')],
+        objects={'Quinn': (26, 10, 'MOVEMENT_TYPE_FACE_DOWN', 2), 'Erik': (27, 6, 'MOVEMENT_TYPE_FACE_LEFT', 3),
+                 'Avery': (16, 6, 'MOVEMENT_TYPE_FACE_UP', 3), 'Ramon': (18, 13, 'MOVEMENT_TYPE_FACE_UP', 2),
+                 'Derek': (19, 18, 'MOVEMENT_TYPE_FACE_DOWN', 3), 'Dusty': (6, 20, 'MOVEMENT_TYPE_FACE_LEFT', 3),
+                 'Zac': (9, 12, 'MOVEMENT_TYPE_FACE_LEFT', 1)},
+        barrier='console'),
 }
