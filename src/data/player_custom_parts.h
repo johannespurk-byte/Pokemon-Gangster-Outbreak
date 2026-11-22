@@ -650,10 +650,10 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .neck = {15, 16, 15, 14, 14, 15, 15, 14, 14, 15, 16, 15, 14, 14, 15, 15, 14, 14},
         .stateHead = PLAYER_STATE_HEAD_VICTOR,
         .female = FALSE,
-        .frontPic = TRAINER_PIC_VICTOR,
+        .frontPic = TRAINER_PIC_PIERS,
         .backPic = TRAINER_PIC_VICTOR,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 0, 0, 21, 9, 20, 18, 0, 0, 17, 8, 5, 16, 16, 4},
+        .frontRoles = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
         .backRoles = {0, 0, 13, 12, 12, 8, 0, 13, 4, 5, 0, 0, 4, 17, 18, 16},
     },
     [PLAYER_PART_YELL_M] = {

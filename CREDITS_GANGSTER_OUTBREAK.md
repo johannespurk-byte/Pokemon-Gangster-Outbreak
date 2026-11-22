@@ -13,7 +13,7 @@ Basis: RHH's pokeemerald-expansion 1.17.2 (https://github.com/rh-hideout/pokeeme
 | Zyrus (Kampfbild + Overworld) | `cyrus.png` | RHcks |
 | Team-Skull-Rüpel (Overworld) | `skull_grunt.png` | *bitte nachtragen* (evtl. mid117) |
 | Team-Magma-Rüpel ORAS (Overworld) | `magma_grunt_oras.png` | *bitte nachtragen* |
-| Nezz/Piers (Overworld) | `piers.png` | vom User geliefert, Künstler *bitte nachtragen* |
+| Nezz/Piers (Overworld + Kampfbild, aus Illustration verkleinert) | `piers.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Team-Yell-Rüpel (Overworld) | `yell_grunt.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Team-Yell-Rüpelin (Overworld) | `yell_grunt_f.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Bromley/Guzma (Overworld + Kampfbild) | `guzma.png` | vom User geliefert, Künstler *bitte nachtragen* |

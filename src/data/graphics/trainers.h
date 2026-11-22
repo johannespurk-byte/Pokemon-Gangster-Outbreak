@@ -39,6 +39,8 @@ const u32 gTrainerFrontPic_Tabitha[] = INCGFX_U32("graphics/trainers/front_pics/
 const u16 gTrainerPalette_Tabitha[] = INCGFX_U16("graphics/trainers/front_pics/tabitha.png", ".gbapal");
 const u32 gTrainerFrontPic_FlareAdminM[] = INCGFX_U32("graphics/trainers/front_pics/flare_admin_m.png", ".4bpp.smol");
 const u16 gTrainerPalette_FlareAdminM[] = INCGFX_U16("graphics/trainers/front_pics/flare_admin_m.png", ".gbapal");
+const u32 gTrainerFrontPic_Piers[] = INCGFX_U32("graphics/trainers/front_pics/piers.png", ".4bpp.smol");
+const u16 gTrainerPalette_Piers[] = INCGFX_U16("graphics/trainers/front_pics/piers.png", ".gbapal");
 const u32 gTrainerFrontPic_ShadowTriad[] = INCGFX_U32("graphics/trainers/front_pics/shadow_triad.png", ".4bpp.smol");
 const u16 gTrainerPalette_ShadowTriad[] = INCGFX_U16("graphics/trainers/front_pics/shadow_triad.png", ".gbapal");
 
@@ -1399,5 +1401,9 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_GUZMA] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Guzma, gTrainerPalette_Guzma),
+    },
+    [TRAINER_PIC_PIERS] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Piers, gTrainerPalette_Piers),
     },
 };

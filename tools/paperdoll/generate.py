@@ -86,7 +86,7 @@ PICS_FOR = {
     "aqua_f": ("AQUA_GRUNT_F", "AquaGruntF", "HILDA", "Hilda"),
     "archie": ("AQUA_LEADER_ARCHIE", "AquaLeaderArchie", "LUCAS", "Lucas"),
     # no own battle pic yet: the hero of the same generation stands in (recoloured like the player)
-    "piers": ("VICTOR", "Victor", "VICTOR", "Victor"),
+    "piers": ("PIERS", "Piers", "VICTOR", "Victor"),
     "yell_m": ("VICTOR", "Victor", "VICTOR", "Victor"),
     "yell_f": ("GLORIA", "Gloria", "GLORIA", "Gloria"),
     "guzma": ("GUZMA", "Guzma", "ELIO", "Elio"),
