@@ -92,7 +92,7 @@ PICS_FOR = {
     "guzma": ("GUZMA", "Guzma", "ELIO", "Elio"),
     "skull": ("SKULL_GRUNT_M", "SkullGruntM", "ELIO", "Elio"),
     "lysandre": ("LYSANDRE", "Lysandre", "CALEM", "Calem"),
-    "archer": ("ROCKET_GRUNT_M_FRLG", "RocketGruntMFrlg", "LUCAS", "Lucas"),  # no own battle pic yet
+    "archer": ("ARCHER", "Archer", "LUCAS", "Lucas"),
     "galactic_b": ("GALACTIC_GRUNT_M", "GalacticGruntM", "LUCAS", "Lucas"),
 }
 # pic palette roles: 0 keep, 1 skin, 2 hair, 3 hat, 4 top, 5 bottom (stored as role << 2 | shade)

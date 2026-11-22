@@ -728,10 +728,10 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .neck = {21, 21, 21, 22, 22, 22, 22, 22, 22, 21, 21, 21, 22, 22, 22, 22, 22, 22},
         .stateHead = PLAYER_STATE_HEAD_LUCAS,
         .female = FALSE,
-        .frontPic = TRAINER_PIC_ROCKET_GRUNT_M_FRLG,
+        .frontPic = TRAINER_PIC_ARCHER,
         .backPic = TRAINER_PIC_LUCAS,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 4, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 17, 16, 0, 0},
+        .frontRoles = {0, 0, 0, 0, 0, 0, 0, 8, 0, 16, 0, 0, 0, 0, 0, 0},
         .backRoles = {0, 0, 4, 0, 0, 16, 5, 12, 17, 13, 18, 0, 8, 0, 0, 0},
     },
     [PLAYER_PART_GALACTIC_B] = {

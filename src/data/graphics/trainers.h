@@ -53,6 +53,8 @@ const u32 gTrainerFrontPic_GalacticGruntM[] = INCGFX_U32("graphics/trainers/fron
 const u16 gTrainerPalette_GalacticGruntM[] = INCGFX_U16("graphics/trainers/front_pics/galactic_grunt_m.png", ".gbapal");
 const u32 gTrainerFrontPic_GalacticGruntF[] = INCGFX_U32("graphics/trainers/front_pics/galactic_grunt_f.png", ".4bpp.smol");
 const u16 gTrainerPalette_GalacticGruntF[] = INCGFX_U16("graphics/trainers/front_pics/galactic_grunt_f.png", ".gbapal");
+const u32 gTrainerFrontPic_Archer[] = INCGFX_U32("graphics/trainers/front_pics/archer.png", ".4bpp.smol");
+const u16 gTrainerPalette_Archer[] = INCGFX_U16("graphics/trainers/front_pics/archer.png", ".gbapal");
 const u32 gTrainerFrontPic_ShadowTriad[] = INCGFX_U32("graphics/trainers/front_pics/shadow_triad.png", ".4bpp.smol");
 const u16 gTrainerPalette_ShadowTriad[] = INCGFX_U16("graphics/trainers/front_pics/shadow_triad.png", ".gbapal");
 
@@ -1441,5 +1443,9 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_GALACTIC_GRUNT_F] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_GalacticGruntF, gTrainerPalette_GalacticGruntF),
+    },
+    [TRAINER_PIC_ARCHER] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Archer, gTrainerPalette_Archer),
     },
 };
