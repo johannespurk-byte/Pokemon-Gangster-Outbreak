@@ -53,7 +53,18 @@ TEMPLATES = [
     ("aqua_m", "AQUA♂", "people/team_aqua/aqua_member_m.png", False, "lucas"),
     ("aqua_f", "AQUA♀", "people/team_aqua/aqua_member_f.png", True, "lucas"),
     ("archie", "ARCHIE", "people/team_aqua/archie.png", False, "lucas"),
+    # villain teams of the gyms (sheets supplied by the user; 32-wide sheets are cut to the middle 16 columns)
+    ("piers", "PIERS", "people/piers.png", False, "victor"),
+    ("yell_m", "YELL♂", "people/yell_grunt.png", False, "victor"),
+    ("yell_f", "YELL♀", "people/yell_grunt_f.png", True, "gloria"),
+    ("guzma", "GUZMA", "people/guzma.png", False, "elio"),
+    ("skull", "SKULL", "people/skull_grunt.png", False, "elio"),
+    ("lysandre", "LYSANDRE", "people/lysandre.png", False, "calem"),
+    ("galactic", "GALACTIC", "people/galactic_grunt.png", False, "lucas"),
+    ("galactic_b", "GALACTIC 2", "people/galactic_grunt_2.png", False, "lucas"),
 ]
+# sheets with nine 32x32 frames (the other sheets have 16x32 frames)
+WIDE_SHEETS = {"piers", "yell_m", "guzma", "skull", "lysandre", "galactic_b"}
 # trainer pics: (front pic id, front palette symbol, back pic id, back palette symbol); villains borrow a hero back pic
 PICS_FOR = {
     "red": ("RED", "Red", "RED", "Red"), "leaf": ("LEAF", "Leaf", "LEAF", "Leaf"),
@@ -74,6 +85,15 @@ PICS_FOR = {
     "aqua_m": ("AQUA_GRUNT_M", "AquaGruntM", "HILBERT", "Hilbert"),
     "aqua_f": ("AQUA_GRUNT_F", "AquaGruntF", "HILDA", "Hilda"),
     "archie": ("AQUA_LEADER_ARCHIE", "AquaLeaderArchie", "LUCAS", "Lucas"),
+    # no own battle pic yet: the hero of the same generation stands in (recoloured like the player)
+    "piers": ("VICTOR", "Victor", "VICTOR", "Victor"),
+    "yell_m": ("VICTOR", "Victor", "VICTOR", "Victor"),
+    "yell_f": ("GLORIA", "Gloria", "GLORIA", "Gloria"),
+    "guzma": ("GUZMA", "Guzma", "ELIO", "Elio"),
+    "skull": ("ELIO", "Elio", "ELIO", "Elio"),
+    "lysandre": ("LYSANDRE", "Lysandre", "CALEM", "Calem"),
+    "galactic": ("LUCAS", "Lucas", "LUCAS", "Lucas"),
+    "galactic_b": ("LUCAS", "Lucas", "LUCAS", "Lucas"),
 }
 # pic palette roles: 0 keep, 1 skin, 2 hair, 3 hat, 4 top, 5 bottom (stored as role << 2 | shade)
 PIC_ROLES = {"skin": 1, "hair": 2, "hat": 3, "top": 4, "bottom": 5}
@@ -107,9 +127,48 @@ def head_top(frame):
     return 12
 
 
+def auto_spec(name, pal, frames):
+    """colour roles for sheets without a hand-made SPEC entry: dark edge colours are the outline, skin tones by
+    colour, near-white is white, colours used mostly on the legs are the bottom; the rest is hair (head) or top"""
+    edge, total, low, high = {}, {}, {}, {}
+    for f in frames:
+        p = f.load()
+        bottom = max(y for y in range(32) for x in range(16) if p[x, y])
+        neck = head_top(f) + 11
+        legs = bottom - max(3, (bottom - head_top(f)) // 4)  # lowest quarter of the figure
+        for y in range(32):
+            for x in range(16):
+                v = p[x, y]
+                if not v:
+                    continue
+                total[v] = total.get(v, 0) + 1
+                if any(not (0 <= x + dx < 16 and 0 <= y + dy < 32) or not p[x + dx, y + dy]
+                       for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))):
+                    edge[v] = edge.get(v, 0) + 1
+                if y > legs:
+                    low[v] = low.get(v, 0) + 1
+                if y < neck:
+                    high[v] = high.get(v, 0) + 1
+    sp = dict(outline=[], white=[], skin=[], hat=[], bottom=[], hair=[])
+    for v, n in total.items():
+        c = pal[v]
+        if lum(c) < 60 and edge.get(v, 0) >= 0.45 * n:
+            sp["outline"].append(v)
+        elif is_skin(c):
+            sp["skin"].append(v)
+        elif min(c) > 225:
+            sp["white"].append(v)
+        elif low.get(v, 0) >= 0.6 * n:
+            sp["bottom"].append(v)
+        elif high.get(v, 0) >= 0.6 * n:
+            sp["hair"].append(v)  # hair stays hair even where long hair hangs below the neck line
+    print("auto colour roles", name, sp)
+    return sp
+
+
 def pixel_role(name, idx, y, neck):
     sp = SPEC[name]
-    for role in ("outline", "white", "skin", "accent"):
+    for role in ("outline", "white", "skin", "accent", "hair"):
         if idx in sp.get(role, ()):
             return role
     if y < neck:
@@ -121,7 +180,12 @@ def standardise(name):
     """walking sheet -> (frames in standard slots, standard palette, slot of each original index, neck rows)"""
     im = Image.open(PICS + dict((t[0], t[2]) for t in TEMPLATES)[name])
     pal = palette_of(name, im)
-    frames = [im.crop((i * 16, 0, (i + 1) * 16, 32)) for i in range(im.width // 16)]
+    if name in WIDE_SHEETS:  # 32x32 frames: keep the middle 16 columns
+        frames = [im.crop((i * 32 + 8, 0, i * 32 + 24, 32)) for i in range(9)]
+    else:
+        frames = [im.crop((i * 16, 0, (i + 1) * 16, 32)) for i in range(im.width // 16)]
+    if name not in SPEC:
+        SPEC[name] = auto_spec(name, pal, frames)
     while len(frames) < NFRAMES:  # 9-frame sheets: running reuses the walking frames
         frames.append(frames[len(frames) - 9])
     usage, roles, necks = {}, [], []
