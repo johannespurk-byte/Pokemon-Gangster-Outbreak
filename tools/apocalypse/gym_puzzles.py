@@ -144,6 +144,16 @@ class Puzzle:
                     q.append(n)
         return seen <= ok
 
+    def loops(self, start):
+        """moves from a reachable resting spot that end in an endless spin (the player would be stuck)"""
+        bad = []
+        for pos in self.reachable(start):
+            for d in 'NSWE':
+                t = (pos[0] + DIRS[d][0], pos[1] + DIRS[d][1])
+                if self.free(*t) and self.ch(*t) not in LEDGE and self.step(pos, d) is None:
+                    bad.append((pos, d))
+        return bad
+
     def path(self, start, goal):
         seen = self.reachable(start)
         if goal not in seen:
@@ -420,9 +430,9 @@ GYM_PUZZLES = {
             "<.....#>v#..^....<#.",
             "....o#.#..#o.#...##.",
             ".##....##..##o#.#.#.",
-            "..o#<<#..#>o#...#v..",
+            "..o#<<#..#>o#...#o..",
             "###...v.....>^#v#...",
-            "#v...>...<.#.....^<.",
+            "#v...>...o.#.....^<.",
             "o...##....<##v......",
             "..v#v.#..##.#<.v.##<",
             "v#o.##v.....#o.###v<",

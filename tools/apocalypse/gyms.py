@@ -512,6 +512,8 @@ class Gym:
         for start in spec.get('extra_starts', ()):
             assert puzzle.path(start, spec['door']), '%s: no way from %s to the door' % (self.key, start)
         assert puzzle.no_traps(spec['door'], spec['door']), '%s: a spot without a way back' % self.key
+        loops = puzzle.loops(spec['door'])
+        assert not loops, '%s: arrows send the player round in circles: %s' % (self.key, loops)
         return puzzle.check(spec['door'], spec['leader_front'], self.key)
 
     def decorate(self):
