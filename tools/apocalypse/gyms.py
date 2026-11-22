@@ -447,6 +447,12 @@ class Gym:
             return cache[ch]
 
         orig = list(self.blocks)
+        # kept cells must not hide puzzle behaviours the solver does not know about (old arrows, ice ...)
+        special = {beh[n] for n in beh if n.startswith(('MB_SPIN', 'MB_ICE', 'MB_WALK_', 'MB_SLIDE_', 'MB_JUMP_',
+                                                          'MB_STOP_SPINNING', 'MB_AQUA_HIDEOUT_WARP'))}
+        hidden = [(x, y) for y, row in enumerate(rows) for x, ch in enumerate(row)
+                  if ch == 'K' and not (orig[y * self.w + x] >> 10) & 3 and self.behavior(orig[y * self.w + x] & 0x3FF) in special]
+        assert not hidden, '%s: kept cells with puzzle behaviour: %s' % (self.key, hidden)
         for y, row in enumerate(rows):
             for x, ch in enumerate(row):
                 if ch == 'K':
@@ -492,6 +498,9 @@ class Gym:
             if sight and move in facing:
                 trainers.append((o['x'], o['y'], facing[move], sight))
         puzzle.check_trainers(trainers, spec['door'], spec['leader_front'], self.key)
+        for start in spec.get('extra_starts', ()):
+            assert puzzle.path(start, spec['door']), '%s: no way from %s to the door' % (self.key, start)
+        assert puzzle.no_traps(spec['door'], spec['door']), '%s: a spot without a way back' % self.key
         return puzzle.check(spec['door'], spec['leader_front'], self.key)
 
     def decorate(self):

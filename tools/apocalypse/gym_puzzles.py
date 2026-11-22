@@ -205,8 +205,8 @@ GYM_PUZZLES = {
         door=(6, 13), leader_front=(6, 6),
         objects={'Liam': (5, 8, 'MOVEMENT_TYPE_FACE_DOWN', 3), 'Marla': (10, 8, 'MOVEMENT_TYPE_FACE_LEFT', 3)},
         barrier='amp'),
-    # Team Skull's skate park: rows of ramps you can only jump down; one ramp per row leads up, the others
-    # end in pockets. Going back down is easy (every ramp can be jumped down).
+    # Team Skull's skate park: rows of ramps you can only jump down; one ramp per row leads up (the one in
+    # the right part of the lower row leads into a dead end). Going back down is easy (ramps can be jumped down).
     'CERULEAN_CITY': dict(
         rows=[
             "KKKKKKKKKKKKKKKKK",
@@ -220,7 +220,7 @@ GYM_PUZZLES = {
             "K]]]]]]][]]]]]]]K",
             "K.#...........#.K",
             "K.#.###.#.###.#.K",
-            "K[][]]]]]]]]]]][K",
+            "K]][]]]]]]]]]]]]K",
             "K......#.#......K",
             "K.####.#.#.####.K",
             "K]]]]][]]]]]]]][K",
@@ -231,7 +231,7 @@ GYM_PUZZLES = {
             "KKKKKKKKKKKKKKKKK",
         ],
         door=(8, 18), leader_front=(8, 7),
-        objects={'Diana': (9, 10, 'MOVEMENT_TYPE_FACE_UP', 2), 'Luis': (15, 12, 'MOVEMENT_TYPE_FACE_LEFT', 3)},
+        objects={'Diana': (9, 10, 'MOVEMENT_TYPE_FACE_UP', 2), 'Luis': (2, 12, 'MOVEMENT_TYPE_FACE_RIGHT', 1)},
         barrier='trash'),
     # Neo Rocket's warehouse: the switches for the laser gate are hidden in two neighbouring Rocket crates
     # (same logic as the old trash cans, see SetVermilionTrashCans); barricades make a zigzag through the
@@ -243,7 +243,7 @@ GYM_PUZZLES = {
             "KKKKKKKKKKK",
             "KKKKKKKKKKK",
             "K.o>.o.>o.K",
-            "K#^##v##^#K",
+            "K#^##v##^vK",
             "K.........K",
             "KKKKKKKKKKK",
             "KKKKKKKKKKK",
@@ -405,4 +405,44 @@ GYM_PUZZLES = {
                  'Derek': (19, 18, 'MOVEMENT_TYPE_FACE_DOWN', 3), 'Dusty': (6, 20, 'MOVEMENT_TYPE_FACE_LEFT', 3),
                  'Zac': (9, 12, 'MOVEMENT_TYPE_FACE_LEFT', 1)},
         barrier='console'),
+    # Giovanni's Rocket hideout: a big spinner maze of Rocket crates (found by a search that rewards long
+    # solutions with several required rides; no spot without a way back). The game starts in here, so the
+    # new player must also get from the start (2,4) to the door. Grunts guard the solution path.
+    'VIRIDIAN_CITY': dict(
+        rows=[
+            "KKKKKKKKKKKKKKKKKKKK",
+            "KKKKKKKKKKKKKKKKKKKK",
+            "KKKKK...o#^.^....#.#",
+            "KKKKK.v..#.#...#.#.>",
+            "KKKKK.......#...o...",
+            "KKKKK.o..#...##.....",
+            "......v.^.#>#.#.#^..",
+            "<.....#>v#..^....<#.",
+            "....o#.#..#o.#...##.",
+            ".##....##..##o#.#.#.",
+            "..o#<<#..#>o#...#v..",
+            "###...v.....>^#v#...",
+            "#v...>...<.#.....^<.",
+            "o...##....<##v......",
+            "..v#v.#..##.#<.v.##<",
+            "v#o.##v.....#o.###v<",
+            "#..##.<.#o#.#.##.#.#",
+            ".#.#..^.#...<<#.....",
+            ".>v.#.v.vv....#<....",
+            "....##.v.......##o.#",
+            "...............K...K",
+            "....................",
+            "................KKK.",
+            "KKKKKKKKKKKKKKKKKKKK",
+        ],
+        door=(17, 21), leader_front=(2, 3), extra_starts=[(2, 4)],
+        objects={'Takashi': (6, 4, 'MOVEMENT_TYPE_FACE_DOWN', 1),
+                 'Yuji': (13, 7, 'MOVEMENT_TYPE_FACE_LEFT', 1),
+                 'Atsushi': (10, 5, 'MOVEMENT_TYPE_FACE_RIGHT', 1),
+                 'Jason': (3, 7, 'MOVEMENT_TYPE_FACE_UP', 1),
+                 'Cole': (16, 8, 'MOVEMENT_TYPE_FACE_UP', 1),
+                 'Kiyo': (9, 13, 'MOVEMENT_TYPE_FACE_LEFT', 1),
+                 'Samuel': (12, 18, 'MOVEMENT_TYPE_FACE_RIGHT', 1),
+                 'Warren': (7, 15, 'MOVEMENT_TYPE_FACE_RIGHT', 1)},
+        barrier='crates'),
 }
