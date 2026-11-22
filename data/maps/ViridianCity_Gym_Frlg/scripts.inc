@@ -27,7 +27,13 @@ ViridianCity_Gym_EventScript_GangIntro::
 	msgbox ViridianCity_Gym_Text_GangIntroWelcome
 	closemessage
 	setflag FLAG_SYS_POKEMON_GET
-	special GangIntro_GiveRandomStarter
+	special GangIntro_PrepareStarters
+	message ViridianCity_Gym_Text_GangIntroChooseStarter
+	waitmessage
+	dynmultistack 0, 0, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_NONE
+	closemessage
+	copyvar VAR_0x8004, VAR_RESULT
+	special GangIntro_GiveChosenStarter
 	bufferspeciesname STR_VAR_1, VAR_0x8004
 	copyvar VAR_0x800A, VAR_0x8005
 	textcolor NPC_TEXT_COLOR_NEUTRAL
@@ -402,7 +408,12 @@ ViridianCity_Gym_Text_GangIntroWelcome::
 	.string "we rebuild. And you, {PLAYER}, are\l"
 	.string "our newest recruit.\p"
 	.string "A recruit needs a partner.\n"
-	.string "Take this one. Don't disappoint me.$"
+	.string "My men caught three of them.\p"
+	.string "Pick one. Don't disappoint me.$"
+
+ViridianCity_Gym_Text_GangIntroChooseStarter::
+	.string "Which POKéMON will be\n"
+	.string "your partner?$"
 
 ViridianCity_Gym_Text_GangIntroReceivedMon::
 	.string "{PLAYER} received\n"

@@ -638,7 +638,8 @@ gSpecials::
 	def_special UpdateTrainerCardPhotoIcons
 	def_special StickerManGetBragFlags
 	def_special CheckAddCoins
-	def_special GangIntro_GiveRandomStarter
+	def_special GangIntro_PrepareStarters
+	def_special GangIntro_GiveChosenStarter
 	def_special GangLoot_Prepare
 	def_special GangLoot_Take
 	def_special GangItems_Recharge

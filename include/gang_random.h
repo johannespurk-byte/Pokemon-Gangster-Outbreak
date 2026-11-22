@@ -10,6 +10,10 @@ enum Species GangRandom_WildSpecies(enum Species tableSpecies, u8 level);
 void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum);
 bool32 GangRandom_IsBossTrainer(u16 trainerNum);
 
+// Gangster Outbreak story (gang_story.c)
+void GangStory_GiveFullMoveset(struct Pokemon *mon); // fills all four move slots
+enum Species GangStory_GetRivalStarter(void);         // Silver's random Pokémon (SPECIES_NONE in old saves)
+
 // Gangster Outbreak loot (gang_loot.c): take a Pokémon from a beaten normal trainer
 void GangLoot_RememberParty(struct Pokemon *party); // called when a trainer party is created
 

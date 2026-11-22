@@ -29,6 +29,7 @@ enum
     SALT_BRANCH,
     SALT_LEGEND,
     SALT_EXTRA_MON,
+    SALT_RIVAL,
 };
 
 static u32 GetSeed(void)
@@ -284,10 +285,19 @@ void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum)
 
         if (original == SPECIES_NONE || GetMonData(&party[i], MON_DATA_IS_EGG))
             continue;
-        // Silver keeps the starter he picked in front of Giovanni
-        if (IsRivalClass(trainerClass) && IsRivalStarterLine(original))
-            continue;
         level = GetMonData(&party[i], MON_DATA_LEVEL);
+        // Silver's partner: the random Pokémon he picked in front of Giovanni, evolved to fit the level
+        if (IsRivalClass(trainerClass) && IsRivalStarterLine(original))
+        {
+            enum Species rival = GangStory_GetRivalStarter();
+            if (rival != SPECIES_NONE && IsSpeciesEnabled(rival))
+            {
+                ChangeSpecies(&party[i], EvolveForLevel(rival, level, SALT_RIVAL));
+                if (level <= 10)
+                    GangStory_GiveFullMoveset(&party[i]);
+            }
+            continue;
+        }
         species = PickSpecies(level, Hash(SALT_TRAINER, trainerNum, i, 0), trainerNum);
         if (species != SPECIES_NONE)
             ChangeSpecies(&party[i], species);
