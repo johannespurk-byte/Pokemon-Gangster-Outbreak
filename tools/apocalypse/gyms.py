@@ -441,7 +441,8 @@ class Gym:
 
         def art(ch):
             if ch not in cache:
-                layer, behavior, blocks = puzzle_art.tile(ch, tag, spec.get('barrier', 'crates'), beh)
+                colour = spec.get('belt_tag', tag) if ch in 'NSEW' else tag
+                layer, behavior, blocks = puzzle_art.tile(ch, colour, spec.get('barrier', 'crates'), beh)
                 cache[ch] = (self.new_metatile(self.floor_mid, layer, behavior) if layer is not None else self.floor_mid, blocks)
             return cache[ch]
 
@@ -456,10 +457,11 @@ class Gym:
         # people
         path = os.path.join(ROOT, 'data/maps/%s_Gym_Frlg/map.json' % ''.join(p.capitalize() for p in self.key.split('_')))
         data = json.load(open(path))
+        todo = {k: (list(v) if isinstance(v, list) else [v]) for k, v in spec.get('objects', {}).items()}
         for o in data['object_events']:
-            name = o['script'].split('_EventScript_')[-1]
-            if name in spec.get('objects', {}):
-                x, y, move, sight = spec['objects'][name]
+            name = o['script'].split('EventScript_')[-1]
+            if todo.get(name):
+                x, y, move, sight = todo[name].pop(0)
                 o['x'], o['y'], o['movement_type'] = x, y, move
                 o['trainer_sight_or_berry_tree_id'] = str(sight)
         with open(path, 'w') as f:

@@ -216,4 +216,36 @@ GYM_PUZZLES = {
         door=(5, 18), leader_front=(5, 3), open_cells=[(4, 6), (5, 6), (6, 6), (4, 7), (5, 7), (6, 7)],
         objects={'Baily': (10, 11, 'MOVEMENT_TYPE_FACE_LEFT', 4), 'Tucker': (7, 8, 'MOVEMENT_TYPE_FACE_LEFT', 3)},
         barrier='crates'),
+    # Aqua & Magma: the stage is ringed by lava; only the two currents in row 7 carry you across. The side
+    # currents run downstream, so the way to them leads through a maze of currents and lava. A current below
+    # the stage takes you back out (one way).
+    'CELADON_CITY': dict(
+        rows=[
+            "KKKKKKKKKKKKK",
+            "KKKKKKKKKKKKK",
+            "KKKKKKKKKKKKK",
+            "KKKKKKKKKKKKK",
+            "KKKKKKKKKKKKK",
+            "K#LLL...LLL#K",
+            "K.LLL...LLL.K",
+            "K.EEEE.WWWW.K",
+            "KSLLLLSLLLL.K",
+            "KS.......LL.K",
+            "KS.LLLL..LL.K",
+            "KS.LWWW..NN.K",
+            "KS.L...L.LL.K",
+            "KS.L.L.L....K",
+            "KS...L.LLLLLK",
+            "K..LLL......K",
+            "K...........K",
+            "KKKKKKKKKKKKK",
+            "KKKKKKKKKKKKK",
+            "KKKKKKKKKKKKK",
+        ],
+        door=(6, 17), leader_front=(6, 5), belt_tag=(64, 128, 232),
+        objects={'Kay': (1, 16, 'MOVEMENT_TYPE_FACE_RIGHT', 3), 'Bridget': (8, 9, 'MOVEMENT_TYPE_FACE_LEFT', 3),
+                 'Tina': (11, 13, 'MOVEMENT_TYPE_FACE_UP', 2), 'Mary': (8, 13, 'MOVEMENT_TYPE_FACE_UP', 2),
+                 'Tamia': (9, 16, 'MOVEMENT_TYPE_FACE_LEFT', 3),
+                 'CutTree': [(1, 15, 'MOVEMENT_TYPE_FACE_DOWN', 0), (11, 15, 'MOVEMENT_TYPE_FACE_DOWN', 0), (11, 16, 'MOVEMENT_TYPE_FACE_DOWN', 0)]},
+        barrier='rock'),
 }
