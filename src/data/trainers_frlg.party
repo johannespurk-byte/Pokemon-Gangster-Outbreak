@@ -8052,8 +8052,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CHANNELER_AMANDA ===
 Name: AMANDA
 Class: Team Flare
-Pic: Flare Grunt M
-Gender: Male
+Pic: Flare Admin F
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
@@ -8069,8 +8069,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CHANNELER_STACY ===
 Name: STACY
 Class: Team Flare
-Pic: Flare Grunt M
-Gender: Male
+Pic: Flare Admin F
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
@@ -8082,8 +8082,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CHANNELER_TASHA ===
 Name: TASHA
 Class: Team Flare
-Pic: Flare Grunt M
-Gender: Male
+Pic: Flare Admin F
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Check Bad Move

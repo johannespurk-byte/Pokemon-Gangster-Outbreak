@@ -3,7 +3,9 @@
 The background is removed by flood fill from the edges (so it may also appear inside the figure),
 the figure is scaled down to fit 64x64 if needed and stands on the bottom edge.
 
-usage: import_trainer_pic.py PIC.png OUT.png [x0 y0 x1 y1]   (optional crop box when the file holds several pictures)
+usage: import_trainer_pic.py [--outline] PIC.png OUT.png [x0 y0 x1 y1]
+  x0 y0 x1 y1: optional crop box when the file holds several pictures
+  --outline:   draw a dark 1-pixel outline around the figure (for scaled-down drawings without one)
 """
 import os, sys
 from PIL import Image
@@ -14,7 +16,7 @@ from import_sheet import remove_background, TRANSPARENT  # noqa: E402
 SIZE = 64
 
 
-def main(src, dst, box=None):
+def main(src, dst, box=None, outline=False):
     im = Image.open(src).convert('RGBA')
     if box:
         im = im.crop(box)
@@ -27,6 +29,14 @@ def main(src, dst, box=None):
     canvas.paste(im, ((SIZE - im.width) // 2, SIZE - im.height), im)
     rgb = Image.new('RGB', canvas.size, (0, 0, 0))
     mask = canvas.getchannel('A').point(lambda a: 255 if a >= 128 else 0)
+    if outline:
+        mp0 = mask.load()
+        edge = [(x, y) for y in range(SIZE) for x in range(SIZE) if not mp0[x, y]
+                and any(0 <= x + dx < SIZE and 0 <= y + dy < SIZE and mp0[x + dx, y + dy]
+                        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))]
+        for x, y in edge:
+            mp0[x, y] = 255
+            rgb.putpixel((x, y), (32, 24, 32))
     rgb.paste(canvas.convert('RGB'), (0, 0), mask)
     # 15 colours for the figure (octree keeps small accents like skin and glasses), index 0 is transparent
     mp = mask.load()
@@ -51,4 +61,7 @@ def main(src, dst, box=None):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1], sys.argv[2], tuple(int(v) for v in sys.argv[3:7]) if len(sys.argv) >= 7 else None)
+    args = sys.argv[1:]
+    outline = '--outline' in args
+    args = [a for a in args if a != '--outline']
+    main(args[0], args[1], tuple(int(v) for v in args[2:6]) if len(args) >= 6 else None, outline)
