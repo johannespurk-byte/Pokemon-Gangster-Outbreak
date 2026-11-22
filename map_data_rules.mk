@@ -29,12 +29,33 @@ $(MAPS_OUTDIR)/%/header.inc $(MAPS_OUTDIR)/%/events.inc $(MAPS_OUTDIR)/%/connect
 	$(MAPJSON) map emerald $< $(LAYOUTS_DIR)/layouts.json $(@D)
 
 
-$(MAPS_OUTDIR)/connections.inc $(MAPS_OUTDIR)/groups.inc $(MAPS_OUTDIR)/events.inc $(MAPS_OUTDIR)/headers.inc $(INCLUDECONSTS_OUTDIR)/map_groups.h $(DATA_SRC_SUBDIR)/map_group_count.h: $(MAPS_DIR)/map_groups.json $(MAP_JSONS) .map_version $(MAPJSON)
+# `mapjson groups` and `mapjson layouts` each write several files in one run (groups also rewrites
+# src/data/heal_locations.json). They must be grouped targets (&:), otherwise a parallel build starts one
+# mapjson per output file and the runs overwrite each other's files half-written (flaky CI builds).
+# Grouped targets need GNU make 4.3; older versions keep the old rule (build with -j1 there if it fails).
+MAP_GROUPS_OUTPUTS := $(MAPS_OUTDIR)/connections.inc $(MAPS_OUTDIR)/groups.inc $(MAPS_OUTDIR)/events.inc $(MAPS_OUTDIR)/headers.inc $(INCLUDECONSTS_OUTDIR)/map_groups.h $(DATA_SRC_SUBDIR)/map_group_count.h
+MAP_LAYOUTS_OUTPUTS := $(LAYOUTS_OUTDIR)/layouts.inc $(LAYOUTS_OUTDIR)/layouts_table.inc $(INCLUDECONSTS_OUTDIR)/layouts.h
+define MAP_GROUPS_RECIPE
 	@$(MAPJSON) groups $(MAP_VERSION) $(filter %.json,$^) $(MAPS_OUTDIR) $(INCLUDECONSTS_OUTDIR)
 	@echo "$(MAPJSON) groups $(MAP_VERSION) $(MAPS_DIR)/map_groups.json <MAP_JSONS> $(MAPS_OUTDIR) $(INCLUDECONSTS_OUTDIR)"
-
-$(LAYOUTS_OUTDIR)/layouts.inc $(LAYOUTS_OUTDIR)/layouts_table.inc $(INCLUDECONSTS_OUTDIR)/layouts.h: $(LAYOUTS_DIR)/layouts.json .map_version $(MAPJSON)
+endef
+define MAP_LAYOUTS_RECIPE
 	$(MAPJSON) layouts $(MAP_VERSION) $< $(LAYOUTS_OUTDIR) $(INCLUDECONSTS_OUTDIR)
+endef
+
+ifneq ($(filter grouped-target,$(.FEATURES)),)
+$(MAP_GROUPS_OUTPUTS) &: $(MAPS_DIR)/map_groups.json $(MAP_JSONS) .map_version $(MAPJSON)
+	$(MAP_GROUPS_RECIPE)
+
+$(MAP_LAYOUTS_OUTPUTS) &: $(LAYOUTS_DIR)/layouts.json .map_version $(MAPJSON)
+	$(MAP_LAYOUTS_RECIPE)
+else
+$(MAP_GROUPS_OUTPUTS): $(MAPS_DIR)/map_groups.json $(MAP_JSONS) .map_version $(MAPJSON)
+	$(MAP_GROUPS_RECIPE)
+
+$(MAP_LAYOUTS_OUTPUTS): $(LAYOUTS_DIR)/layouts.json .map_version $(MAPJSON)
+	$(MAP_LAYOUTS_RECIPE)
+endif
 
 # Generate constants for map events, which depend on data that's distributed across the map.json files.
 # There's a lot of map.json files, so we print an abbreviated output with echo.
