@@ -23,6 +23,9 @@ u32 GetCurrentLevelCap(void)
 
     u32 i;
 
+    if (TESTING)
+        return MAX_LEVEL; // the test suite checks the unchanged experience rules
+
     if (B_LEVEL_CAP_TYPE == LEVEL_CAP_FLAG_LIST)
     {
         for (i = 0; i < ARRAY_COUNT(sLevelCapFlagMap); i++)
@@ -47,7 +50,7 @@ u32 GetSoftLevelCapExpValue(u32 level, u32 expValue)
     u32 levelDifference;
     u32 currentLevelCap = GetCurrentLevelCap();
 
-    if (B_EXP_CAP_TYPE == EXP_CAP_NONE)
+    if (B_EXP_CAP_TYPE == EXP_CAP_NONE || TESTING)
         return expValue;
 
     if (level < currentLevelCap)

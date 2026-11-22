@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_battle_bg.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_bg.h"
@@ -873,6 +874,15 @@ static u8 GetBattleEnvironmentByMapScene(u8 mapBattleScene)
 // Loads the initial battle environment.
 static void LoadBattleEnvironmentGfx(u16 environment)
 {
+    const struct GangBattleScene *scene = GangBattleBg_GetScene(environment);
+
+    if (scene != NULL)
+    {
+        DecompressDataWithHeaderVram(scene->tiles, (void *)(BG_CHAR_ADDR(2)));
+        DecompressDataWithHeaderVram(scene->tilemap, (void *)(BG_SCREEN_ADDR(26)));
+        LoadPalette(scene->palette, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
+        return;
+    }
     if (environment >= NELEMS(gBattleEnvironmentInfo))
         environment = BATTLE_ENVIRONMENT_PLAIN;  // If higher than the number of entries in gBattleEnvironmentInfo, use the default.
     // Copy to bg3
@@ -885,6 +895,14 @@ static void LoadBattleEnvironmentGfx(u16 environment)
 // This can be the grass moving on the screen at the start of a wild encounter in tall grass.
 static void LoadBattleEnvironmentEntryGfx(u16 environment)
 {
+    const struct GangBattleScene *entry = GangBattleBg_GetEntry(environment);
+
+    if (entry != NULL)
+    {
+        DecompressDataWithHeaderVram(entry->tiles, (void *)BG_CHAR_ADDR(1));
+        DecompressDataWithHeaderVram(entry->tilemap, (void *)BG_SCREEN_ADDR(28));
+        return;
+    }
     if (environment >= NELEMS(gBattleEnvironmentInfo))
         environment = BATTLE_ENVIRONMENT_PLAIN;
     // Copy to bg1
@@ -968,10 +986,19 @@ void InitBattleBgsVideo(void)
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJWIN_ON | DISPCNT_WIN0_ON | DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
 }
 
+// Gangster Outbreak: battle menus are black and gold, whatever frame the player picked in the options
+static const u16 sGangBattleMenuPalette[16] =
+{
+    RGB(12, 24, 12), RGB(10, 7, 1), RGB(18, 13, 2), RGB(26, 20, 5), RGB(26, 20, 5), RGB(26, 20, 5),
+    RGB(31, 27, 13), RGB(8, 7, 7), RGB(3, 2, 3), RGB(5, 4, 4), RGB(5, 4, 4), RGB(5, 4, 4), RGB(5, 4, 4),
+    RGB(5, 4, 4), RGB(3, 2, 3), RGB(18, 13, 2),
+};
+
 void LoadBattleMenuWindowGfx(void)
 {
     LoadUserWindowBorderGfx(2, 0x12, BG_PLTT_ID(1));
     LoadUserWindowBorderGfx(2, 0x22, BG_PLTT_ID(1));
+    LoadPalette(sGangBattleMenuPalette, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
     LoadPalette(gBattleWindowTextPalette, BG_PLTT_ID(5), PLTT_SIZE_4BPP);
 
     if ((gBattleTypeFlags & (BATTLE_TYPE_ARENA | BATTLE_TYPE_POKEDUDE))
@@ -1338,13 +1365,22 @@ bool8 LoadChosenBattleElement(u8 caseId)
         LoadPalette(gBattleTextboxPalette, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
         break;
     case 3:
-        DecompressDataWithHeaderVram(gBattleEnvironmentInfo[GetBattleEnvironmentOverride()].background.tileset, (void *)(BG_CHAR_ADDR(2)));
+        if (GangBattleBg_GetScene(GetBattleEnvironmentOverride()) != NULL)
+            DecompressDataWithHeaderVram(GangBattleBg_GetScene(GetBattleEnvironmentOverride())->tiles, (void *)(BG_CHAR_ADDR(2)));
+        else
+            DecompressDataWithHeaderVram(gBattleEnvironmentInfo[GetBattleEnvironmentOverride()].background.tileset, (void *)(BG_CHAR_ADDR(2)));
         break;
     case 4:
-        DecompressDataWithHeaderVram(gBattleEnvironmentInfo[GetBattleEnvironmentOverride()].background.tilemap, (void *)(BG_SCREEN_ADDR(26)));
+        if (GangBattleBg_GetScene(GetBattleEnvironmentOverride()) != NULL)
+            DecompressDataWithHeaderVram(GangBattleBg_GetScene(GetBattleEnvironmentOverride())->tilemap, (void *)(BG_SCREEN_ADDR(26)));
+        else
+            DecompressDataWithHeaderVram(gBattleEnvironmentInfo[GetBattleEnvironmentOverride()].background.tilemap, (void *)(BG_SCREEN_ADDR(26)));
         break;
     case 5:
-        LoadPalette(gBattleEnvironmentInfo[GetBattleEnvironmentOverride()].palette, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
+        if (GangBattleBg_GetScene(GetBattleEnvironmentOverride()) != NULL)
+            LoadPalette(GangBattleBg_GetScene(GetBattleEnvironmentOverride())->palette, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
+        else
+            LoadPalette(gBattleEnvironmentInfo[GetBattleEnvironmentOverride()].palette, BG_PLTT_ID(2), 3 * PLTT_SIZE_4BPP);
         break;
     case 6:
         LoadBattleMenuWindowGfx();
