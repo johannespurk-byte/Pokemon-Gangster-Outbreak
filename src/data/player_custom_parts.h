@@ -718,7 +718,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_LYSANDRE,
         .backPic = TRAINER_PIC_CALEM,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 0, 9, 0, 0, 0, 17, 0, 5, 4, 4, 16, 18, 8, 5},
+        .frontRoles = {0, 0, 0, 9, 0, 0, 0, 0, 0, 5, 4, 4, 0, 0, 8, 5},
         .backRoles = {0, 0, 13, 12, 12, 8, 0, 0, 4, 5, 0, 0, 4, 17, 18, 16},
     },
     [PLAYER_PART_ARCHER] = {
@@ -744,7 +744,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_GALACTIC_GRUNT_M,
         .backPic = TRAINER_PIC_LUCAS,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 20, 0, 0, 0, 0, 0, 8, 10, 0, 0, 9, 0, 0, 0, 0},
+        .frontRoles = {0, 0, 18, 0, 16, 10, 0, 8, 9, 17, 4, 4, 0, 20, 5, 5},
         .backRoles = {0, 0, 4, 0, 0, 16, 5, 12, 17, 13, 18, 0, 8, 0, 0, 0},
     },
 };
