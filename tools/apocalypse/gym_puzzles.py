@@ -157,4 +157,32 @@ GYM_PUZZLES = {
         door=(6, 13), leader_front=(6, 6),
         objects={'Liam': (5, 8, 'MOVEMENT_TYPE_FACE_DOWN', 3), 'Marla': (10, 8, 'MOVEMENT_TYPE_FACE_LEFT', 3)},
         barrier='amp'),
+    # Team Skull's skate park: rows of ramps you can only jump down; one ramp per row leads up, the others
+    # end in pockets. Going back down is easy (every ramp can be jumped down).
+    'CERULEAN_CITY': dict(
+        rows=[
+            "KKKKKKKKKKKKKKKKK",
+            "KKKKKKKKKKKKKKKKK",
+            "KKKKKKKKKKKKKKKKK",
+            "K###############K",
+            "K###############K",
+            "K###############K",
+            "K#######K#######K",
+            "K######...######K",
+            "K]]]]]]][]]]]]]]K",
+            "K.#...........#.K",
+            "K.#.###.#.###.#.K",
+            "K[][]]]]]]]]]]][K",
+            "K......#.#......K",
+            "K.####.#.#.####.K",
+            "K]]]]][]]]]]]]][K",
+            "K...............K",
+            "K...............K",
+            "K.....K...K.....K",
+            "KKKKKKKKKKKKKKKKK",
+            "KKKKKKKKKKKKKKKKK",
+        ],
+        door=(8, 18), leader_front=(8, 7),
+        objects={'Diana': (9, 10, 'MOVEMENT_TYPE_FACE_UP', 2), 'Luis': (15, 12, 'MOVEMENT_TYPE_FACE_LEFT', 3)},
+        barrier='trash'),
 }

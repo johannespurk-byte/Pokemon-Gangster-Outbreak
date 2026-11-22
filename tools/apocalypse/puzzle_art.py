@@ -134,16 +134,21 @@ def lava(_tag):
     return a
 
 
-def ledge(_tag, d):
-    """a broken concrete step, drawn for a jump to the east"""
+def ledge(tag, d):
+    """a skate ramp you can only jump over in one direction (drawn for a jump to the east):
+    the surface rises towards the far edge and a chevron shows the way"""
     a = blank()
-    for y in range(16):
-        for x in range(9, 13):
-            put(a, x, y, LIGHT if x == 9 else DARK)
-        for x in range(13, 16):
-            put(a, x, y, INK)
-    for y in range(0, 16, 4):
-        put(a, 10, y, INK)
+    for x in range(1, 15):
+        shade = LIGHT if x < 6 else (110, 106, 120) if x < 11 else DARK
+        for y in range(1, 15):
+            put(a, x, y, shade)
+    for y in range(1, 15):
+        put(a, 15, y, INK)
+        put(a, 14, y, INK)
+    for i in range(4):  # chevron
+        for t in (0, 1):
+            put(a, 5 + i + t, 4 + i, tag)
+            put(a, 5 + i + t, 11 - i, tag)
     return rotate(a, d)
 
 
