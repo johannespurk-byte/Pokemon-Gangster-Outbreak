@@ -3061,3 +3061,26 @@ const u16 ALIGNED(4) gTilesetPalettes_General_Frlg[][16] =
 const u32 gTilesetTiles_General_Frlg[] = INCGFX_U32("data/tilesets/primary/general_frlg/tiles.png", ".4bpp.smol");
 
 #endif // IS_FRLG
+
+// Gangster Outbreak: Pewter gym in Team Yell colours (tools/apocalypse/gyms.py)
+const u32 gTilesetTiles_GangPewterGym_Frlg[] = INCGFX_U32("data/tilesets/secondary/gang_pewter_gym_frlg/tiles.png", ".4bpp.fastSmol");
+
+const u16 gTilesetPalettes_GangPewterGym_Frlg[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/gang_pewter_gym_frlg/palettes/15.pal", ".gbapal"),
+};

@@ -1133,6 +1133,17 @@ const struct Tileset gTileset_PewterGym =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_GangPewterGymFrlg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GangPewterGym_Frlg,
+    .palettes = gTilesetPalettes_GangPewterGym_Frlg,
+    .metatiles = gMetatiles_GangPewterGym_Frlg,
+    .metatileAttributes = gMetatileAttributes_GangPewterGym_Frlg,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_CeruleanGym =
 {
     .isCompressed = TRUE,

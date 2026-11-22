@@ -5120,7 +5120,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_PewterGym",
+      "secondary_tileset": "gTileset_GangPewterGymFrlg",
       "border_filepath": "data/layouts/PewterCity_Gym_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_Gym_Frlg/map.bin",
       "layout_version": "frlg"
