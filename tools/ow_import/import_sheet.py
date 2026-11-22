@@ -27,7 +27,7 @@ def is_doubled(im):
     return bad * 100 < total
 
 
-def remove_background(fr):
+def remove_background(fr, tolerance=0):
     px = fr.load()
     w, h = fr.size
     bg = px[0, 0]
@@ -39,7 +39,7 @@ def remove_background(fr):
             continue
         seen.add((x, y))
         p = px[x, y]
-        if p[3] == 0 or p[:3] == bg[:3]:
+        if p[3] == 0 or sum(abs(a - b) for a, b in zip(p[:3], bg[:3])) <= tolerance:
             px[x, y] = (0, 0, 0, 0)
             todo.extend(((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)))
 

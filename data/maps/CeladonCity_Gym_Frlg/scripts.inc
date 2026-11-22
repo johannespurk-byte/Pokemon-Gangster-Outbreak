@@ -181,17 +181,17 @@ CeladonCity_Gym_Text_TamiaPostBattle::
 	.string "flower arrangements!$"
 
 CeladonCity_Gym_Text_LisaIntro::
-	.string "Oh, hey!\p"
-	.string "We don't like BUG- or FIRE-type\n"
-	.string "POKéMON in here!$"
+	.string "Uhuhuhu…\p"
+	.string "I'm TABITHA, MAXIE's right hand.\n"
+	.string "You won't get near him!$"
 
 CeladonCity_Gym_Text_LisaDefeat::
-	.string "Oh!\n"
-	.string "You!$"
+	.string "Uhuhu… Impossible!\n"
+	.string "Beaten by a brat!$"
 
 CeladonCity_Gym_Text_LisaPostBattle::
-	.string "Our LEADER ARCHIE might be quiet,\n"
-	.string "but she's famous around here.$"
+	.string "MAXIE and ARCHIE side by side…\n"
+	.string "You don't stand a chance. Uhuhu…$"
 
 CeladonCity_Gym_Text_LoriIntro::
 	.string "Pleased to meet you.\n"

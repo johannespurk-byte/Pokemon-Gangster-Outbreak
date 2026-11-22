@@ -6,6 +6,7 @@ the figure is scaled down to fit 64x64 if needed and stands on the bottom edge.
 usage: import_trainer_pic.py [--outline] PIC.png OUT.png [x0 y0 x1 y1]
   x0 y0 x1 y1: optional crop box when the file holds several pictures
   --outline:   draw a dark 1-pixel outline around the figure (for scaled-down drawings without one)
+  --tolerance=N: colours this close to the background also count as background (default 120 with --outline, else 0)
 """
 import os, sys
 from PIL import Image
@@ -16,11 +17,14 @@ from import_sheet import remove_background, TRANSPARENT  # noqa: E402
 SIZE = 64
 
 
-def main(src, dst, box=None, outline=False):
+def main(src, dst, box=None, outline=False, tolerance=None):
     im = Image.open(src).convert('RGBA')
     if box:
         im = im.crop(box)
-    remove_background(im)
+    # drawings have soft edges: with --outline, colours close to the background count as background too
+    if tolerance is None:
+        tolerance = 120 if outline else 0
+    remove_background(im, tolerance)
     im = im.crop(im.getbbox())
     if im.width > SIZE or im.height > SIZE:
         f = min(SIZE / im.width, SIZE / im.height)
@@ -63,5 +67,6 @@ def main(src, dst, box=None, outline=False):
 if __name__ == '__main__':
     args = sys.argv[1:]
     outline = '--outline' in args
-    args = [a for a in args if a != '--outline']
-    main(args[0], args[1], tuple(int(v) for v in args[2:6]) if len(args) >= 6 else None, outline)
+    tolerance = next((int(a.split('=')[1]) for a in args if a.startswith('--tolerance=')), None)
+    args = [a for a in args if not a.startswith('--')]
+    main(args[0], args[1], tuple(int(v) for v in args[2:6]) if len(args) >= 6 else None, outline, tolerance)
