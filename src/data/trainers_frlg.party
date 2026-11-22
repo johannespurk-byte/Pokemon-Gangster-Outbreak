@@ -3525,7 +3525,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PSYCHIC_JOHAN ===
 Name: JOHAN
 Class: Team Flare
-Pic: Psychic M Frlg
+Pic: Flare Grunt M
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -3550,7 +3550,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 === TRAINER_PSYCHIC_TYRON ===
 Name: TYRON
 Class: Team Flare
-Pic: Psychic M Frlg
+Pic: Flare Grunt M
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -3567,7 +3567,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 === TRAINER_PSYCHIC_CAMERON ===
 Name: CAMERON
 Class: Team Flare
-Pic: Psychic M Frlg
+Pic: Flare Grunt M
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -3588,7 +3588,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 === TRAINER_PSYCHIC_PRESTON ===
 Name: PRESTON
 Class: Team Flare
-Pic: Psychic M Frlg
+Pic: Flare Grunt M
 Gender: Male
 Music: Serious
 Double Battle: No
@@ -8052,7 +8052,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CHANNELER_AMANDA ===
 Name: AMANDA
 Class: Team Flare
-Pic: Channeler Frlg
+Pic: Flare Grunt M
 Gender: Male
 Music: Dangerous
 Double Battle: No
@@ -8069,7 +8069,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CHANNELER_STACY ===
 Name: STACY
 Class: Team Flare
-Pic: Channeler Frlg
+Pic: Flare Grunt M
 Gender: Male
 Music: Dangerous
 Double Battle: No
@@ -8082,7 +8082,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CHANNELER_TASHA ===
 Name: TASHA
 Class: Team Flare
-Pic: Channeler Frlg
+Pic: Flare Grunt M
 Gender: Male
 Music: Dangerous
 Double Battle: No

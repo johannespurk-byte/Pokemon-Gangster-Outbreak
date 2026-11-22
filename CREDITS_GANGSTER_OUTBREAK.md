@@ -19,6 +19,7 @@ Basis: RHH's pokeemerald-expansion 1.17.2 (https://github.com/rh-hideout/pokeeme
 | Bromley/Guzma (Overworld + Kampfbild) | `guzma.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Flordelis/Lysandre (Overworld + Kampfbild) | `lysandre.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Team-Galaktik-Rüpel (Overworld) | `galactic_grunt.png` | vom User geliefert, Künstler *bitte nachtragen* |
+| Team-Flare-Rüpel (Kampfbild) | `flare_grunt_m.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Neo-Team-Plasma: Rüpel m/w, Achromas, G-Cis, Weiser, Violaceus, Schattentriade (Kampfbilder) | `plasma_*`, `colress`, `ghetsis_bw2`, `zinzolin`, `shadow_triad` | *bitte nachtragen* |
 
 ## Pokémon-Editor (Stat Editor, ab Schwierigkeit ELITE GANGSTER)
