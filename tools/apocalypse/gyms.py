@@ -482,22 +482,33 @@ class Gym:
                 j = next(k for k, p in enumerate(pads) if p[2] == ch and k != i)
                 warps.append({'x': x, 'y': y, 'elevation': 3, 'dest_map': data['id'], 'dest_warp_id': str(first + j)})
             data['warp_events'] = warps
-        with open(path, 'w') as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
-            f.write('\n')
         blocked = {(x, y) for y in range(self.h) for x in range(self.w)
                    if rows[y][x] == 'K' and (orig[y * self.w + x] >> 10) & 3}
         people = {(o['x'], o['y']) for o in data['object_events']}
         blocked -= set(spec.get('open_cells', ()))  # e.g. Vermilion's laser gate counts as opened
         puzzle = Puzzle(rows, blocked, people)
-        facing = {'DOWN': 'S', 'UP': 'N', 'LEFT': 'W', 'RIGHT': 'E'}
-        trainers = []
+        # every trainer watches all four directions (src/trainer_see.c): shorten the sight of anyone who would
+        # walk into the only way through after spotting the player
         for o in data['object_events']:
-            sight = int(o.get('trainer_sight_or_berry_tree_id') or 0) if o.get('trainer_type') == 'TRAINER_TYPE_NORMAL' else 0
-            move = o['movement_type'].replace('MOVEMENT_TYPE_FACE_', '')
-            if sight and move in facing:
-                trainers.append((o['x'], o['y'], facing[move], sight))
-        puzzle.check_trainers(trainers, spec['door'], spec['leader_front'], self.key)
+            sight = int(o.get('trainer_sight_or_berry_tree_id') or 0) \
+                if o.get('trainer_type') not in (None, '', '0', 'TRAINER_TYPE_NONE') else 0
+            while sight > 1:
+                try:
+                    puzzle.check_trainers([(o['x'], o['y'], d, sight) for d in 'NSWE'],
+                                          spec['door'], spec['leader_front'], self.key)
+                    break
+                except AssertionError:
+                    sight -= 1
+            if sight and str(sight) != o['trainer_sight_or_berry_tree_id']:
+                print('%-16s %s: sight %s -> %d' % (self.key, o['script'].split('EventScript_')[-1],
+                                                   o['trainer_sight_or_berry_tree_id'], sight))
+                o['trainer_sight_or_berry_tree_id'] = str(sight)
+            if sight:
+                puzzle.check_trainers([(o['x'], o['y'], d, sight) for d in 'NSWE'],
+                                      spec['door'], spec['leader_front'], self.key)
+        with open(path, 'w') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write('\n')
         for start in spec.get('extra_starts', ()):
             assert puzzle.path(start, spec['door']), '%s: no way from %s to the door' % (self.key, start)
         assert puzzle.no_traps(spec['door'], spec['door']), '%s: a spot without a way back' % self.key

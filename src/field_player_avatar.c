@@ -916,6 +916,7 @@ static void PlayerNotOnBikeMoving(enum Direction direction, u16 heldKeys)
      && !FollowerNPCComingThroughDoor()
      && (I_ORAS_DOWSING_FLAG == 0 || (I_ORAS_DOWSING_FLAG != 0 && !FlagGet(I_ORAS_DOWSING_FLAG))))
     {
+        // Gangster Outbreak: PlayerRun moves at bike speed (see StartRunningAnim)
         if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
             PlayerRunSlow(direction);
         else
@@ -931,10 +932,11 @@ static void PlayerNotOnBikeMoving(enum Direction direction, u16 heldKeys)
     }
     else
     {
+        // Gangster Outbreak: walking is as fast as running in the original
         if (ObjectMovingOnRockStairs(&gObjectEvents[gPlayerAvatar.objectEventId], direction))
             PlayerWalkSlowStairs(direction);
         else
-            PlayerWalkNormal(direction);
+            PlayerWalkFast(direction);
     }
 }
 

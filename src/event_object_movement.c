@@ -7036,7 +7036,8 @@ static void InitMovementNormal(struct ObjectEvent *objectEvent, struct Sprite *s
 
 static void StartRunningAnim(struct ObjectEvent *objectEvent, struct Sprite *sprite, enum Direction direction)
 {
-    InitNpcForMovement(objectEvent, sprite, direction, MOVE_SPEED_FAST_1);
+    // Gangster Outbreak: running is twice as fast as in the original (Mach Bike speed)
+    InitNpcForMovement(objectEvent, sprite, direction, MOVE_SPEED_FASTER);
     SetStepAnimHandleAlternation(objectEvent, sprite, GetRunningDirectionAnimNum(objectEvent->facingDirection));
 }
 

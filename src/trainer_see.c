@@ -605,15 +605,7 @@ static u8 GetTrainerApproachDistance(struct ObjectEvent *trainerObj)
     u8 approachDistance;
 
     PlayerGetDestCoords(&x, &y);
-    if (trainerObj->trainerType == TRAINER_TYPE_NORMAL)  // can only see in one direction
-    {
-        // Disable trainer approach while moving diagonally (usually moving on sideway stairs)
-        if (trainerObj->facingDirection > DIR_EAST)
-            return 0;
-        approachDistance = sDirectionalApproachDistanceFuncs[trainerObj->facingDirection - 1](trainerObj, trainerObj->trainerRange_berryTreeId, x, y);
-        return CheckPathBetweenTrainerAndPlayer(trainerObj, approachDistance, trainerObj->facingDirection);
-    }
-    else // TRAINER_TYPE_SEE_ALL_DIRECTIONS, TRAINER_TYPE_BURIED
+    // Gangster Outbreak: every trainer watches all four directions (TRAINER_TYPE_NORMAL included)
     {
         for (i = 0; i < ARRAY_COUNT(sDirectionalApproachDistanceFuncs); i++)
         {
