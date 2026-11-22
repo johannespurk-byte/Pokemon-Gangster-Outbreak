@@ -1040,8 +1040,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_PICNICKER_DIANA ===
 Name: DIANA
 Class: Team Skull
-Pic: Picnicker Frlg
-Gender: Male
+Pic: Skull Grunt F
+Gender: Female
 Music: Cute
 Double Battle: No
 AI: Check Bad Move
@@ -2680,7 +2680,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SWIMMER_MALE_LUIS ===
 Name: LUIS
 Class: Team Skull
-Pic: Swimmer M Frlg
+Pic: Skull Grunt M
 Gender: Male
 Music: Serious
 Double Battle: No

@@ -90,7 +90,7 @@ PICS_FOR = {
     "yell_m": ("YELL_GRUNT_M", "YellGruntM", "VICTOR", "Victor"),
     "yell_f": ("YELL_GRUNT_F", "YellGruntF", "GLORIA", "Gloria"),
     "guzma": ("GUZMA", "Guzma", "ELIO", "Elio"),
-    "skull": ("ELIO", "Elio", "ELIO", "Elio"),
+    "skull": ("SKULL_GRUNT_M", "SkullGruntM", "ELIO", "Elio"),
     "lysandre": ("LYSANDRE", "Lysandre", "CALEM", "Calem"),
     "galactic": ("LUCAS", "Lucas", "LUCAS", "Lucas"),
     "galactic_b": ("LUCAS", "Lucas", "LUCAS", "Lucas"),

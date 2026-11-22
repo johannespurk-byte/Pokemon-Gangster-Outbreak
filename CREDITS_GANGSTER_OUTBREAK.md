@@ -11,7 +11,7 @@ Basis: RHH's pokeemerald-expansion 1.17.2 (https://github.com/rh-hideout/pokeeme
 | Sprite | Datei(en) | Künstler |
 |---|---|---|
 | Zyrus (Kampfbild + Overworld) | `cyrus.png` | RHcks |
-| Team-Skull-Rüpel (Overworld) | `skull_grunt.png` | *bitte nachtragen* (evtl. mid117) |
+| Team-Skull-Rüpel (Overworld; Kampfbilder `skull_grunt_m.png`/`skull_grunt_f.png` vom User geliefert, aus Illustration verkleinert) | `skull_grunt.png` | *bitte nachtragen* (evtl. mid117) |
 | Team-Magma-Rüpel ORAS (Overworld) | `magma_grunt_oras.png` | *bitte nachtragen* |
 | Nezz/Piers (Overworld + Kampfbild, aus Illustration verkleinert) | `piers.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Team-Yell-Rüpel (Overworld + Kampfbild `yell_grunt_m.png`, aus Illustration verkleinert) | `yell_grunt.png` | vom User geliefert, Künstler *bitte nachtragen* |
