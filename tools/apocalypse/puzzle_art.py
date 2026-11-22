@@ -214,6 +214,27 @@ def barrier(kind, tag):
     return a
 
 
+def pad(tag):
+    """teleport pad: dark disc, glowing ring and core"""
+    a = blank()
+    for y in range(16):
+        for x in range(16):
+            r = ((x - 7.5) ** 2 + (y - 7.5) ** 2) ** 0.5
+            if r <= 7:
+                put(a, x, y, DARK)
+            if 4.5 <= r <= 6:
+                put(a, x, y, tag)
+            if r <= 2:
+                put(a, x, y, WHITE)
+            elif r <= 3:
+                put(a, x, y, tag)
+    outline(a)
+    return a
+
+
+PAD_IDS = '0123456789abcdefghijklmnpqrstuwyz'
+
+
 def tile(ch, tag, barrier_kind, beh):
     spin = {'>': ('E', 'MB_SPIN_RIGHT'), '<': ('W', 'MB_SPIN_LEFT'), '^': ('N', 'MB_SPIN_UP'), 'v': ('S', 'MB_SPIN_DOWN')}
     belts = {'E': 'MB_WALK_EAST', 'W': 'MB_WALK_WEST', 'N': 'MB_WALK_NORTH', 'S': 'MB_WALK_SOUTH'}
@@ -232,6 +253,8 @@ def tile(ch, tag, barrier_kind, beh):
     if ch in ledges:
         d, b = ledges[ch]
         return ledge(tag, d), beh[b], True
+    if ch in PAD_IDS:
+        return pad(tag), beh['MB_AQUA_HIDEOUT_WARP'], False
     if ch == 'L':
         return lava(tag), None, True
     if ch == '#':

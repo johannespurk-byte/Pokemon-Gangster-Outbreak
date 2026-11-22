@@ -8,7 +8,7 @@ A gym puzzle is drawn as text, one character per map cell (the full layout, same
   o  stop tile (ends spinning)      ~  ice (slide until the ice ends or something blocks)
   E W N S  conveyor belts (one forced step per tile)
   L  lava / acid (blocks)           ) ( ] [  ledges: jump east / west / south / north
-  0-9  teleport pads, pads with the same digit are linked both ways
+  0-9 a-z  teleport pads (not o / v / x), pads with the same character are linked both ways
   x  hidden switch spot (Vermilion: crates with switches) handled by the gym's script
 The solver below moves a player through the puzzle exactly like src/field_player_avatar.c does
 (spinning, slipping, conveyors, ledges, teleports) and checks that the leader can be reached from the door
@@ -23,6 +23,13 @@ LEDGE = {')': 'E', '(': 'W', ']': 'S', '[': 'N'}
 BLOCKING = set('#L') | set(LEDGE)
 
 
+PAD_IDS = '0123456789abcdefghijklmnpqrstuwyz'  # teleport pairs (no o / v / x: those are tiles)
+
+
+def is_pad(ch):
+    return ch in PAD_IDS
+
+
 class Puzzle:
     def __init__(self, rows, blocked_cells, objects):
         """rows: list of strings; blocked_cells: cells blocked in the final layout (kept walls etc.);
@@ -33,7 +40,7 @@ class Puzzle:
         pads = {}
         for y, row in enumerate(rows):
             for x, ch in enumerate(row):
-                if ch.isdigit():
+                if is_pad(ch):
                     pads.setdefault(ch, []).append((x, y))
         self.links = {}
         for ch, cells in pads.items():
@@ -284,4 +291,38 @@ GYM_PUZZLES = {
                  'Kayden': (0, 18, 'MOVEMENT_TYPE_FACE_RIGHT', 3), 'Nate': (14, 18, 'MOVEMENT_TYPE_FACE_LEFT', 3),
                  'Shawn': (0, 20, 'MOVEMENT_TYPE_FACE_RIGHT', 2)},
         barrier='iceblock'),
+    # Team Flare's catwalk: nine rooms linked by teleport pads, conveyor runways carry you past the pads.
+    # The right side leads up to Lysandre (start -> bottom right -> middle right -> top right -> top middle ->
+    # centre), the left side is a loop that throws you back.
+    'SAFFRON_CITY': dict(
+        rows=[
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+            ".........K.........K....h....",
+            ".EEEEEEE.K...k.....K.WWWWWWW.",
+            "......c..K.SSSSSSS.K.........",
+            ".WWWWWWW.K.........K.EEEEEEE.",
+            "....d....K.NNNNNNN.K........g",
+            ".........K....g....K.........",
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+            ".........K###...###K.........",
+            ".2.....d.K##.....##K..f......",
+            ".NNN.SSS.K#.......#K.WWWW.SS.",
+            ".........K#..EEE..#K......SS.",
+            "..e...3..K#.......#K.EEEE.SS.",
+            ".........K#...k...#K......h..",
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+            ".........K.........Ke........",
+            ".3.......K.a.....b.K.EEEEEEE.",
+            ".EEEE.WW.K.WKW.EKE.K...2.....",
+            "....c....K.........K.WWWWWWW.",
+            ".WWWW....K.........K......f..",
+            "a........K...KKK...K........b",
+            "KKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+        ],
+        door=(14, 23), leader_front=(14, 12),
+        objects={'Johan': (26, 2, 'MOVEMENT_TYPE_FACE_DOWN', 3)},
+        barrier='laser'),
 }

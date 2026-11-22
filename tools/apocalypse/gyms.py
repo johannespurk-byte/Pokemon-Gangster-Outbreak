@@ -464,6 +464,16 @@ class Gym:
                 x, y, move, sight = todo[name].pop(0)
                 o['x'], o['y'], o['movement_type'] = x, y, move
                 o['trainer_sight_or_berry_tree_id'] = str(sight)
+        # teleport pads: the door warps stay first (the city refers to them by number), then one warp per pad
+        pads = [(x, y, ch) for y, row in enumerate(rows) for x, ch in enumerate(row) if ch in puzzle_art.PAD_IDS]
+        if pads or spec.get('replace_pad_warps'):
+            doors = [w for w in data['warp_events'] if w['dest_map'] != data['id']]
+            first = len(doors)
+            warps = list(doors)
+            for i, (x, y, ch) in enumerate(pads):
+                j = next(k for k, p in enumerate(pads) if p[2] == ch and k != i)
+                warps.append({'x': x, 'y': y, 'elevation': 3, 'dest_map': data['id'], 'dest_warp_id': str(first + j)})
+            data['warp_events'] = warps
         with open(path, 'w') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
             f.write('\n')
