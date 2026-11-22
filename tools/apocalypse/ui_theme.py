@@ -84,8 +84,9 @@ def battle_textbox_0(colors):
     out = list(colors)
     out[15] = BG               # message box fill (was teal)
     out[1] = TEXT              # message text
-    for i in (12, 13, 14):     # frame (red/pink) -> blood red
-        out[i] = FRAME[i - 12 + 1]
+    # frame -> gold (battle screens are black and gold, see src/battle_bg.c sGangBattleMenuPalette)
+    for i, c in zip((11, 12, 13, 14), ((80, 56, 8), (144, 104, 16), (208, 160, 40), (248, 216, 104))):
+        out[i] = c
     return [snap(c) if i else c for i, c in enumerate(out)]
 
 

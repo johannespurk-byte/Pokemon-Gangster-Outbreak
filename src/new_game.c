@@ -204,8 +204,12 @@ void NewGameInitData(void)
     ResetGameStats();
     ClearAllContestWinnerPics();
     ClearPlayerLinkBattleRecords();
-    InitSeedotSizeRecord();
-    InitLotadSizeRecord();
+    // Gangster Outbreak: Emerald-only records; in FRLG these vars are the Trainer Card's Pokémon icons
+    if (!IS_FRLG)
+    {
+        InitSeedotSizeRecord();
+        InitLotadSizeRecord();
+    }
     gPartiesCount[B_TRAINER_PLAYER] = 0;
     ZeroPlayerPartyMons();
     if (!newGamePlus)
@@ -220,7 +224,8 @@ void NewGameInitData(void)
     SetMauvilleOldMan();
     InitDewfordTrend();
     ResetFanClub();
-    ResetLotteryCorner();
+    if (!IS_FRLG)
+        ResetLotteryCorner();
     UpdateDailySeed();
     WarpToTruck();
     if (IS_FRLG)

@@ -763,6 +763,13 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
         trainerCard->monSpecies[3] = VarGet(VAR_TRAINER_CARD_MON_ICON_4);
         trainerCard->monSpecies[4] = VarGet(VAR_TRAINER_CARD_MON_ICON_5);
         trainerCard->monSpecies[5] = VarGet(VAR_TRAINER_CARD_MON_ICON_6);
+        // Gangster Outbreak: the icons are only set when entering the Hall of Fame, and the same vars are
+        // shared with Emerald-only data (old saves hold e.g. the Seedot size record there)
+        for (i = 0; i < PARTY_SIZE; i++)
+        {
+            if (!FlagGet(FLAG_SYS_GAME_CLEAR) || trainerCard->monSpecies[i] >= NUM_SPECIES)
+                trainerCard->monSpecies[i] = SPECIES_NONE;
+        }
         break;
     }
 }
