@@ -20,6 +20,8 @@ from collections import Counter
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from interiors import load_tiles, read_pal, nearest  # noqa: E402
+from gym_puzzles import GYM_PUZZLES, Puzzle, SPIN, LEDGE  # noqa: E402
+import puzzle_art  # noqa: E402
 from PIL import Image  # noqa: E402
 
 STAGE_A_REF = '862c4b3d'  # tilesets after recolor.py (stage A); recolouring starts from here
@@ -361,6 +363,8 @@ class Gym:
             for row in em.p:
                 art.update(c for c in row if c is not None)
         art[self.cfg['tag']] += 999
+        for c in (INK, (72, 68, 80), (150, 146, 160), (224, 224, 232)):
+            art[c] += 500
         pal = [(0, 0, 0)]
         for c, _ in art.most_common(9) + cols.most_common(10):
             if len(pal) < 16 and all(sum((a - b) ** 2 for a, b in zip(c, p)) > 200 for p in pal[1:]):
@@ -375,8 +379,8 @@ class Gym:
             self.tiles.append(px)
         return NUM_PRIM + self.lookup[px]
 
-    def new_metatile(self, base_mid, layer):
-        """base metatile with a 16x16 RGBA layer painted over it, same behaviour"""
+    def new_metatile(self, base_mid, layer, behavior=None):
+        """base metatile with a 16x16 RGBA layer painted over it (same behaviour unless given)"""
         rgbimg = self.render(base_mid)
         for y in range(16):
             for x in range(16):
@@ -400,7 +404,10 @@ class Gym:
         mid = NUM_PRIM + len(self.meta) // 16
         self.meta += struct.pack('<8H', *entries, 0, 0, 0, 0)
         a = self.prim_attr if base_mid < NUM_PRIM else self.attr
-        self.attr += struct.pack('<I', struct.unpack_from('<I', a, (base_mid % NUM_PRIM) * 4)[0] & ~(3 << 29))
+        attr = struct.unpack_from('<I', a, (base_mid % NUM_PRIM) * 4)[0] & ~(3 << 29)
+        if behavior is not None:
+            attr = (attr & ~0x1FF) | behavior
+        self.attr += struct.pack('<I', attr)
         return mid
 
     # --- placement
@@ -414,6 +421,55 @@ class Gym:
         v = self.cell(x, y)
         self.blocks[y * self.w + x] = (v & ~0x3FF) | mid
 
+    def prepare(self):
+        """team palette from the gym as it was (floors and walls) plus the team colours"""
+        mids = [b & 0x3FF for b in self.blocks]
+        walk = Counter(mids[i] for i in range(len(mids)) if self.walkable(i % self.w, i // self.w)
+                       and self.behavior(mids[i]) == 0)
+        self.floor_mid = walk.most_common(1)[0][0]
+        walls = Counter(mids[y * self.w + x] for y in range(0, 3) for x in range(self.w)
+                        if not self.walkable(x, y) and self.behavior(mids[y * self.w + x]) == 0 and mids[y * self.w + x] != 0x008)
+        self.gang_palette([m for m, _ in walk.most_common(2)] + [m for m, _ in walls.most_common(2)])
+
+    def apply_puzzle(self, spec):
+        """rebuild the room from the puzzle text, move the people, check that the gym can be solved"""
+        beh = puzzle_art.behaviors()
+        rows = spec['rows']
+        assert len(rows) == self.h and all(len(r) == self.w for r in rows), '%s: puzzle size' % self.key
+        tag = self.cfg['tag']
+        cache = {}
+
+        def art(ch):
+            if ch not in cache:
+                layer, behavior, blocks = puzzle_art.tile(ch, tag, spec.get('barrier', 'crates'), beh)
+                cache[ch] = (self.new_metatile(self.floor_mid, layer, behavior) if layer is not None else self.floor_mid, blocks)
+            return cache[ch]
+
+        orig = list(self.blocks)
+        for y, row in enumerate(rows):
+            for x, ch in enumerate(row):
+                if ch == 'K':
+                    continue
+                mid, blocks = art(ch)
+                col, el = (1, 0) if blocks else (0, 3)
+                self.blocks[y * self.w + x] = mid | (col << 10) | (el << 12)
+        # people
+        path = os.path.join(ROOT, 'data/maps/%s_Gym_Frlg/map.json' % ''.join(p.capitalize() for p in self.key.split('_')))
+        data = json.load(open(path))
+        for o in data['object_events']:
+            name = o['script'].split('_EventScript_')[-1]
+            if name in spec.get('objects', {}):
+                x, y, move, sight = spec['objects'][name]
+                o['x'], o['y'], o['movement_type'] = x, y, move
+                o['trainer_sight_or_berry_tree_id'] = str(sight)
+        with open(path, 'w') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write('\n')
+        blocked = {(x, y) for y in range(self.h) for x in range(self.w)
+                   if rows[y][x] == 'K' and (orig[y * self.w + x] >> 10) & 3}
+        people = {(o['x'], o['y']) for o in data['object_events']}
+        return Puzzle(rows, blocked, people).check(spec['door'], spec['leader_front'], self.key)
+
     def decorate(self):
         rng = random.Random(self.cfg['seed'])
         mids = [b & 0x3FF for b in self.blocks]
@@ -423,7 +479,6 @@ class Gym:
         floor_any = {m for m, _ in walk.most_common(8)}
         walls = Counter(mids[y * self.w + x] for y in range(0, 3) for x in range(self.w)
                         if not self.walkable(x, y) and self.behavior(mids[y * self.w + x]) == 0 and mids[y * self.w + x] != 0x008)
-        self.gang_palette(floors[:2] + [m for m, _ in walls.most_common(2)])
         # floor emblems on 2x2 spots of plain floor, spread over the room
         spots = []
         for y in range(2, self.h - 3):
@@ -535,6 +590,9 @@ def main():
     for key, cfg in GYMS.items():
         g = Gym(key, cfg)
         g.recolour()
+        g.prepare()
+        if key in GYM_PUZZLES:
+            print('%-16s puzzle: %d steps to the leader, %d back' % (key, *g.apply_puzzle(GYM_PUZZLES[key])))
         n_em, n_tags = g.decorate()
         g.save()
         gyms.append(g)
