@@ -9,6 +9,7 @@ void GangRandom_NewSeed(void);
 enum Species GangRandom_WildSpecies(enum Species tableSpecies, u8 level);
 void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum);
 bool32 GangRandom_IsBossTrainer(u16 trainerNum);
+u8 GangRandom_ScaleWildLevel(u8 level); // level scaling: wild Pokémon keep up with the player (up to the level cap)
 
 // Gangster Outbreak story (gang_story.c)
 void GangStory_GiveFullMoveset(struct Pokemon *mon); // fills all four move slots

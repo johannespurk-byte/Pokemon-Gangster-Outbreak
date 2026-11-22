@@ -1,5 +1,6 @@
 #include "global.h"
 #include "battle.h"
+#include "caps.h"
 #include "gang_random.h"
 #include "pokemon.h"
 #include "random.h"
@@ -243,6 +244,70 @@ bool32 GangRandom_IsBossTrainer(u16 trainerNum)
     }
 }
 
+// --- level scaling ------------------------------------------------------------------------------------------
+// Opponents never fall too far behind the player's strongest Pokémon, but nobody is pushed past the level cap
+// (the level of the next gym boss's strongest Pokémon). Levels are only ever raised, never lowered.
+
+#define TRAINER_SCALE_BEHIND   2  // normal trainers: strongest Pokémon this many levels below the player's
+#define WILD_SCALE_BEHIND      6  // wild Pokémon: at least this many levels below the player's ...
+#define WILD_SCALE_SPREAD      4  // ... plus 0-3
+
+static u32 GetPlayerScalingLevel(void)
+{
+    u32 i, level = 1;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
+        if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(mon, MON_DATA_IS_EGG))
+            level = max(level, GetMonData(mon, MON_DATA_LEVEL));
+    }
+    return min(level, GetCurrentLevelCap());
+}
+
+static void SetMonLevel(struct Pokemon *mon, u32 level)
+{
+    u32 exp = gExperienceTables[gSpeciesInfo[GetMonData(mon, MON_DATA_SPECIES)].growthRate][level];
+
+    SetMonData(mon, MON_DATA_EXP, &exp);
+    CalculateMonStats(mon);
+}
+
+u8 GangRandom_ScaleWildLevel(u8 level)
+{
+    u32 player = GetPlayerScalingLevel();
+    u32 floor;
+
+    if (TESTING || player <= WILD_SCALE_BEHIND)
+        return level;
+    floor = player - WILD_SCALE_BEHIND + Random() % WILD_SCALE_SPREAD;
+    if (level < floor)
+        level = min(floor, GetCurrentLevelCap());
+    return level;
+}
+
+// Lifts the whole team so its strongest Pokémon is close to the player's (Silver: one level above)
+static void ScaleTrainerParty(struct Pokemon *party, bool32 rival)
+{
+    u32 i, player = GetPlayerScalingLevel(), strongest = 0, target, shift, cap = GetCurrentLevelCap();
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&party[i], MON_DATA_SPECIES) != SPECIES_NONE)
+            strongest = max(strongest, GetMonData(&party[i], MON_DATA_LEVEL));
+    }
+    target = rival ? player + 1 : (player > TRAINER_SCALE_BEHIND ? player - TRAINER_SCALE_BEHIND : 1);
+    target = min(target, cap);
+    if (strongest == 0 || target <= strongest)
+        return;
+    shift = target - strongest;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&party[i], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&party[i], MON_DATA_IS_EGG))
+            SetMonLevel(&party[i], min(GetMonData(&party[i], MON_DATA_LEVEL) + shift, MAX_LEVEL));
+    }
+}
+
 // Trainers with fewer than MIN_TRAINER_PARTY_SIZE Pokémon get random extra ones at their strongest level
 static void FillUpTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
@@ -277,6 +342,9 @@ void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum)
     if (GangRandom_IsBossTrainer(trainerNum))
         return;
     trainerClass = GetTrainerClassFromId(trainerNum);
+    if (trainerNum != TRAINER_RIVAL_OAKS_LAB_SQUIRTLE && trainerNum != TRAINER_RIVAL_OAKS_LAB_BULBASAUR
+     && trainerNum != TRAINER_RIVAL_OAKS_LAB_CHARMANDER)
+        ScaleTrainerParty(party, IsRivalClass(trainerClass));
     for (i = 0; i < PARTY_SIZE; i++)
     {
         enum Species original = GetMonData(&party[i], MON_DATA_SPECIES);
