@@ -468,6 +468,7 @@ class Gym:
         blocked = {(x, y) for y in range(self.h) for x in range(self.w)
                    if rows[y][x] == 'K' and (orig[y * self.w + x] >> 10) & 3}
         people = {(o['x'], o['y']) for o in data['object_events']}
+        blocked -= set(spec.get('open_cells', ()))  # e.g. Vermilion's laser gate counts as opened
         return Puzzle(rows, blocked, people).check(spec['door'], spec['leader_front'], self.key)
 
     def decorate(self):

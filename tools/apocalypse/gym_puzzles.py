@@ -185,4 +185,35 @@ GYM_PUZZLES = {
         door=(8, 18), leader_front=(8, 7),
         objects={'Diana': (9, 10, 'MOVEMENT_TYPE_FACE_UP', 2), 'Luis': (15, 12, 'MOVEMENT_TYPE_FACE_LEFT', 3)},
         barrier='trash'),
+    # Neo Rocket's warehouse: the switches for the laser gate are hidden in two neighbouring Rocket crates
+    # (same logic as the old trash cans, see SetVermilionTrashCans); barricades make a zigzag through the
+    # crates. Behind the gate a small spinner room: only the left arrow brings you in front of Archer, the
+    # middle one throws you back through the gate.
+    'VERMILION_CITY': dict(
+        rows=[
+            "KKKKKKKKKKK",
+            "KKKKKKKKKKK",
+            "KKKKKKKKKKK",
+            "K.o>.o.>o.K",
+            "K#^##v##^#K",
+            "K.........K",
+            "KKKKKKKKKKK",
+            "KKKKKKKKKKK",
+            "...........",
+            "####.######",
+            ".#.#.#.#.#.",
+            "...........",
+            ".#.#.#.#.#.",
+            "...........",
+            ".#.#.#.#.#.",
+            "##.#####.##",
+            "...........",
+            "KKKKKKKKKKK",
+            "KKKKKKKKKKK",
+            "KKKKKKKKKKK",
+            "KKKKKKKKKKK",
+        ],
+        door=(5, 18), leader_front=(5, 3), open_cells=[(4, 6), (5, 6), (6, 6), (4, 7), (5, 7), (6, 7)],
+        objects={'Baily': (10, 11, 'MOVEMENT_TYPE_FACE_LEFT', 4), 'Tucker': (7, 8, 'MOVEMENT_TYPE_FACE_LEFT', 3)},
+        barrier='crates'),
 }
