@@ -19,7 +19,7 @@
     {
       "local_id": "LOCALID_QUINN",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_2",
       "x": 25,
       "y": 11,
       "elevation": 3,
@@ -48,7 +48,7 @@
     {
       "local_id": "LOCALID_AVERY",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_2",
       "x": 17,
       "y": 5,
       "elevation": 3,
@@ -78,7 +78,7 @@
     {
       "local_id": "LOCALID_DEREK",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_2",
       "x": 16,
       "y": 18,
       "elevation": 3,
@@ -108,7 +108,7 @@
     {
       "local_id": "LOCALID_ZAC",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT",
+      "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_2",
       "x": 4,
       "y": 11,
       "elevation": 3,

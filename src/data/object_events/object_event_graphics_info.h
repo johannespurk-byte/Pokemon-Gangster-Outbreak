@@ -8871,9 +8871,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lysandre = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticGrunt = {
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Archer = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ARCHER,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -8886,7 +8886,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticGrunt = {
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_GalacticGrunt,
+    .images = sPicTable_Archer,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 

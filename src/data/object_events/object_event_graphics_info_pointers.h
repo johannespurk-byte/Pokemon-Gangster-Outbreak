@@ -490,7 +490,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cyrus;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkullGrunt;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticGrunt2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YellGruntF;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticGrunt;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Archer;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lysandre;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Guzma;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YellGrunt;
@@ -977,7 +977,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SKULL_GRUNT] = &gObjectEventGraphicsInfo_SkullGrunt,
     [OBJ_EVENT_GFX_GALACTIC_GRUNT_2] = &gObjectEventGraphicsInfo_GalacticGrunt2,
     [OBJ_EVENT_GFX_YELL_GRUNT_F] = &gObjectEventGraphicsInfo_YellGruntF,
-    [OBJ_EVENT_GFX_GALACTIC_GRUNT] = &gObjectEventGraphicsInfo_GalacticGrunt,
+    [OBJ_EVENT_GFX_ARCHER] = &gObjectEventGraphicsInfo_Archer,
     [OBJ_EVENT_GFX_LYSANDRE] = &gObjectEventGraphicsInfo_Lysandre,
     [OBJ_EVENT_GFX_GUZMA] = &gObjectEventGraphicsInfo_Guzma,
     [OBJ_EVENT_GFX_YELL_GRUNT] = &gObjectEventGraphicsInfo_YellGrunt,

@@ -18,8 +18,8 @@ Basis: RHH's pokeemerald-expansion 1.17.2 (https://github.com/rh-hideout/pokeeme
 | Team-Yell-Rüpelin (Overworld + Kampfbild, aus Illustration verkleinert) | `yell_grunt_f.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Bromley/Guzma (Overworld + Kampfbild) | `guzma.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Flordelis/Lysandre (Overworld + Kampfbild) | `lysandre.png` | vom User geliefert, Künstler *bitte nachtragen* |
-| Team-Galaktik-Rüpel (Overworld; Kampfbilder `galactic_grunt_m.png`/`galactic_grunt_f.png` vom User geliefert, aus Illustration verkleinert) | `galactic_grunt.png` | vom User geliefert, Künstler *bitte nachtragen* |
-| Team-Galaktik-Rüpel, zweite Variante (Overworld) | `galactic_grunt_2.png` | vom User geliefert, Künstler *bitte nachtragen* |
+| Lambda/Archer (Overworld) | `archer.png` | vom User geliefert, Künstler *bitte nachtragen* |
+| Team-Galaktik-Rüpel (Overworld; Kampfbilder `galactic_grunt_m.png`/`galactic_grunt_f.png` vom User geliefert, aus Illustration verkleinert) | `galactic_grunt_2.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Team-Flare-Rüpel (Kampfbild) | `flare_grunt_m.png` | vom User geliefert, Künstler *bitte nachtragen* |
 | Team-Flare-Wissenschaftlerin (Kampfbild, aus Illustration verkleinert) | `flare_admin_f.png` | vom User geliefert, Quelle *bitte nachtragen* |
 | Team-Flare-Wissenschaftler (Kampfbild, aus Illustration verkleinert) | `flare_admin_m.png` | vom User geliefert, Quelle *bitte nachtragen* |

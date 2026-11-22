@@ -3009,8 +3009,8 @@ static const struct SpriteFrameImage sPicTable_Lysandre[] = {
     overworld_ascending_frames(gObjectEventPic_Lysandre, 4, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_GalacticGrunt[] = {
-    overworld_ascending_frames(gObjectEventPic_GalacticGrunt, 2, 4),
+static const struct SpriteFrameImage sPicTable_Archer[] = {
+    overworld_ascending_frames(gObjectEventPic_Archer, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_YellGruntF[] = {

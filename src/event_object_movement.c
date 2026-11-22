@@ -523,7 +523,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_SkullGrunt,              OBJ_EVENT_PAL_TAG_SKULL_GRUNT},
     {gObjectEventPal_GalacticGrunt2, OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT_2},
     {gObjectEventPal_YellGruntF, OBJ_EVENT_PAL_TAG_YELL_GRUNT_F},
-    {gObjectEventPal_GalacticGrunt, OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT},
+    {gObjectEventPal_Archer, OBJ_EVENT_PAL_TAG_ARCHER},
     {gObjectEventPal_Lysandre, OBJ_EVENT_PAL_TAG_LYSANDRE},
     {gObjectEventPal_Guzma, OBJ_EVENT_PAL_TAG_GUZMA},
     {gObjectEventPal_YellGrunt, OBJ_EVENT_PAL_TAG_YELL_GRUNT},

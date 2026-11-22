@@ -60,8 +60,8 @@ TEMPLATES = [
     ("guzma", "GUZMA", "people/guzma.png", False, "elio"),
     ("skull", "SKULL", "people/skull_grunt.png", False, "elio"),
     ("lysandre", "LYSANDRE", "people/lysandre.png", False, "calem"),
-    ("galactic", "GALACTIC", "people/galactic_grunt.png", False, "lucas"),
-    ("galactic_b", "GALACTIC 2", "people/galactic_grunt_2.png", False, "lucas"),
+    ("archer", "ARCHER", "people/archer.png", False, "lucas"),
+    ("galactic_b", "GALACTIC", "people/galactic_grunt_2.png", False, "lucas"),
 ]
 # sheets with nine 32x32 frames (the other sheets have 16x32 frames)
 WIDE_SHEETS = {"piers", "yell_m", "guzma", "skull", "lysandre", "galactic_b"}
@@ -92,7 +92,7 @@ PICS_FOR = {
     "guzma": ("GUZMA", "Guzma", "ELIO", "Elio"),
     "skull": ("SKULL_GRUNT_M", "SkullGruntM", "ELIO", "Elio"),
     "lysandre": ("LYSANDRE", "Lysandre", "CALEM", "Calem"),
-    "galactic": ("GALACTIC_GRUNT_M", "GalacticGruntM", "LUCAS", "Lucas"),
+    "archer": ("ROCKET_GRUNT_M_FRLG", "RocketGruntMFrlg", "LUCAS", "Lucas"),  # no own battle pic yet
     "galactic_b": ("GALACTIC_GRUNT_M", "GalacticGruntM", "LUCAS", "Lucas"),
 }
 # pic palette roles: 0 keep, 1 skin, 2 hair, 3 hat, 4 top, 5 bottom (stored as role << 2 | shade)
