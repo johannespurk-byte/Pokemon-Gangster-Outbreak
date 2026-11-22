@@ -120,6 +120,30 @@ class Puzzle:
                     q.append(n)
         return seen
 
+    def no_traps(self, start, home):
+        """every resting spot reachable from start can still get back to home"""
+        from collections import deque as dq
+        edges, seen, q = {}, {start}, dq([start])
+        while q:
+            p = q.popleft()
+            edges[p] = [n for n in (self.step(p, d) for d in 'NSWE') if n is not None]
+            for n in edges[p]:
+                if n not in seen:
+                    seen.add(n)
+                    q.append(n)
+        back = {}
+        for p, ns in edges.items():
+            for n in ns:
+                back.setdefault(n, []).append(p)
+        ok, q = {home}, dq([home])
+        while q:
+            p = q.popleft()
+            for n in back.get(p, ()):
+                if n not in ok:
+                    ok.add(n)
+                    q.append(n)
+        return seen <= ok
+
     def path(self, start, goal):
         seen = self.reachable(start)
         if goal not in seen:
@@ -128,6 +152,23 @@ class Puzzle:
         while seen[out[-1]] is not None:
             out.append(seen[out[-1]])
         return out[::-1]
+
+    def check_trainers(self, trainers, door, leader_front, name):
+        """a trainer who spots the player walks up to him and stays there after the battle: for every spot
+        where that can happen, the player must still reach the leader and the door"""
+        reach = self.reachable(door)
+        for (tx, ty, d, sight) in trainers:
+            dx, dy = DIRS[d]
+            for k in range(1, sight + 1):
+                cell = (tx + dx * k, ty + dy * k)
+                if not self.free(*cell) or self.ch(*cell) in SPIN or self.ch(*cell) in '~':
+                    break  # sight blocked (the player never rests on arrows or ice)
+                if cell not in reach:
+                    continue
+                stop = (tx + dx * (k - 1), ty + dy * (k - 1))
+                moved = Puzzle(self.rows, self.blocked - {(tx, ty)}, [stop])
+                assert moved.path(cell, leader_front) and moved.path(cell, door), \
+                    '%s: trainer at %s spotting the player at %s would block the way' % (name, (tx, ty), cell)
 
     def check(self, door, leader_front, name):
         there = self.path(door, leader_front)
@@ -250,7 +291,7 @@ GYM_PUZZLES = {
             "KKKKKKKKKKKKK",
         ],
         door=(6, 17), leader_front=(6, 5), belt_tag=(64, 128, 232),
-        objects={'Kay': (1, 16, 'MOVEMENT_TYPE_FACE_RIGHT', 3), 'Bridget': (8, 9, 'MOVEMENT_TYPE_FACE_LEFT', 3),
+        objects={'Kay': (1, 16, 'MOVEMENT_TYPE_FACE_RIGHT', 1), 'Bridget': (8, 10, 'MOVEMENT_TYPE_FACE_LEFT', 1),
                  'Tina': (11, 13, 'MOVEMENT_TYPE_FACE_UP', 2), 'Mary': (8, 13, 'MOVEMENT_TYPE_FACE_UP', 2),
                  'Tamia': (9, 16, 'MOVEMENT_TYPE_FACE_LEFT', 3),
                  'CutTree': [(1, 15, 'MOVEMENT_TYPE_FACE_DOWN', 0), (11, 15, 'MOVEMENT_TYPE_FACE_DOWN', 0), (11, 16, 'MOVEMENT_TYPE_FACE_DOWN', 0)]},

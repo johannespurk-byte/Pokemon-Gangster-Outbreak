@@ -483,7 +483,16 @@ class Gym:
                    if rows[y][x] == 'K' and (orig[y * self.w + x] >> 10) & 3}
         people = {(o['x'], o['y']) for o in data['object_events']}
         blocked -= set(spec.get('open_cells', ()))  # e.g. Vermilion's laser gate counts as opened
-        return Puzzle(rows, blocked, people).check(spec['door'], spec['leader_front'], self.key)
+        puzzle = Puzzle(rows, blocked, people)
+        facing = {'DOWN': 'S', 'UP': 'N', 'LEFT': 'W', 'RIGHT': 'E'}
+        trainers = []
+        for o in data['object_events']:
+            sight = int(o.get('trainer_sight_or_berry_tree_id') or 0) if o.get('trainer_type') == 'TRAINER_TYPE_NORMAL' else 0
+            move = o['movement_type'].replace('MOVEMENT_TYPE_FACE_', '')
+            if sight and move in facing:
+                trainers.append((o['x'], o['y'], facing[move], sight))
+        puzzle.check_trainers(trainers, spec['door'], spec['leader_front'], self.key)
+        return puzzle.check(spec['door'], spec['leader_front'], self.key)
 
     def decorate(self):
         rng = random.Random(self.cfg['seed'])
