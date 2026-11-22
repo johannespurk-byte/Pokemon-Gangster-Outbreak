@@ -8,8 +8,7 @@ ViridianCity_Mart_OnLoad::
 	end
 
 ViridianCity_Mart_EventScript_HideQuestionnaire::
-	setmetatile 1, 3, METATILE_Mart_CounterMid_Top, 1
-	setmetatile 1, 4, METATILE_Mart_CounterMid_Bottom, 1
+	@ Gangster Outbreak: the ruined mart has no questionnaire any more
 	end
 
 ViridianCity_Mart_OnFrame::
@@ -38,7 +37,8 @@ ViridianCity_Mart_Movement_ApproachCounter::
 	walk_up
 	walk_up
 	walk_up
-	walk_in_place_faster_left
+	walk_up
+	walk_in_place_faster_up
 	step_end
 
 ViridianCity_Mart_Movement_FacePlayer::
@@ -46,7 +46,7 @@ ViridianCity_Mart_Movement_FacePlayer::
 	delay_16
 	delay_16
 	delay_16
-	walk_in_place_faster_right
+	walk_in_place_faster_down
 	step_end
 
 ViridianCity_Mart_EventScript_Clerk::

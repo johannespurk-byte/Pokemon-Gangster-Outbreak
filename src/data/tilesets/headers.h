@@ -1001,6 +1001,17 @@ const struct Tileset gTileset_PokemonCenterFrlg =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_GangInteriorFrlg =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GangInterior_Frlg,
+    .palettes = gTilesetPalettes_GangInterior_Frlg,
+    .metatiles = gMetatiles_GangInterior_Frlg,
+    .metatileAttributes = gMetatileAttributes_GangInterior_Frlg,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_Cave_Frlg =
 {
     .isCompressed = TRUE,

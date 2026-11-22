@@ -19,7 +19,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_JIGGLYPUFF",
-      "x": 2,
+      "x": 4,
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -33,8 +33,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_FRLG",
-      "x": 4,
-      "y": 8,
+      "x": 7,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
       "movement_range_x": 1,
@@ -48,7 +48,7 @@
       "local_id": "LOCALID_PEWTER_NURSE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_NURSE_FRLG",
-      "x": 7,
+      "x": 9,
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -62,7 +62,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
-      "x": 1,
+      "x": 3,
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -76,7 +76,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
-      "x": 13,
+      "x": 15,
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -90,8 +90,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GBA_KID",
-      "x": 10,
-      "y": 7,
+      "x": 12,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
@@ -104,8 +104,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GBA_KID",
-      "x": 14,
-      "y": 6,
+      "x": 17,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -118,29 +118,29 @@
   ],
   "warp_events": [
     {
-      "x": 6,
-      "y": 8,
+      "x": 8,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_PEWTER_CITY",
       "dest_warp_id": "5"
     },
     {
-      "x": 7,
-      "y": 8,
+      "x": 9,
+      "y": 10,
       "elevation": 3,
       "dest_map": "MAP_PEWTER_CITY",
       "dest_warp_id": "5"
     },
     {
-      "x": 8,
-      "y": 8,
+      "x": 10,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_PEWTER_CITY",
       "dest_warp_id": "5"
     },
     {
       "x": 1,
-      "y": 6,
+      "y": 8,
       "elevation": 4,
       "dest_map": "MAP_PEWTER_CITY_POKEMON_CENTER_2F",
       "dest_warp_id": "0"

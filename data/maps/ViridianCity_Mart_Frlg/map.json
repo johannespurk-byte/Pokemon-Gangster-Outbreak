@@ -20,10 +20,10 @@
       "local_id": "LOCALID_VIRIDIAN_MART_CLERK",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CLERK",
-      "x": 2,
-      "y": 3,
+      "x": 6,
+      "y": 2,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -34,8 +34,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
-      "x": 6,
-      "y": 2,
+      "x": 7,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -48,8 +48,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
-      "x": 9,
-      "y": 5,
+      "x": 11,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 1,
@@ -62,22 +62,22 @@
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 7,
-      "elevation": 3,
-      "dest_map": "MAP_VIRIDIAN_CITY",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 4,
-      "y": 7,
-      "elevation": 3,
-      "dest_map": "MAP_VIRIDIAN_CITY",
-      "dest_warp_id": "4"
-    },
-    {
       "x": 5,
-      "y": 7,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "elevation": 3,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 7,
+      "y": 8,
       "elevation": 3,
       "dest_map": "MAP_VIRIDIAN_CITY",
       "dest_warp_id": "4"

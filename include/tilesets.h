@@ -56,6 +56,7 @@ extern const struct Tileset gTileset_SeviiIslands45;
 extern const struct Tileset gTileset_SeviiIslands67;
 extern const struct Tileset gTileset_DepartmentStore;
 extern const struct Tileset gTileset_PokemonCenterFrlg;
+extern const struct Tileset gTileset_GangInteriorFrlg;
 extern const struct Tileset gTileset_SilphCo;
 extern const struct Tileset gTileset_SSAnne;
 extern const struct Tileset gTileset_SeaCottage;

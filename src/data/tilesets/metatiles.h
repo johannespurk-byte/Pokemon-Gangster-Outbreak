@@ -292,6 +292,8 @@ const u16 gMetatileAttributes_Mart[] = INCBIN_U16("data/tilesets/secondary/mart_
 
 const u16 gMetatiles_PokemonCenter_Frlg[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_frlg/metatiles.bin");
 const u16 gMetatileAttributes_PokemonCenter_Frlg[] = INCBIN_U16("data/tilesets/secondary/pokemon_center_frlg/metatile_attributes.bin");
+const u16 gMetatiles_GangInterior_Frlg[] = INCBIN_U16("data/tilesets/secondary/gang_interior_frlg/metatiles.bin");
+const u16 gMetatileAttributes_GangInterior_Frlg[] = INCBIN_U16("data/tilesets/secondary/gang_interior_frlg/metatile_attributes.bin");
 
 const u16 gMetatiles_Cave_Frlg[] = INCBIN_U16("data/tilesets/secondary/cave_frlg/metatiles.bin");
 const u16 gMetatileAttributes_Cave_Frlg[] = INCBIN_U16("data/tilesets/secondary/cave_frlg/metatile_attributes.bin");

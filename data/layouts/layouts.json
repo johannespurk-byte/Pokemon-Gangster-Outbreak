@@ -4933,12 +4933,12 @@
     {
       "id": "LAYOUT_POKEMON_CENTER_1F_FRLG",
       "name": "PokemonCenter_1F_FRLG_Layout",
-      "width": 15,
-      "height": 10,
+      "width": 19,
+      "height": 12,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_PokemonCenterFrlg",
+      "secondary_tileset": "gTileset_GangInteriorFrlg",
       "border_filepath": "data/layouts/PokemonCenter_1F_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/PokemonCenter_1F_Frlg/map.bin",
       "layout_version": "frlg"
@@ -4959,12 +4959,12 @@
     {
       "id": "LAYOUT_MART_FRLG",
       "name": "Mart_Layout_FRLG",
-      "width": 11,
-      "height": 9,
+      "width": 13,
+      "height": 10,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_Mart",
+      "secondary_tileset": "gTileset_GangInteriorFrlg",
       "border_filepath": "data/layouts/Mart_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/Mart_Frlg/map.bin",
       "layout_version": "frlg"
