@@ -92,8 +92,8 @@ PICS_FOR = {
     "guzma": ("GUZMA", "Guzma", "ELIO", "Elio"),
     "skull": ("SKULL_GRUNT_M", "SkullGruntM", "ELIO", "Elio"),
     "lysandre": ("LYSANDRE", "Lysandre", "CALEM", "Calem"),
-    "galactic": ("LUCAS", "Lucas", "LUCAS", "Lucas"),
-    "galactic_b": ("LUCAS", "Lucas", "LUCAS", "Lucas"),
+    "galactic": ("GALACTIC_GRUNT_M", "GalacticGruntM", "LUCAS", "Lucas"),
+    "galactic_b": ("GALACTIC_GRUNT_M", "GalacticGruntM", "LUCAS", "Lucas"),
 }
 # pic palette roles: 0 keep, 1 skin, 2 hair, 3 hat, 4 top, 5 bottom (stored as role << 2 | shade)
 PIC_ROLES = {"skin": 1, "hair": 2, "hat": 3, "top": 4, "bottom": 5}

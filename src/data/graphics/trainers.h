@@ -49,6 +49,10 @@ const u32 gTrainerFrontPic_SkullGruntM[] = INCGFX_U32("graphics/trainers/front_p
 const u16 gTrainerPalette_SkullGruntM[] = INCGFX_U16("graphics/trainers/front_pics/skull_grunt_m.png", ".gbapal");
 const u32 gTrainerFrontPic_SkullGruntF[] = INCGFX_U32("graphics/trainers/front_pics/skull_grunt_f.png", ".4bpp.smol");
 const u16 gTrainerPalette_SkullGruntF[] = INCGFX_U16("graphics/trainers/front_pics/skull_grunt_f.png", ".gbapal");
+const u32 gTrainerFrontPic_GalacticGruntM[] = INCGFX_U32("graphics/trainers/front_pics/galactic_grunt_m.png", ".4bpp.smol");
+const u16 gTrainerPalette_GalacticGruntM[] = INCGFX_U16("graphics/trainers/front_pics/galactic_grunt_m.png", ".gbapal");
+const u32 gTrainerFrontPic_GalacticGruntF[] = INCGFX_U32("graphics/trainers/front_pics/galactic_grunt_f.png", ".4bpp.smol");
+const u16 gTrainerPalette_GalacticGruntF[] = INCGFX_U16("graphics/trainers/front_pics/galactic_grunt_f.png", ".gbapal");
 const u32 gTrainerFrontPic_ShadowTriad[] = INCGFX_U32("graphics/trainers/front_pics/shadow_triad.png", ".4bpp.smol");
 const u16 gTrainerPalette_ShadowTriad[] = INCGFX_U16("graphics/trainers/front_pics/shadow_triad.png", ".gbapal");
 
@@ -1429,5 +1433,13 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_SKULL_GRUNT_F] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SkullGruntF, gTrainerPalette_SkullGruntF),
+    },
+    [TRAINER_PIC_GALACTIC_GRUNT_M] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_GalacticGruntM, gTrainerPalette_GalacticGruntM),
+    },
+    [TRAINER_PIC_GALACTIC_GRUNT_F] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_GalacticGruntF, gTrainerPalette_GalacticGruntF),
     },
 };

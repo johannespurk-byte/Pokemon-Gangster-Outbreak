@@ -1504,7 +1504,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SUPER_NERD_ERIK ===
 Name: ERIK
 Class: Team Galactic
-Pic: Super Nerd Frlg
+Pic: Galactic Grunt M
 Gender: Male
 Music: Dangerous
 Double Battle: No
@@ -1525,8 +1525,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SUPER_NERD_AVERY ===
 Name: AVERY
 Class: Team Galactic
-Pic: Super Nerd Frlg
-Gender: Male
+Pic: Galactic Grunt F
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
@@ -1550,7 +1550,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SUPER_NERD_DEREK ===
 Name: DEREK
 Class: Team Galactic
-Pic: Super Nerd Frlg
+Pic: Galactic Grunt M
 Gender: Male
 Music: Dangerous
 Double Battle: No
@@ -1563,7 +1563,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_SUPER_NERD_ZAC ===
 Name: ZAC
 Class: Team Galactic
-Pic: Super Nerd Frlg
+Pic: Galactic Grunt M
 Gender: Male
 Music: Dangerous
 Double Battle: No
@@ -2304,8 +2304,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BURGLAR_QUINN ===
 Name: QUINN
 Class: Team Galactic
-Pic: Burglar Frlg
-Gender: Male
+Pic: Galactic Grunt F
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
@@ -2325,7 +2325,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BURGLAR_RAMON ===
 Name: RAMON
 Class: Team Galactic
-Pic: Burglar Frlg
+Pic: Galactic Grunt M
 Gender: Male
 Music: Dangerous
 Double Battle: No
@@ -2338,7 +2338,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_BURGLAR_DUSTY ===
 Name: DUSTY
 Class: Team Galactic
-Pic: Burglar Frlg
+Pic: Galactic Grunt M
 Gender: Male
 Music: Dangerous
 Double Battle: No
