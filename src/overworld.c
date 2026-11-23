@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_random.h"
 #include "overworld.h"
 #include "battle_pyramid.h"
 #include "battle_setup.h"
@@ -2124,6 +2125,7 @@ void CB2_ContinueSavedGame(void)
 
     LoadSaveblockMapHeader();
     ClearDiveAndHoleWarps();
+    GangLoot_RepairBadEggs(); // Gangster Outbreak: fix Pokémon older versions broke when taking them from trainers
     trainerHillMapId = GetCurrentTrainerHillMapId();
     if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
         LoadBattlePyramidFloorObjectEventScripts();

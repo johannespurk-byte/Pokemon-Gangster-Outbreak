@@ -5368,6 +5368,9 @@ void BoxMonRestorePP(struct BoxPokemon *boxMon)
 {
     int i;
 
+    if (GetBoxMonData(boxMon, MON_DATA_SANITY_IS_BAD_EGG, 0))
+        return; // garbage data: its "moves" are not real moves
+
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
         if (GetBoxMonData(boxMon, MON_DATA_MOVE1 + i, 0))
@@ -6548,6 +6551,9 @@ void UpdateMonPersonality(struct BoxPokemon *boxMon, u32 personality)
 void HealPokemon(struct Pokemon *mon)
 {
     u32 data;
+
+    if (GetMonData(mon, MON_DATA_SANITY_IS_BAD_EGG))
+        return;
 
     data = GetMonData(mon, MON_DATA_MAX_HP);
     SetMonData(mon, MON_DATA_HP, &data);

@@ -17,6 +17,7 @@ enum Species GangStory_GetRivalStarter(void);         // Silver's random Pokémo
 
 // Gangster Outbreak loot (gang_loot.c): take a Pokémon from a beaten normal trainer
 void GangLoot_RememberParty(struct Pokemon *party); // called when a trainer party is created
+void GangLoot_RepairBadEggs(void);                   // repairs Pokémon older versions broke when taking them
 
 // Gangster Outbreak items (gang_items.c): Poké Vial and Auto-Repel with 1 + one charge per Gym Badge
 #define GANG_AUTO_REPEL_STEPS 250
