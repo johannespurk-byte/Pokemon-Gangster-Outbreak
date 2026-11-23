@@ -329,7 +329,8 @@ u32 GetPlayerTextSpeed(void)
     if (gSaveBlock2Ptr->optionsTextSpeed > OPTIONS_TEXT_SPEED_INSTANT)
         gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
 
-    if (FlagGet(FLAG_TEXT_SPEED_INSTANT) || TEXT_SPEED_INSTANT)
+    // Gangster Outbreak: battle messages appear at once, like in Pokémon Tribunal Arma (TEXT_SPEED_INSTANT there)
+    if (FlagGet(FLAG_TEXT_SPEED_INSTANT) || TEXT_SPEED_INSTANT || (gMain.inBattle && !TESTING))
         return OPTIONS_TEXT_SPEED_INSTANT;
 
     return gSaveBlock2Ptr->optionsTextSpeed;
