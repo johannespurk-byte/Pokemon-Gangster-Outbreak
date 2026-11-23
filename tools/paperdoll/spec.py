@@ -27,7 +27,7 @@ SPEC.update({
     "rocket_m":   dict(accent=[8, 9], outline=[15, 10], white=[14], skin=[2, 3], hat=[7, 12, 13], bottom=[11]),
     "rocket_f":   dict(accent=[8, 9], outline=[15, 10], white=[14], skin=[2, 3], hat=[7, 12, 13], bottom=[11]),
     "giovanni":   dict(outline=[15], white=[14], skin=[1, 2, 3], hat=[], bottom=[8, 9, 10]),
-    "cyrus":      dict(outline=[15], white=[], skin=[1, 2, 3], hat=[], bottom=[8, 9]),
+    "cyrus":      dict(outline=[15, 4], white=[], skin=[1, 2, 3], hat=[], bottom=[8, 9]),  # 4: brown eyes/face lines
     "magma_oras": dict(outline=[15, 9], white=[], skin=[1, 2, 3], hat=[4, 5, 6, 12, 13, 14], bottom=[7, 10, 11]),
     "magma_m":    dict(outline=[15], white=[14], skin=[1, 2, 3], hat=[8, 9, 10], bottom=[12, 13]),
     "magma_f":    dict(outline=[15], white=[14], skin=[1, 2, 3], hat=[8, 9, 10], bottom=[12]),
@@ -91,5 +91,5 @@ PIC_ROLE_FIX = {
                                     9: "hair", 10: "hair", 11: "hair", 14: None, 15: None},
     ("Lysandre", False):           {7: None, 12: None, 13: None},  # suit highlights / buttons stay
     ("GalacticGruntM", False):     {1: None, 2: "top", 3: None, 4: "top", 5: "hair", 6: None, 7: "hair", 8: "hair",
-                                    9: "top", 10: "skin", 11: "skin", 12: None, 13: "bottom", 14: "skin", 15: "skin"},
+                                    9: "top", 10: "skin", 11: "skin", 12: None, 13: "bottom", 14: None, 15: None},  # 14/15: gold G
 }

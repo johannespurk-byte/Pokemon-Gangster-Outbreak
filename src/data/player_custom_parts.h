@@ -542,7 +542,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
     [PLAYER_PART_CYRUS] = {
         .name = COMPOUND_STRING("CYRUS"),
         .gfx = sPlayerPartGfx_Cyrus,
-        .palette = {0x7C1F, 0x0000, 0x533E, 0x365A, 0x628A, 0x4166, 0x112E, 0x628A, 0x4166, 0x52D9, 0x52D9, 0x522C, 0x294A, 0x356B, 0x1CC6, 0x533E},
+        .palette = {0x7C1F, 0x0887, 0x533E, 0x365A, 0x6EEC, 0x5A28, 0x4166, 0x6EEC, 0x5A28, 0x473C, 0x473C, 0x5A32, 0x4DC7, 0x356B, 0x1CC6, 0x533E},
         .neck = {19, 19, 19, 20, 20, 20, 20, 20, 20, 19, 19, 19, 20, 20, 20, 20, 20, 20},
         .stateHead = PLAYER_STATE_HEAD_NATE,
         .female = FALSE,
@@ -744,7 +744,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_GALACTIC_GRUNT_M,
         .backPic = TRAINER_PIC_STEVEN,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 0, 18, 0, 16, 10, 0, 8, 9, 17, 4, 4, 0, 20, 5, 5},
+        .frontRoles = {0, 0, 18, 0, 16, 10, 0, 8, 9, 17, 4, 5, 0, 20, 0, 0},
         .backRoles = {0, 4, 4, 5, 0, 9, 16, 17, 18, 8, 8, 10, 0, 0, 0, 0},
     },
 };
