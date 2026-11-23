@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_battle_bg.h"
 #include "battle_setup.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -598,18 +599,24 @@ static u8 CheckTrainer(u8 objectEventId)
     return numTrainers;
 }
 
+#define TRAINER_SIGHT_RANGE 7
+
 static u8 GetTrainerApproachDistance(struct ObjectEvent *trainerObj)
 {
-    s16 x, y;
+    s16 x, y, range;
     u8 i;
     u8 approachDistance;
 
     PlayerGetDestCoords(&x, &y);
-    // Gangster Outbreak: every trainer watches all four directions (TRAINER_TYPE_NORMAL included)
+    // Gangster Outbreak: every trainer watches all four directions (TRAINER_TYPE_NORMAL included) and sees
+    // TRAINER_SIGHT_RANGE tiles far; in the gyms the puzzle-checked sight ranges stay (tools/apocalypse/gyms.py)
+    range = trainerObj->trainerRange_berryTreeId;
+    if (range != 0 && !GangBattleBg_IsGymMap())
+        range = TRAINER_SIGHT_RANGE;
     {
         for (i = 0; i < ARRAY_COUNT(sDirectionalApproachDistanceFuncs); i++)
         {
-            approachDistance = sDirectionalApproachDistanceFuncs[i](trainerObj, trainerObj->trainerRange_berryTreeId, x, y);
+            approachDistance = sDirectionalApproachDistanceFuncs[i](trainerObj, range, x, y);
             if (CheckPathBetweenTrainerAndPlayer(trainerObj, approachDistance, i + 1)) // directions are 1-4 instead of 0-3. south north west east
                 return approachDistance;
         }

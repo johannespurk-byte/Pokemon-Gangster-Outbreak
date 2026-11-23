@@ -146,6 +146,11 @@ const struct GangBattleScene *GangBattleBg_GetScene(u32 environment)
     }
 }
 
+bool32 GangBattleBg_IsGymMap(void)
+{
+    return GetGymScene() >= 0;
+}
+
 const struct GangBattleScene *GangBattleBg_GetEntry(u32 environment)
 {
     return GangBattleBg_GetScene(environment) != NULL ? &sGangEntry : NULL;

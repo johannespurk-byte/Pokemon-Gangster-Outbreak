@@ -12,5 +12,6 @@ struct GangBattleScene
 // NULL: use the normal background of that environment
 const struct GangBattleScene *GangBattleBg_GetScene(u32 environment);
 const struct GangBattleScene *GangBattleBg_GetEntry(u32 environment);
+bool32 GangBattleBg_IsGymMap(void); // one of the eight gang gyms
 
 #endif // GUARD_GANG_BATTLE_BG_H
