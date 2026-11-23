@@ -86,6 +86,9 @@ PIC_ROLE_FIX = {
     ("AquaGruntF", False):         {1: "skin", 10: "hair", 12: "hair", 13: "hair", 5: "bottom", 6: "bottom", 7: "bottom", 8: None, 9: None},
     ("AquaLeaderArchie", False):   {1: "skin", 5: "top", 7: "top", 8: "top"},
     # drawn pics with soft shading: outline and dark shading stay, the hands carry the skin colours
+    # Steven's back pic (men without a hat): 5 = hair outline, 6 = cuffs (moved there from 7 / 11)
+    ("Steven", True):              {1: "skin", 2: "skin", 3: "skin", 4: None, 5: "hair", 6: "top", 7: "top", 8: "top",
+                                    9: "hair", 10: "hair", 11: "hair", 14: None, 15: None},
     ("Lysandre", False):           {7: None, 12: None, 13: None},  # suit highlights / buttons stay
     ("GalacticGruntM", False):     {1: None, 2: "top", 3: None, 4: "top", 5: "hair", 6: None, 7: "hair", 8: "hair",
                                     9: "top", 10: "skin", 11: "skin", 12: None, 13: "bottom", 14: "skin", 15: "skin"},

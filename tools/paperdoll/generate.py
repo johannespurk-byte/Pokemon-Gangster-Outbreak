@@ -76,24 +76,25 @@ PICS_FOR = {
     "victor": ("VICTOR", "Victor", "VICTOR", "Victor"), "gloria": ("GLORIA", "Gloria", "GLORIA", "Gloria"),
     "rocket_m": ("ROCKET_GRUNT_M_FRLG", "RocketGruntMFrlg", "HILBERT", "Hilbert"),
     "rocket_f": ("ROCKET_GRUNT_F_FRLG", "RocketGruntFFrlg", "HILDA", "Hilda"),
-    "giovanni": ("LEADER_GIOVANNI_FRLG", "LeaderGiovanniFrlg", "NATE", "Nate"),
-    "cyrus": ("CYRUS", "Cyrus", "NATE", "Nate"),
+    "giovanni": ("LEADER_GIOVANNI_FRLG", "LeaderGiovanniFrlg", "STEVEN", "Steven"),
+    "cyrus": ("CYRUS", "Cyrus", "STEVEN", "Steven"),
     "magma_oras": ("MAGMA_GRUNT_M", "MagmaGruntM", "HILBERT", "Hilbert"),
     "magma_m": ("MAGMA_GRUNT_M", "MagmaGruntM", "HILBERT", "Hilbert"),
     "magma_f": ("MAGMA_GRUNT_F", "MagmaGruntF", "HILDA", "Hilda"),
-    "maxie": ("MAGMA_LEADER_MAXIE", "MagmaLeaderMaxie", "NATE", "Nate"),
+    "maxie": ("MAGMA_LEADER_MAXIE", "MagmaLeaderMaxie", "STEVEN", "Steven"),
     "aqua_m": ("AQUA_GRUNT_M", "AquaGruntM", "HILBERT", "Hilbert"),
     "aqua_f": ("AQUA_GRUNT_F", "AquaGruntF", "HILDA", "Hilda"),
     "archie": ("AQUA_LEADER_ARCHIE", "AquaLeaderArchie", "LUCAS", "Lucas"),
-    # no own battle pic yet: the hero of the same generation stands in (recoloured like the player)
-    "piers": ("PIERS", "Piers", "VICTOR", "Victor"),
+    # no own battle pic yet: the hero of the same generation stands in (recoloured like the player);
+    # men without a hat get Steven's back pic (short hair, suit)
+    "piers": ("PIERS", "Piers", "STEVEN", "Steven"),
     "yell_m": ("YELL_GRUNT_M", "YellGruntM", "VICTOR", "Victor"),
     "yell_f": ("YELL_GRUNT_F", "YellGruntF", "GLORIA", "Gloria"),
-    "guzma": ("GUZMA", "Guzma", "ELIO", "Elio"),
-    "skull": ("SKULL_GRUNT_M", "SkullGruntM", "ELIO", "Elio"),
-    "lysandre": ("LYSANDRE", "Lysandre", "CALEM", "Calem"),
-    "archer": ("ARCHER", "Archer", "LUCAS", "Lucas"),
-    "galactic_b": ("GALACTIC_GRUNT_M", "GalacticGruntM", "LUCAS", "Lucas"),
+    "guzma": ("GUZMA", "Guzma", "STEVEN", "Steven"),
+    "skull": ("SKULL_GRUNT_M", "SkullGruntM", "STEVEN", "Steven"),
+    "lysandre": ("LYSANDRE", "Lysandre", "STEVEN", "Steven"),
+    "archer": ("ARCHER", "Archer", "STEVEN", "Steven"),
+    "galactic_b": ("GALACTIC_GRUNT_M", "GalacticGruntM", "STEVEN", "Steven"),
 }
 # pic palette roles: 0 keep, 1 skin, 2 hair, 3 hat, 4 top, 5 bottom (stored as role << 2 | shade)
 PIC_ROLES = {"skin": 1, "hair": 2, "hat": 3, "top": 4, "bottom": 5}
@@ -245,6 +246,9 @@ def pal_path(symbol, back):
     src = open("src/data/graphics/trainers.h").read()
     var = ("gTrainerBackPicPalette_" if back else "gTrainerPalette_") + symbol
     m = re.search(re.escape(var) + r'\[\] = INCGFX_U16\("([^"]+)"', src)
+    if not m and back:  # e.g. Steven: the back pic shares the front pic's palette
+        var = "gTrainerPalette_" + symbol
+        m = re.search(re.escape(var) + r'\[\] = INCGFX_U16\("([^"]+)"', src)
     assert m, var
     path = m.group(1)
     if path.endswith(".pal"):
@@ -418,9 +422,10 @@ def main():
     picinfo = {}
     for name, *_ in TEMPLATES:
         fpic, fsym, bpic, bsym = PICS_FOR[name]
-        back_owner = next(t[0] for t in TEMPLATES if PICS_FOR[t[0]][1] == bsym)
+        # a back pic that belongs to no template (Steven) is read against the outfit's own walking sheet
+        back_owner = next((t[0] for t in TEMPLATES if PICS_FOR[t[0]][1] == bsym), name)
         picinfo[name] = (fpic, pic_roles(name, fsym, False),
-                         bpic, pic_roles(back_owner, bsym, True), back_owner == name)
+                         bpic, pic_roles(back_owner, bsym, True), PICS_FOR[name][1] == bsym)
     for name in STATE_HEADS:
         pal, by_index, _ = std[name]
         for short, suffix, nframes in STATES:
