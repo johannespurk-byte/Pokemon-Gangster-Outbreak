@@ -430,7 +430,7 @@ void CB2_InitTitleScreenFrlg(void)
             sTitleScreenTimerTaskId = CreateTask(Task_TitleScreenTimer, 2);
             SetVBlankCallback(VBlankCB);
             SetMainCallback2(CB2_TitleScreenRun);
-            m4aSongNumStart(MUS_TITLE);
+            m4aSongNumStartOrChange(MUS_TITLE); // continues the intro's theme instead of restarting it
         }
         return;
     }

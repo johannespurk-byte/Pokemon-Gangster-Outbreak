@@ -962,6 +962,7 @@ bool8 SetUpCopyrightScreenFrlg(void)
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_1D_MAP | DISPCNT_BG0_ON);
         SetSerialCallback(SerialCB_CopyrightScreen);
         GameCubeMultiBoot_Init(&sGcmb);
+        m4aSongNumStartOrChange(MUS_TITLE); // Gangster Outbreak: one theme for intro and title screen
         // fallthrough
     default:
         UpdatePaletteFade();
@@ -1164,7 +1165,7 @@ static void IntroCB_GF_Star(struct IntroSequenceData * this)
     switch (this->state)
     {
     case 0:
-        PlaySE(MUS_RG_GAME_FREAK);
+        m4aSongNumStartOrChange(MUS_TITLE); // keeps running (also after the title screen restarts the intro)
         GFScene_LoadGfxCreateStar();
         this->timer = 0;
         this->state++;
@@ -1329,7 +1330,7 @@ static void UNUSED IntroCB_Scene1(struct IntroSequenceData * this)
     case 3:
         if (!gPaletteFade.active)
         {
-            m4aSongNumStart(MUS_RG_INTRO_FIGHT);
+            m4aSongNumStartOrChange(MUS_TITLE);
             this->timer = 0;
             this->state++;
         }
@@ -2076,7 +2077,7 @@ static void IntroCB_GangCity(struct IntroSequenceData * this)
     case 2:
         if (!gPaletteFade.active)
         {
-            m4aSongNumStart(MUS_RG_INTRO_FIGHT);
+            m4aSongNumStartOrChange(MUS_TITLE);
             this->timer = 0;
             this->data[2] = 0; // next grunt in sGangEnterOrder
             this->state++;
