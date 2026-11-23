@@ -51,7 +51,7 @@ PIC_ROLE_FIX = {
     ("Leaf", False):    {4: None, 6: "top", 7: "top", 12: "bottom", 13: "bottom"},
     ("Leaf", True):     {1: "hair", 4: "hair", 6: "top", 8: "hair", 9: "hat", 11: None, 12: None, 13: None, 14: None},
     ("Lucas", False):   {1: None, 2: None, 6: None, 7: None},
-    ("Lucas", True):    {3: None, 4: None, 11: None, 12: "hair"},
+    ("Lucas", True):    {3: None, 4: None, 11: None, 12: "hair", 14: "hair", 15: "top"},  # 14/15 split from 10/12
     ("Dawn", False):    {1: None, 7: None, 3: None, 4: None, 10: "top", 13: "bottom"},
     ("Dawn", True):     {4: None, 12: "hair"},
     ("Hilbert", False): {9: "hat", 10: "hair", 12: "hat"},
@@ -81,7 +81,7 @@ PIC_ROLE_FIX = {
     ("Cyrus", False):              {4: None, 5: "top", 7: "top", 8: "bottom", 9: "bottom", 11: None},
     ("MagmaGruntM", False):        {1: "skin", 10: "top", 11: None, 12: "top", 13: "top"},
     ("MagmaGruntF", False):        {1: "skin", 5: "bottom", 6: "bottom", 7: None, 9: None, 10: "top", 11: None, 12: "top", 13: "top"},
-    ("MagmaLeaderMaxie", False):   {1: "skin", 5: None, 6: None, 7: None, 8: "bottom", 10: "top", 12: "top", 13: "top"},
+    ("MagmaLeaderMaxie", False):   {1: "skin", 5: "hair", 6: None, 7: None, 8: "bottom", 9: "hair", 10: "top", 12: "top", 13: "top"},  # 5/9: hair (split from the coat reds)
     ("AquaGruntM", False):         {1: "skin", 5: "bottom", 6: "bottom", 7: "bottom", 9: None, 12: None, 13: None, 8: None},
     ("AquaGruntF", False):         {1: "skin", 10: "hair", 12: "hair", 13: "hair", 5: "bottom", 6: "bottom", 7: "bottom", 8: None, 9: None},
     ("AquaLeaderArchie", False):   {1: "skin", 5: "top", 7: "top", 8: "top"},

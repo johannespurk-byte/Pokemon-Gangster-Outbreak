@@ -355,7 +355,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .backPic = TRAINER_PIC_LUCAS,
         .ownBackPic = TRUE,
         .frontRoles = {0, 0, 0, 0, 0, 21, 0, 0, 12, 16, 0, 20, 5, 0, 0, 4},
-        .backRoles = {0, 0, 4, 0, 0, 16, 5, 12, 17, 13, 18, 0, 8, 0, 0, 0},
+        .backRoles = {0, 0, 4, 0, 0, 16, 5, 12, 16, 13, 17, 0, 9, 0, 8, 18},
     },
     [PLAYER_PART_DAWN] = {
         .name = COMPOUND_STRING("DAWN"),
@@ -601,7 +601,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .frontPic = TRAINER_PIC_MAGMA_LEADER_MAXIE,
         .backPic = TRAINER_PIC_STEVEN,
         .ownBackPic = FALSE,
-        .frontRoles = {0, 4, 4, 5, 0, 0, 0, 0, 20, 0, 18, 0, 16, 17, 0, 0},
+        .frontRoles = {0, 4, 4, 5, 0, 9, 0, 0, 20, 8, 18, 0, 16, 17, 0, 0},
         .backRoles = {0, 4, 4, 5, 0, 9, 16, 17, 18, 8, 8, 10, 0, 0, 0, 0},
     },
     [PLAYER_PART_AQUA_M] = {
@@ -641,7 +641,7 @@ static const struct PlayerPartData sPlayerParts[PLAYER_PART_COUNT] = {
         .backPic = TRAINER_PIC_LUCAS,
         .ownBackPic = FALSE,
         .frontRoles = {0, 4, 4, 5, 8, 0, 16, 17, 18, 0, 13, 0, 12, 12, 0, 0},
-        .backRoles = {0, 0, 4, 0, 0, 16, 5, 12, 17, 13, 18, 0, 8, 0, 0, 0},
+        .backRoles = {0, 0, 4, 0, 0, 16, 5, 12, 16, 13, 17, 0, 9, 0, 8, 18},
     },
     [PLAYER_PART_PIERS] = {
         .name = COMPOUND_STRING("PIERS"),
