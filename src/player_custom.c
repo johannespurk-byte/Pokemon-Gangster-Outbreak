@@ -242,6 +242,7 @@ static void RecolorPicPalette(u16 *dest, const u16 *src, const u8 *roles, const 
 static void ComposeTrainerPics(const struct PlayerLook *look)
 {
     const struct PlayerPartData *outfit = &sPlayerParts[look->outfit];
+    const struct PlayerPartData *back;
     bool8 headChanged = (look->head != look->outfit);
     bool8 roleOn[PIC_ROLE_COUNT];
 
@@ -256,11 +257,13 @@ static void ComposeTrainerPics(const struct PlayerLook *look)
     RecolorPicPalette(sPlayerCustomFrontPal, gTrainerPicInfo[outfit->frontPic].frontPic->paletteData, outfit->frontRoles, roleOn);
     gPlayerCustomFrontPicInfo.paletteData = sPlayerCustomFrontPal;
 
-    // back pic: a borrowed hero back pic takes all colours of the outfit
-    if (!outfit->ownBackPic)
+    // back pic: it mostly shows head and hair, so the HEAD decides which one (cap, hood, bare hair ...);
+    // unless it is the template's own back pic, it takes all colours of the composed character
+    back = &sPlayerParts[look->head];
+    if (headChanged || !back->ownBackPic)
         roleOn[PIC_ROLE_TOP] = roleOn[PIC_ROLE_BOTTOM] = roleOn[PIC_ROLE_SKIN] = roleOn[PIC_ROLE_HAIR] = roleOn[PIC_ROLE_HAT] = TRUE;
-    memcpy(&gPlayerCustomBackPicInfo, gTrainerPicInfo[outfit->backPic].backPic, sizeof(gPlayerCustomBackPicInfo));
-    RecolorPicPalette(sPlayerCustomBackPal, gTrainerPicInfo[outfit->backPic].backPic->paletteData, outfit->backRoles, roleOn);
+    memcpy(&gPlayerCustomBackPicInfo, gTrainerPicInfo[back->backPic].backPic, sizeof(gPlayerCustomBackPicInfo));
+    RecolorPicPalette(sPlayerCustomBackPal, gTrainerPicInfo[back->backPic].backPic->paletteData, back->backRoles, roleOn);
     gPlayerCustomBackPicInfo.paletteData = sPlayerCustomBackPal;
 }
 
