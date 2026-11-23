@@ -59,6 +59,8 @@ EWRAM_DATA struct TrainerFrontPicInfo gPlayerCustomFrontPicInfo = {0};
 EWRAM_DATA struct TrainerBackPicInfo gPlayerCustomBackPicInfo = {0};
 static EWRAM_DATA u16 sPlayerCustomFrontPal[16] = {0};
 static EWRAM_DATA u16 sPlayerCustomBackPal[16] = {0};
+#define BACK_PIC_FRAMES 5 // Kanto throw animation
+static EWRAM_DATA u8 sPlayerCustomBackGfx[BACK_PIC_FRAMES * TRAINER_PIC_SIZE] ALIGNED(4) = {0};
 static EWRAM_DATA struct PlayerLook sComposedLook = {0};
 
 static const struct SpriteFrameImage sPicTable_PlayerCustomNormal[] = {
@@ -239,10 +241,68 @@ static void RecolorPicPalette(u16 *dest, const u16 *src, const u8 *roles, const 
     }
 }
 
+#define WALK_FRAME_FACE_NORTH 1
+#define BACK_PIC_SCALE        3
+
+static u32 GetWalkFramePixel(const u8 *frame, u32 x, u32 y)
+{
+    // 16x32 frame = 2x4 tiles, row-major; 4bpp, low nibble = left pixel
+    u8 byte = frame[((y / 8) * 2 + x / 8) * TILE_SIZE_4BPP + (y % 8) * 4 + (x % 8) / 2];
+    return (x & 1) ? byte >> 4 : byte & 0xF;
+}
+
+// The battle back pic: the composed walking frame seen from behind, scaled up 3x and cut at the waist like
+// the hero back pics. Every frame of the throw animation shows it; colours are the overworld palette.
+static void ComposeBackPic(void)
+{
+    const u8 *frame = &sPlayerCustomGfx[WALK_FRAME_FACE_NORTH * FRAME_SIZE_16x32];
+    u32 top = 0, x, y, f;
+    u8 *dest = sPlayerCustomBackGfx;
+    struct SpriteFrameImage image = {.data = sPlayerCustomBackGfx, .size = TRAINER_PIC_SIZE, .relativeFrames = TRUE};
+    struct MonCoords coords = {.size = 8, .y_offset = BACK_PIC_FRAMES};
+    const s32 left = (TRAINER_PIC_WIDTH - 16 * BACK_PIC_SCALE) / 2;
+
+    for (top = 0; top < 32; top++) // first row with something in it (top of the head)
+    {
+        for (x = 0; x < 16 && !GetWalkFramePixel(frame, x, top); x++)
+            ;
+        if (x < 16)
+            break;
+    }
+    if (top > 0)
+        top--;
+    memset(dest, 0, TRAINER_PIC_SIZE);
+    for (y = 0; y < TRAINER_PIC_HEIGHT; y++)
+    {
+        u32 sy = top + y / BACK_PIC_SCALE;
+        if (sy >= 32)
+            break;
+        for (x = 0; x < TRAINER_PIC_WIDTH; x++)
+        {
+            s32 sx = ((s32)x - left) / BACK_PIC_SCALE;
+            u32 v;
+            u8 *byte;
+            if ((s32)x < left || sx >= 16)
+                continue;
+            v = GetWalkFramePixel(frame, sx, sy);
+            // 64x64 sprite = 8x8 tiles, row-major
+            byte = &dest[((y / 8) * 8 + x / 8) * TILE_SIZE_4BPP + (y % 8) * 4 + (x % 8) / 2];
+            *byte |= (x & 1) ? (v << 4) : v;
+        }
+    }
+    for (f = 1; f < BACK_PIC_FRAMES; f++)
+        memcpy(&sPlayerCustomBackGfx[f * TRAINER_PIC_SIZE], dest, TRAINER_PIC_SIZE);
+
+    memcpy(&gPlayerCustomBackPicInfo, gTrainerPicInfo[TRAINER_PIC_RED].backPic, sizeof(gPlayerCustomBackPicInfo)); // Kanto animation
+    memcpy((void *)&gPlayerCustomBackPicInfo.image, &image, sizeof(image));
+    memcpy((void *)&gPlayerCustomBackPicInfo.coordinates, &coords, sizeof(coords));
+    memcpy(sPlayerCustomBackPal, gPlayerCustomPalette, sizeof(sPlayerCustomBackPal));
+    gPlayerCustomBackPicInfo.paletteData = sPlayerCustomBackPal;
+}
+
 static void ComposeTrainerPics(const struct PlayerLook *look)
 {
     const struct PlayerPartData *outfit = &sPlayerParts[look->outfit];
-    const struct PlayerPartData *back;
     bool8 headChanged = (look->head != look->outfit);
     bool8 roleOn[PIC_ROLE_COUNT];
 
@@ -257,14 +317,9 @@ static void ComposeTrainerPics(const struct PlayerLook *look)
     RecolorPicPalette(sPlayerCustomFrontPal, gTrainerPicInfo[outfit->frontPic].frontPic->paletteData, outfit->frontRoles, roleOn);
     gPlayerCustomFrontPicInfo.paletteData = sPlayerCustomFrontPal;
 
-    // back pic: it mostly shows head and hair, so the HEAD decides which one (cap, hood, bare hair ...);
-    // unless it is the template's own back pic, it takes all colours of the composed character
-    back = &sPlayerParts[look->head];
-    if (headChanged || !back->ownBackPic)
-        roleOn[PIC_ROLE_TOP] = roleOn[PIC_ROLE_BOTTOM] = roleOn[PIC_ROLE_SKIN] = roleOn[PIC_ROLE_HAIR] = roleOn[PIC_ROLE_HAT] = TRUE;
-    memcpy(&gPlayerCustomBackPicInfo, gTrainerPicInfo[back->backPic].backPic, sizeof(gPlayerCustomBackPicInfo));
-    RecolorPicPalette(sPlayerCustomBackPal, gTrainerPicInfo[back->backPic].backPic->paletteData, back->backRoles, roleOn);
-    gPlayerCustomBackPicInfo.paletteData = sPlayerCustomBackPal;
+    // back pic: built from the composed character itself (see ComposeBackPic), so it always has the shape
+    // and colours of the chosen head and outfit
+    ComposeBackPic();
 }
 
 static void ComposeAll(void)
