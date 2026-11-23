@@ -134,6 +134,7 @@ void GangLoot_Take(void)
     SetMonData(mon, MON_DATA_MET_LEVEL, &level);
     SetMonData(mon, MON_DATA_POKEBALL, &ball);
     HealPokemon(mon);
+    SetMonOriginalTrainerId(mon, gSaveBlock2Ptr->playerTrainerId); // re-encrypts it, otherwise it becomes a Bad Egg
     gSpecialVar_Result = GiveCapturedMonToPlayer(mon); // also makes the player its trainer, so it obeys
     if (gSpecialVar_Result != MON_CANT_GIVE)
     {

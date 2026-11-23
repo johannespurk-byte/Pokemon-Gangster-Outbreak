@@ -2947,6 +2947,21 @@ void CopyMon(void *dest, void *src, size_t size)
     memcpy(dest, src, size);
 }
 
+// Gangster Outbreak: change the original trainer of an existing Pokémon. Its secure data is encrypted with
+// personality ^ otId, so it has to be re-encrypted with the new id (setting MON_DATA_OT_ID alone would turn
+// e.g. a trainer's Pokémon into a Bad Egg).
+void SetMonOriginalTrainerId(struct Pokemon *mon, const u8 *otIdBytes)
+{
+    struct BoxPokemon *boxMon = &mon->box;
+    u32 otId = otIdBytes[0] | (otIdBytes[1] << 8) | (otIdBytes[2] << 16) | ((u32)otIdBytes[3] << 24);
+
+    if (boxMon->otId == otId)
+        return;
+    DecryptBoxMon(boxMon);
+    boxMon->otId = otId;
+    EncryptBoxMon(boxMon);
+}
+
 u8 GiveCapturedMonToPlayer(struct Pokemon *mon)
 {
     s32 i;
