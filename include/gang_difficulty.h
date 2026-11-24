@@ -19,6 +19,7 @@ bool32 GangDifficulty_IsStatEditorUnlocked(void);
 const u8 *GangDifficulty_GetName(enum GangDifficulty difficulty);
 const u8 *GangDifficulty_GetDescription(enum GangDifficulty difficulty);
 void GangDifficulty_ApplyToTrainerMon(struct Pokemon *mon);
+u32 GangDifficulty_GetLevelBonus(void); // +2/+4/+6/+8 levels for every trainer's Pokémon
 u16 GangDifficulty_GetFittingItem(struct Pokemon *mon); // Eviolite, Life Orb, Leftovers or Sitrus Berry
 
 // Difficulty menu limits: in a NEW GAME+ the player may keep the cleared difficulty or pick a harder one

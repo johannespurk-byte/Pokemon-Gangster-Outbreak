@@ -135,6 +135,14 @@ u16 GangDifficulty_GetFittingItem(struct Pokemon *mon)
     return ITEM_SITRUS_BERRY;
 }
 
+// Levels every trainer's Pokémon gain on top of their normal level
+u32 GangDifficulty_GetLevelBonus(void)
+{
+    static const u8 sLevelBonus[GANG_DIFFICULTY_COUNT] = {2, 4, 6, 8};
+    enum GangDifficulty difficulty = GangDifficulty_Get();
+    return sLevelBonus[difficulty < GANG_DIFFICULTY_COUNT ? difficulty : GANG_DIFFICULTY_BOSS];
+}
+
 void GangDifficulty_ApplyToTrainerMon(struct Pokemon *mon)
 {
     enum GangDifficulty difficulty = GangDifficulty_Get();

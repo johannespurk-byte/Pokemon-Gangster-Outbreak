@@ -385,7 +385,6 @@ static const struct LeagueMember sLeagueMembers[] =
 //                                                   RECRUIT PETTY ELITE BOSS
 static const u8 sLeaguePartySize[GANG_DIFFICULTY_COUNT]    = {3,   4,    5,    6};
 static const u8 sChampionPartySize[GANG_DIFFICULTY_COUNT]  = {5,   6,    6,    6};
-static const u8 sLeagueLevelBonus[GANG_DIFFICULTY_COUNT]   = {0,   2,    4,    6};
 static const u16 sLeagueMinBst[GANG_DIFFICULTY_COUNT]      = {430, 460,  500,  525};
 static const u8 sLeagueFullRestores[GANG_DIFFICULTY_COUNT] = {1,   2,    3,    4};
 
@@ -595,7 +594,7 @@ static bool32 BuildLeagueParty(struct Pokemon *party, u16 trainerNum)
     teachable = (difficulty >= GANG_DIFFICULTY_ELITE_GANGSTER);
     size = champion ? sChampionPartySize[difficulty] : sLeaguePartySize[difficulty];
     level = FlagGet(FLAG_IS_CHAMPION) ? LEAGUE_REMATCH_LEVEL : LEAGUE_LEVEL;
-    level = (champion ? level : level - 5 + member->room) + sLeagueLevelBonus[difficulty];
+    level = champion ? level : level - 5 + member->room; // + the difficulty's level bonus (battle_setup.c)
 
     ace = member->ace;
     if (ace == SPECIES_NONE) // Silver: his own random partner, fully evolved

@@ -2220,15 +2220,30 @@ void CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Traine
     Free(trainerGen);
 }
 
-// Gangster Outbreak: scale opponents to the chosen difficulty (not partners, not in tests)
-static void ApplyGangDifficultyToParty(struct Pokemon *party)
+// Gangster Outbreak: scale opponents to the chosen difficulty (not partners, not in tests).
+// Every trainer's Pokémon gain a few levels on top (GangDifficulty_GetLevelBonus), except in the very first
+// battle against Silver, where the player only has one Pokémon at level 5.
+static void ApplyGangDifficultyToParty(struct Pokemon *party, u16 trainerNum)
 {
-    u32 i;
+    u32 i, bonus;
 
     if (TESTING)
         return;
+    bonus = GangDifficulty_GetLevelBonus();
+    if (trainerNum == TRAINER_RIVAL_OAKS_LAB_SQUIRTLE || trainerNum == TRAINER_RIVAL_OAKS_LAB_BULBASAUR
+     || trainerNum == TRAINER_RIVAL_OAKS_LAB_CHARMANDER)
+        bonus = 0;
     for (i = 0; i < PARTY_SIZE; i++)
-        GangDifficulty_ApplyToTrainerMon(&party[i]);
+    {
+        enum Species species = GetMonData(&party[i], MON_DATA_SPECIES);
+        if (species != SPECIES_NONE && bonus != 0)
+        {
+            u32 level = min(GetMonData(&party[i], MON_DATA_LEVEL) + bonus, MAX_LEVEL);
+            u32 exp = gExperienceTables[gSpeciesInfo[species].growthRate][level];
+            SetMonData(&party[i], MON_DATA_EXP, &exp);
+        }
+        GangDifficulty_ApplyToTrainerMon(&party[i]); // recalculates the stats
+    }
 }
 
 static void CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
@@ -2237,7 +2252,7 @@ static void CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     {
         CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum));
         GangRandom_RandomizeTrainerParty(party, trainerNum);
-        ApplyGangDifficultyToParty(party);
+        ApplyGangDifficultyToParty(party, trainerNum);
         GangRandom_FinishLeagueParty(party, trainerNum);
         GangLoot_RememberParty(party);
         return;
@@ -2254,7 +2269,7 @@ static void CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
         tempTrainer.partySize = origTrainer->partySize;
     CreateNPCTrainerPartyFromTrainer(party, (const struct Trainer *)(&tempTrainer));
     GangRandom_RandomizeTrainerParty(party, trainerNum);
-    ApplyGangDifficultyToParty(party);
+    ApplyGangDifficultyToParty(party, trainerNum);
     GangRandom_FinishLeagueParty(party, trainerNum);
     GangLoot_RememberParty(party);
 }
