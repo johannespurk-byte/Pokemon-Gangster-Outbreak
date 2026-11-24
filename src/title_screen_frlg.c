@@ -771,7 +771,7 @@ static void SetTitleScreenScene_Cry(s16 *data)
     case 0:
         if (!gPaletteFade.active)
         {
-            PlayCry_Normal(TITLE_SPECIES, 0);
+            // Gangster Outbreak: no Charizard cry over the gang title theme
             DeactivateSlashSprite(tSlashSpriteId);
             data[2] = 0;
             tState++;

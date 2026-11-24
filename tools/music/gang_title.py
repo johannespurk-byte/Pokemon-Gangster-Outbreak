@@ -14,6 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 OUT = os.path.join(ROOT, 'sound/songs/midi/mus_title.mid')
 
 PPQ = 96
+VELOCITY_BOOST = 1.2  # louder title theme
 BAR = PPQ * 4
 BPM = 88
 
@@ -34,6 +35,7 @@ class Song:
         self.events.append((tick, order, bytes(data)))
 
     def note(self, ch, tick, key, length, vel):
+        vel = min(127, int(vel * VELOCITY_BOOST))
         self.add(tick, (0x90 | ch, key, vel), 2)
         self.add(tick + max(1, length - 2), (0x80 | ch, key, 0), 0)
 
@@ -69,13 +71,13 @@ class Song:
 
 def compose():
     s = Song()
-    s.program(0, STRINGS, 72, 64)
-    s.program(1, PIANO, 92, 52)
-    s.program(2, BASS, 112, 64)
-    s.program(3, WHISTLE, 84, 76)
-    s.program(4, TRUMPET, 80, 58)
-    s.program(5, HAT, 46, 70)
-    s.program(9, DRUMS, 108, 64)
+    s.program(0, STRINGS, 94, 64)
+    s.program(1, PIANO, 120, 52)
+    s.program(2, BASS, 127, 64)
+    s.program(3, WHISTLE, 110, 76)
+    s.program(4, TRUMPET, 104, 58)
+    s.program(5, HAT, 60, 70)
+    s.program(9, DRUMS, 127, 64)
 
     intro, loop_bars = 4, 16
     # ---- intro: pad + piano, a reversed-crash style swell into the drop
