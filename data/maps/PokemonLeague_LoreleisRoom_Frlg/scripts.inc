@@ -73,11 +73,15 @@ PokemonLeague_LoreleisRoom_EventScript_RematchIntro::
 	return
 
 PokemonLeague_LoreleisRoom_EventScript_Battle::
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_LORELEI, PokemonLeague_LoreleisRoom_Text_Defeat
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonLeague_LoreleisRoom_EventScript_NeedTwoMons
+	trainerbattle_two_trainers TRAINER_LEAGUE_ETHAN, PokemonLeague_LoreleisRoom_Text_Defeat, TRAINER_LEAGUE_LYRA, PokemonLeague_LoreleisRoom_Text_DefeatPartner
 	return
 
 PokemonLeague_LoreleisRoom_EventScript_Rematch::
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_LORELEI_2, PokemonLeague_LoreleisRoom_Text_Defeat
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonLeague_LoreleisRoom_EventScript_NeedTwoMons
+	trainerbattle_two_trainers TRAINER_LEAGUE_ETHAN, PokemonLeague_LoreleisRoom_Text_Defeat, TRAINER_LEAGUE_LYRA, PokemonLeague_LoreleisRoom_Text_DefeatPartner
 	return
 
 PokemonLeague_LoreleisRoom_EventScript_PostBattle::
@@ -93,35 +97,36 @@ PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
 	end
 
 PokemonLeague_LoreleisRoom_Text_Intro::
-	.string "Welcome to the POKéMON LEAGUE.\p"
-	.string "I am LORELEI of the ELITE FOUR.\p"
-	.string "No one can best me when it comes\n"
-	.string "to icy POKéMON.\p"
-	.string "Freezing moves are powerful.\p"
-	.string "Your POKéMON will be at my mercy\n"
-	.string "when they are frozen solid.\p"
-	.string "Hahaha!\n"
-	.string "Are you ready?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "ETHAN: Welcome to the POKéMON\n"
+	.string "LEAGUE, {PLAYER}!\p"
+	.string "LYRA: We came all the way from\n"
+	.string "JOHTO to keep the gangs out.\p"
+	.string "ETHAN: And now a gangster walks\n"
+	.string "right into the ELITE FOUR?\p"
+	.string "LYRA: Not while we're here!\n"
+	.string "Two against one, ready?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_RematchIntro::
-	.string "Welcome to the POKéMON LEAGUE.\p"
-	.string "I, LORELEI of the ELITE FOUR,\n"
-	.string "have returned!\p"
-	.string "You know how it goes.\n"
-	.string "No one can best me when it comes\l"
-	.string "to icy POKéMON.\p"
-	.string "Freezing moves are powerful.\p"
-	.string "Your POKéMON will be at my mercy\n"
-	.string "when they are frozen solid.\p"
-	.string "Hahaha!\n"
-	.string "Are you ready?{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "Back again, {PLAYER}?\n"
+	.string "JOHTO doesn't give up that easy!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_Defeat::
-	.string "…Things shouldn't be this way!$"
+	.string "Our partners… beaten?$"
 
 PokemonLeague_LoreleisRoom_Text_PostBattle::
-	.string "You're better than I thought.\n"
-	.string "Go on ahead.\p"
-	.string "You only got a taste of the\n"
-	.string "POKéMON LEAGUE's power.$"
+	.string "ETHAN: Fine. The way is open.\p"
+	.string "LYRA: But the next room won't\n"
+	.string "go easy on you!$"
 
+PokemonLeague_LoreleisRoom_EventScript_NeedTwoMons::
+	msgbox PokemonLeague_LoreleisRoom_Text_NeedTwoMons
+	release
+	end
+
+PokemonLeague_LoreleisRoom_Text_DefeatPartner::
+	.string "We should have trained harder…$"
+
+PokemonLeague_LoreleisRoom_Text_NeedTwoMons::
+	.string "We battle as a team.\n"
+	.string "Come back with two POKéMON\l"
+	.string "that can still fight!$"

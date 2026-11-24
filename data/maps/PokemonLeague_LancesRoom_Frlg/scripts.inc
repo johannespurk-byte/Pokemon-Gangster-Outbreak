@@ -122,11 +122,15 @@ PokemonLeague_LancesRoom_EventScript_RematchIntro::
 	return
 
 PokemonLeague_LancesRoom_EventScript_Battle::
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_LANCE, PokemonLeague_LancesRoom_Text_Defeat
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonLeague_LancesRoom_EventScript_NeedTwoMons
+	trainerbattle_two_trainers TRAINER_LEAGUE_VICTOR, PokemonLeague_LancesRoom_Text_Defeat, TRAINER_LEAGUE_GLORIA, PokemonLeague_LancesRoom_Text_DefeatPartner
 	return
 
 PokemonLeague_LancesRoom_EventScript_Rematch::
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_LANCE_2, PokemonLeague_LancesRoom_Text_Defeat
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonLeague_LancesRoom_EventScript_NeedTwoMons
+	trainerbattle_two_trainers TRAINER_LEAGUE_VICTOR, PokemonLeague_LancesRoom_Text_Defeat, TRAINER_LEAGUE_GLORIA, PokemonLeague_LancesRoom_Text_DefeatPartner
 	return
 
 PokemonLeague_LancesRoom_EventScript_PostBattle::
@@ -165,54 +169,37 @@ PokemonLeague_LancesRoom_Movement_LanceMoveOutOfWayRight::
 	step_end
 
 PokemonLeague_LancesRoom_Text_Intro::
-	.string "Ah! I've heard about you,\n"
-	.string "{PLAYER}!\p"
-	.string "I lead the ELITE FOUR.\p"
-	.string "You can call me LANCE the dragon\n"
-	.string "TRAINER.\p"
-	.string "You know that dragons are\n"
-	.string "mythical POKéMON.\p"
-	.string "They're hard to catch and raise,\n"
-	.string "but their powers are superior.\p"
-	.string "They're virtually indestructible.\n"
-	.string "There's no being clever with them.\p"
-	.string "Well, are you ready to lose?\p"
-	.string "Your LEAGUE challenge ends with\n"
-	.string "me, {PLAYER}!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "VICTOR: So you made it all the\n"
+	.string "way here, {PLAYER}.\p"
+	.string "GLORIA: We lead the ELITE FOUR.\n"
+	.string "In GALAR we were CHAMPIONS.\p"
+	.string "VICTOR: Every battle there was\n"
+	.string "a show for thousands of fans.\p"
+	.string "GLORIA: So let's give them a show\n"
+	.string "they won't forget!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LancesRoom_Text_RematchIntro::
-	.string "Ah!\n"
-	.string "So, you've returned, {PLAYER}!\p"
-	.string "I lead the ELITE FOUR.\p"
-	.string "You can call me LANCE the dragon\n"
-	.string "TRAINER.\p"
-	.string "You know that dragons are\n"
-	.string "mythical POKéMON.\p"
-	.string "They're hard to catch and raise,\n"
-	.string "but their powers are superior.\p"
-	.string "They're virtually indestructible.\n"
-	.string "There's no being clever with them.\p"
-	.string "Well, are you ready to lose?\p"
-	.string "Your LEAGUE challenge ends with\n"
-	.string "me, {PLAYER}!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "VICTOR: The crowd wants a rematch!\n"
+	.string "GLORIA: Let's go!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LancesRoom_Text_Defeat::
-	.string "That's it!\p"
-	.string "I hate to admit it, but you are a\n"
-	.string "POKéMON master!$"
+	.string "That was a championship\nbattle!$"
 
 PokemonLeague_LancesRoom_Text_PostBattle::
-	.string "I still can't believe my dragons\n"
-	.string "lost to you, {PLAYER}.\p"
-	.string "You are now the POKéMON LEAGUE\n"
-	.string "CHAMPION!\p"
-	.string "…Or, you would have been, but\n"
-	.string "you have one more challenge left.\p"
-	.string "There is one more TRAINER to face!\n"
-	.string "His name is…\p"
-	.string "{RIVAL}!\p"
-	.string "He beat the ELITE FOUR before\n"
-	.string "you.\p"
-	.string "He is the real POKéMON LEAGUE\n"
-	.string "CHAMPION.$"
+	.string "VICTOR: Go on. The CHAMPION is\n"
+	.string "waiting in the next room.\p"
+	.string "GLORIA: You know him already…\n"
+	.string "it's SILVER.$"
 
+PokemonLeague_LancesRoom_EventScript_NeedTwoMons::
+	msgbox PokemonLeague_LancesRoom_Text_NeedTwoMons
+	release
+	end
+
+PokemonLeague_LancesRoom_Text_DefeatPartner::
+	.string "You beat the best of\nGALAR…$"
+
+PokemonLeague_LancesRoom_Text_NeedTwoMons::
+	.string "We battle as a team.\n"
+	.string "Come back with two POKéMON\l"
+	.string "that can still fight!$"

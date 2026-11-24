@@ -9,6 +9,8 @@ void GangRandom_NewSeed(void);
 enum Species GangRandom_WildSpecies(enum Species tableSpecies, u8 level);
 void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum);
 bool32 GangRandom_IsBossTrainer(u16 trainerNum);
+void GangRandom_FinishLeagueParty(struct Pokemon *party, u16 trainerNum); // after the difficulty: held items
+u32 GangRandom_GetLeagueFullRestores(u16 trainerNum);                   // Full Restores in the league trainers' bag
 u8 GangRandom_ScaleWildLevel(u8 level);
 u32 GangRandom_Hash(u32 a, u32 b, u32 c, u32 d); // deterministic per save file // level scaling: wild Pokémon keep up with the player (up to the level cap)
 

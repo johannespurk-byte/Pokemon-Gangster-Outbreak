@@ -12,6 +12,11 @@
 #include "constants/trainers.h"
 #include "constants/opponents.h"
 #include "data.h"
+#include "event_data.h"
+#include "gang_difficulty.h"
+#include "constants/battle_move_effects.h"
+#include "constants/flags.h"
+#include "constants/items.h"
 
 // Gangster Outbreak: per-save randomizer (see gang_random.h)
 
@@ -31,6 +36,7 @@ enum
     SALT_LEGEND,
     SALT_EXTRA_MON,
     SALT_RIVAL,
+    SALT_LEAGUE,
 };
 
 static u32 GetSeed(void)
@@ -338,13 +344,317 @@ static void FillUpTrainerParty(struct Pokemon *party, u16 trainerNum)
     }
 }
 
+
+// --- Pokémon League ------------------------------------------------------------------------------------------
+// The Elite Four are the heroes of other generations, two per room in a double battle, with Pokémon of their
+// home region; the Champion is Silver. Their teams grow with the difficulty: more Pokémon, higher levels,
+// stronger species (on BOSS each one brings a legendary), the best moves and more items.
+
+#define LEAGUE_LEVEL          63  // first run: the level cap with eight badges
+#define LEAGUE_REMATCH_LEVEL  75  // after becoming Champion
+#define LEAGUE_ROOM_CHAMPION  5
+
+struct LeagueMember
+{
+    u16 trainer;
+    u8 room;            // 1-4 Elite Four, 5 Champion
+    u16 dexFirst;       // home region (National Dex numbers)
+    u16 dexLast;
+    u16 ace;            // their partner Pokémon, always last (SPECIES_NONE: Silver's own random partner)
+    u16 legend;         // their legendary on BOSS
+};
+
+static const struct LeagueMember sLeagueMembers[] =
+{
+    {TRAINER_LEAGUE_ETHAN,               1, 152, 251, SPECIES_TYPHLOSION, SPECIES_HO_OH},
+    {TRAINER_LEAGUE_LYRA,                1, 152, 251, SPECIES_MEGANIUM,   SPECIES_LUGIA},
+    {TRAINER_LEAGUE_LUCAS,               2, 387, 493, SPECIES_INFERNAPE,  SPECIES_DIALGA},
+    {TRAINER_LEAGUE_DAWN,                2, 387, 493, SPECIES_EMPOLEON,   SPECIES_PALKIA},
+    {TRAINER_LEAGUE_HILBERT,             3, 494, 649, SPECIES_SAMUROTT,   SPECIES_RESHIRAM},
+    {TRAINER_LEAGUE_HILDA,               3, 494, 649, SPECIES_SERPERIOR,  SPECIES_ZEKROM},
+    {TRAINER_LEAGUE_VICTOR,              4, 810, 898, SPECIES_CINDERACE,  SPECIES_ZACIAN},
+    {TRAINER_LEAGUE_GLORIA,              4, 810, 898, SPECIES_RILLABOOM,  SPECIES_ZAMAZENTA},
+    {TRAINER_CHAMPION_FIRST_SQUIRTLE,    LEAGUE_ROOM_CHAMPION, 1, NATIONAL_DEX_COUNT, SPECIES_NONE, SPECIES_MEWTWO},
+    {TRAINER_CHAMPION_FIRST_BULBASAUR,   LEAGUE_ROOM_CHAMPION, 1, NATIONAL_DEX_COUNT, SPECIES_NONE, SPECIES_MEWTWO},
+    {TRAINER_CHAMPION_FIRST_CHARMANDER,  LEAGUE_ROOM_CHAMPION, 1, NATIONAL_DEX_COUNT, SPECIES_NONE, SPECIES_MEWTWO},
+    {TRAINER_CHAMPION_REMATCH_SQUIRTLE,  LEAGUE_ROOM_CHAMPION, 1, NATIONAL_DEX_COUNT, SPECIES_NONE, SPECIES_MEWTWO},
+    {TRAINER_CHAMPION_REMATCH_BULBASAUR, LEAGUE_ROOM_CHAMPION, 1, NATIONAL_DEX_COUNT, SPECIES_NONE, SPECIES_MEWTWO},
+    {TRAINER_CHAMPION_REMATCH_CHARMANDER,LEAGUE_ROOM_CHAMPION, 1, NATIONAL_DEX_COUNT, SPECIES_NONE, SPECIES_MEWTWO},
+};
+
+//                                                   RECRUIT PETTY ELITE BOSS
+static const u8 sLeaguePartySize[GANG_DIFFICULTY_COUNT]    = {3,   4,    5,    6};
+static const u8 sChampionPartySize[GANG_DIFFICULTY_COUNT]  = {5,   6,    6,    6};
+static const u8 sLeagueLevelBonus[GANG_DIFFICULTY_COUNT]   = {0,   2,    4,    6};
+static const u16 sLeagueMinBst[GANG_DIFFICULTY_COUNT]      = {430, 460,  500,  525};
+static const u8 sLeagueFullRestores[GANG_DIFFICULTY_COUNT] = {1,   2,    3,    4};
+
+static const struct LeagueMember *GetLeagueMember(u16 trainerNum)
+{
+    u32 i;
+
+    if (!IS_FRLG)
+        return NULL;
+    for (i = 0; i < ARRAY_COUNT(sLeagueMembers); i++)
+    {
+        if (sLeagueMembers[i].trainer == trainerNum)
+            return &sLeagueMembers[i];
+    }
+    return NULL;
+}
+
+static enum GangDifficulty GetLeagueDifficulty(void)
+{
+    enum GangDifficulty difficulty = GangDifficulty_Get();
+    return difficulty < GANG_DIFFICULTY_COUNT ? difficulty : GANG_DIFFICULTY_BOSS;
+}
+
+static bool32 IsFullyEvolved(enum Species species)
+{
+    const struct Evolution *evos = GetSpeciesEvolutions(species);
+    u32 i;
+
+    if (evos == NULL)
+        return TRUE;
+    for (i = 0; evos[i].method != EVOLUTIONS_END; i++)
+    {
+        enum Species target = evos[i].targetSpecies;
+        if (target != SPECIES_NONE && IsSpeciesEnabled(target) && !gSpeciesInfo[target].isMegaEvolution
+         && !gSpeciesInfo[target].isGigantamax && !gSpeciesInfo[target].isTotem)
+            return FALSE;
+    }
+    return TRUE;
+}
+
+static u32 GetBaseStatTotal(enum Species species)
+{
+    const struct SpeciesInfo *info = &gSpeciesInfo[species];
+    return info->baseHP + info->baseAttack + info->baseDefense + info->baseSpeed + info->baseSpAttack + info->baseSpDefense;
+}
+
+static enum Species PickLeagueSpecies(const struct LeagueMember *member, u32 slot, u32 minBst, const u16 *taken, u32 takenCount)
+{
+    u32 try, i, range = member->dexLast - member->dexFirst + 1;
+
+    for (try = 0; try < 400; try++)
+    {
+        u32 dexNum = member->dexFirst + Hash(SALT_LEAGUE, member->trainer, slot, try) % range;
+        enum Species species = NationalPokedexNumToSpecies(dexNum);
+        bool32 dup = FALSE;
+
+        if (!IsCandidate(species) || IsLegendaryLike(species) || !IsFullyEvolved(species))
+            continue;
+        if (GetBaseStatTotal(species) < (try < 300 ? minBst : 0)) // relax if the region has too few
+            continue;
+        for (i = 0; i < takenCount; i++)
+        {
+            if (taken[i] == species)
+                dup = TRUE;
+        }
+        if (!dup && species != member->ace)
+            return species;
+    }
+    return SPECIES_GARCHOMP;
+}
+
+static bool32 IsUsableAttack(enum Move move)
+{
+    u32 power;
+
+    if (move == MOVE_NONE || move >= MOVES_COUNT || GetMoveCategory(move) == DAMAGE_CATEGORY_STATUS)
+        return FALSE;
+    power = GetMovePower(move);
+    if (power < 40 || power > 130)
+        return FALSE; // no fixed-damage moves, no Hyper Beam / Explosion
+    switch (GetMoveEffect(move))
+    {
+    case EFFECT_TWO_TURNS_ATTACK:
+    case EFFECT_SOLAR_BEAM:
+    case EFFECT_FOCUS_PUNCH:
+    case EFFECT_FUTURE_SIGHT:
+    case EFFECT_FIRST_TURN_ONLY:
+    case EFFECT_SKY_DROP:
+    case EFFECT_DREAM_EATER:
+    case EFFECT_SNORE:
+    case EFFECT_LAST_RESORT:
+    case EFFECT_SYNCHRONOISE:
+    case EFFECT_FINAL_GAMBIT:
+        return FALSE;
+    default:
+        return TRUE;
+    }
+}
+
+static u32 ScoreAttack(enum Species species, enum Move move)
+{
+    u32 accuracy = GetMoveAccuracy(move), score;
+    enum Type type = GetMoveType(move);
+    bool32 physical = GetMoveCategory(move) == DAMAGE_CATEGORY_PHYSICAL;
+    u32 atk = GetSpeciesBaseStat(species, STAT_ATK), spAtk = GetSpeciesBaseStat(species, STAT_SPATK);
+
+    score = GetMovePower(move) * GetMoveStrikeCount(move) * (accuracy == 0 ? 100 : accuracy);
+    if (type == GetSpeciesType(species, 0) || type == GetSpeciesType(species, 1))
+        score = score * 3 / 2;
+    if (physical ? atk >= spAtk : spAtk >= atk)
+        score = score * 5 / 4;
+    else
+        score = score * 3 / 4;
+    return score;
+}
+
+static void TryAddAttack(enum Species species, enum Move move, enum Move *best, u32 *bestScore)
+{
+    enum Type type;
+    u32 score;
+
+    if (!IsUsableAttack(move))
+        return;
+    type = GetMoveType(move);
+    if (type >= NUMBER_OF_MON_TYPES)
+        return;
+    score = ScoreAttack(species, move);
+    if (score > bestScore[type])
+    {
+        bestScore[type] = score;
+        best[type] = move;
+    }
+}
+
+// The strongest attack of each type it can learn (level-up moves; from ELITE GANGSTER on also TMs and tutors),
+// then the four best types. Free slots keep the moves it would know at its level.
+static void GiveLeagueMoveset(struct Pokemon *mon, bool32 teachable)
+{
+    enum Species species = GetMonData(mon, MON_DATA_SPECIES);
+    u32 level = GetMonData(mon, MON_DATA_LEVEL);
+    enum Move best[NUMBER_OF_MON_TYPES] = {MOVE_NONE};
+    u32 bestScore[NUMBER_OF_MON_TYPES] = {0};
+    enum Move chosen[MAX_MON_MOVES] = {MOVE_NONE};
+    const struct LevelUpMove *levelUp = GetSpeciesLevelUpLearnset(species);
+    u32 i, j, count = 0;
+
+    for (i = 0; levelUp != NULL && levelUp[i].move != LEVEL_UP_MOVE_END; i++)
+    {
+        if (levelUp[i].level <= level)
+            TryAddAttack(species, levelUp[i].move, best, bestScore);
+    }
+    if (teachable)
+    {
+        const u16 *learnset = GetSpeciesTeachableLearnset(species);
+        for (i = 0; learnset != NULL && learnset[i] != MOVE_UNAVAILABLE; i++)
+            TryAddAttack(species, learnset[i], best, bestScore);
+    }
+    for (count = 0; count < MAX_MON_MOVES; count++)
+    {
+        u32 top = NUMBER_OF_MON_TYPES;
+        for (i = 0; i < NUMBER_OF_MON_TYPES; i++)
+        {
+            if (best[i] != MOVE_NONE && (top == NUMBER_OF_MON_TYPES || bestScore[i] > bestScore[top]))
+                top = i;
+        }
+        if (top == NUMBER_OF_MON_TYPES)
+            break;
+        chosen[count] = best[top];
+        best[top] = MOVE_NONE;
+    }
+    // keep known moves that were not chosen in the free slots
+    for (i = 0; i < MAX_MON_MOVES && count < MAX_MON_MOVES; i++)
+    {
+        enum Move known = GetMonData(mon, MON_DATA_MOVE1 + i);
+        bool32 dup = (known == MOVE_NONE);
+        for (j = 0; j < count; j++)
+        {
+            if (chosen[j] == known)
+                dup = TRUE;
+        }
+        if (!dup)
+            chosen[count++] = known;
+    }
+    for (i = 0; i < MAX_MON_MOVES; i++)
+        SetMonMoveSlot(mon, chosen[i], i);
+}
+
+static void CreateLeagueMon(struct Pokemon *mon, enum Species species, u32 level, bool32 teachable)
+{
+    CreateMon(mon, species, min(level, MAX_LEVEL), Random32(), OTID_STRUCT_RANDOM_NO_SHINY);
+    GiveLeagueMoveset(mon, teachable);
+}
+
+static bool32 BuildLeagueParty(struct Pokemon *party, u16 trainerNum)
+{
+    const struct LeagueMember *member = GetLeagueMember(trainerNum);
+    enum GangDifficulty difficulty;
+    bool32 champion, teachable;
+    u32 size, level, i, slot = 0;
+    u16 taken[PARTY_SIZE];
+    enum Species ace;
+
+    if (member == NULL)
+        return FALSE;
+    difficulty = GetLeagueDifficulty();
+    champion = (member->room == LEAGUE_ROOM_CHAMPION);
+    teachable = (difficulty >= GANG_DIFFICULTY_ELITE_GANGSTER);
+    size = champion ? sChampionPartySize[difficulty] : sLeaguePartySize[difficulty];
+    level = FlagGet(FLAG_IS_CHAMPION) ? LEAGUE_REMATCH_LEVEL : LEAGUE_LEVEL;
+    level = (champion ? level : level - 5 + member->room) + sLeagueLevelBonus[difficulty];
+
+    ace = member->ace;
+    if (ace == SPECIES_NONE) // Silver: his own random partner, fully evolved
+    {
+        ace = GangStory_GetRivalStarter();
+        ace = (ace != SPECIES_NONE && IsSpeciesEnabled(ace)) ? EvolveForLevel(GetFirstStage(ace), MAX_LEVEL, SALT_RIVAL) : SPECIES_CHARIZARD;
+    }
+    for (i = 0; i < PARTY_SIZE; i++)
+        ZeroMonData(&party[i]);
+
+    // the others, weakest first
+    for (i = 0; i + 1 < size; i++)
+    {
+        enum Species species;
+        if (difficulty == GANG_DIFFICULTY_BOSS && i + 2 == size)
+            species = member->legend;
+        else
+            species = PickLeagueSpecies(member, i, sLeagueMinBst[difficulty], taken, slot);
+        taken[slot++] = species;
+        CreateLeagueMon(&party[i], species, level - (size - 1 - i) / 2, teachable);
+    }
+    // the partner Pokémon closes the team
+    CreateLeagueMon(&party[size - 1], ace, level + (champion ? 2 : 1), teachable);
+    return TRUE;
+}
+
+// Held items and the bag: a Sitrus Berry each from PETTY CROOK, fitting items from ELITE GANGSTER on
+// (BOSS already gets them from the difficulty), and 1-4 Full Restores
+void GangRandom_FinishLeagueParty(struct Pokemon *party, u16 trainerNum)
+{
+    enum GangDifficulty difficulty = GetLeagueDifficulty();
+    u32 i;
+
+    if (TESTING || GetLeagueMember(trainerNum) == NULL || difficulty == GANG_DIFFICULTY_RECRUIT)
+        return;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u16 item;
+        if (GetMonData(&party[i], MON_DATA_SPECIES) == SPECIES_NONE || GetMonData(&party[i], MON_DATA_HELD_ITEM) != ITEM_NONE)
+            continue;
+        item = (difficulty == GANG_DIFFICULTY_PETTY_CROOK) ? ITEM_SITRUS_BERRY : GangDifficulty_GetFittingItem(&party[i]);
+        SetMonData(&party[i], MON_DATA_HELD_ITEM, &item);
+    }
+}
+
+u32 GangRandom_GetLeagueFullRestores(u16 trainerNum)
+{
+    if (TESTING || GetLeagueMember(trainerNum) == NULL)
+        return 0;
+    return sLeagueFullRestores[GetLeagueDifficulty()];
+}
+
 void GangRandom_RandomizeTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
     u32 i, trainerClass;
 
     if (TESTING || (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_FRONTIER | BATTLE_TYPE_RECORDED)))
         return;
-    if (GangRandom_IsBossTrainer(trainerNum))
+    if (GangRandom_IsBossTrainer(trainerNum) || BuildLeagueParty(party, trainerNum))
         return;
     trainerClass = GetTrainerClassFromId(trainerNum);
     if (trainerNum != TRAINER_RIVAL_OAKS_LAB_SQUIRTLE && trainerNum != TRAINER_RIVAL_OAKS_LAB_BULBASAUR

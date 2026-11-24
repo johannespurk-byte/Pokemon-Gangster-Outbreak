@@ -69,11 +69,15 @@ PokemonLeague_AgathasRoom_EventScript_RematchIntro::
 	return
 
 PokemonLeague_AgathasRoom_EventScript_Battle::
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_AGATHA, PokemonLeague_AgathasRoom_Text_Defeat
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonLeague_AgathasRoom_EventScript_NeedTwoMons
+	trainerbattle_two_trainers TRAINER_LEAGUE_HILBERT, PokemonLeague_AgathasRoom_Text_Defeat, TRAINER_LEAGUE_HILDA, PokemonLeague_AgathasRoom_Text_DefeatPartner
 	return
 
 PokemonLeague_AgathasRoom_EventScript_Rematch::
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_AGATHA_2, PokemonLeague_AgathasRoom_Text_Defeat
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonLeague_AgathasRoom_EventScript_NeedTwoMons
+	trainerbattle_two_trainers TRAINER_LEAGUE_HILBERT, PokemonLeague_AgathasRoom_Text_Defeat, TRAINER_LEAGUE_HILDA, PokemonLeague_AgathasRoom_Text_DefeatPartner
 	return
 
 PokemonLeague_AgathasRoom_EventScript_PostBattle::
@@ -89,43 +93,36 @@ PokemonLeague_AgathasRoom_EventScript_DefeatedAgatha::
 	end
 
 PokemonLeague_AgathasRoom_Text_Intro::
-	.string "I am AGATHA of the ELITE FOUR.\p"
-	.string "I hear OAK's taken a lot of\n"
-	.string "interest in you, child.\p"
-	.string "That old duff was once tough and\n"
-	.string "handsome.\p"
-	.string "But that was decades ago.\n"
-	.string "He's a shadow of his former self.\p"
-	.string "Now he just wants to fiddle with\n"
-	.string "his POKéDEX.\p"
-	.string "He's wrong.\n"
-	.string "POKéMON are for battling!\p"
-	.string "{PLAYER}! I'll show you how a real\n"
-	.string "TRAINER battles!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "HILBERT: Truth and ideals…\n"
+	.string "what do you fight for?\p"
+	.string "HILDA: In UNOVA we stopped a\n"
+	.string "whole team of villains.\p"
+	.string "HILBERT: One more gangster won't\n"
+	.string "scare us.\p"
+	.string "HILDA: Show us what your bonds\n"
+	.string "are worth!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_AgathasRoom_Text_RematchIntro::
-	.string "I am AGATHA of the ELITE FOUR.\p"
-	.string "You're the child that OAK's taken\n"
-	.string "under his wing, aren't you?\p"
-	.string "That old duff was once tough and\n"
-	.string "handsome.\p"
-	.string "But that was decades ago.\n"
-	.string "He's a shadow of his former self.\p"
-	.string "Now he just wants to fiddle with\n"
-	.string "his POKéDEX.\p"
-	.string "He's wrong.\n"
-	.string "POKéMON are for battling!\p"
-	.string "{PLAYER}! I'll show you how a real\n"
-	.string "TRAINER battles!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "HILBERT: Round two?\n"
+	.string "HILDA: Bring it on!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_AgathasRoom_Text_Defeat::
-	.string "Oh, my!\n"
-	.string "You're something special, child!$"
+	.string "Your ideals… are stronger\nthan ours?$"
 
 PokemonLeague_AgathasRoom_Text_PostBattle::
-	.string "You win!\p"
-	.string "I see what the old duff sees in\n"
-	.string "you now.\p"
-	.string "I have nothing else to say.\n"
-	.string "Run along now, child!$"
+	.string "HILBERT: You have earned it.\p"
+	.string "HILDA: The last room is GALAR's.\n"
+	.string "They're the best of us.$"
 
+PokemonLeague_AgathasRoom_EventScript_NeedTwoMons::
+	msgbox PokemonLeague_AgathasRoom_Text_NeedTwoMons
+	release
+	end
+
+PokemonLeague_AgathasRoom_Text_DefeatPartner::
+	.string "We gave it everything…$"
+
+PokemonLeague_AgathasRoom_Text_NeedTwoMons::
+	.string "We battle as a team.\n"
+	.string "Come back with two POKéMON\l"
+	.string "that can still fight!$"

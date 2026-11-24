@@ -68,11 +68,15 @@ PokemonLeague_BrunosRoom_EventScript_RematchIntro::
 	return
 
 PokemonLeague_BrunosRoom_EventScript_Battle::
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_BRUNO, PokemonLeague_BrunosRoom_Text_Defeat
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonLeague_BrunosRoom_EventScript_NeedTwoMons
+	trainerbattle_two_trainers TRAINER_LEAGUE_LUCAS, PokemonLeague_BrunosRoom_Text_Defeat, TRAINER_LEAGUE_DAWN, PokemonLeague_BrunosRoom_Text_DefeatPartner
 	return
 
 PokemonLeague_BrunosRoom_EventScript_Rematch::
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_BRUNO_2, PokemonLeague_BrunosRoom_Text_Defeat
+	special HasEnoughMonsForDoubleBattle
+	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, PokemonLeague_BrunosRoom_EventScript_NeedTwoMons
+	trainerbattle_two_trainers TRAINER_LEAGUE_LUCAS, PokemonLeague_BrunosRoom_Text_Defeat, TRAINER_LEAGUE_DAWN, PokemonLeague_BrunosRoom_Text_DefeatPartner
 	return
 
 PokemonLeague_BrunosRoom_EventScript_PostBattle::
@@ -113,36 +117,36 @@ PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayDown::
 	return
 
 PokemonLeague_BrunosRoom_Text_Intro::
-	.string "I am BRUNO of the ELITE FOUR!\p"
-	.string "Through rigorous training, people\n"
-	.string "and POKéMON can become stronger\l"
-	.string "without limit.\p"
-	.string "I've lived and trained with my\n"
-	.string "fighting POKéMON!\l"
-	.string "And that will never change!\p"
-	.string "{PLAYER}!\p"
-	.string "We will grind you down with our\n"
-	.string "superior power!\p"
-	.string "Hoo hah!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "LUCAS: So you beat ETHAN and\n"
+	.string "LYRA? Impressive.\p"
+	.string "DAWN: We're from SINNOH.\n"
+	.string "The cold made us tough!\p"
+	.string "LUCAS: Our POKéMON have seen\n"
+	.string "mountains, caves and storms.\p"
+	.string "DAWN: No need to worry…\n"
+	.string "about us, that is!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_BrunosRoom_Text_RematchIntro::
-	.string "I am BRUNO of the ELITE FOUR!\p"
-	.string "Through rigorous training, people\n"
-	.string "and POKéMON can become stronger\l"
-	.string "without limit.\p"
-	.string "I've lived and trained with my\n"
-	.string "fighting POKéMON!\l"
-	.string "And that will never change!\p"
-	.string "{PLAYER}!\p"
-	.string "We will grind you down with our\n"
-	.string "superior power!\p"
-	.string "Hoo hah!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "LUCAS: You're back!\n"
+	.string "DAWN: This time we're ready!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_BrunosRoom_Text_Defeat::
-	.string "Why?\n"
-	.string "How could I lose?$"
+	.string "This can't be happening…$"
 
 PokemonLeague_BrunosRoom_Text_PostBattle::
-	.string "My job is done.\n"
-	.string "Go face your next challenge.$"
+	.string "LUCAS: You really are strong.\p"
+	.string "DAWN: Go on. UNOVA's heroes\n"
+	.string "are waiting for you.$"
 
+PokemonLeague_BrunosRoom_EventScript_NeedTwoMons::
+	msgbox PokemonLeague_BrunosRoom_Text_NeedTwoMons
+	release
+	end
+
+PokemonLeague_BrunosRoom_Text_DefeatPartner::
+	.string "No need to worry…\nwe'll be back.$"
+
+PokemonLeague_BrunosRoom_Text_NeedTwoMons::
+	.string "We battle as a team.\n"
+	.string "Come back with two POKéMON\l"
+	.string "that can still fight!$"

@@ -672,8 +672,16 @@
 
 #define TRAINER_GANG_MAXIE                         660 // Gangster Outbreak: Celadon gym partner
 #define TRAINER_GANG_YELL_MARLA                    661 // Gangster Outbreak: Team Yell grunt in the Pewter gym
+#define TRAINER_LEAGUE_ETHAN                              662 // Gangster Outbreak: Elite Four (double battle)
+#define TRAINER_LEAGUE_LYRA                               663 // Gangster Outbreak: Elite Four (double battle)
+#define TRAINER_LEAGUE_LUCAS                              664 // Gangster Outbreak: Elite Four (double battle)
+#define TRAINER_LEAGUE_DAWN                               665 // Gangster Outbreak: Elite Four (double battle)
+#define TRAINER_LEAGUE_HILBERT                            666 // Gangster Outbreak: Elite Four (double battle)
+#define TRAINER_LEAGUE_HILDA                              667 // Gangster Outbreak: Elite Four (double battle)
+#define TRAINER_LEAGUE_VICTOR                             668 // Gangster Outbreak: Elite Four (double battle)
+#define TRAINER_LEAGUE_GLORIA                             669 // Gangster Outbreak: Elite Four (double battle)
 
-#define TRAINERS_COUNT_FRLG                      662
+#define TRAINERS_COUNT_FRLG                      670
 #define MAX_TRAINERS_COUNT_FRLG                  768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_FRLG_H

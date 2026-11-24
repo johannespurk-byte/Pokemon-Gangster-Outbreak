@@ -118,7 +118,7 @@ static bool32 CanSpeciesEvolve(enum Species species)
     return evolutions != NULL && evolutions[0].method != EVOLUTIONS_END && evolutions[0].method != EVO_NONE;
 }
 
-static u16 GetFittingItem(struct Pokemon *mon)
+u16 GangDifficulty_GetFittingItem(struct Pokemon *mon)
 {
     enum Species species = GetMonData(mon, MON_DATA_SPECIES);
     u32 atk = GetSpeciesBaseStat(species, STAT_ATK);
@@ -167,7 +167,7 @@ void GangDifficulty_ApplyToTrainerMon(struct Pokemon *mon)
         SetFullEVs(mon);
         item = GetMonData(mon, MON_DATA_HELD_ITEM); // keep an item the trainer already has
         if (item == ITEM_NONE)
-            item = GetFittingItem(mon);
+            item = GangDifficulty_GetFittingItem(mon);
         break;
     }
     SetMonData(mon, MON_DATA_HELD_ITEM, &item);

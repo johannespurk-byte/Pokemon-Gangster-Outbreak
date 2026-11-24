@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_random.h"
 #include "main.h"
 #include "malloc.h"
 #include "battle.h"
@@ -222,6 +223,14 @@ void BattleAI_SetupItems(void)
                 gBattleHistory->trainerItems[gBattleHistory->itemsNo] = items[itemIndex];
                 gBattleHistory->itemsNo++;
             }
+        }
+        // Gangster Outbreak: the league trainers carry Full Restores by difficulty instead
+        if (GangRandom_GetLeagueFullRestores(TRAINER_BATTLE_PARAM.opponentA) != 0)
+        {
+            u32 count = min(GangRandom_GetLeagueFullRestores(TRAINER_BATTLE_PARAM.opponentA), MAX_TRAINER_ITEMS);
+            gBattleHistory->itemsNo = 0;
+            for (u32 itemIndex = 0; itemIndex < count; itemIndex++)
+                gBattleHistory->trainerItems[gBattleHistory->itemsNo++] = ITEM_FULL_RESTORE;
         }
     }
 }

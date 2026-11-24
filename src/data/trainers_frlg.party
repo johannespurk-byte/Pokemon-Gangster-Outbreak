@@ -14317,3 +14317,107 @@ Level: 28
 Camerupt
 Level: 29
 
+
+=== TRAINER_LEAGUE_ETHAN ===
+Name: ETHAN
+Class: Elite Four Frlg
+Pic: Ethan
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Switching
+Mugshot: Purple
+
+Pikachu
+Level: 60
+
+=== TRAINER_LEAGUE_LYRA ===
+Name: LYRA
+Class: Elite Four Frlg
+Pic: Lyra
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Switching
+Mugshot: Purple
+
+Pikachu
+Level: 60
+
+=== TRAINER_LEAGUE_LUCAS ===
+Name: LUCAS
+Class: Elite Four Frlg
+Pic: Lucas
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Switching
+Mugshot: Purple
+
+Pikachu
+Level: 60
+
+=== TRAINER_LEAGUE_DAWN ===
+Name: DAWN
+Class: Elite Four Frlg
+Pic: Dawn
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Switching
+Mugshot: Purple
+
+Pikachu
+Level: 60
+
+=== TRAINER_LEAGUE_HILBERT ===
+Name: HILBERT
+Class: Elite Four Frlg
+Pic: Hilbert
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Switching
+Mugshot: Purple
+
+Pikachu
+Level: 60
+
+=== TRAINER_LEAGUE_HILDA ===
+Name: HILDA
+Class: Elite Four Frlg
+Pic: Hilda
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Switching
+Mugshot: Purple
+
+Pikachu
+Level: 60
+
+=== TRAINER_LEAGUE_VICTOR ===
+Name: VICTOR
+Class: Elite Four Frlg
+Pic: Victor
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Switching
+Mugshot: Purple
+
+Pikachu
+Level: 60
+
+=== TRAINER_LEAGUE_GLORIA ===
+Name: GLORIA
+Class: Elite Four Frlg
+Pic: Gloria
+Gender: Female
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Switching
+Mugshot: Purple
+
+Pikachu
+Level: 60
