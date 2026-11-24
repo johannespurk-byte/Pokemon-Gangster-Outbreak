@@ -2222,7 +2222,7 @@ void CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Traine
 
 // Gangster Outbreak: scale opponents to the chosen difficulty (not partners, not in tests).
 // Every trainer's Pokémon gain a few levels on top (GangDifficulty_GetLevelBonus), except in the very first
-// battle against Silver, where the player only has one Pokémon at level 5.
+// battle against Silver, where the player only has one Pokémon at level 5. Free move slots are filled up.
 static void ApplyGangDifficultyToParty(struct Pokemon *party, u16 trainerNum)
 {
     u32 i, bonus;
@@ -2242,6 +2242,9 @@ static void ApplyGangDifficultyToParty(struct Pokemon *party, u16 trainerNum)
             u32 exp = gExperienceTables[gSpeciesInfo[species].growthRate][level];
             SetMonData(&party[i], MON_DATA_EXP, &exp);
         }
+        // every trainer Pokémon knows four moves (random species often bring only one or two)
+        if (species != SPECIES_NONE && !GetMonData(&party[i], MON_DATA_IS_EGG))
+            GangStory_GiveFullMoveset(&party[i]);
         GangDifficulty_ApplyToTrainerMon(&party[i]); // recalculates the stats
     }
 }
