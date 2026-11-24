@@ -24,6 +24,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import deco  # noqa: E402
 from deco import Canvas, O, DG, G, LG, PC, DR, R, LR, Y, DRED, RED, DGL, GL, SOOT, DIRT  # noqa: E402
 
+deco.DECO_PAL = list(deco.DECO_PAL)
+deco.DECO_PAL[DGL] = deco.LEGACY_DARK_GLASS  # interiors keep dark glass in slot 12
+
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BASE_REF = 'ddfe1f3d'
 STAGE_A_REF = '862c4b3d'  # Center palettes after recolor.py (stage A); this tool dulls them further

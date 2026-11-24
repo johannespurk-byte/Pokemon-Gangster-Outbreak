@@ -49,9 +49,12 @@ PLACEMENTS = {
             (None, None, 'mart_wall_graffiti'), (None, None, 'pc_wall_graffiti'),
         ],
         'auto': {'seed': 11, 'solid': ['scrap_heap_a', 'scrap_heap_b', 'car_flipped_dirt', 'rubble_a', 'rubble_b',
-                                       'tires_dirt', 'barrel_dirt', 'car_flipped_road', 'crater_road', 'sandbags_road'],
-                 'count': 18,
-                 'decor': ['crack_a', 'crack_b', 'crack_c', 'crack_a', 'crack_b', 'graffiti_road'], 'decor_count': 12},
+                                       'tires_dirt', 'barrel_dirt', 'car_flipped_road', 'crater_road', 'sandbags_road',
+                                       'fire_barrel_dirt', 'fire_barrel_road', 'trash_bags_dirt', 'trash_bags_road',
+                                       'dead_tree_dirt', 'fence_broken_dirt', 'pole_fallen_road', 'bus_road', 'camp_dirt'],
+                 'count': 30,
+                 'decor': ['crack_a', 'crack_b', 'crack_c', 'graffiti_road', 'burnt_patch_dirt', 'toxic_puddle_dirt',
+                           'weeds_road', 'weeds_dirt'], 'decor_count': 26},
     },
     'data/layouts/Route2_Frlg': {
         'map': 'data/maps/Route2_Frlg/map.json', 'tileset': VIRIDIAN, 'width': 24,
@@ -62,8 +65,9 @@ PLACEMENTS = {
         ],
         'swaps': [],
         'auto': {'seed': 5, 'solid': ['scrap_heap_a', 'scrap_heap_b', 'car_flipped_dirt', 'rubble_a', 'rubble_b',
-                                      'tires_dirt', 'barrel_dirt', 'sandbags_dirt'],
-                 'count': 16, 'decor': [], 'decor_count': 0},
+                                      'tires_dirt', 'barrel_dirt', 'sandbags_dirt', 'fire_barrel_dirt', 'trash_bags_dirt',
+                                      'dead_tree_dirt', 'fence_broken_dirt', 'pole_fallen_dirt', 'camp_dirt'],
+                 'count': 26, 'decor': ['burnt_patch_dirt', 'toxic_puddle_dirt', 'weeds_dirt'], 'decor_count': 14},
     },
 }
 
@@ -71,9 +75,11 @@ PLACEMENTS = {
 # All other Kanto towns and routes are configured automatically.
 AUTO_LAYOUT = re.compile(r'^LAYOUT_(ROUTE([0-9]+)(_NORTH|_SOUTH)?|PALLET_TOWN|PEWTER_CITY|CERULEAN_CITY|VERMILION_CITY|'
                          r'LAVENDER_TOWN|CELADON_CITY|FUCHSIA_CITY|SAFFRON_CITY|CINNABAR_ISLAND|INDIGO_PLATEAU_EXTERIOR)$')
-SOLID_PER_CELLS = 22     # one solid prop per this many free ground cells
-DECOR_PER_CELLS = 16     # one crack/graffiti per this many road cells
-SWAP_FRACTION = 0.6      # share of windows / walls that get boarded up or sprayed
+SOLID_PER_CELLS = 14     # one solid prop per this many free ground cells
+DECOR_PER_CELLS = 9      # one walkable decal (crack, graffiti, scorch, puddle, weeds) per this many ground cells
+SWAP_FRACTION = 0.6      # share of windows / walls that get boarded up, sprayed or scorched
+ROOF_FRACTION = 0.3      # share of roof cells with a hole
+FIRE_ZONE_CELLS = 260    # one burnt area (charred trees and ground) per this many map cells
 
 
 def auto_configs():
@@ -186,6 +192,39 @@ def put(grid, info, x, y):
         grid.set(cx, cy, mid, 1 if info['solid'] else 0)
 
 
+def burn_zones(grid, ids, rng, grounds, events):
+    """Burnt areas: charred forest and tall grass in a ragged blob, soft scorch marks on the ground around it."""
+    burnt = {info['source']: info['metatiles'][0] for info in ids.values() if info.get('kind') == 'burnt'}
+    if not all(m in burnt for m in deco.TREE_METATILES):
+        return  # tileset without the full charred forest: no half-burnt trees
+    patches = [n for n in ids if n.startswith('burnt_patch')]
+    zones = max(1, grid.w * grid.h // FIRE_ZONE_CELLS)
+    candidates = [(x, y) for y in range(grid.h) for x in range(grid.w) if grid.mid(x, y) in deco.TREE_METATILES]
+    tops = collections.Counter((x % 2, y % 2) for x, y in candidates if grid.mid(x, y) in (20, 22, 36))
+    px, py = tops.most_common(1)[0][0] if tops else (0, 0)
+    for _ in range(zones):
+        if not candidates:
+            return
+        cx, cy = rng.choice(candidates)
+        rx, ry = rng.uniform(3, 6), rng.uniform(2.5, 4.5)
+        # trees are 2x2 blocks: burn whole blocks so no tree is cut in half
+        for by in range(int(cy - ry - 2) // 2 * 2 + py, int(cy + ry + 3), 2):
+            for bx in range(int(cx - rx - 2) // 2 * 2 + px, int(cx + rx + 3), 2):
+                d = ((bx + 0.5 - cx) / rx) ** 2 + ((by + 0.5 - cy) / ry) ** 2 + rng.uniform(-0.3, 0.3)
+                if d < 1:
+                    for x, y in ((bx, by), (bx + 1, by), (bx, by + 1), (bx + 1, by + 1)):
+                        if 0 <= x < grid.w and 0 <= y < grid.h and grid.mid(x, y) in burnt:
+                            grid.set(x, y, burnt[grid.mid(x, y)], grid.col(x, y))
+        for y in range(max(0, int(cy - ry - 3)), min(grid.h, int(cy + ry + 4))):
+            for x in range(max(0, int(cx - rx - 3)), min(grid.w, int(cx + rx + 4))):
+                d = ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 + rng.uniform(-0.35, 0.35)
+                if d < 1.6 and patches and rng.random() < 0.2:
+                    name = rng.choice(patches)
+                    near = any(abs(x - ex) + abs(y - ey) <= 1 for ex, ey in events)
+                    if not near and fits(grid, ids[name], grounds[name], x, y):
+                        put(grid, ids[name], x, y)
+
+
 def main():
     all_ids = json.load(open(os.path.join(ROOT, 'tools/apocalypse/deco_ids.json')))
     grounds = collections.defaultdict(lambda: None, {name: ground for name, _, _, ground, _ in deco.PROPS})
@@ -206,23 +245,26 @@ def main():
                 print('SKIP %s %s at (%d,%d)' % (layout, prop, x, y))
                 ok = False
 
-        if cfg['swaps'] == 'all':
-            rng_s = random.Random(cfg['seed'])
-            by_source = {info['source']: info for info in ids.values() if 'source' in info}
-            for i, v in enumerate(grid.b):
-                info = by_source.get(v & 0x3FF)
-                if info and rng_s.random() < SWAP_FRACTION:
+        rng_s = random.Random(cfg.get('seed', 0) + 1)
+        by_source = collections.defaultdict(list)
+        for info in ids.values():
+            if 'source' in info and info.get('kind') != 'burnt':
+                if cfg['swaps'] == 'all' or info.get('kind') == 'roof':
+                    by_source[info['source']].append(info)
+        for i, v in enumerate(grid.b):
+            infos = by_source.get(v & 0x3FF)
+            if infos:
+                info = rng_s.choice(infos)
+                if rng_s.random() < (ROOF_FRACTION if info.get('kind') == 'roof' else SWAP_FRACTION):
                     grid.b[i] = (v & ~0x3FF) | info['metatiles'][0]
-            cfg_swaps = []
-        else:
-            cfg_swaps = cfg['swaps']
+        cfg_swaps = [] if cfg['swaps'] == 'all' else cfg['swaps']
+        burn_zones(grid, ids, random.Random(cfg.get('seed', 0) + 2), grounds, events)
         if cfg.get('auto') == 'scaled':
             gids = {info['ground_mid'] for info in ids.values() if 'ground_mid' in info} or set(GROUND_IDS['dirt'] + GROUND_IDS['road'])
             free = sum(1 for y in range(grid.h) for x in range(grid.w) if grid.col(x, y) == 0 and grid.mid(x, y) in gids)
             road = free
             solid_names = [n for n, info in ids.items() if 'source' not in info and info['solid']]
             decor_names = [n for n, info in ids.items() if 'source' not in info and not info['solid']]
-            decor_names = [n for n in decor_names if n.startswith('crack')] * 2 + [n for n in decor_names if n.startswith('graffiti')]
             if 'ground_mid' in next(iter(ids.values()), {}) or any('ground_mid' in i for i in ids.values()):
                 decor_count_scale = 2  # mixed grounds: fewer cracks
             else:
@@ -253,13 +295,17 @@ def main():
                            for cx, cy, _ in cells)
 
             for names, count, solid in ((auto['solid'], auto['count'], True), (auto['decor'], auto['decor_count'], False)):
+                names = [n for n in names if n in ids]  # props that did not fit into this tileset are left out
                 placed, tries = 0, 0
                 names_placed = []
+                spots = {n: [(x, y) for y in range(grid.h) for x in range(grid.w) if fits(grid, ids[n], grounds[n], x, y)]
+                         for n in names}
+                names = [n for n in names if spots[n]]
                 while placed < count and tries < 4000 and names:
                     tries += 1
                     name = rng.choice(names)
                     info = ids[name]
-                    x, y = rng.randrange(grid.w), rng.randrange(grid.h)
+                    x, y = rng.choice(spots[name])
                     if not fits(grid, info, grounds[name], x, y):
                         continue
                     cells = prop_cells(info, x, y)
