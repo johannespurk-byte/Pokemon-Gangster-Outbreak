@@ -71,6 +71,11 @@ static u32 Hash(u32 a, u32 b, u32 c, u32 d)
     return h;
 }
 
+u32 GangRandom_Hash(u32 a, u32 b, u32 c, u32 d)
+{
+    return Hash(a, b, c, d);
+}
+
 static bool32 IsLegendaryLike(enum Species species)
 {
     const struct SpeciesInfo *info = &gSpeciesInfo[species];
