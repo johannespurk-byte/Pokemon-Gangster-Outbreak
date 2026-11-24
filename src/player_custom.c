@@ -346,12 +346,31 @@ static void ComposeAll(void)
     sComposedMagic = COMPOSED_MAGIC;
 }
 
+static bool32 LooksEqual(const struct PlayerLook *a, const struct PlayerLook *b)
+{
+    u32 i;
+
+    // field by field: memcmp would also compare padding bytes, which are random on the stack
+    if (a->head != b->head || a->outfit != b->outfit)
+        return FALSE;
+    for (i = 0; i < PLAYER_COLOR_ROLE_COUNT; i++)
+    {
+        if (a->colors[i] != b->colors[i])
+            return FALSE;
+    }
+    return TRUE;
+}
+
+// Called whenever the player's graphics are needed (several times per frame), so it must stay cheap:
+// the expensive ComposeAll only runs when the look actually changed.
 void PlayerCustom_EnsureComposed(void)
 {
     struct PlayerLook look;
 
     PlayerCustom_GetLook(&look);
-    if (sComposedMagic != COMPOSED_MAGIC || memcmp(&look, &sComposedLook, sizeof(look)) != 0)
+    look.head = ClampPart(look.head);
+    look.outfit = ClampPart(look.outfit);
+    if (sComposedMagic != COMPOSED_MAGIC || !LooksEqual(&look, &sComposedLook))
         ComposeAll();
 }
 
