@@ -96,6 +96,9 @@ ViridianCity_Gym_EventScript_GangIntroAfterBattle::
 	special SetUnlockedPokedexFlags
 	special EnableNationalPokedex
 	textcolor NPC_TEXT_COLOR_MALE
+	msgbox ViridianCity_Gym_Text_GangIntroGiovanniTownMap
+	giveitem_msg ViridianCity_Gym_Text_GangIntroReceivedTownMap, ITEM_TOWN_MAP, 1, MUS_RG_OBTAIN_KEY_ITEM
+	setflag FLAG_HIDE_TOWN_MAP
 	giveitem_msg ViridianCity_Gym_Text_GangIntroReceivedBalls, ITEM_POKE_BALL, 5
 	msgbox ViridianCity_Gym_Text_GangIntroGiovanniCandies
 	giveitem_msg ViridianCity_Gym_Text_GangIntroReceivedCandies, ITEM_RARE_CANDY, 30
@@ -109,7 +112,7 @@ ViridianCity_Gym_EventScript_GangIntroAfterBattle::
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 2
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1
-	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 1
+	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2 @ Giovanni already handed over the TOWN MAP
 	setvar VAR_MAP_SCENE_ROUTE22, 1
 	setvar VAR_MAP_SCENE_POKEMON_CENTER_TEALA, 1
 	setvar VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1
@@ -498,3 +501,14 @@ ViridianCity_Gym_Text_GangIntroGiovanniGadgets2::
 	.string "rank you climb adds another one.\p"
 	.string "The HEAL-BOTs in the old POKéMON\n"
 	.string "CENTERS recharge them.$"
+
+ViridianCity_Gym_Text_GangIntroGiovanniTownMap::
+	.string "GIOVANNI: Take this as well.\n"
+	.string "A map of my KANTO.\p"
+	.string "Every town on it pays its dues\n"
+	.string "to TEAM ROCKET.\p"
+	.string "Learn where they are.$"
+
+ViridianCity_Gym_Text_GangIntroReceivedTownMap::
+	.string "{PLAYER} received a TOWN MAP\n"
+	.string "from GIOVANNI.$"

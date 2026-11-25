@@ -14421,3 +14421,78 @@ Mugshot: Purple
 
 Pikachu
 Level: 60
+
+=== TRAINER_PALLET_CREW_RICO ===
+Name: RICO
+Class: Biker Frlg
+Pic: Biker Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+Koffing
+Level: 6
+
+Rattata
+Level: 6
+
+Zubat
+Level: 6
+
+=== TRAINER_PALLET_CREW_DANTE ===
+Name: DANTE
+Class: Cue Ball Frlg
+Pic: Cue Ball Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+Mankey
+Level: 6
+
+Spearow
+Level: 6
+
+Ekans
+Level: 7
+
+=== TRAINER_PALLET_CREW_VIPER ===
+Name: VIPER
+Class: Biker Frlg
+Pic: Biker Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Grimer
+Level: 7
+
+Koffing
+Level: 7
+
+Sandshrew
+Level: 7
+
+=== TRAINER_PALLET_SILVER ===
+Name: TERRY
+Class: Rival Late Frlg
+Pic: Rival Late Frlg
+Gender: Male
+Music: Serious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Pidgeotto
+Level: 12
+
+Squirtle
+Level: 12
+
+Rattata
+Level: 11
+
+Abra
+Level: 11

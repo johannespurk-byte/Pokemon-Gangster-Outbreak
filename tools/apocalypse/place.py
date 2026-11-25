@@ -81,6 +81,14 @@ SWAP_FRACTION = 0.6      # share of windows / walls that get boarded up, sprayed
 ROOF_FRACTION = 0.3      # share of roof cells with a hole
 FIRE_ZONE_CELLS = 260    # one burnt area (charred trees and ground) per this many map cells
 
+# Per-map flavour for the auto layouts: walls sprayed more often, some props drawn more often (weight = copies in
+# the draw list), more props and decals overall.
+LAYOUT_STYLE = {
+    # Pallet Town is Silver's turf: his crew's tags on every wall, barricades and fire barrels
+    'data/layouts/PalletTown_Frlg': {'swap_fraction': 1.0, 'solid_scale': 1.6, 'decor_scale': 2.0,
+                                     'weights': {'sandbags': 4, 'fire_barrel': 4, 'graffiti': 6, 'trash_bags': 2}},
+}
+
 
 def auto_configs():
     import glob
@@ -245,6 +253,7 @@ def main():
                 print('SKIP %s %s at (%d,%d)' % (layout, prop, x, y))
                 ok = False
 
+        style = LAYOUT_STYLE.get(layout, {})
         rng_s = random.Random(cfg.get('seed', 0) + 1)
         by_source = collections.defaultdict(list)
         for info in ids.values():
@@ -255,7 +264,7 @@ def main():
             infos = by_source.get(v & 0x3FF)
             if infos:
                 info = rng_s.choice(infos)
-                if rng_s.random() < (ROOF_FRACTION if info.get('kind') == 'roof' else SWAP_FRACTION):
+                if rng_s.random() < (ROOF_FRACTION if info.get('kind') == 'roof' else style.get('swap_fraction', SWAP_FRACTION)):
                     grid.b[i] = (v & ~0x3FF) | info['metatiles'][0]
         cfg_swaps = [] if cfg['swaps'] == 'all' else cfg['swaps']
         burn_zones(grid, ids, random.Random(cfg.get('seed', 0) + 2), grounds, events)
@@ -269,8 +278,16 @@ def main():
                 decor_count_scale = 2  # mixed grounds: fewer cracks
             else:
                 decor_count_scale = 1
-            cfg = dict(cfg, auto={'seed': cfg['seed'], 'solid': sorted(solid_names), 'count': free // SOLID_PER_CELLS,
-                                  'decor': sorted(decor_names), 'decor_count': road // (DECOR_PER_CELLS * decor_count_scale)})
+            def weighted(names):
+                out = []
+                for n in sorted(names):
+                    base = n.split('@')[0].replace('_dirt', '').replace('_road', '')
+                    out += [n] * style.get('weights', {}).get(base, 1)
+                return out
+            cfg = dict(cfg, auto={'seed': cfg['seed'], 'solid': weighted(solid_names),
+                                  'count': int(free // SOLID_PER_CELLS * style.get('solid_scale', 1)),
+                                  'decor': weighted(decor_names),
+                                  'decor_count': int(road // (DECOR_PER_CELLS * decor_count_scale) * style.get('decor_scale', 1))})
         for x, y, name in cfg_swaps:
             info = ids[name]
             cells = [(x, y)] if x is not None else [(cx, cy) for cy in range(grid.h) for cx in range(grid.w)]

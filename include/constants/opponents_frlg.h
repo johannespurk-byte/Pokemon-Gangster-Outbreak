@@ -681,7 +681,12 @@
 #define TRAINER_LEAGUE_VICTOR                             668 // Gangster Outbreak: Elite Four (double battle)
 #define TRAINER_LEAGUE_GLORIA                             669 // Gangster Outbreak: Elite Four (double battle)
 
-#define TRAINERS_COUNT_FRLG                      670
+#define TRAINER_PALLET_CREW_RICO                   670 // Gangster Outbreak: Silver's turf in Pallet Town
+#define TRAINER_PALLET_CREW_DANTE                  671 // Gangster Outbreak: Silver's turf in Pallet Town
+#define TRAINER_PALLET_CREW_VIPER                  672 // Gangster Outbreak: Silver's turf in Pallet Town
+#define TRAINER_PALLET_SILVER                      673 // Gangster Outbreak: Silver's turf in Pallet Town
+
+#define TRAINERS_COUNT_FRLG                      674
 #define MAX_TRAINERS_COUNT_FRLG                  768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_FRLG_H

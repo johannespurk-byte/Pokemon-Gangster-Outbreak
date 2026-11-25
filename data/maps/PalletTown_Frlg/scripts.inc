@@ -466,22 +466,29 @@ PalletTown_Text_RaisingMonsToo::
 	.string "protect me.$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC::
-	.string "Technology is incredible!\p"
-	.string "You can now store and recall items\n"
-	.string "and POKéMON as data via PC.$"
+	.string "SILVER's crew runs PALLET now.\p"
+	.string "They don't take money from us.\n"
+	.string "They just want a good fight.\p"
+	.string "Funny kid, that SILVER. Hates\n"
+	.string "his old man more than anyone.$"
 
 PalletTown_Text_OakPokemonResearchLab::
-	.string "OAK POKéMON RESEARCH LAB$"
+	.string "OAK POKéMON RESEARCH LAB\n"
+	.string "Closed.\p"
+	.string "Now property of SILVER's crew.$"
 
 PalletTown_Text_PlayersHouse::
 	.string "{PLAYER}'s house$"
 
 PalletTown_Text_RivalsHouse::
-	.string "{RIVAL}'s house$"
+	.string "SILVER'S HIDEOUT\n"
+	.string "Knock first.\p"
+	.string "Or don't come at all.$"
 
 PalletTown_Text_TownSign::
 	.string "PALLET TOWN\n"
-	.string "Shades of your journey await!$"
+	.string "SILVER'S TURF.\p"
+	.string "Outsiders keep out!$"
 
 PalletTown_Text_OakLetMeSeePokedex::
 	.string "OAK: Ah, {PLAYER}!\n"
@@ -545,4 +552,75 @@ PalletTown_Text_PressStartToOpenMenuCopy::
 	.string "TRAINER TIPS!\p"
 	.string "Press START to open the MENU!$"
 
+@ Gangster Outbreak: Pallet Town is Silver's turf (his crew and a rematch with him)
+PalletTown_EventScript_Silver::
+	trainerbattle_single TRAINER_PALLET_SILVER, PalletTown_Text_SilverIntro, PalletTown_Text_SilverDefeat
+	msgbox PalletTown_Text_SilverPostBattle, MSGBOX_AUTOCLOSE
+	end
 
+PalletTown_EventScript_CrewRico::
+	trainerbattle_single TRAINER_PALLET_CREW_RICO, PalletTown_Text_RicoIntro, PalletTown_Text_RicoDefeat
+	msgbox PalletTown_Text_RicoPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PalletTown_EventScript_CrewDante::
+	trainerbattle_single TRAINER_PALLET_CREW_DANTE, PalletTown_Text_DanteIntro, PalletTown_Text_DanteDefeat
+	msgbox PalletTown_Text_DantePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PalletTown_EventScript_CrewViper::
+	trainerbattle_single TRAINER_PALLET_CREW_VIPER, PalletTown_Text_ViperIntro, PalletTown_Text_ViperDefeat
+	msgbox PalletTown_Text_ViperPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PalletTown_Text_SilverIntro::
+	.string "{RIVAL}: You again?\n"
+	.string "This is my town now.\p"
+	.string "My old man can keep his ROCKET\n"
+	.string "empire. PALLET belongs to me.\p"
+	.string "Want to walk through here?\n"
+	.string "Then beat me first!$"
+
+PalletTown_Text_SilverDefeat::
+	.string "Tch…\n"
+	.string "Lucky shot.$"
+
+PalletTown_Text_SilverPostBattle::
+	.string "{RIVAL}: Don't think this changes\n"
+	.string "anything.\p"
+	.string "My crew still runs PALLET.\n"
+	.string "Next time I'll win.$"
+
+PalletTown_Text_RicoIntro::
+	.string "Hey! Nobody walks into SILVER's\n"
+	.string "turf without paying the toll!$"
+
+PalletTown_Text_RicoDefeat::
+	.string "Toll's… waived, I guess.$"
+
+PalletTown_Text_RicoPostBattle::
+	.string "SILVER hangs out by his hideout.\n"
+	.string "Don't say I didn't warn you.$"
+
+PalletTown_Text_DanteIntro::
+	.string "You're one of GIOVANNI's new\n"
+	.string "rats, aren't you?$"
+
+PalletTown_Text_DanteDefeat::
+	.string "A rat with sharp teeth…$"
+
+PalletTown_Text_DantePostBattle::
+	.string "We took the old LAB.\n"
+	.string "Nobody's coming back for it.$"
+
+PalletTown_Text_ViperIntro::
+	.string "This is SILVER's crew territory.\n"
+	.string "Let's see if you belong here!$"
+
+PalletTown_Text_ViperDefeat::
+	.string "Okay, okay!\n"
+	.string "You can stay.$"
+
+PalletTown_Text_ViperPostBattle::
+	.string "The graffiti? That's our tag.\n"
+	.string "Every wall in PALLET carries it.$"

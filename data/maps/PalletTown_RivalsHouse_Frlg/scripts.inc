@@ -165,14 +165,13 @@ PalletTown_RivalsHouse_EventScript_Picture::
 	end
 
 PalletTown_RivalsHouse_Text_HiBrothersAtLab::
-	.string "DAISY: Hi, {PLAYER}!\p"
-	.string "My brother, {RIVAL}, is out at\n"
-	.string "Grandpa's LAB.$"
+	.string "ROXY: This is SILVER's hideout.\n"
+	.string "He's outside, guarding his turf.$"
 
 PalletTown_RivalsHouse_Text_HeardYouBattledRival::
-	.string "DAISY: {PLAYER}, I heard you had\n"
-	.string "a battle against {RIVAL}.\p"
-	.string "I wish I'd seen that!$"
+	.string "ROXY: So you fought {RIVAL}?\p"
+	.string "He hasn't stopped talking\n"
+	.string "about you since.$"
 
 PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp::
 	.string "Grandpa asked you to run an\n"
@@ -194,10 +193,10 @@ PalletTown_RivalsHouse_Text_ExplainTownMap::
 	.string "names of places.$"
 
 PalletTown_RivalsHouse_Text_PleaseGiveMonsRest::
-	.string "DAISY: Just like people, POKéMON\n"
-	.string "are living things.\p"
-	.string "When they get tired, please give\n"
-	.string "them a rest.$"
+	.string "ROXY: This is {RIVAL}'s hideout.\n"
+	.string "He said you might show up.\p"
+	.string "Let your POKéMON rest a little\n"
+	.string "before you face him outside.$"
 
 PalletTown_RivalsHouse_Text_ItsBigMapOfKanto::
 	.string "It's a big map of the KANTO region.\n"
