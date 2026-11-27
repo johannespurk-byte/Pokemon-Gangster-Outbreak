@@ -1053,6 +1053,7 @@ gStdScripts_End::
 	.include "data/scripts/trainer_battle.inc"
 	.include "data/scripts/gang_rival_hms.inc"
 	.include "data/scripts/gang_mart.inc"
+	.include "data/scripts/gang_route_bots.inc"
 	.include "data/scripts/new_game.inc"
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/hall_of_fame_frlg.inc"

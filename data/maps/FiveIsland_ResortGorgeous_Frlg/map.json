@@ -134,6 +134,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_HIDE_RESORT_GORGEOUS_SELPHY"
+    },
+    {
+      "type": "object",
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "flag": "0",
+      "graphics_id": "OBJ_EVENT_GFX_NURSE_FRLG",
+      "x": 25,
+      "script": "GangRouteBot_EventScript_Heal"
+    },
+    {
+      "type": "object",
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "flag": "0",
+      "graphics_id": "OBJ_EVENT_GFX_CLERK",
+      "x": 26,
+      "script": "GangRouteBot_EventScript_Shop_FiveIsland_ResortGorgeous"
     }
   ],
   "warp_events": [
@@ -152,9 +180,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "hidden_item",
