@@ -553,9 +553,43 @@ PalletTown_Text_PressStartToOpenMenuCopy::
 	.string "Press START to open the MENU!$"
 
 @ Gangster Outbreak: Pallet Town is Silver's turf (his crew and a rematch with him)
+@ He wants a rematch after every new badge (VAR_PALLET_SILVER_BADGES = badges + 1 at his last defeat)
+@ and hands over the HMs the player's badges allow
 PalletTown_EventScript_Silver::
-	trainerbattle_single TRAINER_PALLET_SILVER, PalletTown_Text_SilverIntro, PalletTown_Text_SilverDefeat
-	msgbox PalletTown_Text_SilverPostBattle, MSGBOX_AUTOCLOSE
+	lock
+	faceplayer
+	special GangItems_CountBadges
+	copyvar VAR_0x8009, VAR_RESULT
+	addvar VAR_0x8009, 1
+	goto_if_ge VAR_PALLET_SILVER_BADGES, VAR_0x8009, PalletTown_EventScript_SilverWaiting
+	goto_if_eq VAR_PALLET_SILVER_BADGES, 0, PalletTown_EventScript_SilverFirstIntro
+	msgbox PalletTown_Text_SilverRematchIntro
+	goto PalletTown_EventScript_SilverBattle
+
+PalletTown_EventScript_SilverFirstIntro::
+	msgbox PalletTown_Text_SilverIntro
+
+PalletTown_EventScript_SilverBattle::
+	cleartrainerflag TRAINER_PALLET_SILVER
+	trainerbattle_no_intro TRAINER_PALLET_SILVER, PalletTown_Text_SilverDefeat
+	special GangItems_CountBadges
+	addvar VAR_RESULT, 1
+	copyvar VAR_PALLET_SILVER_BADGES, VAR_RESULT
+	msgbox PalletTown_Text_SilverPostBattle
+	goto PalletTown_EventScript_SilverGiveHMs
+
+PalletTown_EventScript_SilverWaiting::
+	msgbox PalletTown_Text_SilverWaiting
+
+PalletTown_EventScript_SilverGiveHMs::
+	call_if_set FLAG_BADGE01_GET, EventScript_GangRivalGivesHM05
+	call_if_set FLAG_BADGE02_GET, EventScript_GangRivalGivesHM01
+	call_if_set FLAG_BADGE03_GET, EventScript_GangRivalGivesHM02
+	call_if_set FLAG_BADGE04_GET, EventScript_GangRivalGivesHM04
+	call_if_set FLAG_BADGE05_GET, EventScript_GangRivalGivesHM03
+	call_if_set FLAG_BADGE06_GET, EventScript_GangRivalGivesHM06
+	call_if_set FLAG_BADGE07_GET, EventScript_GangRivalGivesHM07
+	release
 	end
 
 PalletTown_EventScript_CrewRico::
@@ -589,7 +623,19 @@ PalletTown_Text_SilverPostBattle::
 	.string "{RIVAL}: Don't think this changes\n"
 	.string "anything.\p"
 	.string "My crew still runs PALLET.\n"
-	.string "Next time I'll win.$"
+	.string "Next time I'll win.\p"
+	.string "Get a new BADGE and come back.\n"
+	.string "I'll be stronger by then!$"
+
+PalletTown_Text_SilverRematchIntro::
+	.string "{RIVAL}: Another BADGE, huh?\n"
+	.string "So what.\p"
+	.string "I trained too. This time\n"
+	.string "PALLET stays mine!$"
+
+PalletTown_Text_SilverWaiting::
+	.string "{RIVAL}: Beat another GYM first.\n"
+	.string "Then we'll talk again.$"
 
 PalletTown_Text_RicoIntro::
 	.string "Hey! Nobody walks into SILVER's\n"

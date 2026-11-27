@@ -2317,6 +2317,17 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
         }
     }
 
+    // Gangster Outbreak: with the badge and the HM in the bag the first Pokémon uses the move
+    if (gSpecialVar_Result == PARTY_SIZE && HasBadgeAndHMForFieldMove(fieldMove))
+    {
+        u32 slot = GetFirstNonEggPartySlot();
+        if (slot != PARTY_SIZE)
+        {
+            gSpecialVar_Result = slot;
+            gSpecialVar_0x8004 = GetMonData(&gParties[B_TRAINER_PLAYER][slot], MON_DATA_SPECIES);
+        }
+    }
+
     return FALSE;
 }
 

@@ -350,7 +350,7 @@ static void FillUpTrainerParty(struct Pokemon *party, u16 trainerNum)
 // home region; the Champion is Silver. Their teams grow with the difficulty: more Pokémon, higher levels,
 // stronger species (on BOSS each one brings a legendary), the best moves and more items.
 
-#define LEAGUE_LEVEL          63  // first run: the level cap with eight badges
+#define LEAGUE_LEVEL          66  // first run: the level cap with eight badges
 #define LEAGUE_REMATCH_LEVEL  75  // after becoming Champion
 #define LEAGUE_ROOM_CHAMPION  5
 

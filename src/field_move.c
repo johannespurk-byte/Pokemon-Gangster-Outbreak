@@ -8,6 +8,7 @@
 #include "constants/field_move.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
+#include "item.h"
 
 static bool32 IsAlwaysFalse(enum FieldMove fieldMove)
 {
@@ -191,3 +192,27 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .hideIfLocked = TRUE,
     },
 };
+
+bool32 HasBadgeAndHMForFieldMove(enum FieldMove fieldMove)
+{
+    enum Item hm;
+
+    if (fieldMove >= FIELD_MOVES_COUNT || gFieldMoveInfo[fieldMove].unlockType != BADGE_UNLOCK || !IsFieldMoveUnlocked(fieldMove))
+        return FALSE;
+    hm = GetTMHMItemIdFromMoveId(FieldMove_GetMoveId(fieldMove));
+    return hm != ITEM_NONE && CheckBagHasItem(hm, 1);
+}
+
+u32 GetFirstNonEggPartySlot(void)
+{
+    u32 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES) == SPECIES_NONE)
+            break;
+        if (!GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_IS_EGG))
+            return i;
+    }
+    return PARTY_SIZE;
+}

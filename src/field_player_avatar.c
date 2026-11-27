@@ -1,4 +1,5 @@
 #include "global.h"
+#include "field_move.h"
 #include "player_custom.h"
 #include "main.h"
 #include "bike.h"
@@ -1634,6 +1635,9 @@ bool8 PartyHasMonWithSurf(void)
             if (MonKnowsMove(&gParties[B_TRAINER_PLAYER][i], MOVE_SURF))
                 return TRUE;
         }
+        // Gangster Outbreak: badge and HM in the bag are enough
+        if (HasBadgeAndHMForFieldMove(FIELD_MOVE_SURF) && GetFirstNonEggPartySlot() != PARTY_SIZE)
+            return TRUE;
     }
     return FALSE;
 }

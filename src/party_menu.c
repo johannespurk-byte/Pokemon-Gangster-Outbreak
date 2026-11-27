@@ -2977,6 +2977,24 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         }
     }
 
+    // Gangster Outbreak: with the badge and the HM in the bag every Pokémon can use Fly and Flash
+    for (j = 0; j < 2; j++)
+    {
+        enum FieldMove fieldMove = (j == 0) ? FIELD_MOVE_FLY : FIELD_MOVE_FLASH;
+        u32 k;
+        bool32 listed = FALSE;
+
+        if (!HasBadgeAndHMForFieldMove(fieldMove))
+            continue;
+        for (k = 0; k < sPartyMenuInternal->numActions; k++)
+        {
+            if (sPartyMenuInternal->actions[k] == fieldMove + MENU_FIELD_MOVES)
+                listed = TRUE;
+        }
+        if (!listed)
+            AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, fieldMove + MENU_FIELD_MOVES);
+    }
+
     if (!InBattlePike())
     {
         if (GetMonData(&mons[1], MON_DATA_SPECIES) != SPECIES_NONE)

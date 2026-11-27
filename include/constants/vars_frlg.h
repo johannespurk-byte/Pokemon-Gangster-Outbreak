@@ -48,6 +48,7 @@
 #define VAR_QUEST_LOG_MON_COUNTS           0x4027
 #define VAR_WONDER_NEWS_STEP_COUNTER_FRLG  0x4028
 #define VAR_0x4029                         0x4029
+#define VAR_PALLET_SILVER_BADGES           VAR_0x4029 // Gangster Outbreak: badges + 1 at Silver's last defeat in Pallet Town (0 = never fought)
 #define VAR_0x402A                         0x402A
 #define VAR_0x402B                         0x402B
 #define VAR_DAYS_FRLG                      0x402C // was VAR_RESET_RTC_ENABLE

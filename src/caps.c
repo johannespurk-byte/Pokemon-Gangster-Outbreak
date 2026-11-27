@@ -10,15 +10,15 @@ u32 GetCurrentLevelCap(void)
     // Gangster Outbreak: the cap is the level of the next gym boss's strongest Pokémon
     static const u32 sLevelCapFlagMap[][2] =
     {
-        {FLAG_BADGE01_GET, 14}, // Piers
-        {FLAG_BADGE02_GET, 21}, // Guzma
-        {FLAG_BADGE03_GET, 24}, // Archer
-        {FLAG_BADGE04_GET, 29}, // Archie & Maxie
-        {FLAG_BADGE05_GET, 43}, // Ghetsis
-        {FLAG_BADGE06_GET, 43}, // Lysandre
-        {FLAG_BADGE07_GET, 47}, // Cyrus
-        {FLAG_BADGE08_GET, 50}, // Giovanni
-        {FLAG_IS_CHAMPION, 63}, // Elite Four and Champion
+        {FLAG_BADGE01_GET, 21}, // Piers
+        {FLAG_BADGE02_GET, 27}, // Guzma
+        {FLAG_BADGE03_GET, 32}, // Archer
+        {FLAG_BADGE04_GET, 38}, // Archie & Maxie
+        {FLAG_BADGE05_GET, 44}, // Ghetsis
+        {FLAG_BADGE06_GET, 49}, // Lysandre
+        {FLAG_BADGE07_GET, 54}, // Cyrus
+        {FLAG_BADGE08_GET, 58}, // Giovanni
+        {FLAG_IS_CHAMPION, 66}, // Elite Four and Champion
     };
 
     u32 i;
