@@ -255,6 +255,18 @@ class Room:
             for y in range(y0, y1 + 1):
                 for x in range(x0, x1 + 1):
                     self.put(x, y, mid, block)
+        elif op[0] == 'piece':   # furniture from another layout (all from the primary building tileset)
+            _, name, dx, dy = op
+            path, sw, sx, sy, w, h = PIECES[name]
+            src = git_bytes(path)
+            for y in range(h):
+                for x in range(w):
+                    self.cells[(dy + y) * self.w + dx + x] = struct.unpack_from('<H', src, ((sy + y) * sw + sx + x) * 2)[0]
+        elif op[0] == 'clear':   # empty the middle of a standard 11x9 house (rows 3-6, x 1-9)
+            _, floor = op
+            for y in range(3, 7):
+                for x in range(1, 10):
+                    self.put(x, y, floor, False)
         elif op[0] == 'copy':
             _, sx, sy, w, h, dx, dy = op
             for y in range(h):
@@ -290,6 +302,49 @@ class Room:
 DECALS = {'crack_a', 'crack_b', 'crack_c', 'debris_a', 'debris_b', 'debris_c', 'stain', 'rubble', 'rubble_b'}
 
 FLOOR_WOOD = 0x001   # plain wooden floor of the houses (primary tileset)
+
+# Furniture for the house layouts: (source layout, its width, x, y, w, h). Everything is drawn with the primary
+# building tileset, so it fits any house - as long as the floor matches (green check / striped wood / parquet).
+FLOOR_GREEN, FLOOR_STRIPES, FLOOR_PARQUET = 0x001, 0x109, 0x0A9
+PIECES = {
+    'table_green':   ('data/layouts/House2_Frlg/map.bin', 11, 3, 3, 6, 4),
+    'table_stripes': ('data/layouts/House1_Frlg/map.bin', 11, 3, 3, 6, 4),
+    'table_parquet': ('data/layouts/House5_Frlg/map.bin', 11, 3, 3, 6, 4),
+    'desks_stripes': ('data/layouts/CeruleanCity_House5_Frlg/map.bin', 11, 8, 3, 2, 4),
+    'tv_parquet':    ('data/layouts/SaffronCity_CopycatsHouse_2F_Frlg/map.bin', 12, 2, 4, 5, 4),
+}
+FLOORS = {'green': FLOOR_GREEN, 'stripes': FLOOR_STRIPES, 'parquet': FLOOR_PARQUET}
+WALLS = [(4, 1, 'tag_y'), (6, 1, 'tag_a')]
+
+
+def house(floor, recipe, wall=(), props=(), source=None, map_dir=None):
+    """a standard 11x9 house with a new furniture arrangement:
+    table_left / table_right: the dining table moved to one side (striped-wood houses get two desks on the other)
+    lounge: no table - a gang lounge with a fire barrel
+    tv: (parquet) a TV corner instead of the table
+    shelves: two desks on the left, the table on the right"""
+    f = FLOORS[floor]
+    ops = [] if recipe == 'keep' else [('clear', f)]
+    table = 'table_' + floor
+    if recipe == 'table_left':
+        ops.append(('piece', table, 1, 3))
+        if floor == 'stripes':
+            ops.append(('piece', 'desks_stripes', 8, 3))
+    elif recipe == 'table_right':
+        ops.append(('piece', table, 4, 3))
+    elif recipe == 'tv':
+        ops.append(('piece', 'tv_parquet', 5, 3))
+    elif recipe == 'shelves':
+        ops += [('piece', 'desks_stripes', 1, 3), ('piece', table, 4, 3)]
+    elif recipe == 'shelves_keep_table':
+        ops += [('piece', 'desks_stripes', 1, 3), ('piece', table, 3, 3)]
+    plan = {'ops': ops, 'wall': list(WALLS) + list(wall), 'floor': list(props), 'map': map_dir}
+    if source:
+        plan['source'] = source
+    return plan
+
+
+H1, H5 = 'data/layouts/House1_Frlg/map.bin', 'data/layouts/House5_Frlg/map.bin'
 
 ROOMS = {
     'LAYOUT_PALLET_TOWN_PLAYERS_HOUSE_1F_FRLG': (GB1, {
@@ -354,7 +409,95 @@ ROOMS = {
                   (12, 6, 'crack_a'), (16, 7, 'stain'), (6, 8, 'debris_b'), (13, 5, 'rubble_b'), (2, 3, 'crack_c'),
                   (10, 8, 'debris_c')],
     }),
+    # ---- other towns: every house gets its own arrangement (gang props on top)
+    'LAYOUT_VIRIDIAN_CITY_HOUSE': (GB2, house('green', 'table_right', props=[(1, 3, 'crates'), (2, 3, 'crates_b'),
+        (1, 4, 'cash'), (2, 6, 'stain'), (3, 4, 'crack_a'), (9, 7, 'debris_a')], map_dir='ViridianCity_House_Frlg')),
+    'LAYOUT_CERULEAN_CITY_HOUSE3': (GB1, house('stripes', 'table_left', source=H1, props=[(9, 7, 'crates'),
+        (8, 7, 'barrel'), (7, 4, 'crack_a'), (2, 7, 'stain'), (10, 3, 'debris_a')], map_dir='CeruleanCity_House3_Frlg')),
+    'LAYOUT_CERULEAN_CITY_HOUSE4': (GB1, house('stripes', 'lounge', source=H1, props=[(5, 4, 'barrel_fire'), (8, 3, 'tires'),
+        (1, 3, 'crates'), (2, 3, 'crates_b'), (7, 6, 'sandbags'), (8, 6, 'sandbags'), (3, 5, 'rubble'), (6, 6, 'stain'),
+        (9, 4, 'debris_b')], map_dir='CeruleanCity_House4_Frlg')),
+    'LAYOUT_VERMILION_CITY_HOUSE1': (GB1, house('stripes', 'table_right', source=H1, props=[(1, 3, 'crates'), (1, 4, 'barrel'),
+        (2, 3, 'cash'), (2, 6, 'crack_b'), (3, 4, 'stain'), (9, 7, 'debris_c')], map_dir='VermilionCity_House1_Frlg')),
+    'LAYOUT_VERMILION_CITY_HOUSE2': (GB1, house('stripes', 'shelves', source=H1, props=[(3, 3, 'barrel_b'), (9, 7, 'tires'),
+        (3, 6, 'stain'), (7, 7, 'debris_a'), (10, 4, 'crack_a')], map_dir='VermilionCity_House2_Frlg')),
+    'LAYOUT_VERMILION_CITY_HOUSE3': (GB1, house('stripes', 'shelves_keep_table', source=H1, props=[(10, 3, 'crates'),
+        (9, 7, 'barrel'), (9, 5, 'stain'), (2, 7, 'debris_b')], map_dir='VermilionCity_House3_Frlg')),
+    'LAYOUT_FUCHSIA_CITY_HOUSE1': (GB1, house('stripes', 'lounge', source=H1, props=[(4, 4, 'barrel_fire'), (6, 3, 'tires'),
+        (9, 3, 'crates'), (9, 4, 'crates_b'), (1, 6, 'cash'), (2, 5, 'rubble_b'), (6, 6, 'debris_a'), (8, 7, 'stain')],
+        map_dir='FuchsiaCity_House1_Frlg')),
+    'LAYOUT_FUCHSIA_CITY_HOUSE3': (GB1, house('stripes', 'table_left', source=H1, props=[(9, 7, 'sandbags'),
+        (8, 7, 'sandbags'), (7, 3, 'crack_b'), (2, 7, 'debris_c')], map_dir='FuchsiaCity_House3_Frlg')),
+    'LAYOUT_LAVENDER_TOWN_HOUSE1': (GB1, house('parquet', 'tv', source=H5, props=[(1, 3, 'crates'), (2, 3, 'barrel'),
+        (3, 5, 'stain'), (2, 7, 'debris_a'), (9, 7, 'crack_a')], map_dir='LavenderTown_House1_Frlg')),
+    'LAYOUT_LAVENDER_TOWN_HOUSE2': (GB1, house('parquet', 'table_left', source=H5, props=[(9, 3, 'crates'), (9, 4, 'crates_b'),
+        (8, 6, 'stain'), (7, 4, 'crack_c'), (9, 7, 'debris_b')], map_dir='LavenderTown_House2_Frlg')),
+    'LAYOUT_CELADON_CITY_HOUSE1': (GB1, house('parquet', 'lounge', source=H5, props=[(5, 5, 'barrel_fire'), (1, 3, 'crates'),
+        (2, 3, 'crates_b'), (9, 3, 'cash'), (9, 4, 'barrel_b'), (7, 6, 'tires'), (3, 6, 'stain'), (6, 3, 'debris_a')],
+        map_dir='CeladonCity_House1_Frlg')),
+    'LAYOUT_SAFFRON_CITY_HOUSE': (GB1, house('parquet', 'keep', source=H5, props=[(1, 3, 'crates'), (1, 4, 'cash'),
+        (9, 3, 'barrel'), (10, 3, 'tires'), (2, 6, 'crack_a'), (9, 7, 'debris_c')], map_dir='SaffronCity_House_Frlg')),
+    'LAYOUT_SAFFRON_CITY_MR_PSYCHICS_HOUSE': (GB1, house('parquet', 'table_right', source=H5, props=[(1, 3, 'barrel'),
+        (2, 3, 'tires'), (2, 5, 'stain'), (3, 6, 'crack_b'), (9, 7, 'debris_a')], map_dir='SaffronCity_MrPsychicsHouse_Frlg')),
+    'LAYOUT_CERULEAN_CITY_HOUSE1': (GB2, {'wall': [(5, 1, 'tag_b'), (7, 1, 'tag_y')], 'floor': [(1, 3, 'crates'),
+        (2, 3, 'crates_b'), (1, 5, 'barrel'), (3, 5, 'stain'), (6, 8, 'debris_a'), (3, 3, 'crack_a')],
+        'map': 'CeruleanCity_House1_Frlg'}),
+    'LAYOUT_CERULEAN_CITY_HOUSE5': (GB2, {'wall': [(4, 1, 'tag_a')], 'floor': [(2, 4, 'crates'), (2, 6, 'barrel_b'),
+        (5, 5, 'stain'), (4, 3, 'crack_c'), (10, 7, 'debris_b')], 'map': 'CeruleanCity_House5_Frlg'}),
 }
+
+
+STATIC_GFX = ('OBJ_EVENT_GFX_CLIPBOARD',)   # objects that lie on furniture on purpose
+
+
+def place_people(map_dir, room):
+    """move people that now stand on furniture (or can't be reached) to the nearest free floor cell"""
+    from collections import deque
+    path = os.path.join(ROOT, 'data/maps', map_dir, 'map.json')
+    m = json.load(open(path))
+    blocked = lambda x, y: (room.cells[y * room.w + x] >> 10) & 3
+    warps = {(w['x'], w['y']) for w in m.get('warp_events') or []}
+    taken = {(o['x'], o['y']) for o in m['object_events']}
+
+    def reachable():
+        seen, q = set(warps), deque(warps)
+        while q:
+            x, y = q.popleft()
+            for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                if 0 <= nx < room.w and 0 <= ny < room.h and (nx, ny) not in seen and not blocked(nx, ny) \
+                        and (nx, ny) not in taken:
+                    seen.add((nx, ny))
+                    q.append((nx, ny))
+        return seen
+    changed = False
+    for o in m['object_events']:
+        if o['graphics_id'] in STATIC_GFX:
+            continue
+        p = (o['x'], o['y'])
+        seen = reachable()
+        near = lambda c: any((c[0] + dx, c[1] + dy) in seen for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+        if not blocked(*p) and near(p):
+            continue
+        taken.discard(p)
+        seen = reachable()
+        cands = sorted((abs(x - p[0]) + abs(y - p[1]), y, x) for x, y in seen
+                       if (x, y) not in warps and all(abs(x - wx) + abs(y - wy) > 1 for wx, wy in warps) and y >= 2)
+        for _, y, x in cands:
+            taken.add((x, y))
+            if all(any((ax + dx, ay + dy) in reachable() for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+                   for ax, ay in taken if (ax, ay) not in warps):
+                o['x'], o['y'] = x, y
+                changed = True
+                print('  %s: moved %s from %s to %s' % (map_dir, o.get('script', '').split('_')[-1], p, (x, y)))
+                break
+            taken.discard((x, y))
+        else:
+            taken.add(p)
+            print('  %s: no free cell for %s' % (map_dir, o.get('script')))
+    if changed:
+        with open(path, 'w') as f:
+            json.dump(m, f, indent=2, ensure_ascii=False)
+            f.write('\n')
 
 
 def main():
@@ -383,6 +526,9 @@ def main():
         print('%s: %d tiles, %d metatiles' % (os.path.basename(ts.sec), len(ts.tiles), len(ts.meta)))
     for room in rooms:
         room.save()
+    for (layout_id, (sec, plan)), room in zip(ROOMS.items(), rooms):
+        if plan.get('map'):
+            place_people(plan['map'], room)
     if preview:
         os.makedirs(preview, exist_ok=True)
         for layout_id in ROOMS:
