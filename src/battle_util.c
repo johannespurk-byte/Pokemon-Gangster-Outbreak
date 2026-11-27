@@ -5630,6 +5630,8 @@ enum Obedience GetAttackerObedienceForAction(void)
         return OBEYS;
     if (BattlerHasAi(gBattlerAttacker))
         return OBEYS;
+    if (!TESTING)
+        return OBEYS; // Gangster Outbreak: the crew always listens to its boss (level caps keep the game fair)
 
     if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && GetBattlerPosition(gBattlerAttacker) == B_POSITION_PLAYER_RIGHT)
         return OBEYS;

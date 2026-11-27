@@ -1662,8 +1662,22 @@ static void CreateMainMenu(u8 whichMenu, s16 *windowIdPtr)
     *windowIdPtr = windowId;
 }
 
+static bool8 sOpenedFromPartyMenu; // Gangster Outbreak: return to the party menu instead of the PC
+
+void OpenPokeStorageFromPartyMenu(void)
+{
+    sOpenedFromPartyMenu = TRUE;
+    EnterPokeStorage(OPTION_MOVE_MONS);
+}
+
 static void CB2_ExitPokeStorage(void)
 {
+    if (sOpenedFromPartyMenu)
+    {
+        sOpenedFromPartyMenu = FALSE;
+        SetMainCallback2(CB2_PartyMenuFromStartMenu);
+        return;
+    }
     sPreviousBoxOption = GetCurrentBoxOption();
     gFieldCallback = FieldTask_ReturnToPcMenu;
     SetMainCallback2(CB2_ReturnToField);
