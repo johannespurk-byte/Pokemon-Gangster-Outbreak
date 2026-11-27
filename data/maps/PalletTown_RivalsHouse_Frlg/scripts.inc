@@ -203,8 +203,8 @@ PalletTown_RivalsHouse_Text_ItsBigMapOfKanto::
 	.string "Now this would be useful!$"
 
 PalletTown_RivalsHouse_Text_ShelvesCrammedFullOfBooks::
-	.string "The shelves are crammed full of\n"
-	.string "books on POKéMON.$"
+	.string "The shelves are crammed with\n"
+	.string "stolen goods.$"
 
 PalletTown_RivalsHouse_Text_LikeMeToGroomMon::
 	.string "DAISY: Hi, {PLAYER}!\n"
@@ -286,6 +286,19 @@ PalletTown_RivalsHouse_Text_WhyWouldMonHateYouSoMuch::
 	.string "POKéMON would hate you so much?$"
 
 PalletTown_RivalsHouse_Text_LovelyAndSweetClefairy::
-	.string "“The lovely and sweet\n"
-	.string "CLEFAIRY”$"
+	.string "A WANTED poster of {RIVAL}.\p"
+	.string "Someone crossed out the reward\n"
+	.string "and wrote a bigger number.$"
 
+@ Gangster Outbreak: the bouncer of Silver's clubhouse
+PalletTown_RivalsHouse_EventScript_Bouncer::
+	msgbox PalletTown_RivalsHouse_Text_Bouncer, MSGBOX_NPC
+	end
+
+PalletTown_RivalsHouse_Text_Bouncer::
+	.string "DEX: Easy, pal. This is\n"
+	.string "{RIVAL}'s clubhouse.\p"
+	.string "Beat him outside after every\n"
+	.string "new BADGE.\p"
+	.string "He pays up with HMs. Respect\n"
+	.string "is respect.$"

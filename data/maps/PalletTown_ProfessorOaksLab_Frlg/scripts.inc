@@ -1565,8 +1565,9 @@ PalletTown_ProfessorOaksLab_Text_EmailMessage::
 	.string "…$"
 
 PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
-	.string "I study POKéMON as PROF. OAK's\n"
-	.string "AIDE.$"
+	.string "GIOVANNI took over this lab.\p"
+	.string "OAK's research belongs to\n"
+	.string "the boss now.$"
 
 PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
 	.string "Hi, {PLAYER}. I bet you've become\n"
@@ -1587,10 +1588,10 @@ PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow::
 	.string "OAK's POKéMON SEMINAR.$"
 
 PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons::
-	.string "PROF. OAK may not look like much,\n"
-	.string "but he's the authority on POKéMON.\p"
-	.string "Many POKéMON TRAINERS hold him in\n"
-	.string "high regard.$"
+	.string "OAK ran off when the gangs\n"
+	.string "came.\p"
+	.string "His notes are worth a fortune\n"
+	.string "on the black market.$"
 
 PalletTown_ProfessorOaksLab_Text_OakFavorToAskYouPlayer::
 	.string "Ah, now this is excellent!\p"
