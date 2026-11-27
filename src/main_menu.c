@@ -30,6 +30,8 @@
 #include "random.h"
 #include "rtc.h"
 #include "save.h"
+#include "load_save.h"
+#include "new_game.h"
 #include "scanline_effect.h"
 #include "sound.h"
 #include "sprite.h"
@@ -215,6 +217,7 @@ static void Task_NewGameBirchSpeech_BoyOrGirl(u8);
 static void LoadMainMenuWindowFrameTiles(u8, u16);
 static void DrawMainMenuWindowBorder(const struct WindowTemplate *, u16);
 static void Task_HighlightSelectedMainMenuItem(u8);
+static void PrintSaveFileSlot(u8 windowId);
 static void Task_NewGameBirchSpeech_WaitToShowGenderMenu(u8);
 static void Task_NewGameBirchSpeech_ChooseGender(u8);
 static void NewGameBirchSpeech_ShowGenderMenu(void);
@@ -267,6 +270,8 @@ static const u8 gText_MainMenuContinue[] = _("CONTINUE");
 static const u8 gText_MainMenuOption[] = _("OPTION");
 static const u8 gText_MainMenuMysteryGift[] = _("MYSTERY GIFT");
 static const u8 gText_MainMenuNewGamePlus[] = _("NEW GAME+"); // Gangster Outbreak
+static const u8 gText_MainMenuSaveFile1[] = _("{LEFT_ARROW}SAVE A{RIGHT_ARROW}"); // Gangster Outbreak: two save files
+static const u8 gText_MainMenuSaveFile2[] = _("{LEFT_ARROW}SAVE B{RIGHT_ARROW}");
 
 // Gangster Outbreak: with NEW GAME+ unlocked (and Mystery Gift off) the 4-entry menu shows NEW GAME+ in the Mystery Gift slot
 static EWRAM_DATA bool8 sShowNewGamePlus = FALSE;
@@ -815,6 +820,7 @@ static void Task_DisplayMainMenu(u8 taskId)
             FillWindowPixelBuffer(0, PIXEL_FILL(0xA));
             FillWindowPixelBuffer(1, PIXEL_FILL(0xA));
             AddTextPrinterParameterized3(0, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
+            PrintSaveFileSlot(0);
             AddTextPrinterParameterized3(1, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
             PutWindowTilemap(0);
             PutWindowTilemap(1);
@@ -828,6 +834,7 @@ static void Task_DisplayMainMenu(u8 taskId)
             FillWindowPixelBuffer(3, PIXEL_FILL(0xA));
             FillWindowPixelBuffer(4, PIXEL_FILL(0xA));
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
+            PrintSaveFileSlot(2);
             AddTextPrinterParameterized3(3, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
             AddTextPrinterParameterized3(4, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
             MainMenu_FormatSavegameText();
@@ -847,6 +854,7 @@ static void Task_DisplayMainMenu(u8 taskId)
             FillWindowPixelBuffer(4, PIXEL_FILL(0xA));
             FillWindowPixelBuffer(5, PIXEL_FILL(0xA));
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
+            PrintSaveFileSlot(2);
             AddTextPrinterParameterized3(3, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
             AddTextPrinterParameterized3(4, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, sShowNewGamePlus ? gText_MainMenuNewGamePlus : gText_MainMenuMysteryGift);
             AddTextPrinterParameterized3(5, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
@@ -871,6 +879,7 @@ static void Task_DisplayMainMenu(u8 taskId)
             FillWindowPixelBuffer(5, PIXEL_FILL(0xA));
             FillWindowPixelBuffer(6, PIXEL_FILL(0xA));
             AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
+            PrintSaveFileSlot(2);
             AddTextPrinterParameterized3(3, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
             AddTextPrinterParameterized3(4, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuMysteryGift2);
             AddTextPrinterParameterized3(5, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuMysteryEvents);
@@ -906,6 +915,30 @@ static void Task_DisplayMainMenu(u8 taskId)
     }
 }
 
+// Gangster Outbreak: which save file is shown, right-aligned in the top window (switch with left/right or L/R)
+static void PrintSaveFileSlot(u8 windowId)
+{
+    const u8 *text = gSaveFileSlot == 0 ? gText_MainMenuSaveFile1 : gText_MainMenuSaveFile2;
+    u32 x = MENU_WIDTH * 8 - GetStringWidth(FONT_NORMAL, text, 0) - 2;
+
+    AddTextPrinterParameterized3(windowId, FONT_NORMAL, x, 1, sTextColor_Headers, TEXT_SKIP_DRAW, text);
+}
+
+static void Task_SwitchSaveFile(u8 taskId)
+{
+    if (gPaletteFade.active)
+        return;
+    gSaveFileSlot ^= 1;
+    SetSaveBlocksPointers(GetSaveBlocksPointersBaseOffset());
+    ResetMenuAndMonGlobals();
+    Save_ResetSaveCounters();
+    LoadGameSave(SAVE_NORMAL);
+    if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
+        Sav2_ClearSetDefault();
+    sCurrItemAndOptionMenuCheck = 0;
+    SetMainCallback2(CB2_ReinitMainMenu);
+}
+
 static void Task_HighlightSelectedMainMenuItem(u8 taskId)
 {
     HighlightSelectedMainMenuItem(gTasks[taskId].tMenuType, gTasks[taskId].tCurrItem, gTasks[taskId].tIsScrolled);
@@ -930,6 +963,14 @@ static bool8 HandleMainMenuInput(u8 taskId)
         SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(0, DISPLAY_WIDTH));
         SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(0, DISPLAY_HEIGHT));
         gTasks[taskId].func = Task_HandleMainMenuBPressed;
+    }
+    else if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT | L_BUTTON | R_BUTTON) && gSaveFileStatus != SAVE_STATUS_NO_FLASH)
+    {
+        if (tMenuType == HAS_MYSTERY_EVENTS)
+            RemoveScrollIndicatorArrowPair(tScrollArrowTaskId);
+        PlaySE(SE_SELECT);
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
+        gTasks[taskId].func = Task_SwitchSaveFile;
     }
     else if ((JOY_NEW(DPAD_UP)) && tCurrItem > 0)
     {
