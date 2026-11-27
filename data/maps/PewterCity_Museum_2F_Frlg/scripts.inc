@@ -53,33 +53,33 @@ Text_SeismicTossTaught::
 	.string "Keep it up.$"
 
 PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone::
-	.string "MOON STONE, huh?\p"
-	.string "What's so special about it?\n"
-	.string "Looks like an ordinary rock to me.$"
+	.string "Somebody smashed the case\n"
+	.string "and took the MOON STONE.\p"
+	.string "Bet it's in a GYM by now.$"
 
 PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding::
-	.string "July 20, 1969!\p"
-	.string "Humankind first set foot on the\n"
-	.string "moon that day.\p"
-	.string "I bought a color TV just so I\n"
-	.string "could watch that news.$"
+	.string "TEAM YELL wants to sell the\n"
+	.string "SPACE SHUTTLE for scrap!\p"
+	.string "Nothing is sacred anymore.$"
 
 PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth::
-	.string "This month, we're running a space\n"
-	.string "exhibit.$"
+	.string "This month's exhibit: whatever\n"
+	.string "the gangs didn't steal.$"
 
 PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu::
-	.string "I want a PIKACHU!\n"
-	.string "It's so cute!\p"
-	.string "I asked my daddy to catch me one!$"
+	.string "I want a PIKACHU!\p"
+	.string "But Daddy says the gangs\n"
+	.string "took all the cute ones.$"
 
 PewterCity_Museum_1F_Text_PikachuSoonIPromise::
-	.string "Yeah, a PIKACHU soon, I promise!$"
+	.string "I'll get you one, sweetie.\n"
+	.string "Somehow.$"
 
 PewterCity_Museum_1F_Text_SpaceShuttle::
-	.string "Space Shuttle$"
+	.string "Space Shuttle\n"
+	.string "Half of it is stripped for scrap.$"
 
 PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon::
-	.string "A meteorite that fell on MT. MOON.\n"
-	.string "It is thought to be a MOON STONE.$"
+	.string "A smashed, empty display case.\n"
+	.string "The MOON STONE is gone.$"
 

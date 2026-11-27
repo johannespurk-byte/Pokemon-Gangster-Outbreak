@@ -10,10 +10,10 @@ PewterCity_House2_EventScript_LittleBoy::
 	end
 
 PewterCity_House2_Text_MonsLearnTechniquesAsTheyGrow::
-	.string "POKéMON learn new techniques as\n"
-	.string "they grow.\p"
-	.string "But some moves must be taught to\n"
-	.string "them by people.$"
+	.string "I buy and sell… things.\n"
+	.string "Don't ask where they're from.\p"
+	.string "Some moves must be taught by\n"
+	.string "people. Look for the tutors!$"
 
 PewterCity_House2_Text_MonsEasierCatchIfStatused::
 	.string "A POKéMON becomes easier to \n"

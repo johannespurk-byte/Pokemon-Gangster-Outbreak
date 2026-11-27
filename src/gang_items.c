@@ -233,6 +233,9 @@ u32 GangItems_GetPrice(enum Item itemId)
         return 0; // the test suite checks the expansion's prices
     switch (itemId)
     {
+    case ITEM_HELIX_FOSSIL: return 5000;
+    case ITEM_DOME_FOSSIL: return 5000;
+    case ITEM_OLD_AMBER: return 8000;
     case ITEM_POKE_BALL: return 200;
     case ITEM_GREAT_BALL: return 600;
     case ITEM_ULTRA_BALL: return 1200;

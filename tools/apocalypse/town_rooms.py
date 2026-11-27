@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Gangster Outbreak: the houses of Pallet Town become gang hideouts.
+"""Gangster Outbreak: town interiors as gang hideouts (Pallet Town, Pewter City).
 
-The player's house (1F/2F) is the crew's safehouse, Silver's house is his crew's clubhouse and Oak's lab is
-looted and occupied. The rooms keep their furniture; this tool paints props over it: boarded-up windows, gang tags
+Pallet Town: the player's house (1F/2F) is the crew's safehouse, Silver's house is his crew's clubhouse and Oak's
+lab is looted and occupied. Pewter City (Team Yell's turf): the two houses get their own layouts (a Team Yell
+crash pad and a fence's den) and the museum is a looted black-market museum.
+Rooms can move or clear furniture ('ops'); then props are painted over them: boarded-up windows, gang tags
 and cracks on the walls, crates, barrels, sandbags, tires, rubble, debris and stains on the floor.
 
 New metatiles are appended to the secondary tilesets of the rooms (the original metatiles keep their ids, so the
@@ -34,6 +36,7 @@ LAYER_NORMAL = 0
 GB1 = 'data/tilesets/secondary/generic_building_1_frlg'
 GB2 = 'data/tilesets/secondary/generic_building_2_frlg'
 LAB = 'data/tilesets/secondary/lab_frlg'
+MUSEUM = 'data/tilesets/secondary/museum_frlg'
 
 PLANK, PLANK_D, NAIL = (124, 88, 52), (84, 56, 32), (40, 32, 24)
 
@@ -237,12 +240,26 @@ def layout_info(layout_id):
 
 
 class Room:
-    def __init__(self, layout_id, ts):
+    def __init__(self, layout_id, ts, source=None):
         self.info = layout_info(layout_id)
         self.ts = ts
         self.w, self.h = self.info['width'], self.info['height']
-        data = git_bytes(self.info['blockdata_filepath'])
+        data = git_bytes(source or self.info['blockdata_filepath'])   # layouts of our own start from a copy
         self.cells = list(struct.unpack('<%dH' % (self.w * self.h), data))
+        self.base = list(self.cells)
+
+    def apply(self, op):
+        """('fill', x0, y0, x1, y1, mid, block) or ('copy', sx, sy, w, h, dx, dy) from the original layout"""
+        if op[0] == 'fill':
+            _, x0, y0, x1, y1, mid, block = op
+            for y in range(y0, y1 + 1):
+                for x in range(x0, x1 + 1):
+                    self.put(x, y, mid, block)
+        elif op[0] == 'copy':
+            _, sx, sy, w, h, dx, dy = op
+            for y in range(h):
+                for x in range(w):
+                    self.cells[(dy + y) * self.w + dx + x] = self.base[(sy + y) * self.w + sx + x]
 
     def mid(self, x, y):
         return self.cells[y * self.w + x] & 0x3FF
@@ -272,6 +289,8 @@ class Room:
 # cash) block. Coordinates are chosen so doors, stairs, people and the paths between them stay free.
 DECALS = {'crack_a', 'crack_b', 'crack_c', 'debris_a', 'debris_b', 'debris_c', 'stain', 'rubble', 'rubble_b'}
 
+FLOOR_WOOD = 0x001   # plain wooden floor of the houses (primary tileset)
+
 ROOMS = {
     'LAYOUT_PALLET_TOWN_PLAYERS_HOUSE_1F_FRLG': (GB1, {
         'boards': [(7, 0)],
@@ -300,6 +319,41 @@ ROOMS = {
                   (3, 6, 'debris_a'), (7, 4, 'crack_a'), (4, 10, 'crack_b'), (2, 12, 'stain'), (9, 11, 'debris_b'),
                   (11, 12, 'debris_c'), (6, 6, 'crack_c'), (8, 3, 'stain')],
     }),
+    # ---- Pewter City (Team Yell's turf)
+    # House 1: Team Yell crash pad - the dining table is gone, gear and a fire barrel instead
+    'LAYOUT_PEWTER_CITY_HOUSE1': (GB2, {
+        'source': 'data/layouts/House2_Frlg/map.bin',
+        'ops': [('fill', 3, 3, 8, 6, FLOOR_WOOD, False)],
+        'boards': [(6, 0)],
+        'wall': [(4, 1, 'tag_y'), (8, 1, 'tag_a'), (1, 1, 'wall_crack')],
+        'floor': [(4, 5, 'barrel_fire'), (9, 3, 'tires'), (10, 3, 'barrel'), (9, 6, 'crates'), (7, 7, 'sandbags'),
+                  (8, 7, 'sandbags'), (3, 4, 'stain'), (7, 5, 'debris_a'), (2, 6, 'crack_a'), (8, 4, 'rubble'),
+                  (6, 6, 'debris_c')],
+    }),
+    # House 2: a fence's den - the table moved to the wall, loot piled up in the corner
+    'LAYOUT_PEWTER_CITY_HOUSE2': (GB2, {
+        'source': 'data/layouts/House2_Frlg/map.bin',
+        'ops': [('copy', 3, 3, 6, 4, 4, 3), ('fill', 3, 3, 3, 6, FLOOR_WOOD, False)],
+        'boards': [(6, 0)],
+        'wall': [(4, 1, 'wall_crack'), (8, 1, 'tag_b'), (0, 1, 'tag_c')],
+        'floor': [(1, 3, 'crates'), (1, 4, 'crates_b'), (2, 3, 'cash'), (10, 3, 'cash'), (10, 4, 'barrel_b'),
+                  (2, 6, 'stain'), (9, 7, 'debris_a'), (1, 6, 'rubble'), (6, 2, 'crack_b')],
+    }),
+    # Museum: looted - empty display cases, tags, smashed exhibits, a fossil black market
+    'LAYOUT_PEWTER_CITY_MUSEUM_1F': (MUSEUM, {
+        'wall': [(4, 1, 'tag_y'), (8, 1, 'tag_a'), (12, 1, 'tag_b'), (22, 1, 'tag_c'), (6, 1, 'wall_crack'),
+                 (16, 1, 'wall_crack'), (4, 4, 'crack_c'), (5, 7, 'crack_a'), (3, 3, 'crack_b')],   # cracked cases
+        'floor': [(8, 3, 'crates'), (9, 3, 'crates_b'), (1, 3, 'barrel'), (23, 6, 'sandbags'), (24, 6, 'sandbags'),
+                  (8, 6, 'rubble'), (2, 8, 'debris_a'), (12, 4, 'crack_a'), (19, 6, 'stain'), (25, 5, 'debris_b'),
+                  (18, 4, 'crack_b'), (13, 8, 'debris_c'), (6, 9, 'rubble_b'), (10, 5, 'stain')],
+    }),
+    'LAYOUT_PEWTER_CITY_MUSEUM_2F': (MUSEUM, {
+        'wall': [(4, 1, 'tag_a'), (8, 1, 'tag_y'), (12, 1, 'tag_d'), (16, 1, 'tag_b'), (10, 1, 'wall_crack'),
+                 (3, 5, 'crack_c'), (4, 5, 'debris_a'), (15, 4, 'crack_a')],   # smashed case, stripped shuttle
+        'floor': [(12, 3, 'crates'), (13, 3, 'crates_b'), (18, 3, 'barrel'), (7, 3, 'rubble'), (3, 7, 'debris_a'),
+                  (12, 6, 'crack_a'), (16, 7, 'stain'), (6, 8, 'debris_b'), (13, 5, 'rubble_b'), (2, 3, 'crack_c'),
+                  (10, 8, 'debris_c')],
+    }),
 }
 
 
@@ -310,7 +364,9 @@ def main():
         if sec not in tilesets:
             tilesets[sec] = Tileset(sec)
         ts = tilesets[sec]
-        room = Room(layout_id, ts)
+        room = Room(layout_id, ts, plan.get('source'))
+        for op in plan.get('ops', []):
+            room.apply(op)
         if not ts.deco_done:
             floor = Counter(room.mid(x, y) for y in range(room.h) for x in range(room.w)).most_common(2)
             ts.set_deco_palette([m for m, _ in floor] + [0x028])
