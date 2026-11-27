@@ -223,3 +223,144 @@ void GangItems_RandomizeFoundItem(void)
     gSpecialVar_0x8000 = sLootTable[i].item;
     gSpecialVar_0x8001 = 1 + (hash >> 24) % sLootTable[i].maxAmount;
 }
+
+// Gangster Outbreak: realistic shop prices (buying and selling) for everything the vending machines, SHOP-BOTs and
+// loot bags hand out: the classic Gen 3 prices for balls, medicine and X items, 2100-3000 for evolution items and
+// held battle items staggered by strength (3000-25000) instead of the modern 10000-100000. 0 = use the item's own price.
+u32 GangItems_GetPrice(enum Item itemId)
+{
+    if (TESTING)
+        return 0; // the test suite checks the expansion's prices
+    switch (itemId)
+    {
+    case ITEM_POKE_BALL: return 200;
+    case ITEM_GREAT_BALL: return 600;
+    case ITEM_ULTRA_BALL: return 1200;
+    case ITEM_NET_BALL: return 1000;
+    case ITEM_DIVE_BALL: return 1000;
+    case ITEM_NEST_BALL: return 1000;
+    case ITEM_REPEAT_BALL: return 1000;
+    case ITEM_TIMER_BALL: return 1000;
+    case ITEM_DUSK_BALL: return 1000;
+    case ITEM_QUICK_BALL: return 1000;
+    case ITEM_LUXURY_BALL: return 1000;
+    case ITEM_HEAL_BALL: return 300;
+    case ITEM_PREMIER_BALL: return 200;
+    case ITEM_POTION: return 300;
+    case ITEM_SUPER_POTION: return 700;
+    case ITEM_HYPER_POTION: return 1200;
+    case ITEM_MAX_POTION: return 2500;
+    case ITEM_FULL_RESTORE: return 3000;
+    case ITEM_FULL_HEAL: return 600;
+    case ITEM_REVIVE: return 1500;
+    case ITEM_MAX_REVIVE: return 4000;
+    case ITEM_SACRED_ASH: return 8000;
+    case ITEM_ETHER: return 1200;
+    case ITEM_MAX_ETHER: return 2000;
+    case ITEM_ELIXIR: return 3000;
+    case ITEM_MAX_ELIXIR: return 4500;
+    case ITEM_ANTIDOTE: return 100;
+    case ITEM_PARALYZE_HEAL: return 200;
+    case ITEM_AWAKENING: return 250;
+    case ITEM_BURN_HEAL: return 250;
+    case ITEM_ICE_HEAL: return 250;
+    case ITEM_FRESH_WATER: return 200;
+    case ITEM_SODA_POP: return 300;
+    case ITEM_LEMONADE: return 350;
+    case ITEM_MOOMOO_MILK: return 500;
+    case ITEM_ENERGY_POWDER: return 500;
+    case ITEM_ENERGY_ROOT: return 800;
+    case ITEM_HEAL_POWDER: return 450;
+    case ITEM_REVIVAL_HERB: return 2800;
+    case ITEM_BERRY_JUICE: return 100;
+    case ITEM_SITRUS_BERRY: return 400;
+    case ITEM_LUM_BERRY: return 400;
+    case ITEM_REPEL: return 350;
+    case ITEM_SUPER_REPEL: return 500;
+    case ITEM_MAX_REPEL: return 700;
+    case ITEM_X_ATTACK: return 500;
+    case ITEM_X_DEFENSE: return 550;
+    case ITEM_X_SP_ATK: return 350;
+    case ITEM_X_SP_DEF: return 350;
+    case ITEM_X_SPEED: return 350;
+    case ITEM_X_ACCURACY: return 950;
+    case ITEM_DIRE_HIT: return 650;
+    case ITEM_GUARD_SPEC: return 700;
+    case ITEM_HP_UP: return 9800;
+    case ITEM_PROTEIN: return 9800;
+    case ITEM_IRON: return 9800;
+    case ITEM_CALCIUM: return 9800;
+    case ITEM_ZINC: return 9800;
+    case ITEM_CARBOS: return 9800;
+    case ITEM_PP_UP: return 9800;
+    case ITEM_PP_MAX: return 14800;
+    case ITEM_RARE_CANDY: return 4800;
+    case ITEM_ABILITY_CAPSULE: return 10000;
+    case ITEM_BOTTLE_CAP: return 10000;
+    case ITEM_FIRE_STONE: return 2100;
+    case ITEM_WATER_STONE: return 2100;
+    case ITEM_THUNDER_STONE: return 2100;
+    case ITEM_LEAF_STONE: return 2100;
+    case ITEM_MOON_STONE: return 2100;
+    case ITEM_SUN_STONE: return 2100;
+    case ITEM_SHINY_STONE: return 2100;
+    case ITEM_DUSK_STONE: return 2100;
+    case ITEM_DAWN_STONE: return 2100;
+    case ITEM_ICE_STONE: return 2100;
+    case ITEM_OVAL_STONE: return 2100;
+    case ITEM_LINKING_CORD: return 3000;
+    case ITEM_KINGS_ROCK: return 3000;
+    case ITEM_METAL_COAT: return 3000;
+    case ITEM_DRAGON_SCALE: return 3000;
+    case ITEM_UPGRADE: return 3000;
+    case ITEM_DUBIOUS_DISC: return 3000;
+    case ITEM_PROTECTOR: return 3000;
+    case ITEM_ELECTIRIZER: return 3000;
+    case ITEM_MAGMARIZER: return 3000;
+    case ITEM_REAPER_CLOTH: return 3000;
+    case ITEM_RAZOR_CLAW: return 3000;
+    case ITEM_RAZOR_FANG: return 3000;
+    case ITEM_PRISM_SCALE: return 3000;
+    case ITEM_SACHET: return 3000;
+    case ITEM_WHIPPED_DREAM: return 3000;
+    case ITEM_DEEP_SEA_TOOTH: return 2100;
+    case ITEM_DEEP_SEA_SCALE: return 2100;
+    case ITEM_SWEET_APPLE: return 2200;
+    case ITEM_TART_APPLE: return 2200;
+    case ITEM_CRACKED_POT: return 2200;
+    case ITEM_GALARICA_CUFF: return 3000;
+    case ITEM_GALARICA_WREATH: return 3000;
+    case ITEM_BLACK_AUGURITE: return 3000;
+    case ITEM_PEAT_BLOCK: return 3000;
+    case ITEM_AUSPICIOUS_ARMOR: return 3000;
+    case ITEM_MALICIOUS_ARMOR: return 3000;
+    case ITEM_CHARCOAL: return 3000;
+    case ITEM_QUICK_CLAW: return 4000;
+    case ITEM_MUSCLE_BAND: return 4000;
+    case ITEM_WISE_GLASSES: return 4000;
+    case ITEM_SCOPE_LENS: return 5000;
+    case ITEM_FOCUS_BAND: return 5000;
+    case ITEM_MENTAL_HERB: return 4000;
+    case ITEM_WHITE_HERB: return 4000;
+    case ITEM_AIR_BALLOON: return 4000;
+    case ITEM_BLACK_SLUDGE: return 5000;
+    case ITEM_SHELL_BELL: return 6000;
+    case ITEM_POWER_HERB: return 6000;
+    case ITEM_HEAVY_DUTY_BOOTS: return 8000;
+    case ITEM_COVERT_CLOAK: return 8000;
+    case ITEM_LEFTOVERS: return 10000;
+    case ITEM_EXPERT_BELT: return 10000;
+    case ITEM_ROCKY_HELMET: return 10000;
+    case ITEM_FOCUS_SASH: return 10000;
+    case ITEM_LOADED_DICE: return 10000;
+    case ITEM_CLEAR_AMULET: return 10000;
+    case ITEM_WEAKNESS_POLICY: return 12000;
+    case ITEM_EVIOLITE: return 12000;
+    case ITEM_ASSAULT_VEST: return 12000;
+    case ITEM_LIFE_ORB: return 20000;
+    case ITEM_CHOICE_BAND: return 25000;
+    case ITEM_CHOICE_SPECS: return 25000;
+    case ITEM_CHOICE_SCARF: return 25000;
+    default: return 0;
+    }
+}

@@ -25,6 +25,7 @@ void GangLoot_RepairBadEggs(void);                   // repairs Pokémon older v
 // Gangster Outbreak items (gang_items.c): Poké Vial and Auto-Repel with 1 + one charge per Gym Badge
 #define GANG_AUTO_REPEL_STEPS 250
 u32 GangItems_GetVialCharges(void);
+u32 GangItems_GetPrice(enum Item itemId);
 u32 GangItems_GetRepelCharges(void);
 void GangItems_UseVialCharge(void);
 void GangItems_UseRepelCharge(void);

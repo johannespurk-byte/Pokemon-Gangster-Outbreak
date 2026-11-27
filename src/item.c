@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_random.h"
 #include "item.h"
 #include "berry.h"
 #include "pokeball.h"
@@ -819,6 +820,10 @@ const u8 *GetItemName(enum Item itemId)
 
 u32 GetItemPrice(enum Item itemId)
 {
+    u32 price = GangItems_GetPrice(itemId);
+
+    if (price != 0)
+        return price;
     return gItemsInfo[SanitizeItemId(itemId)].price;
 }
 
