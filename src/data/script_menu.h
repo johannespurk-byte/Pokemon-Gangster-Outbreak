@@ -913,6 +913,16 @@ static const struct MenuAction sMultichoiceList_GameCornerPokemonPrizes[] = {
     {COMPOUND_STRING("DIANCIE{CLEAR_TO 75}{FONT_SMALL} 5,000 COINS")},
     {COMPOUND_STRING("RAYQUAZA{CLEAR_TO 75}{FONT_SMALL} 7,500 COINS")},
     {COMPOUND_STRING("MEWTWO{CLEAR_TO 75}{FONT_SMALL} 9,999 COINS")},
+    {COMPOUND_STRING("MORE LEGENDS…")},
+};
+
+// Gangster Outbreak: the legends with a Mega Evolution from Z-A
+static const struct MenuAction sMultichoiceList_GameCornerPokemonPrizes2[] = {
+    {COMPOUND_STRING("HEATRAN{CLEAR_TO 75}{FONT_SMALL} 5,000 COINS")},
+    {COMPOUND_STRING("ZERAORA{CLEAR_TO 75}{FONT_SMALL} 5,500 COINS")},
+    {COMPOUND_STRING("DARKRAI{CLEAR_TO 75}{FONT_SMALL} 7,000 COINS")},
+    {COMPOUND_STRING("MAGEARNA{CLEAR_TO 75}{FONT_SMALL} 7,500 COINS")},
+    {COMPOUND_STRING("ZYGARDE{CLEAR_TO 75}{FONT_SMALL} 9,000 COINS")},
     {sText_NoThanks}
 };
 
@@ -1256,6 +1266,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SEAGALLOP_V12]              = MULTICHOICE(sMultichoiceList_SeagallopV12),
     [MULTI_SEAGALLOP_VERMILION]        = MULTICHOICE(sMultichoiceList_SeagallopVermilion),
     [MULTI_GAME_CORNER_POKEMON_PRIZES] = MULTICHOICE(sMultichoiceList_GameCornerPokemonPrizes),
+    [MULTI_GAME_CORNER_POKEMON_PRIZES_2] = MULTICHOICE(sMultichoiceList_GameCornerPokemonPrizes2),
     [MULTI_GAME_CORNER_TMPRIZES]           = MULTICHOICE(sMultichoiceList_GameCornerTMPrizes),
     [MULTI_GAME_CORNER_BATTLE_ITEM_PRIZES] = MULTICHOICE(sMultichoiceList_GameCornerBattleItemPrizes),
     [MULTI_DEPT_STORE_ELEVATOR]            = MULTICHOICE(sMultichoiceList_DeptStoreElevator),

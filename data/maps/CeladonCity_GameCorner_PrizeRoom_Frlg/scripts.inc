@@ -28,6 +28,20 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeMon::
 	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_Diancie
 	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_Rayquaza
 	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_Mewtwo
+	case 5, CeladonCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeMon2
+	case 127, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeMon2::
+	message CeladonCity_GameCorner_PrizeRoom_Text_WhichPrize
+	waitmessage
+	multichoice 11, 0, MULTI_GAME_CORNER_POKEMON_PRIZES_2, FALSE
+	switch VAR_RESULT
+	case 0, CeladonCity_GameCorner_PrizeRoom_EventScript_Heatran
+	case 1, CeladonCity_GameCorner_PrizeRoom_EventScript_Zeraora
+	case 2, CeladonCity_GameCorner_PrizeRoom_EventScript_Darkrai
+	case 3, CeladonCity_GameCorner_PrizeRoom_EventScript_Magearna
+	case 4, CeladonCity_GameCorner_PrizeRoom_EventScript_Zygarde
 	case 5, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	case 127, CeladonCity_GameCorner_PrizeRoom_EventScript_EndPrizeExchange
 	end
@@ -67,6 +81,36 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_Mewtwo::
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
 	end
 
+CeladonCity_GameCorner_PrizeRoom_EventScript_Heatran::
+	setvar VAR_TEMP_1, SPECIES_HEATRAN
+	setvar VAR_TEMP_2, 5000
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_Zeraora::
+	setvar VAR_TEMP_1, SPECIES_ZERAORA
+	setvar VAR_TEMP_2, 5500
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_Darkrai::
+	setvar VAR_TEMP_1, SPECIES_DARKRAI
+	setvar VAR_TEMP_2, 7000
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_Magearna::
+	setvar VAR_TEMP_1, SPECIES_MAGEARNA
+	setvar VAR_TEMP_2, 7500
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_Zygarde::
+	setvar VAR_TEMP_1, SPECIES_ZYGARDE_COMPLETE
+	setvar VAR_TEMP_2, 9000
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon
+	end
+
 CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon::
 	bufferspeciesname STR_VAR_1, VAR_TEMP_1
 	msgbox CeladonCity_GameCorner_PrizeRoom_Text_YouWantPrize, MSGBOX_YESNO
@@ -80,6 +124,11 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeMon::
 	case SPECIES_DIANCIE, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveDiancie
 	case SPECIES_RAYQUAZA, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveRayquaza
 	case SPECIES_MEWTWO, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveMewtwo
+	case SPECIES_HEATRAN, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveHeatran
+	case SPECIES_ZERAORA, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveZeraora
+	case SPECIES_DARKRAI, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveDarkrai
+	case SPECIES_MAGEARNA, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveMagearna
+	case SPECIES_ZYGARDE_COMPLETE, CeladonCity_GameCorner_PrizeRoom_EventScript_GiveZygarde
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_GiveLatias::
@@ -104,6 +153,31 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_GiveRayquaza::
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_GiveMewtwo::
 	givemon VAR_TEMP_1, 35, ITEM_MEWTWONITE_Y
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_GiveHeatran::
+	givemon VAR_TEMP_1, 35, ITEM_HEATRANITE
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_GiveZeraora::
+	givemon VAR_TEMP_1, 35, ITEM_ZERAORITE
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_GiveDarkrai::
+	givemon VAR_TEMP_1, 35, ITEM_DARKRANITE
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_GiveMagearna::
+	givemon VAR_TEMP_1, 35, ITEM_MAGEARNITE
+	goto CeladonCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
+	end
+
+CeladonCity_GameCorner_PrizeRoom_EventScript_GiveZygarde::
+	givemon VAR_TEMP_1, 35, ITEM_ZYGARDITE
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_CheckReceivedMon
 	end
 
