@@ -55,8 +55,8 @@ FuchsiaCity_House3_EventScript_CancelForgetMove::
 FuchsiaCity_House3_Text_WouldYouLikeToForgetMove::
 	.string "Uh…\n"
 	.string "Oh, yes, I'm the MOVE DELETER.\p"
-	.string "I can make POKéMON forget their\n"
-	.string "moves.\p"
+	.string "TEAM PLASMA wants POKéMON to\n"
+	.string "forget everything. I only do moves.\p"
 	.string "Would you like me to do that?$"
 
 FuchsiaCity_House3_Text_WhichMonShouldForgetMove::

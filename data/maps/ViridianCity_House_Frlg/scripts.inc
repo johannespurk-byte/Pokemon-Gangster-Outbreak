@@ -24,13 +24,14 @@ ViridianCity_House_EventScript_NicknameSign::
 	end
 
 ViridianCity_House_Text_NicknamingIsFun::
-	.string "Coming up with nicknames is fun,\n"
-	.string "but it's not so easy to do.\p"
-	.string "Clever names are nice, but simple\n"
-	.string "names are easier to remember.$"
+	.string "Everybody in VIRIDIAN works for\n"
+	.string "GIOVANNI now. Even me.\p"
+	.string "Give your POKéMON a tough name.\n"
+	.string "Names matter on the street.$"
 
 ViridianCity_House_Text_MyDaddyLovesMonsToo::
-	.string "My daddy loves POKéMON, too.$"
+	.string "My daddy drives a truck for\n"
+	.string "the ROCKETS. He says it's safe.$"
 
 ViridianCity_House_Text_Speary::
 	.string "SPEARY: Tetweet!$"

@@ -92,9 +92,9 @@ CeruleanCity_House4_EventScript_NoRoomForBerries::
 
 CeruleanCity_House4_Text_NothingEntertaining::
 	.string "Sigh…\n"
-	.string "Too much time, too little to do…\p"
-	.string "Is nothing entertaining happening\n"
-	.string "anywhere?$"
+	.string "Since TEAM SKULL came, nobody\p"
+	.string "goes out anymore. Is there any\n"
+	.string "news from outside?$"
 
 CeruleanCity_House4_Text_NewNewsInformativeHaveThis::
 	.string "Ah!\n"

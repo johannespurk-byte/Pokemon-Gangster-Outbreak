@@ -34,8 +34,8 @@ VermilionCity_House1_EventScript_NoRoomForOldRod::
 
 VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish::
 	.string "I'm the FISHING GURU!\p"
-	.string "I simply looove fishing!\n"
-	.string "I can't bear to go without.\p"
+	.string "ARCHER's ROCKETS took the docks,\n"
+	.string "but they can't take the sea.\p"
 	.string "Tell me, do you like to fish?$"
 
 VermilionCity_House1_Text_TakeThisAndFish::

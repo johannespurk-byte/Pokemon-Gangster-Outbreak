@@ -26,7 +26,8 @@ SaffronCity_MrPsychicsHouse_EventScript_AlreadyGotTM29::
 
 SaffronCity_MrPsychicsHouse_Text_YouWantedThis::
 	.string "…Wait! Don't say a word!\p"
-	.string "You wanted this!$"
+	.string "TEAM FLARE wanted this, too.\n"
+	.string "But YOU should have it!$"
 
 SaffronCity_MrPsychicsHouse_Text_ReceivedTM29FromMrPsychic::
 	.string "{PLAYER} received TM29\n"

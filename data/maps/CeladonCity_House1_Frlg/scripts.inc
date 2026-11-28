@@ -15,14 +15,15 @@ CeladonCity_House1_EventScript_Rocket2::
 
 CeladonCity_House1_Text_SlotsReelInTheDough::
 	.string "Hehehe!\p"
-	.string "The slots just reel in the dough,\n"
-	.string "big-time!$"
+	.string "AQUA and MAGMA fight over the\n"
+	.string "city. We take their money at the\p"
+	.string "slots. Everybody wins.\n"
+	.string "Mostly us.$"
 
 CeladonCity_House1_Text_ShippedMonsAsSlotPrizes::
 	.string "CHIEF!\p"
-	.string "We just shipped two thousand\n"
-	.string "more POKéMON as slot prizes\l"
-	.string "again today!$"
+	.string "We shipped two thousand more\n"
+	.string "POKéMON as slot prizes today!$"
 
 CeladonCity_House1_Text_DontTouchGameCornerPoster::
 	.string "Don't touch the poster at the GAME\n"

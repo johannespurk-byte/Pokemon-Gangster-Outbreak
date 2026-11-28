@@ -18,16 +18,16 @@ FuchsiaCity_House1_EventScript_LittleBoy::
 	end
 
 FuchsiaCity_House1_Text_WardenIsOldHasFalseTeeth::
-	.string "The SAFARI ZONE's WARDEN is old, \n"
-	.string "but he's still very much active.\p"
+	.string "The SAFARI ZONE's WARDEN is old,\n"
+	.string "but he still fights TEAM PLASMA.\p"
 	.string "All his teeth are false, though.$"
 
 FuchsiaCity_House1_Text_BillIsMyGrandson::
 	.string "Hmm?\n"
 	.string "You've met BILL?\p"
-	.string "He's my grandson!\p"
-	.string "He always liked collecting things,\n"
-	.string "even as a child!$"
+	.string "He's my grandson! He hides from\n"
+	.string "the gangs in his cottage.\p"
+	.string "Smart boy, that one.$"
 
 FuchsiaCity_House1_Text_BillFilesHisOwnMonData::
 	.string "BILL files his own POKéMON data on\n"
