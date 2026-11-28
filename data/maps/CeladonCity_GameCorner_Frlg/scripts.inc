@@ -42,21 +42,21 @@ CeladonCity_GameCorner_EventScript_BuyCoins::
 
 CeladonCity_GameCorner_EventScript_Buy500Coins::
 	checkcoins VAR_TEMP_1
-	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 500, CeladonCity_GameCorner_EventScript_ClerkNoRoomForCoins
-	checkmoney 10000
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 1000, CeladonCity_GameCorner_EventScript_ClerkNoRoomForCoins
+	checkmoney 5000
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_GameCorner_EventScript_ClerkNotEnoughMoney
-	addcoins 500
-	removemoney 10000
+	addcoins 1000
+	removemoney 5000
 	goto CeladonCity_GameCorner_EventScript_BoughtCoins
 	end
 
 CeladonCity_GameCorner_EventScript_Buy50Coins::
 	checkcoins VAR_TEMP_1
-	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 50, CeladonCity_GameCorner_EventScript_ClerkNoRoomForCoins
-	checkmoney 1000
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1) - 100, CeladonCity_GameCorner_EventScript_ClerkNoRoomForCoins
+	checkmoney 500
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_GameCorner_EventScript_ClerkNotEnoughMoney
-	addcoins 50
-	removemoney 1000
+	addcoins 100
+	removemoney 500
 	goto CeladonCity_GameCorner_EventScript_BoughtCoins
 	end
 
@@ -471,8 +471,8 @@ CeladonCity_GameCorner_Text_CanExchangeCoinsNextDoor::
 
 CeladonCity_GameCorner_Text_WelcomeBuySomeCoins::
 	.string "Welcome to ROCKET GAME CORNER!\p"
-	.string "Do you need some game COINS?\n"
-	.string "Would you like to buy some?$"
+	.string "Fresh deal: COINS for a quarter\n"
+	.string "of the old price. Buying?$"
 
 CeladonCity_GameCorner_Text_ComePlaySometime::
 	.string "No?\n"

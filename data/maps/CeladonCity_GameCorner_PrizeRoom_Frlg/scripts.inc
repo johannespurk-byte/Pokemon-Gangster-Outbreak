@@ -108,15 +108,9 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_GiveMewtwo::
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_MegaBonus::
-	goto_if_ne VAR_TEMP_1, SPECIES_MEWTWO, CeladonCity_GameCorner_PrizeRoom_EventScript_MegaBonusRing
+	goto_if_ne VAR_TEMP_1, SPECIES_MEWTWO, CeladonCity_GameCorner_PrizeRoom_EventScript_MegaBonusEnd
 	msgbox CeladonCity_GameCorner_PrizeRoom_Text_MewtwoSecondStone
 	giveitem ITEM_MEWTWONITE_X
-CeladonCity_GameCorner_PrizeRoom_EventScript_MegaBonusRing::
-	checkitem ITEM_MEGA_RING
-	goto_if_eq VAR_RESULT, TRUE, CeladonCity_GameCorner_PrizeRoom_EventScript_MegaBonusEnd
-	msgbox CeladonCity_GameCorner_PrizeRoom_Text_FreeMegaRing
-	giveitem ITEM_MEGA_RING
-	msgbox CeladonCity_GameCorner_PrizeRoom_Text_MegaRingExplain
 CeladonCity_GameCorner_PrizeRoom_EventScript_MegaBonusEnd::
 	return
 
@@ -302,8 +296,8 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_ChoosePrizeItem::
 	end
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_SmokeBall::
-	setvar VAR_TEMP_1, ITEM_MEGA_RING
-	setvar VAR_TEMP_2, 1000
+	setvar VAR_TEMP_1, ITEM_ASSAULT_VEST
+	setvar VAR_TEMP_2, 3000
 	goto CeladonCity_GameCorner_PrizeRoom_EventScript_ConfirmPrizeItem
 	end
 
@@ -372,15 +366,6 @@ CeladonCity_GameCorner_PrizeRoom_Text_OopsNotEnoughRoom::
 
 CeladonCity_GameCorner_PrizeRoom_Text_OhFineThen::
 	.string "あっ そう$"
-
-CeladonCity_GameCorner_PrizeRoom_Text_FreeMegaRing::
-	.string "A legend like that needs the\n"
-	.string "right gear. Here, on the house!$"
-
-CeladonCity_GameCorner_PrizeRoom_Text_MegaRingExplain::
-	.string "With the MEGA RING in your BAG,\n"
-	.string "a POKéMON holding its MEGA STONE\l"
-	.string "can MEGA EVOLVE in battle.$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_MewtwoSecondStone::
 	.string "MEWTWO came with two stones.\n"

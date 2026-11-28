@@ -13,6 +13,7 @@ CeladonCity_Gym_EventScript_Erika::
 	goto CeladonCity_Gym_EventScript_DefeatedErika
 CeladonCity_Gym_EventScript_ArchieMaxieBeaten::
 	goto_if_unset FLAG_GOT_TM19_FROM_ERIKA, CeladonCity_Gym_EventScript_GiveTM19
+	call EventScript_GangGiveZRing
 	famechecker FAMECHECKER_ERIKA, 4
 	msgbox CeladonCity_Gym_Text_ErikaPostBattle
 	release
@@ -33,6 +34,7 @@ CeladonCity_Gym_EventScript_GiveTM19::
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_Gym_EventScript_NoRoomForTM19
 	giveitem_msg CeladonCity_Gym_Text_ReceivedTM19FromErika, ITEM_TM19
 	setflag FLAG_GOT_TM19_FROM_ERIKA
+	call EventScript_GangGiveZRing
 	msgbox CeladonCity_Gym_Text_ExplainTM19
 	release
 	end

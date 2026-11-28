@@ -926,7 +926,7 @@ static const struct MenuAction sMultichoiceList_GameCornerTMPrizes[] = {
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerBattleItemPrizes[] = {
-    {COMPOUND_STRING("MEGA RING{CLEAR_TO 80}{FONT_SMALL}1,000 COINS")},
+    {COMPOUND_STRING("ASSAULT VEST{CLEAR_TO 80}{FONT_SMALL}3,000 COINS")},
     {COMPOUND_STRING("LEFTOVERS{CLEAR_TO 80}{FONT_SMALL}2,500 COINS")},
     {COMPOUND_STRING("LIFE ORB{CLEAR_TO 80}{FONT_SMALL}3,000 COINS")},
     {COMPOUND_STRING("CHOICE SCARF{CLEAR_TO 80}{FONT_SMALL}3,500 COINS")},
@@ -944,8 +944,8 @@ static const struct MenuAction sMultichoiceList_DeptStoreElevator[] = {
 };
 
 static const struct MenuAction sMultichoiceList_GameCornerCoinPurchaseCounter[] = {
-    {COMPOUND_STRING("{FONT_SMALL} 50 COINS{CLEAR_TO 69}¥1,000")},
-    {COMPOUND_STRING("{FONT_SMALL}500 COINS{CLEAR_TO 64}¥10,000")},
+    {COMPOUND_STRING("{FONT_SMALL}  100 COINS{CLEAR_TO 69}¥500")},
+    {COMPOUND_STRING("{FONT_SMALL}1,000 COINS{CLEAR_TO 64}¥5,000")},
     {gText_Exit}
 };
 
