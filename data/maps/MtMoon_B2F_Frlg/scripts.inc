@@ -157,18 +157,15 @@ MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils::
 	.string "fossils.$"
 
 MtMoon_B2F_Text_Grunt1Intro::
-	.string "We, TEAM ROCKET, shall find the\n"
-	.string "fossils!\p"
-	.string "Reviving POKéMON from them will\n"
-	.string "earn us huge riches!$"
+	.string "You're not one of us. Get lost or\n"
+	.string "get hurt!$"
 
 MtMoon_B2F_Text_Grunt1Defeat::
-	.string "Urgh!\n"
-	.string "Now I'm mad!$"
+	.string "Urgh! Not again!$"
 
 MtMoon_B2F_Text_Grunt1PostBattle::
-	.string "You made me mad!\n"
-	.string "TEAM ROCKET will blacklist you!$"
+	.string "I only joined TEAM YELL for the\n"
+	.string "money…$"
 
 MtMoon_B2F_Text_Grunt2Intro::
 	.string "We, TEAM ROCKET, are POKéMON\n"
@@ -176,34 +173,32 @@ MtMoon_B2F_Text_Grunt2Intro::
 	.string "We strike fear with our strength!$"
 
 MtMoon_B2F_Text_Grunt2Defeat::
-	.string "I blew it!$"
+	.string "I'm gonna be in so much trouble…$"
 
 MtMoon_B2F_Text_Grunt2PostBattle::
-	.string "Darn it all!\n"
-	.string "My associates won't stand for this!$"
+	.string "You'd make a great grunt. Ever\n"
+	.string "thought about it?$"
 
 MtMoon_B2F_Text_Grunt3Intro::
-	.string "We're pulling a big job here!\n"
-	.string "Get lost, kid!$"
+	.string "I guard this place for PIERS.\n"
+	.string "Prepare yourself!$"
 
 MtMoon_B2F_Text_Grunt3Defeat::
-	.string "So, you are good…$"
+	.string "Retreat! Retreat!$"
 
 MtMoon_B2F_Text_Grunt3PostBattle::
-	.string "If you find a fossil, give it to me\n"
-	.string "and scram!$"
+	.string "Don't tell PIERS I lost to you.$"
 
 MtMoon_B2F_Text_Grunt4Intro::
-	.string "Little kids shouldn't be messing\n"
-	.string "around with grown-ups!\p"
-	.string "It could be bad news!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from PIERS!$"
 
 MtMoon_B2F_Text_Grunt4Defeat::
-	.string "I'm steamed!$"
+	.string "How can a kid be this strong?!$"
 
 MtMoon_B2F_Text_Grunt4PostBattle::
-	.string "POKéMON lived here long before\n"
-	.string "people came.$"
+	.string "Word is you're GIOVANNI's new\n"
+	.string "star. Is that true?$"
 
 MtMoon_B2F_Text_YouWantDomeFossil::
 	.string "Do you want the DOME FOSSIL?$"

@@ -78,89 +78,82 @@ SixIsland_PatternBush_EventScript_Layton::
 	end
 
 SixIsland_PatternBush_Text_BethanyIntro::
-	.string "I'm curious, how do you raise your\n"
-	.string "POKéMON?$"
+	.string "I only battle people with style.\n"
+	.string "You'll do.$"
 
 SixIsland_PatternBush_Text_BethanyDefeat::
 	.string "You raise your POKéMON with a\n"
 	.string "whole lot of love!$"
 
 SixIsland_PatternBush_Text_BethanyPostBattle::
-	.string "In the same way your mother raised\n"
-	.string "you full of love, you should raise\l"
-	.string "your POKéMON.$"
+	.string "One day this mess will end. I'll be\n"
+	.string "fabulous then, too.$"
 
 SixIsland_PatternBush_Text_AllisonIntro::
-	.string "I'm working to preserve the natural\n"
-	.string "ecology of POKéMON here.$"
+	.string "Even in a gang war, one must look\n"
+	.string "fabulous.$"
 
 SixIsland_PatternBush_Text_AllisonDefeat::
-	.string "Oh, for someone so young, you are\n"
-	.string "tremendous!$"
+	.string "My outfit! It's ruined!$"
 
 SixIsland_PatternBush_Text_AllisonPostBattle::
-	.string "I'm not saying that you shouldn't\n"
-	.string "catch POKéMON.\p"
-	.string "I just want people to raise their\n"
-	.string "POKéMON responsibly.$"
+	.string "Money buys safety from TEAM\n"
+	.string "ROCKET.\p"
+	.string "Usually.$"
 
 SixIsland_PatternBush_Text_GarretIntro::
-	.string "I caught a BUG POKéMON that lives\n"
-	.string "only around here!$"
+	.string "My big brother rides with TEAM\n"
+	.string "ROCKET! I'm gonna be just like\p"
+	.string "him!$"
 
 SixIsland_PatternBush_Text_GarretDefeat::
-	.string "Heheh…\n"
-	.string "Isn't my POKéMON awesome?$"
+	.string "Aww… There goes my lunch money.$"
 
 SixIsland_PatternBush_Text_GarretPostBattle::
-	.string "There's a girl near the BUSH who\n"
-	.string "measures HERACROSS for TRAINERS.$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "ROCKET.\p"
+	.string "Or maybe your crew!$"
 
 SixIsland_PatternBush_Text_JonahIntro::
-	.string "You know, it just doesn't feel right\n"
-	.string "if I don't use BUG POKéMON.$"
+	.string "ARCHER says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 SixIsland_PatternBush_Text_JonahDefeat::
-	.string "It's okay, losing is a fun part of\n"
-	.string "POKéMON's appeal, too.$"
+	.string "Okay, okay! You win!$"
 
 SixIsland_PatternBush_Text_JonahPostBattle::
-	.string "By the way, “appeal” is a weird\n"
-	.string "word, if you think about it.\p"
-	.string "Like, is it like an orange peel?\n"
-	.string "Or like a ringing bell?$"
+	.string "Everybody's scared of ARCHER.\p"
+	.string "Are you scared?$"
 
 SixIsland_PatternBush_Text_VanceIntro::
-	.string "Yeah, yeah, yeah!\n"
-	.string "Look at all the BUG POKéMON!$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 SixIsland_PatternBush_Text_VanceDefeat::
-	.string "I got beat while I was still busy\n"
-	.string "celebrating!$"
+	.string "Waaah! I'm telling my brother!$"
 
 SixIsland_PatternBush_Text_VancePostBattle::
-	.string "I'm going to bring my little brother\n"
-	.string "here next time.$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 SixIsland_PatternBush_Text_NashIntro::
-	.string "Look, look! There are funny\n"
-	.string "patterns on the ground.$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 SixIsland_PatternBush_Text_NashDefeat::
-	.string "Super awesome!$"
+	.string "No fair! You're way too strong!$"
 
 SixIsland_PatternBush_Text_NashPostBattle::
-	.string "The funny patterns on the ground…\p"
-	.string "They look like the patterns on my\n"
-	.string "grandpa's clothes.$"
+	.string "The road to the SEVII ISLANDS\n"
+	.string "isn't safe.\p"
+	.string "Watch out!$"
 
 SixIsland_PatternBush_Text_CordellIntro::
-	.string "I bet you think I'm just some guy,\n"
-	.string "don't you, eh?$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 SixIsland_PatternBush_Text_CordellDefeat::
-	.string "I bet you think I'm weak,\n"
-	.string "don't you, eh?$"
+	.string "Aww… There goes my lunch money.$"
 
 SixIsland_PatternBush_Text_CordellPostBattle::
 	.string "Ayup, you townies come around all\n"
@@ -168,48 +161,43 @@ SixIsland_PatternBush_Text_CordellPostBattle::
 	.string "How about giving me that?$"
 
 SixIsland_PatternBush_Text_DaliaIntro::
-	.string "Take a deep breath.\n"
-	.string "Isn't the air delicious?$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 SixIsland_PatternBush_Text_DaliaDefeat::
-	.string "If you'd like, I can teach you how\n"
-	.string "to breathe properly.$"
+	.string "Okay, okay! You win!$"
 
 SixIsland_PatternBush_Text_DaliaPostBattle::
-	.string "First, exhale.\n"
-	.string "Blow everything out.\p"
-	.string "When you can't exhale anymore,\n"
-	.string "inhale the clean air!\p"
-	.string "Isn't it refreshing?$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 SixIsland_PatternBush_Text_JoanaIntro::
-	.string "I love BUG POKéMON.\n"
-	.string "That's why I'm here all the time.\p"
-	.string "Am I the only girl like that?$"
+	.string "My big brother rides with TEAM\n"
+	.string "ROCKET! I'm gonna be just like\p"
+	.string "him!$"
 
 SixIsland_PatternBush_Text_JoanaDefeat::
-	.string "I lost, but I'm still laughing.\n"
-	.string "Am I the only girl like that?$"
+	.string "Waaah! I'm telling my brother!$"
 
 SixIsland_PatternBush_Text_JoanaPostBattle::
-	.string "I'm going to keep on collecting\n"
-	.string "BUG POKéMON.\p"
-	.string "Am I the only girl like that?$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "ROCKET.\p"
+	.string "Or maybe your crew!$"
 
 SixIsland_PatternBush_Text_RileyIntro::
-	.string "This is a good spot.\n"
-	.string "I'll pitch my tent here.$"
+	.string "ARCHER says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 SixIsland_PatternBush_Text_RileyDefeat::
-	.string "Wimped out…$"
+	.string "No fair! You're way too strong!$"
 
 SixIsland_PatternBush_Text_RileyPostBattle::
-	.string "I'm going to observe the night sky\n"
-	.string "here.$"
+	.string "Everybody's scared of ARCHER.\p"
+	.string "Are you scared?$"
 
 SixIsland_PatternBush_Text_MarcyIntro::
-	.string "Oh, yuck!\n"
-	.string "I think a bug stung me!$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 SixIsland_PatternBush_Text_MarcyDefeat::
 	.string "It wasn't a bug.\n"
@@ -220,16 +208,13 @@ SixIsland_PatternBush_Text_MarcyPostBattle::
 	.string "A little spit's enough to cure it!$"
 
 SixIsland_PatternBush_Text_LaytonIntro::
-	.string "Have you noticed something odd\n"
-	.string "about these parts?$"
+	.string "I sell info to every gang.\p"
+	.string "Info on you is worth a lot!$"
 
 SixIsland_PatternBush_Text_LaytonDefeat::
-	.string "Have you taken a good look around\n"
-	.string "your feet?$"
+	.string "Error! That wasn't in my data!$"
 
 SixIsland_PatternBush_Text_LaytonPostBattle::
-	.string "There are places here in PATTERN\n"
-	.string "BUSH where grass won't grow.\p"
-	.string "What could be the cause of such\n"
-	.string "a phenomenon?$"
+	.string "Data says you'll beat ARCHER.\p"
+	.string "Probably.$"
 

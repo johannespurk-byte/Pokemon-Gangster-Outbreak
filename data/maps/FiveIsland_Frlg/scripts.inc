@@ -19,8 +19,9 @@ FiveIsland_EventScript_Fisher::
 	end
 
 FiveIsland_Text_IslandSign::
-	.string "FIVE ISLAND\n"
-	.string "Chrono Island: Where Time Goes$"
+	.string "FIVE ISLAND\p"
+	.string "Chrono Island. Strange Ships at\n"
+	.string "Night.$"
 
 FiveIsland_Text_WeirdBuildingInMeadow::
 	.string "Oh, this stinks. I wanted to play in\n"
@@ -30,7 +31,7 @@ FiveIsland_Text_WeirdBuildingInMeadow::
 
 FiveIsland_Text_BeenGettingBusierAroundHere::
 	.string "It's been getting busier around\n"
-	.string "these parts lately.\p"
-	.string "I haven't been catching many good\n"
-	.string "fish lately, either.$"
+	.string "here.\p"
+	.string "Strange ships land at night.\n"
+	.string "ROCKET ships, if you ask me.$"
 

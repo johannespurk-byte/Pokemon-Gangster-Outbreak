@@ -33,9 +33,10 @@ CeladonCity_PokemonCenter_1F_Text_PokeFluteAwakensSleepingMons::
 	.string "they can hear.$"
 
 CeladonCity_PokemonCenter_1F_Text_RodeHereFromFuchsia::
-	.string "I rode here from FUCHSIA.\p"
-	.string "It's an uphill ride on CYCLING\n"
-	.string "ROAD, so I'm exhausted.$"
+	.string "I rode up CYCLING ROAD from\n"
+	.string "FUCHSIA.\p"
+	.string "TEAM AQUA chased me the whole\n"
+	.string "way!$"
 
 CeladonCity_PokemonCenter_1F_Text_GoToCyclingRoadIfIHadBike::
 	.string "If I had a BIKE, I would go to\n"

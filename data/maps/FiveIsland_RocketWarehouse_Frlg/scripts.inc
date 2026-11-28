@@ -181,57 +181,47 @@ FiveIsland_RocketWarehouse_Text_PenUnlockedMonsFled::
 	.string "The POKéMON appear to have fled.$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2Intro::
-	.string "Did you come here knowing it's\n"
-	.string "TEAM ROCKET's WAREHOUSE?$"
+	.string "I guard this place for ARCHER.\n"
+	.string "Prepare yourself!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2Defeat::
-	.string "What do you think you're doing?!$"
+	.string "Urgh! Not again!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2PostBattle::
-	.string "TEAM ROCKET broke up?\n"
-	.string "What planet are you from?$"
+	.string "Don't tell ARCHER I lost to you.$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1Intro::
-	.string "Oh, now your POKéMON look strong.\n"
-	.string "You're willing to sell them?\p"
-	.string "Oh?\n"
-	.string "You wanted to battle?$"
+	.string "ARCHER said nobody gets through.\n"
+	.string "Nobody!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1Defeat::
-	.string "Oh, but…\n"
-	.string "Too much!$"
+	.string "How can a kid be this strong?!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1PostBattle::
-	.string "We can give you a great price.\n"
-	.string "Sell us your POKéMON!$"
+	.string "Fine, go ahead. You'll see what's\n"
+	.string "waiting for you.$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Intro::
-	.string "I got word about you from the\n"
-	.string "others.\p"
-	.string "But there's no way a kid like you'd\n"
-	.string "know our BOSS GIOVANNI!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from ARCHER!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Defeat::
-	.string "Don't…you…dare…laugh…$"
+	.string "I'm gonna be in so much trouble…$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3PostBattle::
-	.string "Don't mess in the doings of adults,\n"
-	.string "you jumped-up pip-squeak!$"
+	.string "Word is you're GIOVANNI's new\n"
+	.string "star. Is that true?$"
 
 FiveIsland_RocketWarehouse_Text_Admin1Intro::
-	.string "I don't know or care if what I'm\n"
-	.string "doing is right or wrong…\p"
-	.string "I just put my faith in GIOVANNI\n"
-	.string "and do as I am told.$"
+	.string "You're not one of us. Get lost or\n"
+	.string "get hurt!$"
 
 FiveIsland_RocketWarehouse_Text_Admin1Defeat::
-	.string "I…\n"
-	.string "I'm shattered…$"
+	.string "Urgh! Not again!$"
 
 FiveIsland_RocketWarehouse_Text_Admin1PostBattle::
-	.string "You're doing things according to\n"
-	.string "your beliefs and morals.\p"
-	.string "I understand now…$"
+	.string "I only joined TEAM ROCKET for the\n"
+	.string "money…$"
 
 FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough::
 	.string "I've made it so you can come back\n"
@@ -244,33 +234,14 @@ FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough::
 	.string "harsh challenge.$"
 
 FiveIsland_RocketWarehouse_Text_Admin2Intro::
-	.string "That's quite enough of you \n"
-	.string "playing the hero, kid.\p"
-	.string "Spreading lies about how TEAM\n"
-	.string "ROCKET has disbanded…\p"
-	.string "It's such an obvious attempt to\n"
-	.string "cause confusion in our ranks.\p"
-	.string "Fortunately, we're not so ignorant\n"
-	.string "to fall for the lies of a child!\p"
-	.string "And now, I'll show you how scary\n"
-	.string "an angry adult can be!$"
+	.string "Halt! This is TEAM ROCKET\n"
+	.string "business!$"
 
 FiveIsland_RocketWarehouse_Text_Admin2Defeat::
-	.string "Urgh…\n"
-	.string "You were too strong…\p"
-	.string "…\n"
-	.string "Th-that's GIOVANNI's BADGE!\p"
-	.string "So it's true?\n"
-	.string "TEAM ROCKET really has disbanded?$"
+	.string "Retreat! Retreat!$"
 
 FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
-	.string "We will abandon this WAREHOUSE…\p"
-	.string "But don't think this is over.\n"
-	.string "I won't let this be the end.\p"
-	.string "I will find GIOVANNI.\n"
-	.string "And I will resurrect TEAM ROCKET!\l"
-	.string "I will…\p"
-	.string "Until then, farewell!$"
+	.string "ARCHER will deal with you himself.$"
 
 FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText::
 	.string "A report with graphs and text is on\n"
@@ -289,12 +260,12 @@ FiveIsland_RocketWarehouse_Text_GideonIntro::
 	.string "There's no forgiveness for you!$"
 
 FiveIsland_RocketWarehouse_Text_GideonDefeat::
-	.string "Gah! Darn!\n"
-	.string "Darn! Darn!$"
+	.string "Fine… I'll recalculate.$"
 
 FiveIsland_RocketWarehouse_Text_GideonPostBattle::
-	.string "If I can't sell it, it's worthless!\n"
-	.string "Go ahead, take it!$"
+	.string "I'll sell your battle data to TEAM\n"
+	.string "ROCKET.\p"
+	.string "Kidding! Mostly.$"
 
 FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe::
 	.string "What do you want now?\n"

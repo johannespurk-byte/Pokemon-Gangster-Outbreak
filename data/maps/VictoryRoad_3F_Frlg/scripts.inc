@@ -83,60 +83,59 @@ Text_DoubleEdgeTaught::
 	.string "out!$"
 
 VictoryRoad_3F_Text_GeorgeIntro::
-	.string "I heard rumors of a child prodigy.$"
+	.string "Let's see what a real boss can do!$"
 
 VictoryRoad_3F_Text_GeorgeDefeat::
-	.string "The rumors were true!$"
+	.string "You're the real deal.$"
 
 VictoryRoad_3F_Text_GeorgePostBattle::
-	.string "So, it was you who beat GIOVANNI\n"
-	.string "of TEAM ROCKET?$"
+	.string "Strong TRAINERS are rare these\n"
+	.string "days. Respect.$"
 
 VictoryRoad_3F_Text_AlexaIntro::
-	.string "TRAINERS live to seek stronger\n"
-	.string "opponents.$"
+	.string "Only real TRAINERS survive out\n"
+	.string "here!$"
 
 VictoryRoad_3F_Text_AlexaDefeat::
-	.string "Oh!\n"
-	.string "So strong!$"
+	.string "Impressive. Truly.$"
 
 VictoryRoad_3F_Text_AlexaPostBattle::
-	.string "By fighting tough battles, you get\n"
-	.string "stronger.$"
+	.string "Keep training.\p"
+	.string "The bosses only get stronger.$"
 
 VictoryRoad_3F_Text_CarolineIntro::
-	.string "I'll show you just how good you\n"
-	.string "are. Not!$"
+	.string "TEAM ROCKET tried to recruit me. I\n"
+	.string "said no.\p"
+	.string "Wanna know why?$"
 
 VictoryRoad_3F_Text_CarolineDefeat::
-	.string "I'm furious!$"
+	.string "That was a great battle!$"
 
 VictoryRoad_3F_Text_CarolinePostBattle::
-	.string "You showed me just how good\n"
-	.string "I was…$"
+	.string "With skills like that, every gang\n"
+	.string "will want you.$"
 
 VictoryRoad_3F_Text_ColbyIntro::
 	.string "Only the chosen can pass here!$"
 
 VictoryRoad_3F_Text_ColbyDefeat::
-	.string "I don't believe it!$"
+	.string "I underestimated you.$"
 
 VictoryRoad_3F_Text_ColbyPostBattle::
-	.string "All TRAINERS here are headed to\n"
-	.string "the POKéMON LEAGUE.\p"
-	.string "Don't let down your guard.$"
+	.string "Take down GIOVANNI.\p"
+	.string "Somebody has to.$"
 
 VictoryRoad_3F_Text_RayIntro::
-	.string "RAY: Together, the two of us are\n"
-	.string "destined for greatness!$"
+	.string "Even in a gang war, one must look\n"
+	.string "fabulous.$"
 
 VictoryRoad_3F_Text_RayDefeat::
-	.string "RAY: Ludicrous!\n"
-	.string "This can't be!$"
+	.string "My outfit! It's ruined!$"
 
 VictoryRoad_3F_Text_RayPostBattle::
-	.string "RAY: You've beaten us.\n"
-	.string "Greatness remains elusive…$"
+	.string "Money buys safety from TEAM\n"
+	.string "ROCKET.\p"
+	.string "Usually.$"
 
 VictoryRoad_3F_Text_RayNotEnoughMons::
 	.string "RAY: Together, the two of us are\n"
@@ -145,15 +144,16 @@ VictoryRoad_3F_Text_RayNotEnoughMons::
 	.string "into battle with us.$"
 
 VictoryRoad_3F_Text_TyraIntro::
-	.string "TYRA: We're trying to become\n"
-	.string "champions together.$"
+	.string "GIOVANNI invited me to his\n"
+	.string "parties.\p"
+	.string "Jealous?$"
 
 VictoryRoad_3F_Text_TyraDefeat::
-	.string "TYRA: Oh, but…$"
+	.string "How… vulgar of you to win.$"
 
 VictoryRoad_3F_Text_TyraPostBattle::
-	.string "TYRA: You've taught me that power\n"
-	.string "can be infinite in shape and form.$"
+	.string "You fight like a true boss.\p"
+	.string "How charming.$"
 
 VictoryRoad_3F_Text_TyraNotEnoughMons::
 	.string "TYRA: You can't battle with us if\n"

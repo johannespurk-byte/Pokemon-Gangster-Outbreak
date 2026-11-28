@@ -432,8 +432,8 @@ CeruleanCity_Text_MakeRoomForThisCantRun::
 
 CeruleanCity_Text_TrainerLifeIsToughIsntIt::
 	.string "You're a TRAINER, too?\p"
-	.string "Collecting, battling…\n"
-	.string "It's a tough life, isn't it?$"
+	.string "Since TEAM SKULL came, it's a\n"
+	.string "tough life, isn't it?$"
 
 CeruleanCity_Text_YouCanCutDownSmallTrees::
 	.string "Did you know that you can CUT down\n"
@@ -457,10 +457,9 @@ CeruleanCity_Text_PokemonEncyclopediaAmusing::
 
 CeruleanCity_Text_PeopleHereWereRobbed::
 	.string "The people here were robbed.\p"
-	.string "It's obvious that TEAM ROCKET is\n"
-	.string "behind this most heinous crime!\p"
-	.string "Even our POLICE FORCE has\n"
-	.string "trouble with the ROCKETS!$"
+	.string "The ROCKETS broke in, and TEAM\n"
+	.string "SKULL took the rest!\p"
+	.string "Even the POLICE gave up.$"
 
 CeruleanCity_Text_SlowbroUseSonicboom::
 	.string "Okay! SLOWBRO!\n"
@@ -480,10 +479,9 @@ CeruleanCity_Text_SlowbroWithdraw::
 	.string "SLOWBRO, WITHDRAW!$"
 
 CeruleanCity_Text_HardToControlMonsObedience::
-	.string "No! That's wrong!\n"
-	.string "It's so hard to control POKéMON!\p"
-	.string "Your POKéMON's obedience depends\n"
-	.string "on your abilities as a TRAINER.$"
+	.string "No! That's wrong!\p"
+	.string "SLOWBRO only listens to tough\n"
+	.string "bosses. I guess I'm not one…$"
 
 CeruleanCity_Text_SlowbroTookSnooze::
 	.string "SLOWBRO took a snooze…$"
@@ -499,8 +497,8 @@ CeruleanCity_Text_SlowbroIgnoredOrders::
 
 CeruleanCity_Text_WantBrightRedBicycle::
 	.string "I want a bright red bicycle.\p"
-	.string "I'll keep it at home, so it won't\n"
-	.string "get dirty.$"
+	.string "But TEAM SKULL would just steal\n"
+	.string "it.$"
 
 CeruleanCity_Text_ThisIsCeruleanCave::
 	.string "This is CERULEAN CAVE.\p"
@@ -515,9 +513,9 @@ CeruleanCity_Text_ThisIsCeruleanCave::
 	.string "made a great achievement.$"
 
 CeruleanCity_Text_CitySign::
-	.string "CERULEAN CITY\n"
-	.string "A Mysterious, Blue Aura Surrounds\l"
-	.string "It$"
+	.string "CERULEAN CITY\p"
+	.string "A Mysterious Blue Aura… and TEAM\n"
+	.string "SKULL$"
 
 CeruleanCity_Text_TrainerTipsHeldItems::
 	.string "TRAINER TIPS\p"
@@ -531,7 +529,6 @@ CeruleanCity_Text_BikeShopSign::
 	.string "BIKE SHOP$"
 
 CeruleanCity_Text_GymSign::
-	.string "CERULEAN CITY POKéMON GYM\n"
-	.string "LEADER: MISTY\l"
-	.string "The Tomboyish Mermaid!$"
+	.string "CERULEAN CITY POKéMON GYM\p"
+	.string "BOSS: GUZMA - TEAM SKULL$"
 

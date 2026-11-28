@@ -248,8 +248,9 @@ ViridianCity_Text_CanCarryMonsAnywhere::
 	.string "use POKéMON anytime, anywhere.$"
 
 ViridianCity_Text_GymClosedWonderWhoLeaderIs::
-	.string "This POKéMON GYM is always closed.\p"
-	.string "I wonder who the LEADER is?$"
+	.string "The GYM is TEAM ROCKET's HQ now.\p"
+	.string "Only GIOVANNI's people go in\n"
+	.string "there.$"
 
 ViridianCity_Text_ViridiansGymLeaderReturned::
 	.string "VIRIDIAN GYM's LEADER returned!$"
@@ -274,10 +275,9 @@ ViridianCity_Text_GrandpaHasntHadCoffeeYet::
 	.string "He hasn't had his coffee yet.$"
 
 ViridianCity_Text_GoShoppingInPewterOccasionally::
-	.string "I go shopping in PEWTER CITY\n"
-	.string "occasionally.\p"
-	.string "I have to take the winding trail in\n"
-	.string "VIRIDIAN FOREST when I go.$"
+	.string "I go shopping in PEWTER sometimes.\p"
+	.string "TEAM YELL makes noise all night,\n"
+	.string "but at least they don't steal.$"
 
 ViridianCity_Text_ThisIsPrivateProperty::
 	.string "I absolutely forbid you from\n"
@@ -343,15 +343,13 @@ ViridianCity_Text_TooBusyForTeachyTV::
 	.string "be ill spent…$"
 
 ViridianCity_Text_CitySign::
-	.string "VIRIDIAN CITY \n"
-	.string "The Eternally Green Paradise$"
+	.string "VIRIDIAN CITY\p"
+	.string "GIOVANNI's City. Keep Walking.$"
 
 ViridianCity_Text_CatchMonsForEasierBattles::
 	.string "TRAINER TIPS\p"
-	.string "Catch POKéMON and expand your\n"
-	.string "collection.\p"
-	.string "The more you have, the easier it\n"
-	.string "is to battle.$"
+	.string "Catch POKéMON and build your crew.\n"
+	.string "The bigger it is, the safer you are.$"
 
 ViridianCity_Text_MovesLimitedByPP::
 	.string "TRAINER TIPS\p"
@@ -361,7 +359,8 @@ ViridianCity_Text_MovesLimitedByPP::
 	.string "POKéMON at a POKéMON CENTER.$"
 
 ViridianCity_Text_GymSign::
-	.string "VIRIDIAN CITY POKéMON GYM$"
+	.string "VIRIDIAN CITY POKéMON GYM\p"
+	.string "BOSS: GIOVANNI - TEAM ROCKET HQ$"
 
 ViridianCity_Text_GymDoorsAreLocked::
 	.string "VIRIDIAN GYM's doors are locked…$"

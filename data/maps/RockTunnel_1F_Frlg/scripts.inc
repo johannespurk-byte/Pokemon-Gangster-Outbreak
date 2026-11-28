@@ -46,83 +46,82 @@ RockTunnel_1F_EventScript_Dana::
 	end
 
 RockTunnel_1F_Text_LennyIntro::
-	.string "This tunnel goes a long way, kid!$"
+	.string "Out here, nobody pays the tolls of\n"
+	.string "GUZMA!$"
 
 RockTunnel_1F_Text_LennyDefeat::
-	.string "Doh!\n"
-	.string "You win!$"
+	.string "My birds flew off…$"
 
 RockTunnel_1F_Text_LennyPostBattle::
-	.string "Watch for ONIX.\n"
-	.string "They appear only occasionally.\p"
-	.string "High-level ones can put the\n"
-	.string "squeeze on you!$"
+	.string "Rest a bit. The road ahead is\n"
+	.string "rough.$"
 
 RockTunnel_1F_Text_OliverIntro::
-	.string "Hmm.\n"
-	.string "Maybe I'm lost in here…$"
+	.string "Gangs come and go. The mountains\n"
+	.string "stay!$"
 
 RockTunnel_1F_Text_OliverDefeat::
-	.string "Ease up!\n"
-	.string "What am I doing?\l"
-	.string "Which way is out?$"
+	.string "Like a rockslide!$"
 
 RockTunnel_1F_Text_OliverPostBattle::
-	.string "That sleeping POKéMON on ROUTE 12\n"
-	.string "forced me to take this detour.$"
+	.string "Gangs never climb this far. Too\n"
+	.string "lazy.$"
 
 RockTunnel_1F_Text_LucasIntro::
-	.string "Outsiders like you need to show me\n"
-	.string "some respect!$"
+	.string "My POKéMON is as tough as the\n"
+	.string "rocks here!$"
 
 RockTunnel_1F_Text_LucasDefeat::
-	.string "I give!$"
+	.string "Heh, you're tough as stone.$"
 
 RockTunnel_1F_Text_LucasPostBattle::
-	.string "You're talented enough to hike!$"
+	.string "Watch the skies. Even the birds\n"
+	.string "avoid TEAM SKULL.$"
 
 RockTunnel_1F_Text_AshtonIntro::
-	.string "POKéMON fight!\n"
-	.string "Ready, go!$"
+	.string "Science doesn't stop for a gang\n"
+	.string "war!$"
 
 RockTunnel_1F_Text_AshtonDefeat::
-	.string "Game over!$"
+	.string "Fine… I'll recalculate.$"
 
 RockTunnel_1F_Text_AshtonPostBattle::
-	.string "Oh well, I'll get a ZUBAT as I go!$"
+	.string "Knowledge is the only thing they\n"
+	.string "can't steal.$"
 
 RockTunnel_1F_Text_LeahIntro::
-	.string "Eek!\p"
-	.string "Don't try anything funny in the\n"
-	.string "dark!$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 RockTunnel_1F_Text_LeahDefeat::
-	.string "It was too dark…$"
+	.string "Okay, okay! You win!$"
 
 RockTunnel_1F_Text_LeahPostBattle::
-	.string "I saw a MACHOP in this tunnel.$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 RockTunnel_1F_Text_DanaIntro::
-	.string "I came this far looking for wild\n"
-	.string "POKéMON.$"
+	.string "GUZMA says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 RockTunnel_1F_Text_DanaDefeat::
-	.string "I'm out of POKéMON!$"
+	.string "No fair! You're way too strong!$"
 
 RockTunnel_1F_Text_DanaPostBattle::
 	.string "You looked cute and harmless.\n"
 	.string "Was I ever wrong!$"
 
 RockTunnel_1F_Text_ArianaIntro::
-	.string "You have POKéMON!\n"
-	.string "Let's start!$"
+	.string "My big brother rides with TEAM\n"
+	.string "SKULL! I'm gonna be just like him!$"
 
 RockTunnel_1F_Text_ArianaDefeat::
-	.string "You play hard!$"
+	.string "Waaah! I'm telling my brother!$"
 
 RockTunnel_1F_Text_ArianaPostBattle::
-	.string "Whew!\n"
-	.string "I'm all sweaty now.$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "SKULL.\p"
+	.string "Or maybe your crew!$"
 
 RockTunnel_1F_Text_RouteSign::
 	.string "ROCK TUNNEL\n"

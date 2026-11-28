@@ -144,33 +144,32 @@ RocketHideout_B4F_Text_GiovanniPostBattle::
 	.string "I hope we meet again…$"
 
 RocketHideout_B4F_Text_Grunt2Intro::
-	.string "I know you!\n"
-	.string "You ruined our plans at MT. MOON!$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 RocketHideout_B4F_Text_Grunt2Defeat::
-	.string "Burned again!$"
+	.string "Urgh! Not again!$"
 
 RocketHideout_B4F_Text_Grunt2PostBattle::
-	.string "Do you have something against TEAM\n"
-	.string "ROCKET?$"
+	.string "Don't tell GIOVANNI I lost to you.$"
 
 RocketHideout_B4F_Text_Grunt3Intro::
-	.string "How can you not see the beauty of\n"
-	.string "our evil?$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from GIOVANNI!$"
 
 RocketHideout_B4F_Text_Grunt3Defeat::
-	.string "Ayaya!$"
+	.string "I'm gonna be in so much trouble…$"
 
 RocketHideout_B4F_Text_Grunt3PostBattle::
-	.string "BOSS!\n"
-	.string "I'm sorry I failed you!$"
+	.string "Word is you're GIOVANNI's new\n"
+	.string "star. Is that true?$"
 
 RocketHideout_B4F_Text_Grunt1Intro::
 	.string "The elevator doesn't work?\n"
 	.string "Who has the LIFT KEY?$"
 
 RocketHideout_B4F_Text_Grunt1Defeat::
-	.string "No!$"
+	.string "How can a kid be this strong?!$"
 
 RocketHideout_B4F_Text_Grunt1PostBattle::
 	.string "Oh, no!\n"

@@ -32,26 +32,28 @@ PokemonMansion_1F_EventScript_Johnson::
 	end
 
 PokemonMansion_1F_Text_TedIntro::
-	.string "Who are you?\n"
-	.string "There shouldn't be anyone here.$"
+	.string "I hacked a PC of TEAM GALACTIC\n"
+	.string "once.\p"
+	.string "Now I hide out here!$"
 
 PokemonMansion_1F_Text_TedDefeat::
-	.string "Ouch!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 PokemonMansion_1F_Text_TedPostBattle::
 	.string "A key? I don't know what you're\n"
 	.string "talking about.$"
 
 PokemonMansion_1F_Text_JohnsonIntro::
-	.string "W-w-waah! You startled me!\n"
-	.string "I thought you were a ghost.$"
+	.string "My big brother rides with TEAM\n"
+	.string "GALACTIC! I'm gonna be just like\p"
+	.string "him!$"
 
 PokemonMansion_1F_Text_JohnsonDefeat::
-	.string "Tch!\n"
-	.string "I can't get any wins.$"
+	.string "Aww… There goes my lunch money.$"
 
 PokemonMansion_1F_Text_JohnsonPostBattle::
-	.string "I was exploring here by myself,\n"
-	.string "but I feel spooked.\p"
-	.string "I ought to go soon.$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "GALACTIC.\p"
+	.string "Or maybe your crew!$"
 

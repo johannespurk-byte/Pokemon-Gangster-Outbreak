@@ -55,37 +55,37 @@ SilphCo_9F_Text_ThankYouSoMuch::
 	.string "Thank you so much.$"
 
 SilphCo_9F_Text_Grunt1Intro::
-	.string "Your POKéMON seem to adore you,\n"
-	.string "kid!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from GIOVANNI!$"
 
 SilphCo_9F_Text_Grunt1Defeat::
-	.string "Ghaaah!$"
+	.string "I'm gonna be in so much trouble…$"
 
 SilphCo_9F_Text_Grunt1PostBattle::
-	.string "If I had started as a TRAINER at\n"
-	.string "your age…$"
+	.string "Word is you're GIOVANNI's new\n"
+	.string "star. Is that true?$"
 
 SilphCo_9F_Text_EdIntro::
-	.string "Your POKéMON have weak points!\n"
-	.string "I can nail them!$"
+	.string "I sell info to every gang.\p"
+	.string "Info on you is worth a lot!$"
 
 SilphCo_9F_Text_EdDefeat::
-	.string "You hammered me!$"
+	.string "Error! That wasn't in my data!$"
 
 SilphCo_9F_Text_EdPostBattle::
-	.string "Exploiting weak spots does work.\n"
-	.string "Think about type advantages.$"
+	.string "Data says you'll beat GIOVANNI.\p"
+	.string "Probably.$"
 
 SilphCo_9F_Text_Grunt2Intro::
-	.string "I am one of the four ROCKET\n"
-	.string "BROTHERS!$"
+	.string "Halt! This is TEAM ROCKET\n"
+	.string "business!$"
 
 SilphCo_9F_Text_Grunt2Defeat::
-	.string "Warg!\n"
-	.string "Brothers, I lost!$"
+	.string "Retreat! Retreat!$"
 
 SilphCo_9F_Text_Grunt2PostBattle::
-	.string "My brothers will avenge me!$"
+	.string "GIOVANNI will deal with you\n"
+	.string "himself.$"
 
 SilphCo_9F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

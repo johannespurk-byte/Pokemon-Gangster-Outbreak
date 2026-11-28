@@ -42,97 +42,92 @@ RockTunnel_B1F_EventScript_Winston::
 	end
 
 RockTunnel_B1F_Text_SofiaIntro::
-	.string "Do you know how you can avoid\n"
-	.string "getting lost in the mountains?\p"
-	.string "You can bend twigs as trail\n"
-	.string "markers.$"
+	.string "My big brother rides with TEAM\n"
+	.string "SKULL! I'm gonna be just like him!$"
 
 RockTunnel_B1F_Text_SofiaDefeat::
-	.string "Ohhh!\n"
-	.string "I did my best!$"
+	.string "Aww… There goes my lunch money.$"
 
 RockTunnel_B1F_Text_SofiaPostBattle::
-	.string "I want to go home!$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "SKULL.\p"
+	.string "Or maybe your crew!$"
 
 RockTunnel_B1F_Text_DudleyIntro::
-	.string "Hahaha!\n"
-	.string "Can you beat my power?$"
+	.string "Out here, nobody pays the tolls of\n"
+	.string "GUZMA!$"
 
 RockTunnel_B1F_Text_DudleyDefeat::
-	.string "Oops!\n"
-	.string "Outmuscled!$"
+	.string "Heh, you're tough as stone.$"
 
 RockTunnel_B1F_Text_DudleyPostBattle::
-	.string "I go for power because I hate\n"
-	.string "thinking.$"
+	.string "Rest a bit. The road ahead is\n"
+	.string "rough.$"
 
 RockTunnel_B1F_Text_CooperIntro::
-	.string "You have a POKéDEX?\n"
-	.string "I want one, too.$"
+	.string "My calculations say you lose.\p"
+	.string "Let's test it!$"
 
 RockTunnel_B1F_Text_CooperDefeat::
-	.string "Shoot!\n"
-	.string "I am so jealous!$"
+	.string "Fine… I'll recalculate.$"
 
 RockTunnel_B1F_Text_CooperPostBattle::
-	.string "When you finish your POKéDEX,\n"
-	.string "can I have it?$"
+	.string "I'll sell your battle data to TEAM\n"
+	.string "SKULL.\p"
+	.string "Kidding! Mostly.$"
 
 RockTunnel_B1F_Text_SteveIntro::
-	.string "Um… Do you know about POKéMON\n"
-	.string "cosplay?$"
+	.string "I sell info to every gang.\p"
+	.string "Info on you is worth a lot!$"
 
 RockTunnel_B1F_Text_SteveDefeat::
-	.string "Well, that's that.$"
+	.string "Error! That wasn't in my data!$"
 
 RockTunnel_B1F_Text_StevePostBattle::
-	.string "POKéMON cosplay is dressing up as\n"
-	.string "POKéMON for fun.\p"
-	.string "CLEFAIRY is a favorite.$"
+	.string "Data says you'll beat GUZMA.\p"
+	.string "Probably.$"
 
 RockTunnel_B1F_Text_AllenIntro::
-	.string "My POKéMON techniques will leave\n"
-	.string "you crying!$"
+	.string "Gangs come and go. The mountains\n"
+	.string "stay!$"
 
 RockTunnel_B1F_Text_AllenDefeat::
-	.string "I give!\n"
-	.string "You're a better technician!$"
+	.string "Whoa! Rolled right over me!$"
 
 RockTunnel_B1F_Text_AllenPostBattle::
-	.string "In mountains, you'll often find\n"
-	.string "ROCK-type POKéMON.$"
+	.string "Gangs never climb this far. Too\n"
+	.string "lazy.$"
 
 RockTunnel_B1F_Text_MarthaIntro::
-	.string "I don't often come here, but I will\n"
-	.string "battle you.$"
+	.string "GUZMA says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 RockTunnel_B1F_Text_MarthaDefeat::
-	.string "Oh!\n"
-	.string "I lost!$"
+	.string "Okay, okay! You win!$"
 
 RockTunnel_B1F_Text_MarthaPostBattle::
-	.string "I like tiny POKéMON.\n"
-	.string "Big ones are too scary!$"
+	.string "Everybody's scared of GUZMA.\p"
+	.string "Are you scared?$"
 
 RockTunnel_B1F_Text_EricIntro::
-	.string "Hit me with your best shot!$"
+	.string "My POKéMON is as tough as the\n"
+	.string "rocks here!$"
 
 RockTunnel_B1F_Text_EricDefeat::
-	.string "Fired away!$"
+	.string "My birds flew off…$"
 
 RockTunnel_B1F_Text_EricPostBattle::
-	.string "I'll raise my POKéMON to beat\n"
-	.string "yours, kid.$"
+	.string "Watch the skies. Even the birds\n"
+	.string "avoid TEAM SKULL.$"
 
 RockTunnel_B1F_Text_WinstonIntro::
-	.string "I draw illustrations of POKéMON\n"
-	.string "when I'm home.$"
+	.string "Science doesn't stop for a gang\n"
+	.string "war!$"
 
 RockTunnel_B1F_Text_WinstonDefeat::
-	.string "Whew…\n"
-	.string "I'm exhausted…$"
+	.string "My theory… failed!$"
 
 RockTunnel_B1F_Text_WinstonPostBattle::
-	.string "I'm an artist, not a fighter.\n"
-	.string "I'll go home to draw.$"
+	.string "Knowledge is the only thing they\n"
+	.string "can't steal.$"
 

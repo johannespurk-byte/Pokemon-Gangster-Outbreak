@@ -45,36 +45,37 @@ SilphCo_8F_Text_ThanksForSavingUs::
 	.string "Thanks for saving us!$"
 
 SilphCo_8F_Text_Grunt1Intro::
-	.string "That's as far as you'll go!$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 SilphCo_8F_Text_Grunt1Defeat::
-	.string "Not enough grit!$"
+	.string "Retreat! Retreat!$"
 
 SilphCo_8F_Text_Grunt1PostBattle::
-	.string "If you don't turn back…\n"
-	.string "I'll call for backup!$"
+	.string "Don't tell GIOVANNI I lost to you.$"
 
 SilphCo_8F_Text_ParkerIntro::
-	.string "You're causing us problems!$"
+	.string "My calculations say you lose.\p"
+	.string "Let's test it!$"
 
 SilphCo_8F_Text_ParkerDefeat::
-	.string "Huh?\n"
-	.string "I lost?$"
+	.string "Fine… I'll recalculate.$"
 
 SilphCo_8F_Text_ParkerPostBattle::
-	.string "So, what do you think of SILPH\n"
-	.string "BUILDING's maze?$"
+	.string "I'll sell your battle data to TEAM\n"
+	.string "ROCKET.\p"
+	.string "Kidding! Mostly.$"
 
 SilphCo_8F_Text_Grunt2Intro::
-	.string "I am one of the four ROCKET\n"
-	.string "BROTHERS!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from GIOVANNI!$"
 
 SilphCo_8F_Text_Grunt2Defeat::
-	.string "Whoo!\n"
-	.string "Oh, Brothers!$"
+	.string "How can a kid be this strong?!$"
 
 SilphCo_8F_Text_Grunt2PostBattle::
-	.string "I'll leave you up to my brothers.$"
+	.string "Word is you're GIOVANNI's new\n"
+	.string "star. Is that true?$"
 
 SilphCo_8F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

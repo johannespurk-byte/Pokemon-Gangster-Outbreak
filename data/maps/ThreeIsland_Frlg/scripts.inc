@@ -386,8 +386,8 @@ ThreeIsland_EventScript_Biker6::
 	end
 
 ThreeIsland_Text_IslandSign::
-	.string "THREE ISLAND\n"
-	.string "Kin Island of Family Bonding$"
+	.string "THREE ISLAND\p"
+	.string "Kin Island. Watch Out for Bikers.$"
 
 ThreeIsland_Text_IslandBelongsToUs::
 	.string "Hyahoo!\p"

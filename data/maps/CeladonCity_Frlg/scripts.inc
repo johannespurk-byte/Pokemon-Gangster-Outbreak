@@ -108,14 +108,16 @@ CeladonCity_Text_GotMyKoffingInCinnabar::
 	.string "poison when it's angry.$"
 
 CeladonCity_Text_GymIsGreatFullOfWomen::
-	.string "Heheh! This GYM is great!\n"
-	.string "It's full of women!$"
+	.string "TEAM AQUA and TEAM MAGMA share\n"
+	.string "the GYM.\p"
+	.string "They fight about it every single\n"
+	.string "day!$"
 
 CeladonCity_Text_GameCornerIsBadForCitysImage::
-	.string "CELADON takes pride in its efforts\n"
-	.string "to keep the city beautiful.\p"
-	.string "That's why the new GAME CORNER is\n"
-	.string "bad for our city's image.$"
+	.string "CELADON used to be beautiful.\p"
+	.string "Now it's AQUA on one side, MAGMA\n"
+	.string "on the other, and ROCKET slots in\p"
+	.string "the middle.$"
 
 CeladonCity_Text_BlewItAllAtSlots::
 	.string "Moan…\n"
@@ -132,11 +134,14 @@ CeladonCity_Text_Poliwrath::
 	.string "POLIWRATH: Ribi ribit!$"
 
 CeladonCity_Text_GetLostOrIllPunchYou::
-	.string "What are you staring at?\n"
-	.string "Get lost, or I'll punch you.$"
+	.string "What are you staring at?\p"
+	.string "I'm MAGMA. Get lost, or I'll punch\n"
+	.string "you.$"
 
 CeladonCity_Text_KeepOutOfTeamRocketsWay::
-	.string "Keep out of TEAM ROCKET's way!$"
+	.string "Keep out of everybody's way here.\n"
+	.string "AQUA, MAGMA, ROCKET… pick one and\p"
+	.string "pray.$"
 
 CeladonCity_Text_ExplainXAccuracyDireHit::
 	.string "TRAINER TIPS\p"
@@ -148,20 +153,20 @@ CeladonCity_Text_ExplainXAccuracyDireHit::
 	.string "DEPT. STORE!$"
 
 CeladonCity_Text_CitySign::
-	.string "CELADON CITY\n"
-	.string "The City of Rainbow Dreams$"
+	.string "CELADON CITY\p"
+	.string "Half Blue, Half Red. Pick a Side.$"
 
 CeladonCity_Text_GymSign::
-	.string "CELADON CITY POKéMON GYM\n"
-	.string "LEADER: ERIKA\l"
-	.string "The Nature-Loving Princess!$"
+	.string "CELADON CITY POKéMON GYM\p"
+	.string "BOSSES: ARCHIE and MAXIE - AQUA\n"
+	.string "and MAGMA$"
 
 CeladonCity_Text_MansionSign::
 	.string "CELADON MANSION$"
 
 CeladonCity_Text_DeptStoreSign::
-	.string "Find what you need at the\n"
-	.string "CELADON DEPT. STORE!$"
+	.string "Find what's left at the CELADON\n"
+	.string "DEPT. STORE!$"
 
 CeladonCity_Text_GuardSpecProtectsFromStatus::
 	.string "TRAINER TIPS\p"
@@ -176,8 +181,8 @@ CeladonCity_Text_PrizeExchangeSign::
 	.string "PRIZE EXCHANGE$"
 
 CeladonCity_Text_GameCornerSign::
-	.string "ROCKET GAME CORNER\n"
-	.string "The playground for grown-ups!$"
+	.string "ROCKET GAME CORNER\p"
+	.string "Everybody Loses. We Win.$"
 
 CeladonCity_Text_ScaldedTongueOnTea::
 	.string "Aaaagh, ow…\n"

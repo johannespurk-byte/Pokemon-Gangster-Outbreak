@@ -31,26 +31,26 @@ PokemonMansion_B1F_EventScript_Ivan::
 	end
 
 PokemonMansion_B1F_Text_LewisIntro::
-	.string "Uh-oh…\n"
-	.string "Where am I now?$"
+	.string "Hey! You're in the wrong part of\n"
+	.string "town!$"
 
 PokemonMansion_B1F_Text_LewisDefeat::
-	.string "Awooh!$"
+	.string "CYRUS is gonna kill me…$"
 
 PokemonMansion_B1F_Text_LewisPostBattle::
-	.string "You can find stuff lying around.\n"
-	.string "The residents must've left them.$"
+	.string "You're making a name for yourself,\n"
+	.string "boss.$"
 
 PokemonMansion_B1F_Text_IvanIntro::
-	.string "This place is ideal for a lab.\n"
-	.string "Look at all this space.$"
+	.string "Your POKéMON stats look…\n"
+	.string "interesting!$"
 
 PokemonMansion_B1F_Text_IvanDefeat::
-	.string "What was that for?$"
+	.string "My theory… failed!$"
 
 PokemonMansion_B1F_Text_IvanPostBattle::
-	.string "I like it here.\n"
-	.string "It's conducive to my studies.$"
+	.string "I'm writing a paper on gang\n"
+	.string "warfare. You're in it now.$"
 
 PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
 	.string "Diary: Sept. 1\n"

@@ -6,68 +6,61 @@ SevenIsland_SevaultCanyon_Entrance_EventScript_RouteSign::
 	end
 
 SevenIsland_SevaultCanyon_Entrance_Text_MiahIntro::
-	.string "Kyahaha!\n"
-	.string "I'll flick you away effortlessly!$"
+	.string "Even in a gang war, one must look\n"
+	.string "fabulous.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MiahDefeat::
-	.string "Tch!\n"
-	.string "Too strong for me!$"
+	.string "My outfit! It's ruined!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MiahPostBattle::
-	.string "What's that?\n"
-	.string "I don't act the way I look?\p"
-	.string "Heh, that's a part of my strategy!$"
+	.string "Money buys safety from TEAM\n"
+	.string "ROCKET.\p"
+	.string "Usually.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonIntro::
-	.string "Howdy!\n"
-	.string "Are you a member of my fan club?$"
+	.string "I built a radar for gang\n"
+	.string "movements. It beeped at you!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonDefeat::
-	.string "Oh, so you're not a fan…\p"
-	.string "Well, I can change that.\n"
-	.string "Let me sing for you!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MasonPostBattle::
-	.string "Lalalah…\n"
-	.string "My POKéMON, I send them out,\l"
-	.string "all the girls scream and shout!$"
+	.string "Every gang uses my gadgets.\n"
+	.string "Nobody pays.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasIntro::
-	.string "This island is too spread out…\n"
-	.string "It's not easy patrolling the place.$"
+	.string "Gangs come and go. The mountains\n"
+	.string "stay!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasDefeat::
-	.string "Uh-huh…$"
+	.string "Like a rockslide!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_NicolasPostBattle::
-	.string "TRAINERS like you from cities,\n"
-	.string "they sure are tough.\p"
-	.string "You'll be headed for the TOWER,\n"
-	.string "won't you?$"
+	.string "Gangs never climb this far. Too\n"
+	.string "lazy.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineIntro::
-	.string "I punish people who abuse\n"
-	.string "POKéMON!$"
+	.string "My POKéMON is as tough as the\n"
+	.string "rocks here!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelineDefeat::
-	.string "You don't seem to be a problem\n"
-	.string "TRAINER.$"
+	.string "Heh, you're tough as stone.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_MadelinePostBattle::
-	.string "If you treat your POKéMON with\n"
-	.string "kindness, they'll understand.$"
+	.string "Watch the skies. Even the birds\n"
+	.string "avoid TEAM ROCKET.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveIntro::
-	.string "EVE: I'll team up with JON and\n"
-	.string "battle together.$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveDefeat::
-	.string "EVE: Me and JON, we lost.\n"
-	.string "Ehehe.$"
+	.string "Waaah! I'm telling my brother!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EvePostBattle::
-	.string "EVE: I'm going to work harder with\n"
-	.string "JON.$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveNotEnoughMons::
 	.string "EVE: I want to team up with JON\n"
@@ -75,17 +68,16 @@ SevenIsland_SevaultCanyon_Entrance_Text_EveNotEnoughMons::
 	.string "Come back with two POKéMON, okay?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonIntro::
-	.string "JON: When I'm with EVE, it feels\n"
-	.string "like we could never lose.$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonDefeat::
-	.string "JON: When I'm with EVE,\n"
-	.string "it doesn't feel like I've lost!$"
+	.string "No fair! You're way too strong!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonPostBattle::
-	.string "JON: When I'm with EVE, I feel\n"
-	.string "giddy whether I win or lose.\p"
-	.string "It's magical!$"
+	.string "The road to the SEVII ISLANDS\n"
+	.string "isn't safe.\p"
+	.string "Watch out!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonNotEnoughMons::
 	.string "JON: If it's with EVE, I'll be\n"

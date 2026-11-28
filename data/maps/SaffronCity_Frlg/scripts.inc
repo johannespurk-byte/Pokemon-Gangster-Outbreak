@@ -128,15 +128,18 @@ SaffronCity_Text_WhatDoYouWantGetLost::
 	.string "Get lost!$"
 
 SaffronCity_Text_BossTakeTownForTeamRocket::
-	.string "BOSS said he'll take this town\n"
-	.string "in the name of TEAM ROCKET!$"
+	.string "BOSS says SILPH belongs to TEAM\n"
+	.string "ROCKET!\p"
+	.string "TEAM FLARE can keep the rest of\n"
+	.string "the city.$"
 
 SaffronCity_Text_DontGetDefiantOrIllHurtYou::
 	.string "Don't get defiant!\n"
 	.string "Or I'll have to hurt you!$"
 
 SaffronCity_Text_SaffronBelongsToTeamRocket::
-	.string "SAFFRON belongs to TEAM ROCKET!$"
+	.string "SILPH CO. belongs to TEAM ROCKET!\p"
+	.string "Tell those FLARE snobs!$"
 
 SaffronCity_Text_CriminalLifeMakesMeFeelAlive::
 	.string "My life as a criminal makes me feel\n"
@@ -160,10 +163,10 @@ SaffronCity_Text_SafeToGoOutAgain::
 	.string "It's safe to go out again!$"
 
 SaffronCity_Text_PeopleComingBackToSaffron::
-	.string "People fled from here in droves\n"
-	.string "when those ROCKETS came.\p"
-	.string "They should be flocking back to\n"
-	.string "SAFFRON now.$"
+	.string "People fled when the ROCKETS\n"
+	.string "came.\p"
+	.string "Now only TEAM FLARE's fashion is\n"
+	.string "left to fear.$"
 
 SaffronCity_Text_FlewHereOnPidgeot::
 	.string "I flew here on my PIDGEOT when\n"
@@ -188,16 +191,15 @@ SaffronCity_Text_HesTakingASnooze::
 	.string "Hah! He's taking a snooze!$"
 
 SaffronCity_Text_CitySign::
-	.string "SAFFRON CITY\n"
-	.string "Shining, Golden Land of Commerce$"
+	.string "SAFFRON CITY\p"
+	.string "TEAM FLARE's Shining Golden City$"
 
 SaffronCity_Text_FightingDojo::
 	.string "FIGHTING DOJO$"
 
 SaffronCity_Text_GymSign::
-	.string "SAFFRON CITY POKéMON GYM\n"
-	.string "LEADER: SABRINA\l"
-	.string "The Master of PSYCHIC POKéMON!$"
+	.string "SAFFRON CITY POKéMON GYM\p"
+	.string "BOSS: LYSANDRE - TEAM FLARE$"
 
 SaffronCity_Text_FullHealCuresStatus::
 	.string "TRAINER TIPS\p"
@@ -230,11 +232,7 @@ SaffronCity_Text_TrainerFanClubSign::
 	.string "names on this sign.$"
 
 SaffronCity_Text_HowCanClubNotRecognizeLance::
-	.string "This FAN CLUB…\n"
-	.string "No one here has a clue!\p"
-	.string "How could they not recognize\n"
-	.string "the brilliance that is LANCE?\p"
-	.string "He stands for justice!\n"
-	.string "He's cool, and yet passionate!\l"
-	.string "He's the greatest, LANCE!$"
+	.string "This FAN CLUB…\p"
+	.string "They all love PIERS and LYSANDRE.\n"
+	.string "Nobody has a clue!$"
 

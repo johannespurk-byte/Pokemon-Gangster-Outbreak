@@ -19,8 +19,8 @@ SixIsland_EventScript_IslandSign::
 	end
 
 SixIsland_Text_IslandSign::
-	.string "SIX ISLAND\n"
-	.string "Fortune Island of Aged Wisdom$"
+	.string "SIX ISLAND\p"
+	.string "Old and Wise. Nobody Bothers Us.$"
 
 SixIsland_Text_ThatWayToWaterPathRuinValley::
 	.string "Keep going this way and you'll get\n"
@@ -29,6 +29,6 @@ SixIsland_Text_ThatWayToWaterPathRuinValley::
 	.string "the RUIN VALLEY.$"
 
 SixIsland_Text_SkyAtNightIsFantastic::
-	.string "When you're this far away from the\n"
-	.string "city, the sky at night is fantastic.$"
+	.string "Far from the burning cities, the\n"
+	.string "sky at night is fantastic.$"
 

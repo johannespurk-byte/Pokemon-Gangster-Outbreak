@@ -12,12 +12,11 @@ RocketHideout_B3F_EventScript_Grunt2::
 	end
 
 RocketHideout_B3F_Text_Grunt1Intro::
-	.string "Stop meddling in TEAM ROCKET's\n"
-	.string "affairs or else!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from GIOVANNI!$"
 
 RocketHideout_B3F_Text_Grunt1Defeat::
-	.string "Oof!\n"
-	.string "Taken down!$"
+	.string "How can a kid be this strong?!$"
 
 RocketHideout_B3F_Text_Grunt1PostBattle::
 	.string "SILPH SCOPE?\n"
@@ -29,8 +28,7 @@ RocketHideout_B3F_Text_Grunt2Intro::
 	.string "were coming!$"
 
 RocketHideout_B3F_Text_Grunt2Defeat::
-	.string "What?\n"
-	.string "I lost? No!$"
+	.string "Urgh! Not again!$"
 
 RocketHideout_B3F_Text_Grunt2PostBattle::
 	.string "Go ahead and go!\p"

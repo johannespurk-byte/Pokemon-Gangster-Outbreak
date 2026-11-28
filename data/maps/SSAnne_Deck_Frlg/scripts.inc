@@ -37,24 +37,24 @@ SSAnne_Deck_Text_FeelSeasick::
 	.string "get some air…$"
 
 SSAnne_Deck_Text_EdmondIntro::
-	.string "Hey, matey!\p"
-	.string "Let's do a little jig!$"
+	.string "You'll sink like the last punk who\n"
+	.string "came here!$"
 
 SSAnne_Deck_Text_EdmondDefeat::
-	.string "You're impressive!$"
+	.string "Glub… I'm all washed up.$"
 
 SSAnne_Deck_Text_EdmondPostBattle::
-	.string "How many kinds of POKéMON do you\n"
-	.string "think there are in this big world?$"
+	.string "Swim fast if you see a boat from\n"
+	.string "TEAM ROCKET.$"
 
 SSAnne_Deck_Text_TrevorIntro::
-	.string "Ahoy, there!\n"
-	.string "Are you seasick?$"
+	.string "Out here, only the strong stay\n"
+	.string "afloat!$"
 
 SSAnne_Deck_Text_TrevorDefeat::
-	.string "I was just careless!$"
+	.string "Sunk! Totally sunk!$"
 
 SSAnne_Deck_Text_TrevorPostBattle::
-	.string "My pa said there are 100 kinds of\n"
-	.string "POKéMON. I think there are more.$"
+	.string "The water's the only free place\n"
+	.string "left.$"
 

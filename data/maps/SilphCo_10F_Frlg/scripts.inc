@@ -34,25 +34,26 @@ SilphCo_10F_EventScript_Grunt::
 	end
 
 SilphCo_10F_Text_GruntIntro::
-	.string "Welcome to 10F!\n"
-	.string "So good of you to join me!$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 SilphCo_10F_Text_GruntDefeat::
-	.string "I'm stunned!$"
+	.string "Urgh! Not again!$"
 
 SilphCo_10F_Text_GruntPostBattle::
-	.string "Nice try, but the boardroom is up\n"
-	.string "one more floor.$"
+	.string "Don't tell GIOVANNI I lost to you.$"
 
 SilphCo_10F_Text_TravisIntro::
-	.string "Enough of your silly games!$"
+	.string "I hacked a PC of TEAM ROCKET once.\p"
+	.string "Now I hide out here!$"
 
 SilphCo_10F_Text_TravisDefeat::
-	.string "No continues left!$"
+	.string "Error! That wasn't in my data!$"
 
 SilphCo_10F_Text_TravisPostBattle::
-	.string "Are you satisfied with beating me?\n"
-	.string "Then go on home!$"
+	.string "GIOVANNI pays well for smart\n"
+	.string "people.\p"
+	.string "Just saying.$"
 
 SilphCo_10F_Text_WaaaImScared::
 	.string "Waaaaa!\n"

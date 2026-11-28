@@ -15,7 +15,7 @@ SixIsland_GreenPath_Text_JaclynIntro::
 	.string "this is where I TELEPORT?$"
 
 SixIsland_GreenPath_Text_JaclynDefeat::
-	.string "Big boo-boo!$"
+	.string "I did not foresee this!$"
 
 SixIsland_GreenPath_Text_JaclynPostBattle::
 	.string "I am so scatterbrained!\p"

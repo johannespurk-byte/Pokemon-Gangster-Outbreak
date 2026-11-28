@@ -47,44 +47,46 @@ PokemonTower_5F_Text_RestHereInPurifiedSpace::
 	.string "You can rest here.$"
 
 PokemonTower_5F_Text_TammyIntro::
-	.string "Give…me…\n"
-	.string "your…all…$"
+	.string "Your future is dark.\p"
+	.string "Let me show you!$"
 
 PokemonTower_5F_Text_TammyDefeat::
-	.string "Gasp!$"
+	.string "The visions… were wrong!$"
 
 PokemonTower_5F_Text_TammyPostBattle::
-	.string "I was under possession.$"
+	.string "Your aura is strong.\p"
+	.string "Like a true boss.$"
 
 PokemonTower_5F_Text_RuthIntro::
-	.string "You…shall…\n"
-	.string "join…us…$"
+	.string "The outbreak woke the ghosts.\p"
+	.string "And me!$"
 
 PokemonTower_5F_Text_RuthDefeat::
-	.string "What a nightmare!$"
+	.string "My mind… is spinning!$"
 
 PokemonTower_5F_Text_RuthPostBattle::
-	.string "I was possessed.$"
+	.string "Beware the road to VIRIDIAN.$"
 
 PokemonTower_5F_Text_KarinaIntro::
-	.string "Zombies!$"
+	.string "The ghosts told me you'd come.$"
 
 PokemonTower_5F_Text_KarinaDefeat::
-	.string "Ha?$"
+	.string "The spirits abandoned me…$"
 
 PokemonTower_5F_Text_KarinaPostBattle::
-	.string "I regained my senses.$"
+	.string "The spirits say GIOVANNI fears\n"
+	.string "you already.$"
 
 PokemonTower_5F_Text_JanaeIntro::
-	.string "Urgah…\n"
-	.string "Urff…$"
+	.string "I feel a strange power around\n"
+	.string "you…$"
 
 PokemonTower_5F_Text_JanaeDefeat::
-	.string "Whoo!$"
+	.string "I did not foresee this!$"
 
 PokemonTower_5F_Text_JanaePostBattle::
-	.string "I fell to evil spirits despite my\n"
-	.string "training in the mountains…$"
+	.string "Leave this place before night\n"
+	.string "falls.$"
 
 PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
 	.string "Entered the purified and protected\n"

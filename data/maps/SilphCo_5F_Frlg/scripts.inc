@@ -67,50 +67,49 @@ SilphCo_5F_Text_YoureOurHeroThankYou::
 	.string "You're our hero! Thank you!$"
 
 SilphCo_5F_Text_Grunt1Intro::
-	.string "I heard a kid was wandering\n"
-	.string "around.$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 SilphCo_5F_Text_Grunt1Defeat::
-	.string "Boom!$"
+	.string "Urgh! Not again!$"
 
 SilphCo_5F_Text_Grunt1PostBattle::
-	.string "It's not smart to pick a fight with\n"
-	.string "TEAM ROCKET!$"
+	.string "Don't tell GIOVANNI I lost to you.$"
 
 SilphCo_5F_Text_BeauIntro::
-	.string "We study POKé BALL technology on\n"
-	.string "this floor.$"
+	.string "Your POKéMON stats look…\n"
+	.string "interesting!$"
 
 SilphCo_5F_Text_BeauDefeat::
-	.string "Dang!\n"
-	.string "Blast it!$"
+	.string "My theory… failed!$"
 
 SilphCo_5F_Text_BeauPostBattle::
-	.string "We worked on the ultimate POKé\n"
-	.string "BALL which would catch anything.$"
+	.string "I'm writing a paper on gang\n"
+	.string "warfare. You're in it now.$"
 
 SilphCo_5F_Text_DaltonIntro::
-	.string "Whaaat?\p"
-	.string "There shouldn't be any children\n"
-	.string "here!$"
+	.string "I hacked a PC of TEAM ROCKET once.\p"
+	.string "Now I hide out here!$"
 
 SilphCo_5F_Text_DaltonDefeat::
-	.string "Oh, goodness!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 SilphCo_5F_Text_DaltonPostBattle::
-	.string "You're only on 5F.\n"
-	.string "It's a long way to my BOSS!$"
+	.string "GIOVANNI pays well for smart\n"
+	.string "people.\p"
+	.string "Just saying.$"
 
 SilphCo_5F_Text_Grunt2Intro::
-	.string "Show TEAM ROCKET a little respect!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from GIOVANNI!$"
 
 SilphCo_5F_Text_Grunt2Defeat::
-	.string "Cough…\n"
-	.string "Cough…$"
+	.string "I'm gonna be in so much trouble…$"
 
 SilphCo_5F_Text_Grunt2PostBattle::
-	.string "Which reminds me.\p"
-	.string "KOFFING evolves into WEEZING!$"
+	.string "Word is you're GIOVANNI's new\n"
+	.string "star. Is that true?$"
 
 SilphCo_5F_Text_PorygonFirstVRMon::
 	.string "It's a POKéMON REPORT!\p"

@@ -140,8 +140,8 @@ FuchsiaCity_EventScript_OmanyteSign::
 
 FuchsiaCity_Text_DidYouTrySafariGame::
 	.string "Did you try the SAFARI GAME?\p"
-	.string "There are some rare POKéMON that\n"
-	.string "can only be caught there.$"
+	.string "Go before TEAM PLASMA “frees” all\n"
+	.string "the POKéMON.$"
 
 FuchsiaCity_Text_SafariZoneZooInFront::
 	.string "The SAFARI ZONE has a zoo in front\n"
@@ -160,12 +160,12 @@ FuchsiaCity_Text_ItemBallInThere::
 	.string "…Huh? That's a POKéMON?$"
 
 FuchsiaCity_Text_CitySign::
-	.string "FUCHSIA CITY\n"
-	.string "Behold! It's Passion Pink!$"
+	.string "FUCHSIA CITY\p"
+	.string "Behold! It's TEAM PLASMA's City!$"
 
 FuchsiaCity_Text_SafariZoneSign::
-	.string "POKéMON PARADISE\n"
-	.string "SAFARI ZONE$"
+	.string "POKéMON PARADISE\p"
+	.string "SAFARI ZONE - STILL OPEN$"
 
 FuchsiaCity_Text_SafariGameSign::
 	.string "SAFARI GAME\n"
@@ -181,9 +181,8 @@ FuchsiaCity_Text_SafariZoneOfficeSign::
 	.string "SAFARI ZONE OFFICE$"
 
 FuchsiaCity_Text_GymSign::
-	.string "FUCHSIA CITY POKéMON GYM\n"
-	.string "LEADER: KOGA\l"
-	.string "The Poisonous Ninja Master$"
+	.string "FUCHSIA CITY POKéMON GYM\p"
+	.string "BOSS: GHETSIS - TEAM PLASMA$"
 
 FuchsiaCity_Text_ChanseySign::
 	.string "Name: CHANSEY\n"
@@ -245,8 +244,8 @@ Text_SubstituteTaught::
 	.string "a KANGASKHAN belly pouch…$"
 
 FuchsiaCity_Text_MyFatherIsGymLeader::
-	.string "My father is the GYM LEADER of\n"
-	.string "this town.\p"
-	.string "I'm training to use POISON POKéMON\n"
-	.string "as well as my father.$"
+	.string "My father ran this GYM before\n"
+	.string "TEAM PLASMA came.\p"
+	.string "Now GHETSIS sits on his chair. I'll\n"
+	.string "get it back one day!$"
 

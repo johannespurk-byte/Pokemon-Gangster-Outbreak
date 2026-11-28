@@ -152,8 +152,8 @@ OneIsland_Text_HavePCLinkageWithHoenn::
 	.string "my granddaughter!$"
 
 OneIsland_Text_IslandSign::
-	.string "ONE ISLAND\n"
-	.string "Friends Gather at Knot Island$"
+	.string "ONE ISLAND\p"
+	.string "Friends Gather Here. Gangs Don't.$"
 
 OneIsland_Text_PokemonNetCenterSign::
 	.string "Expanding the POKéMON World!\n"
@@ -164,6 +164,7 @@ OneIsland_Text_ReturnToCinnabar::
 	.string "グレンタウンに　もどりますか？$"
 
 OneIsland_Text_IsntWarmClimateHereGreat::
-	.string "Hi, sight-seeing, are you?\n"
-	.string "Isn't the warm climate here great?$"
+	.string "Sight-seeing, are you?\p"
+	.string "The islands are the last place the\n"
+	.string "gangs haven't taken. Yet.$"
 

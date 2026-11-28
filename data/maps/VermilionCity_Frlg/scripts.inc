@@ -264,9 +264,9 @@ VermilionCity_EventScript_HarborSign::
 	end
 
 VermilionCity_Text_GrimerMultipliesInSludge::
-	.string "We're careful about pollution here.\p"
-	.string "We've heard GRIMER multiplies in\n"
-	.string "toxic sludge.$"
+	.string "ARCHER's ROCKETS dump sludge in\n"
+	.string "the harbor.\p"
+	.string "They say GRIMER multiply in it.$"
 
 VermilionCity_Text_DidYouSeeSSAnneInHarbor::
 	.string "Did you see the S.S. ANNE moored\n"
@@ -279,9 +279,9 @@ VermilionCity_Text_SSAnneHasDepartedForYear::
 
 VermilionCity_Text_BuildingOnThisLand::
 	.string "I'm putting up a building on this\n"
-	.string "plot of land. I own it all.\p"
-	.string "My POKéMON is tamping the land\n"
-	.string "to lay the foundation.$"
+	.string "plot.\p"
+	.string "ARCHER takes a cut, of course.\n"
+	.string "Everybody pays him.$"
 
 VermilionCity_Text_Machop::
 	.string "MACHOP: Guoh! Gogogoh!$"
@@ -290,13 +290,14 @@ VermilionCity_Text_MachopStompingLandFlat::
 	.string "A MACHOP is stomping the land flat.$"
 
 VermilionCity_Text_SSAnneVisitsOnceAYear::
-	.string "The S.S. ANNE is a famous luxury\n"
-	.string "cruise ship.\p"
-	.string "It visits VERMILION once a year.$"
+	.string "The S.S. ANNE is a famous cruise\n"
+	.string "ship.\p"
+	.string "The ROCKETS use it to smuggle\n"
+	.string "POKéMON, they say.$"
 
 VermilionCity_Text_CitySign::
-	.string "VERMILION CITY\n"
-	.string "The Port of Exquisite Sunsets$"
+	.string "VERMILION CITY\p"
+	.string "ROCKET HARBOR$"
 
 VermilionCity_Text_SnorlaxBlockingRoute12::
 	.string "NOTICE!\p"
@@ -307,13 +308,12 @@ VermilionCity_Text_SnorlaxBlockingRoute12::
 	.string "VERMILION POLICE$"
 
 VermilionCity_Text_PokemonFanClubSign::
-	.string "POKéMON FAN CLUB\n"
-	.string "All POKéMON fans welcome!$"
+	.string "POKéMON FAN CLUB\p"
+	.string "No gang colors inside!$"
 
 VermilionCity_Text_GymSign::
-	.string "VERMILION CITY POKéMON GYM\n"
-	.string "LEADER: LT. SURGE\l"
-	.string "The Lightning American!$"
+	.string "VERMILION CITY POKéMON GYM\p"
+	.string "BOSS: ARCHER - TEAM ROCKET$"
 
 VermilionCity_Text_VermilionHarbor::
 	.string "VERMILION HARBOR$"

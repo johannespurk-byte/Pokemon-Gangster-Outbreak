@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Gangster Outbreak: gang-themed texts on the Kanto routes and in Viridian Forest.
+"""Gangster Outbreak: gang-themed texts on routes, in towns, caves, dungeons and on the Sevii Islands.
 
 Trainer texts (intro, defeat, after the battle) are built from templates per trainer class group (kids, toughs,
 swimmers, nerds, posh people, hikers & bird keepers, psychics & channelers, cool trainers) and per region: every
-route belongs to the gang of the nearest city (GANG_OF), so the trainers talk about that gang, its boss and town.
+route, cave and dungeon belongs to the gang of the nearest city (GANG_OF; gyms and the league keep their own), so the trainers talk about that gang, its boss and town.
 The choice of variant is fixed per trainer, so the texts stay the same on every run.
 Signs and other people on the routes get hand-written texts (MANUAL). Functional texts (gifts, tutors, trades,
 day care, gate guards, Bill, the Fishing Guru's brother, the Pokédex aides) are left alone.
@@ -24,6 +24,7 @@ PLASMA = ('TEAM PLASMA', 'GHETSIS', 'FUCHSIA')
 AQUA = ('TEAM AQUA', 'ARCHIE', 'CELADON')
 MAGMA = ('TEAM MAGMA', 'MAXIE', 'CELADON')
 GALACTIC = ('TEAM GALACTIC', 'CYRUS', 'CINNABAR')
+SEVII = ('TEAM ROCKET', 'ARCHER', 'the SEVII ISLANDS')   # the ROCKET remnants hide out on the islands
 
 GANG_OF = {
     'Route1': ROCKET_V, 'Route2': ROCKET_V, 'Route22': ROCKET_V, 'Route23': ROCKET_V, 'ViridianForest': ROCKET_V,
@@ -34,7 +35,14 @@ GANG_OF = {
     'Route13': PLASMA, 'Route14': PLASMA, 'Route15': PLASMA, 'Route19': PLASMA,
     'Route16': AQUA, 'Route17': AQUA, 'Route18': MAGMA,
     'Route20': GALACTIC, 'Route21_North': GALACTIC, 'Route21_South': GALACTIC,
+    # caves, dungeons and other places with trainers
+    'MtMoon': YELL, 'RockTunnel': SKULL, 'PowerPlant': SKULL, 'CeruleanCave': SKULL, 'PokemonTower': ROCKET_V,
+    'SSAnne': ROCKET_A, 'DiglettsCave': ROCKET_A, 'RocketHideout': ROCKET_V, 'SilphCo': ROCKET_V,
+    'UndergroundPath': FLARE, 'SeafoamIslands': PLASMA, 'PokemonMansion': GALACTIC, 'VictoryRoad': ROCKET_V,
+    'OneIsland': SEVII, 'TwoIsland': SEVII, 'ThreeIsland': SEVII, 'FourIsland': SEVII, 'FiveIsland': SEVII,
+    'SixIsland': SEVII, 'SevenIsland': SEVII, 'MtEmber': SEVII,
 }
+SKIP_CLASSES = ('leader', 'elite', 'champion', 'rival', 'boss', 'admin', 'prof', 'pkmn trainer')
 
 # '|' starts a new text box; {G} gang, {B} boss, {T} town
 TEMPLATES = {
@@ -149,6 +157,16 @@ TEMPLATES = {
                   "The spirits say {B} fears you already.",
                   "Leave this place before night falls."],
     },
+    'grunt': {
+        'intro': ["Halt! This is {G} business!", "{B} said nobody gets through. Nobody!",
+                  "You're not one of us. Get lost or get hurt!", "Another crew poking around here? Big mistake!",
+                  "I guard this place for {B}. Prepare yourself!", "Hand over your POKéMON. Orders from {B}!"],
+        'defeat': ["Urgh! Not again!", "I'm gonna be in so much trouble…", "Retreat! Retreat!",
+                   "How can a kid be this strong?!"],
+        'post': ["{B} will deal with you himself.", "Fine, go ahead. You'll see what's waiting for you.",
+                 "I only joined {G} for the money…", "You'd make a great grunt. Ever thought about it?",
+                 "Don't tell {B} I lost to you.", "Word is you're GIOVANNI's new star. Is that true?"],
+    },
     'cool': {
         'intro': ["I trained through the whole outbreak.|Show me what you've got!",
                   "{G} tried to recruit me. I said no.|Wanna know why?",
@@ -168,11 +186,12 @@ TEMPLATES = {
 }
 
 GROUPS = [  # first match on the trainer class wins
+    ('grunt', ('team ',)),
     ('water', ('swimmer', 'fisherman', 'sailor', 'tuber')),
     ('kid', ('youngster', 'bug catcher', 'lass', 'camper', 'picnicker', 'twins', 'sis and bro', 'young couple')),
     ('nerd', ('super nerd', 'gamer', 'engineer', 'scientist', 'juggler', 'maniac')),
-    ('posh', ('beauty', 'gentleman', 'lady', 'painter', 'aroma')),
-    ('outdoor', ('hiker', 'bird keeper', 'ruin')),
+    ('posh', ('beauty', 'gentleman', 'lady', 'painter', 'aroma', 'breeder', 'couple')),
+    ('outdoor', ('hiker', 'bird keeper', 'ruin', 'ranger')),
     ('mystic', ('psychic', 'channeler')),
     ('cool', ('cool', 'ace')),
     ('tough', ('',)),
@@ -230,6 +249,101 @@ MANUAL = {
     ('Route8_WestEntrance', 'ThirstyOnGuardDuty'): "I guard this gate for TEAM FLARE.|Gee, I'm thirsty, though!|Oh, wait there, the road's closed.",
 }
 
+# towns: gym signs, city signs and people in towns, POKéMON CENTERS and MARTS
+MANUAL.update({
+    ('ViridianCity', 'GymSign'): "VIRIDIAN CITY POKéMON GYM|BOSS: GIOVANNI - TEAM ROCKET HQ",
+    ('ViridianCity', 'CitySign'): "VIRIDIAN CITY|GIOVANNI's City. Keep Walking.",
+    ('ViridianCity', 'GymClosedWonderWhoLeaderIs'): "The GYM is TEAM ROCKET's HQ now.|Only GIOVANNI's people go in there.",
+    ('ViridianCity', 'GoShoppingInPewterOccasionally'): "I go shopping in PEWTER sometimes.|TEAM YELL makes noise all night, but at least they don't steal.",
+    ('ViridianCity', 'CatchMonsForEasierBattles'): "TRAINER TIPS|Catch POKéMON and build your crew. The bigger it is, the safer you are.",
+    ('ViridianCity_Mart', 'ShopDoesGoodBusinessInAntidotes'): "This machine sells a lot of ANTIDOTES. The gangs love poison POKéMON.",
+    ('ViridianCity_Mart', 'GotToBuySomePotions'): "I've got to buy POTIONS.|You never know when the next gang fight starts.",
+    ('ViridianCity_PokemonCenter_1F', 'PokeCenterInEveryTown'): "There's a HEAL-BOT in every town ahead.|They're free, so heal up before every fight.",
+    ('ViridianCity_PokemonCenter_1F', 'PokeCentersHealMons'): "The nurses fled, but the HEAL-BOTS stayed.|They fix any POKéMON. And they never ask questions.",
+    ('PewterCity', 'GymSign'): "PEWTER CITY POKéMON GYM|BOSS: PIERS - TEAM YELL",
+    ('PewterCity', 'CitySign'): "PEWTER CITY|A Stone Gray City. Loud All Night.",
+    ('PewterCity', 'BrockOnlySeriousTrainerHere'): "TEAM YELL took over the GYM.|PIERS sings on the roof every night. Everybody has to cheer!",
+    ('PewterCity', 'BrocksLookingForChallengersFollowMe'): "You're a TRAINER, right?|PIERS is looking for new challengers. Follow me!",
+    ('PewterCity', 'GoTakeOnBrock'): "If you've got the guts, go take on PIERS!",
+    ('PewterCity', 'CallPoliceIfInfoOnThieves'): "NOTICE!|Thieves have been stealing fossils from MT. MOON.|The PEWTER POLICE are gone. Good luck.",
+    ('PewterCity', 'WerentThoseFossilsAmazing'): "The fossils in the MUSEUM are fake now. The real ones went to the black market.",
+    ('PewterCity', 'ThisIsTheMuseum'): "This is the MUSEUM.|TEAM YELL wants money at the door, but it's worth it. See you!",
+    ('PewterCity', 'SprayingRepelToKeepWildMonsOut'): "I'm spraying REPEL to keep wild POKéMON out of my garden. And TEAM YELL too!",
+    ('PewterCity_Mart', 'GoodThingsIfRaiseMonsDiligently'): "Good things happen if you raise POKéMON well.|Even the weak ones can scare a gang if you train them.",
+    ('PewterCity_PokemonCenter_1F', 'TeamRocketMtMoonImOnPhone'): "What!?|TEAM YELL is partying in MT. MOON again?|I'm on the phone! Scram!",
+    ('CeruleanCity', 'GymSign'): "CERULEAN CITY POKéMON GYM|BOSS: GUZMA - TEAM SKULL",
+    ('CeruleanCity', 'CitySign'): "CERULEAN CITY|A Mysterious Blue Aura… and TEAM SKULL",
+    ('CeruleanCity', 'TrainerLifeIsToughIsntIt'): "You're a TRAINER, too?|Since TEAM SKULL came, it's a tough life, isn't it?",
+    ('CeruleanCity', 'PeopleHereWereRobbed'): "The people here were robbed.|The ROCKETS broke in, and TEAM SKULL took the rest!|Even the POLICE gave up.",
+    ('CeruleanCity', 'WantBrightRedBicycle'): "I want a bright red bicycle.|But TEAM SKULL would just steal it.",
+    ('CeruleanCity', 'HardToControlMonsObedience'): "No! That's wrong!|SLOWBRO only listens to tough bosses. I guess I'm not one…",
+    ('CeruleanCity_Mart', 'DoYouKnowAboutRareCandy'): "Do you know about RARE CANDY?|Loot bags have them sometimes. They make POKéMON grow fast!",
+    ('CeruleanCity_PokemonCenter_1F', 'BillDoesWhateverForRareMons'): "That BILL!|He hides from the gangs in his cottage north of town. Smart guy.",
+    ('CeruleanCity_PokemonCenter_1F', 'BillCollectsRareMons'): "BILL has lots of rare POKéMON. TEAM SKULL would love to steal them!",
+    ('VermilionCity', 'GymSign'): "VERMILION CITY POKéMON GYM|BOSS: ARCHER - TEAM ROCKET",
+    ('VermilionCity', 'CitySign'): "VERMILION CITY|ROCKET HARBOR",
+    ('VermilionCity', 'GrimerMultipliesInSludge'): "ARCHER's ROCKETS dump sludge in the harbor.|They say GRIMER multiply in it.",
+    ('VermilionCity', 'BuildingOnThisLand'): "I'm putting up a building on this plot.|ARCHER takes a cut, of course. Everybody pays him.",
+    ('VermilionCity', 'SSAnneVisitsOnceAYear'): "The S.S. ANNE is a famous cruise ship.|The ROCKETS use it to smuggle POKéMON, they say.",
+    ('VermilionCity', 'PokemonFanClubSign'): "POKéMON FAN CLUB|No gang colors inside!",
+    ('VermilionCity_Mart', 'TeamRocketAreWickedPeople'): "TEAM ROCKET runs the harbor.|They ship rare POKéMON out every night. Don't ask me how I know.",
+    ('VermilionCity_Mart', 'MonsGoodOrBadDependingOnTrainer'): "POKéMON aren't good or bad. It depends on the gang they run with.",
+    ('VermilionCity_PokemonCenter_1F', 'PoisonedMonFaintedWhileWalking'): "My POKéMON got poisoned in a street fight!|It fainted on the way here!",
+    ('LavenderTown', 'TownSign'): "LAVENDER TOWN|Too Quiet for the Gangs",
+    ('LavenderTown', 'TownKnownAsMonGraveSite'): "This town is the grave site of POKéMON.|Even the gangs leave it alone. Mostly.",
+    ('LavenderTown_Mart', 'DidYouBuyRevives'): "Did you buy REVIVES?|Out here, you'll need every single one.",
+    ('CeladonCity', 'GymSign'): "CELADON CITY POKéMON GYM|BOSSES: ARCHIE and MAXIE - AQUA and MAGMA",
+    ('CeladonCity', 'CitySign'): "CELADON CITY|Half Blue, Half Red. Pick a Side.",
+    ('CeladonCity', 'GymIsGreatFullOfWomen'): "TEAM AQUA and TEAM MAGMA share the GYM.|They fight about it every single day!",
+    ('CeladonCity', 'GameCornerIsBadForCitysImage'): "CELADON used to be beautiful.|Now it's AQUA on one side, MAGMA on the other, and ROCKET slots in the middle.",
+    ('CeladonCity', 'KeepOutOfTeamRocketsWay'): "Keep out of everybody's way here. AQUA, MAGMA, ROCKET… pick one and pray.",
+    ('CeladonCity', 'GetLostOrIllPunchYou'): "What are you staring at?|I'm MAGMA. Get lost, or I'll punch you.",
+    ('CeladonCity', 'DeptStoreSign'): "Find what's left at the CELADON DEPT. STORE!",
+    ('CeladonCity', 'GameCornerSign'): "ROCKET GAME CORNER|Everybody Loses. We Win.",
+    ('CeladonCity_PokemonCenter_1F', 'RodeHereFromFuchsia'): "I rode up CYCLING ROAD from FUCHSIA.|TEAM AQUA chased me the whole way!",
+    ('FuchsiaCity', 'GymSign'): "FUCHSIA CITY POKéMON GYM|BOSS: GHETSIS - TEAM PLASMA",
+    ('FuchsiaCity', 'CitySign'): "FUCHSIA CITY|Behold! It's TEAM PLASMA's City!",
+    ('FuchsiaCity', 'DidYouTrySafariGame'): "Did you try the SAFARI GAME?|Go before TEAM PLASMA “frees” all the POKéMON.",
+    ('FuchsiaCity', 'SafariZoneSign'): "POKéMON PARADISE|SAFARI ZONE - STILL OPEN",
+    ('FuchsiaCity', 'MyFatherIsGymLeader'): "My father ran this GYM before TEAM PLASMA came.|Now GHETSIS sits on his chair. I'll get it back one day!",
+    ('FuchsiaCity_Mart', 'DidYouTryXSpeed'): "Did you try X SPEED?|Good for running away from TEAM PLASMA, too.",
+    ('FuchsiaCity_PokemonCenter_1F', 'PokemonLeagueWestOfViridian'): "There's a narrow trail west of VIRIDIAN.|It leads to the POKéMON LEAGUE. Only the strongest boss can reach it.",
+    ('SaffronCity', 'GymSign'): "SAFFRON CITY POKéMON GYM|BOSS: LYSANDRE - TEAM FLARE",
+    ('SaffronCity', 'CitySign'): "SAFFRON CITY|TEAM FLARE's Shining Golden City",
+    ('SaffronCity', 'BossTakeTownForTeamRocket'): "BOSS says SILPH belongs to TEAM ROCKET!|TEAM FLARE can keep the rest of the city.",
+    ('SaffronCity', 'SaffronBelongsToTeamRocket'): "SILPH CO. belongs to TEAM ROCKET!|Tell those FLARE snobs!",
+    ('SaffronCity', 'PeopleComingBackToSaffron'): "People fled when the ROCKETS came.|Now only TEAM FLARE's fashion is left to fear.",
+    ('SaffronCity', 'HowCanClubNotRecognizeLance'): "This FAN CLUB…|They all love PIERS and LYSANDRE. Nobody has a clue!",
+    ('SaffronCity_PokemonCenter_1F', 'GreatIfEliteFourCameBeatRockets'): "Sigh…|Wouldn't it be great if someone stomped every gang in KANTO?",
+    ('SaffronCity_PokemonCenter_1F', 'SilphCoVictimOfFame'): "SILPH CO. is famous everywhere.|That's why every gang wants it.",
+    ('CinnabarIsland', 'GymSign'): "CINNABAR ISLAND POKéMON GYM|BOSS: CYRUS - TEAM GALACTIC",
+    ('CinnabarIsland', 'IslandSign'): "CINNABAR ISLAND|TEAM GALACTIC's Island of Science",
+    ('CinnabarIsland', 'BlaineLivedHereSinceBeforeLab'): "TEAM GALACTIC took the GYM and the LAB.|CYRUS wants to build a new world from here.",
+    ('CinnabarIsland', 'ScientistsExperimentInMansion'): "GALACTIC scientists run experiments in the burned-out MANSION.|Nobody who goes in comes out the same.",
+    ('CinnabarIsland_Mart', 'ExtraItemsNeverHurt'): "Extra items never hurt.|Especially on an island full of GALACTIC grunts.",
+})
+
+
+# SEVII ISLANDS: the last places the gangs haven't taken (only TEAM ROCKET remnants and the bikers on THREE ISLAND)
+MANUAL.update({
+    ('OneIsland', 'IslandSign'): "ONE ISLAND|Friends Gather Here. Gangs Don't.",
+    ('OneIsland', 'IsntWarmClimateHereGreat'): "Sight-seeing, are you?|The islands are the last place the gangs haven't taken. Yet.",
+    ('TwoIsland', 'IslandSign'): "TWO ISLAND|A Quiet Island. For Now.",
+    ('ThreeIsland', 'IslandSign'): "THREE ISLAND|Kin Island. Watch Out for Bikers.",
+    ('FourIsland', 'IslandSign'): "FOUR ISLAND|The Warm, Blue, Floe Island",
+    ('FiveIsland', 'IslandSign'): "FIVE ISLAND|Chrono Island. Strange Ships at Night.",
+    ('FiveIsland', 'BeenGettingBusierAroundHere'): "It's been getting busier around here.|Strange ships land at night. ROCKET ships, if you ask me.",
+    ('SixIsland', 'IslandSign'): "SIX ISLAND|Old and Wise. Nobody Bothers Us.",
+    ('SixIsland', 'SkyAtNightIsFantastic'): "Far from the burning cities, the sky at night is fantastic.",
+    ('SevenIsland', 'IslandSign'): "SEVEN ISLAND|The Last Island Before the End of the World",
+    ('SevenIsland', 'IslandVirtuallyUntouched'): "This island is untouched. No gangs, no fires.|Let's keep it that way.",
+})
+
+
+# texts with hints the player needs (keys, passwords, teleport tiles, the SILPH SCOPE …) keep their wording
+ORIG_REF = 'f93f63af'   # last commit before this tool touched any texts
+HINTS = re.compile(r'KEY|SCOPE|ELEVATOR|LIFT|PASSWORD|TELEPORT|HINT|TILE|SWITCH|BASEMENT|SECRET|FLUTE|GOLD TEETH|'
+                   r'STRENGTH|SURF|CUT|FLASH|BOULDER|HOLE|STAIRS|LADDER|TICKET|PASS\b', re.I)
 MAX_WIDTH = 180   # pixels per line (the message box fits about 200)
 
 
@@ -273,6 +387,13 @@ def wrap(text):
     return out
 
 
+def original_texts(path):
+    import subprocess
+    rel = os.path.relpath(path, ROOT)
+    src = subprocess.run(['git', 'show', '%s:%s' % (ORIG_REF, rel)], cwd=ROOT, capture_output=True, text=True).stdout
+    return {l: ''.join(re.findall(r'\.string "(.*)"', b)) for l, b in re.findall(r'^(\w+)::?\n((?:\t\.string .*\n)+)', src, re.M)}
+
+
 def replace(s, label, lines):
     m = re.search(r'(^%s::?\n)((?:\t\.string .*\n)+)' % re.escape(label), s, re.M)
     if not m:
@@ -305,20 +426,22 @@ def main():
     classes = trainer_classes()
     all_battles = battles()
     total = 0
-    files = sorted(glob.glob(os.path.join(ROOT, 'data/maps/Route*_Frlg/scripts.inc')) +
-                   [os.path.join(ROOT, 'data/maps/ViridianForest_Frlg/scripts.inc')])
+    files = sorted(glob.glob(os.path.join(ROOT, 'data/maps/*_Frlg/scripts.inc')))
     for path in files:
         mapname = path.split('/')[-2].replace('_Frlg', '')
         s = open(path).read()
+        orig = original_texts(path)
         changed = 0
-        gang = GANG_OF.get(mapname)
+        gang = GANG_OF.get(mapname) or next((g for k, g in GANG_OF.items() if mapname.startswith(k + '_')), None)
+        if 'Gym' in mapname or mapname.startswith('PokemonLeague'):
+            gang = None   # gym and league trainers have their own texts
         if gang:
             used = {}
             prefix = mapname + '_Text_'
             for trainer, intro, defeat in all_battles:
                 if not intro.startswith(prefix) or 'Rematch' in intro or not intro.endswith('Intro'):
                     continue
-                if 'RIVAL' in trainer:
+                if 'RIVAL' in trainer or any(k in classes.get(trainer, '') for k in SKIP_CLASSES):
                     continue
                 grp = group_of(classes.get(trainer, ''))
                 base = intro[:-len('Intro')]
@@ -329,6 +452,8 @@ def main():
                 g, b, t = gang
                 for kind, label, shift in (('intro', intro, 0), ('defeat', defeat, 0), ('post', post, 0),
                                            ('intro', base + 'RematchIntro', 1)):
+                    if HINTS.search(orig.get(label, '')):
+                        continue   # keep gameplay hints
                     pool = TEMPLATES[grp][kind]
                     text = pool[(h + n + shift) % len(pool)].format(G=g, B=b, T=t)
                     s, ok = replace(s, label, wrap(text))

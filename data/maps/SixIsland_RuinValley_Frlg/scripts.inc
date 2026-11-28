@@ -69,7 +69,7 @@ SixIsland_RuinValley_Text_StanlyIntro::
 	.string "still unsolved in this world.$"
 
 SixIsland_RuinValley_Text_StanlyDefeat::
-	.string "Hmm…$"
+	.string "My theory… failed!$"
 
 SixIsland_RuinValley_Text_StanlyPostBattle::
 	.string "I suggest to you that you, too,\n"
@@ -77,54 +77,48 @@ SixIsland_RuinValley_Text_StanlyPostBattle::
 	.string "mysteries of our world once a day.$"
 
 SixIsland_RuinValley_Text_FosterIntro::
-	.string "I'm curious, what compelled you to\n"
-	.string "come here?$"
+	.string "I hacked a PC of TEAM ROCKET once.\p"
+	.string "Now I hide out here!$"
 
 SixIsland_RuinValley_Text_FosterDefeat::
-	.string "It's been so long since I battled,\n"
-	.string "my instincts are off.$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 SixIsland_RuinValley_Text_FosterPostBattle::
-	.string "There are several ruins on the\n"
-	.string "SEVII ISLANDS.\p"
-	.string "The majority of them date back\n"
-	.string "a long way.$"
+	.string "ARCHER pays well for smart people.\p"
+	.string "Just saying.$"
 
 SixIsland_RuinValley_Text_LarryIntro::
-	.string "It's been said that there are\n"
-	.string "mysterious stones on this island.\p"
-	.string "I suspect it has something to do\n"
-	.string "with the ruins here.$"
+	.string "My calculations say you lose.\p"
+	.string "Let's test it!$"
 
 SixIsland_RuinValley_Text_LarryDefeat::
-	.string "Oh, interesting.$"
+	.string "Fine… I'll recalculate.$"
 
 SixIsland_RuinValley_Text_LarryPostBattle::
-	.string "Those ruins over there…\p"
-	.string "I haven't had any luck in finding\n"
-	.string "how I can get inside.$"
+	.string "I'll sell your battle data to TEAM\n"
+	.string "ROCKET.\p"
+	.string "Kidding! Mostly.$"
 
 SixIsland_RuinValley_Text_DarylIntro::
-	.string "A battle with you, so high up!$"
+	.string "My birds see every gang that\n"
+	.string "moves.\p"
+	.string "And they saw you!$"
 
 SixIsland_RuinValley_Text_DarylDefeat::
-	.string "Oh, the heartbreak of losing so\n"
-	.string "easily to you!$"
+	.string "Heh, you're tough as stone.$"
 
 SixIsland_RuinValley_Text_DarylPostBattle::
-	.string "Experience the joy of climbing!$"
+	.string "The wild POKéMON are the only\n"
+	.string "honest ones left.$"
 
 SixIsland_RuinValley_Text_HectorIntro::
-	.string "I'm pretty familiar with the land\n"
-	.string "around these parts.$"
+	.string "I sell info to every gang.\p"
+	.string "Info on you is worth a lot!$"
 
 SixIsland_RuinValley_Text_HectorDefeat::
-	.string "You don't need to be so pushy.\n"
-	.string "I'll be happy to tell you.$"
+	.string "Error! That wasn't in my data!$"
 
 SixIsland_RuinValley_Text_HectorPostBattle::
-	.string "The door to the ruins…\n"
-	.string "It has these strange patterns\l"
-	.string "engraved on the outside.\p"
-	.string "I don't know what they mean,\n"
-	.string "though.$"
+	.string "Data says you'll beat ARCHER.\p"
+	.string "Probably.$"

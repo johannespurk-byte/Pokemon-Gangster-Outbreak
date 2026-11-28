@@ -36,33 +36,33 @@ SilphCo_2F_EventScript_Grunt2::
 	end
 
 SilphCo_2F_Text_ConnorIntro::
-	.string "Help!\n"
-	.string "I'm a SILPH employee.$"
+	.string "Science doesn't stop for a gang\n"
+	.string "war!$"
 
 SilphCo_2F_Text_ConnorDefeat::
-	.string "How did you know\n"
-	.string "I was a ROCKET?$"
+	.string "Fine… I'll recalculate.$"
 
 SilphCo_2F_Text_ConnorPostBattle::
-	.string "I work for both SILPH and TEAM\n"
-	.string "ROCKET.$"
+	.string "Knowledge is the only thing they\n"
+	.string "can't steal.$"
 
 SilphCo_2F_Text_JerryIntro::
-	.string "It's off-limits here!\n"
-	.string "Go home!$"
+	.string "I built a radar for gang\n"
+	.string "movements. It beeped at you!$"
 
 SilphCo_2F_Text_JerryDefeat::
-	.string "You're good.$"
+	.string "Error! That wasn't in my data!$"
 
 SilphCo_2F_Text_JerryPostBattle::
-	.string "Can you solve the maze in here?\n"
-	.string "It's not easy, I tell you!$"
+	.string "Every gang uses my gadgets.\n"
+	.string "Nobody pays.$"
 
 SilphCo_2F_Text_Grunt1Intro::
-	.string "No kids are allowed in here!$"
+	.string "You're not one of us. Get lost or\n"
+	.string "get hurt!$"
 
 SilphCo_2F_Text_Grunt1Defeat::
-	.string "Tough!$"
+	.string "Retreat! Retreat!$"
 
 SilphCo_2F_Text_Grunt1PostBattle::
 	.string "Diamond-shaped tiles are teleport\n"
@@ -71,15 +71,15 @@ SilphCo_2F_Text_Grunt1PostBattle::
 	.string "high-tech building.$"
 
 SilphCo_2F_Text_Grunt2Intro::
-	.string "Hey, kid!\n"
-	.string "What are you wandering here for?$"
+	.string "Another crew poking around here?\n"
+	.string "Big mistake!$"
 
 SilphCo_2F_Text_Grunt2Defeat::
-	.string "I goofed!$"
+	.string "How can a kid be this strong?!$"
 
 SilphCo_2F_Text_Grunt2PostBattle::
-	.string "SILPH CO. will be associated with\n"
-	.string "TEAM ROCKET!$"
+	.string "You'd make a great grunt. Ever\n"
+	.string "thought about it?$"
 
 Text_ThunderWaveTeach::
 	.string "Eeek!\n"

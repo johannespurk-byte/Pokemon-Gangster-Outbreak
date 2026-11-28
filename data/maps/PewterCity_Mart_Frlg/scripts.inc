@@ -39,8 +39,8 @@ PewterCity_Mart_Text_BoughtWeirdFishFromShadyGuy::
 	.string "It's totally weak and it cost ¥500!$"
 
 PewterCity_Mart_Text_GoodThingsIfRaiseMonsDiligently::
-	.string "Good things can happen if you raise\n"
-	.string "POKéMON diligently.\p"
-	.string "Even the weak ones can surprise\n"
-	.string "you if you don't give up on them.$"
+	.string "Good things happen if you raise\n"
+	.string "POKéMON well.\p"
+	.string "Even the weak ones can scare a\n"
+	.string "gang if you train them.$"
 

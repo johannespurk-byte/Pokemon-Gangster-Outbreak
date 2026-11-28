@@ -197,27 +197,25 @@ SilphCo_11F_Text_GiovanniPostBattle::
 	.string "I must go, but I shall return!$"
 
 SilphCo_11F_Text_Grunt2Intro::
-	.string "Stop right there!\n"
-	.string "Don't you move!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from GIOVANNI!$"
 
 SilphCo_11F_Text_Grunt2Defeat::
-	.string "Don't…\n"
-	.string "Please!$"
+	.string "I'm gonna be in so much trouble…$"
 
 SilphCo_11F_Text_Grunt2PostBattle::
-	.string "So, you want to see my BOSS?$"
+	.string "Word is you're GIOVANNI's new\n"
+	.string "star. Is that true?$"
 
 SilphCo_11F_Text_Grunt1Intro::
-	.string "Halt! Do you have an appointment\n"
-	.string "with my BOSS?$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 SilphCo_11F_Text_Grunt1Defeat::
-	.string "Gaah!\n"
-	.string "Demolished!$"
+	.string "Urgh! Not again!$"
 
 SilphCo_11F_Text_Grunt1PostBattle::
-	.string "Watch your step…\n"
-	.string "My BOSS likes his POKéMON tough!$"
+	.string "Don't tell GIOVANNI I lost to you.$"
 
 SilphCo_11F_Text_MonitorHasMonsOnIt::
 	.string "The monitor has POKéMON on it!$"

@@ -7,13 +7,13 @@ SSAnne_B1F_Room3_EventScript_Dylan::
 	end
 
 SSAnne_B1F_Room3_Text_DylanIntro::
-	.string "I like feisty kids like you!$"
+	.string "I patrol these waves for TEAM\n"
+	.string "ROCKET!$"
 
 SSAnne_B1F_Room3_Text_DylanDefeat::
-	.string "Argh!\n"
-	.string "Lost it!$"
+	.string "Sunk! Totally sunk!$"
 
 SSAnne_B1F_Room3_Text_DylanPostBattle::
-	.string "Sea POKéMON live in deep water.\n"
-	.string "You'll need a ROD to fish them up!$"
+	.string "Ships from VERMILION pass here\n"
+	.string "every night.$"
 

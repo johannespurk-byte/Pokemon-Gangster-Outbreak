@@ -46,35 +46,35 @@ PokemonTower_6F_EventScript_Jennifer::
 	end
 
 PokemonTower_6F_Text_AngelicaIntro::
-	.string "Give…me…\n"
-	.string "blood…$"
+	.string "Your future is dark.\p"
+	.string "Let me show you!$"
 
 PokemonTower_6F_Text_AngelicaDefeat::
-	.string "Groan!$"
+	.string "The spirits abandoned me…$"
 
 PokemonTower_6F_Text_AngelicaPostBattle::
-	.string "I feel anemic and weak…$"
+	.string "Your aura is strong.\p"
+	.string "Like a true boss.$"
 
 PokemonTower_6F_Text_EmiliaIntro::
-	.string "Urff…\n"
-	.string "Kwaah!$"
+	.string "The outbreak woke the ghosts.\p"
+	.string "And me!$"
 
 PokemonTower_6F_Text_EmiliaDefeat::
-	.string "Something fell out!$"
+	.string "I did not foresee this!$"
 
 PokemonTower_6F_Text_EmiliaPostBattle::
-	.string "My hair didn't fall out!\n"
-	.string "It was a malevolent spirit!$"
+	.string "Beware the road to VIRIDIAN.$"
 
 PokemonTower_6F_Text_JenniferIntro::
-	.string "Ke…ke…ke…\n"
-	.string "ke…ke…ke!$"
+	.string "The ghosts told me you'd come.$"
 
 PokemonTower_6F_Text_JenniferDefeat::
-	.string "Keee!$"
+	.string "The visions… were wrong!$"
 
 PokemonTower_6F_Text_JenniferPostBattle::
-	.string "What's going on here?$"
+	.string "The spirits say GIOVANNI fears\n"
+	.string "you already.$"
 
 PokemonTower_6F_Text_BeGoneIntruders::
 	.string "Be gone…\n"

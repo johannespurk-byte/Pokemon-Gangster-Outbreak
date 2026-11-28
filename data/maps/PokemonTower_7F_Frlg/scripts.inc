@@ -231,40 +231,36 @@ PokemonTower_7F_Movement_Grunt3ExitLeft::
 	step_end
 
 PokemonTower_7F_Text_Grunt1Intro::
-	.string "What do you want?\n"
-	.string "Why are you here?$"
+	.string "You're not one of us. Get lost or\n"
+	.string "get hurt!$"
 
 PokemonTower_7F_Text_Grunt1Defeat::
-	.string "I give up!$"
+	.string "Urgh! Not again!$"
 
 PokemonTower_7F_Text_Grunt1PostBattle::
-	.string "I'm not going to forget this!$"
+	.string "I only joined TEAM ROCKET for the\n"
+	.string "money…$"
 
 PokemonTower_7F_Text_Grunt2Intro::
-	.string "This old guy marched right up to\n"
-	.string "our HIDEOUT.\p"
-	.string "Then, he starts ranting about how\n"
-	.string "TEAM ROCKET's abusing POKéMON.\p"
-	.string "So, we're just talking it over as\n"
-	.string "adults.$"
+	.string "Another crew poking around here?\n"
+	.string "Big mistake!$"
 
 PokemonTower_7F_Text_Grunt2Defeat::
-	.string "Please!\n"
-	.string "No more!$"
+	.string "I'm gonna be in so much trouble…$"
 
 PokemonTower_7F_Text_Grunt2PostBattle::
-	.string "POKéMON are only good for making\n"
-	.string "money. Why not use them?\p"
-	.string "You stay out of our business!$"
+	.string "You'd make a great grunt. Ever\n"
+	.string "thought about it?$"
 
 PokemonTower_7F_Text_Grunt3Intro::
-	.string "You're not saving anyone, kid!$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 PokemonTower_7F_Text_Grunt3Defeat::
-	.string "Don't fight us ROCKETS!$"
+	.string "Retreat! Retreat!$"
 
 PokemonTower_7F_Text_Grunt3PostBattle::
-	.string "You're not getting away with this!$"
+	.string "Don't tell GIOVANNI I lost to you.$"
 
 PokemonTower_7F_Text_MrFujiThankYouFollowMe::
 	.string "MR. FUJI: Heh?\n"

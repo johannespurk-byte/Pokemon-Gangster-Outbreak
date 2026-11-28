@@ -17,38 +17,33 @@ PokemonTower_3F_EventScript_Hope::
 	end
 
 PokemonTower_3F_Text_HopeIntro::
-	.string "Urrg… Awaa…\n"
-	.string "Huhu… Graa…$"
+	.string "The ghosts told me you'd come.$"
 
 PokemonTower_3F_Text_HopeDefeat::
-	.string "Hwa!\n"
-	.string "I'm saved!$"
+	.string "The visions… were wrong!$"
 
 PokemonTower_3F_Text_HopePostBattle::
 	.string "The ghosts can be identified by\n"
 	.string "the SILPH SCOPE.$"
 
 PokemonTower_3F_Text_CarlyIntro::
-	.string "Kekeke…\n"
-	.string "Kwaaah!$"
+	.string "The outbreak woke the ghosts.\p"
+	.string "And me!$"
 
 PokemonTower_3F_Text_CarlyDefeat::
-	.string "Hmm?\n"
-	.string "What am I doing?$"
+	.string "I did not foresee this!$"
 
 PokemonTower_3F_Text_CarlyPostBattle::
-	.string "Sorry!\n"
-	.string "I was possessed!$"
+	.string "Beware the road to VIRIDIAN.$"
 
 PokemonTower_3F_Text_PatriciaIntro::
-	.string "Be gone!\n"
-	.string "Malevolent spirit!$"
+	.string "Your future is dark.\p"
+	.string "Let me show you!$"
 
 PokemonTower_3F_Text_PatriciaDefeat::
-	.string "Whew!\n"
-	.string "The spirit left!$"
+	.string "The spirits abandoned me…$"
 
 PokemonTower_3F_Text_PatriciaPostBattle::
-	.string "The others above…\n"
-	.string "They must have been possessed.$"
+	.string "Your aura is strong.\p"
+	.string "Like a true boss.$"
 

@@ -46,10 +46,9 @@ PewterCity_PokemonCenter_1F_EventScript_GBAKid2::
 
 PewterCity_PokemonCenter_1F_Text_TeamRocketMtMoonImOnPhone::
 	.string "What!?\p"
-	.string "TEAM ROCKET is at MT. MOON?\n"
-	.string "Huh?\p"
-	.string "I'm on the phone!\n"
-	.string "Scram!$"
+	.string "TEAM YELL is partying in MT. MOON\n"
+	.string "again?\p"
+	.string "I'm on the phone! Scram!$"
 
 PewterCity_PokemonCenter_1F_Text_Jigglypuff::
 	.string "JIGGLYPUFF: Puu pupuu!$"

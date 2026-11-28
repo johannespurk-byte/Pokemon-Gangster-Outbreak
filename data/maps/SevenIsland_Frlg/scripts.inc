@@ -38,8 +38,9 @@ Text_SwordsDanceTaught::
 	.string "stronger and stronger, eh?$"
 
 SevenIsland_Text_IslandSign::
-	.string "SEVEN ISLAND\n"
-	.string "Quest Island of Infinity$"
+	.string "SEVEN ISLAND\p"
+	.string "The Last Island Before the End of\n"
+	.string "the World$"
 
 SevenIsland_Text_IslandsMadeInSevenDays::
 	.string "These islands are called the SEVII\n"
@@ -51,8 +52,7 @@ SevenIsland_Text_IslandsMadeInSevenDays::
 	.string "have been made in seven days.$"
 
 SevenIsland_Text_IslandVirtuallyUntouched::
-	.string "This island has been left virtually\n"
-	.string "untouched in its natural state.\p"
-	.string "It could be a little difficult to\n"
-	.string "hike around because of that.$"
+	.string "This island is untouched. No\n"
+	.string "gangs, no fires.\p"
+	.string "Let's keep it that way.$"
 

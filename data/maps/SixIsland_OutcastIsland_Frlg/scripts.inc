@@ -7,67 +7,59 @@ SixIsland_OutcastIsland_EventScript_Rocket::
 	end
 
 SixIsland_OutcastIsland_Text_RocketIntro::
-	.string "There're no rare POKéMON around\n"
-	.string "these parts! Not a one!\p"
-	.string "That burns me up, man.\n"
-	.string "I'll take it out on you!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from ARCHER!$"
 
 SixIsland_OutcastIsland_Text_RocketDefeat::
-	.string "…Huh?$"
+	.string "I'm gonna be in so much trouble…$"
 
 SixIsland_OutcastIsland_Text_RocketPostBattle::
-	.string "So listen, you haven't seen any\n"
-	.string "rare POKéMON, have you?$"
+	.string "Word is you're GIOVANNI's new\n"
+	.string "star. Is that true?$"
 
 SixIsland_OutcastIsland_Text_TylorIntro::
-	.string "I'm having no luck at all.\n"
-	.string "A battle'd be a change of pace!$"
+	.string "I patrol these waves for TEAM\n"
+	.string "ROCKET!$"
 
 SixIsland_OutcastIsland_Text_TylorDefeat::
-	.string "Nope, no luck at all…$"
+	.string "Sunk! Totally sunk!$"
 
 SixIsland_OutcastIsland_Text_TylorPostBattle::
-	.string "I can't very well go home without\n"
-	.string "catching something, though.$"
+	.string "Ships from the SEVII ISLANDS pass\n"
+	.string "here every night.$"
 
 SixIsland_OutcastIsland_Text_MymoIntro::
-	.string "Gasp… Gasp…\p"
-	.string "I swam here from SIX ISLE PORT\n"
-	.string "in one go.$"
+	.string "TEAM ROCKET took the docks, so I\n"
+	.string "swim my own routes!$"
 
 SixIsland_OutcastIsland_Text_MymoDefeat::
-	.string "Gasp…\n"
-	.string "Gasp…$"
+	.string "The tide turned on me…$"
 
 SixIsland_OutcastIsland_Text_MymoPostBattle::
-	.string "I'm only at the halfway point…\n"
-	.string "I'm beat…$"
+	.string "Even TEAM ROCKET can't control\n"
+	.string "the sea.$"
 
 SixIsland_OutcastIsland_Text_NicoleIntro::
-	.string "It's not so easy sending POKéMON\n"
-	.string "out while swimming, you know?$"
+	.string "The sea doesn't care about gangs.\p"
+	.string "But I do!$"
 
 SixIsland_OutcastIsland_Text_NicoleDefeat::
-	.string "I didn't lose to you at swimming.\n"
-	.string "This doesn't bother me.$"
+	.string "Gah! Swallowed water!$"
 
 SixIsland_OutcastIsland_Text_NicolePostBattle::
-	.string "Are you headed for the island up\n"
-	.string "past here?\p"
-	.string "I didn't see anything interesting\n"
-	.string "there.$"
+	.string "Smugglers use these waters at\n"
+	.string "night. Stay sharp.$"
 
 SixIsland_OutcastIsland_Text_AvaIntro::
-	.string "AVA: Let's have a two-on-two\n"
-	.string "marine battle!$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 SixIsland_OutcastIsland_Text_AvaDefeat::
-	.string "AVA: Oh, you're amazing!\n"
-	.string "Even better, you're on your own!$"
+	.string "Aww… There goes my lunch money.$"
 
 SixIsland_OutcastIsland_Text_AvaPostBattle::
-	.string "AVA: You know, I do prefer the\n"
-	.string "sea over any pool.$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 SixIsland_OutcastIsland_Text_AvaNotEnoughMons::
 	.string "AVA: You're challenging us to\n"
@@ -76,16 +68,16 @@ SixIsland_OutcastIsland_Text_AvaNotEnoughMons::
 	.string "if you want to do that.$"
 
 SixIsland_OutcastIsland_Text_GebIntro::
-	.string "GEB: Big Sister, help!\n"
-	.string "Please battle with me!$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 SixIsland_OutcastIsland_Text_GebDefeat::
-	.string "GEB: Wow, Big Sister, this person's\n"
-	.string "really good!$"
+	.string "Okay, okay! You win!$"
 
 SixIsland_OutcastIsland_Text_GebPostBattle::
-	.string "GEB: I'm hanging onto my sister\n"
-	.string "because I can't touch the bottom.$"
+	.string "The road to the SEVII ISLANDS\n"
+	.string "isn't safe.\p"
+	.string "Watch out!$"
 
 SixIsland_OutcastIsland_Text_GebNotEnoughMons::
 	.string "GEB: Please battle against me and\n"

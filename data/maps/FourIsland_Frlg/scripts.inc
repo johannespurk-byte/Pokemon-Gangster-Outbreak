@@ -159,7 +159,7 @@ FourIsland_EventScript_LoreleisHouseSign::
 	end
 
 FourIsland_Text_IslandSign::
-	.string "FOUR ISLAND\n"
+	.string "FOUR ISLAND\p"
 	.string "The Warm, Blue, Floe Island$"
 
 FourIsland_Text_LoreleiHasReturned::

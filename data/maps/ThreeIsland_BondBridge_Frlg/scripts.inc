@@ -10,76 +10,71 @@ ThreeIsland_BondBridge_EventScript_BondBridgeSign::
 	end
 
 ThreeIsland_BondBridge_Text_NikkiIntro::
-	.string "The salty tang of the sea…\n"
-	.string "It tickles my heart.$"
+	.string "Darling, this road is far too dirty\n"
+	.string "for you.$"
 
 ThreeIsland_BondBridge_Text_NikkiDefeat::
-	.string "…Sniff, sniff…\n"
-	.string "Something smells unpleasant…$"
+	.string "Oh my. You're rather strong.$"
 
 ThreeIsland_BondBridge_Text_NikkiPostBattle::
-	.string "Perhaps that reek is your sweaty\n"
-	.string "POKéMON's body odor…$"
+	.string "The parties in the SEVII ISLANDS\n"
+	.string "are wild these days.$"
 
 ThreeIsland_BondBridge_Text_VioletIntro::
-	.string "Where are you off to in such\n"
-	.string "a hurry?$"
+	.string "I only battle people with style.\n"
+	.string "You'll do.$"
 
 ThreeIsland_BondBridge_Text_VioletDefeat::
-	.string "You're raising some wonderful\n"
-	.string "POKéMON.$"
+	.string "I broke a nail! Unforgivable!$"
 
 ThreeIsland_BondBridge_Text_VioletPostBattle::
-	.string "If you keep going this way, you'll\n"
-	.string "eventually reach BERRY FOREST.$"
+	.string "One day this mess will end. I'll be\n"
+	.string "fabulous then, too.$"
 
 ThreeIsland_BondBridge_Text_AmiraIntro::
-	.string "My mommy said that I can't swim\n"
-	.string "without my float ring.$"
+	.string "Splash! Nobody swims past me!$"
 
 ThreeIsland_BondBridge_Text_AmiraDefeat::
-	.string "Waaah!\n"
-	.string "Waaah!$"
+	.string "The tide turned on me…$"
 
 ThreeIsland_BondBridge_Text_AmiraPostBattle::
-	.string "This year, I'm going to finally\n"
-	.string "learn how to swim!$"
+	.string "The currents carry loot bags. Keep\n"
+	.string "your eyes open.$"
 
 ThreeIsland_BondBridge_Text_AlexisIntro::
-	.string "Yay, yay!\n"
-	.string "POKéMON!$"
+	.string "I patrol these waves for TEAM\n"
+	.string "ROCKET!$"
 
 ThreeIsland_BondBridge_Text_AlexisDefeat::
-	.string "What happens now?$"
+	.string "Gah! Swallowed water!$"
 
 ThreeIsland_BondBridge_Text_AlexisPostBattle::
-	.string "Did I just win?\n"
-	.string "Or did I lose?$"
+	.string "Ships from the SEVII ISLANDS pass\n"
+	.string "here every night.$"
 
 ThreeIsland_BondBridge_Text_TishaIntro::
-	.string "Oh, no, don't come here!\n"
-	.string "Please, stay away from me!$"
+	.string "TEAM ROCKET took the docks, so I\n"
+	.string "swim my own routes!$"
 
 ThreeIsland_BondBridge_Text_TishaDefeat::
-	.string "Okay, you've won!\n"
-	.string "Now will you please go away?$"
+	.string "Glub… I'm all washed up.$"
 
 ThreeIsland_BondBridge_Text_TishaPostBattle::
-	.string "A POKéMON bit through my \n"
-	.string "swimsuit.\p"
-	.string "I can't get out of the water!$"
+	.string "Even TEAM ROCKET can't control\n"
+	.string "the sea.$"
 
 ThreeIsland_BondBridge_Text_JoyIntro::
-	.string "JOY: We'll teach you what our\n"
-	.string "favorite POKéMON is!$"
+	.string "My big brother rides with TEAM\n"
+	.string "ROCKET! I'm gonna be just like\p"
+	.string "him!$"
 
 ThreeIsland_BondBridge_Text_JoyDefeat::
-	.string "JOY: Ohh…\n"
-	.string "MEG!$"
+	.string "Aww… There goes my lunch money.$"
 
 ThreeIsland_BondBridge_Text_JoyPostBattle::
-	.string "JOY: Wasn't that fun?\n"
-	.string "I hope we can battle again!$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "ROCKET.\p"
+	.string "Or maybe your crew!$"
 
 ThreeIsland_BondBridge_Text_JoyNotEnoughMons::
 	.string "JOY: I really want to battle with\n"
@@ -87,15 +82,15 @@ ThreeIsland_BondBridge_Text_JoyNotEnoughMons::
 	.string "One POKéMON isn't enough.$"
 
 ThreeIsland_BondBridge_Text_MegIntro::
-	.string "MEG: We'll show you our favorite\n"
-	.string "POKéMON.$"
+	.string "ARCHER says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 ThreeIsland_BondBridge_Text_MegDefeat::
-	.string "MEG: Ohh…\n"
-	.string "JOY!$"
+	.string "Okay, okay! You win!$"
 
 ThreeIsland_BondBridge_Text_MegPostBattle::
-	.string "MEG: JOY, wasn't that fun?$"
+	.string "Everybody's scared of ARCHER.\p"
+	.string "Are you scared?$"
 
 ThreeIsland_BondBridge_Text_MegNotEnoughMons::
 	.string "MEG: I want to battle together\n"

@@ -114,13 +114,12 @@ FiveIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy::
 	.string "I think it was DAISY.$"
 
 FiveIsland_WaterLabyrinth_Text_AlizeIntro::
-	.string "This is an excellent environment\n"
-	.string "for raising POKéMON.$"
+	.string "ARCHER invited me to his parties.\p"
+	.string "Jealous?$"
 
 FiveIsland_WaterLabyrinth_Text_AlizeDefeat::
-	.string "Your POKéMON are growing up\n"
-	.string "admirably well!$"
+	.string "I broke a nail! Unforgivable!$"
 
 FiveIsland_WaterLabyrinth_Text_AlizePostBattle::
-	.string "You know, I think you have the\n"
-	.string "talent to be a good BREEDER.$"
+	.string "You fight like a true boss.\p"
+	.string "How charming.$"

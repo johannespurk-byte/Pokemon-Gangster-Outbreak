@@ -216,8 +216,8 @@ TwoIsland_EventScript_FastCurrentSign::
 	end
 
 TwoIsland_Text_IslandSign::
-	.string "TWO ISLAND\n"
-	.string "Boon Island for Two$"
+	.string "TWO ISLAND\p"
+	.string "A Quiet Island. For Now.$"
 
 TwoIsland_Text_JoyfulGameCornerSign::
 	.string "Skip & Chomp!\n"

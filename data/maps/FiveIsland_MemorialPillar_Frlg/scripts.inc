@@ -82,44 +82,37 @@ FiveIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced::
 	end
 
 FiveIsland_MemorialPillar_Text_MiloIntro::
-	.string "I'm the eldest of the BIRD\n"
-	.string "BROTHERS.\p"
-	.string "The best thing about birds…\n"
-	.string "It has to be the beak.$"
+	.string "Out here, nobody pays the tolls of\n"
+	.string "ARCHER!$"
 
 FiveIsland_MemorialPillar_Text_MiloDefeat::
-	.string "Oh, so sharp!$"
+	.string "Heh, you're tough as stone.$"
 
 FiveIsland_MemorialPillar_Text_MiloPostBattle::
-	.string "You can fly to FOUR ISLAND from\n"
-	.string "here.$"
+	.string "Rest a bit. The road ahead is\n"
+	.string "rough.$"
 
 FiveIsland_MemorialPillar_Text_ChazIntro::
-	.string "I'm the middle kid of the BIRD\n"
-	.string "BROTHERS.\p"
-	.string "The best thing about birds…\n"
-	.string "It has to be the wings.$"
+	.string "Gangs come and go. The mountains\n"
+	.string "stay!$"
 
 FiveIsland_MemorialPillar_Text_ChazDefeat::
-	.string "Flap, flap!$"
+	.string "Whoa! Rolled right over me!$"
 
 FiveIsland_MemorialPillar_Text_ChazPostBattle::
-	.string "There was a really somber guy\n"
-	.string "over that way.$"
+	.string "Gangs never climb this far. Too\n"
+	.string "lazy.$"
 
 FiveIsland_MemorialPillar_Text_HaroldIntro::
-	.string "I'm the youngest of the BIRD\n"
-	.string "BROTHERS.\p"
-	.string "The best thing about birds…\n"
-	.string "It has to be the down.$"
+	.string "My POKéMON is as tough as the\n"
+	.string "rocks here!$"
 
 FiveIsland_MemorialPillar_Text_HaroldDefeat::
-	.string "Down is so comfy…\n"
-	.string "It makes me drowsy…$"
+	.string "My birds flew off…$"
 
 FiveIsland_MemorialPillar_Text_HaroldPostBattle::
-	.string "It fills me with happiness when\n"
-	.string "bird POKéMON beg playfully…$"
+	.string "Watch the skies. Even the birds\n"
+	.string "avoid TEAM ROCKET.$"
 
 FiveIsland_MemorialPillar_Text_ScrubScrub::
 	.string "Scrub, scrub…$"

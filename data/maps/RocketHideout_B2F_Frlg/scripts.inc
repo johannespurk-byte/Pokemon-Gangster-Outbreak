@@ -11,10 +11,9 @@ RocketHideout_B2F_Text_GruntIntro::
 	.string "the SILPH SCOPE.$"
 
 RocketHideout_B2F_Text_GruntDefeat::
-	.string "I surrender!$"
+	.string "Urgh! Not again!$"
 
 RocketHideout_B2F_Text_GruntPostBattle::
-	.string "The TEAM ROCKET HQ has four\n"
-	.string "underground floors.\p"
-	.string "Think you can reach the BOSS?$"
+	.string "I only joined TEAM ROCKET for the\n"
+	.string "money…$"
 

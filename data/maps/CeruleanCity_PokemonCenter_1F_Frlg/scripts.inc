@@ -36,10 +36,8 @@ CeruleanCity_PokemonCenter_1F_EventScript_Lass::
 
 CeruleanCity_PokemonCenter_1F_Text_BillDoesWhateverForRareMons::
 	.string "That BILL!\p"
-	.string "I heard that he'll do whatever it\n"
-	.string "takes to get rare POKéMON.\p"
-	.string "He's not above doing all sorts\n"
-	.string "of things, I've heard.$"
+	.string "He hides from the gangs in his\n"
+	.string "cottage north of town. Smart guy.$"
 
 CeruleanCity_PokemonCenter_1F_Text_EveryoneCallsBillPokemaniac::
 	.string "Have you heard about BILL?\p"
@@ -50,8 +48,9 @@ CeruleanCity_PokemonCenter_1F_Text_EveryoneCallsBillPokemaniac::
 	.string "their POKéMON?$"
 
 CeruleanCity_PokemonCenter_1F_Text_BillCollectsRareMons::
-	.string "BILL has lots of POKéMON!\n"
-	.string "He collects rare ones, too!$"
+	.string "BILL has lots of rare POKéMON.\n"
+	.string "TEAM SKULL would love to steal\p"
+	.string "them!$"
 
 CeruleanCity_PokemonCenter_1F_Text_TryTradingUpstairs::
 	.string "Why don't you go upstairs and try\n"

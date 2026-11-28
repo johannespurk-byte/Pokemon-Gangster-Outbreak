@@ -2,54 +2,44 @@ SevenIsland_TanobyRuins_Frlg_MapScripts::
 	.byte 0
 
 SevenIsland_TanobyRuins_Text_BrandonIntro::
-	.string "Do you know anything about this\n"
-	.string "stone chamber?$"
+	.string "Science doesn't stop for a gang\n"
+	.string "war!$"
 
 SevenIsland_TanobyRuins_Text_BrandonDefeat::
-	.string "That was uncalled for.\n"
-	.string "You didn't have to be so rough.$"
+	.string "Fine… I'll recalculate.$"
 
 SevenIsland_TanobyRuins_Text_BrandonPostBattle::
-	.string "The TANOBY RUINS date back at\n"
-	.string "least 1,500 years.\p"
-	.string "But it's a baffling mystery as to\n"
-	.string "why it was built in the first place.$"
+	.string "Knowledge is the only thing they\n"
+	.string "can't steal.$"
 
 SevenIsland_TanobyRuins_Text_BenjaminIntro::
-	.string "A mystic POKéMON is said to sleep\n"
-	.string "inside here.$"
+	.string "I built a radar for gang\n"
+	.string "movements. It beeped at you!$"
 
 SevenIsland_TanobyRuins_Text_BenjaminDefeat::
-	.string "I'm not much good in battle.$"
+	.string "Error! That wasn't in my data!$"
 
 SevenIsland_TanobyRuins_Text_BenjaminPostBattle::
-	.string "I hear there are other ruins like\n"
-	.string "the one here.\p"
-	.string "Might they be the resting places\n"
-	.string "of other mystic POKéMON?$"
+	.string "Every gang uses my gadgets.\n"
+	.string "Nobody pays.$"
 
 SevenIsland_TanobyRuins_Text_EdnaIntro::
-	.string "CLIFFORD is teaching me how to\n"
-	.string "paint.$"
+	.string "ARCHER invited me to his parties.\p"
+	.string "Jealous?$"
 
 SevenIsland_TanobyRuins_Text_EdnaDefeat::
-	.string "We might get in trouble for being\n"
-	.string "noisy here.$"
+	.string "I broke a nail! Unforgivable!$"
 
 SevenIsland_TanobyRuins_Text_EdnaPostBattle::
-	.string "I said that I wanted to paint an\n"
-	.string "old building.\p"
-	.string "So CLIFFORD brought me here.$"
+	.string "You fight like a true boss.\p"
+	.string "How charming.$"
 
 SevenIsland_TanobyRuins_Text_CliffordIntro::
-	.string "Today, in addition to our lesson,\n"
-	.string "we came to see the chamber.$"
+	.string "Ugh, a street kid.\p"
+	.string "Let's get this over with.$"
 
 SevenIsland_TanobyRuins_Text_CliffordDefeat::
-	.string "My, how extraordinary.$"
+	.string "My outfit! It's ruined!$"
 
 SevenIsland_TanobyRuins_Text_CliffordPostBattle::
-	.string "Ah, so you are studying POKéMON\n"
-	.string "on your own…\p"
-	.string "Yes, you certainly are quite the\n"
-	.string "extraordinary person, indeed.$"
+	.string "Do tell ARCHER I said hello.$"

@@ -38,6 +38,7 @@ FuchsiaCity_Mart_Text_DontTheyHaveSafariZonePennants::
 	.string "Aren't there even any calendars?$"
 
 FuchsiaCity_Mart_Text_DidYouTryXSpeed::
-	.string "Did you try X SPEED?\n"
-	.string "It speeds up a POKéMON in battle.$"
+	.string "Did you try X SPEED?\p"
+	.string "Good for running away from TEAM\n"
+	.string "PLASMA, too.$"
 

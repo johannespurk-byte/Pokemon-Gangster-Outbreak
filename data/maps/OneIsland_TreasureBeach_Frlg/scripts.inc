@@ -6,16 +6,15 @@ OneIsland_TreasureBeach_EventScript_Boy::
 	end
 
 OneIsland_TreasureBeach_Text_AmaraIntro::
-	.string "Lying back, rocked by the waves…\n"
-	.string "It's exquisite.$"
+	.string "The sea doesn't care about gangs.\p"
+	.string "But I do!$"
 
 OneIsland_TreasureBeach_Text_AmaraDefeat::
-	.string "I lost…\n"
-	.string "It feels awful.$"
+	.string "Gah! Swallowed water!$"
 
 OneIsland_TreasureBeach_Text_AmaraPostBattle::
-	.string "The sea is pleasantly warm in these\n"
-	.string "parts.$"
+	.string "Smugglers use these waters at\n"
+	.string "night. Stay sharp.$"
 
 OneIsland_TreasureBeach_Text_GoodThingsWashUpOnBeach::
 	.string "Good things get washed up by the\n"

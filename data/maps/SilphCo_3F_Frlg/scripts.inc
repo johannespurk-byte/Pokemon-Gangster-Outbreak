@@ -43,26 +43,26 @@ SilphCo_3F_Text_YouAndYourMonsSavedUs::
 	.string "You and your POKéMON saved us!$"
 
 SilphCo_3F_Text_GruntIntro::
-	.string "Quit messing with us, kid!$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 SilphCo_3F_Text_GruntDefeat::
-	.string "I give up!$"
+	.string "Retreat! Retreat!$"
 
 SilphCo_3F_Text_GruntPostBattle::
 	.string "A hint? You can open doors with\n"
 	.string "a CARD KEY!$"
 
 SilphCo_3F_Text_JoseIntro::
-	.string "I support TEAM ROCKET more than\n"
-	.string "I support SILPH CO.!$"
+	.string "Science doesn't stop for a gang\n"
+	.string "war!$"
 
 SilphCo_3F_Text_JoseDefeat::
-	.string "You really got me!$"
+	.string "Fine… I'll recalculate.$"
 
 SilphCo_3F_Text_JosePostBattle::
-	.string "Humph…\p"
-	.string "TEAM ROCKET said that if I helped\n"
-	.string "them, they'd let me study POKéMON.$"
+	.string "Knowledge is the only thing they\n"
+	.string "can't steal.$"
 
 SilphCo_3F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

@@ -288,50 +288,48 @@ SilphCo_7F_Text_ThankYouSoMuch::
 	.string "Thank you so much!$"
 
 SilphCo_7F_Text_Grunt3Intro::
-	.string "Uh-oh!\n"
-	.string "I smell a little mouse!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from GIOVANNI!$"
 
 SilphCo_7F_Text_Grunt3Defeat::
-	.string "Lights out!$"
+	.string "I'm gonna be in so much trouble…$"
 
 SilphCo_7F_Text_Grunt3PostBattle::
-	.string "You won't find my BOSS by just\n"
-	.string "scurrying around!$"
+	.string "Word is you're GIOVANNI's new\n"
+	.string "star. Is that true?$"
 
 SilphCo_7F_Text_JoshuaIntro::
-	.string "Heheh!\p"
-	.string "You mistook me for a SILPH worker?$"
+	.string "I hacked a PC of TEAM ROCKET once.\p"
+	.string "Now I hide out here!$"
 
 SilphCo_7F_Text_JoshuaDefeat::
-	.string "I'm done!$"
+	.string "Error! That wasn't in my data!$"
 
 SilphCo_7F_Text_JoshuaPostBattle::
-	.string "Despite your age, you are a\n"
-	.string "skilled TRAINER!$"
+	.string "GIOVANNI pays well for smart\n"
+	.string "people.\p"
+	.string "Just saying.$"
 
 SilphCo_7F_Text_Grunt1Intro::
-	.string "I am one of the four ROCKET\n"
-	.string "BROTHERS!$"
+	.string "Another crew poking around here?\n"
+	.string "Big mistake!$"
 
 SilphCo_7F_Text_Grunt1Defeat::
-	.string "Aack!\n"
-	.string "Brothers, I lost!$"
+	.string "How can a kid be this strong?!$"
 
 SilphCo_7F_Text_Grunt1PostBattle::
-	.string "Doesn't matter.\n"
-	.string "My brothers will repay the favor!$"
+	.string "You'd make a great grunt. Ever\n"
+	.string "thought about it?$"
 
 SilphCo_7F_Text_Grunt2Intro::
-	.string "A child intruder?\n"
-	.string "That must be you!$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 SilphCo_7F_Text_Grunt2Defeat::
-	.string "Fine!\n"
-	.string "I lost!$"
+	.string "Urgh! Not again!$"
 
 SilphCo_7F_Text_Grunt2PostBattle::
-	.string "Go on home before my BOSS gets\n"
-	.string "ticked off!$"
+	.string "Don't tell GIOVANNI I lost to you.$"
 
 SilphCo_7F_Text_RivalWhatKeptYou::
 	.string "{RIVAL}: What kept you, {PLAYER}?$"

@@ -10,93 +10,86 @@ SixIsland_WaterPath_EventScript_RouteSign::
 	end
 
 SixIsland_WaterPath_Text_RoseIntro::
-	.string "I let a pleasant breeze lead me\n"
-	.string "all the way here.$"
+	.string "Ugh, a street kid.\p"
+	.string "Let's get this over with.$"
 
 SixIsland_WaterPath_Text_RoseDefeat::
 	.string "Giggle… You're so cute when you're\n"
 	.string "determined.$"
 
 SixIsland_WaterPath_Text_RosePostBattle::
-	.string "I want to go to the woods over\n"
-	.string "there, but…\p"
-	.string "There are lots of BUG POKéMON.\n"
-	.string "They scare me a little.$"
+	.string "Do tell ARCHER I said hello.$"
 
 SixIsland_WaterPath_Text_EdwardIntro::
 	.string "I'm practicing in secret so no one\n"
 	.string "can see me.$"
 
 SixIsland_WaterPath_Text_EdwardDefeat::
-	.string "Nobody saw me losing, right?$"
+	.string "Fine… I'll recalculate.$"
 
 SixIsland_WaterPath_Text_EdwardPostBattle::
-	.string "As a performer, I don't want people\n"
-	.string "to know about the effort I put in.$"
+	.string "I'll sell your battle data to TEAM\n"
+	.string "ROCKET.\p"
+	.string "Kidding! Mostly.$"
 
 SixIsland_WaterPath_Text_SamirIntro::
-	.string "What, you're suggesting that you're\n"
-	.string "sick of seeing SWIMMERS like me?\p"
-	.string "Aww, don't be hatin'!$"
+	.string "You'll sink like the last punk who\n"
+	.string "came here!$"
 
 SixIsland_WaterPath_Text_SamirDefeat::
-	.string "Oh, no, no, no.$"
+	.string "The tide turned on me…$"
 
 SixIsland_WaterPath_Text_SamirPostBattle::
 	.string "I couldn't lift the stigma of being\n"
 	.string "a SWIMMER…$"
 
 SixIsland_WaterPath_Text_DeniseIntro::
-	.string "My boyfriend's always busy, so I\n"
-	.string "come swimming by myself.$"
+	.string "Out here, only the strong stay\n"
+	.string "afloat!$"
 
 SixIsland_WaterPath_Text_DeniseDefeat::
-	.string "Awww, I knew this would happen!$"
+	.string "Gah! Swallowed water!$"
 
 SixIsland_WaterPath_Text_DenisePostBattle::
-	.string "When I can't be with my boyfriend,\n"
-	.string "I spend time with the POKéMON he\l"
-	.string "gave me.$"
+	.string "The water's the only free place\n"
+	.string "left.$"
 
 SixIsland_WaterPath_Text_EarlIntro::
-	.string "Tell me, where are the mountains\n"
-	.string "around these parts?$"
+	.string "Gangs come and go. The mountains\n"
+	.string "stay!$"
 
 SixIsland_WaterPath_Text_EarlDefeat::
-	.string "I lost my way while I was busy\n"
-	.string "battling!$"
+	.string "Whoa! Rolled right over me!$"
 
 SixIsland_WaterPath_Text_EarlPostBattle::
-	.string "Aren't there any mountains around\n"
-	.string "these parts?$"
+	.string "Gangs never climb this far. Too\n"
+	.string "lazy.$"
 
 SixIsland_WaterPath_Text_MiuIntro::
-	.string "MIU: Hello, POKéMON!\n"
-	.string "It's time to play!$"
+	.string "ARCHER says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 SixIsland_WaterPath_Text_MiuDefeat::
-	.string "MIU: Oh, no!\n"
-	.string "Mommy!$"
+	.string "Okay, okay! You win!$"
 
 SixIsland_WaterPath_Text_MiuPostBattle::
-	.string "MIU: It makes me all sad inside\n"
-	.string "when we lose…$"
+	.string "Everybody's scared of ARCHER.\p"
+	.string "Are you scared?$"
 
 SixIsland_WaterPath_Text_MiuNotEnoughMons::
 	.string "MIU: MIA and I are TWINS.\n"
 	.string "We want to battle together.$"
 
 SixIsland_WaterPath_Text_MiaIntro::
-	.string "MIA: Hello, POKéMON!\n"
-	.string "It's time to battle!$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 SixIsland_WaterPath_Text_MiaDefeat::
-	.string "MIA: You're mean!\n"
-	.string "You're bad for winning!$"
+	.string "Waaah! I'm telling my brother!$"
 
 SixIsland_WaterPath_Text_MiaPostBattle::
-	.string "MIA: Ohh…\n"
-	.string "I'm sorry, my POKéMON…$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 SixIsland_WaterPath_Text_MiaNotEnoughMons::
 	.string "MIA: Oh, you only have one\n"

@@ -206,26 +206,23 @@ MtEmber_Exterior_Text_WellRegroupDontStepInsideThere::
 	.string "don't even think about this!$"
 
 MtEmber_Exterior_Text_LoganIntro::
-	.string "An active volcano is one that's\n"
-	.string "erupting, or about to.$"
+	.string "These hills are older than any\n"
+	.string "gang.\p"
+	.string "So am I!$"
 
 MtEmber_Exterior_Text_LoganDefeat::
-	.string "Whew… That was hot!\n"
-	.string "Sweat's erupting from me!$"
+	.string "Whoa! Rolled right over me!$"
 
 MtEmber_Exterior_Text_LoganPostBattle::
-	.string "They say there're over 1,500\n"
-	.string "active volcanoes in the world.\p"
-	.string "Just thinking about them makes me\n"
-	.string "feel all hot and gooey inside!$"
+	.string "Head to the SEVII ISLANDS if you\n"
+	.string "want trouble.$"
 
 MtEmber_Exterior_Text_BethIntro::
-	.string "Do you know how caves form inside\n"
-	.string "volcanoes?$"
+	.string "Out here, nobody pays the tolls of\n"
+	.string "ARCHER!$"
 
 MtEmber_Exterior_Text_BethDefeat::
-	.string "Atchah!\n"
-	.string "You're shockingly good!$"
+	.string "My birds flew off…$"
 
 MtEmber_Exterior_Text_BethPostBattle::
 	.string "When lava at the surface of magma\n"
@@ -233,15 +230,13 @@ MtEmber_Exterior_Text_BethPostBattle::
 	.string "out, caverns are left behind.$"
 
 MtEmber_Exterior_Text_JocelynIntro::
-	.string "I've been in training so I can mend\n"
-	.string "my broken heart…\p"
-	.string "It toughened me up physically at\n"
-	.string "least! Hi-yah!$"
+	.string "Wrong turf, rookie. Nobody passes\n"
+	.string "without a fight!$"
 
 MtEmber_Exterior_Text_JocelynDefeat::
-	.string "I think I tried to overdo it…$"
+	.string "Tch… You hit hard.$"
 
 MtEmber_Exterior_Text_JocelynPostBattle::
-	.string "The way you battle, it reminds me\n"
-	.string "of the guy who dumped me…$"
+	.string "Respect. Not many beat me on my\n"
+	.string "own road.$"
 

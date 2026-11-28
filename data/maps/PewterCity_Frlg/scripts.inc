@@ -871,28 +871,26 @@ PewterCity_Text_ClefairyCameFromMoon::
 	.string "fell on MT. MOON.$"
 
 PewterCity_Text_BrockOnlySeriousTrainerHere::
-	.string "There aren't many serious POKéMON\n"
-	.string "TRAINERS here.\p"
-	.string "They're all like BUG CATCHERS,\n"
-	.string "you know, just hobbyists.\p"
-	.string "But PEWTER GYM's BROCK isn't like\n"
-	.string "that, not one bit.$"
+	.string "TEAM YELL took over the GYM.\p"
+	.string "PIERS sings on the roof every\n"
+	.string "night. Everybody has to cheer!$"
 
 PewterCity_Text_DidYouCheckOutMuseum::
 	.string "Did you check out the MUSEUM?$"
 
 PewterCity_Text_WerentThoseFossilsAmazing::
-	.string "Weren't those fossils from MT. MOON\n"
-	.string "amazing?$"
+	.string "The fossils in the MUSEUM are fake\n"
+	.string "now. The real ones went to the\p"
+	.string "black market.$"
 
 PewterCity_Text_ReallyYouHaveToGo::
 	.string "Really?\n"
 	.string "You absolutely have to go!$"
 
 PewterCity_Text_ThisIsTheMuseum::
-	.string "This is it, the MUSEUM.\p"
-	.string "You have to pay to get in, but it's\n"
-	.string "worth it. See you around!$"
+	.string "This is the MUSEUM.\p"
+	.string "TEAM YELL wants money at the\n"
+	.string "door, but it's worth it. See you!$"
 
 PewterCity_Text_DoYouKnowWhatImDoing::
 	.string "Psssst!\n"
@@ -904,16 +902,17 @@ PewterCity_Text_ThatsRightItsHardWork::
 
 PewterCity_Text_SprayingRepelToKeepWildMonsOut::
 	.string "I'm spraying REPEL to keep wild\n"
-	.string "POKéMON out of my garden!$"
+	.string "POKéMON out of my garden. And\p"
+	.string "TEAM YELL too!$"
 
 PewterCity_Text_BrocksLookingForChallengersFollowMe::
 	.string "You're a TRAINER, right?\p"
-	.string "BROCK's looking for new\n"
+	.string "PIERS is looking for new\n"
 	.string "challengers. Follow me!$"
 
 PewterCity_Text_GoTakeOnBrock::
-	.string "If you have the right stuff,\n"
-	.string "go take on BROCK!$"
+	.string "If you've got the guts, go take on\n"
+	.string "PIERS!$"
 
 PewterCity_Text_TrainerTipsEarningEXP::
 	.string "TRAINER TIPS\p"
@@ -922,22 +921,21 @@ PewterCity_Text_TrainerTipsEarningEXP::
 
 PewterCity_Text_CallPoliceIfInfoOnThieves::
 	.string "NOTICE!\p"
-	.string "Thieves have been stealing POKéMON\n"
+	.string "Thieves have been stealing\n"
 	.string "fossils from MT. MOON.\p"
-	.string "Please call the PEWTER POLICE if\n"
-	.string "you have any information.$"
+	.string "The PEWTER POLICE are gone. Good\n"
+	.string "luck.$"
 
 PewterCity_Text_MuseumOfScience::
 	.string "PEWTER MUSEUM OF SCIENCE$"
 
 PewterCity_Text_GymSign::
-	.string "PEWTER CITY POKéMON GYM\n"
-	.string "LEADER: BROCK\l"
-	.string "The Rock-Solid POKéMON TRAINER!$"
+	.string "PEWTER CITY POKéMON GYM\p"
+	.string "BOSS: PIERS - TEAM YELL$"
 
 PewterCity_Text_CitySign::
-	.string "PEWTER CITY\n"
-	.string "A Stone Gray City$"
+	.string "PEWTER CITY\p"
+	.string "A Stone Gray City. Loud All Night.$"
 
 PewterCity_Text_OhPlayer::
 	.string "Oh, {PLAYER}{KUN}!$"

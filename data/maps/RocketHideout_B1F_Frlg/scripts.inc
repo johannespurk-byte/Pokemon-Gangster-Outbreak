@@ -63,55 +63,56 @@ RocketHideout_B1F_EventScript_RemoveBarrier::
 	return
 
 RocketHideout_B1F_Text_Grunt1Intro::
-	.string "Who are you?\n"
-	.string "How did you get here?$"
+	.string "Another crew poking around here?\n"
+	.string "Big mistake!$"
 
 RocketHideout_B1F_Text_Grunt1Defeat::
-	.string "Oww!\n"
-	.string "Beaten!$"
+	.string "How can a kid be this strong?!$"
 
 RocketHideout_B1F_Text_Grunt1PostBattle::
-	.string "Blast it… You're dissing TEAM\n"
-	.string "ROCKET, aren't you?$"
+	.string "You'd make a great grunt. Ever\n"
+	.string "thought about it?$"
 
 RocketHideout_B1F_Text_Grunt2Intro::
-	.string "You broke into TEAM ROCKET's\n"
-	.string "operation? What nerve!$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 RocketHideout_B1F_Text_Grunt2Defeat::
-	.string "Boom!$"
+	.string "Urgh! Not again!$"
 
 RocketHideout_B1F_Text_Grunt2PostBattle::
-	.string "You're not going to get away with\n"
-	.string "this, brat!$"
+	.string "Don't tell GIOVANNI I lost to you.$"
 
 RocketHideout_B1F_Text_Grunt3Intro::
-	.string "Intruder alert!$"
+	.string "Hand over your POKéMON. Orders\n"
+	.string "from GIOVANNI!$"
 
 RocketHideout_B1F_Text_Grunt3Defeat::
-	.string "I can't do it!$"
+	.string "I'm gonna be in so much trouble…$"
 
 RocketHideout_B1F_Text_Grunt3PostBattle::
 	.string "SILPH SCOPE? Humph!\n"
 	.string "I don't know where it is.$"
 
 RocketHideout_B1F_Text_Grunt4Intro::
-	.string "Why did you come here?$"
+	.string "Halt! This is TEAM ROCKET\n"
+	.string "business!$"
 
 RocketHideout_B1F_Text_Grunt4Defeat::
-	.string "This won't do!$"
+	.string "Retreat! Retreat!$"
 
 RocketHideout_B1F_Text_Grunt4PostBattle::
 	.string "Okay, I'll talk…\n"
 	.string "Take the elevator to see my BOSS.$"
 
 RocketHideout_B1F_Text_Grunt5Intro::
-	.string "Are you lost, you little mouse?$"
+	.string "GIOVANNI said nobody gets\n"
+	.string "through. Nobody!$"
 
 RocketHideout_B1F_Text_Grunt5Defeat::
-	.string "Why…?$"
+	.string "How can a kid be this strong?!$"
 
 RocketHideout_B1F_Text_Grunt5PostBattle::
-	.string "Uh-oh, that ruckus somehow opened\n"
-	.string "the door!$"
+	.string "Fine, go ahead. You'll see what's\n"
+	.string "waiting for you.$"
 

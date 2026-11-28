@@ -17,35 +17,33 @@ PokemonTower_4F_EventScript_Jody::
 	end
 
 PokemonTower_4F_Text_PaulaIntro::
-	.string "Ghost! No!\n"
-	.string "Kwaaah!$"
+	.string "The spirits whisper of GIOVANNI.\p"
+	.string "They are afraid.$"
 
 PokemonTower_4F_Text_PaulaDefeat::
-	.string "Where is the ghost?$"
+	.string "My mind… is spinning!$"
 
 PokemonTower_4F_Text_PaulaPostBattle::
-	.string "I must have been dreaming…$"
+	.string "Even ghosts avoid TEAM ROCKET.$"
 
 PokemonTower_4F_Text_LaurelIntro::
-	.string "Be cursed with me!\n"
-	.string "Kwaaah!$"
+	.string "Your future is dark.\p"
+	.string "Let me show you!$"
 
 PokemonTower_4F_Text_LaurelDefeat::
-	.string "What!$"
+	.string "The spirits abandoned me…$"
 
 PokemonTower_4F_Text_LaurelPostBattle::
-	.string "We can't determine the identity of\n"
-	.string "the ghosts…$"
+	.string "Your aura is strong.\p"
+	.string "Like a true boss.$"
 
 PokemonTower_4F_Text_JodyIntro::
-	.string "Huhuhu…\n"
-	.string "Beat me not!$"
+	.string "The outbreak woke the ghosts.\p"
+	.string "And me!$"
 
 PokemonTower_4F_Text_JodyDefeat::
-	.string "Huh?\n"
-	.string "Who? What?$"
+	.string "I did not foresee this!$"
 
 PokemonTower_4F_Text_JodyPostBattle::
-	.string "May the departed POKéMON rest in\n"
-	.string "peace…$"
+	.string "Beware the road to VIRIDIAN.$"
 

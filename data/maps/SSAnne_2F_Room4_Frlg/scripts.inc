@@ -12,24 +12,24 @@ SSAnne_2F_Room4_EventScript_Dawn::
 	end
 
 SSAnne_2F_Room4_Text_LamarIntro::
-	.string "Which do you find more worthy,\n"
-	.string "a strong or a rare POKéMON?$"
+	.string "Darling, this road is far too dirty\n"
+	.string "for you.$"
 
 SSAnne_2F_Room4_Text_LamarDefeat::
-	.string "I must salute you!$"
+	.string "Oh my. You're rather strong.$"
 
 SSAnne_2F_Room4_Text_LamarPostBattle::
-	.string "Personally, I prefer strong and\n"
-	.string "rare POKéMON.$"
+	.string "The parties in VERMILION are wild\n"
+	.string "these days.$"
 
 SSAnne_2F_Room4_Text_DawnIntro::
-	.string "I don't believe I saw you at the\n"
-	.string "party?$"
+	.string "ARCHER says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 SSAnne_2F_Room4_Text_DawnDefeat::
-	.string "Take it easy!$"
+	.string "No fair! You're way too strong!$"
 
 SSAnne_2F_Room4_Text_DawnPostBattle::
-	.string "Oh, I adore your strong POKéMON!\n"
-	.string "Oh, how I envy you for them!$"
+	.string "Everybody's scared of ARCHER.\p"
+	.string "Are you scared?$"
 

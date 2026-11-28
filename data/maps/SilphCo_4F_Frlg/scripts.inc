@@ -48,22 +48,23 @@ SilphCo_4F_Text_TeamRocketIsGone::
 	.string "TEAM ROCKET is gone?$"
 
 SilphCo_4F_Text_Grunt1Intro::
-	.string "TEAM ROCKET has taken control\n"
-	.string "of SILPH CO.!$"
+	.string "Another crew poking around here?\n"
+	.string "Big mistake!$"
 
 SilphCo_4F_Text_Grunt1Defeat::
-	.string "Arrgh!$"
+	.string "How can a kid be this strong?!$"
 
 SilphCo_4F_Text_Grunt1PostBattle::
-	.string "Fwahahaha!\n"
-	.string "My BOSS has been after this place!$"
+	.string "You'd make a great grunt. Ever\n"
+	.string "thought about it?$"
 
 SilphCo_4F_Text_RodneyIntro::
-	.string "My POKéMON is my loyal servant.$"
+	.string "I built a radar for gang\n"
+	.string "movements. It beeped at you!$"
 
 SilphCo_4F_Text_RodneyDefeat::
-	.string "Darn!\n"
-	.string "You weak POKéMON!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 SilphCo_4F_Text_RodneyPostBattle::
 	.string "The doors are electronically\n"
@@ -72,13 +73,14 @@ SilphCo_4F_Text_RodneyPostBattle::
 	.string "doors here.$"
 
 SilphCo_4F_Text_Grunt2Intro::
-	.string "Intruder spotted!$"
+	.string "I guard this place for GIOVANNI.\n"
+	.string "Prepare yourself!$"
 
 SilphCo_4F_Text_Grunt2Defeat::
-	.string "Who are you?$"
+	.string "Urgh! Not again!$"
 
 SilphCo_4F_Text_Grunt2PostBattle::
-	.string "I better tell the BOSS on 11F!$"
+	.string "Don't tell GIOVANNI I lost to you.$"
 
 SilphCo_4F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

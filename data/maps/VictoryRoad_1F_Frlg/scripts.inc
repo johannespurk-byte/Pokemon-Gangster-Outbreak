@@ -44,24 +44,25 @@ VictoryRoad_1F_EventScript_Rolando::
 	end
 
 VictoryRoad_1F_Text_NaomiIntro::
-	.string "I wonder if you are good enough\n"
-	.string "for me?$"
+	.string "TEAM ROCKET tried to recruit me. I\n"
+	.string "said no.\p"
+	.string "Wanna know why?$"
 
 VictoryRoad_1F_Text_NaomiDefeat::
-	.string "I lost out…$"
+	.string "You're the real deal.$"
 
 VictoryRoad_1F_Text_NaomiPostBattle::
-	.string "I never wanted to lose to anybody,\n"
-	.string "especially to a younger kid…$"
+	.string "With skills like that, every gang\n"
+	.string "will want you.$"
 
 VictoryRoad_1F_Text_RolandoIntro::
-	.string "I can see you're good.\n"
-	.string "Let me see exactly how good!$"
+	.string "Only real TRAINERS survive out\n"
+	.string "here!$"
 
 VictoryRoad_1F_Text_RolandoDefeat::
-	.string "I had a chance…$"
+	.string "I underestimated you.$"
 
 VictoryRoad_1F_Text_RolandoPostBattle::
-	.string "Tch!\n"
-	.string "I concede, you are better than I!$"
+	.string "Keep training.\p"
+	.string "The bosses only get stronger.$"
 

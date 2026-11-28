@@ -7,13 +7,12 @@ FiveIsland_LostCave_Room1_EventScript_Lawson::
 	end
 
 FiveIsland_LostCave_Room1_Text_LawsonIntro::
-	.string "Aiyeeeeeh!\p"
-	.string "I thought this was an ancient ruin.\n"
-	.string "But it's teeming with ghosts!$"
+	.string "I built a radar for gang\n"
+	.string "movements. It beeped at you!$"
 
 FiveIsland_LostCave_Room1_Text_LawsonDefeat::
-	.string "Aiyeeeeeh!\n"
-	.string "Mercy!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 FiveIsland_LostCave_Room1_Text_LawsonPostBattle::
 	.string "I'm trying to get out of here, but\n"

@@ -16,31 +16,28 @@ SSAnne_1F_Room2_EventScript_Tyler::
 	end
 
 SSAnne_1F_Room2_Text_TylerIntro::
-	.string "I love POKéMON!\n"
-	.string "Do you?$"
+	.string "ARCHER says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 SSAnne_1F_Room2_Text_TylerDefeat::
-	.string "Wow! \n"
-	.string "You're great!$"
+	.string "No fair! You're way too strong!$"
 
 SSAnne_1F_Room2_Text_TylerPostBattle::
-	.string "Listen, listen!\n"
-	.string "Let me be your friend, okay?\p"
-	.string "Then we can trade POKéMON and\n"
-	.string "do stuff.$"
+	.string "Everybody's scared of ARCHER.\p"
+	.string "Are you scared?$"
 
 SSAnne_1F_Room2_Text_AnnIntro::
-	.string "I collected these POKéMON\n"
-	.string "from all around the world!$"
+	.string "My big brother rides with TEAM\n"
+	.string "ROCKET! I'm gonna be just like\p"
+	.string "him!$"
 
 SSAnne_1F_Room2_Text_AnnDefeat::
-	.string "Oh, no!\n"
-	.string "I went around the world for these!$"
+	.string "Waaah! I'm telling my brother!$"
 
 SSAnne_1F_Room2_Text_AnnPostBattle::
-	.string "You hurt my poor POKéMON!\p"
-	.string "I demand that you heal them at a\n"
-	.string "POKéMON CENTER!$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "ROCKET.\p"
+	.string "Or maybe your crew!$"
 
 SSAnne_1F_Room2_Text_CruisingAroundWorld::
 	.string "We are cruising around the world,\n"

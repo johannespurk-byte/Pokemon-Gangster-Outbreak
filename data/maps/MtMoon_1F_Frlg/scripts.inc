@@ -46,87 +46,82 @@ MtMoon_1F_EventScript_Robby::
 	end
 
 MtMoon_1F_Text_MarcosIntro::
-	.string "WHOA!\n"
-	.string "You shocked me!\l"
-	.string "…Oh, you're just a kid!$"
+	.string "Gangs come and go. The mountains\n"
+	.string "stay!$"
 
 MtMoon_1F_Text_MarcosDefeat::
-	.string "Wow!\n"
-	.string "Shocked again!$"
+	.string "Like a rockslide!$"
 
 MtMoon_1F_Text_MarcosPostBattle::
-	.string "Kids like you shouldn't be\n"
-	.string "wandering around here in the dark.$"
+	.string "Gangs never climb this far. Too\n"
+	.string "lazy.$"
 
 MtMoon_1F_Text_JoshIntro::
-	.string "Did you come to explore the cave,\n"
-	.string "too?$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 MtMoon_1F_Text_JoshDefeat::
-	.string "Losing stinks!\n"
-	.string "It's so uncool.$"
+	.string "Aww… There goes my lunch money.$"
 
 MtMoon_1F_Text_JoshPostBattle::
-	.string "I came all the way down here to\n"
-	.string "show off to girls.$"
+	.string "Don't tell my mom I battled you.$"
 
 MtMoon_1F_Text_MiriamIntro::
-	.string "Wow! It's way bigger in here than\n"
-	.string "I thought!$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 MtMoon_1F_Text_MiriamDefeat::
-	.string "Oh!\n"
-	.string "I lost it!$"
+	.string "Okay, okay! You win!$"
 
 MtMoon_1F_Text_MiriamPostBattle::
-	.string "How do you get out of here?\n"
-	.string "It's so big, I may get lost.$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 MtMoon_1F_Text_JovanIntro::
-	.string "What!\n"
-	.string "Don't sneak up on me!$"
+	.string "I sell info to every gang.\p"
+	.string "Info on you is worth a lot!$"
 
 MtMoon_1F_Text_JovanDefeat::
-	.string "My POKéMON won't do!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 MtMoon_1F_Text_JovanPostBattle::
-	.string "I have to find stronger POKéMON.\n"
-	.string "Where might they be?$"
+	.string "Data says you'll beat PIERS.\p"
+	.string "Probably.$"
 
 MtMoon_1F_Text_IrisIntro::
-	.string "What?\n"
-	.string "I'm waiting for my friends to find\l"
-	.string "me here.$"
+	.string "My big brother rides with TEAM\n"
+	.string "YELL! I'm gonna be just like him!$"
 
 MtMoon_1F_Text_IrisDefeat::
-	.string "I lost?$"
+	.string "Waaah! I'm telling my brother!$"
 
 MtMoon_1F_Text_IrisPostBattle::
-	.string "I came because I heard there are\n"
-	.string "some very rare fossils here.$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "YELL.\p"
+	.string "Or maybe your crew!$"
 
 MtMoon_1F_Text_KentIntro::
-	.string "Suspicious men are in the cave.\n"
-	.string "What about you?$"
+	.string "PIERS says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 MtMoon_1F_Text_KentDefeat::
-	.string "You got me!$"
+	.string "No fair! You're way too strong!$"
 
 MtMoon_1F_Text_KentPostBattle::
-	.string "I saw them!\n"
-	.string "I'm sure they're from TEAM ROCKET!$"
+	.string "Everybody's scared of PIERS.\p"
+	.string "Are you scared?$"
 
 MtMoon_1F_Text_RobbyIntro::
-	.string "You need to go through this cave\n"
-	.string "to get to CERULEAN CITY.$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 MtMoon_1F_Text_RobbyDefeat::
-	.string "I lost.$"
+	.string "Aww… There goes my lunch money.$"
 
 MtMoon_1F_Text_RobbyPostBattle::
-	.string "ZUBAT is tough!\n"
-	.string "But if you can catch one, you'll\l"
-	.string "be able to count on it.$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 MtMoon_1F_Text_ZubatIsABloodsucker::
 	.string "Beware!\n"
