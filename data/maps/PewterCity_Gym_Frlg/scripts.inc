@@ -101,12 +101,11 @@ PewterCity_Gym_Text_BrockDefeat::
 	.string "first stripe.\p"
 	.string "{FONT_NORMAL}{PLAYER} was promoted to\n"
 	.string "PROSPECT!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
-	.string "{FONT_MALE}The PROSPECT RANK alone makes\n"
-	.string "your POKéMON more powerful.\p"
-	.string "It also enables the use of the\n"
-	.string "move FLASH outside of battle.\p"
-	.string "Of course, a POKéMON must know the\n"
-	.string "move FLASH to use it.$"
+	.string "{FONT_MALE}The PROSPECT RANK raises your\n"
+	.string "level cap to Lv. 27.\p"
+	.string "With the HM in your BAG, your first\n"
+	.string "POKéMON can use FLASH, even if it\l"
+	.string "never learned the move.$"
 
 PewterCity_Gym_Text_TakeThisWithYou::
 	.string "Wait!\n"
@@ -137,18 +136,15 @@ PewterCity_Gym_Text_DontHaveRoomForThis::
 	.string "You don't have room for this.$"
 
 PewterCity_Gym_Text_LiamIntro::
-	.string "Stop right there, kid!\p"
-	.string "You're ten thousand light-years \n"
-	.string "from facing PIERS!$"
+	.string "Welcome to our turf. Hope you\n"
+	.string "brought REVIVES!$"
 
 PewterCity_Gym_Text_LiamDefeat::
-	.string "Darn!\p"
-	.string "Light-years isn't time…\n"
-	.string "It measures distance!$"
+	.string "No way! PIERS is gonna be mad!$"
 
 PewterCity_Gym_Text_LiamPostBattle::
-	.string "You're pretty hot.\n"
-	.string "…But not as hot as PIERS!$"
+	.string "If you win, you're one step closer\n"
+	.string "to the LEAGUE.$"
 
 PewterCity_Gym_Text_MarlaIntro::
 	.string "Oi! Nobody gets to PIERS without\n"
@@ -163,13 +159,11 @@ PewterCity_Gym_Text_MarlaPostBattle::
 	.string "what real noise sounds like!$"
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
-	.string "Hiya!\n"
-	.string "Do you want to dream big?\p"
+	.string "Hiya! Do you dream big?\p"
 	.string "Do you dare to dream of becoming\n"
-	.string "the POKéMON champ?\p"
-	.string "I'm no TRAINER, but I can advise\n"
-	.string "you on how to win.\p"
-	.string "Let me take you to the top!$"
+	.string "the KINGPIN of KANTO?\p"
+	.string "I'm no fighter, but I know every\n"
+	.string "boss. Let me take you to the top!$"
 
 PewterCity_Gym_Text_LetsGetHappening::
 	.string "All right!\n"
@@ -188,8 +182,8 @@ PewterCity_Gym_Text_ItsFreeLetsGetHappening::
 	.string "Let's get happening!$"
 
 PewterCity_Gym_Text_YoureChampMaterial::
-	.string "Just as I thought!\n"
-	.string "You're POKéMON champ material!$"
+	.string "Just as I thought! You're KINGPIN\n"
+	.string "material!$"
 
 PewterCity_Gym_Text_GymStatue::
 	.string "PEWTER POKéMON GYM\n"

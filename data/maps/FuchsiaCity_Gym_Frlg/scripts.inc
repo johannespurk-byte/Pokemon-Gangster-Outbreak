@@ -95,22 +95,20 @@ FuchsiaCity_Gym_Text_KogaIntro::
 	.string "who rule. Kneel before my power!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 FuchsiaCity_Gym_Text_KogaDefeat::
-	.string "Humph!\n"
-	.string "You have proven your worth!\p"
-	.string "Here!\n"
-	.string "Take the HITMAN RANK!$"
+	.string "GHETSIS: Impossible! A mere pawn…\p"
+	.string "Take the HITMAN RANK. For now.$"
 
 FuchsiaCity_Gym_Text_KogaPostBattle::
 	.string "Hmph. Even I can use a pawn as\n"
 	.string "strong as you.$"
 
 FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
-	.string "Now that you have the HITMAN RANK,\n"
-	.string "the DEFENSE of your POKéMON rises.\p"
-	.string "It also lets you SURF outside of\n"
+	.string "The HITMAN RANK raises your level\n"
+	.string "cap to Lv. 49.\p"
+	.string "With the HM in your BAG, your first\n"
+	.string "POKéMON can SURF outside of\p"
 	.string "battle.\p"
-	.string "Ah!\n"
-	.string "Take this, too!$"
+	.string "Take this too.$"
 
 FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
 	.string "{PLAYER} received TM06\n"
@@ -133,38 +131,33 @@ FuchsiaCity_Gym_Text_KaydenIntro::
 	.string "beat brute strength.$"
 
 FuchsiaCity_Gym_Text_KaydenDefeat::
-	.string "What?\n"
-	.string "Extraordinary!$"
+	.string "No way! GHETSIS is gonna be mad!$"
 
 FuchsiaCity_Gym_Text_KaydenPostBattle::
-	.string "So, you mix brawn with brains?\n"
-	.string "Good strategy!\p"
-	.string "That's remarkable for a child\n"
-	.string "TRAINER.$"
+	.string "Beat GHETSIS and the whole of\n"
+	.string "TEAM PLASMA will respect you.$"
 
 FuchsiaCity_Gym_Text_KirkIntro::
-	.string "I was a magician once upon a time.\p"
-	.string "But I dreamt of becoming a ninja,\n"
-	.string "so I joined this GYM.$"
+	.string "Welcome to our turf. Hope you\n"
+	.string "brought REVIVES!$"
 
 FuchsiaCity_Gym_Text_KirkDefeat::
-	.string "I'm done for!$"
+	.string "Fine… go on ahead.$"
 
 FuchsiaCity_Gym_Text_KirkPostBattle::
-	.string "Even though I've lost, I will keep\n"
-	.string "training according to the teachings\l"
-	.string "of GHETSIS, my ninja master.$"
+	.string "If you win, you're one step closer\n"
+	.string "to the LEAGUE.$"
 
 FuchsiaCity_Gym_Text_NateIntro::
-	.string "Let's see you beat my special\n"
-	.string "techniques!$"
+	.string "You want a RANK? Earn it the hard\n"
+	.string "way!$"
 
 FuchsiaCity_Gym_Text_NateDefeat::
-	.string "You had me fooled!$"
+	.string "I lost?! In my own GYM?!$"
 
 FuchsiaCity_Gym_Text_NatePostBattle::
-	.string "I like poison and sleep techniques,\n"
-	.string "as they linger after battle!$"
+	.string "I trained for months under\n"
+	.string "GHETSIS. You still beat me.$"
 
 FuchsiaCity_Gym_Text_PhilIntro::
 	.string "Stop right there!\p"
@@ -172,8 +165,7 @@ FuchsiaCity_Gym_Text_PhilIntro::
 	.string "FUCHSIA GYM have you frustrated?$"
 
 FuchsiaCity_Gym_Text_PhilDefeat::
-	.string "Whoa!\n"
-	.string "You've got it!$"
+	.string "No way! GHETSIS is gonna be mad!$"
 
 FuchsiaCity_Gym_Text_PhilPostBattle::
 	.string "You impressed me!\n"
@@ -182,45 +174,41 @@ FuchsiaCity_Gym_Text_PhilPostBattle::
 	.string "invisible walls!$"
 
 FuchsiaCity_Gym_Text_EdgarIntro::
-	.string "I also study the way of the ninja\n"
-	.string "with Master GHETSIS!\p"
-	.string "Ninja have a long history of using\n"
-	.string "animals!$"
+	.string "Another challenger? GHETSIS will\n"
+	.string "love this.$"
 
 FuchsiaCity_Gym_Text_EdgarDefeat::
-	.string "Awoo!$"
+	.string "I lost?! In my own GYM?!$"
 
 FuchsiaCity_Gym_Text_EdgarPostBattle::
-	.string "I still have much to learn.$"
+	.string "Every gang in KANTO is watching\n"
+	.string "this GYM.$"
 
 FuchsiaCity_Gym_Text_ShawnIntro::
-	.string "Master GHETSIS comes from a long line\n"
-	.string "of ninjas.\p"
-	.string "What did you descend from?$"
+	.string "Nobody reaches GHETSIS without\n"
+	.string "going through me!$"
 
 FuchsiaCity_Gym_Text_ShawnDefeat::
-	.string "You're more skilled than I'd\n"
-	.string "thought!$"
+	.string "Tch… You're the real thing.$"
 
 FuchsiaCity_Gym_Text_ShawnPostBattle::
-	.string "Where there is light, there is\n"
-	.string "shadow!\p"
-	.string "Light and shadow!\n"
-	.string "Which do you choose?$"
+	.string "GHETSIS is waiting. Don't keep the\n"
+	.string "boss waiting.$"
 
 FuchsiaCity_Gym_Text_GymGuyAdvice::
-	.string "Yo!\n"
-	.string "Champ in the making!\p"
-	.string "FUCHSIA GYM is a tricked-up place.\n"
-	.string "It's riddled with invisible walls!\p"
-	.string "GHETSIS might appear close, but he's\n"
+	.string "Yo! Boss in the making!\p"
+	.string "This GYM is full of invisible walls!\n"
+	.string "GHETSIS looks close, but he's\p"
 	.string "blocked off.\p"
-	.string "You have to find gaps in the walls\n"
-	.string "to reach him.$"
+	.string "Find the gaps in the walls to reach\n"
+	.string "him.\p"
+	.string "His HYDREIGON is DARK and DRAGON.\n"
+	.string "FAIRY and FIGHTING moves hit it\p"
+	.string "hard!$"
 
 FuchsiaCity_Gym_Text_GymGuyPostVictory::
-	.string "It's amazing how ninja can terrify,\n"
-	.string "even now!$"
+	.string "You beat GHETSIS! TEAM PLASMA is\n"
+	.string "shaking!$"
 
 FuchsiaCity_Gym_Text_GymStatue::
 	.string "FUCHSIA POKéMON GYM\n"

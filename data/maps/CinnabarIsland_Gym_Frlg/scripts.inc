@@ -661,9 +661,9 @@ CinnabarIsland_Gym_Text_BlaineIntro::
 	.string "universe. Starting with you.{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 CinnabarIsland_Gym_Text_BlaineDefeat::
-	.string "I have burned down to nothing!\n"
-	.string "Not even ashes remain!\p"
-	.string "You've earned the UNDERBOSS RANK.$"
+	.string "CYRUS: An error in my calculation…\p"
+	.string "You have earned the UNDERBOSS\n"
+	.string "RANK.$"
 
 CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
 	.string "FIRE BLAST is the ultimate fire\n"
@@ -671,10 +671,11 @@ CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
 	.string "Don't waste it on WATER POKéMON.$"
 
 CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
-	.string "Hah!\p"
-	.string "The UNDERBOSS RANK heightens the\n"
-	.string "SPECIAL stats of your POKéMON.\p"
-	.string "Here, you can have this, too!$"
+	.string "The UNDERBOSS RANK raises your\n"
+	.string "level cap to Lv. 58.\p"
+	.string "With the HM in your BAG, your first\n"
+	.string "POKéMON can climb WATERFALLS.\p"
+	.string "Take this as well.$"
 
 CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine::
 	.string "{PLAYER} received TM38\n"
@@ -688,104 +689,90 @@ CinnabarIsland_Gym_Text_MakeSpaceForThis::
 	.string "Make space for this, child!$"
 
 CinnabarIsland_Gym_Text_ErikIntro::
-	.string "Do you know how hot POKéMON fire\n"
-	.string "breath can get?$"
+	.string "CYRUS doesn't waste time on\n"
+	.string "rookies. Neither do I!$"
 
 CinnabarIsland_Gym_Text_ErikDefeat::
-	.string "Yow!\n"
-	.string "Hot, hot, hot!$"
+	.string "No way! CYRUS is gonna be mad!$"
 
 CinnabarIsland_Gym_Text_ErikPostBattle::
-	.string "Fire, or to be more precise,\n"
-	.string "combustion…\p"
-	.string "…Oxygen in the air…\n"
-	.string "Blah, blah, blah, blah…$"
+	.string "Go on. Show CYRUS what you've got.$"
 
 CinnabarIsland_Gym_Text_QuinnIntro::
-	.string "I was a thief, but I went straight\n"
-	.string "as a TRAINER.$"
+	.string "This is the GYM of TEAM GALACTIC.\n"
+	.string "Turn back while you can!$"
 
 CinnabarIsland_Gym_Text_QuinnDefeat::
-	.string "I surrender!$"
+	.string "No way! CYRUS is gonna be mad!$"
 
 CinnabarIsland_Gym_Text_QuinnPostBattle::
-	.string "I get this uncontrollable urge to\n"
-	.string "steal other people's POKéMON.$"
+	.string "Beat CYRUS and the whole of TEAM\n"
+	.string "GALACTIC will respect you.$"
 
 CinnabarIsland_Gym_Text_AveryIntro::
-	.string "I've studied POKéMON thoroughly.\n"
-	.string "You can't win!$"
+	.string "Another challenger? CYRUS will\n"
+	.string "love this.$"
 
 CinnabarIsland_Gym_Text_AveryDefeat::
-	.string "Waah!\n"
-	.string "My studies were insufficient!$"
+	.string "I lost?! In my own GYM?!$"
 
 CinnabarIsland_Gym_Text_AveryPostBattle::
-	.string "My theories are too complicated\n"
-	.string "for you to understand.$"
+	.string "Every gang in KANTO is watching\n"
+	.string "this GYM.$"
 
 CinnabarIsland_Gym_Text_RamonIntro::
-	.string "I like using FIRE-type POKéMON.\n"
-	.string "I just do.$"
+	.string "You want a RANK? Earn it the hard\n"
+	.string "way!$"
 
 CinnabarIsland_Gym_Text_RamonDefeat::
-	.string "Too hot to handle!$"
+	.string "I lost?! In my own GYM?!$"
 
 CinnabarIsland_Gym_Text_RamonPostBattle::
-	.string "I wish there were a thief POKéMON.\n"
-	.string "I'd use that!$"
+	.string "I trained for months under CYRUS.\n"
+	.string "You still beat me.$"
 
 CinnabarIsland_Gym_Text_DerekIntro::
-	.string "I know why CYRUS became a\n"
-	.string "TRAINER.$"
+	.string "Welcome to our turf. Hope you\n"
+	.string "brought REVIVES!$"
 
 CinnabarIsland_Gym_Text_DerekDefeat::
-	.string "Ow!$"
+	.string "Fine… go on ahead.$"
 
 CinnabarIsland_Gym_Text_DerekPostBattle::
-	.string "Our LEADER, CYRUS, became lost\n"
-	.string "in the mountains but good.\p"
-	.string "Night fell when a fiery bird\n"
-	.string "POKéMON appeared.\p"
-	.string "Its light allowed CYRUS to find\n"
-	.string "his way down safely.$"
+	.string "If you win, you're one step closer\n"
+	.string "to the LEAGUE.$"
 
 CinnabarIsland_Gym_Text_DustyIntro::
-	.string "I've been to many GYMS, but this\n"
-	.string "one best suits my style.$"
+	.string "CYRUS doesn't waste time on\n"
+	.string "rookies. Neither do I!$"
 
 CinnabarIsland_Gym_Text_DustyDefeat::
-	.string "Yowza!\n"
-	.string "Too hot!$"
+	.string "Fine… go on ahead.$"
 
 CinnabarIsland_Gym_Text_DustyPostBattle::
-	.string "PONYTA, NINETALES…\n"
-	.string "Those are popular FIRE POKéMON.$"
+	.string "Go on. Show CYRUS what you've got.$"
 
 CinnabarIsland_Gym_Text_ZacIntro::
-	.string "Fire is weak against H2O.$"
+	.string "Nobody reaches CYRUS without\n"
+	.string "going through me!$"
 
 CinnabarIsland_Gym_Text_ZacDefeat::
-	.string "Oh!\n"
-	.string "Snuffed out!$"
+	.string "Tch… You're the real thing.$"
 
 CinnabarIsland_Gym_Text_ZacPostBattle::
-	.string "Water beats fire, of course.\p"
-	.string "But fire melts ice, so the FIRE\n"
-	.string "type beats ICE-type POKéMON.$"
+	.string "CYRUS is waiting. Don't keep the\n"
+	.string "boss waiting.$"
 
 CinnabarIsland_Gym_Text_GymGuyAdvice::
-	.string "Yo!\n"
-	.string "Champ in the making!\p"
-	.string "The hotheaded CYRUS is a FIRE\n"
-	.string "POKéMON pro.\p"
-	.string "Douse his spirits with water!\p"
-	.string "You'd better take some\n"
-	.string "BURN HEALS, too.$"
+	.string "Yo! Boss in the making!\p"
+	.string "CYRUS of TEAM GALACTIC uses DARK,\n"
+	.string "ICE and FLYING POKéMON.\p"
+	.string "FIGHTING, ROCK and ELECTRIC\n"
+	.string "moves break his perfect logic!$"
 
 CinnabarIsland_Gym_Text_GymGuyPostVictory::
-	.string "{PLAYER}!\n"
-	.string "You beat that firebrand!$"
+	.string "You beat CYRUS! His new world will\n"
+	.string "have to wait!$"
 
 CinnabarIsland_Gym_Text_GymStatue::
 	.string "CINNABAR POKéMON GYM\n"

@@ -42,6 +42,12 @@ GANG_OF = {
     'OneIsland': SEVII, 'TwoIsland': SEVII, 'ThreeIsland': SEVII, 'FourIsland': SEVII, 'FiveIsland': SEVII,
     'SixIsland': SEVII, 'SevenIsland': SEVII, 'MtEmber': SEVII,
 }
+# GYMS: every trainer inside talks about the boss of the GYM ('gym' templates)
+GYM_GANG = {
+    'PewterCity_Gym': YELL, 'CeruleanCity_Gym': SKULL, 'VermilionCity_Gym': ROCKET_A,
+    'CeladonCity_Gym': ('TEAM AQUA and TEAM MAGMA', 'ARCHIE', 'CELADON'),
+    'FuchsiaCity_Gym': PLASMA, 'SaffronCity_Gym': FLARE, 'CinnabarIsland_Gym': GALACTIC, 'ViridianCity_Gym': ROCKET_V,
+}
 SKIP_CLASSES = ('leader', 'elite', 'champion', 'rival', 'boss', 'admin', 'prof', 'pkmn trainer')
 
 # '|' starts a new text box; {G} gang, {B} boss, {T} town
@@ -166,6 +172,16 @@ TEMPLATES = {
         'post': ["{B} will deal with you himself.", "Fine, go ahead. You'll see what's waiting for you.",
                  "I only joined {G} for the money…", "You'd make a great grunt. Ever thought about it?",
                  "Don't tell {B} I lost to you.", "Word is you're GIOVANNI's new star. Is that true?"],
+    },
+    'gym': {
+        'intro': ["Nobody reaches {B} without going through me!", "This is the GYM of {G}. Turn back while you can!",
+                  "You want a RANK? Earn it the hard way!", "{B} doesn't waste time on rookies. Neither do I!",
+                  "Another challenger? {B} will love this.", "Welcome to our turf. Hope you brought REVIVES!"],
+        'defeat': ["Tch… You're the real thing.", "No way! {B} is gonna be mad!", "I lost?! In my own GYM?!",
+                   "Fine… go on ahead."],
+        'post': ["{B} is waiting. Don't keep the boss waiting.", "Beat {B} and the whole of {G} will respect you.",
+                 "I trained for months under {B}. You still beat me.", "Go on. Show {B} what you've got.",
+                 "Every gang in KANTO is watching this GYM.", "If you win, you're one step closer to the LEAGUE."],
     },
     'cool': {
         'intro': ["I trained through the whole outbreak.|Show me what you've got!",
@@ -397,9 +413,63 @@ MANUAL.update({
 })
 
 
+# GYMS: badge explanations (field move + new level cap), boss defeats and the GYM advisor's tips
+MANUAL.update({
+    ('PewterCity_Gym', 'LetMeTakeYouToTheTop'): "Hiya! Do you dream big?|Do you dare to dream of becoming the KINGPIN of KANTO?|I'm no fighter, but I know every boss. Let me take you to the top!",
+    ('PewterCity_Gym', 'YoureChampMaterial'): "Just as I thought! You're KINGPIN material!",
+    ('CeruleanCity_Gym', 'MistyDefeat'): "GUZMA: What?! Beat down by a rookie?|…Fine. Take the RUNNER RANK. You earned it.",
+    ('CeruleanCity_Gym', 'ExplainCascadeBadge'): "The RUNNER RANK raises your level cap to Lv. 32.|With the HM in your BAG, your first POKéMON can CUT small trees, even if it never learned the move.|Here, take my favorite TM too.",
+    ('CeruleanCity_Gym', 'GymGuyAdvice'): "Yo! Boss in the making!|GUZMA of TEAM SKULL uses BUG and WATER POKéMON.|FIRE, FLYING and ROCK moves crush his bugs. ELECTRIC zaps the water ones!",
+    ('CeruleanCity_Gym', 'WeMakePrettyGoodTeam'): "You beat GUZMA! See, what'd I tell ya?|You and me, kid, we make a pretty good crew!",
+    ('VermilionCity_Gym', 'LtSurgeDefeat'): "ARCHER: Impossible…|You're the real deal, kid. Take the SOLDIER RANK!",
+    ('VermilionCity_Gym', 'ExplainThunderBadgeTakeThis'): "The SOLDIER RANK raises your level cap to Lv. 38.|With the HM in your BAG, any POKéMON in your crew can FLY.|Take this too, kid!",
+    ('VermilionCity_Gym', 'GymGuyAdvice'): "Yo! Boss in the making!|ARCHER of the NEW TEAM ROCKET uses POISON and DARK POKéMON.|GROUND moves wreck the poison ones, FIGHTING moves the dark ones.|ARCHER is careful. He locked himself in, so it won't be easy to reach him.",
+    ('VermilionCity_Gym', 'GymGuyPostVictory'): "Whew! You took down a ROCKET executive!",
+    ('CeladonCity_Gym', 'ErikaDefeat'): "ARCHIE: Bwahahaha! Beaten, and by a kid!|MAXIE: Logic says you deserve the ENFORCER RANK.",
+    ('CeladonCity_Gym', 'ExplainRainbowBadgeTakeThis'): "The ENFORCER RANK raises your level cap to Lv. 44.|With the HM in your BAG, your first POKéMON can use STRENGTH outside of battle.|Take this with you too.",
+    ('CeladonCity_Gym', 'KayIntro'): "This GYM belongs to TEAM AQUA and TEAM MAGMA. Pick a side or get lost!",
+    ('FuchsiaCity_Gym', 'KogaDefeat'): "GHETSIS: Impossible! A mere pawn…|Take the HITMAN RANK. For now.",
+    ('FuchsiaCity_Gym', 'KogaExplainSoulBadge'): "The HITMAN RANK raises your level cap to Lv. 49.|With the HM in your BAG, your first POKéMON can SURF outside of battle.|Take this too.",
+    ('FuchsiaCity_Gym', 'GymGuyAdvice'): "Yo! Boss in the making!|This GYM is full of invisible walls! GHETSIS looks close, but he's blocked off.|Find the gaps in the walls to reach him.|His HYDREIGON is DARK and DRAGON. FAIRY and FIGHTING moves hit it hard!",
+    ('FuchsiaCity_Gym', 'GymGuyPostVictory'): "You beat GHETSIS! TEAM PLASMA is shaking!",
+    ('SaffronCity_Gym', 'SabrinaDefeat'): "LYSANDRE: This loss… is beautiful in its own way.|You have earned the CAPO RANK.",
+    ('SaffronCity_Gym', 'ExplainMarshBadgeTakeThis'): "The CAPO RANK raises your level cap to Lv. 54.|With the HM in your BAG, your first POKéMON can use ROCK SMASH outside of battle.|Please take this TM as well.",
+    ('SaffronCity_Gym', 'GymGuyAdvice'): "Yo! Boss in the making!|LYSANDRE of TEAM FLARE uses FIRE, DARK and FLYING POKéMON.|WATER, ROCK and ELECTRIC moves will burn him out!",
+    ('SaffronCity_Gym', 'GymGuyPostVictory'): "You beat LYSANDRE! TEAM FLARE's fashion show is over!",
+    ('CinnabarIsland_Gym', 'BlaineDefeat'): "CYRUS: An error in my calculation…|You have earned the UNDERBOSS RANK.",
+    ('CinnabarIsland_Gym', 'ExplainVolcanoBadge'): "The UNDERBOSS RANK raises your level cap to Lv. 58.|With the HM in your BAG, your first POKéMON can climb WATERFALLS.|Take this as well.",
+    ('CinnabarIsland_Gym', 'GymGuyAdvice'): "Yo! Boss in the making!|CYRUS of TEAM GALACTIC uses DARK, ICE and FLYING POKéMON.|FIGHTING, ROCK and ELECTRIC moves break his perfect logic!",
+    ('CinnabarIsland_Gym', 'GymGuyPostVictory'): "You beat CYRUS! His new world will have to wait!",
+    ('ViridianCity_Gym', 'GiovanniPostBattle'): "You surpassed me, recruit. No… boss.|TEAM ROCKET follows you now.|Go to the POKéMON LEAGUE and take all of KANTO for us.|I'll be watching.",
+    ('ViridianCity_Gym', 'ExplainEarthBadgeTakeThis'): "The KINGPIN RANK raises your level cap to Lv. 66.|It is the mark of a true boss. With it, you can challenge the POKéMON LEAGUE.|Take this TM too. A gift for your LEAGUE challenge.",
+    ('ViridianCity_Gym', 'GymGuyAdvice'): "Yo! Boss in the making!|This is GIOVANNI's own GYM. He is the toughest boss of all.|His team is all GROUND. WATER, GRASS and ICE moves are your best bet!",
+    ('ViridianCity_Gym', 'GymGuyPostVictory'): "Blow me away! You beat GIOVANNI himself!",
+})
+
+# texts with control codes (badge fanfare, music) keep those lines as they are
+RAW = {
+    ('PewterCity_Gym', 'BrockDefeat'): [
+        "I took you for granted, and so\\n", "I lost.\\p",
+        "Word on the street is you're GIOVANNI's\\n", "new blood. Fine. You earned your\\l", "first stripe.\\p",
+        "{FONT_NORMAL}{PLAYER} was promoted to\\n",
+        "PROSPECT!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\\p",
+        "{FONT_MALE}The PROSPECT RANK raises your\\n", "level cap to Lv. 27.\\p",
+        "With the HM in your BAG, your first\\n", "POKéMON can use FLASH, even if it\\l", "never learned the move.$"],
+    ('ViridianCity_Gym', 'GiovanniIntro'): [
+        "Fwahahaha!\\n", "So, my recruit has come home.\\p",
+        "You took every RANK in KANTO.\\n", "Now try to take mine!\\p",
+        "Once more, you shall face\\n", "GIOVANNI, the greatest TRAINER!{PLAY_BGM}{MUS_RG_ENCOUNTER_ROCKET}$"],
+    ('ViridianCity_Gym', 'GiovanniDefeat'): [
+        "Ha!\\n", "That was a truly intense fight.\\l", "You have won!\\p",
+        "Take my place - the KINGPIN RANK!\\n",
+        "{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}$"],
+}
+
+
 # texts with hints the player needs (keys, passwords, teleport tiles, the SILPH SCOPE …) keep their wording
 ORIG_REF = 'f93f63af'   # last commit before this tool touched any texts
 HINTS = re.compile(r'KEY|SCOPE|ELEVATOR|LIFT|PASSWORD|TELEPORT|HINT|TILE|SWITCH|BASEMENT|SECRET|FLUTE|GOLD TEETH|'
+                   r'DOOR|LOCK|WALL|GAP|TRASH|QUIZ|ARROW|PANEL|FLOOR|SPIN|'
                    r'STRENGTH|SURF|CUT|FLASH|BOULDER|HOLE|STAIRS|LADDER|TICKET|PASS\b', re.I)
 MAX_WIDTH = 180   # pixels per line (the message box fits about 200)
 
@@ -490,17 +560,21 @@ def main():
         orig = original_texts(path)
         changed = 0
         gang = GANG_OF.get(mapname) or next((g for k, g in GANG_OF.items() if mapname.startswith(k + '_')), None)
-        if 'Gym' in mapname or mapname.startswith('PokemonLeague'):
-            gang = None   # gym and league trainers have their own texts
+        gym = GYM_GANG.get(mapname)
+        if gym:
+            gang = gym
+        elif 'Gym' in mapname or mapname.startswith('PokemonLeague'):
+            gang = None   # the league has its own texts
         if gang:
             used = {}
             prefix = mapname + '_Text_'
             for trainer, intro, defeat in all_battles:
                 if not intro.startswith(prefix) or 'Rematch' in intro or not intro.endswith('Intro'):
                     continue
-                if 'RIVAL' in trainer or any(k in classes.get(trainer, '') for k in SKIP_CLASSES):
+                if 'RIVAL' in trainer or trainer.startswith(('TRAINER_LEADER', 'TRAINER_GANG_')) \
+                        or any(k in classes.get(trainer, '') for k in SKIP_CLASSES):
                     continue
-                grp = group_of(classes.get(trainer, ''))
+                grp = 'gym' if gym else group_of(classes.get(trainer, ''))
                 base = intro[:-len('Intro')]
                 post = base + 'PostBattle' if re.search(r'^%sPostBattle:' % re.escape(base), s, re.M) else base + 'Post'
                 h = int(hashlib.md5((mapname + grp).encode()).hexdigest(), 16)   # one rotation per route and group
@@ -522,6 +596,11 @@ def main():
                     m = re.search(r'^(\w+_Text_%s)::?$' % re.escape(suffix), s, re.M)
                     if m:
                         s, ok = replace(s, m.group(1), wrap(text))
+                assert ok, (mp, suffix)
+                changed += ok
+        for (mp, suffix), lines in RAW.items():
+            if mp == mapname:
+                s, ok = replace(s, '%s_Text_%s' % (mapname, suffix), lines)
                 assert ok, (mp, suffix)
                 changed += ok
         if changed:

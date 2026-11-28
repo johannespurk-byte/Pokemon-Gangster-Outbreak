@@ -296,12 +296,11 @@ VermilionCity_Gym_Text_LtSurgePostBattle::
 	.string "Tell GIOVANNI we're waiting.$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
-	.string "The SOLDIER RANK cranks up your\n"
-	.string "POKéMON's SPEED!\p"
-	.string "It also lets your POKéMON FLY\n"
-	.string "lightning-quick anytime, kid!\p"
-	.string "You're special, kid!\n"
-	.string "Take this!$"
+	.string "The SOLDIER RANK raises your\n"
+	.string "level cap to Lv. 38.\p"
+	.string "With the HM in your BAG, any\n"
+	.string "POKéMON in your crew can FLY.\p"
+	.string "Take this too, kid!$"
 
 VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
 	.string "{PLAYER} received TM34\n"
@@ -315,18 +314,16 @@ VermilionCity_Gym_Text_MakeRoomInYourBag::
 	.string "Yo, kid, make room in your BAG!$"
 
 VermilionCity_Gym_Text_LtSurgeDefeat::
-	.string "Now that's a shocker!\p"
-	.string "You're the real deal, kid!\p"
-	.string "Fine, then, take the SOLDIER RANK!$"
+	.string "ARCHER: Impossible…\p"
+	.string "You're the real deal, kid. Take the\n"
+	.string "SOLDIER RANK!$"
 
 VermilionCity_Gym_Text_TuckerIntro::
-	.string "When I was in the Army, ARCHER\n"
-	.string "was my strict CO.\p"
-	.string "He was a hard taskmaster.$"
+	.string "You want a RANK? Earn it the hard\n"
+	.string "way!$"
 
 VermilionCity_Gym_Text_TuckerDefeat::
-	.string "Stop!\n"
-	.string "You're very good!$"
+	.string "I lost?! In my own GYM?!$"
 
 VermilionCity_Gym_Text_TuckerPostBattle::
 	.string "It's not easy opening that door.\p"
@@ -334,12 +331,11 @@ VermilionCity_Gym_Text_TuckerPostBattle::
 	.string "his cautious nature in the Army.$"
 
 VermilionCity_Gym_Text_BailyIntro::
-	.string "I'm a lightweight, but I'm good\n"
-	.string "with electricity!\p"
-	.string "That's why I joined this GYM.$"
+	.string "This is the GYM of TEAM ROCKET.\n"
+	.string "Turn back while you can!$"
 
 VermilionCity_Gym_Text_BailyDefeat::
-	.string "Fried!$"
+	.string "No way! ARCHER is gonna be mad!$"
 
 VermilionCity_Gym_Text_BailyPostBattle::
 	.string "Okay, I'll talk!\p"
@@ -347,12 +343,11 @@ VermilionCity_Gym_Text_BailyPostBattle::
 	.string "switches inside something.$"
 
 VermilionCity_Gym_Text_DwayneIntro::
-	.string "This is no place for kids!\n"
-	.string "Not even if you're good!$"
+	.string "Nobody reaches ARCHER without\n"
+	.string "going through me!$"
 
 VermilionCity_Gym_Text_DwayneDefeat::
-	.string "Wow!\n"
-	.string "Surprised me!$"
+	.string "Tch… You're the real thing.$"
 
 VermilionCity_Gym_Text_DwaynePostBattle::
 	.string "ARCHER installed the traps in\n"
@@ -363,23 +358,19 @@ VermilionCity_Gym_Text_DwaynePostBattle::
 	.string "second lock is right next to it.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
-	.string "Yo!\n"
-	.string "Champ in the making!\p"
-	.string "ARCHER has a nickname.\p"
-	.string "People refer to him as the\n"
-	.string "Lightning American!\p"
-	.string "He's an expert on electric\n"
-	.string "POKéMON.\p"
-	.string "BIRD/WATER-type POKéMON match\n"
-	.string "poorly against the ELECTRIC type.\p"
-	.string "Beware of paralysis, too.\p"
-	.string "ARCHER is very cautious.\p"
-	.string "He's locked himself in, so it won't\n"
-	.string "be easy getting to him.$"
+	.string "Yo! Boss in the making!\p"
+	.string "ARCHER of the NEW TEAM ROCKET\n"
+	.string "uses POISON and DARK POKéMON.\p"
+	.string "GROUND moves wreck the poison\n"
+	.string "ones, FIGHTING moves the dark\p"
+	.string "ones.\p"
+	.string "ARCHER is careful. He locked\n"
+	.string "himself in, so it won't be easy to\p"
+	.string "reach him.$"
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
-	.string "Whew!\n"
-	.string "That match was electric!$"
+	.string "Whew! You took down a ROCKET\n"
+	.string "executive!$"
 
 VermilionCity_Gym_Text_GymStatue::
 	.string "VERMILION POKéMON GYM\n"

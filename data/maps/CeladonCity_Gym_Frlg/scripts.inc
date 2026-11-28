@@ -98,10 +98,9 @@ CeladonCity_Gym_Text_ErikaIntro::
 	.string "Two bosses, one GYM. Ready?$"
 
 CeladonCity_Gym_Text_ErikaDefeat::
-	.string "Oh!\n"
-	.string "I concede defeat.\l"
-	.string "You are remarkably strong.\p"
-	.string "I must confer on you the\n"
+	.string "ARCHIE: Bwahahaha! Beaten, and by\n"
+	.string "a kid!\p"
+	.string "MAXIE: Logic says you deserve the\n"
 	.string "ENFORCER RANK.$"
 
 CeladonCity_Gym_Text_ErikaPostBattle::
@@ -109,11 +108,12 @@ CeladonCity_Gym_Text_ErikaPostBattle::
 	.string "now. Bwahahaha!$"
 
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
-	.string "The ENFORCER RANK will make\n"
-	.string "POKéMON up to Lv. 50 obey.\p"
-	.string "It also allows POKéMON to use\n"
-	.string "STRENGTH in and out of battle.\p"
-	.string "Please also take this with you.$"
+	.string "The ENFORCER RANK raises your\n"
+	.string "level cap to Lv. 44.\p"
+	.string "With the HM in your BAG, your first\n"
+	.string "POKéMON can use STRENGTH outside\p"
+	.string "of battle.\p"
+	.string "Take this with you too.$"
 
 CeladonCity_Gym_Text_ReceivedTM19FromErika::
 	.string "{PLAYER} received TM19\n"
@@ -130,55 +130,51 @@ CeladonCity_Gym_Text_ShouldMakeRoomForThis::
 	.string "You should make room for this.$"
 
 CeladonCity_Gym_Text_KayIntro::
-	.string "I should tell you about this GYM.\p"
-	.string "Only real ladies are allowed in\n"
-	.string "here!$"
+	.string "This GYM belongs to TEAM AQUA and\n"
+	.string "TEAM MAGMA. Pick a side or get\p"
+	.string "lost!$"
 
 CeladonCity_Gym_Text_KayDefeat::
-	.string "You're too rough!$"
+	.string "I lost?! In my own GYM?!$"
 
 CeladonCity_Gym_Text_KayPostBattle::
-	.string "Bleaah!\n"
-	.string "I hope ARCHIE wipes you out!$"
+	.string "Every gang in KANTO is watching\n"
+	.string "this GYM.$"
 
 CeladonCity_Gym_Text_BridgetIntro::
-	.string "Oh, welcome.\n"
-	.string "I was getting bored.$"
+	.string "Nobody reaches ARCHIE without\n"
+	.string "going through me!$"
 
 CeladonCity_Gym_Text_BridgetDefeat::
-	.string "My makeup!$"
+	.string "Tch… You're the real thing.$"
 
 CeladonCity_Gym_Text_BridgetPostBattle::
-	.string "GRASS-type POKéMON are tough\n"
-	.string "against the WATER type.\p"
-	.string "They also have an edge on ROCK-\n"
-	.string "and GROUND-type POKéMON.$"
+	.string "ARCHIE is waiting. Don't keep the\n"
+	.string "boss waiting.$"
 
 CeladonCity_Gym_Text_TinaIntro::
-	.string "…Weren't you peeking in here\n"
-	.string "earlier?$"
+	.string "Welcome to our turf. Hope you\n"
+	.string "brought REVIVES!$"
 
 CeladonCity_Gym_Text_TinaDefeat::
-	.string "You're an eye-opener!$"
+	.string "Fine… go on ahead.$"
 
 CeladonCity_Gym_Text_TinaPostBattle::
-	.string "Oh, you were looking at ARCHIE…\n"
-	.string "You weren't looking at me…$"
+	.string "If you win, you're one step closer\n"
+	.string "to the LEAGUE.$"
 
 CeladonCity_Gym_Text_TamiaIntro::
-	.string "Look, look!\n"
-	.string "See my POKéMON!\p"
-	.string "I like the GRASS type.\n"
-	.string "I like how they're easy to raise.$"
+	.string "This is the GYM of TEAM AQUA and\n"
+	.string "TEAM MAGMA. Turn back while you\p"
+	.string "can!$"
 
 CeladonCity_Gym_Text_TamiaDefeat::
-	.string "No!$"
+	.string "No way! ARCHIE is gonna be mad!$"
 
 CeladonCity_Gym_Text_TamiaPostBattle::
-	.string "We only use GRASS-type POKéMON at\n"
-	.string "our GYM.\p"
-	.string "Why? We also use them for making\n"
-	.string "flower arrangements!$"
+	.string "Beat ARCHIE and the whole of TEAM\n"
+	.string "AQUA and TEAM MAGMA will respect\p"
+	.string "you.$"
 
 CeladonCity_Gym_Text_LisaIntro::
 	.string "Uhuhuhu…\p"
@@ -194,30 +190,26 @@ CeladonCity_Gym_Text_LisaPostBattle::
 	.string "You don't stand a chance. Uhuhu…$"
 
 CeladonCity_Gym_Text_LoriIntro::
-	.string "Pleased to meet you.\n"
-	.string "My hobby is POKéMON training.$"
+	.string "You want a RANK? Earn it the hard\n"
+	.string "way!$"
 
 CeladonCity_Gym_Text_LoriDefeat::
-	.string "Oh!\n"
-	.string "Splendid!$"
+	.string "I lost?! In my own GYM?!$"
 
 CeladonCity_Gym_Text_LoriPostBattle::
-	.string "I have a blind date coming up.\n"
-	.string "I have to learn to be polite,\l"
-	.string "especially if I have to battle.$"
+	.string "I trained for months under\n"
+	.string "ARCHIE. You still beat me.$"
 
 CeladonCity_Gym_Text_MaryIntro::
-	.string "Welcome to CELADON GYM!\p"
-	.string "You'd better not underestimate\n"
-	.string "the nice ladies here.$"
+	.string "ARCHIE doesn't waste time on\n"
+	.string "rookies. Neither do I!$"
 
 CeladonCity_Gym_Text_MaryDefeat::
-	.string "Oh!\n"
-	.string "Beaten!$"
+	.string "Fine… go on ahead.$"
 
 CeladonCity_Gym_Text_MaryPostBattle::
-	.string "I didn't bring my best POKéMON.\n"
-	.string "Wait until next time!$"
+	.string "Go on. Show ARCHIE what you've\n"
+	.string "got.$"
 
 CeladonCity_Gym_Text_GymStatue::
 	.string "CELADON POKéMON GYM\n"

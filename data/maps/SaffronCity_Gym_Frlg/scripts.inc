@@ -102,25 +102,21 @@ SaffronCity_Gym_Text_SabrinaIntro::
 	.string "Prove that you are one of them!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 SaffronCity_Gym_Text_SabrinaDefeat::
-	.string "This loss shocks me!\n"
-	.string "But, a loss is a loss.\p"
-	.string "I admit, I didn't work hard enough\n"
-	.string "to win.\p"
-	.string "Your victory has earned you the\n"
-	.string "CAPO RANK.$"
+	.string "LYSANDRE: This loss… is beautiful\n"
+	.string "in its own way.\p"
+	.string "You have earned the CAPO RANK.$"
 
 SaffronCity_Gym_Text_SabrinaPostBattle::
 	.string "You are beautiful in your own way.\n"
 	.string "TEAM FLARE salutes you.$"
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
-	.string "The CAPO RANK makes POKéMON up\n"
-	.string "to Lv. 70 obey you.\p"
-	.string "Stronger POKéMON will become wild,\n"
-	.string "ignoring your orders in battle.\p"
-	.string "Just don't raise your POKéMON too\n"
-	.string "much to avoid that problem.\p"
-	.string "Wait, please take this TM with you.$"
+	.string "The CAPO RANK raises your level\n"
+	.string "cap to Lv. 54.\p"
+	.string "With the HM in your BAG, your first\n"
+	.string "POKéMON can use ROCK SMASH\p"
+	.string "outside of battle.\p"
+	.string "Please take this TM as well.$"
 
 SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
 	.string "{PLAYER} received TM04 from\n"
@@ -135,72 +131,66 @@ SaffronCity_Gym_Text_BagFullOfOtherItems::
 	.string "Your BAG is full of other items.$"
 
 SaffronCity_Gym_Text_AmandaIntro::
-	.string "LYSANDRE is far younger than I,\n"
-	.string "but she has earned my respect.$"
+	.string "Another challenger? LYSANDRE will\n"
+	.string "love this.$"
 
 SaffronCity_Gym_Text_AmandaDefeat::
-	.string "Not good enough!$"
+	.string "Tch… You're the real thing.$"
 
 SaffronCity_Gym_Text_AmandaPostBattle::
-	.string "In a battle of equals, the one\n"
-	.string "with the stronger will wins.\p"
-	.string "If you wish to beat LYSANDRE, focus\n"
-	.string "and will yourself to victory.$"
+	.string "Every gang in KANTO is watching\n"
+	.string "this GYM.$"
 
 SaffronCity_Gym_Text_JohanIntro::
-	.string "Does our unseen power scare you?$"
+	.string "Nobody reaches LYSANDRE without\n"
+	.string "going through me!$"
 
 SaffronCity_Gym_Text_JohanDefeat::
-	.string "I never foresaw this!$"
+	.string "Tch… You're the real thing.$"
 
 SaffronCity_Gym_Text_JohanPostBattle::
-	.string "PSYCHIC POKéMON fear only ghosts\n"
-	.string "and bugs!$"
+	.string "LYSANDRE is waiting. Don't keep\n"
+	.string "the boss waiting.$"
 
 SaffronCity_Gym_Text_StacyIntro::
-	.string "POKéMON take on the appearance of\n"
-	.string "their TRAINERS.\p"
-	.string "Your POKéMON must be tough, then!$"
+	.string "Welcome to our turf. Hope you\n"
+	.string "brought REVIVES!$"
 
 SaffronCity_Gym_Text_StacyDefeat::
-	.string "I knew it!$"
+	.string "No way! LYSANDRE is gonna be mad!$"
 
 SaffronCity_Gym_Text_StacyPostBattle::
-	.string "I have much to learn still…\p"
-	.string "I must master PSYCHIC and teach it\n"
-	.string "to my POKéMON…$"
+	.string "If you win, you're one step closer\n"
+	.string "to the LEAGUE.$"
 
 SaffronCity_Gym_Text_TyronIntro::
-	.string "You understand, don't you?\p"
-	.string "That power alone isn't enough to\n"
-	.string "win in the world of POKéMON?$"
+	.string "This is the GYM of TEAM FLARE.\n"
+	.string "Turn back while you can!$"
 
 SaffronCity_Gym_Text_TyronDefeat::
-	.string "I don't believe this!$"
+	.string "No way! LYSANDRE is gonna be mad!$"
 
 SaffronCity_Gym_Text_TyronPostBattle::
 	.string "LYSANDRE just wiped out the KARATE\n"
 	.string "MASTER next door.$"
 
 SaffronCity_Gym_Text_TashaIntro::
-	.string "You and I, our POKéMON shall\n"
-	.string "battle!$"
+	.string "Nobody reaches LYSANDRE without\n"
+	.string "going through me!$"
 
 SaffronCity_Gym_Text_TashaDefeat::
-	.string "I lost after all!$"
+	.string "I lost?! In my own GYM?!$"
 
 SaffronCity_Gym_Text_TashaPostBattle::
-	.string "I knew that this was going to take\n"
-	.string "place.$"
+	.string "LYSANDRE is waiting. Don't keep\n"
+	.string "the boss waiting.$"
 
 SaffronCity_Gym_Text_CameronIntro::
-	.string "LYSANDRE is young, but she's also\n"
-	.string "our highly skilled LEADER.\p"
-	.string "You won't reach her easily!$"
+	.string "You want a RANK? Earn it the hard\n"
+	.string "way!$"
 
 SaffronCity_Gym_Text_CameronDefeat::
-	.string "Ow!\n"
-	.string "Down and out!$"
+	.string "I lost?! In my own GYM?!$"
 
 SaffronCity_Gym_Text_CameronPostBattle::
 	.string "There used to be two POKéMON GYMS\n"
@@ -211,32 +201,26 @@ SaffronCity_Gym_Text_CameronPostBattle::
 	.string "decided to have just one GYM.$"
 
 SaffronCity_Gym_Text_PrestonIntro::
-	.string "SAFFRON POKéMON GYM is famous for\n"
-	.string "training psychics.\p"
-	.string "You want to see LYSANDRE, don't\n"
-	.string "you? I can tell!$"
+	.string "LYSANDRE doesn't waste time on\n"
+	.string "rookies. Neither do I!$"
 
 SaffronCity_Gym_Text_PrestonDefeat::
-	.string "Arrrgh!$"
+	.string "Fine… go on ahead.$"
 
 SaffronCity_Gym_Text_PrestonPostBattle::
-	.string "That's right! I used telepathy to\n"
-	.string "read your mind!$"
+	.string "Go on. Show LYSANDRE what you've\n"
+	.string "got.$"
 
 SaffronCity_Gym_Text_GymGuyAdvice::
-	.string "Yo!\n"
-	.string "Champ in the making!\p"
-	.string "LYSANDRE's POKéMON use psychic\n"
-	.string "power instead of force.\p"
-	.string "FIGHTING POKéMON are especially\n"
-	.string "weak against PSYCHIC POKéMON.\p"
-	.string "They'll get destroyed before they\n"
-	.string "can even aim a punch!$"
+	.string "Yo! Boss in the making!\p"
+	.string "LYSANDRE of TEAM FLARE uses FIRE,\n"
+	.string "DARK and FLYING POKéMON.\p"
+	.string "WATER, ROCK and ELECTRIC moves\n"
+	.string "will burn him out!$"
 
 SaffronCity_Gym_Text_GymGuyPostVictory::
-	.string "Psychic power, huh?\p"
-	.string "If I had that, I'd make a bundle\n"
-	.string "at the slots!$"
+	.string "You beat LYSANDRE! TEAM FLARE's\n"
+	.string "fashion show is over!$"
 
 SaffronCity_Gym_Text_GymStatue::
 	.string "SAFFRON POKéMON GYM\n"
