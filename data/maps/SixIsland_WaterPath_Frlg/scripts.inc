@@ -97,8 +97,8 @@ SixIsland_WaterPath_Text_MiaNotEnoughMons::
 	.string "Don't you feel lonesome?$"
 
 SixIsland_WaterPath_Text_WantedUltimateHorn::
-	.string "Wanted!\n"
-	.string "The Ultimate Horn!$"
+	.string "Wanted! The Ultimate Horn!\p"
+	.string "Reward paid in cash. No gangsters.$"
 
 SixIsland_WaterPath_Text_RouteSign::
 	.string "WATER PATH\n"

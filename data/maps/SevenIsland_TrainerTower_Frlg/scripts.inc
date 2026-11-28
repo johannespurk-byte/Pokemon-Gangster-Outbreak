@@ -36,8 +36,9 @@ SevenIsland_TrainerTower_Text_RodettePostBattle::
 	.string "already.$"
 
 SevenIsland_TrainerTower_Text_TrainerTowerSign::
-	.string "TRAINER TOWER ENTRANCE\n"
-	.string "Rise to the Challenge, TRAINERS!$"
+	.string "TRAINER TOWER ENTRANCE\p"
+	.string "Rise to the Challenge! Gang\n"
+	.string "Bosses Welcome!$"
 
 SevenIsland_TrainerTower_Text_TrainerTowerAhead::
 	.string "TRAINER TOWER AHEAD$"

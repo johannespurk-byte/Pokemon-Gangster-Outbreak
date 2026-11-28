@@ -273,10 +273,10 @@ FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe::
 
 FiveIsland_RocketWarehouse_Text_GiovannisKidHasRedHair::
 	.string "What, you again?\p"
-	.string "You… You're not GIOVANNI's kid,\n"
-	.string "are you?\p"
-	.string "No, that can't be right!\n"
-	.string "GIOVANNI's kid has red hair.\p"
-	.string "You don't have any reasons for\n"
-	.string "bugging me. Leave me alone!$"
+	.string "You're GIOVANNI's new recruit,\n"
+	.string "aren't you?\p"
+	.string "The boss's real kid has red hair…\n"
+	.string "SILVER. Where is he?\p"
+	.string "Tell GIOVANNI the islands are ours\n"
+	.string "now!$"
 

@@ -87,6 +87,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_JonNotEnoughMons::
 
 SevenIsland_SevaultCanyon_Entrance_Text_RouteSign::
 	.string "SEVAULT CANYON ENTRANCE\p"
-	.string "TRAINERS are asked to refrain from\n"
-	.string "damaging plants in the CANYON.$"
+	.string "Please don't damage the plants.\n"
+	.string "Or the RUINS. Looking at you,\p"
+	.string "ROCKETS.$"
 

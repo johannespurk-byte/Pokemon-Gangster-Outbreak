@@ -163,7 +163,8 @@ OneIsland_KindleRoad_Text_MikNotEnoughMons::
 
 OneIsland_KindleRoad_Text_RouteSign::
 	.string "This is KINDLE ROAD.\p"
-	.string "Go straight for MT. EMBER.$"
+	.string "Go straight for MT. EMBER. Beware\n"
+	.string "of diggers!$"
 
 OneIsland_KindleRoad_Text_EmberSpaSign::
 	.string "Light the Fire in Your Heart!\n"

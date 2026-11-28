@@ -27,11 +27,10 @@ ThreeIsland_PokemonCenter_1F_EventScript_Rocker::
 	end
 
 ThreeIsland_PokemonCenter_1F_Text_PCNetworkCanLinkWithKanto::
-	.string "Hey, did you hear the news?\p"
-	.string "The PC network here can now link\n"
-	.string "with PCs in KANTO.\p"
-	.string "I don't know how that came about,\n"
-	.string "but it's fantastic!$"
+	.string "Did you hear? The PCs here can\n"
+	.string "link with KANTO now.\p"
+	.string "Let's hope the gangs can't hack\n"
+	.string "them.$"
 
 ThreeIsland_PokemonCenter_1F_Text_ImpossibleToSurfBetweenIslands::
 	.string "You can't SURF between the\n"

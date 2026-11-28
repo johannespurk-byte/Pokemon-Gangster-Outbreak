@@ -35,11 +35,9 @@ SevenIsland_PokemonCenter_1F_Text_EventsDependingOnConnections::
 
 SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere::
 	.string "Did you ride a SEAGALLOP ferry\n"
-	.string "to get here?\p"
-	.string "There are at least ten of those\n"
-	.string "high-speed ships.\p"
-	.string "I don't know where they all go,\n"
-	.string "though.$"
+	.string "here?\p"
+	.string "They're fast. The gangs can't\n"
+	.string "catch them!$"
 
 SevenIsland_PokemonCenter_1F_Text_CheckOutTrainerTower::
 	.string "If you're confident, check out\n"

@@ -23,10 +23,11 @@ SixIsland_Text_IslandSign::
 	.string "Old and Wise. Nobody Bothers Us.$"
 
 SixIsland_Text_ThatWayToWaterPathRuinValley::
-	.string "Keep going this way and you'll get\n"
-	.string "to the WATER PATH.\p"
-	.string "Stay on that and you'll get to\n"
-	.string "the RUIN VALLEY.$"
+	.string "Keep going this way to reach the\n"
+	.string "WATER PATH. It leads to RUIN\p"
+	.string "VALLEY.\p"
+	.string "TEAM ROCKET has been sniffing\n"
+	.string "around there too.$"
 
 SixIsland_Text_SkyAtNightIsFantastic::
 	.string "Far from the burning cities, the\n"

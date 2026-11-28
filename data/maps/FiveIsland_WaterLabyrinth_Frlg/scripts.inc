@@ -64,12 +64,10 @@ FiveIsland_WaterLabyrinth_EventScript_ReturnForEgg::
 	end
 
 FiveIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons::
-	.string "You travel all over the place,\n"
-	.string "don't you?\p"
-	.string "You're not driving your POKéMON\n"
-	.string "too harshly, are you?\p"
-	.string "Let me take a look.\n"
-	.string "… … …   … … …$"
+	.string "You travel a lot, don't you?\p"
+	.string "Gang life is hard. You're not\n"
+	.string "driving your POKéMON too harshly,\p"
+	.string "are you?$"
 
 FiveIsland_WaterLabyrinth_Text_HmmISeeIsee::
 	.string "Ah, hmm…\n"

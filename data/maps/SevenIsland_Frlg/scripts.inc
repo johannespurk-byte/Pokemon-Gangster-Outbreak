@@ -43,13 +43,10 @@ SevenIsland_Text_IslandSign::
 	.string "the World$"
 
 SevenIsland_Text_IslandsMadeInSevenDays::
-	.string "These islands are called the SEVII\n"
-	.string "ISLANDS because there are seven.\p"
-	.string "…Or at least that's what the young\n"
-	.string "people believe.\p"
-	.string "The truth is, these islands are so\n"
-	.string "named because they are said to\l"
-	.string "have been made in seven days.$"
+	.string "They're called the SEVII ISLANDS\n"
+	.string "because there are seven.\p"
+	.string "…At least that's what they say.\n"
+	.string "Plenty of places to hide.$"
 
 SevenIsland_Text_IslandVirtuallyUntouched::
 	.string "This island is untouched. No\n"

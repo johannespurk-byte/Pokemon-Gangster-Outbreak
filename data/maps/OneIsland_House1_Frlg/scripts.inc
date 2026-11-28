@@ -15,6 +15,7 @@ OneIsland_House1_Text_GazeUponVolcanoOnSunnyDays::
 	.string "At least it's not a burning city.$"
 
 OneIsland_House1_Text_LastTimeMtEmberErupted::
-	.string "Let me think… When was the last\n"
-	.string "time MT. EMBER erupted?$"
+	.string "When did MT. EMBER last erupt?\p"
+	.string "…Before the cities started\n"
+	.string "burning, at least.$"
 

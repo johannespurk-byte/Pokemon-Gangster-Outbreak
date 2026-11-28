@@ -43,14 +43,13 @@ FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland::
 	.string "irresponsible to my home…$"
 
 FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile::
-	.string "LORELEI: So, you managed to solve\n"
-	.string "all the problems here?\p"
-	.string "That's wonderful.\p"
-	.string "That means there isn't any reason\n"
-	.string "for me to be here all the time.\p"
-	.string "Thank you…\p"
-	.string "I'll return to the POKéMON LEAGUE\n"
-	.string "in a short while.$"
+	.string "LORELEI: You solved all the\n"
+	.string "problems here?\p"
+	.string "Wonderful. Then I can go back to\n"
+	.string "KANTO.\p"
+	.string "The LEAGUE is in the hands of\n"
+	.string "strangers now. I want my place\p"
+	.string "back.$"
 
 FourIsland_LoreleisHouse_Text_WillDoWhatICanHereAndNow::
 	.string "I don't know what will happen in\n"

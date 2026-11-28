@@ -55,13 +55,9 @@ OneIsland_KindleRoad_EmberSpa_EventScript_SpaHeal::
 	end
 
 OneIsland_KindleRoad_EmberSpa_Text_WaterWarmsMeToCore::
-	.string "Hm!\n"
-	.string "Haaaaaaaaaaah!\p"
-	.string "Aaaah! This is heavenly!\n"
-	.string "The water warms me to my core!\p"
-	.string "You should jump in, too.\p"
-	.string "Go to the middle, relax, and get\n"
-	.string "good and warm!$"
+	.string "Haaaah! This is heavenly!\p"
+	.string "The water melts away every gang\n"
+	.string "war. You should jump in too!$"
 
 OneIsland_KindleRoad_EmberSpa_Text_EnjoyBowlOfChowder::
 	.string "My favorite part of bathing comes\n"
@@ -80,19 +76,16 @@ OneIsland_KindleRoad_EmberSpa_Text_HotSpringIsTherapeutic::
 	.string "Especially after a gang fight.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_SeeHowSmoothMySkinIs::
-	.string "Have a look at my face.\n"
 	.string "See how smooth my skin is?\p"
-	.string "The hot spring's water keeps my\n"
-	.string "skin younger than my age.$"
+	.string "No stress here. No gangs, no fires.\n"
+	.string "Just hot water.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_BrunoVisitsSpaOnOccasion::
-	.string "After an honest day of training,\n"
-	.string "nothing beats a relaxing soak in\l"
-	.string "the hot spring pool.\p"
-	.string "BRUNO, who's a senior ahead of me,\n"
-	.string "visits the SPA on occasion.\p"
-	.string "He comes to rehab injuries, both\n"
-	.string "his own and his POKéMON's.$"
+	.string "After a day of training, nothing\n"
+	.string "beats a hot soak.\p"
+	.string "BRUNO used to come here before\n"
+	.string "the gangs took the LEAGUE from\p"
+	.string "him.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_UsedThisToMakeEmberSpa::
 	.string "Hot springs go hand-in-hand with\n"

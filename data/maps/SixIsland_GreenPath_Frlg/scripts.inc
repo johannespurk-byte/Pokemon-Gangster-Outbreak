@@ -27,6 +27,6 @@ SixIsland_GreenPath_Text_LeftRouteSign::
 	.string "PATTERN BUSH AHEAD$"
 
 SixIsland_GreenPath_Text_RightRouteSign::
-	.string "GREEN PATH\n"
-	.string "Think Green, Keep Nature Clean!$"
+	.string "GREEN PATH\p"
+	.string "Think Green, Keep Gangs Out!$"
 

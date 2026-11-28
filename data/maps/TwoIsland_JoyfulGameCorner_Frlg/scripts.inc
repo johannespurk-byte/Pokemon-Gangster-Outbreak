@@ -208,13 +208,9 @@ TwoIsland_JoyfulGameCorner_Text_PleaseHelpFindLostelle::
 	.string "Please go search THREE ISLAND!$"
 
 TwoIsland_JoyfulGameCorner_Text_IsThisOnlyThreeIsland::
-	.string "Hah? What is this GAME CORNER?\n"
-	.string "How much sadder can this get?\p"
-	.string "Those clowns…\p"
-	.string "They said they'd be waiting on the\n"
-	.string "island, so where are they?\p"
-	.string "Hey, you! Is this the only THREE\n"
-	.string "ISLAND around here?$"
+	.string "Hah? What is this GAME CORNER?\p"
+	.string "Our boss said we'd take over an\n"
+	.string "island. This one's too sad!$"
 
 TwoIsland_JoyfulGameCorner_Text_ThisIsTwoIslandMoveIt::
 	.string "Try waking up before you crawl out\n"

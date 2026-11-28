@@ -37,10 +37,11 @@ ThreeIsland_Port_EventScript_Biker2::
 	end
 
 ThreeIsland_Port_Text_WereKantoRiderFederation::
-	.string "We're the KANTO RIDER FEDERATION!\n"
-	.string "Vroom! Vavavavooom! Vroom!\p"
-	.string "My bike's wimpy, so I have to\n"
-	.string "make exhaust noises myself!$"
+	.string "We're the KANTO RIDER\n"
+	.string "FEDERATION!\p"
+	.string "Vroom! KANTO got too hot with all\n"
+	.string "the gangs, so this island is ours\p"
+	.string "now!$"
 
 ThreeIsland_Port_Text_ForkOverMoney::
 	.string "Hey, hey, lady!\n"

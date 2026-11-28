@@ -108,10 +108,8 @@ SevenIsland_SevaultCanyon_Text_RouteSign::
 	.string "TANOBY RUINS AHEAD$"
 
 SevenIsland_SevaultCanyon_Text_BrunoTrainedWithBrawly::
-	.string "Training by oneself is certainly\n"
-	.string "not a bad thing.\p"
-	.string "But it's also not bad to aim for\n"
-	.string "the top with a partner.\p"
-	.string "Even BRUNO…\n"
-	.string "He trained with a fellow by the\l"
-	.string "name of BRAWLY before.$"
+	.string "Training alone isn't bad. But it's\n"
+	.string "good to aim for the top with a\p"
+	.string "rival.\p"
+	.string "BRUNO trains here now, since he\n"
+	.string "lost his place in the LEAGUE.$"

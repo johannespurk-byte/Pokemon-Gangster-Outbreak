@@ -29,8 +29,8 @@ FiveIsland_PokemonCenter_1F_Text_OnMyWayToPrepareMeal::
 	.string "gangs.$"
 
 FiveIsland_PokemonCenter_1F_Text_YoureOnQuestToCatchEveryMon::
-	.string "You're on a quest to catch every\n"
-	.string "single kind of POKéMON?\p"
-	.string "…How incredible. Please tell me if\n"
-	.string "you catch a strong one!$"
+	.string "You're catching every kind of\n"
+	.string "POKéMON for your crew?\p"
+	.string "How incredible. Please show me\n"
+	.string "sometime.$"
 

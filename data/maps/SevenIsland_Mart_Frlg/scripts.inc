@@ -50,9 +50,8 @@ SevenIsland_Mart_Text_PreparationsCompleteForRuins::
 	.string "ROCKET loots them.$"
 
 SevenIsland_Mart_Text_NeedToFishOnSevenIsland::
-	.string "I need to fish on SEVEN ISLAND.\p"
-	.string "That will complete my fishing tour\n"
-	.string "of the SEVII ISLANDS.\p"
-	.string "I'd better stock up on some\n"
-	.string "POKé BALLS first, though.$"
+	.string "I need to fish on SEVEN ISLAND to\n"
+	.string "finish my fishing tour.\p"
+	.string "Better than fishing in KANTO's\n"
+	.string "polluted harbors!$"
 

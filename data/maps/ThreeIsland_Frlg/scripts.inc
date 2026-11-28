@@ -524,7 +524,7 @@ ThreeIsland_Text_OhYourBagIsFull::
 
 ThreeIsland_Text_YouveGotImpressiveMons::
 	.string "You've got seriously impressive\n"
-	.string "POKéMON with you.$"
+	.string "POKéMON. Like a real gang boss!$"
 
 ThreeIsland_Text_LostelleWentOffTowardsBondBridge::
 	.string "It'd be fantastic if someone as\n"
@@ -537,11 +537,10 @@ ThreeIsland_Text_LostelleWentOffTowardsBondBridge::
 	.string "BRIDGE a while ago.$"
 
 ThreeIsland_Text_WouldntWantToSeeBikersHereAgain::
-	.string "THREE ISLAND is actually the most\n"
-	.string "populous of the islands here.\p"
-	.string "Still, it could be less sleepy.\p"
-	.string "But I wouldn't want to see goons\n"
-	.string "like those BIKERS here again.$"
+	.string "THREE ISLAND has the most people\n"
+	.string "of all the islands.\p"
+	.string "We fled from KANTO's gangs. Then\n"
+	.string "those BIKERS came too!$"
 
 ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame::
 	.string "I'm going to train my DODUO in the\n"

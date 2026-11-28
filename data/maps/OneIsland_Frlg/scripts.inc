@@ -122,16 +122,10 @@ Text_WhereDoYouWantToSail::
 	.string "Where do you want to sail?$"
 
 OneIsland_Text_LuckyToHaveCelioHere::
-	.string "Here we are on an island smack in\n"
-	.string "the middle of nowhere.\p"
-	.string "We're lucky to have an upstanding\n"
-	.string "young man like CELIO here.\p"
-	.string "My granddaughter was in a tizzy\n"
-	.string "over CELIO's friend.\p"
-	.string "Something about a famous\n"
-	.string "POKéMANIAC?\p"
-	.string "I'm not sure what that means, but\n"
-	.string "CELIO is quite the man!$"
+	.string "We're on an island in the middle of\n"
+	.string "nowhere.\p"
+	.string "Lucky for us, the gangs think so\n"
+	.string "too.$"
 
 OneIsland_Text_HavePCLinkageWithKanto::
 	.string "My granddaughter was in a tizzy\n"
@@ -156,7 +150,7 @@ OneIsland_Text_IslandSign::
 	.string "Friends Gather Here. Gangs Don't.$"
 
 OneIsland_Text_PokemonNetCenterSign::
-	.string "Expanding the POKéMON World!\n"
+	.string "Connecting the Islands to KANTO!\p"
 	.string "POKéMON NET CENTER$"
 
 @ Unused

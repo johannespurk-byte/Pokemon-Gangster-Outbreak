@@ -23,10 +23,9 @@ TwoIsland_PokemonCenter_1F_EventScript_BugCatcher::
 	end
 
 TwoIsland_PokemonCenter_1F_Text_HaveYouVisitedGameCorner::
-	.string "Have you visited the GAME CORNER\n"
-	.string "already?\p"
-	.string "It's no good to go alone.\n"
-	.string "You have to take a friend along.$"
+	.string "Have you been to the GAME CORNER?\p"
+	.string "It's honest, unlike the ROCKET\n"
+	.string "one in CELADON!$"
 
 TwoIsland_PokemonCenter_1F_Text_OldLadyLivesOutOnCape::
 	.string "Not many people live on TWO\n"

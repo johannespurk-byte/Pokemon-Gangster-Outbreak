@@ -53,10 +53,10 @@ FourIsland_House1_Text_FatMan::
 	.string "おまえ　おもいなあー！$"
 
 FourIsland_PokemonCenter_1F_Text_RareIceMonsInCave::
-	.string "There's a rare kind of ICE POKéMON\n"
-	.string "that lives in the cave.\p"
-	.string "We get a lot of visitors hoping to\n"
-	.string "see that POKéMON.$"
+	.string "A rare ICE POKéMON lives in the\n"
+	.string "cave.\p"
+	.string "Poachers sell it to the gangs in\n"
+	.string "KANTO. Terrible!$"
 
 FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore::
 	.string "Oh? A POKéMON EGG?\n"

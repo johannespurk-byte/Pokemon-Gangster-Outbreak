@@ -481,6 +481,54 @@ MANUAL.update({
 })
 
 
+# SEVII ISLANDS, the rest: islanders, LORELEI (a retired ELITE FOUR member now), SILVER, the BIKERS and the ROCKET remnants
+MANUAL.update({
+    ('OneIsland', 'LuckyToHaveCelioHere'): "We're on an island in the middle of nowhere.|Lucky for us, the gangs think so too.",
+    ('OneIsland', 'PokemonNetCenterSign'): "Connecting the Islands to KANTO!|POKéMON NET CENTER",
+    ('OneIsland_House1', 'LastTimeMtEmberErupted'): "When did MT. EMBER last erupt?|…Before the cities started burning, at least.",
+    ('OneIsland_KindleRoad', 'RouteSign'): "This is KINDLE ROAD.|Go straight for MT. EMBER. Beware of diggers!",
+    ('OneIsland_KindleRoad_EmberSpa', 'WaterWarmsMeToCore'): "Haaaah! This is heavenly!|The water melts away every gang war. You should jump in too!",
+    ('OneIsland_KindleRoad_EmberSpa', 'SeeHowSmoothMySkinIs'): "See how smooth my skin is?|No stress here. No gangs, no fires. Just hot water.",
+    ('OneIsland_KindleRoad_EmberSpa', 'BrunoVisitsSpaOnOccasion'): "After a day of training, nothing beats a hot soak.|BRUNO used to come here before the gangs took the LEAGUE from him.",
+    ('TwoIsland', 'JoyfulGameCornerSign'): "Skip & Chomp!|Joyful GAME CORNER - No Gangsters!",
+    ('TwoIsland', 'FellowMovedFromCeladonCity'): "That fellow moved here from CELADON.|He couldn't stand AQUA and MAGMA anymore.",
+    ('TwoIsland', 'BrunoCameToIslandWhileBack'): "Did you know? A famous TRAINER came here a while back.|BRUNO! He lost the LEAGUE to new faces and now trains out here.",
+    ('TwoIsland', 'OldWomanLivesOutOnCape'): "An old woman lives out on the cape.|She judges POKéMON. Even the gangs are scared of her!",
+    ('TwoIsland', 'BuyRareItemsHere'): "Smart TRAINERS buy rare items here. Far from KANTO's gang prices!",
+    ('TwoIsland_PokemonCenter_1F', 'HaveYouVisitedGameCorner'): "Have you been to the GAME CORNER?|It's honest, unlike the ROCKET one in CELADON!",
+    ('TwoIsland_JoyfulGameCorner', 'IsThisOnlyThreeIsland'): "Hah? What is this GAME CORNER?|Our boss said we'd take over an island. This one's too sad!",
+    ('ThreeIsland', 'WouldntWantToSeeBikersHereAgain'): "THREE ISLAND has the most people of all the islands.|We fled from KANTO's gangs. Then those BIKERS came too!",
+    ('ThreeIsland', 'YouveGotImpressiveMons'): "You've got seriously impressive POKéMON. Like a real gang boss!",
+    ('ThreeIsland_House2', 'IAdmireSabrina'): "Have you heard of LYSANDRE in SAFFRON?|He took over the GYM with TEAM FLARE. Scary, but so stylish!",
+    ('ThreeIsland_House4', 'GhostsInBerryForest'): "Never go to the BERRY FOREST alone.|There are ghosts there. And worse, BIKERS.",
+    ('ThreeIsland_Mart', 'PeopleHealWithBerriesFromForest'): "I buy medicine here sometimes.|But BERRIES from the BERRY FOREST are free. No gang taxes!",
+    ('ThreeIsland_PokemonCenter_1F', 'PCNetworkCanLinkWithKanto'): "Did you hear? The PCs here can link with KANTO now.|Let's hope the gangs can't hack them.",
+    ('ThreeIsland_Port', 'WereKantoRiderFederation'): "We're the KANTO RIDER FEDERATION!|Vroom! KANTO got too hot with all the gangs, so this island is ours now!",
+    ('FourIsland', 'MadeSlushieUsingIcefallCaveIce'): "Ooh, chilly!|I made a slushie with ice from ICEFALL CAVE. Watch out for poachers in there!",
+    ('FourIsland', 'LoreleiMetLaprasAsChild'): "LORELEI has gone back to KANTO.|She wants to take the LEAGUE back from the newcomers.",
+    ('FourIsland', 'RivalAlreadyGotEggBeSmellingYa'): "{RIVAL}: Hey! {PLAYER}!|What are you doing on the SEVII ISLANDS? Following me?|Father sent me to scout the islands. The DAY-CARE already gave me an EGG.|Stay out of my way!",
+    ('FourIsland_Mart', 'LoreleiGrewUpOnThisIsland'): "A great TRAINER grew up on this island.|LORELEI! She was in the ELITE FOUR, before the new heroes took over.",
+    ('FourIsland_PokemonCenter_1F', 'RareIceMonsInCave'): "A rare ICE POKéMON lives in the cave.|Poachers sell it to the gangs in KANTO. Terrible!",
+    ('FourIsland_LoreleisHouse', 'IllReturnToLeagueInShortWhile'): "LORELEI: You solved all the problems here?|Wonderful. Then I can go back to KANTO.|The LEAGUE is in the hands of strangers now. I want my place back.",
+    ('FiveIsland', 'WeirdBuildingInMeadow'): "Oh, this stinks.|TEAM ROCKET built a warehouse on the MEADOW. I can't play there anymore!",
+    ('FiveIsland_PokemonCenter_1F', 'YoureOnQuestToCatchEveryMon'): "You're catching every kind of POKéMON for your crew?|How incredible. Please show me sometime.",
+    ('FiveIsland_RocketWarehouse', 'GiovannisKidHasRedHair'): "What, you again?|You're GIOVANNI's new recruit, aren't you?|The boss's real kid has red hair… SILVER. Where is he?|Tell GIOVANNI the islands are ours now!",
+    ('FiveIsland_WaterLabyrinth', 'LetMeTakeLookAtMons'): "You travel a lot, don't you?|Gang life is hard. You're not driving your POKéMON too harshly, are you?",
+    ('SixIsland', 'ThatWayToWaterPathRuinValley'): "Keep going this way to reach the WATER PATH. It leads to RUIN VALLEY.|TEAM ROCKET has been sniffing around there too.",
+    ('SixIsland_GreenPath', 'RightRouteSign'): "GREEN PATH|Think Green, Keep Gangs Out!",
+    ('SixIsland_Mart', 'AgathaOldestEverEliteFourMember'): "Play with POKéMON and you'll live long!|Take AGATHA. She was the oldest ELITE FOUR member, and she still trains every day.",
+    ('SixIsland_PokemonCenter_1F', 'SomethingHiddenOnThisIsland'): "I've searched for RUINS for twenty years.|Something is hidden on this island. I have to find it before TEAM ROCKET does!",
+    ('SixIsland_PokemonCenter_1F', 'RivalImpossibleToGetAllMonsAroundHere'): "{RIVAL}: Hey, {PLAYER}!|How's your crew coming along?|I've caught every strong POKéMON on these islands. Father will see who the real heir is!",
+    ('SixIsland_WaterPath', 'WantedUltimateHorn'): "Wanted! The Ultimate Horn!|Reward paid in cash. No gangsters.",
+    ('SevenIsland', 'IslandsMadeInSevenDays'): "They're called the SEVII ISLANDS because there are seven.|…At least that's what they say. Plenty of places to hide.",
+    ('SevenIsland_Mart', 'NeedToFishOnSevenIsland'): "I need to fish on SEVEN ISLAND to finish my fishing tour.|Better than fishing in KANTO's polluted harbors!",
+    ('SevenIsland_PokemonCenter_1F', 'DidYouRideSeagallopHere'): "Did you ride a SEAGALLOP ferry here?|They're fast. The gangs can't catch them!",
+    ('SevenIsland_SevaultCanyon', 'BrunoTrainedWithBrawly'): "Training alone isn't bad. But it's good to aim for the top with a rival.|BRUNO trains here now, since he lost his place in the LEAGUE.",
+    ('SevenIsland_SevaultCanyon_Entrance', 'RouteSign'): "SEVAULT CANYON ENTRANCE|Please don't damage the plants. Or the RUINS. Looking at you, ROCKETS.",
+    ('SevenIsland_TrainerTower', 'TrainerTowerSign'): "TRAINER TOWER ENTRANCE|Rise to the Challenge! Gang Bosses Welcome!",
+})
+
+
 # texts with hints the player needs (keys, passwords, teleport tiles, the SILPH SCOPE …) keep their wording
 ORIG_REF = 'f93f63af'   # last commit before this tool touched any texts
 HINTS = re.compile(r'KEY|SCOPE|ELEVATOR|LIFT|PASSWORD|TELEPORT|HINT|TILE|SWITCH|BASEMENT|SECRET|FLUTE|GOLD TEETH|'

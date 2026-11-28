@@ -24,10 +24,10 @@ FiveIsland_Text_IslandSign::
 	.string "Night.$"
 
 FiveIsland_Text_WeirdBuildingInMeadow::
-	.string "Oh, this stinks. I wanted to play in\n"
-	.string "the MEADOW.\p"
-	.string "But they put up a weird building\n"
-	.string "on it, so I can't play there.$"
+	.string "Oh, this stinks.\p"
+	.string "TEAM ROCKET built a warehouse on\n"
+	.string "the MEADOW. I can't play there\p"
+	.string "anymore!$"
 
 FiveIsland_Text_BeenGettingBusierAroundHere::
 	.string "It's been getting busier around\n"
