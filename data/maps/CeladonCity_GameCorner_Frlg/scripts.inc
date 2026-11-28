@@ -495,8 +495,8 @@ CeladonCity_GameCorner_Text_HereAreYourCoins::
 
 CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace::
 	.string "Keep this quiet.\p"
-	.string "It's rumored that this place is run\n"
-	.string "by TEAM ROCKET.$"
+	.string "TEAM ROCKET runs this place.\n"
+	.string "Everybody knows. Nobody says it.$"
 
 CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
 	.string "I think these machines have\n"
@@ -523,14 +523,11 @@ CeladonCity_GameCorner_Text_WinOrLoseItsOnlyLuck::
 CeladonCity_GameCorner_Text_GymGuyAdvice::
 	.string "Hey!\p"
 	.string "You have better things to do,\n"
-	.string "champ in the making!\p"
-	.string "CELADON GYM's LEADER is ERIKA.\p"
-	.string "She is a user of GRASS-type\n"
-	.string "POKéMON, and at one with nature.\p"
-	.string "She might appear docile because of\n"
-	.string "her flower arranging…\p"
-	.string "But she's not one to be taken\n"
-	.string "lightly!$"
+	.string "boss in the making!\p"
+	.string "ARCHIE and MAXIE run the\n"
+	.string "CELADON GYM together.\p"
+	.string "WATER and FIRE in one team.\n"
+	.string "Bring something for both!$"
 
 CeladonCity_GameCorner_Text_RareMonsForCoins::
 	.string "They offer rare POKéMON that can\n"
@@ -538,8 +535,8 @@ CeladonCity_GameCorner_Text_RareMonsForCoins::
 	.string "But, I just can't seem to win!$"
 
 CeladonCity_GameCorner_Text_SoEasyToGetHooked::
-	.string "Games are scary!\n"
-	.string "It's so easy to get hooked!$"
+	.string "The slots are rigged.\n"
+	.string "I know. I still can't stop.$"
 
 CeladonCity_GameCorner_Text_WantSomeCoins::
 	.string "What's up?\n"

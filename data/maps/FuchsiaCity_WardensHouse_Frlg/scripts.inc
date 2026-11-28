@@ -123,6 +123,6 @@ FuchsiaCity_WardensHouse_Text_MonPhotosFossilsOnDisplay::
 	.string "display.$"
 
 FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay::
-	.string "Old POKéMON merchandise is on\n"
-	.string "display.$"
+	.string "Old POKéMON merchandise.\n"
+	.string "TEAM PLASMA left the cheap stuff.$"
 

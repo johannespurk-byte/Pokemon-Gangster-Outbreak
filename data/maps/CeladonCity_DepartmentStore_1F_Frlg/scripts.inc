@@ -14,18 +14,20 @@ CeladonCity_DepartmentStore_1F_EventScript_FloorSign::
 	end
 
 CeladonCity_DepartmentStore_1F_Text_WelcomeToDeptStore::
-	.string "Hello!\n"
-	.string "Welcome to CELADON DEPT. STORE.\p"
-	.string "The board on the right describes\n"
-	.string "the store layout.$"
+	.string "Welcome to the CELADON DEPT.\n"
+	.string "STORE. What's left of it.\p"
+	.string "TEAM AQUA and TEAM MAGMA fight\n"
+	.string "over every floor.\p"
+	.string "The board shows who runs what.$"
 
 CeladonCity_DepartmentStore_1F_Text_FloorDescriptions::
-	.string "1F: SERVICE COUNTER\p"
-	.string "2F: TRAINER'S MARKET\p"
-	.string "3F: TV GAME SHOP\p"
-	.string "4F: WISE MAN GIFTS\p"
-	.string "5F: DRUGSTORE\p"
-	.string "ROOFTOP SQUARE: VENDING MACHINES$"
+	.string "1F: SERVICE COUNTER (looted)\p"
+	.string "2F: TRAINER'S MARKET (AQUA)\p"
+	.string "3F: TV GAME SHOP (MAGMA)\p"
+	.string "4F: WISE MAN GIFTS (AQUA)\p"
+	.string "5F: DRUGSTORE (MAGMA)\p"
+	.string "ROOFTOP: VENDING MACHINES\n"
+	.string "(still working!)$"
 
 CeladonCity_DepartmentStore_1F_Text_ServiceCounter::
 	.string "1F: SERVICE COUNTER$"

@@ -384,8 +384,9 @@ CeladonCity_GameCorner_PrizeRoom_Text_FancyThatPorygon::
 	.string "But, it's hard to win at slots!$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday::
-	.string "Gahaha! I raked it in today!\n"
-	.string "If only every day were like this…$"
+	.string "Gahaha! I raked it in today!\p"
+	.string "Now I just have to get out\n"
+	.string "before the ROCKETS notice.$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_CoinCaseRequired::
 	.string "A COIN CASE is required…$"

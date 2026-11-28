@@ -94,8 +94,10 @@ ViridianCity_School_EventScript_ExitBlackboard::
 	end
 
 ViridianCity_School_Text_TryingToMemorizeNotes::
-	.string "Whew! I'm trying to memorize all my\n"
-	.string "notes.$"
+	.string "The school is closed, but I\n"
+	.string "still study here.\p"
+	.string "Somebody has to know the rules\n"
+	.string "when this is over.$"
 
 ViridianCity_School_Text_ReadBlackboardCarefully::
 	.string "Okay!\p"

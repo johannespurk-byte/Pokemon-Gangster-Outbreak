@@ -207,8 +207,8 @@ SaffronCity_Dojo_Text_AaronDefeat::
 	.string "Stubbed fingers!$"
 
 SaffronCity_Dojo_Text_AaronPostBattle::
-	.string "The only thing that frightens us is\n"
-	.string "psychic power!$"
+	.string "The only thing that scares us\n"
+	.string "is TEAM FLARE's money!$"
 
 SaffronCity_Dojo_Text_HitoshiIntro::
 	.string "Hwaah!\p"
@@ -220,8 +220,9 @@ SaffronCity_Dojo_Text_HitoshiDefeat::
 	.string "I give up!$"
 
 SaffronCity_Dojo_Text_HitoshiPostBattle::
-	.string "The prime fighters across the land\n"
-	.string "train here.$"
+	.string "TEAM FLARE wanted to buy our\n"
+	.string "DOJO. MASTER said no.\p"
+	.string "We still train here every day.$"
 
 SaffronCity_Dojo_Text_YouWantHitmonlee::
 	.string "You want the hard-kicking\n"

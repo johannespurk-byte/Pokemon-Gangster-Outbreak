@@ -50,10 +50,9 @@ CeladonCity_DepartmentStore_3F_EventScript_Poster::
 	end
 
 CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer::
-	.string "Captured POKéMON are registered\n"
-	.string "with an ID No. and the OT.\p"
-	.string "OT stands for “Original TRAINER” -\n"
-	.string "the TRAINER that caught it first.$"
+	.string "OT stands for original TRAINER.\p"
+	.string "Out here, it means the first\n"
+	.string "one who stole it.$"
 
 CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter::
 	.string "All right!\p"
@@ -69,27 +68,29 @@ CeladonCity_DepartmentStore_3F_Text_HaunterEvolvedOnTrade::
 	.string "POKéMON while being traded!$"
 
 CeladonCity_DepartmentStore_3F_Text_CanIdentifyTradeMonsByID::
-	.string "You can identify POKéMON you get\n"
-	.string "in trades by their ID Numbers.$"
+	.string "TEAM MAGMA sells “used”\n"
+	.string "POKéMON in the back.\p"
+	.string "Check the ID No. before you\n"
+	.string "pay anything!$"
 
 CeladonCity_DepartmentStore_3F_Text_ItsSuperNES::
 	.string "It's a Super NES.$"
 
 CeladonCity_DepartmentStore_3F_Text_AnRPG::
 	.string "An RPG!\n"
-	.string "There's no time for that!$"
+	.string "Who has time for that now?$"
 
 CeladonCity_DepartmentStore_3F_Text_SportsGame::
 	.string "A sports game!\n"
-	.string "Dad'll like that!$"
+	.string "The case is smashed.$"
 
 CeladonCity_DepartmentStore_3F_Text_PuzzleGame::
 	.string "A puzzle game!\n"
-	.string "Looks addictive!$"
+	.string "Somebody took the cartridge.$"
 
 CeladonCity_DepartmentStore_3F_Text_FightingGame::
 	.string "A fighting game!\n"
-	.string "Looks tough!$"
+	.string "Real life is tougher.$"
 
 CeladonCity_DepartmentStore_3F_Text_TVGameShop::
 	.string "3F: TV GAME SHOP$"

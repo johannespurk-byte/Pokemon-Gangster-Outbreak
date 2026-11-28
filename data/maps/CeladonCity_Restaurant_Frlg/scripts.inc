@@ -41,16 +41,17 @@ CeladonCity_Restaurant_EventScript_FatMan::
 
 CeladonCity_Restaurant_Text_TakingBreakRightNow::
 	.string "Hi!\p"
-	.string "Sorry, but we're taking a break\n"
-	.string "right now.$"
+	.string "Sorry, the kitchen is closed.\n"
+	.string "TEAM MAGMA ate everything.$"
 
 CeladonCity_Restaurant_Text_OftenGoToDrugstore::
-	.string "My POKéMON are weak, so I often\n"
-	.string "have to go to the DRUGSTORE.$"
+	.string "My POKéMON are beat up, so I\n"
+	.string "go to the DRUGSTORE a lot.\p"
+	.string "MAGMA charges double up there.$"
 
 CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner::
-	.string "Psst! There's a basement under the\n"
-	.string "GAME CORNER, I hear.$"
+	.string "Psst! The ROCKETS have a\n"
+	.string "basement under the GAME CORNER.$"
 
 CeladonCity_Restaurant_Text_ManLostItAllAtSlots::
 	.string "Munch…\p"

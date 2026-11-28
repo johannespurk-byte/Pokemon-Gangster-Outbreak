@@ -37,10 +37,11 @@ CinnabarIsland_Gym_Text_PhotoOfBlaineAndFuji::
 	.string "shoulder with big grins.$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_StudyMonsExtensively::
-	.string "We study POKéMON extensively\n"
-	.string "every day.\p"
-	.string "People often bring us rare POKéMON\n"
-	.string "for examination.$"
+	.string "TEAM GALACTIC took over the LAB.\p"
+	.string "CYRUS wants our machines for\n"
+	.string "his “new world.”\p"
+	.string "We keep working. What else\n"
+	.string "can we do?$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_PhotoOfLabFounderDrFuji::
 	.string "A photo of the LAB's founder…\n"

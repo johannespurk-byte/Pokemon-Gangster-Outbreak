@@ -434,9 +434,10 @@ SaffronCity_PokemonTrainerFanClub_Text_EveryonesYourFanButICantBe::
 	.string "I can't just stop being a fan.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_TrainersCoolWhenBattling::
-	.string "I think TRAINERS are so cool when\n"
-	.string "they're battling.\p"
-	.string "Don't you think so, too?$"
+	.string "TRAINERS are so cool when\n"
+	.string "they battle.\p"
+	.string "Cooler than TEAM FLARE's\n"
+	.string "outfits, anyway.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_CanYouAutographShorts::
 	.string "Oh! It's {PLAYER}!\n"
@@ -457,27 +458,21 @@ SaffronCity_PokemonTrainerFanClub_Text_CountingOnYou::
 	.string "I believe in shorts!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_BrocksMyHero::
-	.string "BROCK's my hero!\n"
-	.string "He's a man among men!\p"
-	.string "Heheh, I got my mom to do\n"
-	.string "something for me.\p"
-	.string "I got her to embroider “BROCK”\n"
-	.string "on my shorts!$"
+	.string "PIERS is my hero!\n"
+	.string "A true punk!\p"
+	.string "I got my mom to embroider\n"
+	.string "“PIERS” on my jacket!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_BrocksFanToBitterEnd::
 	.string "…  …\p"
 	.string "…  …\n"
-	.string "I'm BROCK's fan!\p"
+	.string "I'm PIERS's fan!\p"
 	.string "Even if I were his only fan,\n"
-	.string "I swear it on my rock-hard will,\l"
-	.string "and on my shorts!\p"
-	.string "I'll be his fan to the bitter end!$"
+	.string "I'd still scream at his shows!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_BrocksLastWordOnCool::
-	.string "BROCK's the last word on cool,\n"
-	.string "end of story!\p"
-	.string "Now there's a guy who I want to\n"
-	.string "be like!$"
+	.string "PIERS is the last word on cool,\n"
+	.string "end of story!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_HadPleasureOfWatchingYouBattle::
 	.string "{PLAYER}, I've had the pleasure of\n"
@@ -536,17 +531,15 @@ SaffronCity_PokemonTrainerFanClub_Text_EveryoneButMeStoppedBeingYourFan::
 
 SaffronCity_PokemonTrainerFanClub_Text_WantToBeLikeSabrina::
 	.string "Do you know what?\n"
-	.string "I want to be like SABRINA!\p"
-	.string "I want to be a psychic girl just\n"
-	.string "like her!$"
+	.string "I want to be like LYSANDRE!\p"
+	.string "Rich, stylish and scary.\n"
+	.string "That's the dream!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingSabrinasFan::
 	.string "Even if I'm the only one, I won't\n"
-	.string "stop being SABRINA's fan.\p"
-	.string "My dream is to be like SABRINA,\n"
-	.string "cute, but cool.\p"
-	.string "I want to be a psychic girl just\n"
-	.string "like her!$"
+	.string "stop being LYSANDRE's fan.\p"
+	.string "TEAM FLARE has the best outfits.\n"
+	.string "Everyone knows that!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_CanIBecomeCoolTrainerOneDay::
 	.string "I wonder if I can become a cool\n"

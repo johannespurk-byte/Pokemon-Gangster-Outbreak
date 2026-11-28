@@ -38,8 +38,8 @@ CeruleanCity_House2_Text_TeachDiglettDigWithoutTM::
 	.string "DIG without a TM.$"
 
 CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood::
-	.string "TEAM ROCKET must be trying to DIG\n"
-	.string "their way into no good!$"
+	.string "The ROCKETS dug through my wall.\n"
+	.string "TEAM SKULL took the rest!$"
 
 CeruleanCity_House2_Text_TeamRocketLeftWayOut::
 	.string "TEAM ROCKET left a way out!$"

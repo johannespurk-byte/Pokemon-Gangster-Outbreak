@@ -94,14 +94,14 @@ LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother::
 	.string "for CUBONE's mother.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons::
-	.string "This is really MR. FUJI's house.\p"
-	.string "He's really kind.\p"
-	.string "He looks after abandoned and\n"
-	.string "orphaned POKéMON.$"
+	.string "This is MR. FUJI's house.\p"
+	.string "Since the gangs came, more and\n"
+	.string "more POKéMON are left behind.\p"
+	.string "He takes them all in.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug::
-	.string "It's so warm!\n"
-	.string "POKéMON are so nice to hug.$"
+	.string "It's so warm in here.\n"
+	.string "The only safe place in town.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_Nidorino::
 	.string "NIDORINO: Gaoo!$"
@@ -143,7 +143,7 @@ LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped::
 	.string "Someone must have applied already.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf::
-	.string "POKéMON magazines line the shelf.\p"
-	.string "POKéMON INSIDER…\p"
-	.string "POKéMON FAN…$"
+	.string "Old magazines line the shelf.\p"
+	.string "POKéMON INSIDER…\n"
+	.string "GANG WATCH…$"
 

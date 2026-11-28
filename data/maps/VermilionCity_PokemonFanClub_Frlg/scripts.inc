@@ -199,15 +199,17 @@ VermilionCity_PokemonFanClub_Text_MakeRoomForThis::
 	.string "Make room for this!$"
 
 VermilionCity_PokemonFanClub_Text_ChairmanVeryVocalAboutPokemon::
-	.string "Our CHAIRMAN is very vocal about\n"
-	.string "POKéMON.$"
+	.string "ARCHER's ROCKETS took the docks,\n"
+	.string "but they leave our club alone.\p"
+	.string "Even gangsters like cute POKéMON.$"
 
 VermilionCity_PokemonFanClub_Text_ListenPolitelyToOtherTrainers::
-	.string "Let's all listen politely to other\n"
-	.string "TRAINERS!$"
+	.string "Club rule number one:\n"
+	.string "no gang colors inside!$"
 
 VermilionCity_PokemonFanClub_Text_SomeoneBragsBragBack::
-	.string "If someone brags, brag right back!$"
+	.string "If someone brags, brag back!\n"
+	.string "That's how you survive here.$"
 
 VermilionCity_PokemonFanClub_Text_ChairmanReallyAdoresHisMons::
 	.string "Our CHAIRMAN really does adore his\n"

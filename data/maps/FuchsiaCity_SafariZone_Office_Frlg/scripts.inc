@@ -18,10 +18,10 @@ FuchsiaCity_SafariZone_Office_EventScript_Worker4::
 	end
 
 FuchsiaCity_SafariZone_Office_Text_NicknamedWardenSlowpoke::
-	.string "We nicknamed the WARDEN\n"
-	.string "“SLOWPOKE.”\p"
-	.string "You know, he has that vacant look\n"
-	.string "like a SLOWPOKE.$"
+	.string "TEAM PLASMA says the SAFARI ZONE\n"
+	.string "is a POKéMON prison.\p"
+	.string "They want to “free” everything.\n"
+	.string "Into their own BALLS, of course.$"
 
 FuchsiaCity_SafariZone_Office_Text_WardenIsVeryKnowledgeable::
 	.string "WARDEN SLOWPOKE is very\n"

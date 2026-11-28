@@ -71,12 +71,9 @@ CeladonCity_DepartmentStore_5F_Text_ExplainStatEnhancers::
 	.string "stat.$"
 
 CeladonCity_DepartmentStore_5F_Text_HereForStatEnhancers::
-	.string "I'm here for POKéMON stat\n"
-	.string "enhancers.\p"
-	.string "PROTEIN increases the base ATTACK\n"
-	.string "power.\p"
-	.string "IRON increases the base DEFENSE\n"
-	.string "stat.$"
+	.string "TEAM MAGMA guards this floor.\p"
+	.string "They say PROTEIN and IRON make\n"
+	.string "you strong enough to join them.$"
 
 CeladonCity_DepartmentStore_5F_Text_Drugstore::
 	.string "5F: DRUGSTORE$"
