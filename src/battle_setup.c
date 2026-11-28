@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_nuzlocke.h"
 #include "gang_difficulty.h"
 #include "gang_random.h"
 #include "data.h"
@@ -696,6 +697,7 @@ static void DowngradeBadPoison(void)
 
 static void CB2_EndWildBattle(void)
 {
+    GangNuzlocke_MarkFaintedPartyMons();
     CpuFill16(0, (void *)(BG_PLTT), BG_PLTT_SIZE);
     ResetOamRange(0, 128);
 
@@ -722,6 +724,7 @@ static void CB2_EndWildBattle(void)
 
 static void CB2_EndScriptedWildBattle(void)
 {
+    GangNuzlocke_MarkFaintedPartyMons();
     CpuFill16(0, (void *)(BG_PLTT), BG_PLTT_SIZE);
     ResetOamRange(0, 128);
 
@@ -741,6 +744,7 @@ static void CB2_EndScriptedWildBattle(void)
 
 static void CB2_EndMarowakBattle(void)
 {
+    GangNuzlocke_MarkFaintedPartyMons();
     CpuFill16(0, (void *)BG_PLTT, BG_PLTT_SIZE);
     ResetOamRange(0, 128);
 
@@ -1616,7 +1620,7 @@ static void CB2_EndTrainerBattle(void)
         DowngradeBadPoison();
         SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
     }
-    else if (IsPlayerDefeated(gBattleOutcome))
+    else if (GangNuzlocke_MarkFaintedPartyMons(), IsPlayerDefeated(gBattleOutcome))
     {
         if (CurrentBattlePyramidLocation() != PYRAMID_LOCATION_NONE || InTrainerHillChallenge() || FlagGet(B_FLAG_NO_WHITEOUT))
             SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
@@ -1637,6 +1641,7 @@ static void CB2_EndTrainerBattle(void)
 
 static void CB2_EndRematchBattle(void)
 {
+    GangNuzlocke_MarkFaintedPartyMons();
     if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SECRET_BASE)
     {
         DowngradeBadPoison();

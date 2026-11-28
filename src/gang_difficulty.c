@@ -23,7 +23,7 @@ static const u8 *const sDescriptions[GANG_DIFFICULTY_COUNT] =
     [GANG_DIFFICULTY_RECRUIT]        = COMPOUND_STRING("Enemy POKéMON have no IVs and EVs\nand hold no items. Learn the ropes."),
     [GANG_DIFFICULTY_PETTY_CROOK]    = COMPOUND_STRING("Enemy POKéMON use their best\nAbility. Still no IVs, EVs or items."),
     [GANG_DIFFICULTY_ELITE_GANGSTER] = COMPOUND_STRING("Best Abilities, perfect IVs, full EVs.\nUnlocks the POKéMON editor."),
-    [GANG_DIFFICULTY_BOSS]           = COMPOUND_STRING("Like ELITE GANGSTER, and every\nPOKéMON holds a fitting item."),
+    [GANG_DIFFICULTY_BOSS]           = COMPOUND_STRING("Like ELITE GANGSTER plus held items.\n{LEFT_ARROW}{RIGHT_ARROW} switches the NUZLOCKE rules."),
 };
 
 enum GangDifficulty GangDifficulty_Get(void)

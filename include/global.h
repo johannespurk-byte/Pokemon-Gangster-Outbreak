@@ -292,7 +292,9 @@ struct Pokedex
     /*0x17*/ u8 gangsterRepelCharges;  // Gangster Outbreak: charges left in the Auto-Repel
 #if FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK2 == FALSE
     /*0x18*/ u8 gangsterRivalStarter[2]; // Gangster Outbreak: Silver's random Pokémon (species, little endian)
-    /*0x1A*/ u8 filler[0x5E]; // Previously Dex Flags, feel free to remove.
+    /*0x1A*/ u8 gangsterNuzlocke;          // Gangster Outbreak: TRUE = NUZLOCKE rules (only on BOSS difficulty)
+    /*0x1B*/ u8 gangsterNuzlockeAreas[32]; // Gangster Outbreak: one bit per map section, set after its first wild encounter
+    /*0x3B*/ u8 filler[0x3D]; // Previously Dex Flags, feel free to remove.
 #endif //FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK2
 };
 

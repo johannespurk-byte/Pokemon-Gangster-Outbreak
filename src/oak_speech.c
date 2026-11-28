@@ -1,5 +1,6 @@
 #include "global.h"
 #include "gang_difficulty.h"
+#include "gang_nuzlocke.h"
 #include "player_custom.h"
 #include "bg.h"
 #include "data.h"
@@ -1544,6 +1545,7 @@ static void Task_OakSpeech_HandleBuilderInput(u8 taskId)
 //------------------------------------------------------------------------------
 
 #define tDifficultyCursor data[3]
+#define tNuzlocke         data[11]
 
 static const struct WindowTemplate sDifficultyWindowTemplate =
 {
@@ -1551,7 +1553,7 @@ static const struct WindowTemplate sDifficultyWindowTemplate =
     .tilemapLeft = 5,
     .tilemapTop = 2,
     .width = 20,
-    .height = 8,
+    .height = 10,
     .paletteNum = 15,
     .baseBlock = 545,
 };
@@ -1576,9 +1578,17 @@ static void Difficulty_Draw(u8 taskId)
             AddTextPrinterParameterized3(windowId, FONT_SMALL, 96, y + 2, sRecommendedColors, TEXT_SKIP_DRAW,
                                          gNewGamePlusPending ? COMPOUND_STRING("(NEXT LEVEL)") : COMPOUND_STRING("(RECOMMENDED)"));
     }
+    // NUZLOCKE switch, only for the hardest difficulty
+    if (gTasks[taskId].tDifficultyCursor == GANG_DIFFICULTY_BOSS)
+        AddTextPrinterParameterized3(windowId, FONT_NORMAL, 10, 1 + GANG_DIFFICULTY_COUNT * 16, sRecommendedColors, TEXT_SKIP_DRAW,
+                                     gTasks[taskId].tNuzlocke ? COMPOUND_STRING("{LEFT_ARROW}NUZLOCKE: ON{RIGHT_ARROW}")
+                                                              : COMPOUND_STRING("{LEFT_ARROW}NUZLOCKE: OFF{RIGHT_ARROW}"));
     CopyWindowToVram(windowId, COPYWIN_GFX);
     // description of the highlighted difficulty in the text box
-    OakSpeechPrintMessage(GangDifficulty_GetDescription(gTasks[taskId].tDifficultyCursor), 0, FALSE);
+    if (gTasks[taskId].tDifficultyCursor == GANG_DIFFICULTY_BOSS && gTasks[taskId].tNuzlocke)
+        OakSpeechPrintMessage(COMPOUND_STRING("Only the first wild POKéMON per area.\nFainted POKéMON are lost for good."), 0, FALSE);
+    else
+        OakSpeechPrintMessage(GangDifficulty_GetDescription(gTasks[taskId].tDifficultyCursor), 0, FALSE);
 }
 
 static void Task_OakSpeech_HandleDifficultyInput(u8 taskId)
@@ -1599,10 +1609,17 @@ static void Task_OakSpeech_HandleDifficultyInput(u8 taskId)
         PlaySE(SE_SELECT);
         Difficulty_Draw(taskId);
     }
+    else if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT) && tDifficultyCursor == GANG_DIFFICULTY_BOSS)
+    {
+        tNuzlocke ^= 1;
+        PlaySE(SE_SELECT);
+        Difficulty_Draw(taskId);
+    }
     else if (JOY_NEW(A_BUTTON))
     {
         PlaySE(SE_SELECT);
         GangDifficulty_Set(tDifficultyCursor);
+        GangNuzlocke_Set(tDifficultyCursor == GANG_DIFFICULTY_BOSS && tNuzlocke);
         gTasks[taskId].func = Task_OakSpeech_ClearGenderWindows; // removes tMenuWindowId and the text box
     }
 }
@@ -1615,12 +1632,14 @@ static void Task_OakSpeech_StartDifficultyMenu(u8 taskId)
     PutWindowTilemap(tMenuWindowId);
     DrawStdFrameWithCustomTileAndPalette(tMenuWindowId, TRUE, STD_WINDOW_BASE_TILE_NUM, 14);
     tDifficultyCursor = GangDifficulty_GetDefaultSelection();
+    tNuzlocke = FALSE;
     Difficulty_Draw(taskId);
     CopyWindowToVram(tMenuWindowId, COPYWIN_FULL);
     gTasks[taskId].func = Task_OakSpeech_HandleDifficultyInput;
 }
 
 #undef tDifficultyCursor
+#undef tNuzlocke
 
 static void UNUSED Task_OakSpeech_ShowGenderOptions_Original(u8 taskId);
 

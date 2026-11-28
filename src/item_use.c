@@ -1,4 +1,5 @@
 #include "global.h"
+#include "gang_nuzlocke.h"
 #include "gang_random.h"
 #include "script_pokemon_util.h"
 #include "item_use.h"
@@ -1175,6 +1176,8 @@ static u32 GetBallThrowableState(void)
         return BALL_THROW_UNABLE_SEMI_INVULNERABLE;
     else if (FlagGet(WE_FLAG_NO_CATCHING) || !IsAllowedToUseBag())
         return BALL_THROW_UNABLE_DISABLED_FLAG;
+    else if (GangNuzlocke_IsCatchBlocked())
+        return BALL_THROW_UNABLE_NUZLOCKE;
 
     return BALL_THROW_ABLE;
 }
@@ -1301,6 +1304,10 @@ bool32 CannotUseItemsInBattle(enum Item itemId, struct Pokemon *mon)
             failStr = sText_CantThrowPokeBall_Disabled;
             cannotUse = TRUE;
             break;
+        case BALL_THROW_UNABLE_NUZLOCKE:
+            failStr = COMPOUND_STRING("NUZLOCKE: You already had your\nencounter in this area!\p");
+            cannotUse = TRUE;
+            break;
         }
         break;
     case EFFECT_ITEM_INCREASE_ALL_STATS:
@@ -1338,7 +1345,7 @@ bool32 CannotUseItemsInBattle(enum Item itemId, struct Pokemon *mon)
             cannotUse = TRUE;
         break;
     case EFFECT_ITEM_REVIVE:
-        if (hp != 0)
+        if (hp != 0 || GangNuzlocke_IsEnabled()) // NUZLOCKE: no revives
             cannotUse = TRUE;
         break;
     case EFFECT_ITEM_RESTORE_PP:
