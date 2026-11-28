@@ -334,8 +334,7 @@ TrainerTower_Lobby_Text_WonderWhatKindsOfTrainers::
 	.string "It's nerve-racking!$"
 
 TrainerTower_Lobby_Text_StairsTougherThanAnyBattle::
-	.string "Gasp, gasp…\n"
-	.string "Gasp…\p"
-	.string "Never mind battling! These stairs…\n"
-	.string "They're tougher than any battle…$"
+	.string "Gasp, gasp…\p"
+	.string "These stairs are tougher than any\n"
+	.string "gang!$"
 

@@ -340,6 +340,63 @@ MANUAL.update({
 })
 
 
+# the rest: CELADON MANSION, SILPH CO., S.S. ANNE, POKéMON TOWER, SAFARI ZONE, paths and caves, SEVII houses
+MANUAL.update({
+    ('CeladonCity_Condominiums_1F', 'NothingBeatsThirstLikeTea'): "Nothing beats a hot TEA.|Even AQUA and MAGMA stop fighting for my TEA.",
+    ('CeladonCity_Condominiums_1F', 'MyDearMonsKeepMeCompany'): "My POKéMON keep me company.|MEOWTH even brings money home. From the gangs, I think.",
+    ('CeladonCity_Condominiums_3F', 'ImTheProgrammer'): "Me?|I'm the programmer! I make sure the gangs never crash the game.",
+    ('CeladonCity_Condominiums_3F', 'ImTheGraphicArtist'): "I'm the graphic artist!|I drew the burning cities. Pretty, huh?",
+    ('CeladonCity_Condominiums_3F', 'IWroteTheStory'): "I wrote the story!|Isn't GIOVANNI cool? And PIERS! And LYSANDRE's hair!",
+    ('CeladonCity_Condominiums_3F', 'SomeonesPlayingGame'): "Someone's playing a game instead of working!|Probably a TEAM MAGMA grunt.",
+    ('CeladonCity_Condominiums_Roof', 'IKnowEverything'): "I KNOW EVERYTHING! Even where the gangs hide their loot!",
+    ('DiglettsCave_SouthEntrance', 'DiglettDugThisTunnel'): "DIGLETT dug this long tunnel!|It goes all the way to VIRIDIAN. The ROCKETS use it to smuggle things.",
+    ('MtMoon_1F', 'ZubatIsABloodsucker'): "Beware! ZUBAT is a bloodsucker! So is TEAM YELL's toll.",
+    ('MtMoon_1F', 'BrockHelpsExcavateFossils'): "I dig for fossils under MT. MOON.|TEAM YELL sells them in PEWTER. I just want to study them!",
+    ('MtMoon_B2F', 'LabOnCinnabarRegeneratesFossils'): "Far away, on CINNABAR ISLAND, there's a LAB that brings fossils back to life.|TEAM GALACTIC runs it now, but it still works.",
+    ('PokemonTower_1F', 'ErectedInMemoryOfDeadMons'): "POKéMON TOWER was built in memory of POKéMON that died.|Since the outbreak, it fills up fast.",
+    ('PokemonTower_1F', 'CameToPrayForDepartedClefairy'): "I came to pray for my CLEFAIRY.|It was lost in the gang fights… Sniff!",
+    ('PokemonTower_1F', 'GrowlitheWhyDidYouDie'): "My GROWLITHE… It protected me from the ROCKETS. Why did you have to die?",
+    ('SSAnne_1F_Corridor', 'PassengersAreRestless'): "The passengers are restless.|Some of them are gangsters in disguise. Watch out!",
+    ('SSAnne_1F_Room2', 'CruisingAroundWorld'): "We're sailing away from KANTO, my children and I. Far from the gangs.",
+    ('SSAnne_1F_Room3', 'CruiseIsElegantAndCozy'): "A cruise is so elegant!|No burning cities, no gangs. Just the sea.",
+    ('SSAnne_2F_Corridor', 'ThisShipIsLuxuryLiner'): "This ship is a luxury liner for TRAINERS!|ARCHER's ROCKETS check every cabin, though.",
+    ('SSAnne_2F_Room6', 'ManyPeopleGetSeasick'): "Many people get seasick. Or ROCKET-sick.",
+    ('SSAnne_Deck', 'ScrubbingDecksHardWork'): "Whew! Scrubbing decks is hard work!|The ROCKETS leave such a mess.",
+    ('SSAnne_Kitchen', 'SoBusyImDizzy'): "I'm so busy I'm dizzy!|The ROCKETS eat like SNORLAX!",
+    ('SafariZone_Center_RestHouse', 'CatchingMonsAsGifts'): "I'm catching POKéMON before TEAM PLASMA “frees” them all.",
+    ('SafariZone_East_RestHouse', 'TiredFromAllTheFun'): "Whew! I'm tired! At least there are no gangs in here.",
+    ('SafariZone_North_RestHouse', 'MyEeveeEvolvedIntoFlareon'): "My EEVEE evolved into FLAREON.|TEAM PLASMA says that's cruel. Whatever.",
+    ('SafariZone_West_RestHouse', 'KogaPatrolsSafariEverySoOften'): "The SAFARI ZONE is huge.|TEAM PLASMA patrols it now, looking for POKéMON to “free.”",
+    ('SafariZone_West_RestHouse', 'HikedLotsDidntSeeMonIWanted'): "I hiked a lot, but TEAM PLASMA scared all the POKéMON away.",
+    ('SilphCo_1F', 'WelcomePresidentInBoardroom'): "Welcome to SILPH CO.|The PRESIDENT is in the boardroom on 11F. If the ROCKETS let him go.",
+    ('SilphCo_6F', 'RocketsTryingToConquerWorld'): "TEAM ROCKET wants to conquer the world with our products.|TEAM FLARE wants them too!",
+    ('SilphCo_6F', 'TargetedSilphForOurMonProducts'): "Every gang in KANTO wants SILPH's POKéMON products.",
+    ('SilphCo_6F', 'ComeWorkForSilphWhenYoureOlder'): "Come work for SILPH when this is over. If it's ever over.",
+    ('SilphCo_8F', 'WonderIfSilphIsFinished'): "I wonder if SILPH is finished… ROCKET or FLARE, somebody will take it.",
+    ('UndergroundPath_EastEntrance', 'DoYouGoToCeladonDeptStore'): "The DEPT. STORE in CELADON still has stuff.|If AQUA and MAGMA let you in.",
+    ('UndergroundPath_SouthEntrance', 'PeopleLoseThingsInTheDarkness'): "People lose things down there. Or the gangs take them.",
+    ('FiveIsland_House1', 'HusbandWentOffFishing'): "My husband went fishing.|He says the sea is the only place without gangs.",
+    ('FiveIsland_House2', 'MeadowBelongedToFamily'): "That MEADOW belonged to our family.|Then TEAM ROCKET built a warehouse on it!",
+    ('FiveIsland_PokemonCenter_1F', 'OnMyWayToPrepareMeal'): "I'm cooking for a rich lady in the RESORT.|She pays well. Better than the gangs.",
+    ('FourIsland_Mart', 'IcefallCaveIsFrigid'): "The SEVII ISLANDS are warm, except ICEFALL CAVE.|And poachers hide in there!",
+    ('FourIsland_PokemonCenter_1F', 'NewPokemonJournalHasntArrived'): "The new POKéMON JOURNAL hasn't arrived?|The gangs must have stolen the delivery.",
+    ('OneIsland_House1', 'GazeUponVolcanoOnSunnyDays'): "On sunny days, I gaze at the volcano.|At least it's not a burning city.",
+    ('OneIsland_House2', 'IWantToStayHereForever'): "Young people want to go to the big cities.|With all the gangs? I'm staying here!",
+    ('OneIsland_PokemonCenter_1F', 'EnormousVolcanoOnIsland'): "There's a huge volcano on this island.|Strange people have been digging there lately.",
+    ('OneIsland_TreasureBeach', 'GoodThingsWashUpOnBeach'): "Good things wash up on this beach.|Lately, mostly loot bags from KANTO.",
+    ('OneIsland_KindleRoad_EmberSpa', 'HotSpringIsTherapeutic'): "A hot spring is good for the soul. Especially after a gang fight.",
+    ('SevenIsland_Mart', 'PreparationsCompleteForRuins'): "Preparations complete! I'll explore the RUINS before TEAM ROCKET loots them.",
+    ('SevenIsland_PokemonCenter_1F', 'CheckOutTrainerTower'): "If you're confident, check out TRAINER TOWER. No gangs, just strong TRAINERS!",
+    ('SixIsland_House', 'GoodPlaceForNatureAndHistory'): "Nothing exciting here for young people.|No gangs either. That's good enough for me.",
+    ('SixIsland_Mart', 'ShouldBuyMailAndWriteLetter'): "I should write my son in KANTO and tell him to come home.",
+    ('ThreeIsland_House3', 'WantedToLiveSomewhereQuiet'): "I moved here to get away from the gangs.|Then the BIKERS came. Sigh.",
+    ('ThreeIsland_Mart', 'TrueThatCeldadonDeptStoreBigger'): "Is it true? The CELADON DEPT. STORE is huge?|And AQUA and MAGMA fight over it?",
+    ('ThreeIsland_PokemonCenter_1F', 'ImpossibleToSurfBetweenIslands'): "You can't SURF between the islands. The currents are too fast.|That's why the gangs need ships.",
+    ('TwoIsland_PokemonCenter_1F', 'OldLadyLivesOutOnCape'): "Not many people live on TWO ISLAND.|An old lady lives out on the cape. Even the gangs are scared of her.",
+    ('TrainerTower_Lobby', 'StairsTougherThanAnyBattle'): "Gasp, gasp…|These stairs are tougher than any gang!",
+})
+
+
 # texts with hints the player needs (keys, passwords, teleport tiles, the SILPH SCOPE …) keep their wording
 ORIG_REF = 'f93f63af'   # last commit before this tool touched any texts
 HINTS = re.compile(r'KEY|SCOPE|ELEVATOR|LIFT|PASSWORD|TELEPORT|HINT|TILE|SWITCH|BASEMENT|SECRET|FLUTE|GOLD TEETH|'
@@ -461,6 +518,10 @@ def main():
         for (mp, suffix), text in MANUAL.items():
             if mp == mapname:
                 s, ok = replace(s, '%s_Text_%s' % (mapname, suffix), wrap(text))
+                if not ok:   # some maps use another map's prefix for their texts
+                    m = re.search(r'^(\w+_Text_%s)::?$' % re.escape(suffix), s, re.M)
+                    if m:
+                        s, ok = replace(s, m.group(1), wrap(text))
                 assert ok, (mp, suffix)
                 changed += ok
         if changed:

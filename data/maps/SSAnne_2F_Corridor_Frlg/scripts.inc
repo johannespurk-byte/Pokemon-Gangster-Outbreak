@@ -170,10 +170,10 @@ SSAnne_2F_Corridor_EventScript_Sailor::
 	end
 
 SSAnne_2F_Corridor_Text_ThisShipIsLuxuryLiner::
-	.string "This ship, she is a luxury liner for\n"
-	.string "TRAINERS of the world!\p"
-	.string "At every port, we hold parties with\n"
-	.string "invited TRAINERS.$"
+	.string "This ship is a luxury liner for\n"
+	.string "TRAINERS!\p"
+	.string "ARCHER's ROCKETS check every\n"
+	.string "cabin, though.$"
 
 SSAnne_2F_Corridor_Text_RivalIntro::
 	.string "{RIVAL}: Bonjour!\n"

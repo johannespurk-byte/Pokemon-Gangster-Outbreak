@@ -51,18 +51,19 @@ CeladonCity_Condominiums_3F_EventScript_Computer3::
 	end
 
 CeladonCity_Condominiums_3F_Text_ImTheProgrammer::
-	.string "Me?\n"
-	.string "I'm the programmer!$"
+	.string "Me?\p"
+	.string "I'm the programmer! I make sure\n"
+	.string "the gangs never crash the game.$"
 
 CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist::
-	.string "I'm the graphic artist!\n"
-	.string "I drew you!$"
+	.string "I'm the graphic artist!\p"
+	.string "I drew the burning cities. Pretty,\n"
+	.string "huh?$"
 
 CeladonCity_Condominiums_3F_Text_IWroteTheStory::
-	.string "I wrote the story!\n"
-	.string "Isn't ERIKA cute?\p"
-	.string "I like MISTY a lot, too!\n"
-	.string "Oh, and SABRINA, I like her!$"
+	.string "I wrote the story!\p"
+	.string "Isn't GIOVANNI cool? And PIERS!\n"
+	.string "And LYSANDRE's hair!$"
 
 CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
 	.string "Is that right?\p"
@@ -82,8 +83,9 @@ CeladonCity_Condominiums_3F_Text_ItsTheGameProgram::
 	.string "it could bug out the game!$"
 
 CeladonCity_Condominiums_3F_Text_SomeonesPlayingGame::
-	.string "Someone's playing a game instead of\n"
-	.string "working!$"
+	.string "Someone's playing a game instead\n"
+	.string "of working!\p"
+	.string "Probably a TEAM MAGMA grunt.$"
 
 CeladonCity_Condominiums_3F_Text_ItsScriptBetterNotLookAtEnding::
 	.string "It's the script!\n"

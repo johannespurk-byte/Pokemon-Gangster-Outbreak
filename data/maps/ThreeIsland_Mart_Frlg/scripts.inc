@@ -36,9 +36,9 @@ ThreeIsland_Mart_EventScript_Youngster::
 	end
 
 ThreeIsland_Mart_Text_TrueThatCeldadonDeptStoreBigger::
-	.string "Is it true?\p"
-	.string "CELADON DEPT. STORE is several\n"
-	.string "times bigger than this shop?$"
+	.string "Is it true? The CELADON DEPT.\n"
+	.string "STORE is huge?\p"
+	.string "And AQUA and MAGMA fight over it?$"
 
 ThreeIsland_Mart_Text_PeopleHealWithBerriesFromForest::
 	.string "I sometimes buy medicine here.\p"

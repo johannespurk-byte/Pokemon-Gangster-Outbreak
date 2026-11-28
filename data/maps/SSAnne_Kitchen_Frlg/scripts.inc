@@ -59,8 +59,8 @@ SSAnne_Kitchen_Text_SawOddBerryInTrash::
 	.string "I wonder what that was?$"
 
 SSAnne_Kitchen_Text_SoBusyImDizzy::
-	.string "I'm so busy I'm getting dizzy!\n"
-	.string "You have to give me room here!$"
+	.string "I'm so busy I'm dizzy!\p"
+	.string "The ROCKETS eat like SNORLAX!$"
 
 SSAnne_Kitchen_Text_PeelSpudsEveryDay::
 	.string "Hum-de-hum-de-ho…\p"

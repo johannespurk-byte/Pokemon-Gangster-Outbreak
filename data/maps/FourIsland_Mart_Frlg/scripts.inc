@@ -38,10 +38,7 @@ FourIsland_Mart_Text_LoreleiGrewUpOnThisIsland::
 	.string "I taught her about POKéMON.$"
 
 FourIsland_Mart_Text_IcefallCaveIsFrigid::
-	.string "The SEVII ISLANDS are in a warm\n"
-	.string "region overall.\p"
-	.string "But there is one exception you\n"
-	.string "need to know about.\p"
-	.string "The ICEFALL CAVE is frigid because\n"
-	.string "of the POKéMON that live in it.$"
+	.string "The SEVII ISLANDS are warm,\n"
+	.string "except ICEFALL CAVE.\p"
+	.string "And poachers hide in there!$"
 

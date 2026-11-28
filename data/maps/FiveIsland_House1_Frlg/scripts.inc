@@ -6,10 +6,7 @@ FiveIsland_House1_EventScript_Woman::
 	end
 
 FiveIsland_House1_Text_HusbandWentOffFishing::
-	.string "Don't worry about buying anything\n"
-	.string "for dinner tonight!\p"
-	.string "…That's what my husband said when\n"
-	.string "he went off fishing today.\p"
-	.string "I'm not sure if I can count on him\n"
-	.string "to live up to that promise.$"
+	.string "My husband went fishing.\p"
+	.string "He says the sea is the only place\n"
+	.string "without gangs.$"
 

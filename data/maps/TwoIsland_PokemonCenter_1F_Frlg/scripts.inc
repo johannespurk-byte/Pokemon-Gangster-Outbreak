@@ -29,10 +29,8 @@ TwoIsland_PokemonCenter_1F_Text_HaveYouVisitedGameCorner::
 	.string "You have to take a friend along.$"
 
 TwoIsland_PokemonCenter_1F_Text_OldLadyLivesOutOnCape::
-	.string "Not many people live on\n"
-	.string "TWO ISLAND.\p"
-	.string "There is this old lady who lives\n"
-	.string "out on the cape.\p"
-	.string "She's been there since I don't know\n"
-	.string "when.$"
+	.string "Not many people live on TWO\n"
+	.string "ISLAND.\p"
+	.string "An old lady lives out on the cape.\n"
+	.string "Even the gangs are scared of her.$"
 

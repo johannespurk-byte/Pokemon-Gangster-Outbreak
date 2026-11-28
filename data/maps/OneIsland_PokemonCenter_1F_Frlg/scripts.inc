@@ -882,10 +882,10 @@ OneIsland_PokemonCenter_1F_Text_CameFromPalletDontKnowIt::
 	.string "I don't know it!$"
 
 OneIsland_PokemonCenter_1F_Text_EnormousVolcanoOnIsland::
-	.string "On this island, there's an enormous\n"
-	.string "volcano.\p"
-	.string "It hasn't erupted lately, so why\n"
-	.string "not enjoy a hike?$"
+	.string "There's a huge volcano on this\n"
+	.string "island.\p"
+	.string "Strange people have been digging\n"
+	.string "there lately.$"
 
 OneIsland_PokemonCenter_1F_Text_WishICouldTradeWithBoyfriend::
 	.string "I wish I could trade POKéMON with\n"

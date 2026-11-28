@@ -124,11 +124,10 @@ MtMoon_1F_Text_RobbyPostBattle::
 	.string "Not from you, though!$"
 
 MtMoon_1F_Text_ZubatIsABloodsucker::
-	.string "Beware!\n"
-	.string "ZUBAT is a bloodsucker!$"
+	.string "Beware! ZUBAT is a bloodsucker! So\n"
+	.string "is TEAM YELL's toll.$"
 
 MtMoon_1F_Text_BrockHelpsExcavateFossils::
-	.string "Hi, I'm excavating for fossils here\n"
-	.string "under MT. MOON.\p"
-	.string "Sometimes, BROCK of PEWTER GYM\n"
-	.string "lends me a hand.$"
+	.string "I dig for fossils under MT. MOON.\p"
+	.string "TEAM YELL sells them in PEWTER. I\n"
+	.string "just want to study them!$"

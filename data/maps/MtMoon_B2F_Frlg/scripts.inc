@@ -152,9 +152,10 @@ MtMoon_B2F_Text_ThenThisFossilIsMine::
 
 MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils::
 	.string "Far away, on CINNABAR ISLAND,\n"
-	.string "there's a POKéMON LAB.\p"
-	.string "They do research on regenerating\n"
-	.string "fossils.$"
+	.string "there's a LAB that brings fossils\p"
+	.string "back to life.\p"
+	.string "TEAM GALACTIC runs it now, but it\n"
+	.string "still works.$"
 
 MtMoon_B2F_Text_Grunt1Intro::
 	.string "You're not one of us. Get lost or\n"

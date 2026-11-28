@@ -40,6 +40,6 @@ SSAnne_1F_Room2_Text_AnnPostBattle::
 	.string "Or maybe your crew!$"
 
 SSAnne_1F_Room2_Text_CruisingAroundWorld::
-	.string "We are cruising around the world,\n"
-	.string "my children and I.$"
+	.string "We're sailing away from KANTO, my\n"
+	.string "children and I. Far from the gangs.$"
 

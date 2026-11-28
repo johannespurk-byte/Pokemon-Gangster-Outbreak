@@ -39,7 +39,9 @@ SilphCo_8F_EventScript_Grunt2::
 	end
 
 SilphCo_8F_Text_WonderIfSilphIsFinished::
-	.string "I wonder if SILPH is finished…$"
+	.string "I wonder if SILPH is finished…\n"
+	.string "ROCKET or FLARE, somebody will\p"
+	.string "take it.$"
 
 SilphCo_8F_Text_ThanksForSavingUs::
 	.string "Thanks for saving us!$"

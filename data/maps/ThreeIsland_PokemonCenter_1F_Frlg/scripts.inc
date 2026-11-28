@@ -34,10 +34,10 @@ ThreeIsland_PokemonCenter_1F_Text_PCNetworkCanLinkWithKanto::
 	.string "but it's fantastic!$"
 
 ThreeIsland_PokemonCenter_1F_Text_ImpossibleToSurfBetweenIslands::
-	.string "It's impossible to SURF between the\n"
-	.string "islands around these parts.\p"
-	.string "The tides are too fast and\n"
-	.string "treacherous.$"
+	.string "You can't SURF between the\n"
+	.string "islands. The currents are too\p"
+	.string "fast.\p"
+	.string "That's why the gangs need ships.$"
 
 ThreeIsland_PokemonCenter_1F_Text_AlwaysBerriesInBerryForest::
 	.string "Let's crush BERRIES!\n"

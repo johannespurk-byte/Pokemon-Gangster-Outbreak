@@ -76,8 +76,8 @@ OneIsland_KindleRoad_EmberSpa_Text_WaterExquisiteFullyRefreshed::
 	.string "fully refreshed!$"
 
 OneIsland_KindleRoad_EmberSpa_Text_HotSpringIsTherapeutic::
-	.string "Soaking in a hot spring pool is\n"
-	.string "therapeutic, people say.$"
+	.string "A hot spring is good for the soul.\n"
+	.string "Especially after a gang fight.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_SeeHowSmoothMySkinIs::
 	.string "Have a look at my face.\n"

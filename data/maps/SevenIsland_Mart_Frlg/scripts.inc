@@ -45,8 +45,9 @@ SevenIsland_Mart_Text_MonHavePersonalitiesOfTheirOwn::
 	.string "so it grew to be a speedy POKéMON.$"
 
 SevenIsland_Mart_Text_PreparationsCompleteForRuins::
-	.string "Okay, preparations are complete\n"
-	.string "for me to explore the RUINS.$"
+	.string "Preparations complete! I'll\n"
+	.string "explore the RUINS before TEAM\p"
+	.string "ROCKET loots them.$"
 
 SevenIsland_Mart_Text_NeedToFishOnSevenIsland::
 	.string "I need to fish on SEVEN ISLAND.\p"

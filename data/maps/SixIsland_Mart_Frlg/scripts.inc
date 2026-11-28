@@ -38,6 +38,6 @@ SixIsland_Mart_Text_AgathaOldestEverEliteFourMember::
 	.string "She spurs me to do bigger things.$"
 
 SixIsland_Mart_Text_ShouldBuyMailAndWriteLetter::
-	.string "I should buy some MAIL and write\n"
-	.string "him a letter…$"
+	.string "I should write my son in KANTO and\n"
+	.string "tell him to come home.$"
 

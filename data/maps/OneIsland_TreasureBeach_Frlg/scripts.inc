@@ -17,8 +17,7 @@ OneIsland_TreasureBeach_Text_AmaraPostBattle::
 	.string "night. Stay sharp.$"
 
 OneIsland_TreasureBeach_Text_GoodThingsWashUpOnBeach::
-	.string "Good things get washed up by the\n"
-	.string "ocean current onto this beach.\p"
-	.string "That's why I often come here for\n"
-	.string "some beachcombing.$"
+	.string "Good things wash up on this beach.\p"
+	.string "Lately, mostly loot bags from\n"
+	.string "KANTO.$"
 

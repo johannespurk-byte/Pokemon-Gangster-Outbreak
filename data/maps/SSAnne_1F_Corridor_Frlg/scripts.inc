@@ -18,8 +18,7 @@ SSAnne_1F_Corridor_Text_LeStrongSilentType::
 	.string "Ah! Le strong silent type!$"
 
 SSAnne_1F_Corridor_Text_PassengersAreRestless::
-	.string "The passengers are restless from\n"
-	.string "this long voyage.\p"
-	.string "You might be challenged by the\n"
-	.string "more bored ones!$"
+	.string "The passengers are restless.\p"
+	.string "Some of them are gangsters in\n"
+	.string "disguise. Watch out!$"
 

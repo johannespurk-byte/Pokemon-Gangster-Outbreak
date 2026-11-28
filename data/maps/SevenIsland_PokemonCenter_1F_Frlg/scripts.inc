@@ -42,6 +42,7 @@ SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere::
 	.string "though.$"
 
 SevenIsland_PokemonCenter_1F_Text_CheckOutTrainerTower::
-	.string "If you're confident, you should\n"
-	.string "check out TRAINER TOWER.$"
+	.string "If you're confident, check out\n"
+	.string "TRAINER TOWER. No gangs, just\p"
+	.string "strong TRAINERS!$"
 

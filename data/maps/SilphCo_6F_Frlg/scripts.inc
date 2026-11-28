@@ -114,20 +114,21 @@ SilphCo_6F_Text_NeedsMeToLookAfterHim::
 	.string "someone like me to look after him.$"
 
 SilphCo_6F_Text_RocketsTryingToConquerWorld::
-	.string "TEAM ROCKET is trying to conquer\n"
-	.string "the world with POKéMON.$"
+	.string "TEAM ROCKET wants to conquer the\n"
+	.string "world with our products.\p"
+	.string "TEAM FLARE wants them too!$"
 
 SilphCo_6F_Text_RocketsRanAwayBecauseOfYou::
 	.string "TEAM ROCKET ran away, and it's all\n"
 	.string "because of you!$"
 
 SilphCo_6F_Text_TargetedSilphForOurMonProducts::
-	.string "They must have targeted SILPH for\n"
-	.string "our POKéMON products.$"
+	.string "Every gang in KANTO wants SILPH's\n"
+	.string "POKéMON products.$"
 
 SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder::
-	.string "Come work for SILPH when you\n"
-	.string "get older.$"
+	.string "Come work for SILPH when this is\n"
+	.string "over. If it's ever over.$"
 
 SilphCo_6F_Text_Grunt1Intro::
 	.string "Hand over your POKéMON. Orders\n"

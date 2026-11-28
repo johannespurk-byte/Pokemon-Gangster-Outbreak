@@ -28,8 +28,9 @@ SSAnne_Deck_Text_ShipDepartingSoon::
 	.string "The ship will be departing soon.$"
 
 SSAnne_Deck_Text_ScrubbingDecksHardWork::
-	.string "Whew!\n"
-	.string "Scrubbing decks is hard work!$"
+	.string "Whew! Scrubbing decks is hard\n"
+	.string "work!\p"
+	.string "The ROCKETS leave such a mess.$"
 
 SSAnne_Deck_Text_FeelSeasick::
 	.string "Urf… I feel ill…\p"

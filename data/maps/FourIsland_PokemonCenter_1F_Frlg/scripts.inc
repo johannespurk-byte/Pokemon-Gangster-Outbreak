@@ -67,7 +67,8 @@ FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore::
 	.string "before on their property.$"
 
 FourIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived::
-	.string "What's this?\p"
 	.string "The new POKéMON JOURNAL hasn't\n"
-	.string "arrived on this island?$"
+	.string "arrived?\p"
+	.string "The gangs must have stolen the\n"
+	.string "delivery.$"
 

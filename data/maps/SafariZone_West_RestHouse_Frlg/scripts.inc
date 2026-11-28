@@ -14,12 +14,9 @@ SafariZone_West_RestHouse_EventScript_CooltrainerF::
 	end
 
 SafariZone_West_Text_KogaPatrolsSafariEverySoOften::
-	.string "The SAFARI ZONE's huge, wouldn't\n"
-	.string "you say?\p"
-	.string "FUCHSIA's GYM LEADER, KOGA, \n"
-	.string "patrols the grounds every so often.\p"
-	.string "Thanks to him, we can play here\n"
-	.string "knowing that we're safe.$"
+	.string "The SAFARI ZONE is huge.\p"
+	.string "TEAM PLASMA patrols it now,\n"
+	.string "looking for POKéMON to “free.”$"
 
 SafariZone_West_Text_RocksMakeMonRunButEasierCatch::
 	.string "Tossing ROCKS at POKéMON might\n"
@@ -32,6 +29,6 @@ SafariZone_West_Text_BaitMakesMonStickAround::
 	.string "busy eating.$"
 
 SafariZone_West_Text_HikedLotsDidntSeeMonIWanted::
-	.string "I hiked a lot, but I didn't see any\n"
-	.string "POKéMON I wanted.$"
+	.string "I hiked a lot, but TEAM PLASMA\n"
+	.string "scared all the POKéMON away.$"
 

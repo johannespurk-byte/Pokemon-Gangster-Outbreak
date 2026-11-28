@@ -70,13 +70,14 @@ CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead::
 	.string "Try this instead.$"
 
 CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea::
-	.string "Nothing beats thirst like some hot\n"
-	.string "TEA.\p"
-	.string "It really is the best.$"
+	.string "Nothing beats a hot TEA.\p"
+	.string "Even AQUA and MAGMA stop fighting\n"
+	.string "for my TEA.$"
 
 CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany::
-	.string "My dear POKéMON keep me company.\n"
-	.string "MEOWTH even brings money home!$"
+	.string "My POKéMON keep me company.\p"
+	.string "MEOWTH even brings money home.\n"
+	.string "From the gangs, I think.$"
 
 CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea::
 	.string "Oh, hello, dearie.\n"

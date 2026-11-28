@@ -6,7 +6,8 @@ OneIsland_House2_EventScript_Lass::
 	end
 
 OneIsland_House2_Text_IWantToStayHereForever::
-	.string "Young people all want to go off to\n"
-	.string "big cities.\p"
-	.string "But I want to stay here forever!$"
+	.string "Young people want to go to the big\n"
+	.string "cities.\p"
+	.string "With all the gangs? I'm staying\n"
+	.string "here!$"
 

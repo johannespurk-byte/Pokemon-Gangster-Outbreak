@@ -23,8 +23,10 @@ FiveIsland_PokemonCenter_1F_EventScript_CooltrainerF::
 	end
 
 FiveIsland_PokemonCenter_1F_Text_OnMyWayToPrepareMeal::
-	.string "I'm on my way to prepare a meal\n"
-	.string "for a certain high-society person.$"
+	.string "I'm cooking for a rich lady in the\n"
+	.string "RESORT.\p"
+	.string "She pays well. Better than the\n"
+	.string "gangs.$"
 
 FiveIsland_PokemonCenter_1F_Text_YoureOnQuestToCatchEveryMon::
 	.string "You're on a quest to catch every\n"
