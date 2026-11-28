@@ -616,6 +616,14 @@ gSongTable::
 	song ph_nurse_blend, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_held, MUSIC_PLAYER_SE2, 2
 	song ph_nurse_solo, MUSIC_PLAYER_SE2, 2
+	song mus_go_gym_yell, MUSIC_PLAYER_BGM, 0
+	song mus_go_gym_skull, MUSIC_PLAYER_BGM, 0
+	song mus_go_gym_rocket_a, MUSIC_PLAYER_BGM, 0
+	song mus_go_gym_aquamagma, MUSIC_PLAYER_BGM, 0
+	song mus_go_gym_plasma, MUSIC_PLAYER_BGM, 0
+	song mus_go_gym_flare, MUSIC_PLAYER_BGM, 0
+	song mus_go_gym_galactic, MUSIC_PLAYER_BGM, 0
+	song mus_go_gym_rocket_v, MUSIC_PLAYER_BGM, 0
 
 	.align 2
 dummy_song_header:

@@ -546,6 +546,14 @@
 #define PH_NURSE_BLEND              607
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
+#define MUS_GO_GYM_YELL             610  // Gangster Outbreak gym theme
+#define MUS_GO_GYM_SKULL            611  // Gangster Outbreak gym theme
+#define MUS_GO_GYM_ROCKET_A         612  // Gangster Outbreak gym theme
+#define MUS_GO_GYM_AQUAMAGMA        613  // Gangster Outbreak gym theme
+#define MUS_GO_GYM_PLASMA           614  // Gangster Outbreak gym theme
+#define MUS_GO_GYM_FLARE            615  // Gangster Outbreak gym theme
+#define MUS_GO_GYM_GALACTIC         616  // Gangster Outbreak gym theme
+#define MUS_GO_GYM_ROCKET_V         617  // Gangster Outbreak gym theme
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
