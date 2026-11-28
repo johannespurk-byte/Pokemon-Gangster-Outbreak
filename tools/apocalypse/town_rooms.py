@@ -112,6 +112,9 @@ class Tileset:
         self.lookup = {t: i for i, t in enumerate(self.tiles)}
         self.names = {}
         self.deco_done = False
+        used = {e >> 12 for m in self.meta for e in m}
+        free = [slot for slot in (DECO_SLOT, 12, 10, 9) if slot not in used]
+        self.deco_slot = free[0] if free else None   # None: props use the tileset's own colours only
 
     # rendering
     def all_pals(self):
@@ -161,7 +164,8 @@ class Tileset:
                 pal.append(c)
         while len(pal) < 16:
             pal.append(deco.DECO_PAL[GL])
-        self.pals[DECO_SLOT] = pal
+        if self.deco_slot is not None:
+            self.pals[self.deco_slot] = pal
 
     # encoding
     def tile_id(self, px):
@@ -226,8 +230,9 @@ class Tileset:
         img.save(os.path.join(ROOT, self.sec, 'tiles.png'), bits=4)
         open(os.path.join(ROOT, self.sec, 'metatiles.bin'), 'wb').write(b''.join(struct.pack('<8H', *m) for m in self.meta))
         open(os.path.join(ROOT, self.sec, 'metatile_attributes.bin'), 'wb').write(b''.join(struct.pack('<I', a) for a in self.attr))
-        with open(os.path.join(ROOT, self.sec, 'palettes', '%02d.pal' % DECO_SLOT), 'w', newline='\r\n') as f:
-            f.write('JASC-PAL\n0100\n16\n' + ''.join('%d %d %d\n' % c for c in self.pals[DECO_SLOT]))
+        if self.deco_slot is not None:
+            with open(os.path.join(ROOT, self.sec, 'palettes', '%02d.pal' % self.deco_slot), 'w', newline='\r\n') as f:
+                f.write('JASC-PAL\n0100\n16\n' + ''.join('%d %d %d\n' % c for c in self.pals[self.deco_slot]))
 
 
 # ------------------------------------------------------------------ rooms
@@ -444,7 +449,111 @@ ROOMS = {
         'map': 'CeruleanCity_House1_Frlg'}),
     'LAYOUT_CERULEAN_CITY_HOUSE5': (GB2, {'wall': [(4, 1, 'tag_a')], 'floor': [(2, 4, 'crates'), (2, 6, 'barrel_b'),
         (5, 5, 'stain'), (4, 3, 'crack_c'), (10, 7, 'debris_b')], 'map': 'CeruleanCity_House5_Frlg'}),
+    # ---- big buildings: props placed automatically (auto_props), people, doors and signs stay reachable
+    'LAYOUT_CELADON_CITY_DEPARTMENT_STORE_1F': ('data/tilesets/secondary/department_store_frlg', {'map': 'CeladonCity_DepartmentStore_1F_Frlg', 'auto': {'seed': 1, 'decals': 8, 'solids': 3, 'tags': 3}}),
+    'LAYOUT_CELADON_CITY_DEPARTMENT_STORE_2F': ('data/tilesets/secondary/department_store_frlg', {'map': 'CeladonCity_DepartmentStore_2F_Frlg', 'auto': {'seed': 2, 'decals': 7, 'solids': 3, 'tags': 3}}),
+    'LAYOUT_CELADON_CITY_DEPARTMENT_STORE_3F': ('data/tilesets/secondary/department_store_frlg', {'map': 'CeladonCity_DepartmentStore_3F_Frlg', 'auto': {'seed': 3, 'decals': 7, 'solids': 3, 'tags': 3}}),
+    'LAYOUT_CELADON_CITY_DEPARTMENT_STORE_4F': ('data/tilesets/secondary/department_store_frlg', {'map': 'CeladonCity_DepartmentStore_4F_Frlg', 'auto': {'seed': 4, 'decals': 7, 'solids': 3, 'tags': 3}}),
+    'LAYOUT_CELADON_CITY_DEPARTMENT_STORE_5F': ('data/tilesets/secondary/department_store_frlg', {'map': 'CeladonCity_DepartmentStore_5F_Frlg', 'auto': {'seed': 5, 'decals': 7, 'solids': 3, 'tags': 3}}),
+    'LAYOUT_CELADON_CITY_DEPARTMENT_STORE_ROOF': ('data/tilesets/secondary/department_store_frlg', {'map': 'CeladonCity_DepartmentStore_Roof_Frlg', 'auto': {'seed': 6, 'decals': 8, 'solids': 4, 'tags': 0}}),
+    'LAYOUT_CELADON_CITY_GAME_CORNER': ('data/tilesets/secondary/game_corner_frlg', {'map': 'CeladonCity_GameCorner_Frlg', 'auto': {'seed': 7, 'decals': 8, 'solids': 2, 'tags': 3}}),
+    'LAYOUT_CELADON_CITY_GAME_CORNER_PRIZE_ROOM': ('data/tilesets/secondary/game_corner_frlg', {'map': 'CeladonCity_GameCorner_PrizeRoom_Frlg', 'auto': {'seed': 8, 'decals': 4, 'solids': 1, 'tags': 2}}),
+    'LAYOUT_CELADON_CITY_HOTEL': ('data/tilesets/secondary/restaurant_hotel_frlg', {'map': 'CeladonCity_Hotel_Frlg', 'auto': {'seed': 9, 'decals': 7, 'solids': 3, 'tags': 3}}),
+    'LAYOUT_CELADON_CITY_RESTAURANT': ('data/tilesets/secondary/restaurant_hotel_frlg', {'map': 'CeladonCity_Restaurant_Frlg', 'auto': {'seed': 10, 'decals': 6, 'solids': 2, 'tags': 3}}),
+    'LAYOUT_VERMILION_CITY_POKEMON_FAN_CLUB': ('data/tilesets/secondary/fan_club_daycare_frlg', {'map': 'VermilionCity_PokemonFanClub_Frlg', 'auto': {'seed': 11, 'decals': 6, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE': ('data/tilesets/secondary/fan_club_daycare_frlg', {'map': 'LavenderTown_VolunteerPokemonHouse_Frlg', 'auto': {'seed': 12, 'decals': 5, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB': ('data/tilesets/secondary/fan_club_daycare_frlg', {'map': 'SaffronCity_PokemonTrainerFanClub_Frlg', 'auto': {'seed': 13, 'decals': 7, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_SAFFRON_CITY_DOJO': ('data/tilesets/secondary/pewter_gym_frlg', {'map': 'SaffronCity_Dojo_Frlg', 'auto': {'seed': 14, 'decals': 8, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE': ('data/tilesets/secondary/safari_zone_building_frlg', {'map': 'FuchsiaCity_SafariZone_Entrance_Frlg', 'auto': {'seed': 15, 'decals': 3, 'solids': 1, 'tags': 2}}),
+    'LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_OFFICE': ('data/tilesets/secondary/safari_zone_building_frlg', {'map': 'FuchsiaCity_SafariZone_Office_Frlg', 'auto': {'seed': 16, 'decals': 6, 'solids': 2, 'tags': 3}}),
+    'LAYOUT_FUCHSIA_CITY_WARDENS_HOUSE': ('data/tilesets/secondary/museum_frlg', {'map': 'FuchsiaCity_WardensHouse_Frlg', 'auto': {'seed': 17, 'decals': 5, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_FUCHSIA_CITY_HOUSE2': ('data/tilesets/secondary/museum_frlg', {'map': 'FuchsiaCity_House2_Frlg', 'auto': {'seed': 18, 'decals': 4, 'solids': 1, 'tags': 2}}),
+    'LAYOUT_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE': ('data/tilesets/secondary/lab_frlg', {'map': 'CinnabarIsland_PokemonLab_Entrance_Frlg', 'auto': {'seed': 19, 'decals': 7, 'solids': 3, 'tags': 3}}),
+    'LAYOUT_CINNABAR_ISLAND_POKEMON_LAB_LOUNGE': ('data/tilesets/secondary/lab_frlg', {'map': 'CinnabarIsland_PokemonLab_Lounge_Frlg', 'auto': {'seed': 20, 'decals': 5, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_CINNABAR_ISLAND_POKEMON_LAB_RESEARCH_ROOM': ('data/tilesets/secondary/lab_frlg', {'map': 'CinnabarIsland_PokemonLab_ResearchRoom_Frlg', 'auto': {'seed': 21, 'decals': 5, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_CINNABAR_ISLAND_POKEMON_LAB_EXPERIMENT_ROOM': ('data/tilesets/secondary/lab_frlg', {'map': 'CinnabarIsland_PokemonLab_ExperimentRoom_Frlg', 'auto': {'seed': 22, 'decals': 5, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_VIRIDIAN_CITY_SCHOOL': ('data/tilesets/secondary/school_frlg', {'map': 'ViridianCity_School_Frlg', 'auto': {'seed': 23, 'decals': 5, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_CERULEAN_CITY_BIKE_SHOP': ('data/tilesets/secondary/bike_shop_frlg', {'map': 'CeruleanCity_BikeShop_Frlg', 'auto': {'seed': 24, 'decals': 5, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_CERULEAN_CITY_HOUSE2': ('data/tilesets/secondary/burgled_house_frlg', {'map': 'CeruleanCity_House2_Frlg', 'auto': {'seed': 25, 'decals': 5, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_SAFFRON_CITY_COPYCATS_HOUSE_1F': ('data/tilesets/secondary/generic_building_1_frlg', {'map': 'SaffronCity_CopycatsHouse_1F_Frlg', 'auto': {'seed': 26, 'decals': 5, 'solids': 2, 'tags': 2}}),
+    'LAYOUT_SAFFRON_CITY_COPYCATS_HOUSE_2F': ('data/tilesets/secondary/generic_building_1_frlg', {'map': 'SaffronCity_CopycatsHouse_2F_Frlg', 'auto': {'seed': 27, 'decals': 4, 'solids': 1, 'tags': 2}}),
 }
+
+
+DECAL_NAMES = ['crack_a', 'crack_b', 'crack_c', 'debris_a', 'debris_b', 'debris_c', 'stain', 'rubble', 'rubble_b']
+SOLID_NAMES = ['crates', 'crates_b', 'barrel', 'barrel_b', 'tires', 'sandbags', 'cash', 'barrel_fire']
+TAG_NAMES = ['tag_a', 'tag_b', 'tag_c', 'tag_d', 'tag_x', 'tag_y', 'wall_crack']
+
+
+def auto_props(room, map_dir, seed, decals=6, solids=3, tags=3):
+    """props for the big buildings, placed automatically: decals on plain floor, a few solid props where every
+    door, person and sign stays reachable, tags on the wall faces"""
+    import random
+    from collections import deque, Counter as C
+    rng = random.Random(seed)
+    m = json.load(open(os.path.join(ROOT, 'data/maps', map_dir, 'map.json')))
+    warps = {(e['x'], e['y']) for e in m.get('warp_events') or []}
+    objs = {(e['x'], e['y']) for e in m.get('object_events') or []}
+    events = warps | objs | {(e['x'], e['y']) for k in ('coord_events', 'bg_events') for e in m.get(k) or []}
+    blocked = lambda x, y: (room.cells[y * room.w + x] >> 10) & 3
+    walk = [(x, y) for y in range(room.h) for x in range(room.w) if not blocked(x, y)]
+    floor = C(room.mid(x, y) for x, y in walk).most_common(1)[0][0]
+    near = lambda c, pts, d: any(abs(c[0] - px) + abs(c[1] - py) <= d for px, py in pts)
+    cands = [c for c in walk if room.mid(*c) == floor and not near(c, warps, 2) and c not in events]
+    rng.shuffle(cands)
+    placed = []
+
+    def ok_all():
+        seen, q = set(warps), deque(warps)
+        while q:
+            x, y = q.popleft()
+            for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                if 0 <= nx < room.w and 0 <= ny < room.h and (nx, ny) not in seen and not blocked(nx, ny) \
+                        and (nx, ny) not in objs:
+                    seen.add((nx, ny))
+                    q.append((nx, ny))
+        return all(e in seen or any((e[0] + dx, e[1] + dy) in seen for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+                   for e in events)
+    base_ok = ok_all()
+    n = 0
+    for c in cands:
+        if n >= solids:
+            break
+        if near(c, objs, 1) or near(c, placed, 2):
+            continue
+        v = room.cells[c[1] * room.w + c[0]]
+        room.cells[c[1] * room.w + c[0]] = v | (1 << 10)
+        if ok_all() or not base_ok:
+            room.cells[c[1] * room.w + c[0]] = v
+            if not base_ok:
+                continue
+            room.prop(c[0], c[1], rng.choice(SOLID_NAMES), True)
+            placed.append(c)
+            n += 1
+        else:
+            room.cells[c[1] * room.w + c[0]] = v
+    n = 0
+    for c in cands:
+        if n >= decals:
+            break
+        if c in placed or near(c, placed, 1):
+            continue
+        room.prop(c[0], c[1], rng.choice(DECAL_NAMES), False)
+        placed.append(c)
+        n += 1
+    faces = [(x, y) for y in range(0, 3) for x in range(room.w) if blocked(x, y) and y + 1 < room.h
+             and not blocked(x, y + 1) and (x, y) not in events]
+    common = {mid for mid, _ in C(room.mid(*c) for c in faces).most_common(3)}
+    faces = [c for c in faces if room.mid(*c) in common]
+    rng.shuffle(faces)
+    done = []
+    for c in faces:
+        if len(done) >= tags:
+            break
+        if near(c, done, 3):
+            continue
+        room.prop(c[0], c[1], rng.choice(TAG_NAMES), None)
+        done.append(c)
 
 
 STATIC_GFX = ('OBJ_EVENT_GFX_CLIPBOARD',)   # objects that lie on furniture on purpose
@@ -520,6 +629,8 @@ def main():
             room.prop(x, y, name, None)
         for x, y, name in plan.get('floor', []):
             room.prop(x, y, name, name not in DECALS)
+        if plan.get('auto'):
+            auto_props(room, plan['map'], **plan['auto'])
         rooms.append(room)
     for ts in tilesets.values():
         ts.save()
@@ -527,7 +638,7 @@ def main():
     for room in rooms:
         room.save()
     for (layout_id, (sec, plan)), room in zip(ROOMS.items(), rooms):
-        if plan.get('map'):
+        if plan.get('map') and plan.get('ops'):   # only rooms whose furniture moved (clerks behind counters stay put)
             place_people(plan['map'], room)
     if preview:
         os.makedirs(preview, exist_ok=True)
