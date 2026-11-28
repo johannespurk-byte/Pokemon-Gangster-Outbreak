@@ -42,9 +42,8 @@ PokemonTower_5F_EventScript_Janae::
 	end
 
 PokemonTower_5F_Text_RestHereInPurifiedSpace::
-	.string "Come, child!\n"
-	.string "I have purified this space.\l"
-	.string "You can rest here.$"
+	.string "Come, child! This space is pure. No\n"
+	.string "gangs, no ghosts. Rest here.$"
 
 PokemonTower_5F_Text_TammyIntro::
 	.string "Your future is dark.\p"

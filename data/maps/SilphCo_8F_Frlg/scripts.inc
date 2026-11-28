@@ -84,9 +84,6 @@ SilphCo_8F_Text_FloorSign::
 	.string "8F$"
 
 SilphCo_8F_Text_ToRocketBossMonsAreTools::
-	.string "TEAM ROCKET's BOSS is terribly\n"
-	.string "cruel!\p"
-	.string "To him, POKéMON are just tools to\n"
-	.string "be used.\p"
-	.string "What will happen if that tyrant\n"
-	.string "takes over our company…$"
+	.string "The gang bosses are all cruel.\p"
+	.string "To them, POKéMON are just tools. I\n"
+	.string "hope you're different.$"

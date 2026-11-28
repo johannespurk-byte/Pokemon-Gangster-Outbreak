@@ -170,31 +170,29 @@ SilphCo_11F_Text_YouHaveNoRoomForThis::
 	.string "You have no room for this.$"
 
 SilphCo_11F_Text_ThanksForRescuingUs::
-	.string "SECRETARY: Thank you for rescuing\n"
-	.string "all of us.\p"
-	.string "We, from the PRESIDENT down,\n"
-	.string "are indebted to you.$"
+	.string "SECRETARY: Thank you.\p"
+	.string "You chased off TEAM FLARE AND\n"
+	.string "made GIOVANNI back down. Who ARE\p"
+	.string "you?$"
 
 SilphCo_11F_Text_GiovanniIntro::
-	.string "Ah, {PLAYER}!\n"
-	.string "So we meet again!\p"
-	.string "The PRESIDENT and I are discussing\n"
-	.string "a vital business proposition.\p"
-	.string "Keep your nose out of grown-up\n"
-	.string "matters…\p"
-	.string "Or, experience a world of pain!$"
+	.string "Ah, {PLAYER}! So we meet again!\p"
+	.string "I'm making the PRESIDENT an offer\n"
+	.string "he can't refuse.\p"
+	.string "TEAM FLARE wants SILPH too. Prove\n"
+	.string "you're strong enough to keep\p"
+	.string "them away!$"
 
 SilphCo_11F_Text_GiovanniDefeat::
-	.string "Arrgh!!\n"
-	.string "I lost again!?$"
+	.string "Hah! You did it again!$"
 
 SilphCo_11F_Text_GiovanniPostBattle::
-	.string "Blast it all!\n"
-	.string "You ruined our plans for SILPH!\p"
-	.string "But, TEAM ROCKET will never fall!\p"
-	.string "{PLAYER}! Never forget that all\n"
-	.string "POKéMON exist for TEAM ROCKET!\p"
-	.string "I must go, but I shall return!$"
+	.string "Fine. With you around, nobody will\n"
+	.string "dare touch SILPH.\p"
+	.string "The MASTER BALL stays here. For\n"
+	.string "now.\p"
+	.string "{PLAYER}! Never forget who made\n"
+	.string "you a boss!$"
 
 SilphCo_11F_Text_Grunt2Intro::
 	.string "Hand over your POKéMON. Orders\n"

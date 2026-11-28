@@ -176,8 +176,9 @@ MtEmber_Exterior_Text_SnoopsBeenListeningIn::
 	.string "This snoop's been listening in!$"
 
 MtEmber_Exterior_Text_Grunt1Intro::
-	.string "You've been eavesdropping on us,\n"
-	.string "haven't you?$"
+	.string "You've been eavesdropping on us!\n"
+	.string "You're GIOVANNI's spy, aren't\p"
+	.string "you?$"
 
 MtEmber_Exterior_Text_Grunt1Defeat::
 	.string "Huh, what?$"
@@ -186,16 +187,16 @@ MtEmber_Exterior_Text_Grunt1PostBattle::
 	.string "Why'd you have to win?$"
 
 MtEmber_Exterior_Text_Grunt2Intro::
-	.string "Trying to horn in on our treasure?\n"
-	.string "Don't bet on it!$"
+	.string "Trying to take our treasure for\n"
+	.string "GIOVANNI? Don't bet on it!$"
 
 MtEmber_Exterior_Text_Grunt2Defeat::
 	.string "Wait!\n"
 	.string "But how?$"
 
 MtEmber_Exterior_Text_Grunt2PostBattle::
-	.string "Develop amnesia conveniently and\n"
-	.string "forget everything you heard!$"
+	.string "Forget everything you heard! The\n"
+	.string "islands belong to us now!$"
 
 MtEmber_Exterior_Text_WellRegroupDontStepInsideThere::
 	.string "What a setback…\n"

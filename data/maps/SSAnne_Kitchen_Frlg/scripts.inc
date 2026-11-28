@@ -50,13 +50,13 @@ SSAnne_Kitchen_EventScript_Chef7::
 	end
 
 SSAnne_Kitchen_Text_BusyOutOfTheWay::
-	.string "You, mon petit!\n"
-	.string "We're busy here!\l"
-	.string "Out of the way!$"
+	.string "You, mon petit! We're busy cooking\n"
+	.string "for le ROCKETS! Out of the way!$"
 
 SSAnne_Kitchen_Text_SawOddBerryInTrash::
 	.string "I saw an odd BERRY in the trash.\n"
-	.string "I wonder what that was?$"
+	.string "Probably smuggled. Don't tell\p"
+	.string "anyone!$"
 
 SSAnne_Kitchen_Text_SoBusyImDizzy::
 	.string "I'm so busy I'm dizzy!\p"

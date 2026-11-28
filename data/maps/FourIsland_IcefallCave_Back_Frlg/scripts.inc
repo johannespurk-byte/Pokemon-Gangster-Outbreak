@@ -197,8 +197,8 @@ FourIsland_IcefallCave_Back_Text_LoreleiKeepHandsOffMons::
 	.string "answer to!$"
 
 FourIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe::
-	.string "Aww, shut it, lady, and leave\n"
-	.string "us be.\p"
+	.string "Aww, shut it, lady. You're not\n"
+	.string "ELITE FOUR anymore.\p"
 	.string "Don't let your glasses get all\n"
 	.string "steamed up!$"
 
@@ -215,9 +215,9 @@ FourIsland_IcefallCave_Back_Text_LoreleiPlayerHelpMeKickPoachersOut::
 	.string "You take that one, please!$"
 
 FourIsland_IcefallCave_Back_Text_GruntIntro::
-	.string "W-what?!\p"
-	.string "Who says we can't do what we want\n"
-	.string "with the POKéMON we catch?$"
+	.string "W-what?! Who says we can't sell\n"
+	.string "the POKéMON we catch?\p"
+	.string "The gangs in KANTO pay a fortune!$"
 
 FourIsland_IcefallCave_Back_Text_GruntDefeat::
 	.string "We didn't plan on this!$"
@@ -256,10 +256,11 @@ FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland::
 	.string "Heheheheh!$"
 
 FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful::
-	.string "{PLAYER}, thank you.\n"
-	.string "But this is awful…\p"
-	.string "I was born and raised here on\n"
-	.string "these islands.\p"
-	.string "I had no idea that those horrible\n"
-	.string "criminals were loose here…$"
+	.string "{PLAYER}, thank you. But this is\n"
+	.string "awful…\p"
+	.string "I was born and raised on these\n"
+	.string "islands.\p"
+	.string "The gangs from KANTO have\n"
+	.string "reached even here. I have to stop\p"
+	.string "them.$"
 

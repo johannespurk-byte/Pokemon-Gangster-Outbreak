@@ -121,27 +121,22 @@ RocketHideout_B4F_EventScript_RemoveBarrier::
 	return
 
 RocketHideout_B4F_Text_GiovanniIntro::
-	.string "So! I must say, I am impressed you\n"
-	.string "got here.\p"
-	.string "TEAM ROCKET captures POKéMON from\n"
-	.string "around the world.\p"
-	.string "They're important tools for keeping\n"
-	.string "our criminal enterprise going.\p"
-	.string "I am the leader, GIOVANNI!\p"
-	.string "For your insolence, you will feel a\n"
-	.string "world of pain!$"
+	.string "So! You found my secret hideout.\n"
+	.string "Good.\p"
+	.string "A boss has to beat anyone who\n"
+	.string "stands in his way. Even me.\p"
+	.string "Show me what my recruit has\n"
+	.string "learned!$"
 
 RocketHideout_B4F_Text_GiovanniDefeat::
-	.string "WHAT!\n"
-	.string "This can't be!$"
+	.string "Fwahaha! Well done!$"
 
 RocketHideout_B4F_Text_GiovanniPostBattle::
-	.string "I see that you raise POKéMON with\n"
-	.string "utmost care.\p"
-	.string "A child like you would never\n"
-	.string "understand what I hope to achieve.\p"
-	.string "I shall step aside this time!\p"
-	.string "I hope we meet again…$"
+	.string "You raise your POKéMON with care,\n"
+	.string "and you fight like a boss.\p"
+	.string "Take the SILPH SCOPE. LAVENDER's\n"
+	.string "ghosts won't stop you.\p"
+	.string "We'll meet again, {PLAYER}.$"
 
 RocketHideout_B4F_Text_Grunt2Intro::
 	.string "I guard this place for GIOVANNI.\n"

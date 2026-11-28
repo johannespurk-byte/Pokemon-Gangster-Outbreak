@@ -34,8 +34,8 @@ SSAnne_Deck_Text_ScrubbingDecksHardWork::
 
 SSAnne_Deck_Text_FeelSeasick::
 	.string "Urf… I feel ill…\p"
-	.string "I got seasick, so I stepped out to\n"
-	.string "get some air…$"
+	.string "Seasick, or ROCKET-sick, I don't\n"
+	.string "know anymore…$"
 
 SSAnne_Deck_Text_EdmondIntro::
 	.string "You'll sink like the last punk who\n"

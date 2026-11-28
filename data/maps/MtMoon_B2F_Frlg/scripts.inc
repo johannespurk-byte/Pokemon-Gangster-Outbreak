@@ -134,13 +134,13 @@ MtMoon_B2F_EventScript_Grunt4::
 	end
 
 MtMoon_B2F_Text_MiguelIntro::
-	.string "Hey, stop!\p"
-	.string "I found these fossils!\n"
-	.string "They're both mine!$"
+	.string "Hey, stop! I found these fossils\n"
+	.string "first!\p"
+	.string "TEAM YELL pays good money for\n"
+	.string "them!$"
 
 MtMoon_B2F_Text_MiguelDefeat::
-	.string "Okay!\n"
-	.string "I'll share!$"
+	.string "Okay! I'll share!$"
 
 MtMoon_B2F_Text_WellEachTakeAFossil::
 	.string "We'll each take a fossil!\n"
@@ -169,9 +169,10 @@ MtMoon_B2F_Text_Grunt1PostBattle::
 	.string "money…$"
 
 MtMoon_B2F_Text_Grunt2Intro::
-	.string "We, TEAM ROCKET, are POKéMON\n"
-	.string "gangsters!\l"
-	.string "We strike fear with our strength!$"
+	.string "We, TEAM ROCKET, still dig in MT.\n"
+	.string "MOON!\p"
+	.string "TEAM YELL can scream all they\n"
+	.string "want!$"
 
 MtMoon_B2F_Text_Grunt2Defeat::
 	.string "I'm gonna be in so much trouble…$"

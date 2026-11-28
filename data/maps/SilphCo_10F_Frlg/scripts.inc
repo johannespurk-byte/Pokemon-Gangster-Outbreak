@@ -56,7 +56,7 @@ SilphCo_10F_Text_TravisPostBattle::
 	.string "Just saying.$"
 
 SilphCo_10F_Text_WaaaImScared::
-	.string "Waaaaa!\n"
+	.string "Waaaaa! Two gangs in one building!\n"
 	.string "I'm scared!$"
 
 SilphCo_10F_Text_KeepMeCryingASecret::

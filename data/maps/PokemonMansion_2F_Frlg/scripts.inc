@@ -40,12 +40,12 @@ PokemonMansion_Text_NotQuiteYet::
 	.string "Not quite yet!$"
 
 PokemonMansion_1F_Text_ArnieIntro::
-	.string "I can't get out!\n"
-	.string "This old place is one big puzzle.$"
+	.string "I can't get out! TEAM GALACTIC\n"
+	.string "turned this place into one big\p"
+	.string "puzzle!$"
 
 PokemonMansion_1F_Text_ArnieDefeat::
-	.string "Oh, no!\n"
-	.string "My bag of loot!$"
+	.string "Oh, no! My bag of loot!$"
 
 PokemonMansion_1F_Text_ArniePostBattle::
 	.string "The switches here open and close\n"

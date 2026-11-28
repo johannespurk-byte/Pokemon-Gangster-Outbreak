@@ -64,6 +64,7 @@ PokemonTower_1F_Text_GrowlitheWhyDidYouDie::
 
 PokemonTower_1F_Text_SenseSpiritsUpToMischief::
 	.string "I am a CHANNELER.\p"
-	.string "There are spirits up to mischief.\n"
+	.string "Since the outbreak, the spirits\n"
+	.string "here are restless.\p"
 	.string "I sense them high in the TOWER.$"
 

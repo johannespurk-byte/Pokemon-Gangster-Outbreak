@@ -108,8 +108,8 @@ RockTunnel_1F_Text_DanaDefeat::
 	.string "No fair! You're way too strong!$"
 
 RockTunnel_1F_Text_DanaPostBattle::
-	.string "You looked cute and harmless.\n"
-	.string "Was I ever wrong!$"
+	.string "You looked cute and harmless. Was\n"
+	.string "I ever wrong! A real gang boss!$"
 
 RockTunnel_1F_Text_ArianaIntro::
 	.string "My big brother rides with TEAM\n"
@@ -124,6 +124,7 @@ RockTunnel_1F_Text_ArianaPostBattle::
 	.string "Or maybe your crew!$"
 
 RockTunnel_1F_Text_RouteSign::
-	.string "ROCK TUNNEL\n"
-	.string "CERULEAN CITY - LAVENDER TOWN$"
+	.string "ROCK TUNNEL\p"
+	.string "CERULEAN CITY - LAVENDER TOWN. No\n"
+	.string "Lights, No Laws.$"
 

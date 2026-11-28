@@ -116,7 +116,8 @@ VictoryRoad_3F_Text_CarolinePostBattle::
 	.string "will want you.$"
 
 VictoryRoad_3F_Text_ColbyIntro::
-	.string "Only the chosen can pass here!$"
+	.string "Only the strongest boss can pass\n"
+	.string "here!$"
 
 VictoryRoad_3F_Text_ColbyDefeat::
 	.string "I underestimated you.$"

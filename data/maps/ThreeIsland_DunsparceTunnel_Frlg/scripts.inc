@@ -51,12 +51,10 @@ ThreeIsland_DunsparceTunnel_EventScript_ProspectorAlreadyGaveNugget::
 	end
 
 ThreeIsland_DunsparceTunnel_Text_ProspectingForGold::
-	.string "Hey, there!\n"
-	.string "How's it going?\p"
-	.string "What am I doing here, you ask?\n"
-	.string "Why, I'm prospecting for gold!\p"
-	.string "When I strike it rich, I'm buying\n"
-	.string "a house in KANTO.$"
+	.string "Hey there! I'm prospecting for\n"
+	.string "gold!\p"
+	.string "When I strike it rich, I'll buy my\n"
+	.string "own GYM. Like the gang bosses!$"
 
 ThreeIsland_DunsparceTunnel_Text_StruckGoldThisIsForYou::
 	.string "Hey, there! How's it going?\n"

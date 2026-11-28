@@ -131,9 +131,7 @@ SilphCo_5F_Text_FloorSign::
 	.string "5F$"
 
 SilphCo_5F_Text_RocketBossLookingForStrongMons::
-	.string "Those thugs that took over our\n"
-	.string "building…\p"
-	.string "Their BOSS said he was looking for\n"
-	.string "strong POKéMON.\p"
-	.string "I hope our PRESIDENT managed to\n"
-	.string "avoid trouble…$"
+	.string "TEAM ROCKET took the building,\n"
+	.string "then TEAM FLARE tried too.\p"
+	.string "Everyone wants SILPH's POKéMON.\n"
+	.string "I hope our PRESIDENT is okay.$"

@@ -173,8 +173,9 @@ FiveIsland_RocketWarehouse_Movement_AdminWalkToSwitch::
 	step_end
 
 FiveIsland_RocketWarehouse_Text_ManyMonsLockedInPen::
-	.string "There are many POKéMON locked\n"
-	.string "away in the pen…$"
+	.string "Many POKéMON are locked in the\n"
+	.string "pen… Ready to be shipped to\p"
+	.string "KANTO's gangs.$"
 
 FiveIsland_RocketWarehouse_Text_PenUnlockedMonsFled::
 	.string "The pen door is unlocked.\n"
@@ -252,12 +253,10 @@ FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText::
 	.string "It's too difficult to understand…$"
 
 FiveIsland_RocketWarehouse_Text_GideonIntro::
-	.string "I almost managed to sell the\n"
-	.string "SAPPHIRE for huge money…\p"
-	.string "Then, you just had to come along\n"
-	.string "and blow the whole deal apart!\p"
-	.string "Fufu… Fufufufu…\n"
-	.string "There's no forgiveness for you!$"
+	.string "I almost sold the SAPPHIRE to\n"
+	.string "TEAM ROCKET for huge money…\p"
+	.string "Then GIOVANNI's new pet had to\n"
+	.string "show up!$"
 
 FiveIsland_RocketWarehouse_Text_GideonDefeat::
 	.string "Fine… I'll recalculate.$"
@@ -268,8 +267,8 @@ FiveIsland_RocketWarehouse_Text_GideonPostBattle::
 	.string "Kidding! Mostly.$"
 
 FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe::
-	.string "What do you want now?\n"
-	.string "Go on, get lost, leave me be.$"
+	.string "What do you want now? Tell\n"
+	.string "GIOVANNI we're done. Get lost!$"
 
 FiveIsland_RocketWarehouse_Text_GiovannisKidHasRedHair::
 	.string "What, you again?\p"
