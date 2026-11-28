@@ -466,6 +466,21 @@ RAW = {
 }
 
 
+# POKéMON LEAGUE: SILVER is the CHAMPION, GIOVANNI comes instead of PROF. OAK
+MANUAL.update({
+    ('PokemonLeague_ChampionsRoom', 'Intro'): "{RIVAL}: So you made it, {PLAYER}.|While you ran errands for my father, I beat all four of them.|Now I'm the CHAMPION. Not GIOVANNI's son. Not his errand boy. Me.|This decides who takes over the family. Let's go!",
+    ('PokemonLeague_ChampionsRoom', 'RematchIntro'): "{RIVAL}: Back again, {PLAYER}?|I've trained every day since you took my title.|This time the family is mine!",
+    ('PokemonLeague_ChampionsRoom', 'Defeat'): "NO! Not again!|You beat me at my very best…",
+    ('PokemonLeague_ChampionsRoom', 'Victory'): "{RIVAL}: Hah! I knew it!|Father picked the wrong recruit!",
+    ('PokemonLeague_ChampionsRoom', 'PostBattle'): "{RIVAL}: Why?! I never made a single mistake…|…Fine. You're the CHAMPION now. And the new head of the family.|Don't you dare make father regret it.",
+    ('PokemonLeague_ChampionsRoom', 'OakPlayer'): "GIOVANNI: {PLAYER}!",
+    ('PokemonLeague_ChampionsRoom', 'OakCongratulations'): "GIOVANNI: So, you've won. Well done, boss.|You came to me with nothing but {STR_VAR_1}.|Now all of KANTO bows to you. Fwahahaha!",
+    ('PokemonLeague_ChampionsRoom', 'OakImDisappointedRival'): "GIOVANNI: SILVER…|You beat the ELITE FOUR, then lost to my recruit.|You fight only for yourself. A boss fights for his crew.|Learn that, and one day you will lead TEAM ROCKET.",
+    ('PokemonLeague_ChampionsRoom', 'OakPlayerComeWithMe'): "GIOVANNI: {PLAYER}.|You didn't win alone. Your crew made you strong.|Come with me!",
+    ('PokemonLeague_HallOfFame', 'OakCongratulations'): "GIOVANNI: Ahem! Congratulations, {PLAYER}!|This is the HALL OF FAME. The greatest TRAINERS of all time are honored here.|Today a gangster joins them. Fwahahaha!|You and your crew are HALL OF FAMERS!",
+})
+
+
 # texts with hints the player needs (keys, passwords, teleport tiles, the SILPH SCOPE …) keep their wording
 ORIG_REF = 'f93f63af'   # last commit before this tool touched any texts
 HINTS = re.compile(r'KEY|SCOPE|ELEVATOR|LIFT|PASSWORD|TELEPORT|HINT|TILE|SWITCH|BASEMENT|SECRET|FLUTE|GOLD TEETH|'
