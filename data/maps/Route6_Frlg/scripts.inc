@@ -6,73 +6,71 @@ Route6_EventScript_UndergroundPathSign::
 	end
 
 Route6_Text_RickyIntro::
-	.string "Who's there?\n"
-	.string "Quit listening in on us!$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route6_Text_RickyDefeat::
-	.string "I just can't win!$"
+	.string "Okay, okay! You win!$"
 
 Route6_Text_RickyPostBattle::
-	.string "Whisper…\n"
-	.string "Whisper…$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 Route6_Text_NancyIntro::
-	.string "Excuse me!\n"
-	.string "This is a private conversation!$"
+	.string "ARCHER says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 Route6_Text_NancyDefeat::
-	.string "Ugh!\n"
-	.string "I hate losing.$"
+	.string "No fair! You're way too strong!$"
 
 Route6_Text_NancyPostBattle::
-	.string "Whisper…\n"
-	.string "Whisper…$"
+	.string "Everybody's scared of ARCHER.\p"
+	.string "Are you scared?$"
 
 Route6_Text_KeigoIntro::
-	.string "There aren't many bugs out here.$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 Route6_Text_KeigoDefeat::
-	.string "No!\n"
-	.string "You're kidding!$"
+	.string "No fair! You're way too strong!$"
 
 Route6_Text_KeigoPostBattle::
-	.string "I like bugs, so I'm going back to\n"
-	.string "VIRIDIAN FOREST.$"
+	.string "The road to VERMILION isn't safe.\p"
+	.string "Watch out!$"
 
 Route6_Text_JeffIntro::
-	.string "Huh?\n"
-	.string "You want to talk to me?$"
+	.string "My big brother rides with TEAM\n"
+	.string "ROCKET! I'm gonna be just like\p"
+	.string "him!$"
 
 Route6_Text_JeffDefeat::
-	.string "This stinks…\n"
-	.string "I couldn't beat your challenge…$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route6_Text_JeffPostBattle::
-	.string "I should bring more POKéMON with\n"
-	.string "me. I'll feel safer that way.$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "ROCKET.\p"
+	.string "Or maybe your crew!$"
 
 Route6_Text_IsabelleIntro::
-	.string "Me?\n"
-	.string "Well, okay. I'll play!$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 Route6_Text_IsabelleDefeat::
-	.string "Things just didn't work…$"
+	.string "Aww… There goes my lunch money.$"
 
 Route6_Text_IsabellePostBattle::
-	.string "I want to get stronger.\n"
-	.string "What's your secret?$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 Route6_Text_ElijahIntro::
-	.string "I've never seen you around.\n"
-	.string "Are you good?$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 Route6_Text_ElijahDefeat::
-	.string "You're too good!$"
+	.string "Aww… There goes my lunch money.$"
 
 Route6_Text_ElijahPostBattle::
-	.string "Are my POKéMON weak?\n"
-	.string "Or, am I just bad?\l"
-	.string "Which do you think?$"
+	.string "Don't tell my mom I battled you.$"
 
 Route6_Text_UndergroundPathSign::
 	.string "UNDERGROUND PATH\n"

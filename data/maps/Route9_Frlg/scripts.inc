@@ -6,106 +6,106 @@ Route9_EventScript_RouteSign::
 	end
 
 Route9_Text_AliciaIntro::
-	.string "You have POKéMON with you!\n"
-	.string "You're mine!$"
+	.string "GUZMA says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 Route9_Text_AliciaDefeat::
-	.string "You deceived me…$"
+	.string "No fair! You're way too strong!$"
 
 Route9_Text_AliciaPostBattle::
-	.string "The tunnel coming up is pitch-black\n"
-	.string "inside.\p"
-	.string "You'll need FLASH to get through\n"
-	.string "there.$"
+	.string "Everybody's scared of GUZMA.\p"
+	.string "Are you scared?$"
 
 Route9_Text_ChrisIntro::
-	.string "Who's that walking there with those\n"
-	.string "good-looking POKéMON?$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route9_Text_ChrisDefeat::
-	.string "Out like a light!$"
+	.string "Okay, okay! You win!$"
 
 Route9_Text_ChrisPostBattle::
-	.string "Keep walking!$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 Route9_Text_DrewIntro::
-	.string "I'm taking the ROCK TUNNEL to\n"
-	.string "go to LAVENDER…$"
+	.string "My big brother rides with TEAM\n"
+	.string "SKULL! I'm gonna be just like him!$"
 
 Route9_Text_DrewDefeat::
-	.string "Can't measure up…$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route9_Text_DrewPostBattle::
-	.string "Are you off to ROCK TUNNEL, too?$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "SKULL.\p"
+	.string "Or maybe your crew!$"
 
 Route9_Text_CaitlinIntro::
-	.string "Don't you dare patronize me!$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 Route9_Text_CaitlinDefeat::
-	.string "No!\n"
-	.string "You're too much.$"
+	.string "Aww… There goes my lunch money.$"
 
 Route9_Text_CaitlinPostBattle::
-	.string "You're obviously talented.\n"
-	.string "Good luck to you!$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 Route9_Text_JeremyIntro::
-	.string "Bwahaha!\n"
-	.string "Great! I was bored, eh!$"
+	.string "These hills are older than any\n"
+	.string "gang.\p"
+	.string "So am I!$"
 
 Route9_Text_JeremyDefeat::
-	.string "Keep it coming, eh!\p"
-	.string "Oh wait.\n"
-	.string "I'm out of POKéMON!$"
+	.string "Whoa! Rolled right over me!$"
 
 Route9_Text_JeremyPostBattle::
-	.string "You sure had guts standing up to\n"
-	.string "me there, eh?$"
+	.string "Head to CERULEAN if you want\n"
+	.string "trouble.$"
 
 Route9_Text_BriceIntro::
-	.string "Hahaha!\n"
-	.string "Aren't you a little toughie!$"
+	.string "My birds see every gang that\n"
+	.string "moves.\p"
+	.string "And they saw you!$"
 
 Route9_Text_BriceDefeat::
-	.string "What's that?$"
+	.string "Heh, you're tough as stone.$"
 
 Route9_Text_BricePostBattle::
-	.string "Hahaha!\n"
-	.string "Kids should be tough!$"
+	.string "The wild POKéMON are the only\n"
+	.string "honest ones left.$"
 
 Route9_Text_BrentIntro::
-	.string "I got up early every day to raise\n"
-	.string "my POKéMON from cocoons!$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 Route9_Text_BrentDefeat::
-	.string "WHAT?\p"
-	.string "What a total waste of time!$"
+	.string "No fair! You're way too strong!$"
 
 Route9_Text_BrentPostBattle::
-	.string "I have to collect more than bugs\n"
-	.string "to get stronger…$"
+	.string "The road to CERULEAN isn't safe.\p"
+	.string "Watch out!$"
 
 Route9_Text_AlanIntro::
-	.string "Hahahaha!\n"
-	.string "Bring it on!$"
+	.string "I live out here, far from TEAM\n"
+	.string "SKULL.\p"
+	.string "Leave me be! …Or battle!$"
 
 Route9_Text_AlanDefeat::
-	.string "Hahahaha!\n"
-	.string "You beat me fair!$"
+	.string "Like a rockslide!$"
 
 Route9_Text_AlanPostBattle::
-	.string "Hahahaha!\n"
-	.string "Us hearty guys always laugh!$"
+	.string "From up here I watch TEAM SKULL\n"
+	.string "come and go.$"
 
 Route9_Text_ConnerIntro::
-	.string "Go, my super BUG POKéMON!$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 Route9_Text_ConnerDefeat::
-	.string "My bugs…$"
+	.string "Aww… There goes my lunch money.$"
 
 Route9_Text_ConnerPostBattle::
-	.string "If you don't like BUG POKéMON,\n"
-	.string "you bug me!$"
+	.string "Don't tell my mom I battled you.$"
 
 Route9_Text_RouteSign::
 	.string "ROUTE 9\n"

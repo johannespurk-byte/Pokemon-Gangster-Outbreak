@@ -26,111 +26,119 @@ Route17_EventScript_CyclingRoadSign::
 	end
 
 Route17_Text_RaulIntro::
-	.string "There's no getting rich quick in\n"
-	.string "battling kids.$"
+	.string "Wrong turf, rookie. Nobody passes\n"
+	.string "without a fight!$"
 
 Route17_Text_RaulDefeat::
-	.string "Burned out!$"
+	.string "ARCHIE is gonna kill me…$"
 
 Route17_Text_RaulPostBattle::
-	.string "You can find good stuff lying\n"
-	.string "around on CYCLING ROAD.\p"
-	.string "There's good money in picking them\n"
-	.string "up and selling them.$"
+	.string "Respect. Not many beat me on my\n"
+	.string "own road.$"
 
 Route17_Text_IsaiahIntro::
-	.string "I'm mighty proud of my bod, kiddo.\n"
-	.string "Come on!$"
+	.string "You walk like you own the place.\p"
+	.string "Big mistake!$"
 
 Route17_Text_IsaiahDefeat::
-	.string "Whoo!$"
+	.string "Who are you, anyway?!$"
 
 Route17_Text_IsaiahPostBattle::
-	.string "I could belly-bump you outta\n"
-	.string "here!$"
+	.string "Go on. This road's yours…\p"
+	.string "for now.$"
 
 Route17_Text_VirgilIntro::
-	.string "You heading to FUCHSIA?$"
+	.string "ARCHIE wants your money.\p"
+	.string "And I want a fight!$"
 
 Route17_Text_VirgilDefeat::
-	.string "Crash and burn!$"
+	.string "Who are you, anyway?!$"
 
 Route17_Text_VirgilPostBattle::
-	.string "I love racing downhill!$"
+	.string "Next time I'll bring the whole of\n"
+	.string "TEAM AQUA!$"
 
 Route17_Text_BillyIntro::
-	.string "We're BIKERS!\n"
-	.string "We rule the roads, man!$"
+	.string "Hey! You're in the wrong part of\n"
+	.string "town!$"
 
 Route17_Text_BillyDefeat::
-	.string "Smoked!$"
+	.string "ARCHIE is gonna kill me…$"
 
 Route17_Text_BillyPostBattle::
-	.string "Are you looking for adventure?$"
+	.string "You're making a name for yourself,\n"
+	.string "boss.$"
 
 Route17_Text_NikolasIntro::
-	.string "Let VOLTORB electrify you!$"
+	.string "ARCHIE said nobody passes. That\n"
+	.string "means you!$"
 
 Route17_Text_NikolasDefeat::
-	.string "Grounded out!$"
+	.string "Who are you, anyway?!$"
 
 Route17_Text_NikolasPostBattle::
-	.string "I got my VOLTORB at the abandoned\n"
-	.string "POWER PLANT.$"
+	.string "Tell your crew I fought fair.\n"
+	.string "Mostly.$"
 
 Route17_Text_ZeekIntro::
-	.string "I leveled up my POKéMON, but it\n"
-	.string "won't evolve. Why?$"
+	.string "Hey! You're in the wrong part of\n"
+	.string "town!$"
 
 Route17_Text_ZeekDefeat::
-	.string "Why, you!$"
+	.string "Tch… You hit hard.$"
 
 Route17_Text_ZeekPostBattle::
-	.string "Maybe some POKéMON need element\n"
-	.string "STONES to evolve.$"
+	.string "You're making a name for yourself,\n"
+	.string "boss.$"
 
 Route17_Text_JamalIntro::
-	.string "I need a little exercise!$"
+	.string "ARCHIE said nobody passes. That\n"
+	.string "means you!$"
 
 Route17_Text_JamalDefeat::
-	.string "Whew!\n"
-	.string "Good workout!$"
+	.string "Fine! Keep your cash!$"
 
 Route17_Text_JamalPostBattle::
-	.string "I'm sure I lost weight there!$"
+	.string "Tell your crew I fought fair.\n"
+	.string "Mostly.$"
 
 Route17_Text_CoreyIntro::
-	.string "Be a rebel!$"
+	.string "This road belongs to TEAM AQUA.\p"
+	.string "Pay up or fight!$"
 
 Route17_Text_CoreyDefeat::
-	.string "Aaaargh!$"
+	.string "ARCHIE is gonna kill me…$"
 
 Route17_Text_CoreyPostBattle::
-	.string "Be ready to fight for your beliefs!$"
+	.string "Word travels fast.\p"
+	.string "ARCHIE will hear about you.$"
 
 Route17_Text_JaxonIntro::
-	.string "Nice BIKE!\n"
-	.string "How's it handle?$"
+	.string "This road belongs to TEAM AQUA.\p"
+	.string "Pay up or fight!$"
 
 Route17_Text_JaxonDefeat::
-	.string "Shoot!$"
+	.string "Tch… You hit hard.$"
 
 Route17_Text_JaxonPostBattle::
-	.string "The slope makes it hard to steer.$"
+	.string "Word travels fast.\p"
+	.string "ARCHIE will hear about you.$"
 
 Route17_Text_WilliamIntro::
-	.string "Get lost, kid!\n"
-	.string "I'm bushed!$"
+	.string "ARCHIE wants your money.\p"
+	.string "And I want a fight!$"
 
 Route17_Text_WilliamDefeat::
-	.string "Are you satisfied?$"
+	.string "Fine! Keep your cash!$"
 
 Route17_Text_WilliamPostBattle::
-	.string "I need to catch a few z's!$"
+	.string "Next time I'll bring the whole of\n"
+	.string "TEAM AQUA!$"
 
 Route17_Text_WatchOutForDiscardedItems::
 	.string "It's a notice.\p"
-	.string "Watch out for discarded items.$"
+	.string "Watch out for loot bags. And for\n"
+	.string "whoever dropped them.$"
 
 Route17_Text_SameSpeciesGrowDifferentRates::
 	.string "TRAINER TIPS\p"
@@ -150,7 +158,8 @@ Route17_Text_RouteSign::
 Route17_Text_DontThrowGameThrowBalls::
 	.string "It's a notice!\p"
 	.string "Don't throw the game, throw POKé\n"
-	.string "BALLS instead!$"
+	.string "BALLS instead!\p"
+	.string "- TEAM AQUA$"
 
 Route17_Text_CyclingRoadSign::
 	.string "CYCLING ROAD\n"

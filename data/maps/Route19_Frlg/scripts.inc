@@ -6,137 +6,127 @@ Route19_EventScript_RouteSign::
 	end
 
 Route19_Text_RichardIntro::
-	.string "I have to exercise and warm up\n"
-	.string "before going out for a swim.$"
+	.string "The sea doesn't care about gangs.\p"
+	.string "But I do!$"
 
 Route19_Text_RichardDefeat::
-	.string "All warmed up!$"
+	.string "Sunk! Totally sunk!$"
 
 Route19_Text_RichardPostBattle::
-	.string "Thanks, kid!\n"
-	.string "I'm ready for a swim.$"
+	.string "Smugglers use these waters at\n"
+	.string "night. Stay sharp.$"
 
 Route19_Text_ReeceIntro::
-	.string "Wait! Slow down!\n"
-	.string "You'll have a heart attack!$"
+	.string "You'll sink like the last punk who\n"
+	.string "came here!$"
 
 Route19_Text_ReeceDefeat::
-	.string "Ooh!\n"
-	.string "That's chilly!$"
+	.string "The tide turned on me…$"
 
 Route19_Text_ReecePostBattle::
-	.string "Watch out for TENTACOOL.\n"
-	.string "They sting so painfully.$"
+	.string "Swim fast if you see a boat from\n"
+	.string "TEAM PLASMA.$"
 
 Route19_Text_MatthewIntro::
-	.string "I love swimming!\n"
-	.string "What about you?$"
+	.string "Out here, only the strong stay\n"
+	.string "afloat!$"
 
 Route19_Text_MatthewDefeat::
-	.string "Belly flop!$"
+	.string "Gah! Swallowed water!$"
 
 Route19_Text_MatthewPostBattle::
-	.string "I can beat even marine POKéMON\n"
-	.string "at swimming.$"
+	.string "The water's the only free place\n"
+	.string "left.$"
 
 Route19_Text_DouglasIntro::
-	.string "What's beyond the horizon?$"
+	.string "Splash! Nobody swims past me!$"
 
 Route19_Text_DouglasDefeat::
-	.string "Glub!$"
+	.string "Glub… I'm all washed up.$"
 
 Route19_Text_DouglasPostBattle::
-	.string "I see a couple of islands over\n"
-	.string "yonder!$"
+	.string "The currents carry loot bags. Keep\n"
+	.string "your eyes open.$"
 
 Route19_Text_DavidIntro::
-	.string "I tried diving for POKéMON, but it\n"
-	.string "was a no-go.$"
+	.string "I patrol these waves for TEAM\n"
+	.string "PLASMA!$"
 
 Route19_Text_DavidDefeat::
-	.string "Help!$"
+	.string "Sunk! Totally sunk!$"
 
 Route19_Text_DavidPostBattle::
-	.string "I guess you have to fish for sea\n"
-	.string "POKéMON.$"
+	.string "Ships from FUCHSIA pass here\n"
+	.string "every night.$"
 
 Route19_Text_TonyIntro::
-	.string "I look at the sea to forget all\n"
-	.string "the bad things that happened.$"
+	.string "TEAM PLASMA took the docks, so I\n"
+	.string "swim my own routes!$"
 
 Route19_Text_TonyDefeat::
-	.string "Ooh!\n"
-	.string "Traumatic!$"
+	.string "The tide turned on me…$"
 
 Route19_Text_TonyPostBattle::
-	.string "I'm looking at the sea to forget\n"
-	.string "the bad thing that happened!$"
+	.string "Even TEAM PLASMA can't control\n"
+	.string "the sea.$"
 
 Route19_Text_AnyaIntro::
-	.string "Oh, I just love your ride!\n"
-	.string "Can I have it if I win?$"
+	.string "You'll sink like the last punk who\n"
+	.string "came here!$"
 
 Route19_Text_AnyaDefeat::
-	.string "Oh! I lost!$"
+	.string "Glub… I'm all washed up.$"
 
 Route19_Text_AnyaPostBattle::
-	.string "It's still a long way to go to\n"
-	.string "SEAFOAM ISLANDS…\p"
-	.string "I want to go back to FUCHSIA…$"
+	.string "Swim fast if you see a boat from\n"
+	.string "TEAM PLASMA.$"
 
 Route19_Text_AliceIntro::
-	.string "Swimming's great!\n"
-	.string "Sunburns aren't!$"
+	.string "Out here, only the strong stay\n"
+	.string "afloat!$"
 
 Route19_Text_AliceDefeat::
-	.string "Shocker!$"
+	.string "Sunk! Totally sunk!$"
 
 Route19_Text_AlicePostBattle::
-	.string "My boyfriend wanted to swim to\n"
-	.string "SEAFOAM ISLANDS.$"
+	.string "The water's the only free place\n"
+	.string "left.$"
 
 Route19_Text_AxleIntro::
-	.string "Ahoy, there!\n"
-	.string "These waters are treacherous!$"
+	.string "The sea doesn't care about gangs.\p"
+	.string "But I do!$"
 
 Route19_Text_AxleDefeat::
-	.string "Ooh!\n"
-	.string "Dangerous!$"
+	.string "Gah! Swallowed water!$"
 
 Route19_Text_AxlePostBattle::
-	.string "M-my legs! They cramped up!\n"
-	.string "Glub, glub…$"
+	.string "Smugglers use these waters at\n"
+	.string "night. Stay sharp.$"
 
 Route19_Text_ConnieIntro::
-	.string "I swam here with my friends…\n"
-	.string "I'm tired…$"
+	.string "Splash! Nobody swims past me!$"
 
 Route19_Text_ConnieDefeat::
-	.string "I'm exhausted…$"
+	.string "The tide turned on me…$"
 
 Route19_Text_ConniePostBattle::
-	.string "If I were to ride a POKéMON on\n"
-	.string "the sea, I'd like a LAPRAS.\p"
-	.string "LAPRAS is so big, I bet it\n"
-	.string "would keep me dry on water.$"
+	.string "The currents carry loot bags. Keep\n"
+	.string "your eyes open.$"
 
 Route19_Text_RouteSign::
-	.string "SEA ROUTE 19\n"
+	.string "SEA ROUTE 19\p"
 	.string "FUCHSIA CITY - SEAFOAM ISLANDS$"
 
 Route19_Text_LiaIntro::
-	.string "LIA: I'm looking after my brother.\n"
-	.string "He just became a TRAINER.$"
+	.string "GHETSIS says kids can't fight.\n"
+	.string "I'll prove him wrong!$"
 
 Route19_Text_LiaDefeat::
-	.string "LIA: That's no way to treat my\n"
-	.string "little brother!$"
+	.string "No fair! You're way too strong!$"
 
 Route19_Text_LiaPostBattle::
-	.string "LIA: Do you have a younger\n"
-	.string "brother?\p"
-	.string "I hope you're teaching him all\n"
-	.string "sorts of things.$"
+	.string "Everybody's scared of GHETSIS.\p"
+	.string "Are you scared?$"
 
 Route19_Text_LiaNotEnoughMons::
 	.string "LIA: I want to battle together\n"
@@ -144,16 +134,15 @@ Route19_Text_LiaNotEnoughMons::
 	.string "Don't you have two POKéMON?$"
 
 Route19_Text_LucIntro::
-	.string "LUC: My big sis taught me how\n"
-	.string "to swim and train POKéMON.$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 Route19_Text_LucDefeat::
-	.string "LUC: Oh, wow!\n"
-	.string "Someone tougher than my big sis!$"
+	.string "Aww… There goes my lunch money.$"
 
 Route19_Text_LucPostBattle::
-	.string "LUC: My big sis is strong and nice.\n"
-	.string "I think she's awesome!$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 Route19_Text_LucNotEnoughMons::
 	.string "LUC: I don't want to if I can't\n"

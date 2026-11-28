@@ -40,8 +40,8 @@ Route2_House_EventScript_AlreadyTraded::
 	end
 
 Route2_House_Text_FaintedMonsCanUseFieldMoves::
-	.string "A fainted POKéMON just has no\n"
-	.string "energy left to battle.\p"
-	.string "It can still use moves like CUT\n"
-	.string "outside of battle.$"
+	.string "A fainted POKéMON can't fight,\n"
+	.string "but it can still use field moves.\p"
+	.string "Good thing, since the gangs fight\n"
+	.string "dirty.$"
 

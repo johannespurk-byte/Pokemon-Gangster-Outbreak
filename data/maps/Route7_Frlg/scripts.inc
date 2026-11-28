@@ -17,13 +17,15 @@ Route7_EventScript_GangTrainer1::
 	end
 
 Route7_Text_GangTrainer1Intro:
-	.string "Nobody walks through here\nwithout a fight!$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route7_Text_GangTrainer1Defeat:
-	.string "Ugh! Who taught you to\nfight like that?$"
+	.string "Okay, okay! You win!$"
 
 Route7_Text_GangTrainer1Post:
-	.string "Keep walking. This road's\nyours… for now.$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 Route7_EventScript_GangTrainer2::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE7_2, Route7_Text_GangTrainer2Intro, Route7_Text_GangTrainer2Defeat
@@ -31,13 +33,14 @@ Route7_EventScript_GangTrainer2::
 	end
 
 Route7_Text_GangTrainer2Intro:
-	.string "The city burned and I got\nstronger. Wanna see?$"
+	.string "Ugh, a street kid.\p"
+	.string "Let's get this over with.$"
 
 Route7_Text_GangTrainer2Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "My outfit! It's ruined!$"
 
 Route7_Text_GangTrainer2Post:
-	.string "Take what you want and\nget out of my sight.$"
+	.string "Do tell LYSANDRE I said hello.$"
 
 Route7_EventScript_GangTrainer3::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE7_3, Route7_Text_GangTrainer3Intro, Route7_Text_GangTrainer3Defeat
@@ -45,13 +48,15 @@ Route7_EventScript_GangTrainer3::
 	end
 
 Route7_Text_GangTrainer3Intro:
-	.string "You look like easy money.\nHand it over!$"
+	.string "You walk like you own the place.\p"
+	.string "Big mistake!$"
 
 Route7_Text_GangTrainer3Defeat:
-	.string "No way… I got wrecked!$"
+	.string "Who are you, anyway?!$"
 
 Route7_Text_GangTrainer3Post:
-	.string "Word travels fast. Everyone\nwill know your name soon.$"
+	.string "Go on. This road's yours…\p"
+	.string "for now.$"
 
 Route7_EventScript_GangTrainer4::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE7_4, Route7_Text_GangTrainer4Intro, Route7_Text_GangTrainer4Defeat
@@ -59,13 +64,15 @@ Route7_EventScript_GangTrainer4::
 	end
 
 Route7_Text_GangTrainer4Intro:
-	.string "Nobody walks through here\nwithout a fight!$"
+	.string "Hey! You're in the wrong part of\n"
+	.string "town!$"
 
 Route7_Text_GangTrainer4Defeat:
-	.string "My gang's gonna hear\nabout this…$"
+	.string "Tch… You hit hard.$"
 
 Route7_Text_GangTrainer4Post:
-	.string "Next time I'll bring the\nwhole gang!$"
+	.string "You're making a name for yourself,\n"
+	.string "boss.$"
 
 Route7_EventScript_GangTrainer5::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE7_5, Route7_Text_GangTrainer5Intro, Route7_Text_GangTrainer5Defeat
@@ -73,11 +80,14 @@ Route7_EventScript_GangTrainer5::
 	end
 
 Route7_Text_GangTrainer5Intro:
-	.string "Nobody walks through here\nwithout a fight!$"
+	.string "My big brother rides with TEAM\n"
+	.string "FLARE! I'm gonna be just like him!$"
 
 Route7_Text_GangTrainer5Defeat:
-	.string "Ugh! Who taught you to\nfight like that?$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route7_Text_GangTrainer5Post:
-	.string "Next time I'll bring the\nwhole gang!$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "FLARE.\p"
+	.string "Or maybe your crew!$"
 

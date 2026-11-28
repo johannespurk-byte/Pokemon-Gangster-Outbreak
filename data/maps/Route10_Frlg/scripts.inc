@@ -17,80 +17,74 @@ Route10_EventScript_PowerPlantSign::
 	end
 
 Route10_Text_MarkIntro::
-	.string "Wow, you came all the way here?\n"
-	.string "Maybe you're a POKéMANIAC, too?\l"
-	.string "Want to see my collection?$"
+	.string "I hacked a PC of TEAM SKULL once.\p"
+	.string "Now I hide out here!$"
 
 Route10_Text_MarkDefeat::
-	.string "Humph.\n"
-	.string "I'm not angry!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 Route10_Text_MarkPostBattle::
-	.string "I have more rare POKéMON at home!$"
+	.string "GUZMA pays well for smart people.\p"
+	.string "Just saying.$"
 
 Route10_Text_ClarkIntro::
-	.string "Ha-hahah-ah-ha!$"
+	.string "My birds see every gang that\n"
+	.string "moves.\p"
+	.string "And they saw you!$"
 
 Route10_Text_ClarkDefeat::
-	.string "Ha-haha!\n"
-	.string "Not laughing!\l"
-	.string "Ha-hay fever! Haha-ha-choo!$"
+	.string "My birds flew off…$"
 
 Route10_Text_ClarkPostBattle::
-	.string "Haha-ha-choo!\n"
-	.string "Ha-choo!\l"
-	.string "Snort! Snivel!$"
+	.string "The wild POKéMON are the only\n"
+	.string "honest ones left.$"
 
 Route10_Text_HermanIntro::
-	.string "Hi, kid!\n"
-	.string "Want to see my POKéMON?$"
+	.string "My calculations say you lose.\p"
+	.string "Let's test it!$"
 
 Route10_Text_HermanDefeat::
-	.string "Oh, no!\n"
-	.string "My POKéMON!$"
+	.string "Fine… I'll recalculate.$"
 
 Route10_Text_HermanPostBattle::
-	.string "I don't like you.\n"
-	.string "I don't like anyone better than me!$"
+	.string "I'll sell your battle data to TEAM\n"
+	.string "SKULL.\p"
+	.string "Kidding! Mostly.$"
 
 Route10_Text_HeidiIntro::
-	.string "I've been out at a POKéMON GYM\n"
-	.string "a few times.\p"
-	.string "…But I always lose.$"
+	.string "GUZMA says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 Route10_Text_HeidiDefeat::
-	.string "Ohh!\n"
-	.string "After all my training!$"
+	.string "Okay, okay! You win!$"
 
 Route10_Text_HeidiPostBattle::
-	.string "I noticed some POKéMANIACS\n"
-	.string "prowling around.\p"
-	.string "Can you imagine? Them?\n"
-	.string "Up here in the mountains?$"
+	.string "Everybody's scared of GUZMA.\p"
+	.string "Are you scared?$"
 
 Route10_Text_TrentIntro::
-	.string "Ah!\n"
-	.string "This mountain air is delicious!$"
+	.string "These hills are older than any\n"
+	.string "gang.\p"
+	.string "So am I!$"
 
 Route10_Text_TrentDefeat::
-	.string "That cleared my head!$"
+	.string "Like a rockslide!$"
 
 Route10_Text_TrentPostBattle::
-	.string "I feel bloated on mountain air!$"
+	.string "Head to CERULEAN if you want\n"
+	.string "trouble.$"
 
 Route10_Text_CarolIntro::
-	.string "I'm feeling a bit faint.\n"
-	.string "I haven't hiked in some time.$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 Route10_Text_CarolDefeat::
-	.string "I'm too tired.\n"
-	.string "I wasn't up for it.$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route10_Text_CarolPostBattle::
-	.string "The POKéMON here in the mountains\n"
-	.string "are so chunky…\p"
-	.string "I wish there were pink POKéMON\n"
-	.string "with a floral pattern!$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 Route10_Text_RockTunnelDetourToLavender::
 	.string "ROCK TUNNEL\n"

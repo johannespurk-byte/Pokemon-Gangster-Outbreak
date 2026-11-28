@@ -51,12 +51,13 @@ Route16_NorthEntrance_2F_EventScript_GetAideRequestInfo::
 	return
 
 Route16_NorthEntrance_2F_Text_OnBikeRideWithGirlfriend::
-	.string "I'm on a relaxing ride on my new\n"
-	.string "bike with my girlfriend.$"
+	.string "I'm riding with my girlfriend.\p"
+	.string "If we ride fast, the gangs can't\n"
+	.string "catch us!$"
 
 Route16_NorthEntrance_2F_Text_RidingTogetherOnNewBikes::
-	.string "We're going riding together on our\n"
-	.string "new bikes.$"
+	.string "We stole these bikes back from\n"
+	.string "TEAM SKULL!$"
 
 Route16_NorthEntrance_2F_Text_ItsCeladonDeptStore::
 	.string "Let's see what the binoculars have\n"

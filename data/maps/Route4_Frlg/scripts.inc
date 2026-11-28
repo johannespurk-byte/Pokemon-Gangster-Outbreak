@@ -17,20 +17,20 @@ Route4_EventScript_RouteSign::
 	end
 
 Route4_Text_TrippedOverGeodude::
-	.string "Ouch! I tripped over a rocky\n"
-	.string "POKéMON, GEODUDE!$"
+	.string "Ouch! I tripped over a GEODUDE!\p"
+	.string "TEAM YELL put it there as a trap, I\n"
+	.string "bet!$"
 
 Route4_Text_CrissyIntro::
-	.string "I came to MT. MOON in search of\n"
-	.string "mushroom POKéMON.$"
+	.string "PIERS says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 Route4_Text_CrissyDefeat::
-	.string "After all I did to catch them!$"
+	.string "No fair! You're way too strong!$"
 
 Route4_Text_CrissyPostBattle::
-	.string "There might not be any more\n"
-	.string "mushrooms here.\p"
-	.string "I think I got them all.$"
+	.string "Everybody's scared of PIERS.\p"
+	.string "Are you scared?$"
 
 Route4_Text_MtMoonEntrance::
 	.string "MT. MOON\n"
@@ -89,12 +89,10 @@ Text_MegaKickTaught::
 	.string "only simple punching over there.$"
 
 Route4_Text_PeopleLikeAndRespectBrock::
-	.string "Oh, wow, that's the PROSPECT RANK!\n"
-	.string "You got it from BROCK, didn't you?\p"
-	.string "BROCK is cool. He's not just tough.\n"
-	.string "People like and respect him.\p"
-	.string "I want to become a GYM LEADER\n"
-	.string "like him.$"
+	.string "Whoa, a real gang BADGE! You took\n"
+	.string "it from PIERS?\p"
+	.string "Even TEAM YELL respects that.\n"
+	.string "Keep it safe!$"
 
 @ Gangster Outbreak: gang trainers (tools/route_trainers.py)
 Route4_EventScript_GangTrainer1::
@@ -103,13 +101,15 @@ Route4_EventScript_GangTrainer1::
 	end
 
 Route4_Text_GangTrainer1Intro:
-	.string "This is our turf now.\nPay the toll or get lost!$"
+	.string "PIERS invited me to his parties.\p"
+	.string "Jealous?$"
 
 Route4_Text_GangTrainer1Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "I broke a nail! Unforgivable!$"
 
 Route4_Text_GangTrainer1Post:
-	.string "Keep walking. This road's\nyours… for now.$"
+	.string "You fight like a true boss.\p"
+	.string "How charming.$"
 
 Route4_EventScript_GangTrainer2::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE4_2, Route4_Text_GangTrainer2Intro, Route4_Text_GangTrainer2Defeat
@@ -117,13 +117,15 @@ Route4_EventScript_GangTrainer2::
 	end
 
 Route4_Text_GangTrainer2Intro:
-	.string "Nobody walks through here\nwithout a fight!$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 Route4_Text_GangTrainer2Defeat:
-	.string "My gang's gonna hear\nabout this…$"
+	.string "Aww… There goes my lunch money.$"
 
 Route4_Text_GangTrainer2Post:
-	.string "Keep walking. This road's\nyours… for now.$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 Route4_EventScript_GangTrainer3::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE4_3, Route4_Text_GangTrainer3Intro, Route4_Text_GangTrainer3Defeat
@@ -131,13 +133,15 @@ Route4_EventScript_GangTrainer3::
 	end
 
 Route4_Text_GangTrainer3Intro:
-	.string "Heh, fresh meat for my\nPOKéMON!$"
+	.string "PIERS wants your money.\p"
+	.string "And I want a fight!$"
 
 Route4_Text_GangTrainer3Defeat:
-	.string "My gang's gonna hear\nabout this…$"
+	.string "Fine! Keep your cash!$"
 
 Route4_Text_GangTrainer3Post:
-	.string "GIOVANNI's crew, huh?\nI should've known.$"
+	.string "Next time I'll bring the whole of\n"
+	.string "TEAM YELL!$"
 
 Route4_EventScript_GangTrainer4::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE4_4, Route4_Text_GangTrainer4Intro, Route4_Text_GangTrainer4Defeat
@@ -145,11 +149,13 @@ Route4_EventScript_GangTrainer4::
 	end
 
 Route4_Text_GangTrainer4Intro:
-	.string "Wrong road, kid.\nThis one's ours.$"
+	.string "Wrong turf, rookie. Nobody passes\n"
+	.string "without a fight!$"
 
 Route4_Text_GangTrainer4Defeat:
-	.string "Heh… Not bad, punk.$"
+	.string "PIERS is gonna kill me…$"
 
 Route4_Text_GangTrainer4Post:
-	.string "Ever since the outbreak,\nonly the strong survive.$"
+	.string "Respect. Not many beat me on my\n"
+	.string "own road.$"
 

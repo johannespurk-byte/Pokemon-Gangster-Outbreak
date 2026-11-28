@@ -298,8 +298,8 @@ Route22_Text_LateRivalVictory::
 	.string "あははーッ！$"
 
 Route22_Text_LeagueGateSign::
-	.string "POKéMON LEAGUE\n"
-	.string "Front Gate$"
+	.string "POKéMON LEAGUE\p"
+	.string "Front Gate - BOSSES ONLY$"
 
 
 @ Gangster Outbreak: gang trainers (tools/route_trainers.py)
@@ -309,13 +309,15 @@ Route22_EventScript_GangTrainer1::
 	end
 
 Route22_Text_GangTrainer1Intro:
-	.string "The city burned and I got\nstronger. Wanna see?$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route22_Text_GangTrainer1Defeat:
-	.string "Ugh! Who taught you to\nfight like that?$"
+	.string "Okay, okay! You win!$"
 
 Route22_Text_GangTrainer1Post:
-	.string "Word travels fast. Everyone\nwill know your name soon.$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 Route22_EventScript_GangTrainer2::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE22_2, Route22_Text_GangTrainer2Intro, Route22_Text_GangTrainer2Defeat
@@ -323,13 +325,15 @@ Route22_EventScript_GangTrainer2::
 	end
 
 Route22_Text_GangTrainer2Intro:
-	.string "The city burned and I got\nstronger. Wanna see?$"
+	.string "Hey! You're in the wrong part of\n"
+	.string "town!$"
 
 Route22_Text_GangTrainer2Defeat:
-	.string "Ugh! Who taught you to\nfight like that?$"
+	.string "Tch… You hit hard.$"
 
 Route22_Text_GangTrainer2Post:
-	.string "Keep walking. This road's\nyours… for now.$"
+	.string "You're making a name for yourself,\n"
+	.string "boss.$"
 
 Route22_EventScript_GangTrainer3::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE22_3, Route22_Text_GangTrainer3Intro, Route22_Text_GangTrainer3Defeat
@@ -337,13 +341,15 @@ Route22_EventScript_GangTrainer3::
 	end
 
 Route22_Text_GangTrainer3Intro:
-	.string "You look like easy money.\nHand it over!$"
+	.string "GIOVANNI said nobody passes.\n"
+	.string "That means you!$"
 
 Route22_Text_GangTrainer3Defeat:
-	.string "Ugh! Who taught you to\nfight like that?$"
+	.string "Fine! Keep your cash!$"
 
 Route22_Text_GangTrainer3Post:
-	.string "Keep walking. This road's\nyours… for now.$"
+	.string "Tell your crew I fought fair.\n"
+	.string "Mostly.$"
 
 Route22_EventScript_GangTrainer4::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE22_4, Route22_Text_GangTrainer4Intro, Route22_Text_GangTrainer4Defeat
@@ -351,13 +357,17 @@ Route22_EventScript_GangTrainer4::
 	end
 
 Route22_Text_GangTrainer4Intro:
-	.string "Rocket's gone, so the streets\nbelong to whoever's toughest!$"
+	.string "My big brother rides with TEAM\n"
+	.string "ROCKET! I'm gonna be just like\p"
+	.string "him!$"
 
 Route22_Text_GangTrainer4Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route22_Text_GangTrainer4Post:
-	.string "Word travels fast. Everyone\nwill know your name soon.$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "ROCKET.\p"
+	.string "Or maybe your crew!$"
 
 Route22_EventScript_GangTrainer5::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE22_5, Route22_Text_GangTrainer5Intro, Route22_Text_GangTrainer5Defeat
@@ -365,11 +375,13 @@ Route22_EventScript_GangTrainer5::
 	end
 
 Route22_Text_GangTrainer5Intro:
-	.string "The city burned and I got\nstronger. Wanna see?$"
+	.string "This road belongs to TEAM ROCKET.\p"
+	.string "Pay up or fight!$"
 
 Route22_Text_GangTrainer5Defeat:
-	.string "Heh… Not bad, punk.$"
+	.string "GIOVANNI is gonna kill me…$"
 
 Route22_Text_GangTrainer5Post:
-	.string "GIOVANNI's crew, huh?\nI should've known.$"
+	.string "Word travels fast.\p"
+	.string "GIOVANNI will hear about you.$"
 

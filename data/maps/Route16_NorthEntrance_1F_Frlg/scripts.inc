@@ -119,7 +119,9 @@ Route16_NorthEntrance_1F_Text_NoPedestriansOnCyclingRoad::
 
 Route16_NorthEntrance_1F_Text_CyclingRoadIsDownhillCourse::
 	.string "CYCLING ROAD is a downhill course\n"
-	.string "by the sea. It's a great ride.$"
+	.string "by the sea.\p"
+	.string "TEAM AQUA races down there every\n"
+	.string "night.$"
 
 Route16_NorthEntrance_1F_Text_ExcuseMeWaitUp::
 	.string "Excuse me!\n"

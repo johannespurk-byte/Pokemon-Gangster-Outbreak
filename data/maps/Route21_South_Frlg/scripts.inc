@@ -2,58 +2,58 @@ Route21_South_Frlg_MapScripts::
 	.byte 0
 
 Route21_South_Text_JackIntro::
-	.string "I caught my POKéMON at sea.$"
+	.string "Out here, only the strong stay\n"
+	.string "afloat!$"
 
 Route21_South_Text_JackDefeat::
-	.string "Diver!!\n"
-	.string "Down!!$"
+	.string "Gah! Swallowed water!$"
 
 Route21_South_Text_JackPostBattle::
-	.string "Where'd you catch your POKéMON?$"
+	.string "The water's the only free place\n"
+	.string "left.$"
 
 Route21_South_Text_JeromeIntro::
-	.string "Right now, I'm in a triathlon meet.$"
+	.string "Splash! Nobody swims past me!$"
 
 Route21_South_Text_JeromeDefeat::
-	.string "Pant…\n"
-	.string "Pant… Pant…$"
+	.string "Glub… I'm all washed up.$"
 
 Route21_South_Text_JeromePostBattle::
-	.string "I'm beat! But, I still have the\n"
-	.string "bike race and marathon left!$"
+	.string "The currents carry loot bags. Keep\n"
+	.string "your eyes open.$"
 
 Route21_South_Text_RolandIntro::
-	.string "Ahh!\n"
-	.string "Feel the sun and the wind!$"
+	.string "I patrol these waves for TEAM\n"
+	.string "GALACTIC!$"
 
 Route21_South_Text_RolandDefeat::
-	.string "Yow!\n"
-	.string "I lost!$"
+	.string "Sunk! Totally sunk!$"
 
 Route21_South_Text_RolandPostBattle::
-	.string "I'm sunburnt to a crisp!$"
+	.string "Ships from CINNABAR pass here\n"
+	.string "every night.$"
 
 Route21_South_Text_ClaudeIntro::
-	.string "Hey, don't scare away the fish!$"
+	.string "The sea doesn't care about gangs.\p"
+	.string "But I do!$"
 
 Route21_South_Text_ClaudeDefeat::
-	.string "Sorry! I'm just so frustrated from\n"
-	.string "not catching anything.$"
+	.string "Sunk! Totally sunk!$"
 
 Route21_South_Text_ClaudePostBattle::
-	.string "Sheesh, I haven't caught a thing.\n"
-	.string "Could this place actually be a\l"
-	.string "giant pool or something?$"
+	.string "Smugglers use these waters at\n"
+	.string "night. Stay sharp.$"
 
 Route21_South_Text_NolanIntro::
-	.string "Keep me company till I get a hit.$"
+	.string "You'll sink like the last punk who\n"
+	.string "came here!$"
 
 Route21_South_Text_NolanDefeat::
-	.string "That burned some time.$"
+	.string "The tide turned on me…$"
 
 Route21_South_Text_NolanPostBattle::
-	.string "Oh wait!\n"
-	.string "I got a bite! Yeah!$"
+	.string "Swim fast if you see a boat from\n"
+	.string "TEAM GALACTIC.$"
 
 Route21_North_Text_LilIntro::
 	.string "LIL: Huh? A battle?\n"

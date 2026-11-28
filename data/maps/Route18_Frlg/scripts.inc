@@ -28,44 +28,49 @@ Route18_EventScript_CyclingRoadSign::
 	end
 
 Route18_Text_WiltonIntro::
-	.string "I always check every grassy area\n"
-	.string "for new POKéMON.$"
+	.string "I live out here, far from TEAM\n"
+	.string "MAGMA.\p"
+	.string "Leave me be! …Or battle!$"
 
 Route18_Text_WiltonDefeat::
-	.string "Tch!$"
+	.string "Whoa! Rolled right over me!$"
 
 Route18_Text_WiltonPostBattle::
-	.string "I wish I had a BIKE!$"
+	.string "From up here I watch TEAM MAGMA\n"
+	.string "come and go.$"
 
 Route18_Text_RamiroIntro::
-	.string "Kurukkoo!\n"
-	.string "How do you like my birdcall?$"
+	.string "My birds see every gang that\n"
+	.string "moves.\p"
+	.string "And they saw you!$"
 
 Route18_Text_RamiroDefeat::
-	.string "I had to bug you!$"
+	.string "My birds flew off…$"
 
 Route18_Text_RamiroPostBattle::
-	.string "I collect sea POKéMON on weekends\n"
-	.string "because the sea is so close.$"
+	.string "The wild POKéMON are the only\n"
+	.string "honest ones left.$"
 
 Route18_Text_JacobIntro::
-	.string "This is my turf!\n"
-	.string "Get out of here!$"
+	.string "These hills are older than any\n"
+	.string "gang.\p"
+	.string "So am I!$"
 
 Route18_Text_JacobDefeat::
-	.string "Darn!$"
+	.string "Like a rockslide!$"
 
 Route18_Text_JacobPostBattle::
-	.string "This is my fave area for catching\n"
-	.string "POKéMON.$"
+	.string "Head to CELADON if you want\n"
+	.string "trouble.$"
 
 Route18_Text_RouteSign::
 	.string "ROUTE 18\n"
 	.string "CELADON CITY - FUCHSIA CITY$"
 
 Route18_Text_CyclingRoadSign::
-	.string "CYCLING ROAD\n"
-	.string "No pedestrians permitted!$"
+	.string "CYCLING ROAD\p"
+	.string "No pedestrians permitted! - TEAM\n"
+	.string "MAGMA$"
 
 
 @ Gangster Outbreak: gang trainers (tools/route_trainers.py)
@@ -75,13 +80,15 @@ Route18_EventScript_GangTrainer1::
 	end
 
 Route18_Text_GangTrainer1Intro:
-	.string "Rocket's gone, so the streets\nbelong to whoever's toughest!$"
+	.string "MAXIE wants your money.\p"
+	.string "And I want a fight!$"
 
 Route18_Text_GangTrainer1Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "Who are you, anyway?!$"
 
 Route18_Text_GangTrainer1Post:
-	.string "Next time I'll bring the\nwhole gang!$"
+	.string "Next time I'll bring the whole of\n"
+	.string "TEAM MAGMA!$"
 
 Route18_EventScript_GangTrainer2::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE18_2, Route18_Text_GangTrainer2Intro, Route18_Text_GangTrainer2Defeat
@@ -89,11 +96,13 @@ Route18_EventScript_GangTrainer2::
 	end
 
 Route18_Text_GangTrainer2Intro:
-	.string "Rocket's gone, so the streets\nbelong to whoever's toughest!$"
+	.string "Out here, nobody pays the tolls of\n"
+	.string "MAXIE!$"
 
 Route18_Text_GangTrainer2Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "Heh, you're tough as stone.$"
 
 Route18_Text_GangTrainer2Post:
-	.string "Word travels fast. Everyone\nwill know your name soon.$"
+	.string "Rest a bit. The road ahead is\n"
+	.string "rough.$"
 

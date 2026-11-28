@@ -14,10 +14,9 @@ Route2_ViridianForest_NorthEntrance_EventScript_CooltrainerF::
 	end
 
 Route2_ViridianForest_NorthEntrance_Text_ManyMonsOnlyInForests::
-	.string "Many POKéMON live only in forests \n"
-	.string "and caves.\p"
-	.string "You need to be persistent and look\n"
-	.string "everywhere to get different kinds.$"
+	.string "Many POKéMON hide in forests and\n"
+	.string "caves since the outbreak.\p"
+	.string "Look everywhere to find them all.$"
 
 Route2_ViridianForest_NorthEntrance_Text_CanCutSkinnyTrees::
 	.string "Have you noticed the skinny trees\n"

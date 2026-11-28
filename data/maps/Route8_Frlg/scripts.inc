@@ -6,164 +6,160 @@ Route8_EventScript_UndergroundPathSign::
 	end
 
 Route8_Text_AidanIntro::
-	.string "You look good at POKéMON, but how\n"
-	.string "is your chemistry grade?$"
+	.string "I built a radar for gang\n"
+	.string "movements. It beeped at you!$"
 
 Route8_Text_AidanDefeat::
-	.string "Ow!\n"
-	.string "Meltdown!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 Route8_Text_AidanPostBattle::
-	.string "I am better at school than this!$"
+	.string "Every gang uses my gadgets.\n"
+	.string "Nobody pays.$"
 
 Route8_Text_StanIntro::
-	.string "All right!\n"
-	.string "Let's play a game!$"
+	.string "My calculations say you lose.\p"
+	.string "Let's test it!$"
 
 Route8_Text_StanDefeat::
-	.string "Drat!\n"
-	.string "Came up short!$"
+	.string "My theory… failed!$"
 
 Route8_Text_StanPostBattle::
-	.string "Things didn't work today.$"
+	.string "I'll sell your battle data to TEAM\n"
+	.string "FLARE.\p"
+	.string "Kidding! Mostly.$"
 
 Route8_Text_GlennIntro::
-	.string "You should be informed.\n"
-	.string "You need strategy to win at this!$"
+	.string "Your POKéMON stats look…\n"
+	.string "interesting!$"
 
 Route8_Text_GlennDefeat::
-	.string "It's not logical!$"
+	.string "Fine… I'll recalculate.$"
 
 Route8_Text_GlennPostBattle::
-	.string "Go with GRIMER first…and…\n"
-	.string "…and…then…$"
+	.string "I'm writing a paper on gang\n"
+	.string "warfare. You're in it now.$"
 
 Route8_Text_PaigeIntro::
-	.string "I like NIDORAN, so I collect them!$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route8_Text_PaigeDefeat::
-	.string "Why?\n"
-	.string "Why??$"
+	.string "No fair! You're way too strong!$"
 
 Route8_Text_PaigePostBattle::
-	.string "When POKéMON grow up, they get\n"
-	.string "ugly! They shouldn't evolve.$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 Route8_Text_LeslieIntro::
-	.string "School is fun, but so are POKéMON.$"
+	.string "I hacked a PC of TEAM FLARE once.\p"
+	.string "Now I hide out here!$"
 
 Route8_Text_LeslieDefeat::
-	.string "You made it clear to me that\n"
-	.string "I should stick with school.$"
+	.string "Error! That wasn't in my data!$"
 
 Route8_Text_LesliePostBattle::
-	.string "I was planning on getting some\n"
-	.string "fresh air for a change, but…\p"
-	.string "We're stuck here because of the\n"
-	.string "gates at SAFFRON.$"
+	.string "LYSANDRE pays well for smart\n"
+	.string "people.\p"
+	.string "Just saying.$"
 
 Route8_Text_AndreaIntro::
-	.string "MEOWTH is so cute, meow, meow,\n"
-	.string "meow!$"
+	.string "My big brother rides with TEAM\n"
+	.string "FLARE! I'm gonna be just like him!$"
 
 Route8_Text_AndreaDefeat::
-	.string "Meeeeyow!$"
+	.string "Aww… There goes my lunch money.$"
 
 Route8_Text_AndreaPostBattle::
-	.string "I think PIDGEY and RATTATA are\n"
-	.string "cute, too!$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "FLARE.\p"
+	.string "Or maybe your crew!$"
 
 Route8_Text_MeganIntro::
-	.string "We must look silly standing here\n"
-	.string "like this.$"
+	.string "LYSANDRE says kids can't fight.\n"
+	.string "I'll prove him wrong!$"
 
 Route8_Text_MeganDefeat::
-	.string "Look what you did to my poor, cute\n"
-	.string "POKéMON!$"
+	.string "Okay, okay! You win!$"
 
 Route8_Text_MeganPostBattle::
-	.string "SAFFRON's gatekeeper won't let us\n"
-	.string "go through.\p"
-	.string "I know he's doing his job, but I\n"
-	.string "think he's mean.$"
+	.string "Everybody's scared of LYSANDRE.\p"
+	.string "Are you scared?$"
 
 Route8_Text_RichIntro::
-	.string "I'm a rambling, gaming dude!$"
+	.string "I sell info to every gang.\p"
+	.string "Info on you is worth a lot!$"
 
 Route8_Text_RichDefeat::
-	.string "Missed the big chance!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 Route8_Text_RichPostBattle::
-	.string "Playing games and POKéMON are like\n"
-	.string "eating peanuts! I just can't stop!$"
+	.string "Data says you'll beat LYSANDRE.\p"
+	.string "Probably.$"
 
 Route8_Text_JuliaIntro::
-	.string "What's a cute, round, and fluffy\n"
-	.string "POKéMON?$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 Route8_Text_JuliaDefeat::
-	.string "Stop!\p"
-	.string "Don't be so mean to my CLEFAIRY!$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route8_Text_JuliaPostBattle::
-	.string "I read that CLEFAIRY evolves when\n"
-	.string "it's exposed to a MOON STONE.\p"
-	.string "I read that in a POKéMON JOURNAL.\n"
-	.string "I wonder if it's true?$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 Route8_Text_UndergroundPathSign::
 	.string "UNDERGROUND PATH\n"
 	.string "CELADON CITY - LAVENDER TOWN$"
 
 Route8_Text_EliIntro::
-	.string "ELI: Twin power is fantastic.\n"
-	.string "Did you know?$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 Route8_Text_EliDefeat::
-	.string "ELI: But…\n"
-	.string "We used our twin power…$"
+	.string "No fair! You're way too strong!$"
 
 Route8_Text_EliPostBattle::
-	.string "ELI: I caught my POKéMON with\n"
-	.string "ANNE!$"
+	.string "The road to SAFFRON isn't safe.\p"
+	.string "Watch out!$"
 
 Route8_Text_EliNotEnoughMons::
 	.string "ELI: We can't battle if you don't\n"
 	.string "have two POKéMON.$"
 
 Route8_Text_AnneIntro::
-	.string "ANNE: We'll shock you with our twin\n"
-	.string "power!$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 Route8_Text_AnneDefeat::
-	.string "ANNE: Our twin power…$"
+	.string "Aww… There goes my lunch money.$"
 
 Route8_Text_AnnePostBattle::
-	.string "ANNE: I'm raising POKéMON with\n"
-	.string "ELI.$"
+	.string "Don't tell my mom I battled you.$"
 
 Route8_Text_AnneNotEnoughMons::
 	.string "ANNE: Hi, hi! Let's battle!\n"
 	.string "But bring two POKéMON.$"
 
 Route8_Text_RicardoIntro::
-	.string "My bike's acting up, man.$"
+	.string "Hey! You're in the wrong part of\n"
+	.string "town!$"
 
 Route8_Text_RicardoDefeat::
-	.string "Aww, man.\n"
-	.string "I'm not into this.$"
+	.string "LYSANDRE is gonna kill me…$"
 
 Route8_Text_RicardoPostBattle::
-	.string "I got grass caught up in my\n"
-	.string "spokes, man.$"
+	.string "You're making a name for yourself,\n"
+	.string "boss.$"
 
 Route8_Text_JarenIntro::
-	.string "Clear the way, or I'll run you\n"
-	.string "down!$"
+	.string "LYSANDRE said nobody passes.\n"
+	.string "That means you!$"
 
 Route8_Text_JarenDefeat::
-	.string "You for real, kid?$"
+	.string "Who are you, anyway?!$"
 
 Route8_Text_JarenPostBattle::
-	.string "Don't think you're all special and\n"
-	.string "all just because of this.$"
+	.string "Tell your crew I fought fair.\n"
+	.string "Mostly.$"

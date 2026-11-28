@@ -6,114 +6,115 @@ Route11_EventScript_DiglettsCaveSign::
 	end
 
 Route11_Text_HugoIntro::
-	.string "Win, lose, or draw!$"
+	.string "Your POKéMON stats look…\n"
+	.string "interesting!$"
 
 Route11_Text_HugoDefeat::
-	.string "Atcha!\n"
-	.string "Didn't go my way!$"
+	.string "My theory… failed!$"
 
 Route11_Text_HugoPostBattle::
-	.string "POKéMON is life!\n"
-	.string "And to live is to play games!$"
+	.string "I'm writing a paper on gang\n"
+	.string "warfare. You're in it now.$"
 
 Route11_Text_JasperIntro::
-	.string "Competition!\n"
-	.string "I can't get enough!$"
+	.string "I hacked a PC of TEAM ROCKET once.\p"
+	.string "Now I hide out here!$"
 
 Route11_Text_JasperDefeat::
-	.string "I had a chance!$"
+	.string "Impossible! I calculated\n"
+	.string "everything!$"
 
 Route11_Text_JasperPostBattle::
-	.string "You can't be a coward in the world\n"
-	.string "of POKéMON!$"
+	.string "ARCHER pays well for smart people.\p"
+	.string "Just saying.$"
 
 Route11_Text_EddieIntro::
-	.string "Let's go, but don't cheat!$"
+	.string "ARCHER says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 Route11_Text_EddieDefeat::
-	.string "Huh?\n"
-	.string "That's not right!$"
+	.string "Okay, okay! You win!$"
 
 Route11_Text_EddiePostBattle::
-	.string "I did my best.\n"
-	.string "I have no regrets.$"
+	.string "Everybody's scared of ARCHER.\p"
+	.string "Are you scared?$"
 
 Route11_Text_BraxtonIntro::
-	.string "Careful!\n"
-	.string "I'm laying down some cables!$"
+	.string "Science doesn't stop for a gang\n"
+	.string "war!$"
 
 Route11_Text_BraxtonDefeat::
-	.string "That was electric!$"
+	.string "Fine… I'll recalculate.$"
 
 Route11_Text_BraxtonPostBattle::
-	.string "Spread the word to save energy!$"
+	.string "Knowledge is the only thing they\n"
+	.string "can't steal.$"
 
 Route11_Text_DillonIntro::
-	.string "I just became a TRAINER.\n"
-	.string "But, I think I can win.$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 Route11_Text_DillonDefeat::
-	.string "My POKéMON couldn't win…\n"
-	.string "Haven't they grown enough?$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route11_Text_DillonPostBattle::
-	.string "What now?\n"
-	.string "Leave me alone!$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 Route11_Text_DirkIntro::
-	.string "Fwahaha!\n"
-	.string "I have never lost!$"
+	.string "My calculations say you lose.\p"
+	.string "Let's test it!$"
 
 Route11_Text_DirkDefeat::
-	.string "My first loss!$"
+	.string "Fine… I'll recalculate.$"
 
 Route11_Text_DirkPostBattle::
-	.string "You were just lucky, that's all.$"
+	.string "I'll sell your battle data to TEAM\n"
+	.string "ROCKET.\p"
+	.string "Kidding! Mostly.$"
 
 Route11_Text_DarianIntro::
-	.string "I have never won before…$"
+	.string "I sell info to every gang.\p"
+	.string "Info on you is worth a lot!$"
 
 Route11_Text_DarianDefeat::
-	.string "I saw this coming…$"
+	.string "Error! That wasn't in my data!$"
 
 Route11_Text_DarianPostBattle::
-	.string "I was unlucky, as always.$"
+	.string "Data says you'll beat ARCHER.\p"
+	.string "Probably.$"
 
 Route11_Text_YasuIntro::
-	.string "I'm the best in my class.\n"
-	.string "I train every morning.$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 Route11_Text_YasuDefeat::
-	.string "Darn!\n"
-	.string "My POKéMON need to be stronger!$"
+	.string "No fair! You're way too strong!$"
 
 Route11_Text_YasuPostBattle::
-	.string "There's a fat POKéMON that comes\n"
-	.string "down from the mountains.\p"
-	.string "I bet it'd be strong if you can\n"
-	.string "catch it.$"
+	.string "The road to VERMILION isn't safe.\p"
+	.string "Watch out!$"
 
 Route11_Text_BernieIntro::
-	.string "Watch out for live wires!$"
+	.string "I built a radar for gang\n"
+	.string "movements. It beeped at you!$"
 
 Route11_Text_BernieDefeat::
-	.string "Whoa!\n"
-	.string "You spark plug!$"
+	.string "Error! That wasn't in my data!$"
 
 Route11_Text_BerniePostBattle::
-	.string "Well, better get back to work.$"
+	.string "Every gang uses my gadgets.\n"
+	.string "Nobody pays.$"
 
 Route11_Text_DaveIntro::
-	.string "I raised my POKéMON carefully.\n"
-	.string "They should be ready by now!$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 Route11_Text_DaveDefeat::
-	.string "Bye-bye!\n"
-	.string "Thank you, and good-bye!$"
+	.string "Aww… There goes my lunch money.$"
 
 Route11_Text_DavePostBattle::
-	.string "Tch…\n"
-	.string "I better go find stronger ones!$"
+	.string "Don't tell my mom I battled you.$"
 
 Route11_Text_DiglettsCave::
 	.string "DIGLETT'S CAVE$"

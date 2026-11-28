@@ -76,108 +76,99 @@ Text_PlayedPokeFlute::
 	.string "{PLAYER} played the POKé FLUTE.$"
 
 Route12_Text_NedIntro::
-	.string "Yeah!\n"
-	.string "I got a bite here!$"
+	.string "The sea doesn't care about gangs.\p"
+	.string "But I do!$"
 
 Route12_Text_NedDefeat::
-	.string "Tch!\n"
-	.string "Just a small fry…$"
+	.string "Gah! Swallowed water!$"
 
 Route12_Text_NedPostBattle::
-	.string "Hang on!\n"
-	.string "My line's snagged!$"
+	.string "Smugglers use these waters at\n"
+	.string "night. Stay sharp.$"
 
 Route12_Text_ChipIntro::
-	.string "Be patient.\n"
-	.string "Fishing is a waiting game.$"
+	.string "You'll sink like the last punk who\n"
+	.string "came here!$"
 
 Route12_Text_ChipDefeat::
-	.string "That one got away!$"
+	.string "Glub… I'm all washed up.$"
 
 Route12_Text_ChipPostBattle::
-	.string "With a better ROD, I could catch\n"
-	.string "better POKéMON…$"
+	.string "Swim fast if you see a boat from\n"
+	.string "TEAM ROCKET.$"
 
 Route12_Text_JustinIntro::
-	.string "I'm searching for a MOON STONE.\n"
-	.string "Have you found one?$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 Route12_Text_JustinDefeat::
-	.string "Oww!$"
+	.string "Aww… There goes my lunch money.$"
 
 Route12_Text_JustinPostBattle::
-	.string "I could have made my POKéMON\n"
-	.string "evolve with a MOON STONE.\p"
-	.string "I would have won then, I bet.$"
+	.string "Don't tell my mom I battled you.$"
 
 Route12_Text_LucaIntro::
-	.string "Electricity is my specialty.\p"
-	.string "I don't know a thing about POKéMON\n"
-	.string "of the sea, though.$"
+	.string "ARCHER said nobody passes. That\n"
+	.string "means you!$"
 
 Route12_Text_LucaDefeat::
-	.string "Unplugged!$"
+	.string "Fine! Keep your cash!$"
 
 Route12_Text_LucaPostBattle::
-	.string "Water conducts electricity, so you\n"
-	.string "should zap sea POKéMON.$"
+	.string "Tell your crew I fought fair.\n"
+	.string "Mostly.$"
 
 Route12_Text_HankIntro::
-	.string "The FISHING FOOL versus POKéMON\n"
-	.string "KID!$"
+	.string "Out here, only the strong stay\n"
+	.string "afloat!$"
 
 Route12_Text_HankDefeat::
-	.string "Touch too much!$"
+	.string "Sunk! Totally sunk!$"
 
 Route12_Text_HankPostBattle::
-	.string "I guess you get to be good at\n"
-	.string "what you like.\p"
-	.string "Well, you beat me at POKéMON,\n"
-	.string "but you can't top me at fishing.$"
+	.string "The water's the only free place\n"
+	.string "left.$"
 
 Route12_Text_ElliotIntro::
-	.string "I love fishing, don't get me wrong.\p"
-	.string "But it'd be best if I also had more\n"
-	.string "work.$"
+	.string "Splash! Nobody swims past me!$"
 
 Route12_Text_ElliotDefeat::
-	.string "It's not easy…$"
+	.string "The tide turned on me…$"
 
 Route12_Text_ElliotPostBattle::
-	.string "It's all right.\n"
-	.string "Losing doesn't bug me anymore.$"
+	.string "The currents carry loot bags. Keep\n"
+	.string "your eyes open.$"
 
 Route12_Text_AndrewIntro::
-	.string "What's catching?\p"
-	.string "You never know what you could\n"
-	.string "catch!$"
+	.string "I patrol these waves for TEAM\n"
+	.string "ROCKET!$"
 
 Route12_Text_AndrewDefeat::
-	.string "Lost it!$"
+	.string "Gah! Swallowed water!$"
 
 Route12_Text_AndrewPostBattle::
-	.string "What, MAGIKARP?\p"
-	.string "I catch them all the time, sure.\n"
-	.string "But, boy are they wimpy.$"
+	.string "Ships from VERMILION pass here\n"
+	.string "every night.$"
 
 Route12_Text_RouteSign::
-	.string "ROUTE 12 \n"
-	.string "North to LAVENDER$"
+	.string "ROUTE 12\p"
+	.string "North to LAVENDER - ROCKET\n"
+	.string "CHECKPOINT$"
 
 Route12_Text_SportfishingArea::
-	.string "SPORTFISHING AREA$"
+	.string "SPORTFISHING AREA\p"
+	.string "Closed by order of TEAM ROCKET.$"
 
 Route12_Text_JesIntro::
-	.string "JES: If I win, I'm going to\n"
-	.string "propose to GIA.$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route12_Text_JesDefeat::
-	.string "JES: Oh, please, why couldn't you\n"
-	.string "let us win?$"
+	.string "Okay, okay! You win!$"
 
 Route12_Text_JesPostBattle::
-	.string "JES: Oh, GIA, forgive me,\n"
-	.string "my love!$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 Route12_Text_JesNotEnoughMons::
 	.string "JES: GIA and I, we'll be\n"
@@ -186,15 +177,17 @@ Route12_Text_JesNotEnoughMons::
 	.string "two POKéMON of your own.$"
 
 Route12_Text_GiaIntro::
-	.string "GIA: Hey, JES…\p"
-	.string "If we win, I'll marry you!$"
+	.string "My big brother rides with TEAM\n"
+	.string "ROCKET! I'm gonna be just like\p"
+	.string "him!$"
 
 Route12_Text_GiaDefeat::
-	.string "GIA: Oh, but why?$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route12_Text_GiaPostBattle::
-	.string "GIA: JES, you silly!\n"
-	.string "You ruined this!$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "ROCKET.\p"
+	.string "Or maybe your crew!$"
 
 Route12_Text_GiaNotEnoughMons::
 	.string "GIA: I can't bear to battle\n"

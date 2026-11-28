@@ -6,157 +6,150 @@ Route14_EventScript_RouteSign::
 	end
 
 Route14_Text_CarterIntro::
-	.string "You need to use TMs to teach good\n"
-	.string "moves to POKéMON.$"
+	.string "These hills are older than any\n"
+	.string "gang.\p"
+	.string "So am I!$"
 
 Route14_Text_CarterDefeat::
-	.string "Not good enough quite yet.$"
+	.string "Whoa! Rolled right over me!$"
 
 Route14_Text_CarterPostBattle::
-	.string "You have some HMs, right? POKéMON\n"
-	.string "can't forget those moves easily.$"
+	.string "Head to FUCHSIA if you want\n"
+	.string "trouble.$"
 
 Route14_Text_MitchIntro::
-	.string "My bird POKéMON should be ready\n"
-	.string "for battle.$"
+	.string "Out here, nobody pays the tolls of\n"
+	.string "GHETSIS!$"
 
 Route14_Text_MitchDefeat::
-	.string "Not ready yet!$"
+	.string "My birds flew off…$"
 
 Route14_Text_MitchPostBattle::
-	.string "My bird POKéMON need to learn\n"
-	.string "better moves.$"
+	.string "Rest a bit. The road ahead is\n"
+	.string "rough.$"
 
 Route14_Text_BeckIntro::
-	.string "They have TMs on sale at the\n"
-	.string "CELADON DEPT. STORE.\p"
-	.string "TMs aren't really rare, but not\n"
-	.string "many people have HMs.$"
+	.string "Gangs come and go. The mountains\n"
+	.string "stay!$"
 
 Route14_Text_BeckDefeat::
-	.string "Aww, bummer!$"
+	.string "Like a rockslide!$"
 
 Route14_Text_BeckPostBattle::
-	.string "Try teaching POKéMON a move that's\n"
-	.string "the same type as it.\p"
-	.string "That apparently boosts the power\n"
-	.string "of the move.$"
+	.string "Gangs never climb this far. Too\n"
+	.string "lazy.$"
 
 Route14_Text_MarlonIntro::
-	.string "Have you taught your bird POKéMON\n"
-	.string "how to FLY?\p"
-	.string "You'll be able to soar with it into\n"
-	.string "the sky!$"
+	.string "My POKéMON is as tough as the\n"
+	.string "rocks here!$"
 
 Route14_Text_MarlonDefeat::
-	.string "Shot down in flames!$"
+	.string "Heh, you're tough as stone.$"
 
 Route14_Text_MarlonPostBattle::
-	.string "Bird POKéMON are my one true love.\n"
-	.string "I don't want to raise anything else.$"
+	.string "Watch the skies. Even the birds\n"
+	.string "avoid TEAM PLASMA.$"
 
 Route14_Text_DonaldIntro::
-	.string "Have you heard the legend of the\n"
-	.string "winged mirages?$"
+	.string "I live out here, far from TEAM\n"
+	.string "PLASMA.\p"
+	.string "Leave me be! …Or battle!$"
 
 Route14_Text_DonaldDefeat::
-	.string "Why?\n"
-	.string "Why'd I lose?$"
+	.string "Like a rockslide!$"
 
 Route14_Text_DonaldPostBattle::
-	.string "Well, the winged mirages are the\n"
-	.string "legendary bird POKéMON.\p"
-	.string "There are three of them: ARTICUNO,\n"
-	.string "ZAPDOS, and MOLTRES.$"
+	.string "From up here I watch TEAM PLASMA\n"
+	.string "come and go.$"
 
 Route14_Text_BennyIntro::
-	.string "I'm not into it, but okay.\n"
-	.string "Let's go!$"
+	.string "My birds see every gang that\n"
+	.string "moves.\p"
+	.string "And they saw you!$"
 
 Route14_Text_BennyDefeat::
-	.string "I knew it!$"
+	.string "Heh, you're tough as stone.$"
 
 Route14_Text_BennyPostBattle::
-	.string "Winning, losing… It's insignificant\n"
-	.string "under this huge sky.$"
+	.string "The wild POKéMON are the only\n"
+	.string "honest ones left.$"
 
 Route14_Text_LukasIntro::
-	.string "C'mon, c'mon.\n"
-	.string "Let's go, let's go, let's go!$"
+	.string "GHETSIS said nobody passes. That\n"
+	.string "means you!$"
 
 Route14_Text_LukasDefeat::
-	.string "Arrg!\n"
-	.string "Lost! Get lost!$"
+	.string "Fine! Keep your cash!$"
 
 Route14_Text_LukasPostBattle::
-	.string "What, what, what?\n"
-	.string "What do you want still?$"
+	.string "Tell your crew I fought fair.\n"
+	.string "Mostly.$"
 
 Route14_Text_IsaacIntro::
-	.string "I need to burn some time.\n"
-	.string "Shut up and battle.$"
+	.string "This road belongs to TEAM PLASMA.\p"
+	.string "Pay up or fight!$"
 
 Route14_Text_IsaacDefeat::
-	.string "What?\n"
-	.string "You!?$"
+	.string "GHETSIS is gonna kill me…$"
 
 Route14_Text_IsaacPostBattle::
-	.string "Raising POKéMON is a drag, man.$"
+	.string "Word travels fast.\p"
+	.string "GHETSIS will hear about you.$"
 
 Route14_Text_GeraldIntro::
-	.string "We ride out here because of the\n"
-	.string "wide-open spaces.$"
+	.string "GHETSIS wants your money.\p"
+	.string "And I want a fight!$"
 
 Route14_Text_GeraldDefeat::
-	.string "Wipeout!$"
+	.string "Who are you, anyway?!$"
 
 Route14_Text_GeraldPostBattle::
-	.string "It's cool you made your POKéMON so\n"
-	.string "strong.\p"
-	.string "Might is right!\n"
-	.string "And you know it!$"
+	.string "Next time I'll bring the whole of\n"
+	.string "TEAM PLASMA!$"
 
 Route14_Text_MalikIntro::
-	.string "POKéMON battle?\n"
-	.string "Cool! Rumble!$"
+	.string "Hey! You're in the wrong part of\n"
+	.string "town!$"
 
 Route14_Text_MalikDefeat::
-	.string "Blown away!$"
+	.string "Tch… You hit hard.$"
 
 Route14_Text_MalikPostBattle::
-	.string "You know who'd win, you and me\n"
-	.string "one-on-one!$"
+	.string "You're making a name for yourself,\n"
+	.string "boss.$"
 
 Route14_Text_RouteSign::
-	.string "ROUTE 14\n"
-	.string "West to FUCHSIA CITY$"
+	.string "ROUTE 14\p"
+	.string "West to FUCHSIA CITY - PLASMA\n"
+	.string "TERRITORY$"
 
 Route14_Text_KiriIntro::
-	.string "KIRI: JAN, let's try really,\n"
-	.string "really hard together.$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route14_Text_KiriDefeat::
-	.string "KIRI: Whimper…\n"
-	.string "We lost, didn't we?$"
+	.string "No fair! You're way too strong!$"
 
 Route14_Text_KiriPostBattle::
-	.string "KIRI: Did we lose because of me?$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 Route14_Text_KiriNotEnoughMons::
 	.string "KIRI: We can battle if you have\n"
 	.string "two POKéMON.$"
 
 Route14_Text_JanIntro::
-	.string "JAN: KIRI, here we go!\n"
-	.string "We have to try hard!$"
+	.string "My big brother rides with TEAM\n"
+	.string "PLASMA! I'm gonna be just like\p"
+	.string "him!$"
 
 Route14_Text_JanDefeat::
-	.string "JAN: Eeeeh!\n"
-	.string "No fair!$"
+	.string "Aww… There goes my lunch money.$"
 
 Route14_Text_JanPostBattle::
-	.string "JAN: KIRI, don't cry!\n"
-	.string "We'll just try harder next time.$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "PLASMA.\p"
+	.string "Or maybe your crew!$"
 
 Route14_Text_JanNotEnoughMons::
 	.string "JAN: You want to battle?\n"

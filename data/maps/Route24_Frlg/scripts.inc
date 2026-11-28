@@ -111,88 +111,84 @@ Route24_Text_YouDontHaveAnyRoom::
 Route24_Text_JoinTeamRocket::
 	.string "By the way, how would you like to\n"
 	.string "join TEAM ROCKET?\p"
-	.string "We're a group of professional\n"
-	.string "criminals specializing in POKéMON!\p"
-	.string "Want to join?\p"
+	.string "Oh wait, you're already in\n"
+	.string "GIOVANNI's crew.\p"
+	.string "Then how about switching to\n"
+	.string "ARCHER's side?\p"
 	.string "Are you sure?\p"
-	.string "Come on, join us!\p"
-	.string "I'm telling you to join!\p"
-	.string "…Okay, you need convincing!\p"
-	.string "I'll make you an offer you can't\n"
-	.string "refuse!$"
+	.string "Fine. Then I'll take you down!$"
 
 Route24_Text_RocketDefeat::
 	.string "Arrgh!\n"
 	.string "You are good!$"
 
 Route24_Text_YoudBecomeTopRocketLeader::
-	.string "With your ability, you'd become\n"
-	.string "a top leader in TEAM ROCKET.\p"
-	.string "Come on, think of the opportunity!\n"
-	.string "Don't let this chance go to waste.$"
+	.string "With your ability, you'd be a top\n"
+	.string "boss anywhere.\p"
+	.string "Come on, think about it!$"
 
 Route24_Text_ShaneIntro::
-	.string "I saw your feat from the grass!$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 Route24_Text_ShaneDefeat::
-	.string "I thought not!$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route24_Text_ShanePostBattle::
-	.string "I hid because the people on the\n"
-	.string "bridge frightened me.$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
 Route24_Text_EthanIntro::
-	.string "Okay! I'm No. 5!\n"
-	.string "I'll stomp you!$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 Route24_Text_EthanDefeat::
-	.string "Whoa!\n"
-	.string "Too much!$"
+	.string "No fair! You're way too strong!$"
 
 Route24_Text_EthanPostBattle::
-	.string "I did my best. I have no regrets!$"
+	.string "The road to CERULEAN isn't safe.\p"
+	.string "Watch out!$"
 
 Route24_Text_ReliIntro::
-	.string "I'm No. 4!\n"
-	.string "Getting tired?$"
+	.string "My big brother rides with TEAM\n"
+	.string "SKULL! I'm gonna be just like him!$"
 
 Route24_Text_ReliDefeat::
-	.string "I lost, too!$"
+	.string "Aww… There goes my lunch money.$"
 
 Route24_Text_ReliPostBattle::
-	.string "I did my best, so I've no regrets!$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "SKULL.\p"
+	.string "Or maybe your crew!$"
 
 Route24_Text_TimmyIntro::
-	.string "Here's No. 3!\n"
-	.string "I won't be easy!$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 Route24_Text_TimmyDefeat::
-	.string "Ow!\n"
-	.string "Stomped flat!$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route24_Text_TimmyPostBattle::
-	.string "I did my best. I have no regrets!$"
+	.string "Don't tell my mom I battled you.$"
 
 Route24_Text_AliIntro::
-	.string "I'm second!\n"
-	.string "Now it's serious!$"
+	.string "GUZMA says kids can't fight. I'll\n"
+	.string "prove him wrong!$"
 
 Route24_Text_AliDefeat::
-	.string "How could I lose?$"
+	.string "Okay, okay! You win!$"
 
 Route24_Text_AliPostBattle::
-	.string "I did my best. I have no regrets!$"
+	.string "Everybody's scared of GUZMA.\p"
+	.string "Are you scared?$"
 
 Route24_Text_CaleIntro::
-	.string "People call this the NUGGET\n"
-	.string "BRIDGE!\p"
-	.string "Beat us five TRAINERS and win\n"
-	.string "a fabulous prize!\p"
-	.string "Think you got what it takes?$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route24_Text_CaleDefeat::
-	.string "Whoo!\n"
-	.string "Good stuff!$"
+	.string "No fair! You're way too strong!$"
 
 Route24_Text_CalePostBattle::
-	.string "I did my best. I have no regrets!$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"

@@ -74,112 +74,107 @@ Route16_EventScript_RouteSign::
 	end
 
 Route16_Text_LaoIntro::
-	.string "What do you want?$"
+	.string "Wrong turf, rookie. Nobody passes\n"
+	.string "without a fight!$"
 
 Route16_Text_LaoDefeat::
-	.string "Don't you dare laugh!$"
+	.string "Tch… You hit hard.$"
 
 Route16_Text_LaoPostBattle::
-	.string "We like just hanging here.\n"
-	.string "What's it to you?$"
+	.string "Respect. Not many beat me on my\n"
+	.string "own road.$"
 
 Route16_Text_KojiIntro::
-	.string "Nice BIKE!\n"
-	.string "Hand it over!$"
+	.string "ARCHIE said nobody passes. That\n"
+	.string "means you!$"
 
 Route16_Text_KojiDefeat::
-	.string "Knockout!$"
+	.string "Who are you, anyway?!$"
 
 Route16_Text_KojiPostBattle::
-	.string "Forget it, who needs your BIKE!$"
+	.string "Tell your crew I fought fair.\n"
+	.string "Mostly.$"
 
 Route16_Text_LukeIntro::
-	.string "Come out and play, little mouse!$"
+	.string "This road belongs to TEAM AQUA.\p"
+	.string "Pay up or fight!$"
 
 Route16_Text_LukeDefeat::
-	.string "You little rat!$"
+	.string "Tch… You hit hard.$"
 
 Route16_Text_LukePostBattle::
-	.string "I hate losing!\n"
-	.string "Get out of my face!$"
+	.string "Word travels fast.\p"
+	.string "ARCHIE will hear about you.$"
 
 Route16_Text_HideoIntro::
-	.string "Hey, you just bumped me!$"
+	.string "You walk like you own the place.\p"
+	.string "Big mistake!$"
 
 Route16_Text_HideoDefeat::
-	.string "Kaboom!$"
+	.string "Fine! Keep your cash!$"
 
 Route16_Text_HideoPostBattle::
-	.string "We'll always be hanging around here\n"
-	.string "even if you don't like it.\p"
-	.string "You can detour to VERMILION from\n"
-	.string "FUCHSIA going along the coast.$"
+	.string "Go on. This road's yours…\p"
+	.string "for now.$"
 
 Route16_Text_CamronIntro::
-	.string "I'm feeling hungry and mean!\n"
-	.string "I need a punching bag!$"
+	.string "ARCHIE wants your money.\p"
+	.string "And I want a fight!$"
 
 Route16_Text_CamronDefeat::
-	.string "Bad, bad, bad!$"
+	.string "Fine! Keep your cash!$"
 
 Route16_Text_CamronPostBattle::
-	.string "If I'm going to have POKéMON, they\n"
-	.string "may as well be ferocious.\p"
-	.string "I'd use them to leave my enemies\n"
-	.string "in tatters.$"
+	.string "Next time I'll bring the whole of\n"
+	.string "TEAM AQUA!$"
 
 Route16_Text_RubenIntro::
-	.string "Hey, there!\n"
-	.string "Let's have ourselves a good time!$"
+	.string "Hey! You're in the wrong part of\n"
+	.string "town!$"
 
 Route16_Text_RubenDefeat::
-	.string "Don't make me mad!$"
+	.string "ARCHIE is gonna kill me…$"
 
 Route16_Text_RubenPostBattle::
-	.string "I get my kicks by harassing people\n"
-	.string "with my stinking POKéMON.\p"
-	.string "They're great for startling people.\n"
-	.string "And, they bite, too.$"
+	.string "You're making a name for yourself,\n"
+	.string "boss.$"
 
 Route16_Text_MonSprawledOutInSlumber::
 	.string "A POKéMON is sprawled out in\n"
 	.string "a deep and comfortable slumber.$"
 
 Route16_Text_CyclingRoadSign::
-	.string "Enjoy the slope!\n"
-	.string "CYCLING ROAD$"
+	.string "Enjoy the slope!\p"
+	.string "CYCLING ROAD - TEAM AQUA TOLL$"
 
 Route16_Text_RouteSign::
-	.string "ROUTE 16\n"
+	.string "ROUTE 16\p"
 	.string "CELADON CITY - FUCHSIA CITY$"
 
 Route16_Text_JedIntro::
-	.string "JED: Our love knows no bounds.\n"
-	.string "We're in love and we show it!$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 Route16_Text_JedDefeat::
-	.string "JED: Oh, no!\n"
-	.string "My love has seen me as a loser!$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route16_Text_JedPostBattle::
-	.string "JED: Listen, LEA.\n"
-	.string "You need to focus less on me.$"
+	.string "Don't tell my mom I battled you.$"
 
 Route16_Text_JedNotEnoughMons::
 	.string "JED: You have just one POKéMON?\n"
 	.string "Is there no love in your heart?$"
 
 Route16_Text_LeaIntro::
-	.string "LEA: Sometimes, the intensity of\n"
-	.string "our love scares me.$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route16_Text_LeaDefeat::
-	.string "LEA: Ohh! But JED looks cool\n"
-	.string "even in a loss!$"
+	.string "No fair! You're way too strong!$"
 
 Route16_Text_LeaPostBattle::
-	.string "LEA: Ehehe, I'm sorry.\n"
-	.string "JED is so cool.$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 Route16_Text_LeaNotEnoughMons::
 	.string "LEA: Oh, you don't have two\n"

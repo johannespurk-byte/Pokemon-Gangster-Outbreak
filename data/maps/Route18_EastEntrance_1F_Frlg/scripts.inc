@@ -115,7 +115,8 @@ Route18_EastEntrance_1F_Text_NeedBicycleForCyclingRoad::
 
 Route18_EastEntrance_1F_Text_CyclingRoadAllUphillFromHere::
 	.string "CYCLING ROAD is all uphill from\n"
-	.string "here.$"
+	.string "here.\p"
+	.string "TEAM MAGMA watches the top.$"
 
 Route18_EastEntrance_1F_Text_ExcuseMe::
 	.string "Excuse me!$"

@@ -6,6 +6,7 @@ Route12_NorthEntrance_1F_EventScript_Guard::
 	end
 
 Route12_NorthEntrance_1F_Text_LookoutSpotUpstairs::
-	.string "There's a lookout spot upstairs.\n"
-	.string "The view is magnificent.$"
+	.string "There's a lookout spot upstairs.\p"
+	.string "The ROCKETS use it to watch the\n"
+	.string "road.$"
 

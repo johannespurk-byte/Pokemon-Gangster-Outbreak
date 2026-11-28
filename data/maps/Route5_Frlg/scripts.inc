@@ -17,13 +17,15 @@ Route5_EventScript_GangTrainer1::
 	end
 
 Route5_Text_GangTrainer1Intro:
-	.string "Wrong road, kid.\nThis one's ours.$"
+	.string "My POKéMON is the scariest on the\n"
+	.string "block!$"
 
 Route5_Text_GangTrainer1Defeat:
-	.string "Heh… Not bad, punk.$"
+	.string "No fair! You're way too strong!$"
 
 Route5_Text_GangTrainer1Post:
-	.string "Ever since the outbreak,\nonly the strong survive.$"
+	.string "Can I join your crew when I'm\n"
+	.string "older?$"
 
 Route5_EventScript_GangTrainer2::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE5_2, Route5_Text_GangTrainer2Intro, Route5_Text_GangTrainer2Defeat
@@ -31,13 +33,15 @@ Route5_EventScript_GangTrainer2::
 	end
 
 Route5_Text_GangTrainer2Intro:
-	.string "This is our turf now.\nPay the toll or get lost!$"
+	.string "I only battle people with style.\n"
+	.string "You'll do.$"
 
 Route5_Text_GangTrainer2Defeat:
-	.string "No way… I got wrecked!$"
+	.string "I broke a nail! Unforgivable!$"
 
 Route5_Text_GangTrainer2Post:
-	.string "Take what you want and\nget out of my sight.$"
+	.string "One day this mess will end. I'll be\n"
+	.string "fabulous then, too.$"
 
 Route5_EventScript_GangTrainer3::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE5_3, Route5_Text_GangTrainer3Intro, Route5_Text_GangTrainer3Defeat
@@ -45,13 +49,15 @@ Route5_EventScript_GangTrainer3::
 	end
 
 Route5_Text_GangTrainer3Intro:
-	.string "Another gang punk? I'll show\nyou who runs this road!$"
+	.string "This road belongs to TEAM ROCKET.\p"
+	.string "Pay up or fight!$"
 
 Route5_Text_GangTrainer3Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "Tch… You hit hard.$"
 
 Route5_Text_GangTrainer3Post:
-	.string "Next time I'll bring the\nwhole gang!$"
+	.string "Word travels fast.\p"
+	.string "ARCHER will hear about you.$"
 
 Route5_EventScript_GangTrainer4::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE5_4, Route5_Text_GangTrainer4Intro, Route5_Text_GangTrainer4Defeat
@@ -59,13 +65,16 @@ Route5_EventScript_GangTrainer4::
 	end
 
 Route5_Text_GangTrainer4Intro:
-	.string "This is our turf now.\nPay the toll or get lost!$"
+	.string "My birds see every gang that\n"
+	.string "moves.\p"
+	.string "And they saw you!$"
 
 Route5_Text_GangTrainer4Defeat:
-	.string "Ugh! Who taught you to\nfight like that?$"
+	.string "My birds flew off…$"
 
 Route5_Text_GangTrainer4Post:
-	.string "Take what you want and\nget out of my sight.$"
+	.string "The wild POKéMON are the only\n"
+	.string "honest ones left.$"
 
 Route5_EventScript_GangTrainer5::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE5_5, Route5_Text_GangTrainer5Intro, Route5_Text_GangTrainer5Defeat
@@ -73,11 +82,15 @@ Route5_EventScript_GangTrainer5::
 	end
 
 Route5_Text_GangTrainer5Intro:
-	.string "Rocket's gone, so the streets\nbelong to whoever's toughest!$"
+	.string "My big brother rides with TEAM\n"
+	.string "ROCKET! I'm gonna be just like\p"
+	.string "him!$"
 
 Route5_Text_GangTrainer5Defeat:
-	.string "No way… I got wrecked!$"
+	.string "Aww… There goes my lunch money.$"
 
 Route5_Text_GangTrainer5Post:
-	.string "GIOVANNI's crew, huh?\nI should've known.$"
+	.string "When I grow up, I'm joining TEAM\n"
+	.string "ROCKET.\p"
+	.string "Or maybe your crew!$"
 

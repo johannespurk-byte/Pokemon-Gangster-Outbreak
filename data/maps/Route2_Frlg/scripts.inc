@@ -24,13 +24,15 @@ Route2_EventScript_GangTrainer1::
 	end
 
 Route2_Text_GangTrainer1Intro:
-	.string "You look like easy money.\nHand it over!$"
+	.string "GIOVANNI said nobody passes.\n"
+	.string "That means you!$"
 
 Route2_Text_GangTrainer1Defeat:
-	.string "Tch… Fine, you win.$"
+	.string "Fine! Keep your cash!$"
 
 Route2_Text_GangTrainer1Post:
-	.string "Keep walking. This road's\nyours… for now.$"
+	.string "Tell your crew I fought fair.\n"
+	.string "Mostly.$"
 
 Route2_EventScript_GangTrainer2::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE2_2, Route2_Text_GangTrainer2Intro, Route2_Text_GangTrainer2Defeat
@@ -38,13 +40,15 @@ Route2_EventScript_GangTrainer2::
 	end
 
 Route2_Text_GangTrainer2Intro:
-	.string "Another gang punk? I'll show\nyou who runs this road!$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 Route2_Text_GangTrainer2Defeat:
-	.string "Heh… Not bad, punk.$"
+	.string "Okay, okay! You win!$"
 
 Route2_Text_GangTrainer2Post:
-	.string "Word travels fast. Everyone\nwill know your name soon.$"
+	.string "The road to VIRIDIAN isn't safe.\p"
+	.string "Watch out!$"
 
 Route2_EventScript_GangTrainer3::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE2_3, Route2_Text_GangTrainer3Intro, Route2_Text_GangTrainer3Defeat
@@ -52,13 +56,14 @@ Route2_EventScript_GangTrainer3::
 	end
 
 Route2_Text_GangTrainer3Intro:
-	.string "Heh, fresh meat for my\nPOKéMON!$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 Route2_Text_GangTrainer3Defeat:
-	.string "Tch… Fine, you win.$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route2_Text_GangTrainer3Post:
-	.string "Next time I'll bring the\nwhole gang!$"
+	.string "Don't tell my mom I battled you.$"
 
 Route2_EventScript_GangTrainer4::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE2_4, Route2_Text_GangTrainer4Intro, Route2_Text_GangTrainer4Defeat
@@ -66,13 +71,15 @@ Route2_EventScript_GangTrainer4::
 	end
 
 Route2_Text_GangTrainer4Intro:
-	.string "Another gang punk? I'll show\nyou who runs this road!$"
+	.string "This road belongs to TEAM ROCKET.\p"
+	.string "Pay up or fight!$"
 
 Route2_Text_GangTrainer4Defeat:
-	.string "My gang's gonna hear\nabout this…$"
+	.string "GIOVANNI is gonna kill me…$"
 
 Route2_Text_GangTrainer4Post:
-	.string "Keep walking. This road's\nyours… for now.$"
+	.string "Word travels fast.\p"
+	.string "GIOVANNI will hear about you.$"
 
 Route2_EventScript_GangTrainer5::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE2_5, Route2_Text_GangTrainer5Intro, Route2_Text_GangTrainer5Defeat
@@ -80,11 +87,13 @@ Route2_EventScript_GangTrainer5::
 	end
 
 Route2_Text_GangTrainer5Intro:
-	.string "Heh, fresh meat for my\nPOKéMON!$"
+	.string "GIOVANNI wants your money.\p"
+	.string "And I want a fight!$"
 
 Route2_Text_GangTrainer5Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "Who are you, anyway?!$"
 
 Route2_Text_GangTrainer5Post:
-	.string "Next time I'll bring the\nwhole gang!$"
+	.string "Next time I'll bring the whole of\n"
+	.string "TEAM ROCKET!$"
 

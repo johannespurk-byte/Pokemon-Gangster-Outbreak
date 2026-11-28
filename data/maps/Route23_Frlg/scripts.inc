@@ -128,7 +128,7 @@ Route23_EventScript_VictoryRoadGateSign::
 	end
 
 Route23_Text_VictoryRoadGateSign::
-	.string "VICTORY ROAD GATE -\n"
+	.string "VICTORY ROAD GATE -\p"
 	.string "POKéMON LEAGUE$"
 
 
@@ -139,13 +139,15 @@ Route23_EventScript_GangTrainer1::
 	end
 
 Route23_Text_GangTrainer1Intro:
-	.string "Heh, fresh meat for my\nPOKéMON!$"
+	.string "GIOVANNI says kids can't fight.\n"
+	.string "I'll prove him wrong!$"
 
 Route23_Text_GangTrainer1Defeat:
-	.string "Ugh! Who taught you to\nfight like that?$"
+	.string "No fair! You're way too strong!$"
 
 Route23_Text_GangTrainer1Post:
-	.string "GIOVANNI's crew, huh?\nI should've known.$"
+	.string "Everybody's scared of GIOVANNI.\p"
+	.string "Are you scared?$"
 
 Route23_EventScript_GangTrainer2::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE23_2, Route23_Text_GangTrainer2Intro, Route23_Text_GangTrainer2Defeat
@@ -153,13 +155,14 @@ Route23_EventScript_GangTrainer2::
 	end
 
 Route23_Text_GangTrainer2Intro:
-	.string "This is our turf now.\nPay the toll or get lost!$"
+	.string "Style is a weapon too, darling!$"
 
 Route23_Text_GangTrainer2Defeat:
-	.string "Tch… Fine, you win.$"
+	.string "How… vulgar of you to win.$"
 
 Route23_Text_GangTrainer2Post:
-	.string "Ever since the outbreak,\nonly the strong survive.$"
+	.string "Dirty roads, dirty fights.\p"
+	.string "Such is life.$"
 
 Route23_EventScript_GangTrainer3::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE23_3, Route23_Text_GangTrainer3Intro, Route23_Text_GangTrainer3Defeat
@@ -167,13 +170,16 @@ Route23_EventScript_GangTrainer3::
 	end
 
 Route23_Text_GangTrainer3Intro:
-	.string "Another gang punk? I'll show\nyou who runs this road!$"
+	.string "These hills are older than any\n"
+	.string "gang.\p"
+	.string "So am I!$"
 
 Route23_Text_GangTrainer3Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "Whoa! Rolled right over me!$"
 
 Route23_Text_GangTrainer3Post:
-	.string "Word travels fast. Everyone\nwill know your name soon.$"
+	.string "Head to VIRIDIAN if you want\n"
+	.string "trouble.$"
 
 Route23_EventScript_GangTrainer4::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE23_4, Route23_Text_GangTrainer4Intro, Route23_Text_GangTrainer4Defeat
@@ -181,13 +187,15 @@ Route23_EventScript_GangTrainer4::
 	end
 
 Route23_Text_GangTrainer4Intro:
-	.string "Nobody walks through here\nwithout a fight!$"
+	.string "Darling, this road is far too dirty\n"
+	.string "for you.$"
 
 Route23_Text_GangTrainer4Defeat:
-	.string "Tch… Fine, you win.$"
+	.string "Oh my. You're rather strong.$"
 
 Route23_Text_GangTrainer4Post:
-	.string "GIOVANNI's crew, huh?\nI should've known.$"
+	.string "The parties in VIRIDIAN are wild\n"
+	.string "these days.$"
 
 Route23_EventScript_GangTrainer5::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE23_5, Route23_Text_GangTrainer5Intro, Route23_Text_GangTrainer5Defeat
@@ -195,11 +203,13 @@ Route23_EventScript_GangTrainer5::
 	end
 
 Route23_Text_GangTrainer5Intro:
-	.string "Wrong road, kid.\nThis one's ours.$"
+	.string "Out here, nobody pays the tolls of\n"
+	.string "GIOVANNI!$"
 
 Route23_Text_GangTrainer5Defeat:
-	.string "No way… I got wrecked!$"
+	.string "My birds flew off…$"
 
 Route23_Text_GangTrainer5Post:
-	.string "Word travels fast. Everyone\nwill know your name soon.$"
+	.string "Rest a bit. The road ahead is\n"
+	.string "rough.$"
 

@@ -32,122 +32,118 @@ Route20_EventScript_SeafoamIslandsSign::
 	end
 
 Route20_Text_BarryIntro::
-	.string "The water is shallow here.\n"
-	.string "There are many people swimming.$"
+	.string "I patrol these waves for TEAM\n"
+	.string "GALACTIC!$"
 
 Route20_Text_BarryDefeat::
-	.string "Splash!$"
+	.string "Gah! Swallowed water!$"
 
 Route20_Text_BarryPostBattle::
-	.string "I wish I could ride my POKéMON.\n"
-	.string "I bet you're not tired.$"
+	.string "Ships from CINNABAR pass here\n"
+	.string "every night.$"
 
 Route20_Text_ShirleyIntro::
-	.string "SEAFOAM is a quiet getaway.\n"
-	.string "I'm vacationing here.$"
+	.string "I patrol these waves for TEAM\n"
+	.string "GALACTIC!$"
 
 Route20_Text_ShirleyDefeat::
-	.string "Quit it!$"
+	.string "Sunk! Totally sunk!$"
 
 Route20_Text_ShirleyPostBattle::
-	.string "There's a huge cavern underneath\n"
-	.string "this island.$"
+	.string "Ships from CINNABAR pass here\n"
+	.string "every night.$"
 
 Route20_Text_TiffanyIntro::
-	.string "I love floating with the fishes\n"
-	.string "here among the waves.$"
+	.string "You'll sink like the last punk who\n"
+	.string "came here!$"
 
 Route20_Text_TiffanyDefeat::
-	.string "Yowch!$"
+	.string "The tide turned on me…$"
 
 Route20_Text_TiffanyPostBattle::
-	.string "Want to float with me?$"
+	.string "Swim fast if you see a boat from\n"
+	.string "TEAM GALACTIC.$"
 
 Route20_Text_IreneIntro::
-	.string "Are you on vacation, too?$"
+	.string "I found a loot bag yesterday!\p"
+	.string "Wanna fight for it?$"
 
 Route20_Text_IreneDefeat::
-	.string "No mercy at all!$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route20_Text_IrenePostBattle::
-	.string "SEAFOAM used to be a single island\n"
-	.string "in the distant past.$"
+	.string "Don't tell my mom I battled you.$"
 
 Route20_Text_DeanIntro::
-	.string "Check out my buff physique!$"
+	.string "TEAM GALACTIC took the docks, so\n"
+	.string "I swim my own routes!$"
 
 Route20_Text_DeanDefeat::
-	.string "Wimpy!$"
+	.string "Glub… I'm all washed up.$"
 
 Route20_Text_DeanPostBattle::
-	.string "I should've been buffing up my\n"
-	.string "POKéMON, not me!$"
+	.string "Even TEAM GALACTIC can't control\n"
+	.string "the sea.$"
 
 Route20_Text_DarrinIntro::
-	.string "Why are you riding a POKéMON?\n"
-	.string "Can't you swim?$"
+	.string "The sea doesn't care about gangs.\p"
+	.string "But I do!$"
 
 Route20_Text_DarrinDefeat::
-	.string "Ouch!\n"
-	.string "Torpedoed!$"
+	.string "Sunk! Totally sunk!$"
 
 Route20_Text_DarrinPostBattle::
-	.string "Riding a POKéMON sure looks fun!$"
+	.string "Smugglers use these waters at\n"
+	.string "night. Stay sharp.$"
 
 Route20_Text_RogerIntro::
-	.string "I rode my bird POKéMON here.$"
+	.string "Gangs come and go. The mountains\n"
+	.string "stay!$"
 
 Route20_Text_RogerDefeat::
-	.string "Oh, no!\n"
-	.string "Now what am I to do?$"
+	.string "Like a rockslide!$"
 
 Route20_Text_RogerPostBattle::
-	.string "My birds are exhausted.\n"
-	.string "They can't FLY me back!$"
+	.string "Gangs never climb this far. Too\n"
+	.string "lazy.$"
 
 Route20_Text_NoraIntro::
-	.string "My boyfriend gave me big pearls.$"
+	.string "Out here, only the strong stay\n"
+	.string "afloat!$"
 
 Route20_Text_NoraDefeat::
-	.string "Oh, no!\n"
-	.string "My pearls were in them!$"
+	.string "Gah! Swallowed water!$"
 
 Route20_Text_NoraPostBattle::
-	.string "Will my pearls grow bigger inside\n"
-	.string "CLOYSTER?$"
+	.string "The water's the only free place\n"
+	.string "left.$"
 
 Route20_Text_MissyIntro::
-	.string "I swam here from CINNABAR ISLAND.\n"
-	.string "It wasn't easy, I tell you.$"
+	.string "I'm the toughest kid on this road.\n"
+	.string "Ask anyone!$"
 
 Route20_Text_MissyDefeat::
-	.string "I'm so disappointed!$"
+	.string "Okay, okay! You win!$"
 
 Route20_Text_MissyPostBattle::
-	.string "POKéMON have taken over an\n"
-	.string "abandoned mansion on CINNABAR.\p"
-	.string "They call it the POKéMON MANSION\n"
-	.string "now.$"
+	.string "The road to CINNABAR isn't safe.\p"
+	.string "Watch out!$"
 
 Route20_Text_MelissaIntro::
-	.string "CINNABAR, in the west, has a LAB\n"
-	.string "for POKéMON.\p"
-	.string "My daddy works there.$"
+	.string "Splash! Nobody swims past me!$"
 
 Route20_Text_MelissaDefeat::
-	.string "Wait!\n"
-	.string "You're supposed to wait!$"
+	.string "Glub… I'm all washed up.$"
 
 Route20_Text_MelissaPostBattle::
-	.string "CINNABAR is a volcanic island.\p"
-	.string "I heard it rose out of the sea\n"
-	.string "when a volcano erupted.$"
+	.string "The currents carry loot bags. Keep\n"
+	.string "your eyes open.$"
 
 Route20_Text_SeafoamIslands::
 	.string "SEAFOAM ISLANDS$"
 
 Route20_Text_MistyTrainsHere::
-	.string "Strong TRAINERS and WATER POKéMON\n"
-	.string "are common sights in these parts.\p"
-	.string "They say that MISTY of the\n"
-	.string "CERULEAN GYM trains here.$"
+	.string "Strong TRAINERS and WATER\n"
+	.string "POKéMON are common here.\p"
+	.string "They say TEAM GALACTIC ships\n"
+	.string "pass by at night.$"

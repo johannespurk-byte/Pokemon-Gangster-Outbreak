@@ -35,28 +35,26 @@ Route1_EventScript_RouteSign::
 	end
 
 Route1_Text_WorkAtPokeMartTakeSample::
-	.string "Hi!\n"
-	.string "I work at a POKéMON MART.\p"
-	.string "It's part of a convenient chain\n"
-	.string "selling all sorts of items.\p"
-	.string "Please, visit us in VIRIDIAN CITY.\p"
-	.string "I know, I'll give you a sample.\n"
-	.string "Here you go!$"
+	.string "Hi! The MARTS are all vending\n"
+	.string "machines now.\p"
+	.string "I hand out free samples so people\n"
+	.string "keep coming. Here!$"
 
 Route1_Text_ComeSeeUsIfYouNeedPokeBalls::
-	.string "Please come see us if you need\n"
-	.string "POKé BALLS for catching POKéMON.$"
+	.string "The machine in VIRIDIAN sells\n"
+	.string "POKé BALLS. If TEAM ROCKET left\p"
+	.string "any.$"
 
 Route1_Text_PutPotionAway::
 	.string "{PLAYER} put the POTION away in\n"
 	.string "the BAG's ITEMS POCKET.$"
 
 Route1_Text_CanJumpFromLedges::
-	.string "See those ledges along the road?\p"
-	.string "It's a bit scary, but you can jump\n"
-	.string "from them.\p"
-	.string "You can get back to PALLET TOWN\n"
-	.string "quicker that way.$"
+	.string "See those ledges? Jump down them\n"
+	.string "and you're back in PALLET in no\p"
+	.string "time.\p"
+	.string "Handy when SILVER's crew is after\n"
+	.string "you.$"
 
 Route1_Text_RouteSign::
 	.string "ROUTE 1\n"
@@ -70,13 +68,15 @@ Route1_EventScript_GangTrainer1::
 	end
 
 Route1_Text_GangTrainer1Intro:
-	.string "Another gang punk? I'll show\nyou who runs this road!$"
+	.string "GIOVANNI said nobody passes.\n"
+	.string "That means you!$"
 
 Route1_Text_GangTrainer1Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "Who are you, anyway?!$"
 
 Route1_Text_GangTrainer1Post:
-	.string "Word travels fast. Everyone\nwill know your name soon.$"
+	.string "Tell your crew I fought fair.\n"
+	.string "Mostly.$"
 
 Route1_EventScript_GangTrainer2::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE1_2, Route1_Text_GangTrainer2Intro, Route1_Text_GangTrainer2Defeat
@@ -84,13 +84,15 @@ Route1_EventScript_GangTrainer2::
 	end
 
 Route1_Text_GangTrainer2Intro:
-	.string "Wrong road, kid.\nThis one's ours.$"
+	.string "GIOVANNI says kids can't fight.\n"
+	.string "I'll prove him wrong!$"
 
 Route1_Text_GangTrainer2Defeat:
-	.string "Tch… Fine, you win.$"
+	.string "Okay, okay! You win!$"
 
 Route1_Text_GangTrainer2Post:
-	.string "Next time I'll bring the\nwhole gang!$"
+	.string "Everybody's scared of GIOVANNI.\p"
+	.string "Are you scared?$"
 
 Route1_EventScript_GangTrainer3::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE1_3, Route1_Text_GangTrainer3Intro, Route1_Text_GangTrainer3Defeat
@@ -98,13 +100,16 @@ Route1_EventScript_GangTrainer3::
 	end
 
 Route1_Text_GangTrainer3Intro:
-	.string "You look like easy money.\nHand it over!$"
+	.string "Even in a gang war, one must look\n"
+	.string "fabulous.$"
 
 Route1_Text_GangTrainer3Defeat:
-	.string "Tch… Fine, you win.$"
+	.string "Oh my. You're rather strong.$"
 
 Route1_Text_GangTrainer3Post:
-	.string "Next time I'll bring the\nwhole gang!$"
+	.string "Money buys safety from TEAM\n"
+	.string "ROCKET.\p"
+	.string "Usually.$"
 
 Route1_EventScript_GangTrainer4::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE1_4, Route1_Text_GangTrainer4Intro, Route1_Text_GangTrainer4Defeat
@@ -112,13 +117,16 @@ Route1_EventScript_GangTrainer4::
 	end
 
 Route1_Text_GangTrainer4Intro:
-	.string "Nobody walks through here\nwithout a fight!$"
+	.string "I live out here, far from TEAM\n"
+	.string "ROCKET.\p"
+	.string "Leave me be! …Or battle!$"
 
 Route1_Text_GangTrainer4Defeat:
-	.string "Heh… Not bad, punk.$"
+	.string "Like a rockslide!$"
 
 Route1_Text_GangTrainer4Post:
-	.string "Take what you want and\nget out of my sight.$"
+	.string "From up here I watch TEAM ROCKET\n"
+	.string "come and go.$"
 
 Route1_EventScript_GangTrainer5::
 	trainerbattle_single TRAINER_GANGTRAINER_ROUTE1_5, Route1_Text_GangTrainer5Intro, Route1_Text_GangTrainer5Defeat
@@ -126,11 +134,13 @@ Route1_EventScript_GangTrainer5::
 	end
 
 Route1_Text_GangTrainer5Intro:
-	.string "Another gang punk? I'll show\nyou who runs this road!$"
+	.string "Mom says stay inside.\p"
+	.string "But battles are way more fun!$"
 
 Route1_Text_GangTrainer5Defeat:
-	.string "All right, all right!\nYou made your point!$"
+	.string "Waaah! I'm telling my brother!$"
 
 Route1_Text_GangTrainer5Post:
-	.string "GIOVANNI's crew, huh?\nI should've known.$"
+	.string "I hide when the gangs come by.\p"
+	.string "Not from you, though!$"
 
