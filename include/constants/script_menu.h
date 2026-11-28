@@ -170,6 +170,7 @@ enum
     MULTI_EGGS_VICTORIES_QUIT,
     MULTI_HOF_EGGS_VICTORIES_QUIT,
     MULTI_GAME_CORNER_POKEMON_PRIZES_2, // Gangster Outbreak: second page with the Z-A legends
+    MULTI_GAME_CORNER_POKEMON_PRIZES_3, // Gangster Outbreak: third page with the Primal legends
 };
 
 #define MULTI_NONE 255
