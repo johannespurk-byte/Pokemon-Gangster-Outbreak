@@ -24,8 +24,8 @@ SSAnne_Deck_EventScript_Trevor::
 	end
 
 SSAnne_Deck_Text_ShipDepartingSoon::
-	.string "The party's over.\n"
-	.string "The ship will be departing soon.$"
+	.string "The party's over. ARCHER's men\n"
+	.string "are packing up the loot.$"
 
 SSAnne_Deck_Text_ScrubbingDecksHardWork::
 	.string "Whew! Scrubbing decks is hard\n"

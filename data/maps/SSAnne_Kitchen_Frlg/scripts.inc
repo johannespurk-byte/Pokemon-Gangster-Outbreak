@@ -64,19 +64,20 @@ SSAnne_Kitchen_Text_SoBusyImDizzy::
 
 SSAnne_Kitchen_Text_PeelSpudsEveryDay::
 	.string "Hum-de-hum-de-ho…\p"
-	.string "I peel spuds every day!\n"
-	.string "Hum-hum…$"
+	.string "I peel spuds every day for the\n"
+	.string "ROCKETS! Hum-hum…$"
 
 SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton::
-	.string "Did you hear about SNORLAX?\n"
-	.string "It's a glutton.\p"
-	.string "No other POKéMON eats and sleeps\n"
-	.string "the way SNORLAX can and does!$"
+	.string "Did you hear about SNORLAX? It's\n"
+	.string "a glutton.\p"
+	.string "It eats more than ARCHER's whole\n"
+	.string "crew. And that's saying\p"
+	.string "something!$"
 
 SSAnne_Kitchen_Text_OnlyGetToPeelOnions::
 	.string "Snivel… Sniff…\p"
-	.string "I only get to peel onions…\n"
-	.string "Snivel…$"
+	.string "The ROCKETS only let me peel\n"
+	.string "onions… Snivel…$"
 
 SSAnne_Kitchen_Text_IAmLeChefMainCourseIs::
 	.string "Er-hem!\n"

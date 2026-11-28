@@ -587,6 +587,10 @@ MANUAL.update({
 })
 
 
+from route_texts_rest import REST   # noqa: E402  remaining town / house / story texts
+MANUAL.update(REST)
+
+
 # texts with hints the player needs (keys, passwords, teleport tiles, the SILPH SCOPE …) keep their wording
 ORIG_REF = 'f93f63af'   # last commit before this tool touched any texts
 HINTS = re.compile(r'KEY|SCOPE|ELEVATOR|LIFT|PASSWORD|TELEPORT|HINT|TILE|SWITCH|BASEMENT|SECRET|FLUTE|GOLD TEETH|'

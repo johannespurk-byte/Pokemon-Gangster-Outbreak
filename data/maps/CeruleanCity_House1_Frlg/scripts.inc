@@ -80,8 +80,8 @@ CeruleanCity_House1_Text_BadgesHaveAmazingSecrets::
 
 CeruleanCity_House1_Text_DescribeWhichBadge::
 	.string "Now then…\p"
-	.string "Which of the eight BADGES should\n"
-	.string "I describe?$"
+	.string "Which of the eight gang BADGES\n"
+	.string "should I describe?$"
 
 CeruleanCity_House1_Text_ComeVisitAnytime::
 	.string "Come visit me anytime you wish.$"
@@ -101,10 +101,11 @@ CeruleanCity_House1_Text_ObeyLv30Cut::
 	.string "CUT outside of battle.$"
 
 CeruleanCity_House1_Text_SpeedStatFly::
-	.string "The SPEED stat of all your\n"
-	.string "POKéMON increases a little bit.\p"
-	.string "It also lets you use the move\n"
-	.string "FLY outside of battle.$"
+	.string "It raises the SPEED of your\n"
+	.string "POKéMON a little.\p"
+	.string "With the HM in your BAG, your\n"
+	.string "POKéMON can FLY outside of\p"
+	.string "battle.$"
 
 CeruleanCity_House1_Text_ObeyLv50Strength::
 	.string "This BADGE raises the level cap\n"
@@ -129,10 +130,11 @@ CeruleanCity_House1_Text_ObeyLv70RockSmash::
 	.string "ROCK SMASH outside of battle.$"
 
 CeruleanCity_House1_Text_SpStatsWaterfall::
-	.string "The SP. ATK and SP. DEF stats of\n"
-	.string "all your POKéMON rise a little bit.\p"
-	.string "It also lets you use the move\n"
-	.string "WATERFALL outside of battle.$"
+	.string "It raises SP. ATK and SP. DEF of\n"
+	.string "your POKéMON a little.\p"
+	.string "With the HM in your BAG, your\n"
+	.string "POKéMON can use WATERFALL\p"
+	.string "outside of battle.$"
 
 CeruleanCity_House1_Text_AllMonsWillObeyYou::
 	.string "With all eight BADGES, KANTO\n"

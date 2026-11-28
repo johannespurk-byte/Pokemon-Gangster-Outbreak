@@ -667,7 +667,8 @@ CinnabarIsland_Gym_Text_BlaineDefeat::
 
 CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
 	.string "FIRE BLAST is the ultimate fire\n"
-	.string "technique.\p"
+	.string "move.\p"
+	.string "CYRUS calls it a cleansing flame.\n"
 	.string "Don't waste it on WATER POKéMON.$"
 
 CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
@@ -818,7 +819,8 @@ CinnabarIsland_Gym_Text_QuizQuestion6::
 	.string "TM28 contains TOMBSTONY?$"
 
 CinnabarIsland_Gym_Text_CorrectGoOnThrough::
-	.string "You're absolutely correct!\p"
+	.string "Correct! TEAM GALACTIC respects\n"
+	.string "knowledge.\p"
 	.string "Go on through!$"
 
 CinnabarIsland_Gym_Text_SorryBadCall::

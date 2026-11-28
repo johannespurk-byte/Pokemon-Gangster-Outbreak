@@ -53,8 +53,8 @@ PokemonMansion_B1F_Text_IvanPostBattle::
 	.string "warfare. You're in it now.$"
 
 PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
-	.string "Diary: Sept. 1\n"
+	.string "Diary: Sept. 1\p"
 	.string "MEWTWO is far too powerful.\p"
-	.string "We have failed to curb its vicious\n"
-	.string "tendencies…$"
+	.string "We failed to control it… The suit\n"
+	.string "said GIOVANNI would pay anything.$"
 

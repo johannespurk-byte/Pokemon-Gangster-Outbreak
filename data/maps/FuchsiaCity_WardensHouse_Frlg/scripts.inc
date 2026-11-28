@@ -82,22 +82,22 @@ FuchsiaCity_WardensHouse_Text_WardenPoppedInHisTeeth::
 	.string "The WARDEN popped in his teeth!$"
 
 FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething::
-	.string "WARDEN: Thanks, son!\n"
-	.string "You're a real lifesaver!\p"
-	.string "No one could understand a word\n"
-	.string "that I said, not a one!\p"
+	.string "WARDEN: Thanks, son! You're a real\n"
+	.string "lifesaver!\p"
+	.string "TEAM PLASMA took my teeth to\n"
+	.string "“free” my words. Ha!\p"
 	.string "I was too ashamed to show my face\n"
-	.string "around the OFFICE, even.\p"
+	.string "at the OFFICE.\p"
 	.string "Let me give you something for your\n"
 	.string "trouble.$"
 
 FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething::
-	.string "WARDEN: Thank you, lassie!\n"
-	.string "You're a real lifesaver!\p"
-	.string "No one could understand a word\n"
-	.string "that I said, not a one!\p"
+	.string "WARDEN: Thank you, lassie! You're\n"
+	.string "a real lifesaver!\p"
+	.string "TEAM PLASMA took my teeth to\n"
+	.string "“free” my words. Ha!\p"
 	.string "I was too ashamed to show my face\n"
-	.string "around the OFFICE, even.\p"
+	.string "at the OFFICE.\p"
 	.string "Let me give you something for your\n"
 	.string "trouble.$"
 
@@ -119,8 +119,9 @@ FuchsiaCity_WardensHouse_Text_YouHaveTooMuchStuff::
 	.string "いっぱいやんけ！$"
 
 FuchsiaCity_WardensHouse_Text_MonPhotosFossilsOnDisplay::
-	.string "POKéMON photos and fossils are on\n"
-	.string "display.$"
+	.string "POKéMON photos and fossils.\n"
+	.string "Bolted down, so TEAM PLASMA can't\p"
+	.string "“free” them.$"
 
 FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay::
 	.string "Old POKéMON merchandise.\n"

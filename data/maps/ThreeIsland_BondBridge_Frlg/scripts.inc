@@ -77,7 +77,7 @@ ThreeIsland_BondBridge_Text_JoyPostBattle::
 	.string "Or maybe your crew!$"
 
 ThreeIsland_BondBridge_Text_JoyNotEnoughMons::
-	.string "JOY: I really want to battle with\n"
+	.string "JOY: I only fight together with\n"
 	.string "MEG.\p"
 	.string "One POKéMON isn't enough.$"
 
@@ -93,8 +93,8 @@ ThreeIsland_BondBridge_Text_MegPostBattle::
 	.string "Are you scared?$"
 
 ThreeIsland_BondBridge_Text_MegNotEnoughMons::
-	.string "MEG: I want to battle together\n"
-	.string "with JOY.\p"
+	.string "MEG: I only fight together with\n"
+	.string "JOY.\p"
 	.string "One POKéMON isn't enough.$"
 
 ThreeIsland_BondBridge_Text_BerryForestAhead::

@@ -116,17 +116,14 @@ PewterCity_Gym_Text_ReceivedTM39FromBrock::
 	.string "from PIERS.$"
 
 PewterCity_Gym_Text_ExplainTM39::
-	.string "A TM, Technical Machine, contains a\n"
-	.string "technique for POKéMON.\p"
-	.string "Using a TM teaches the move it\n"
-	.string "contains to a POKéMON.\p"
-	.string "A TM is good for only one use.\p"
-	.string "So, when you use one, pick the\n"
-	.string "POKéMON carefully.\p"
-	.string "Anyways…\n"
+	.string "A TM teaches a POKéMON a new move.\p"
+	.string "Use it on the right POKéMON. The\n"
+	.string "vending machines don't restock\p"
+	.string "them.\p"
 	.string "TM39 contains ROCK TOMB.\p"
-	.string "It hurls boulders at the foe and\n"
-	.string "lowers its SPEED.$"
+	.string "It buries the foe in rocks and\n"
+	.string "lowers its SPEED. Rock solid, like\p"
+	.string "TEAM YELL.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
 	.string "Heh. TEAM YELL will cheer for you\n"
@@ -170,16 +167,16 @@ PewterCity_Gym_Text_LetsGetHappening::
 	.string "Let's get happening!$"
 
 PewterCity_Gym_Text_TryDifferentPartyOrders::
-	.string "The first POKéMON out in a match is\n"
-	.string "at the left of the POKéMON LIST.\p"
-	.string "By changing the order of POKéMON,\n"
-	.string "you may gain an advantage.\p"
-	.string "Try different orders to suit your\n"
-	.string "opponent's party.$"
+	.string "The first POKéMON in your list\n"
+	.string "goes out first.\p"
+	.string "Know your opponent and change\n"
+	.string "the order.\p"
+	.string "That's how TEAM YELL wins. Well,\n"
+	.string "that and the screaming.$"
 
 PewterCity_Gym_Text_ItsFreeLetsGetHappening::
-	.string "It's a free service!\n"
-	.string "Let's get happening!$"
+	.string "Advice is free! Let's get\n"
+	.string "happening! Yell with me!$"
 
 PewterCity_Gym_Text_YoureChampMaterial::
 	.string "Just as I thought! You're KINGPIN\n"

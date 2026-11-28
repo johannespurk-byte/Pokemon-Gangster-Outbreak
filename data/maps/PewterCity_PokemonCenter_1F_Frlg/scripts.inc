@@ -55,18 +55,20 @@ PewterCity_PokemonCenter_1F_Text_Jigglypuff::
 
 PewterCity_PokemonCenter_1F_Text_WhenJiggylypuffSingsMonsGetDrowsy::
 	.string "Yawn!\p"
-	.string "When JIGGLYPUFF sings, POKéMON get\n"
-	.string "drowsy…\p"
-	.string "…Me, too…\n"
-	.string "Snore…$"
+	.string "TEAM YELL sings louder than any\n"
+	.string "JIGGLYPUFF… But JIGGLYPUFF puts\p"
+	.string "you to sleep…\p"
+	.string "…Me, too… Snore…$"
 
 PewterCity_PokemonCenter_1F_Text_TradingMyClefairyForPikachu::
-	.string "I really want a PIKACHU, so I'm\n"
-	.string "trading my CLEFAIRY for one.$"
+	.string "I want a PIKACHU, so I'm trading\n"
+	.string "my CLEFAIRY.\p"
+	.string "Better a trade than TEAM YELL\n"
+	.string "taking it.$"
 
 PewterCity_PokemonCenter_1F_Text_TradingPikachuWithKid::
-	.string "I'm trading POKéMON with that kid\n"
-	.string "there.\p"
-	.string "I had two PIKACHU, so I figured\n"
-	.string "I might as well trade one.$"
+	.string "I'm trading with that kid.\p"
+	.string "I had two PIKACHU. One got the\n"
+	.string "gangs' attention. Now it's his\p"
+	.string "problem.$"
 

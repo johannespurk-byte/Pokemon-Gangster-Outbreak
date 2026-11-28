@@ -56,35 +56,32 @@ Route21_South_Text_NolanPostBattle::
 	.string "TEAM GALACTIC.$"
 
 Route21_North_Text_LilIntro::
-	.string "LIL: Huh? A battle?\n"
-	.string "IAN, can't you do it alone?$"
+	.string "LIL: Huh? A battle? IAN, you\n"
+	.string "handle it.$"
 
 Route21_North_Text_LilDefeat::
-	.string "LIL: Oh, see?\n"
-	.string "We lost. Happy now?$"
+	.string "LIL: See? We lost. Happy now?$"
 
 Route21_North_Text_LilPostBattle::
-	.string "LIL: I'm tired.\n"
-	.string "Can't we go home already?$"
+	.string "LIL: TEAM GALACTIC took the\n"
+	.string "beach. Can't we just go home?$"
 
 Route21_North_Text_LilNotEnoughMons::
-	.string "LIL: Huh? A battle?\n"
-	.string "I can't be bothered to do it alone.\l"
-	.string "Bring two POKéMON, won't you?$"
+	.string "LIL: A battle? Not alone. Bring two\n"
+	.string "POKéMON, won't you?$"
 
 Route21_North_Text_IanIntro::
-	.string "IAN: My sis doesn't get enough\n"
-	.string "exercise, so I made her come.$"
+	.string "IAN: My sis needs to toughen up\n"
+	.string "before the gangs find us!$"
 
 Route21_North_Text_IanDefeat::
-	.string "IAN: Awww, Sis!\n"
-	.string "Get it together!$"
+	.string "IAN: Awww, Sis! Get it together!$"
 
 Route21_North_Text_IanPostBattle::
 	.string "IAN: Come on, Sis!\p"
-	.string "You're not going to lose weight\n"
-	.string "like this!$"
+	.string "At this rate TEAM GALACTIC will\n"
+	.string "recruit us both!$"
 
 Route21_North_Text_IanNotEnoughMons::
-	.string "IAN: We want a two-on-two battle.\n"
-	.string "So can you bring two POKéMON?$"
+	.string "IAN: We fight two-on-two. Bring\n"
+	.string "two POKéMON!$"

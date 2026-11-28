@@ -125,8 +125,8 @@ Route8_Text_EliPostBattle::
 	.string "Watch out!$"
 
 Route8_Text_EliNotEnoughMons::
-	.string "ELI: We can't battle if you don't\n"
-	.string "have two POKéMON.$"
+	.string "ELI: We fight in pairs. Bring two\n"
+	.string "POKéMON.$"
 
 Route8_Text_AnneIntro::
 	.string "I found a loot bag yesterday!\p"
@@ -139,8 +139,9 @@ Route8_Text_AnnePostBattle::
 	.string "Don't tell my mom I battled you.$"
 
 Route8_Text_AnneNotEnoughMons::
-	.string "ANNE: Hi, hi! Let's battle!\n"
-	.string "But bring two POKéMON.$"
+	.string "ANNE: Hi, hi! Let's battle! But\n"
+	.string "bring two POKéMON, TEAM FLARE\p"
+	.string "style!$"
 
 Route8_Text_RicardoIntro::
 	.string "Hey! You're in the wrong part of\n"

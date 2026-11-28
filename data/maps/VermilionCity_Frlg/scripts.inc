@@ -269,13 +269,14 @@ VermilionCity_Text_GrimerMultipliesInSludge::
 	.string "They say GRIMER multiply in it.$"
 
 VermilionCity_Text_DidYouSeeSSAnneInHarbor::
-	.string "Did you see the S.S. ANNE moored\n"
-	.string "in the harbor?$"
+	.string "Did you see the S.S. ANNE in the\n"
+	.string "harbor? ARCHER turned it into a\p"
+	.string "floating casino.$"
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
-	.string "So, the S.S. ANNE has departed?\p"
-	.string "She'll be back in VERMILION about\n"
-	.string "this time next year.$"
+	.string "So, the S.S. ANNE is gone?\p"
+	.string "She'll be back next year. With\n"
+	.string "more stolen goods, I bet.$"
 
 VermilionCity_Text_BuildingOnThisLand::
 	.string "I'm putting up a building on this\n"
@@ -287,7 +288,9 @@ VermilionCity_Text_Machop::
 	.string "MACHOP: Guoh! Gogogoh!$"
 
 VermilionCity_Text_MachopStompingLandFlat::
-	.string "A MACHOP is stomping the land flat.$"
+	.string "A MACHOP is stomping the land\n"
+	.string "flat. TEAM ROCKET wants a new\p"
+	.string "warehouse here.$"
 
 VermilionCity_Text_SSAnneVisitsOnceAYear::
 	.string "The S.S. ANNE is a famous cruise\n"
@@ -383,14 +386,13 @@ VermilionCity_Text_Seagallop12Departing::
 	.string "departing immediately.$"
 
 VermilionCity_Text_Route2AideHasPackageForYou::
-	.string "Oh, hello, {PLAYER}!\n"
-	.string "How are you doing?\p"
-	.string "It's me, one of PROF. OAK's AIDES.\p"
+	.string "Oh, hello, {PLAYER}! Still in one\n"
+	.string "piece?\p"
+	.string "I'm one of PROF. OAK's AIDES.\p"
 	.string "Did you meet the other AIDE?\p"
-	.string "He had a package from PROF. OAK\n"
-	.string "for you, {PLAYER}.\p"
-	.string "He said he'd look for you around\n"
-	.string "ROUTE 2, {PLAYER}.\p"
-	.string "If you're in the ROUTE 2 area,\n"
-	.string "please look for him.$"
+	.string "He has a package from PROF. OAK\n"
+	.string "for you.\p"
+	.string "He's hiding somewhere around\n"
+	.string "ROUTE 2.\p"
+	.string "If you're near there, look for him.$"
 

@@ -36,18 +36,18 @@ VermilionCity_House2_EventScript_AlreadyTraded::
 	end
 
 VermilionCity_House2_Text_DoYouHaveMonWantToTradeForMyMon::
-	.string "Hi!\n"
-	.string "Do you have a {STR_VAR_1}?\p"
+	.string "Hi! Do you have a {STR_VAR_1}?\p"
 	.string "Want to trade it for my\n"
-	.string "{STR_VAR_2}?$"
+	.string "{STR_VAR_2}? Fair trade, no gang\p"
+	.string "cut.$"
 
 VermilionCity_House2_Text_ThatsTooBad::
 	.string "That's too bad.$"
 
 VermilionCity_House2_Text_ThisIsNoMon::
 	.string "…This is no {STR_VAR_1}.\p"
-	.string "If you get one, please trade it\n"
-	.string "to me!$"
+	.string "Trying to scam me? If you get a\n"
+	.string "real one, come back!$"
 
 VermilionCity_House2_Text_ThankYou::
 	.string "Thank you!$"

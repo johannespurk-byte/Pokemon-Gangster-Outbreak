@@ -98,20 +98,20 @@ SilphCo_6F_Text_BetterGetBackToWork::
 	.string "Well, better get back to work.$"
 
 SilphCo_6F_Text_HelpMePlease::
-	.string "Oh dear, oh dear.\n"
-	.string "Help me, please!$"
+	.string "Oh dear, oh dear. Help me, please!\n"
+	.string "The ROCKETS are everywhere!$"
 
 SilphCo_6F_Text_WeGotEngaged::
 	.string "We got engaged.\n"
 	.string "Heheh!$"
 
 SilphCo_6F_Text_ThatManIsSuchACoward::
-	.string "That man next to me…\n"
-	.string "He's such a coward!$"
+	.string "That man next to me… He hid under\n"
+	.string "his desk all day!$"
 
 SilphCo_6F_Text_NeedsMeToLookAfterHim::
-	.string "He's so helpless, he needed\n"
-	.string "someone like me to look after him.$"
+	.string "He's so helpless. He needs\n"
+	.string "someone like me to protect him.$"
 
 SilphCo_6F_Text_RocketsTryingToConquerWorld::
 	.string "TEAM ROCKET wants to conquer the\n"

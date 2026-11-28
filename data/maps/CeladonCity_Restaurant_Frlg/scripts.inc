@@ -56,15 +56,14 @@ CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner::
 CeladonCity_Restaurant_Text_ManLostItAllAtSlots::
 	.string "Munch…\p"
 	.string "The man at that table lost it all\n"
-	.string "at the slots.$"
+	.string "at the ROCKETS' slots.$"
 
 CeladonCity_Restaurant_Text_TakeThisImBusted::
-	.string "Go ahead! Laugh!\n"
-	.string "I'm flat-out busted!\p"
-	.string "No more slots for me!\n"
-	.string "I'm going straight!\p"
-	.string "Here!\n"
-	.string "I won't be needing this anymore!$"
+	.string "Go ahead! Laugh! I'm flat broke!\p"
+	.string "No more slots for me! The ROCKETS\n"
+	.string "can rob someone else!\p"
+	.string "Here! I won't be needing this\n"
+	.string "anymore!$"
 
 CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan::
 	.string "{PLAYER} received a COIN CASE\n"
@@ -74,6 +73,6 @@ CeladonCity_Restaurant_Text_MakeRoomForThis::
 	.string "Make room for this!$"
 
 CeladonCity_Restaurant_Text_ThoughtIdWinItBack::
-	.string "I always thought I was going to\n"
-	.string "win it back…$"
+	.string "I always thought I'd win it back…\n"
+	.string "That's how they get you.$"
 

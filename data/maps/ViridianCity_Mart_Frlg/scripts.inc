@@ -88,17 +88,19 @@ ViridianCity_Mart_Text_YouCameFromPallet::
 	.string "You came from PALLET TOWN?$"
 
 ViridianCity_Mart_Text_TakeThisToProfOak::
-	.string "You know PROF. OAK, right?\p"
-	.string "His order came in.\n"
-	.string "Can I get you to take it to him?$"
+	.string "You know PROF. OAK in PALLET,\n"
+	.string "right?\p"
+	.string "His order came in. SILVER's crew\n"
+	.string "won't let my guys through. Can you\p"
+	.string "take it?$"
 
 ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk::
 	.string "{PLAYER} received OAK'S PARCEL\n"
 	.string "from the POKéMON MART clerk.$"
 
 ViridianCity_Mart_Text_SayHiToOakForMe::
-	.string "Okay, thanks! Please say hi to\n"
-	.string "PROF. OAK for me, too.$"
+	.string "Okay, thanks! Say hi to PROF. OAK.\n"
+	.string "And don't let SILVER open it!$"
 
 ViridianCity_Mart_Text_ShopDoesGoodBusinessInAntidotes::
 	.string "This machine sells a lot of\n"

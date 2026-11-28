@@ -163,9 +163,9 @@ FourIsland_Text_IslandSign::
 	.string "The Warm, Blue, Floe Island$"
 
 FourIsland_Text_LoreleiHasReturned::
-	.string "LORELEI has returned.\p"
-	.string "Did she find the city life too\n"
-	.string "stressful, I wonder?$"
+	.string "LORELEI has come home.\p"
+	.string "The gang war in KANTO must have\n"
+	.string "been too much, even for her.$"
 
 FourIsland_Text_LoreleiMetLaprasAsChild::
 	.string "LORELEI has gone back to KANTO.\p"
@@ -182,12 +182,13 @@ FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
 	.string "Stay out of my way!$"
 
 FourIsland_Text_LoreleiHasLotsOfStuffedDolls::
-	.string "Oh, you found me!\n"
-	.string "Please don't tell LORELEI.\p"
-	.string "Did you know that LORELEI has lots\n"
-	.string "and lots of stuffed dolls?\p"
-	.string "Every time she comes back to\n"
-	.string "FOUR ISLAND, her collection grows!$"
+	.string "Oh, you found me! Don't tell\n"
+	.string "LORELEI.\p"
+	.string "Did you know she has lots of\n"
+	.string "stuffed dolls?\p"
+	.string "Every time she comes home, the\n"
+	.string "collection grows! The ice queen\p"
+	.string "loves dolls!$"
 
 FourIsland_Text_MadeSlushieUsingIcefallCaveIce::
 	.string "Ooh, chilly!\p"

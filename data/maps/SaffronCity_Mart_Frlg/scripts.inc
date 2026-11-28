@@ -32,12 +32,13 @@ SaffronCity_Mart_Items::
 	end
 
 SaffronCity_Mart_Text_MaxRepelMoreEffectiveThanSuper::
-	.string "MAX REPEL keeps weaker POKéMON\n"
-	.string "from appearing.\p"
-	.string "MAX REPEL stays effective longer\n"
-	.string "than SUPER REPEL.$"
+	.string "MAX REPEL keeps weak POKéMON\n"
+	.string "away for a long time.\p"
+	.string "Too bad there's no REPEL for TEAM\n"
+	.string "FLARE.$"
 
 SaffronCity_Mart_Text_ReviveIsCostly::
-	.string "REVIVE is costly, but it revives\n"
-	.string "fainted POKéMON!$"
+	.string "REVIVE is costly, but it brings a\n"
+	.string "fainted POKéMON back. Worth every\p"
+	.string "yen out here!$"
 

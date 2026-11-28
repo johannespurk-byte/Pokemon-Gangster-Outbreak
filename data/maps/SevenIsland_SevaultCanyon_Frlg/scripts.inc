@@ -85,8 +85,8 @@ SevenIsland_SevaultCanyon_Text_LexPostBattle::
 	.string "Usually.$"
 
 SevenIsland_SevaultCanyon_Text_LexNotEnoughMons::
-	.string "LEX: May I ask you to battle the\n"
-	.string "both of us at the same time?$"
+	.string "LEX: Will you fight both of us at\n"
+	.string "once?$"
 
 SevenIsland_SevaultCanyon_Text_NyaIntro::
 	.string "ARCHER invited me to his parties.\p"
@@ -100,8 +100,8 @@ SevenIsland_SevaultCanyon_Text_NyaPostBattle::
 	.string "How charming.$"
 
 SevenIsland_SevaultCanyon_Text_NyaNotEnoughMons::
-	.string "NYA: I'm sorry, but may we battle\n"
-	.string "in two-on-two style?$"
+	.string "NYA: Sorry, but we only fight\n"
+	.string "two-on-two.$"
 
 SevenIsland_SevaultCanyon_Text_RouteSign::
 	.string "SEVAULT CANYON\n"

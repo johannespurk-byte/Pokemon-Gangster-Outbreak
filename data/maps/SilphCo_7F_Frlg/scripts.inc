@@ -235,43 +235,45 @@ SilphCo_7F_EventScript_Grunt3::
 	end
 
 SilphCo_7F_Text_HaveMonForSavingUs::
-	.string "Oh! Hi! You're not a ROCKET!\n"
-	.string "You came to save us?\l"
-	.string "Why, thank you!\p"
-	.string "I want you to have this POKéMON\n"
-	.string "for saving us.$"
+	.string "Oh! Hi! You're not a ROCKET? Well,\n"
+	.string "not anymore?\p"
+	.string "You came to save us? Thank you!\p"
+	.string "Take this POKéMON before TEAM\n"
+	.string "ROCKET does.$"
 
 SilphCo_7F_Text_ObtainedLaprasFromEmployee::
 	.string "{PLAYER} obtained a LAPRAS from\n"
 	.string "the SILPH employee!$"
 
 SilphCo_7F_Text_ExplainLapras::
-	.string "It's a LAPRAS.\n"
-	.string "It's a very intelligent POKéMON.\p"
-	.string "We kept it in our lab, but it will\n"
-	.string "be much better off with you.\p"
-	.string "I think you will be a good TRAINER\n"
+	.string "It's a LAPRAS. A very intelligent\n"
+	.string "POKéMON.\p"
+	.string "TEAM ROCKET wanted to sell it.\n"
+	.string "It's much better off with you.\p"
+	.string "I think you'll be a good TRAINER\n"
 	.string "for LAPRAS!\p"
-	.string "It's a good swimmer.\n"
-	.string "It'll give you a lift across water!$"
+	.string "It's a great swimmer. It can carry\n"
+	.string "you across water!$"
 
 SilphCo_7F_Text_RocketBossWentToBoardroom::
 	.string "TEAM ROCKET's BOSS went to the\n"
 	.string "boardroom!\p"
-	.string "Is our PRESIDENT okay?\n"
-	.string "I'm worried.$"
+	.string "Is our PRESIDENT okay? I'm\n"
+	.string "worried.$"
 
 SilphCo_7F_Text_RocketsAfterMasterBall::
-	.string "TEAM ROCKET was after the MASTER\n"
-	.string "BALL, which catches any POKéMON.$"
+	.string "TEAM ROCKET wants the MASTER\n"
+	.string "BALL. It catches any POKéMON.\p"
+	.string "Imagine that in gang hands!$"
 
 SilphCo_7F_Text_CanceledMasterBallProject::
 	.string "We canceled the MASTER BALL\n"
 	.string "project because of TEAM ROCKET.$"
 
 SilphCo_7F_Text_BadIfTeamRocketTookOver::
-	.string "It would be bad if TEAM ROCKET\n"
-	.string "took over SILPH or our POKéMON.$"
+	.string "If TEAM ROCKET takes SILPH, every\n"
+	.string "POKé BALL in KANTO belongs to\p"
+	.string "GIOVANNI.$"
 
 SilphCo_7F_Text_WowYouChasedOffTeamRocket::
 	.string "Wow!\p"
@@ -279,10 +281,8 @@ SilphCo_7F_Text_WowYouChasedOffTeamRocket::
 	.string "yourself?$"
 
 SilphCo_7F_Text_ReallyDangerousHere::
-	.string "You!\n"
-	.string "It's really dangerous here!\p"
-	.string "You came to save me?\n"
-	.string "You can't!$"
+	.string "You! It's really dangerous here!\p"
+	.string "You came to save me? You can't!$"
 
 SilphCo_7F_Text_ThankYouSoMuch::
 	.string "Thank you so much!$"

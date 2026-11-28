@@ -218,10 +218,9 @@ PewterCity_Museum_1F_Text_AmberContainsGeneticMatter::
 	.string "bring them back to life.$"
 
 PewterCity_Museum_1F_Text_AmberIsFossilizedSap::
-	.string "AMBER is actually sap, that gooey\n"
-	.string "stuff that oozes from trees.\p"
-	.string "The ancient sap fossilized over\n"
-	.string "time to become rock-hard AMBER.$"
+	.string "AMBER is fossilized tree sap.\p"
+	.string "TEAM YELL dug half of it out of\n"
+	.string "the walls and sold it.$"
 
 @ Unused
 PewterCity_Museum_1F_Text_PleaseGoAround::
@@ -258,8 +257,8 @@ PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit::
 	.string "them. For a price…$"
 
 PewterCity_Museum_1F_Text_BeautifulPieceOfAmber::
-	.string "There is a beautiful piece of\n"
-	.string "AMBER in a clear gold color.$"
+	.string "A beautiful piece of AMBER.\n"
+	.string "Somebody chained it to the stand.$"
 
 PewterCity_Museum_1F_Text_AerodactylFossil::
 	.string "AERODACTYL Fossil\n"

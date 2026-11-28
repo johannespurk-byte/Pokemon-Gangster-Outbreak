@@ -120,7 +120,8 @@ VermilionCity_PokemonFanClub_EventScript_RulesSign2::
 
 VermilionCity_PokemonFanClub_Text_AdmirePikachusTail::
 	.string "Won't you admire my PIKACHU's\n"
-	.string "adorable tail?$"
+	.string "tail? I keep it hidden from the\p"
+	.string "ROCKETS.$"
 
 VermilionCity_PokemonFanClub_Text_PikachuTwiceAsCute::
 	.string "Humph!\p"
@@ -128,15 +129,14 @@ VermilionCity_PokemonFanClub_Text_PikachuTwiceAsCute::
 	.string "that one!$"
 
 VermilionCity_PokemonFanClub_Text_AdoreMySeel::
-	.string "I just adore my SEEL!\n"
-	.string "It's so lovable!\p"
-	.string "It squeals, “Kyuuuh,” when I\n"
-	.string "hug it!$"
+	.string "I adore my SEEL!\p"
+	.string "It squeals “Kyuuuh!” whenever a\n"
+	.string "ROCKET walks by. Best alarm ever!$"
 
 VermilionCity_PokemonFanClub_Text_SeelFarMoreAttractive::
 	.string "Oh, dear!\p"
 	.string "My SEEL is far more attractive.\n"
-	.string "By double, I would say.$"
+	.string "Twice as much, I'd say.$"
 
 VermilionCity_PokemonFanClub_Text_Pikachu::
 	.string "PIKACHU: Chu! Pikachu!$"
@@ -146,13 +146,13 @@ VermilionCity_PokemonFanClub_Text_Seel::
 
 VermilionCity_PokemonFanClub_Text_DidYouComeToHearAboutMyMons::
 	.string "I chair the POKéMON Fan Club!\p"
-	.string "I raise more than a hundred\n"
-	.string "POKéMON!\p"
-	.string "I'm very fussy when it comes to\n"
-	.string "POKéMON! I surely am!\p"
+	.string "I raise over a hundred POKéMON.\n"
+	.string "The ROCKETS haven't found them\p"
+	.string "yet!\p"
+	.string "I'm very picky about POKéMON!\p"
 	.string "So…\p"
-	.string "Did you come visit to hear about\n"
-	.string "my POKéMON?$"
+	.string "Did you come to hear about my\n"
+	.string "POKéMON?$"
 
 VermilionCity_PokemonFanClub_Text_ChairmansStory::
 	.string "Good!\n"
@@ -176,13 +176,13 @@ VermilionCity_PokemonFanClub_Text_ReceivedBikeVoucherFromChairman::
 
 VermilionCity_PokemonFanClub_Text_ExplainBikeVoucher::
 	.string "Take that BIKE VOUCHER to the\n"
-	.string "BIKE SHOP in CERULEAN CITY.\p"
-	.string "Exchange that for a BICYCLE\n"
-	.string "free of charge!\p"
-	.string "Don't worry, my favorite FEAROW\n"
-	.string "will FLY me anywhere I need to go.\p"
-	.string "So, I have no need for a BICYCLE.\p"
-	.string "I hope you like cycling!$"
+	.string "BIKE SHOP in CERULEAN.\p"
+	.string "They'll give you a BICYCLE for\n"
+	.string "free.\p"
+	.string "My FEAROW flies me everywhere, so\n"
+	.string "I don't need one.\p"
+	.string "Just don't let TEAM SKULL take it\n"
+	.string "from you!$"
 
 VermilionCity_PokemonFanClub_Text_ComeBackToHearStory::
 	.string "Oh. Come back when you want to\n"
@@ -190,10 +190,8 @@ VermilionCity_PokemonFanClub_Text_ComeBackToHearStory::
 
 VermilionCity_PokemonFanClub_Text_DidntComeToSeeAboutMonsAgain::
 	.string "Hello, {PLAYER}!\p"
-	.string "Did you come see me about my\n"
-	.string "POKéMON again?\p"
-	.string "No?\n"
-	.string "Too bad!$"
+	.string "Back to hear about my POKéMON?\p"
+	.string "No? Too bad!$"
 
 VermilionCity_PokemonFanClub_Text_MakeRoomForThis::
 	.string "Make room for this!$"
@@ -212,7 +210,7 @@ VermilionCity_PokemonFanClub_Text_SomeoneBragsBragBack::
 	.string "That's how you survive here.$"
 
 VermilionCity_PokemonFanClub_Text_ChairmanReallyAdoresHisMons::
-	.string "Our CHAIRMAN really does adore his\n"
-	.string "POKéMON.\p"
-	.string "But the person who is most liked by\n"
-	.string "POKéMON is DAISY, I think.$"
+	.string "Our CHAIRMAN adores his POKéMON.\p"
+	.string "But POKéMON like DAISY in PALLET\n"
+	.string "the most. Even SILVER's crew\p"
+	.string "does.$"

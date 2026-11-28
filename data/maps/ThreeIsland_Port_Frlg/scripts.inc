@@ -44,22 +44,22 @@ ThreeIsland_Port_Text_WereKantoRiderFederation::
 	.string "now!$"
 
 ThreeIsland_Port_Text_ForkOverMoney::
-	.string "Hey, hey, lady!\n"
-	.string "Fork over some spending money!$"
+	.string "Hey, hey, lady! Fork over some\n"
+	.string "spending money! Protection fee!$"
 
 ThreeIsland_Port_Text_IllCallThePolice::
 	.string "Aiyeeh!\p"
-	.string "Wh-who are you?!\n"
-	.string "I… I'll call the police!$"
+	.string "Wh-who are you?! I'll call the\n"
+	.string "police! If there still are any!$"
 
 ThreeIsland_Port_Text_ThankGoodnessBikersGone::
-	.string "Those BIKERS…\n"
-	.string "Are they gone?\p"
-	.string "Oh, thank goodness!\n"
-	.string "They certainly had me terrified!$"
+	.string "Those BIKERS… Are they gone?\p"
+	.string "Oh, thank goodness! They\n"
+	.string "terrified me!$"
 
 ThreeIsland_Port_Text_EverythingTurnedOutForBest::
-	.string "Those BIKERS ran off, and\n"
-	.string "LOSTELLE was found safe.\p"
-	.string "Everything turned out for the best!$"
+	.string "The BIKERS ran off, and LOSTELLE\n"
+	.string "was found safe.\p"
+	.string "Everything turned out fine! Even\n"
+	.string "with a KANTO gangster around.$"
 

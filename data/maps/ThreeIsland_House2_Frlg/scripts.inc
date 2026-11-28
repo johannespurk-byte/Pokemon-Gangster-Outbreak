@@ -14,12 +14,11 @@ ThreeIsland_House2_EventScript_Rocker::
 	end
 
 ThreeIsland_House2_Text_CantMakeThisSpoonBend::
-	.string "Urrrrrrrrgggghhhh…\n"
-	.string "Kwaaaaah!\p"
-	.string "…It's useless! I can't make this\n"
-	.string "spoon bend with my mind.\p"
-	.string "Maybe I really don't have any\n"
-	.string "psychic powers.$"
+	.string "Urrrrrrrrgggghhhh… Kwaaaaah!\p"
+	.string "…Useless! I can't bend this spoon\n"
+	.string "with my mind.\p"
+	.string "How does TEAM FLARE's psychic do\n"
+	.string "it?$"
 
 ThreeIsland_House2_Text_IAdmireSabrina::
 	.string "Have you heard of LYSANDRE in\n"

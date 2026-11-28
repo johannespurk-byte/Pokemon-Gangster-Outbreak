@@ -462,8 +462,8 @@ PalletTown_Text_OakGrassUnsafeNeedMon::
 
 PalletTown_Text_RaisingMonsToo::
 	.string "I'm raising POKéMON, too.\p"
-	.string "When they get strong, they can\n"
-	.string "protect me.$"
+	.string "When they get strong, SILVER's\n"
+	.string "crew can stop protecting me.$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC::
 	.string "SILVER's crew runs PALLET now.\p"
@@ -514,13 +514,12 @@ PalletTown_Text_CaughtXImpressiveFollowMe::
 	.string "Follow me.$"
 
 PalletTown_Text_OakYouEnjoyingTraveling::
-	.string "OAK: Ah, {PLAYER}!\n"
-	.string "You seem to be enjoying traveling.\p"
-	.string "Knowing you, {PLAYER}, I can easily\n"
-	.string "imagine you going out to even more\l"
-	.string "exotic locales.\p"
-	.string "Good for you, good for you.\n"
-	.string "Hohoho.$"
+	.string "OAK: Ah, {PLAYER}! Still alive out\n"
+	.string "there, I see.\p"
+	.string "You go wherever the gangs go,\n"
+	.string "don't you?\p"
+	.string "Good for you. Just come back in\n"
+	.string "one piece. Hohoho.$"
 
 @ For the NPC in Pallet Town that talks about the Trainer Tips sign
 PalletTown_Text_HmmIsThatRight::
@@ -544,8 +543,9 @@ PalletTown_Text_SignsAreUsefulArentThey::
 
 PalletTown_Text_LookCopiedTrainerTipsSign::
 	.string "Look, look!\p"
-	.string "I copied what it said on one of\n"
-	.string "those TRAINER TIPS signs!$"
+	.string "I copied the TRAINER TIPS sign\n"
+	.string "before the crew spray-painted\p"
+	.string "over it!$"
 
 @ Used by NPC
 PalletTown_Text_PressStartToOpenMenuCopy::

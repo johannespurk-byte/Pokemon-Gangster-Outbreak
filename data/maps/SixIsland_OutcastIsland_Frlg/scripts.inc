@@ -62,10 +62,8 @@ SixIsland_OutcastIsland_Text_AvaPostBattle::
 	.string "Not from you, though!$"
 
 SixIsland_OutcastIsland_Text_AvaNotEnoughMons::
-	.string "AVA: You're challenging us to\n"
-	.string "a battle?\p"
-	.string "You'll need at least two POKéMON\n"
-	.string "if you want to do that.$"
+	.string "AVA: You want to fight us?\p"
+	.string "Then bring at least two POKéMON.$"
 
 SixIsland_OutcastIsland_Text_GebIntro::
 	.string "I'm the toughest kid on this road.\n"
@@ -80,6 +78,5 @@ SixIsland_OutcastIsland_Text_GebPostBattle::
 	.string "Watch out!$"
 
 SixIsland_OutcastIsland_Text_GebNotEnoughMons::
-	.string "GEB: Please battle against me and\n"
-	.string "my sister!\p"
+	.string "GEB: Fight me and my sister!\p"
 	.string "…Oh, you don't have two POKéMON?$"

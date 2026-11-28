@@ -16,6 +16,6 @@ ThreeIsland_House4_Text_GhostsInBerryForest::
 	.string "BIKERS.$"
 
 ThreeIsland_House4_Text_PapaKeepsLyingToMe::
-	.string "Papa keeps lying to me, and won't\n"
-	.string "let me go out and play!$"
+	.string "Papa says there are bikers\n"
+	.string "outside. He won't let me go play!$"
 

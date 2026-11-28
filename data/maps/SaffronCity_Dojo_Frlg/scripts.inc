@@ -151,10 +151,11 @@ SaffronCity_Dojo_EventScript_DefeatedMasterKoichi::
 
 SaffronCity_Dojo_Text_MasterKoichiIntro::
 	.string "Grunt!\p"
-	.string "I am the KARATE MASTER!\n"
-	.string "I am the LEADER here!\p"
-	.string "You wish to challenge us?\n"
-	.string "Expect no mercy!\p"
+	.string "I am the KARATE MASTER! TEAM\n"
+	.string "FLARE took the GYM, but not my\p"
+	.string "DOJO!\p"
+	.string "You wish to challenge us? Expect\n"
+	.string "no mercy!\p"
 	.string "Fwaaa!$"
 
 SaffronCity_Dojo_Text_MasterKoichiDefeat::
@@ -163,15 +164,16 @@ SaffronCity_Dojo_Text_MasterKoichiDefeat::
 
 SaffronCity_Dojo_Text_ChoosePrizedFightingMon::
 	.string "Indeed, I have lost!\p"
-	.string "But, I beseech you, do not take\n"
-	.string "our emblem as your trophy!\p"
-	.string "In return, I will give you a prized\n"
+	.string "But please, don't take our emblem!\n"
+	.string "FLARE would laugh at us!\p"
+	.string "Instead, take one of our prized\n"
 	.string "FIGHTING POKéMON!\p"
 	.string "Choose whichever one you like!$"
 
 SaffronCity_Dojo_Text_StayAndTrainWithUs::
-	.string "Grunt!\n"
-	.string "Stay and train at karate with us!$"
+	.string "Grunt! Stay and train with us!\n"
+	.string "We'll need fighters when FLARE\p"
+	.string "comes!$"
 
 SaffronCity_Dojo_Text_MikeIntro::
 	.string "Hoargh!\n"
@@ -181,8 +183,8 @@ SaffronCity_Dojo_Text_MikeDefeat::
 	.string "I give up!$"
 
 SaffronCity_Dojo_Text_MikePostBattle::
-	.string "You wait 'til you see our MASTER!\n"
-	.string "I'm a small fry compared to him!$"
+	.string "Wait 'til you see our MASTER! I'm a\n"
+	.string "small fry next to him!$"
 
 SaffronCity_Dojo_Text_HidekiIntro::
 	.string "I hear you're good!\n"
@@ -193,8 +195,8 @@ SaffronCity_Dojo_Text_HidekiDefeat::
 	.string "One point!$"
 
 SaffronCity_Dojo_Text_HidekiPostBattle::
-	.string "Our MASTER is a pro fighter.\n"
-	.string "Be prepared to lose!$"
+	.string "Our MASTER fought TEAM FLARE\n"
+	.string "bare-handed. Be prepared to lose!$"
 
 SaffronCity_Dojo_Text_AaronIntro::
 	.string "Hiyah!\n"
@@ -212,8 +214,8 @@ SaffronCity_Dojo_Text_AaronPostBattle::
 
 SaffronCity_Dojo_Text_HitoshiIntro::
 	.string "Hwaah!\p"
-	.string "You're trespassing in our\n"
-	.string "FIGHTING DOJO!$"
+	.string "Are you a FLARE spy? You're\n"
+	.string "trespassing in our DOJO!$"
 
 SaffronCity_Dojo_Text_HitoshiDefeat::
 	.string "Oof!\n"

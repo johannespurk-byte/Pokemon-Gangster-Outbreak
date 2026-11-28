@@ -145,18 +145,17 @@ Text_ExplosionTaught::
 	.string "What a terrifying thrill!$"
 
 MtEmber_Exterior_Text_WellTryDiggingHere::
-	.string "Over here.\n"
-	.string "We'll try digging here.\p"
-	.string "That treasure the ADMINS've been\n"
-	.string "talking about should be here.$"
+	.string "Over here. Dig here.\p"
+	.string "The treasure ARCHER talked about\n"
+	.string "should be here.$"
 
 MtEmber_Exterior_Text_YoureInTheWayGetLost::
-	.string "What the…?\n"
-	.string "You're in the way. Get lost.$"
+	.string "What the…? You're in the way. Get\n"
+	.string "lost, KANTO kid.$"
 
 MtEmber_Exterior_Text_PunchedThroughAtLast::
 	.string "Whew, punched through at last.\n"
-	.string "Let's go treasure hunting!$"
+	.string "Treasure time!$"
 
 MtEmber_Exterior_Text_WhatsPasswordAgain::
 	.string "Any treasure we find, we haul back\n"
@@ -172,8 +171,8 @@ MtEmber_Exterior_Text_FirstPasswordGoldeen::
 	.string "And the second one is…$"
 
 MtEmber_Exterior_Text_SnoopsBeenListeningIn::
-	.string "Hey!\n"
-	.string "This snoop's been listening in!$"
+	.string "Hey! This snoop's been listening\n"
+	.string "in! A spy from GIOVANNI!$"
 
 MtEmber_Exterior_Text_Grunt1Intro::
 	.string "You've been eavesdropping on us!\n"
@@ -199,12 +198,11 @@ MtEmber_Exterior_Text_Grunt2PostBattle::
 	.string "islands belong to us now!$"
 
 MtEmber_Exterior_Text_WellRegroupDontStepInsideThere::
-	.string "What a setback…\n"
-	.string "We'll have to regroup.\p"
-	.string "You! Don't even think about taking\n"
-	.string "a step inside here!\p"
+	.string "What a setback… We'll regroup.\p"
+	.string "You! Don't even think about going\n"
+	.string "in there!\p"
 	.string "If you know what's good for you,\n"
-	.string "don't even think about this!$"
+	.string "stay out of ROCKET business!$"
 
 MtEmber_Exterior_Text_LoganIntro::
 	.string "These hills are older than any\n"

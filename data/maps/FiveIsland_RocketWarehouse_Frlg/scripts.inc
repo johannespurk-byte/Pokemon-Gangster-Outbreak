@@ -225,14 +225,13 @@ FiveIsland_RocketWarehouse_Text_Admin1PostBattle::
 	.string "money…$"
 
 FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough::
-	.string "I've made it so you can come back\n"
-	.string "in through there.\p"
-	.string "Why don't you go get rested and\n"
-	.string "refreshed for what lies ahead?\p"
-	.string "The ADMIN after me outranks me\n"
-	.string "thoroughly as a TRAINER.\p"
-	.string "You'd better steel yourself for one\n"
-	.string "harsh challenge.$"
+	.string "I opened the way so you can come\n"
+	.string "back in through there.\p"
+	.string "Go rest and heal up first.\p"
+	.string "The ADMIN after me is much\n"
+	.string "stronger. ARCHER trained him\p"
+	.string "himself.\p"
+	.string "Steel yourself for a harsh fight.$"
 
 FiveIsland_RocketWarehouse_Text_Admin2Intro::
 	.string "Halt! This is TEAM ROCKET\n"
@@ -245,12 +244,13 @@ FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
 	.string "ARCHER will deal with you himself.$"
 
 FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText::
-	.string "A report with graphs and text is on\n"
-	.string "the PC monitor.\p"
+	.string "A report with graphs is on the PC\n"
+	.string "monitor.\p"
 	.string "“The Influence of Magnetic Waves\n"
 	.string "on POKéMON Evolution”…\p"
 	.string "… … … … … …\p"
-	.string "It's too difficult to understand…$"
+	.string "ROCKET science. Too difficult to\n"
+	.string "understand…$"
 
 FiveIsland_RocketWarehouse_Text_GideonIntro::
 	.string "I almost sold the SAPPHIRE to\n"

@@ -117,19 +117,19 @@ TwoIsland_House_EventScript_SetHasBothMushrooms::
 
 TwoIsland_House_Text_TeachMonMoveForMushroom::
 	.string "I'm the POKéMON MOVE MANIAC.\p"
-	.string "I know every single move that\n"
-	.string "POKéMON learn growing up.\p"
-	.string "I'm also a mushroom maniac.\p"
-	.string "Bring me two TINYMUSHROOMS,\n"
-	.string "or one BIG MUSHROOM.\p"
-	.string "If you do that for me, I'll teach\n"
-	.string "a move to one POKéMON.$"
+	.string "I know every move POKéMON learn\n"
+	.string "while growing up.\p"
+	.string "And I'm a mushroom maniac.\p"
+	.string "Bring me two TINYMUSHROOMS or one\n"
+	.string "BIG MUSHROOM.\p"
+	.string "Then I'll teach one of your\n"
+	.string "POKéMON a move.$"
 
 TwoIsland_House_Text_WantMeToTeachMove::
-	.string "Sniff, sniff…\n"
-	.string "Hm! You smell of MUSHROOMS!\p"
-	.string "Do you want me to teach a move\n"
-	.string "to a POKéMON of yours?$"
+	.string "Sniff, sniff… You smell of\n"
+	.string "MUSHROOMS!\p"
+	.string "Want me to teach a POKéMON a\n"
+	.string "move?$"
 
 TwoIsland_House_Text_TutorWhichMon::
 	.string "Which POKéMON needs tutoring?$"

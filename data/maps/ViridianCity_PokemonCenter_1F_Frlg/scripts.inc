@@ -27,10 +27,10 @@ ViridianCity_PokemonCenter_1F_EventScript_Youngster::
 	end
 
 ViridianCity_PokemonCenter_1F_Text_FeelFreeToUsePC::
-	.string "Please feel free to use that PC in\n"
-	.string "the corner.\p"
-	.string "The receptionist told me so.\n"
-	.string "It's so kind of her!$"
+	.string "Use the PC in the corner. It still\n"
+	.string "works.\p"
+	.string "TEAM ROCKET reads everything on\n"
+	.string "it, though.$"
 
 ViridianCity_PokemonCenter_1F_Text_PokeCenterInEveryTown::
 	.string "There's a HEAL-BOT in every town\n"

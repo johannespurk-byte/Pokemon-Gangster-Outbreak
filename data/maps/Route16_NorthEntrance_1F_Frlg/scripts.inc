@@ -114,8 +114,8 @@ Route16_NorthEntrance_1F_EventScript_OldMan::
 	end
 
 Route16_NorthEntrance_1F_Text_NoPedestriansOnCyclingRoad::
-	.string "No pedestrians are allowed on\n"
-	.string "CYCLING ROAD!$"
+	.string "No pedestrians on CYCLING ROAD!\n"
+	.string "The bike gangs will run you over!$"
 
 Route16_NorthEntrance_1F_Text_CyclingRoadIsDownhillCourse::
 	.string "CYCLING ROAD is a downhill course\n"

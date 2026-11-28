@@ -139,10 +139,9 @@ VictoryRoad_3F_Text_RayPostBattle::
 	.string "Usually.$"
 
 VictoryRoad_3F_Text_RayNotEnoughMons::
-	.string "RAY: Together, the two of us are\n"
-	.string "striving for the pinnacle.\p"
-	.string "We need you to bring two POKéMON\n"
-	.string "into battle with us.$"
+	.string "RAY: Together, we're going to the\n"
+	.string "top.\p"
+	.string "Bring two POKéMON to fight us.$"
 
 VictoryRoad_3F_Text_TyraIntro::
 	.string "GIOVANNI invited me to his\n"
@@ -157,6 +156,6 @@ VictoryRoad_3F_Text_TyraPostBattle::
 	.string "How charming.$"
 
 VictoryRoad_3F_Text_TyraNotEnoughMons::
-	.string "TYRA: You can't battle with us if\n"
-	.string "you have only one POKéMON.$"
+	.string "TYRA: You can't fight us with just\n"
+	.string "one POKéMON.$"
 

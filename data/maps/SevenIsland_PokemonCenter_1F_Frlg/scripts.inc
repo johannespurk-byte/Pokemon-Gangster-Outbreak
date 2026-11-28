@@ -27,11 +27,11 @@ SevenIsland_PokemonCenter_1F_EventScript_Beauty::
 	end
 
 SevenIsland_PokemonCenter_1F_Text_EventsDependingOnConnections::
-	.string "On this island, different events\n"
-	.string "occur depending on connections.\p"
-	.string "What are those connections?\p"
-	.string "They are for you to discover on\n"
-	.string "your own.$"
+	.string "On this island, different things\n"
+	.string "happen depending on connections.\p"
+	.string "What connections?\p"
+	.string "Find out yourself. That's how it\n"
+	.string "works on the streets, too.$"
 
 SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere::
 	.string "Did you ride a SEAGALLOP ferry\n"

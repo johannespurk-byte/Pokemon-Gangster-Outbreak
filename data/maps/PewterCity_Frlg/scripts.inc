@@ -866,9 +866,9 @@ Text_DreamEaterTaught::
 
 PewterCity_Text_ClefairyCameFromMoon::
 	.string "CLEFAIRY came from the moon.\n"
-	.string "That's what the rumor is.\p"
-	.string "They appeared after MOON STONES\n"
-	.string "fell on MT. MOON.$"
+	.string "That's the rumor.\p"
+	.string "TEAM YELL sells MOON STONES from\n"
+	.string "MT. MOON at triple price.$"
 
 PewterCity_Text_BrockOnlySeriousTrainerHere::
 	.string "TEAM YELL took over the GYM.\p"
@@ -884,8 +884,8 @@ PewterCity_Text_WerentThoseFossilsAmazing::
 	.string "black market.$"
 
 PewterCity_Text_ReallyYouHaveToGo::
-	.string "Really?\n"
-	.string "You absolutely have to go!$"
+	.string "Really? You absolutely have to go!\n"
+	.string "Before TEAM YELL takes it over!$"
 
 PewterCity_Text_ThisIsTheMuseum::
 	.string "This is the MUSEUM.\p"
@@ -893,8 +893,8 @@ PewterCity_Text_ThisIsTheMuseum::
 	.string "door, but it's worth it. See you!$"
 
 PewterCity_Text_DoYouKnowWhatImDoing::
-	.string "Psssst!\n"
-	.string "Do you know what I'm doing?$"
+	.string "Psssst! Do you know what I'm\n"
+	.string "doing? Hiding from TEAM YELL.$"
 
 PewterCity_Text_ThatsRightItsHardWork::
 	.string "That's right!\n"
@@ -941,10 +941,10 @@ PewterCity_Text_OhPlayer::
 	.string "Oh, {PLAYER}{KUN}!$"
 
 PewterCity_Text_AskedToDeliverThis::
-	.string "I'm glad I caught up to you.\n"
-	.string "I'm PROF. OAK's AIDE.\p"
-	.string "I've been asked to deliver this,\n"
-	.string "so here you go.$"
+	.string "Glad I caught up to you! I'm PROF.\n"
+	.string "OAK's AIDE.\p"
+	.string "I sneaked past SILVER's crew to\n"
+	.string "deliver this. Here you go.$"
 
 PewterCity_Text_ReceivedRunningShoesFromAide::
 	.string "{PLAYER} received the\n"
@@ -955,20 +955,20 @@ PewterCity_Text_SwitchedShoesWithRunningShoes::
 	.string "RUNNING SHOES.$"
 
 PewterCity_Text_ExplainRunningShoes::
-	.string "Press the B Button to run.\n"
-	.string "But only where there's room to run!$"
+	.string "Press the B Button to run. Running\n"
+	.string "is a gangster's best skill!$"
 
 PewterCity_Text_MustBeGoingBackToLab::
-	.string "Well, I must be going back to\n"
-	.string "the LAB.\p"
-	.string "Bye-bye!$"
+	.string "Well, I must sneak back to the LAB.\p"
+	.string "Bye-bye! Don't tell TEAM YELL you\n"
+	.string "saw me!$"
 
 PewterCity_Text_RunningShoesLetterFromMom::
 	.string "There's a letter attached…\p"
 	.string "Dear {PLAYER},\p"
-	.string "Here is a pair of RUNNING SHOES\n"
-	.string "for my beloved challenger.\p"
-	.string "Remember, I'll always cheer for\n"
-	.string "you! Don't ever give up!\p"
-	.string "From Mom$"
+	.string "Here are RUNNING SHOES. Out there,\n"
+	.string "you'll need to run sometimes.\p"
+	.string "No matter what GIOVANNI says,\n"
+	.string "you're still my kid.\p"
+	.string "Come home safe. Love, Mom$"
 

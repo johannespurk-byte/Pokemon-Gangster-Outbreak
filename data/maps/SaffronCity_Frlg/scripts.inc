@@ -134,33 +134,34 @@ SaffronCity_Text_BossTakeTownForTeamRocket::
 	.string "the city.$"
 
 SaffronCity_Text_DontGetDefiantOrIllHurtYou::
-	.string "Don't get defiant!\n"
-	.string "Or I'll have to hurt you!$"
+	.string "Don't get smart with me! Or I'll\n"
+	.string "have to hurt you!$"
 
 SaffronCity_Text_SaffronBelongsToTeamRocket::
 	.string "SILPH CO. belongs to TEAM ROCKET!\p"
 	.string "Tell those FLARE snobs!$"
 
 SaffronCity_Text_CriminalLifeMakesMeFeelAlive::
-	.string "My life as a criminal makes me feel\n"
-	.string "so alive!$"
+	.string "Gang life makes me feel so alive!$"
 
 SaffronCity_Text_WatchWhereYoureWalking::
 	.string "Ow!\n"
 	.string "Watch where you're walking!$"
 
 SaffronCity_Text_WeCanExploitMonsAroundWorld::
-	.string "With SILPH under control, we can\n"
-	.string "exploit POKéMON around the world!\p"
+	.string "With SILPH under ROCKET control,\n"
+	.string "we'll sell POKéMON all over the\p"
+	.string "world!\p"
 	.string "We'll get stinking rich, yeahah!$"
 
 SaffronCity_Text_YouBeatTeamRocket::
-	.string "You beat TEAM ROCKET all alone?\n"
-	.string "That's amazing!$"
+	.string "You threw TEAM ROCKET out of\n"
+	.string "SILPH all alone? That's amazing!$"
 
 SaffronCity_Text_SafeToGoOutAgain::
-	.string "Yeah! TEAM ROCKET is gone!\n"
-	.string "It's safe to go out again!$"
+	.string "TEAM ROCKET left SILPH! It's a bit\n"
+	.string "safer now. Only TEAM FLARE left to\p"
+	.string "worry about.$"
 
 SaffronCity_Text_PeopleComingBackToSaffron::
 	.string "People fled when the ROCKETS\n"
@@ -169,21 +170,22 @@ SaffronCity_Text_PeopleComingBackToSaffron::
 	.string "left to fear.$"
 
 SaffronCity_Text_FlewHereOnPidgeot::
-	.string "I flew here on my PIDGEOT when\n"
-	.string "I read about SILPH.\p"
-	.string "It's already over?\n"
-	.string "I missed the media action…$"
+	.string "I flew here on my PIDGEOT when I\n"
+	.string "read about SILPH.\p"
+	.string "It's already over? I missed the\n"
+	.string "whole fight…$"
 
 SaffronCity_Text_Pidgeot::
 	.string "PIDGEOT: Bi bibii!$"
 
 SaffronCity_Text_SawRocketBossEscaping::
-	.string "I saw the ROCKET BOSS escaping\n"
-	.string "SILPH's building.$"
+	.string "I saw the ROCKET BOSS leave\n"
+	.string "SILPH. He was smiling. Why was he\p"
+	.string "smiling?$"
 
 SaffronCity_Text_ImASecurityGuard::
 	.string "I'm a security guard.\p"
-	.string "Suspicious kids I don't allow in!$"
+	.string "No gang kids allowed in!$"
 
 SaffronCity_Text_HesTakingASnooze::
 	.string "…\n"
@@ -223,8 +225,8 @@ SaffronCity_Text_MrPsychicsHouse::
 	.string "MR. PSYCHIC'S HOUSE$"
 
 SaffronCity_Text_SilphsLatestProduct::
-	.string "SILPH's latest product!\n"
-	.string "Release to be determined…$"
+	.string "SILPH's latest product! Release\n"
+	.string "delayed until the gang war ends…$"
 
 SaffronCity_Text_TrainerFanClubSign::
 	.string "POKéMON TRAINER FAN CLUB\p"

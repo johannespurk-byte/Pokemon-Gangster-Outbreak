@@ -48,9 +48,10 @@ Route16_House_Text_ReceivedHM02FromGirl::
 	.string "from the girl.$"
 
 Route16_House_Text_ExplainHM02::
-	.string "HM02 is FLY.\n"
-	.string "It's a wonderfully convenient move.\p"
-	.string "Please, put it to good use.$"
+	.string "HM02 is FLY.\p"
+	.string "With a BADGE and the HM in your\n"
+	.string "BAG, you can fly away from any\p"
+	.string "gang. Use it well.$"
 
 Route16_House_Text_DontHaveAnyRoomForThis::
 	.string "You don't have any room for this.$"

@@ -61,10 +61,10 @@ Route10_PokemonCenter_1F_EventScript_GetAideRequestInfo::
 	return
 
 Route10_PokemonCenter_1F_Text_EveryTypeStrongerThanOthers::
-	.string "The types of POKéMON match up\n"
-	.string "differently with each other.\p"
-	.string "Every type is stronger than some\n"
-	.string "types and weaker than others.$"
+	.string "Types match up differently.\p"
+	.string "Every type is strong against some\n"
+	.string "and weak against others. Like the\p"
+	.string "gangs.$"
 
 Route10_PokemonCenter_1F_Text_NuggetUselessSoldFor5000::
 	.string "I found a NUGGET in a loot bag.\p"
@@ -77,23 +77,21 @@ Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender::
 	.string "Even the gangs stay away from it.$"
 
 Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons::
-	.string "Oh… {PLAYER}!\n"
-	.string "I've been looking for you!\p"
-	.string "It's me, one of the ever-present\n"
-	.string "AIDES to PROF. OAK.\p"
-	.string "If your POKéDEX has complete data\n"
-	.string "on twenty species, I'm supposed to\l"
-	.string "give you a reward from PROF. OAK.\p"
-	.string "He entrusted me with this\n"
-	.string "EVERSTONE.\p"
+	.string "Oh… {PLAYER}! I've been looking\n"
+	.string "for you!\p"
+	.string "I'm one of PROF. OAK's AIDES.\n"
+	.string "We're everywhere. Quietly.\p"
+	.string "If your POKéDEX has data on\n"
+	.string "twenty species, I have a reward.\p"
+	.string "PROF. OAK left this EVERSTONE for\n"
+	.string "you.\p"
 	.string "So, {PLAYER}, let me ask you.\p"
-	.string "Have you gathered data on at least\n"
-	.string "twenty kinds of POKéMON?$"
+	.string "Have you gathered data on at\n"
+	.string "least twenty kinds of POKéMON?$"
 
 Route10_PokemonCenter_1F_Text_GreatHereYouGo::
 	.string "Great! You have caught or owned\n"
 	.string "{STR_VAR_3} kinds of POKéMON!\p"
-	.string "Congratulations!\n"
 	.string "Here you go!$"
 
 Route10_PokemonCenter_1F_Text_ReceivedEverstoneFromAide::
@@ -101,12 +99,12 @@ Route10_PokemonCenter_1F_Text_ReceivedEverstoneFromAide::
 	.string "from the AIDE.$"
 
 Route10_PokemonCenter_1F_Text_ExplainEverstone::
-	.string "Making POKéMON evolve certainly\n"
-	.string "can add to the POKéDEX.\p"
-	.string "However, at times, you may not\n"
-	.string "want a certain POKéMON to evolve.\p"
-	.string "In that case, give the EVERSTONE\n"
-	.string "to that POKéMON.\p"
-	.string "It will prevent evolution according\n"
-	.string "to the PROFESSOR.$"
+	.string "Evolving POKéMON fills the\n"
+	.string "POKéDEX.\p"
+	.string "But sometimes you want one to\n"
+	.string "stay the way it is.\p"
+	.string "Then give it the EVERSTONE to\n"
+	.string "hold.\p"
+	.string "It stops evolution. Even GIOVANNI\n"
+	.string "uses one.$"
 

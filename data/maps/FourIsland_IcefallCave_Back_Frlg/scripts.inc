@@ -192,9 +192,9 @@ FourIsland_IcefallCave_Back_EventScript_Lorelei::
 
 FourIsland_IcefallCave_Back_Text_LoreleiKeepHandsOffMons::
 	.string "LORELEI: Keep your filthy hands\n"
-	.string "off the POKéMON in the cave!\p"
-	.string "Do as I say, or you'll have me to\n"
-	.string "answer to!$"
+	.string "off the POKéMON in this cave!\p"
+	.string "Do as I say, or you'll answer to\n"
+	.string "me!$"
 
 FourIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe::
 	.string "Aww, shut it, lady. You're not\n"
@@ -203,16 +203,14 @@ FourIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe::
 	.string "steamed up!$"
 
 FourIsland_IcefallCave_Back_Text_LoreleiPlayerHelpMeKickPoachersOut::
-	.string "LORELEI: {PLAYER}?!\n"
-	.string "What are you doing here?\p"
-	.string "No, we can catch up later.\n"
-	.string "Right now, I need your help.\p"
-	.string "Help me kick these poachers out\n"
-	.string "before they do anything else.\p"
-	.string "They've been catching POKéMON\n"
-	.string "here, then selling them off!\p"
-	.string "Are you ready?\n"
-	.string "You take that one, please!$"
+	.string "LORELEI: {PLAYER}?! GIOVANNI's\n"
+	.string "recruit, here?\p"
+	.string "No, we can talk later. I need your\n"
+	.string "help.\p"
+	.string "Help me throw these poachers out.\p"
+	.string "They catch POKéMON here and sell\n"
+	.string "them to the KANTO gangs!\p"
+	.string "Ready? You take that one!$"
 
 FourIsland_IcefallCave_Back_Text_GruntIntro::
 	.string "W-what?! Who says we can't sell\n"
@@ -223,26 +221,22 @@ FourIsland_IcefallCave_Back_Text_GruntDefeat::
 	.string "We didn't plan on this!$"
 
 FourIsland_IcefallCave_Back_Text_LoreleiWhereHaveYouTakenMons::
-	.string "LORELEI: Humph.\n"
-	.string "So despicably weak.\p"
-	.string "You!\n"
-	.string "Tell me!\p"
-	.string "Where have you taken the captured\n"
+	.string "LORELEI: Humph. Pathetic.\p"
+	.string "You! Tell me!\p"
+	.string "Where did you take the captured\n"
 	.string "POKéMON?\p"
-	.string "I'm smashing your ring once and\n"
-	.string "for all!$"
+	.string "I'm shutting your ring down for\n"
+	.string "good!$"
 
 FourIsland_IcefallCave_Back_Text_NotTellingYouThat::
-	.string "N-no way!\n"
-	.string "I'm not telling you that!$"
+	.string "N-no way! ARCHER would kill me!$"
 
 FourIsland_IcefallCave_Back_Text_LoreleiWellDeepFreezeYou::
-	.string "LORELEI: If you won't confess,\n"
-	.string "we'll deep-freeze you.\p"
-	.string "My LAPRAS is furious for what\n"
-	.string "you've done to its friends.\p"
-	.string "Go, LAPRAS!\n"
-	.string "ICE BEAM…$"
+	.string "LORELEI: If you won't talk, we'll\n"
+	.string "deep-freeze you.\p"
+	.string "My LAPRAS is furious about its\n"
+	.string "friends.\p"
+	.string "Go, LAPRAS! ICE BEAM…$"
 
 FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland::
 	.string "Wawaah! Okay!\n"

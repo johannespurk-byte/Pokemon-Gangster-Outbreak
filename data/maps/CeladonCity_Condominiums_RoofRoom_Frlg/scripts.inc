@@ -104,12 +104,13 @@ CeladonCity_Condominiums_RoofRoom_EventScript_ExitBlackboard::
 	end
 
 CeladonCity_Condominiums_RoofRoom_Text_TheresNothingIDontKnow::
-	.string "There is nothing that I don't know,\n"
-	.string "like I wrote on the blackboard.\p"
-	.string "I know about the world of POKéMON\n"
-	.string "in your GAME BOY ADVANCE!\p"
-	.string "Get together with your friends and\n"
-	.string "enjoy trading POKéMON!$"
+	.string "There's nothing I don't know, like\n"
+	.string "I wrote on the blackboard.\p"
+	.string "I know every gang hideout in\n"
+	.string "KANTO!\p"
+	.string "Get together with your friends\n"
+	.string "and trade POKéMON. Safer than\p"
+	.string "buying them.$"
 
 CeladonCity_Condominiums_RoofRoom_Text_ObtainedAnEevee::
 	.string "{PLAYER} obtained an EEVEE!$"
@@ -151,7 +152,7 @@ CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs::
 	.string "It's a pamphlet on TMs.\p"
 	.string "… …\p"
 	.string "There are fifty TMs in all.\p"
-	.string "There are also seven HMs that\n"
-	.string "can be used repeatedly.\p"
+	.string "And seven HMs. Carry the HM and a\n"
+	.string "BADGE, and you can use the move.\p"
 	.string "SILPH CO.$"
 

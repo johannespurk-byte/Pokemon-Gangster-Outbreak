@@ -268,10 +268,10 @@ ViridianCity_Gym_Text_ReceivedTM26FromGiovanni::
 
 ViridianCity_Gym_Text_ExplainTM26::
 	.string "TM26 contains EARTHQUAKE.\p"
-	.string "It is a powerful attack that causes\n"
-	.string "a massive tremor.\p"
-	.string "I made it when I ran the GYM here,\n"
-	.string "far too long ago… $"
+	.string "It shakes the ground under the\n"
+	.string "whole battlefield.\p"
+	.string "I used it to take this city. Now\n"
+	.string "you can take the next one.$"
 
 ViridianCity_Gym_Text_YouDoNotHaveSpace::
 	.string "You do not have space for this!$"

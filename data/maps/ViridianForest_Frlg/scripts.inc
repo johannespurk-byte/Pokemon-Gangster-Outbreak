@@ -138,8 +138,8 @@ ViridianForest_Text_AvoidGrassyAreasWhenWeak::
 	.string "from grassy areas!$"
 
 ViridianForest_Text_UseAntidoteForPoison::
-	.string "For poison, use ANTIDOTE!\n"
-	.string "Get it at POKéMON MARTS!$"
+	.string "For poison, use ANTIDOTE! The\n"
+	.string "vending machines sell them.$"
 
 ViridianForest_Text_ContactOakViaPCToRatePokedex::
 	.string "TRAINER TIPS\p"

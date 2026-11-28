@@ -140,9 +140,8 @@ OneIsland_KindleRoad_Text_KiaPostBattle::
 	.string "boss.$"
 
 OneIsland_KindleRoad_Text_KiaNotEnoughMons::
-	.string "KIA: If you want to battle with\n"
-	.string "us, you have to bring at least two\l"
-	.string "POKéMON with you.$"
+	.string "KIA: Want to fight us? Bring at\n"
+	.string "least two POKéMON.$"
 
 OneIsland_KindleRoad_Text_MikIntro::
 	.string "ARCHER said nobody passes. That\n"
@@ -156,10 +155,8 @@ OneIsland_KindleRoad_Text_MikPostBattle::
 	.string "Mostly.$"
 
 OneIsland_KindleRoad_Text_MikNotEnoughMons::
-	.string "MIK: Hey, do you want to battle\n"
-	.string "with us two?\p"
-	.string "Bring two or more POKéMON with\n"
-	.string "you, then.$"
+	.string "MIK: Want to take us both on?\p"
+	.string "Then bring two or more POKéMON.$"
 
 OneIsland_KindleRoad_Text_RouteSign::
 	.string "This is KINDLE ROAD.\p"

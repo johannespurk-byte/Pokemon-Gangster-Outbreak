@@ -1530,11 +1530,11 @@ PalletTown_ProfessorOaksLab_Text_OakComeSeeMeSometime::
 
 PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia::
 	.string "It's like an encyclopedia, but the\n"
-	.string "pages are blank.$"
+	.string "pages were torn out and sold.$"
 
 PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls::
-	.string "Those are POKé BALLS.\n"
-	.string "They contain POKéMON!$"
+	.string "Those are POKé BALLS. The crew\n"
+	.string "counts them every night.$"
 
 PalletTown_ProfessorOaksLab_Text_OaksLastMon::
 	.string "That's PROF. OAK's last POKéMON.$"
@@ -1543,26 +1543,23 @@ PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu::
 	.string "Press START to open the MENU!$"
 
 PalletTown_ProfessorOaksLab_Text_SaveOptionInMenu::
-	.string "The SAVE option is on the MENU.\n"
-	.string "Use it regularly.$"
+	.string "SAVE often. Out there, one bad\n"
+	.string "fight and it's over.\p"
+	.string "The SAVE option is on the MENU.$"
 
 PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints::
-	.string "All POKéMON types have strong and\n"
-	.string "weak points against others.$"
+	.string "Every type has strong and weak\n"
+	.string "points.\p"
+	.string "Every gang, too. Learn them.$"
 
 PalletTown_ProfessorOaksLab_Text_EmailMessage::
 	.string "There's an e-mail message here.\p"
 	.string "…\p"
-	.string "Finally!\n"
-	.string "The ultimate TRAINERS of the\l"
-	.string "POKéMON LEAGUE are ready to\l"
-	.string "take on all comers!\p"
-	.string "Bring your best POKéMON and see\n"
-	.string "how you rate as a TRAINER!\p"
-	.string "POKéMON LEAGUE HQ\n"
-	.string "INDIGO PLATEAU\p"
-	.string "PROF. OAK, please visit us!\n"
-	.string "…$"
+	.string "“The ELITE FOUR has fallen.\n"
+	.string "SILVER holds the title now.\p"
+	.string "Bring your best POKéMON, if you\n"
+	.string "dare.\p"
+	.string "INDIGO PLATEAU”$"
 
 PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
 	.string "GIOVANNI took over this lab.\p"
@@ -1570,22 +1567,20 @@ PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
 	.string "the boss now.$"
 
 PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
-	.string "Hi, {PLAYER}. I bet you've become\n"
-	.string "good friends with your POKéMON.\p"
-	.string "By the way, did you know about\n"
-	.string "DAISY?\p"
-	.string "If you show DAISY your POKéMON,\n"
-	.string "she can tell how much it likes you.\p"
-	.string "Occasionally, she will even groom\n"
-	.string "a POKéMON for you.\p"
-	.string "This is a secret, so please don't\n"
-	.string "tell anyone.$"
+	.string "Hi, {PLAYER}. Your POKéMON look\n"
+	.string "like they've seen some fights.\p"
+	.string "DAISY lives in SILVER's hideout\n"
+	.string "now. She grooms POKéMON for the\p"
+	.string "crew.\p"
+	.string "Show her your partner. She'll tell\n"
+	.string "you how much it trusts you.\p"
+	.string "Don't tell SILVER I sent you.$"
 
 PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow::
-	.string "PROF. OAK is going to have his own\n"
-	.string "radio show soon.\p"
-	.string "The program will be called PROF.\n"
-	.string "OAK's POKéMON SEMINAR.$"
+	.string "PROF. OAK wants his own radio\n"
+	.string "show.\p"
+	.string "SILVER said the crew will only\n"
+	.string "listen if it's about battling.$"
 
 PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons::
 	.string "OAK ran off when the gangs\n"

@@ -101,8 +101,8 @@ ViridianCity_School_Text_TryingToMemorizeNotes::
 
 ViridianCity_School_Text_ReadBlackboardCarefully::
 	.string "Okay!\p"
-	.string "Be sure to read what's on the\n"
-	.string "blackboard carefully!$"
+	.string "Read the blackboard carefully. It\n"
+	.string "might save your life out there!$"
 
 ViridianCity_School_Text_NotebookFirstPage::
 	.string "Let's check out the notebook.\p"
@@ -112,33 +112,29 @@ ViridianCity_School_Text_NotebookFirstPage::
 	.string "Up to six POKéMON can be carried\n"
 	.string "in your party.\p"
 	.string "People who raise and battle\n"
-	.string "with POKéMON are called TRAINERS.$"
+	.string "POKéMON are called TRAINERS. Or\p"
+	.string "gangsters.$"
 
 ViridianCity_School_Text_NotebookSecondPage::
 	.string "Second page…\p"
-	.string "A healthy POKéMON may be hard to\n"
+	.string "A healthy POKéMON is hard to\n"
 	.string "catch, so weaken it first.\p"
-	.string "Poison, burn, or cause another\n"
-	.string "status problem to weaken it.$"
+	.string "Poison, burn, or another status\n"
+	.string "problem helps.$"
 
 ViridianCity_School_Text_NotebookThirdPage::
 	.string "Third page…\p"
-	.string "POKéMON TRAINERS seek others to\n"
-	.string "engage in POKéMON battles.\p"
-	.string "To TRAINERS, the taste of victory\n"
-	.string "is sweet, indeed.\p"
-	.string "Battles are constantly waged at\n"
-	.string "POKéMON GYMS everywhere.$"
+	.string "TRAINERS seek out battles. Gangs\n"
+	.string "seek out turf.\p"
+	.string "Every GYM in KANTO is run by a gang\n"
+	.string "boss now.$"
 
 ViridianCity_School_Text_NotebookFourthPage::
 	.string "Fourth page…\p"
-	.string "The ultimate goal for all POKéMON\n"
-	.string "TRAINERS is simple.\p"
-	.string "It is to defeat the top eight\n"
-	.string "POKéMON GYM LEADERS.\p"
+	.string "To rise in GIOVANNI's ranks, you\n"
+	.string "must beat the eight gang bosses.\p"
 	.string "Do so to earn the right to face…\p"
-	.string "The ELITE FOUR of the POKéMON\n"
-	.string "LEAGUE!$"
+	.string "The ELITE FOUR and the CHAMPION!$"
 
 ViridianCity_School_Text_TurnThePage::
 	.string "Turn the page?$"
@@ -148,43 +144,39 @@ ViridianCity_School_Text_HeyDontLookAtMyNotes::
 	.string "Don't look at my notes!$"
 
 ViridianCity_School_Text_BlackboardListsStatusProblems::
-	.string "The blackboard lists POKéMON\n"
-	.string "STATUS problems during battles.$"
+	.string "The blackboard lists STATUS\n"
+	.string "problems. Gang fights cause\p"
+	.string "plenty of them.$"
 
 ViridianCity_School_Text_ReadWhichTopic::
 	.string "Which topic do you want to read?$"
 
 ViridianCity_School_Text_ExplainSleep::
-	.string "A POKéMON can't attack if it's\n"
-	.string "asleep.\p"
-	.string "POKéMON will stay asleep even\n"
-	.string "after battles.\p"
-	.string "Use AWAKENING to awaken one\n"
-	.string "from sleep.$"
+	.string "A sleeping POKéMON can't attack.\p"
+	.string "It stays asleep after battles,\n"
+	.string "too. Use AWAKENING to wake it.$"
 
 ViridianCity_School_Text_ExplainBurn::
-	.string "A burn reduces ATTACK power.\n"
-	.string "It also causes ongoing HP loss.\p"
-	.string "A burn remains after a battle.\n"
-	.string "Use BURN HEAL to cure a burn.$"
+	.string "A burn lowers ATTACK and drains HP\n"
+	.string "every turn.\p"
+	.string "It lasts after battles. Use BURN\n"
+	.string "HEAL.$"
 
 ViridianCity_School_Text_ExplainPoison::
-	.string "When poisoned, a POKéMON's health\n"
-	.string "steadily drops.\p"
-	.string "Poison lingers after battles.\n"
-	.string "Use an ANTIDOTE to cure poison!$"
+	.string "Poison drains HP, even after\n"
+	.string "battles.\p"
+	.string "The gangs love poison. Carry\n"
+	.string "ANTIDOTES!$"
 
 ViridianCity_School_Text_ExplainFreeze::
-	.string "A frozen POKéMON becomes\n"
-	.string "helplessly immobile.\p"
-	.string "It stays frozen even after the\n"
-	.string "battle ends.\p"
-	.string "Use ICE HEAL to thaw out the\n"
-	.string "suffering POKéMON.$"
+	.string "A frozen POKéMON can't move at\n"
+	.string "all.\p"
+	.string "It stays frozen after battle. Use\n"
+	.string "ICE HEAL to thaw it.$"
 
 ViridianCity_School_Text_ExplainParalysis::
-	.string "Paralysis reduces SPEED and may\n"
-	.string "prevent the POKéMON from moving.\p"
-	.string "Paralysis remains after battles.\n"
-	.string "Use PARLYZ HEAL for treatment.$"
+	.string "Paralysis lowers SPEED and may\n"
+	.string "stop a POKéMON from moving.\p"
+	.string "It lasts after battles. Use\n"
+	.string "PARLYZ HEAL.$"
 

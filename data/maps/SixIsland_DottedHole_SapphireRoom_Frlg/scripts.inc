@@ -242,9 +242,8 @@ SixIsland_DottedHole_SapphireRoom_Text_FoundSapphire::
 	.string "{PLAYER} found a SAPPHIRE!$"
 
 SixIsland_DottedHole_SapphireRoom_Text_IWasRightInTailingYou::
-	.string "Fufu… Fufufufu…\n"
-	.string "I guessed right.\p"
-	.string "I was right in tailing you!$"
+	.string "Fufu… Fufufufu… I knew it.\p"
+	.string "Tailing you paid off!$"
 
 SixIsland_DottedHole_SapphireRoom_Text_SellToTeamRocketTellPassword::
 	.string "I knew that there was a SAPPHIRE\n"

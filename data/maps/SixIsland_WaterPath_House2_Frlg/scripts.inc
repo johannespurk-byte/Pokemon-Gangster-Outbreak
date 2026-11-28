@@ -6,8 +6,8 @@ SixIsland_WaterPath_House2_EventScript_Man::
 	end
 
 SixIsland_WaterPath_House2_Text_MyNeighborMeasuredMe::
-	.string "My height is 67.0 inches on the\n"
-	.string "button.\p"
-	.string "I know it is this precisely because\n"
-	.string "my neighbor measured me.$"
+	.string "I'm exactly 67.0 inches tall.\p"
+	.string "I know because my neighbor\n"
+	.string "measured me. She measures\p"
+	.string "everything.$"
 

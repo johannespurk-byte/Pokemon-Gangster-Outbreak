@@ -133,22 +133,24 @@ SilphCo_11F_EventScript_Grunt2::
 	end
 
 SilphCo_11F_Text_ThanksForSavingMeDearBoy::
-	.string "PRESIDENT: Oh, dear boy!\n"
-	.string "Thank you for saving SILPH.\p"
-	.string "I will never forget you saved us in\n"
-	.string "our moment of peril.\p"
-	.string "I have to thank you in some way.\p"
-	.string "Because I am rich, I can give you\n"
+	.string "PRESIDENT: Oh, dear boy! Thank you\n"
+	.string "for saving SILPH.\p"
+	.string "GIOVANNI sent his own recruit to\n"
+	.string "stop his men? I don't understand\p"
+	.string "it.\p"
+	.string "But I must thank you somehow.\p"
+	.string "I am rich, so I can give you\n"
 	.string "anything.\p"
 	.string "Here, maybe this will do.$"
 
 SilphCo_11F_Text_ThanksForSavingMeDearGirl::
-	.string "PRESIDENT: Oh, dear girl!\n"
-	.string "Thank you for saving SILPH.\p"
-	.string "I will never forget you saved us in\n"
-	.string "our moment of peril.\p"
-	.string "I have to thank you in some way.\p"
-	.string "Because I am rich, I can give you\n"
+	.string "PRESIDENT: Oh, dear girl! Thank\n"
+	.string "you for saving SILPH.\p"
+	.string "GIOVANNI sent his own recruit to\n"
+	.string "stop his men? I don't understand\p"
+	.string "it.\p"
+	.string "But I must thank you somehow.\p"
+	.string "I am rich, so I can give you\n"
 	.string "anything.\p"
 	.string "Here, maybe this will do.$"
 

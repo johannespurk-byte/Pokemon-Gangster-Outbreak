@@ -143,12 +143,13 @@ MtMoon_B2F_Text_MiguelDefeat::
 	.string "Okay! I'll share!$"
 
 MtMoon_B2F_Text_WellEachTakeAFossil::
-	.string "We'll each take a fossil!\n"
-	.string "No being greedy!$"
+	.string "We'll each take a fossil! No being\n"
+	.string "greedy! That's TEAM YELL's job!$"
 
 MtMoon_B2F_Text_ThenThisFossilIsMine::
-	.string "All right.\n"
-	.string "Then this fossil is mine!$"
+	.string "All right. Then this fossil is mine!\n"
+	.string "Before the dealers in PEWTER get\p"
+	.string "it!$"
 
 MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils::
 	.string "Far away, on CINNABAR ISLAND,\n"

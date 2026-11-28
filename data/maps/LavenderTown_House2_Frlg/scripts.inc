@@ -73,11 +73,11 @@ LavenderTown_House2_Text_CritiqueWhichMonsNickname::
 	.string "I critique?$"
 
 LavenderTown_House2_Text_GiveItANicerName::
-	.string "{STR_VAR_1}, is it?\n"
-	.string "That is a decent nickname!\p"
-	.string "But, would you like me to give it\n"
-	.string "a nicer name?\p"
-	.string "How about it?$"
+	.string "{STR_VAR_1}, is it? A decent\n"
+	.string "nickname!\p"
+	.string "But a fighter needs a name the\n"
+	.string "gangs will remember.\p"
+	.string "How about a nicer one?$"
 
 LavenderTown_House2_Text_WhatShallNewNicknameBe::
 	.string "Ah, good. Then, what shall the new\n"
@@ -86,8 +86,7 @@ LavenderTown_House2_Text_WhatShallNewNicknameBe::
 LavenderTown_House2_Text_FromNowOnShallBeKnownAsName::
 	.string "Done! From now on, this POKéMON\n"
 	.string "shall be known as {STR_VAR_1}!\p"
-	.string "It is a better name than before!\n"
-	.string "How fortunate for you!$"
+	.string "The streets will fear that name!$"
 
 LavenderTown_House2_Text_ISeeComeVisitAgain::
 	.string "I see.\n"
@@ -96,13 +95,13 @@ LavenderTown_House2_Text_ISeeComeVisitAgain::
 LavenderTown_House2_Text_FromNowOnShallBeKnownAsSameName::
 	.string "Done! From now on, this POKéMON\n"
 	.string "shall be known as {STR_VAR_1}!\p"
-	.string "It looks no different from before,\n"
-	.string "and yet, this is vastly superior!\p"
+	.string "It sounds the same, and yet it's\n"
+	.string "so much tougher!\p"
 	.string "How fortunate for you!$"
 
 LavenderTown_House2_Text_TrulyImpeccableName::
-	.string "{STR_VAR_1}, is it?\n"
-	.string "That is a truly impeccable name!\p"
+	.string "{STR_VAR_1}, is it? A truly\n"
+	.string "impeccable name!\p"
 	.string "Take good care of {STR_VAR_1}!$"
 
 LavenderTown_House2_Text_ThatIsMerelyAnEgg::

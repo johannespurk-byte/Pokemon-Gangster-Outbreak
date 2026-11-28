@@ -74,26 +74,23 @@ SixIsland_WaterPath_House1_EventScript_SizeRecordNonEmpty::
 	end
 
 SixIsland_WaterPath_House1_Text_LoveItNeedItHeracross::
-	.string "Hera, hera, HERACROSS!\n"
-	.string "Big and shiny, it's the bug boss!\l"
-	.string "Love it, need it, HERACROSS!$"
+	.string "Hera, hera, HERACROSS! Big and\n"
+	.string "shiny, it's the bug boss! Love it,\p"
+	.string "need it, HERACROSS!$"
 
 SixIsland_WaterPath_House1_Text_MayIMeasureHeracross::
-	.string "Eeeeek!\n"
-	.string "That's a HERACROSS!\p"
-	.string "Please, please, may I measure how\n"
-	.string "big it is?$"
+	.string "Eeeeek! A HERACROSS!\p"
+	.string "Please, please, may I measure it?$"
 
 SixIsland_WaterPath_House1_Text_ItsXSizeDeserveReward::
-	.string "Eeeek, it's {STR_VAR_2}!\n"
-	.string "I've never seen anything like this!\l"
-	.string "You deserve a reward!$"
+	.string "Eeeek, it's {STR_VAR_2}! I've\n"
+	.string "never seen anything like it! You\p"
+	.string "deserve a reward!$"
 
 SixIsland_WaterPath_House1_Text_WantToSeeBiggerOne::
 	.string "I want to see a much, much bigger\n"
-	.string "HERACROSS than that one.\p"
-	.string "Oh, how I adore them, big\n"
-	.string "HERACROSS!$"
+	.string "HERACROSS.\p"
+	.string "Oh, how I adore big HERACROSS!$"
 
 SixIsland_WaterPath_House1_Text_ItsXSizeSameAsBefore::
 	.string "Huh? This {STR_VAR_2} measurement…\n"
@@ -107,8 +104,8 @@ SixIsland_WaterPath_House1_Text_ItsXSizeYSizeWasBiggest::
 
 SixIsland_WaterPath_House1_Text_ThisWontDo::
 	.string "Oh, no! This won't do!\p"
-	.string "HERACROSS looks much more macho\n"
-	.string "and cool, and has a lovely horn!$"
+	.string "HERACROSS is way more macho and\n"
+	.string "has a lovely horn!$"
 
 SixIsland_WaterPath_House1_Text_YourBagIsFull::
 	.string "Your BAG is full.\n"

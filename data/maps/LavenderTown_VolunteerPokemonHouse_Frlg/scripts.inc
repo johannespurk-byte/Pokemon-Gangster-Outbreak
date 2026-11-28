@@ -81,17 +81,19 @@ LavenderTown_VolunteerPokemonHouse_EventScript_Bookshelf::
 	end
 
 LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere::
-	.string "I recently moved to this town.\p"
-	.string "I hear that MR. FUJI's not from\n"
-	.string "these parts originally, either.$"
+	.string "I moved here to hide from the\n"
+	.string "gangs.\p"
+	.string "I hear MR. FUJI isn't from around\n"
+	.string "here either.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo::
 	.string "That's odd, MR. FUJI isn't here.\n"
-	.string "Where'd he go?$"
+	.string "Did the ROCKETS take him?$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother::
-	.string "MR. FUJI had been praying alone\n"
-	.string "for CUBONE's mother.$"
+	.string "MR. FUJI went to the TOWER to pray\n"
+	.string "for CUBONE's mother. Alone. With\p"
+	.string "ROCKETS everywhere.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons::
 	.string "This is MR. FUJI's house.\p"
@@ -111,12 +113,12 @@ LavenderTown_VolunteerPokemonHouse_Text_Psyduck::
 
 LavenderTown_VolunteerPokemonHouse_Text_IdLikeYouToHaveThis::
 	.string "MR. FUJI: {PLAYER}…\p"
-	.string "Your POKéDEX quest is one that\n"
-	.string "requires strong dedication.\p"
-	.string "Without deep love for POKéMON,\n"
-	.string "your quest may fail.\p"
-	.string "I'm not sure if this will help you,\n"
-	.string "but I'd like you to have it.$"
+	.string "You fight for GIOVANNI, but you\n"
+	.string "saved me from his men.\p"
+	.string "Never forget to love your\n"
+	.string "POKéMON. That's what makes you\p"
+	.string "different.\p"
+	.string "Please, take this.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_ReceivedPokeFluteFromMrFuji::
 	.string "{PLAYER} received a POKé FLUTE\n"
@@ -136,11 +138,10 @@ LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou::
 	.string "helped you?$"
 
 LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped::
-	.string "POKéMON FAN MAGAZINE\n"
-	.string "Monthly Grand Prize Drawing!\p"
-	.string "The application form is…\p"
-	.string "Gone! It's been clipped out.\n"
-	.string "Someone must have applied already.$"
+	.string "POKéMON FAN MAGAZINE Grand Prize\n"
+	.string "Drawing!\p"
+	.string "The form is… Gone! Clipped out.\n"
+	.string "Somebody beat you to it.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf::
 	.string "Old magazines line the shelf.\p"

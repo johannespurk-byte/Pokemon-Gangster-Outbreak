@@ -68,19 +68,20 @@ CeladonCity_Condominiums_3F_Text_IWroteTheStory::
 CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
 	.string "Is that right?\p"
 	.string "I'm the game designer!\p"
-	.string "Filling up your POKéDEX is tough,\n"
-	.string "but don't quit!\p"
+	.string "Filling the POKéDEX in a gang war\n"
+	.string "is tough, but don't quit!\p"
 	.string "When you finish, come tell me!$"
 
 CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations::
-	.string "Wow! Excellent!\n"
-	.string "You completed your POKéDEX!\l"
-	.string "Congratulations!\l"
+	.string "Wow! Excellent! You completed\n"
+	.string "your POKéDEX! Not even GIOVANNI\p"
+	.string "managed that!\p"
 	.string "…$"
 
 CeladonCity_Condominiums_3F_Text_ItsTheGameProgram::
-	.string "It's the game program! Messing with\n"
-	.string "it could bug out the game!$"
+	.string "It's the game program! A gang\n"
+	.string "hacker tried to edit it. It's full\p"
+	.string "of bugs now!$"
 
 CeladonCity_Condominiums_3F_Text_SomeonesPlayingGame::
 	.string "Someone's playing a game instead\n"
@@ -88,8 +89,9 @@ CeladonCity_Condominiums_3F_Text_SomeonesPlayingGame::
 	.string "Probably a TEAM MAGMA grunt.$"
 
 CeladonCity_Condominiums_3F_Text_ItsScriptBetterNotLookAtEnding::
-	.string "It's the script!\n"
-	.string "Better not look at the ending!$"
+	.string "It's the script! Better not look\n"
+	.string "at the ending! Who becomes\p"
+	.string "KINGPIN?$"
 
 CeladonCity_Condominiums_3F_Text_GameFreakDevelopmentRoom::
 	.string "GAME FREAK Development Room$"

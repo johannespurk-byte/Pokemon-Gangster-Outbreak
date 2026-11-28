@@ -16,10 +16,10 @@ PewterCity_House2_Text_MonsLearnTechniquesAsTheyGrow::
 	.string "people. Look for the tutors!$"
 
 PewterCity_House2_Text_MonsEasierCatchIfStatused::
-	.string "A POKéMON becomes easier to \n"
-	.string "catch if it has a status problem.\p"
+	.string "A POKéMON is easier to catch if it\n"
+	.string "has a status problem.\p"
 	.string "Sleep, poison, burn, or paralysis…\n"
-	.string "Those are all effective.\p"
-	.string "But catching POKéMON is never\n"
-	.string "a sure thing!$"
+	.string "They all help.\p"
+	.string "But nothing's a sure thing. Ask\n"
+	.string "any gambler in CELADON.$"
 

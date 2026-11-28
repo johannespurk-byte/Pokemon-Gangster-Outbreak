@@ -30,7 +30,6 @@ FuchsiaCity_House1_Text_BillIsMyGrandson::
 	.string "Smart boy, that one.$"
 
 FuchsiaCity_House1_Text_BillFilesHisOwnMonData::
-	.string "BILL files his own POKéMON data on\n"
-	.string "his PC.\p"
-	.string "Did he show you?$"
+	.string "BILL keeps his POKéMON data on\n"
+	.string "his PC. Encrypted. Smart guy.$"
 

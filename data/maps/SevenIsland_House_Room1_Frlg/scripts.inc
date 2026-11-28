@@ -170,13 +170,13 @@ SevenIsland_House_Room1_EventScript_Box::
 	end
 
 SevenIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles::
-	.string "I may not look like much now,\n"
-	.string "but when I was younger…\p"
+	.string "I may not look like much now, but\n"
+	.string "when I was young…\p"
 	.string "I flew everywhere, challenging\n"
-	.string "TRAINERS wherever I found them.\p"
-	.string "Now, my only source of enjoyment\n"
-	.string "is reminiscing about the past while\l"
-	.string "watching battles.$"
+	.string "every TRAINER I found.\p"
+	.string "Now I just watch fights and\n"
+	.string "remember the old days. Before the\p"
+	.string "gangs.$"
 
 SevenIsland_House_Room1_Text_SlightBreezeAroundBox::
 	.string "There is a slight breeze blowing\n"
@@ -193,32 +193,26 @@ SevenIsland_House_Room1_Text_ChallengeVisitingTrainer::
 	.string "{STR_VAR_1}, am I right?$"
 
 SevenIsland_House_Room1_Text_OhYouWontBattle::
-	.string "Oh…\n"
-	.string "You won't battle…\p"
-	.string "I see, I see.\n"
-	.string "… …\p"
-	.string "Well, perhaps if you change your\n"
-	.string "mind, do come back.$"
+	.string "Oh… You won't fight…\p"
+	.string "I see, I see. … …\p"
+	.string "Come back if you change your mind.$"
 
 SevenIsland_House_Room1_Text_LimitThreeMonsPerSide::
-	.string "Ah!\n"
-	.string "You will battle for me?\p"
-	.string "It was worth my time moving the\n"
-	.string "box aside, then.\p"
-	.string "… …\n"
-	.string "But there is one slight problem.\p"
-	.string "This hidden room is not built very\n"
+	.string "Ah! You'll fight for me?\p"
+	.string "Then it was worth moving the box.\p"
+	.string "… … But there's one problem.\p"
+	.string "This hidden room isn't very\n"
 	.string "sturdy.\p"
-	.string "Can I get you to limit it to\n"
-	.string "battles of three POKéMON per side?$"
+	.string "Can you keep it to three POKéMON\n"
+	.string "per side?$"
 
 SevenIsland_House_Room1_Text_SaveProgressBeforeBattle::
 	.string "Fine! Before your battle, would\n"
 	.string "you like to save your game?$"
 
 SevenIsland_House_Room1_Text_DontHoldAnythingBack::
-	.string "All right.\n"
-	.string "Don't hold anything back!$"
+	.string "All right. Don't hold anything\n"
+	.string "back!$"
 
 @ Unused
 SevenIsland_House_Room1_Text_StrVar1_1::
@@ -229,10 +223,8 @@ SevenIsland_House_Room2_Text_MatchEndedUpDraw::
 
 SevenIsland_House_Room1_Text_DrawWasIt::
 	.string "A draw, was it?\p"
-	.string "However, let me say that it was\n"
-	.string "a worthy spectacle.\p"
-	.string "I'd say it was a wonderful battle\n"
-	.string "with a real sense of depth!$"
+	.string "Still, a worthy spectacle.\p"
+	.string "A wonderful fight with real depth!$"
 
 @ Unused
 SevenIsland_House_Room1_Text_StrVar1_2::
@@ -240,27 +232,22 @@ SevenIsland_House_Room1_Text_StrVar1_2::
 
 SevenIsland_House_Room1_Text_AstoundingBattle::
 	.string "Bravo!\p"
-	.string "Bravo, indeed!\n"
-	.string "What an astounding battle!\p"
-	.string "It was so astounding, why, it keeps\n"
-	.string "filling my eyes with tears!\p"
-	.string "The thrust and parry of expertly\n"
-	.string "used techniques!\p"
-	.string "The clash of power upon power!\p"
-	.string "Yes!\n"
-	.string "It was sheer magnificence!$"
+	.string "Bravo, indeed! What a fight!\p"
+	.string "It brings tears to my eyes!\p"
+	.string "Skill against skill!\p"
+	.string "Power against power!\p"
+	.string "Better than any street fight in\n"
+	.string "KANTO!$"
 
 @ Unused
 SevenIsland_House_Room1_Text_StrVar1_3::
 	.string "{STR_VAR_1}$"
 
 SevenIsland_House_Room1_Text_FeelYourDisappointment::
-	.string "Too bad!\n"
-	.string "I feel your disappointment.\p"
-	.string "However, that disappointment is\n"
-	.string "what will make you better.\p"
-	.string "Use it, learn from it, and make it\n"
-	.string "motivate you to seek greatness.\p"
-	.string "Forget not this disappointment\n"
-	.string "and redouble your training!$"
+	.string "Too bad! I feel your\n"
+	.string "disappointment.\p"
+	.string "But that's what makes you better.\p"
+	.string "Learn from it. Let it drive you.\p"
+	.string "Never forget it, and train even\n"
+	.string "harder!$"
 

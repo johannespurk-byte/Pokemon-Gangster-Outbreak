@@ -51,11 +51,13 @@ PokemonMansion_1F_Text_BraydonDefeat::
 	.string "Overwhelming!$"
 
 PokemonMansion_1F_Text_BraydonPostBattle::
-	.string "So, you're stuck?\n"
-	.string "Try jumping off over there!$"
+	.string "Stuck? Try jumping off over\n"
+	.string "there! TEAM GALACTIC does it all\p"
+	.string "the time.$"
 
 PokemonMansion_1F_Text_MewGaveBirthToMewtwo::
-	.string "Diary: Feb. 6\n"
+	.string "Diary: Feb. 6\p"
 	.string "MEW gave birth.\p"
-	.string "We named the newborn MEWTWO.$"
+	.string "We named the newborn MEWTWO. The\n"
+	.string "suit came back. He wants it badly.$"
 

@@ -52,13 +52,13 @@ PokemonMansion_1F_Text_ArniePostBattle::
 	.string "alternating sets of doors.$"
 
 PokemonMansion_1F_Text_NewMonDiscoveredInGuyanaJungle::
-	.string "Diary: July 5\n"
-	.string "Guyana, South America\p"
-	.string "A new POKéMON was discovered deep\n"
-	.string "in the jungle.$"
+	.string "Diary: July 5\p"
+	.string "Guyana, South America.\p"
+	.string "A new POKéMON was found deep in\n"
+	.string "the jungle.$"
 
 PokemonMansion_1F_Text_ChristenedDiscoveredMonMew::
-	.string "Diary: July 10\n"
-	.string "We christened the newly discovered\l"
-	.string "POKéMON, MEW.$"
+	.string "Diary: July 10\p"
+	.string "We named the new POKéMON MEW. A\n"
+	.string "man in a suit offered to buy it.$"
 

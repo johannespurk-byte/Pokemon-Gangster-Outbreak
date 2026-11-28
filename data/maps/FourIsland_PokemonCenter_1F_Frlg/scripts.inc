@@ -59,12 +59,11 @@ FourIsland_PokemonCenter_1F_Text_RareIceMonsInCave::
 	.string "KANTO. Terrible!$"
 
 FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore::
-	.string "Oh? A POKéMON EGG?\n"
-	.string "…I have no idea.\p"
-	.string "…Oh, wait. The DAY-CARE people\n"
-	.string "in town were saying something.\p"
-	.string "They said that they'd found EGGS\n"
-	.string "before on their property.$"
+	.string "A POKéMON EGG? …No idea.\p"
+	.string "…Oh, wait. The DAY-CARE folks\n"
+	.string "found EGGS on their property\p"
+	.string "before.\p"
+	.string "Better them than the poachers.$"
 
 FourIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived::
 	.string "The new POKéMON JOURNAL hasn't\n"

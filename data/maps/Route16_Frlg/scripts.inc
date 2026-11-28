@@ -140,8 +140,9 @@ Route16_Text_RubenPostBattle::
 	.string "boss.$"
 
 Route16_Text_MonSprawledOutInSlumber::
-	.string "A POKéMON is sprawled out in\n"
-	.string "a deep and comfortable slumber.$"
+	.string "A POKéMON is sprawled out in a\n"
+	.string "deep, comfortable slumber. It\p"
+	.string "blocks the whole road.$"
 
 Route16_Text_CyclingRoadSign::
 	.string "Enjoy the slope!\p"
@@ -162,8 +163,8 @@ Route16_Text_JedPostBattle::
 	.string "Don't tell my mom I battled you.$"
 
 Route16_Text_JedNotEnoughMons::
-	.string "JED: You have just one POKéMON?\n"
-	.string "Is there no love in your heart?$"
+	.string "JED: Just one POKéMON? We only\n"
+	.string "fight two-on-two!$"
 
 Route16_Text_LeaIntro::
 	.string "My POKéMON is the scariest on the\n"
@@ -177,7 +178,6 @@ Route16_Text_LeaPostBattle::
 	.string "older?$"
 
 Route16_Text_LeaNotEnoughMons::
-	.string "LEA: Oh, you don't have two\n"
-	.string "POKéMON with you?\p"
-	.string "Doesn't it feel lonely for you or\n"
-	.string "your POKéMON?$"
+	.string "LEA: You don't have two POKéMON?\p"
+	.string "Out here alone with one? That's\n"
+	.string "brave. Or dumb.$"

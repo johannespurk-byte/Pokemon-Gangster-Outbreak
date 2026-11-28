@@ -65,8 +65,8 @@ CeladonCity_Condominiums_1F_Text_Meowth::
 	.string "MEOWTH: Meow!$"
 
 CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead::
-	.string "You shouldn't spend all your money\n"
-	.string "on drinks.\p"
+	.string "Don't waste your money on drinks.\n"
+	.string "The gangs mark them up.\p"
 	.string "Try this instead.$"
 
 CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea::
@@ -80,14 +80,14 @@ CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany::
 	.string "From the gangs, I think.$"
 
 CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea::
-	.string "Oh, hello, dearie.\n"
-	.string "Did you enjoy my TEA?\p"
-	.string "By the way, dear. Are you, by any\n"
-	.string "chance, from PALLET TOWN?\p"
-	.string "A girl from PALLET TOWN, DAISY,\n"
-	.string "she enjoys TEA every day.\p"
-	.string "She visits the CELADON DEPT. STORE\n"
-	.string "to buy some TEA.$"
+	.string "Oh, hello, dearie. Did you enjoy my\n"
+	.string "TEA?\p"
+	.string "Are you, by any chance, from\n"
+	.string "PALLET TOWN?\p"
+	.string "A girl from PALLET, DAISY, drinks\n"
+	.string "TEA every day.\p"
+	.string "She sneaks into the DEPT. STORE\n"
+	.string "to buy it, right under AQUA's nose.$"
 
 CeladonCity_Condominiums_1F_Text_Clefairy::
 	.string "CLEFAIRY: Pi pippippi!$"

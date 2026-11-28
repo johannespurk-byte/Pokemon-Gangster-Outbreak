@@ -60,10 +60,8 @@ OneIsland_KindleRoad_EmberSpa_Text_WaterWarmsMeToCore::
 	.string "war. You should jump in too!$"
 
 OneIsland_KindleRoad_EmberSpa_Text_EnjoyBowlOfChowder::
-	.string "My favorite part of bathing comes\n"
-	.string "up right after this.\p"
-	.string "I enjoy a bowl of chowder to\n"
-	.string "warm me from the inside, too!$"
+	.string "After the bath, a bowl of chowder.\p"
+	.string "No gangs, no fights. Just chowder.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_WaterExquisiteFullyRefreshed::
 	.string "The water is perfectly warm.\n"
@@ -88,14 +86,12 @@ OneIsland_KindleRoad_EmberSpa_Text_BrunoVisitsSpaOnOccasion::
 	.string "him.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_UsedThisToMakeEmberSpa::
-	.string "Hot springs go hand-in-hand with\n"
-	.string "volcanoes.\p"
-	.string "The EMBER SPA here, well,\n"
-	.string "I made it years ago.\p"
-	.string "I hewed the pool right out of a\n"
-	.string "gigantic boulder by hand.\p"
-	.string "I was using this at the time.\n"
-	.string "I suppose I can part with it.$"
+	.string "Hot springs go with volcanoes.\p"
+	.string "I built the EMBER SPA years ago.\p"
+	.string "I carved the pool out of a giant\n"
+	.string "boulder by hand.\p"
+	.string "I used this to do it. You can have\n"
+	.string "it.$"
 
 OneIsland_KindleRoad_EmberSpa_Text_ExplainHM06::
 	.string "That shatters boulders as if they\n"

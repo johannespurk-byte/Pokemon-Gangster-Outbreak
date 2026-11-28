@@ -40,12 +40,10 @@ CeruleanCity_PokemonCenter_1F_Text_BillDoesWhateverForRareMons::
 	.string "cottage north of town. Smart guy.$"
 
 CeruleanCity_PokemonCenter_1F_Text_EveryoneCallsBillPokemaniac::
-	.string "Have you heard about BILL?\p"
-	.string "Everyone calls him a POKéMANIAC!\p"
-	.string "I think people are just jealous of\n"
-	.string "BILL, though.\p"
-	.string "Who wouldn't want to boast about\n"
-	.string "their POKéMON?$"
+	.string "Have you heard of BILL?\p"
+	.string "Everyone calls him a POKéMANIAC.\p"
+	.string "The gangs call him something else.\n"
+	.string "He fixes their PCs for free.$"
 
 CeruleanCity_PokemonCenter_1F_Text_BillCollectsRareMons::
 	.string "BILL has lots of rare POKéMON.\n"

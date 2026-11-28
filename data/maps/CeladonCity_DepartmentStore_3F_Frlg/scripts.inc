@@ -56,13 +56,13 @@ CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer::
 
 CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter::
 	.string "All right!\p"
-	.string "My buddy's going to trade me his\n"
-	.string "KANGASKHAN for my HAUNTER!$"
+	.string "My buddy is trading me his\n"
+	.string "KANGASKHAN for my HAUNTER! No\p"
+	.string "MAGMA middleman!$"
 
 CeladonCity_DepartmentStore_3F_Text_HaunterEvolvedOnTrade::
 	.string "Come on, HAUNTER!\p"
-	.string "I love HAUNTER!\n"
-	.string "I collect them!\p"
+	.string "I love HAUNTER! I collect them!\p"
 	.string "Huh?\p"
 	.string "HAUNTER turned into a different\n"
 	.string "POKéMON while being traded!$"
@@ -96,8 +96,8 @@ CeladonCity_DepartmentStore_3F_Text_TVGameShop::
 	.string "3F: TV GAME SHOP$"
 
 CeladonCity_DepartmentStore_3F_Text_RedGreenBothArePokemon::
-	.string "Red and Green!\n"
-	.string "Both are POKéMON!$"
+	.string "Red and Green! AQUA and MAGMA!\n"
+	.string "Both are trouble!$"
 
 Text_CounterTeach::
 	.string "Oh, hi!\n"

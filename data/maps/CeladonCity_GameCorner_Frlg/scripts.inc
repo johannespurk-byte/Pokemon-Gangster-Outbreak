@@ -499,8 +499,9 @@ CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace::
 	.string "Everybody knows. Nobody says it.$"
 
 CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
-	.string "I think these machines have\n"
-	.string "different odds.$"
+	.string "These machines have different\n"
+	.string "odds. The ROCKETS set them every\p"
+	.string "morning.$"
 
 CeladonCity_GameCorner_Text_DoYouWantToPlay::
 	.string "Kid, do you want to play?$"
@@ -513,12 +514,13 @@ CeladonCity_GameCorner_Text_DontNeedMyCoins::
 	.string "You don't need my COINS!$"
 
 CeladonCity_GameCorner_Text_WinsComeAndGo::
-	.string "Wins seem to come and go.\n"
-	.string "Nothing's a sure thing.$"
+	.string "Wins come and go. The house always\n"
+	.string "wins in the end.$"
 
 CeladonCity_GameCorner_Text_WinOrLoseItsOnlyLuck::
-	.string "These slot games…\n"
-	.string "Win or lose, it's only by luck.$"
+	.string "These slot games…\p"
+	.string "Win or lose, it's all luck. And the\n"
+	.string "ROCKETS' fingers on the switch.$"
 
 CeladonCity_GameCorner_Text_GymGuyAdvice::
 	.string "Hey!\p"
@@ -530,9 +532,10 @@ CeladonCity_GameCorner_Text_GymGuyAdvice::
 	.string "Bring something for both!$"
 
 CeladonCity_GameCorner_Text_RareMonsForCoins::
-	.string "They offer rare POKéMON that can\n"
-	.string "be exchanged for your COINS.\p"
-	.string "But, I just can't seem to win!$"
+	.string "They trade LEGENDARY POKéMON for\n"
+	.string "COINS next door! With MEGA\p"
+	.string "STONES!\p"
+	.string "But I just can't seem to win!$"
 
 CeladonCity_GameCorner_Text_SoEasyToGetHooked::
 	.string "The slots are rigged.\n"
@@ -550,11 +553,11 @@ CeladonCity_GameCorner_Text_YouHaveLotsOfCoins::
 	.string "You have lots of COINS!$"
 
 CeladonCity_GameCorner_Text_NeedMoreCoinsForMonIWant::
-	.string "Darn! I need more COINS for the\n"
-	.string "POKéMON I want!$"
+	.string "Darn! I need more COINS for that\n"
+	.string "LATIAS!$"
 
 CeladonCity_GameCorner_Text_HereAreSomeCoinsShoo::
-	.string "Hey, what? You're throwing me off!\n"
+	.string "Hey! You're throwing me off!\p"
 	.string "Here are some COINS, so shoo!$"
 
 CeladonCity_GameCorner_Text_Received20CoinsFromMan::
@@ -567,19 +570,20 @@ CeladonCity_GameCorner_Text_YouveGotPlentyCoins::
 
 CeladonCity_GameCorner_Text_WatchReelsClosely::
 	.string "The trick is to watch the reels\n"
-	.string "closely.$"
+	.string "closely. And the dealer's hands.$"
 
 CeladonCity_GameCorner_Text_GruntIntro::
-	.string "I'm guarding this poster!\n"
-	.string "Go away, or else!$"
+	.string "I'm guarding this poster!\p"
+	.string "Nobody touches it! Go away, or\n"
+	.string "else!$"
 
 CeladonCity_GameCorner_Text_GruntDefeat::
 	.string "Dang!$"
 
 CeladonCity_GameCorner_Text_GruntPostBattle::
-	.string "The TEAM ROCKET HIDEOUT might\n"
-	.string "be discovered!\p"
-	.string "I better tell BOSS!$"
+	.string "If you find the HIDEOUT, the BOSS\n"
+	.string "will have my head!\p"
+	.string "I better warn him!$"
 
 CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
 	.string "Hey!\p"

@@ -106,16 +106,15 @@ OneIsland_EventScript_PokemonNetCenterSign::
 	end
 
 OneIsland_Text_BillLetsGoSeeCelio::
-	.string "BILL: Here we are!\n"
-	.string "This is ONE ISLAND.\p"
-	.string "There are several islands around\n"
-	.string "here, and this is one of them.\p"
-	.string "My friend CELIO sent the boat to\n"
-	.string "fetch me here.\p"
-	.string "He's in charge of the island's PC\n"
-	.string "network by his lonesome.\p"
-	.string "…Why am I telling you this now?\n"
-	.string "Let's just go see CELIO!$"
+	.string "BILL: Here we are! ONE ISLAND.\p"
+	.string "No gang flags, no graffiti. Feels\n"
+	.string "weird, right?\p"
+	.string "My friend CELIO sent the boat for\n"
+	.string "me.\p"
+	.string "He runs the island's PC network\n"
+	.string "all by himself.\p"
+	.string "…And TEAM ROCKET wants it. Let's\n"
+	.string "go see CELIO!$"
 
 Text_WhereDoYouWantToSail::
 	.string "Ahoy, there!\n"
@@ -128,22 +127,18 @@ OneIsland_Text_LuckyToHaveCelioHere::
 	.string "too.$"
 
 OneIsland_Text_HavePCLinkageWithKanto::
-	.string "My granddaughter was in a tizzy\n"
-	.string "over a new breakthrough.\p"
-	.string "She said we now have PC linkage\n"
-	.string "with people in KANTO.\p"
-	.string "I'm not sure what that means, but\n"
-	.string "CELIO is quite the man!$"
+	.string "My granddaughter was in a tizzy.\p"
+	.string "We have PC linkage with KANTO now.\p"
+	.string "I hope the gangs don't use it to\n"
+	.string "find us.$"
 
 OneIsland_Text_HavePCLinkageWithHoenn::
-	.string "My granddaughter was in a tizzy\n"
-	.string "over a new breakthrough.\p"
-	.string "She said we finally have PC linkage\n"
-	.string "with people in HOENN.\p"
-	.string "I'm not sure what that means, but\n"
-	.string "CELIO is quite the man.\p"
-	.string "He would make a fine husband for\n"
-	.string "my granddaughter!$"
+	.string "My granddaughter was in a tizzy.\p"
+	.string "We're linked with HOENN now!\p"
+	.string "They say HOENN has gangs too.\n"
+	.string "AQUA and MAGMA came from there.\p"
+	.string "Still, that CELIO would make a fine\n"
+	.string "husband for her!$"
 
 OneIsland_Text_IslandSign::
 	.string "ONE ISLAND\p"

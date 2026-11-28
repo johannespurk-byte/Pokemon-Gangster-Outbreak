@@ -36,8 +36,9 @@ SaffronCity_PokemonCenter_1F_EventScript_YoungsterRocketsGone::
 	end
 
 SaffronCity_PokemonCenter_1F_Text_GrowthRatesDifferBySpecies::
-	.string "POKéMON growth rates differ from\n"
-	.string "species to species.$"
+	.string "POKéMON grow at different speeds.\n"
+	.string "Some need a lot of fights before\p"
+	.string "they're street-ready.$"
 
 SaffronCity_PokemonCenter_1F_Text_SilphCoVictimOfFame::
 	.string "SILPH CO. is famous everywhere.\p"
@@ -49,7 +50,7 @@ SaffronCity_PokemonCenter_1F_Text_GreatIfEliteFourCameBeatRockets::
 	.string "stomped every gang in KANTO?$"
 
 SaffronCity_PokemonCenter_1F_Text_TeamRocketTookOff::
-	.string "TEAM ROCKET took off!\n"
-	.string "We can go out safely again!\l"
-	.string "That's great!$"
+	.string "TEAM ROCKET left SILPH! We can go\n"
+	.string "out again! Well, as long as FLARE\p"
+	.string "doesn't see us.$"
 

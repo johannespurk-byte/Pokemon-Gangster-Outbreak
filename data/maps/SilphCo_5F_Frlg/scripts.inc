@@ -58,13 +58,14 @@ SilphCo_5F_EventScript_Dalton::
 	end
 
 SilphCo_5F_Text_RocketsInUproarAboutIntruder::
-	.string "TEAM ROCKET is in an uproar over\n"
-	.string "some intruder.\p"
-	.string "That's you, right?$"
+	.string "TEAM ROCKET is in an uproar about\n"
+	.string "an intruder.\p"
+	.string "One of their own recruits! That's\n"
+	.string "you, right?$"
 
 SilphCo_5F_Text_YoureOurHeroThankYou::
-	.string "TEAM ROCKET took off!\n"
-	.string "You're our hero! Thank you!$"
+	.string "TEAM ROCKET left! You're our hero!\n"
+	.string "Thank you!$"
 
 SilphCo_5F_Text_Grunt1Intro::
 	.string "I guard this place for GIOVANNI.\n"
@@ -113,18 +114,20 @@ SilphCo_5F_Text_Grunt2PostBattle::
 
 SilphCo_5F_Text_PorygonFirstVRMon::
 	.string "It's a POKéMON REPORT!\p"
-	.string "POKéMON LAB created PORYGON,\n"
-	.string "the first virtual-reality POKéMON.$"
+	.string "SILPH created PORYGON, the first\n"
+	.string "virtual POKéMON. TEAM ROCKET\p"
+	.string "wants the blueprints.$"
 
 SilphCo_5F_Text_Over350TechniquesConfirmed::
 	.string "It's a POKéMON REPORT!\p"
-	.string "Over 350 POKéMON techniques have\n"
-	.string "been confirmed.$"
+	.string "Over 350 moves have been\n"
+	.string "confirmed. The gangs know most of\p"
+	.string "them.$"
 
 SilphCo_5F_Text_SomeMonsEvolveWhenTraded::
 	.string "It's a POKéMON REPORT!\p"
-	.string "Some POKéMON have been confirmed\n"
-	.string "to evolve when they are traded.$"
+	.string "Some POKéMON evolve when traded.\n"
+	.string "The black markets love that.$"
 
 SilphCo_5F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

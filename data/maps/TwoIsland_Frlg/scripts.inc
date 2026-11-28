@@ -229,33 +229,31 @@ TwoIsland_Text_DangerFastCurrent::
 	.string "Fishing and surfing prohibited!$"
 
 TwoIsland_Text_WelcomeToShopMerchandiseLimited::
-	.string "Oh!\n"
-	.string "Hello, welcome to my shop!\p"
-	.string "We've only opened up recently.\p"
-	.string "Our merchandise is limited, but I\n"
-	.string "hope we can serve your needs.$"
+	.string "Oh! Hello, welcome to my shop!\p"
+	.string "We just opened.\p"
+	.string "The selection is small, but no gang\n"
+	.string "takes a cut here!$"
 
 TwoIsland_Text_AddedMerchandiseForLostelle::
-	.string "I can't tell you how grateful I am\n"
-	.string "for your rescue of LOSTELLE.\p"
-	.string "Thanks to your feat, the people of\n"
-	.string "THREE ISLAND have changed their\l"
-	.string "attitudes about KANTO people.\p"
-	.string "And, I'm from KANTO, you see.\p"
-	.string "The people of THREE ISLAND\n"
-	.string "helped me add to my merchandise.$"
+	.string "Thank you so much for rescuing\n"
+	.string "LOSTELLE.\p"
+	.string "Thanks to you, THREE ISLAND\n"
+	.string "thinks better of KANTO people\p"
+	.string "now.\p"
+	.string "I'm from KANTO, you see. I fled the\n"
+	.string "gang war.\p"
+	.string "The THREE ISLAND folks helped me\n"
+	.string "stock more goods.$"
 
 TwoIsland_Text_HopeYouGiveItYourBest::
-	.string "Hi! I'm giving it my best here.\n"
-	.string "I hope you do too, {PLAYER}.$"
+	.string "Hi! I'm giving it my best here. You\n"
+	.string "do the same, {PLAYER}!$"
 
 TwoIsland_Text_BringingItemsFromDistantLands::
-	.string "Oh, hello, {PLAYER}!\n"
-	.string "Welcome!\p"
-	.string "I've started bringing in items from\n"
-	.string "distant lands.\p"
-	.string "I've got some rare items in, too.\n"
-	.string "Please have a look!$"
+	.string "Oh, hello, {PLAYER}! Welcome!\p"
+	.string "I bring in items from distant lands\n"
+	.string "now.\p"
+	.string "Some rare ones, too. Have a look!$"
 
 TwoIsland_Text_FellowMovedFromCeladonCity::
 	.string "That fellow moved here from\n"
@@ -264,10 +262,10 @@ TwoIsland_Text_FellowMovedFromCeladonCity::
 	.string "anymore.$"
 
 TwoIsland_Text_ShopkeepersBrotherWorksGameCorner::
-	.string "The shopkeeper's brother took\n"
-	.string "a job at the GAME CORNER.\p"
-	.string "He's trying to pull together money\n"
-	.string "so they can buy more merchandise.$"
+	.string "The shopkeeper's brother works\n"
+	.string "at the GAME CORNER.\p"
+	.string "He's saving up so they can buy\n"
+	.string "more stock.$"
 
 TwoIsland_Text_BrunoCameToIslandWhileBack::
 	.string "Did you know? A famous TRAINER\n"
@@ -286,12 +284,9 @@ TwoIsland_Text_OldWomanLivesOutOnCape::
 	.string "gangs are scared of her!$"
 
 TwoIsland_Text_HaveYouTriedJumpingGame::
-	.string "Boing! Boing!\n"
-	.string "Have you tried the jumping game?\p"
-	.string "The POKéMON you can enter…\n"
-	.string "Boing!\p"
-	.string "Some go boing!\p"
+	.string "Boing! Boing! Tried the jumping\n"
+	.string "game?\p"
+	.string "Some POKéMON go boing!\p"
 	.string "And some go boooooooing!\p"
-	.string "Did you know that?\n"
-	.string "Boing!$"
+	.string "Did you know that? Boing!$"
 

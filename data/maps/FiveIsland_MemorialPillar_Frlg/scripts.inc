@@ -118,12 +118,12 @@ FiveIsland_MemorialPillar_Text_ScrubScrub::
 	.string "Scrub, scrub…$"
 
 FiveIsland_MemorialPillar_Text_YourMonsLookHealthy::
-	.string "Hello…\n"
-	.string "Your POKéMON look healthy…$"
+	.string "Hello… Your POKéMON look healthy…\n"
+	.string "Keep them that way…$"
 
 FiveIsland_MemorialPillar_Text_ThisIsWhereIBuriedMyOnix::
 	.string "This is where I buried my ONIX…\n"
-	.string "It was named TECTONIX…$"
+	.string "TECTONIX… Poachers hurt it…$"
 
 FiveIsland_MemorialPillar_Text_HereLiesTectonixLemonadeOffering::
 	.string "“Here lies TECTONIX” is engraved\n"
@@ -141,26 +141,25 @@ FiveIsland_MemorialPillar_Text_PlacedCanOfLemonade::
 
 FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis::
 	.string "Th-thank you…\p"
-	.string "That was my TECTONIX's favorite\n"
-	.string "drink…\p"
+	.string "LEMONADE was my TECTONIX's\n"
+	.string "favorite…\p"
 	.string "I don't even know you, but your\n"
-	.string "act of kindness…\p"
-	.string "It's uplifted me a little.\p"
-	.string "Can you please take this as my\n"
-	.string "thanks?$"
+	.string "kindness…\p"
+	.string "In times like these, it means a lot.\p"
+	.string "Please take this as thanks.$"
 
 FiveIsland_MemorialPillar_Text_BeGoodToYourMonsToo::
-	.string "Please be good to your POKéMON,\n"
-	.string "too.$"
+	.string "Please be good to your POKéMON.\n"
+	.string "Out there, they're all you have.$"
 
 FiveIsland_MemorialPillar_Text_DontHaveRoomForIt::
 	.string "If you don't have room for it,\n"
 	.string "I'll hold it for you till next time.$"
 
 FiveIsland_MemorialPillar_Text_StillHaveThingAsMyThanks::
-	.string "Oh, it's you from that time…\p"
-	.string "I still have that thing I wanted\n"
-	.string "you to have as my thanks.$"
+	.string "Oh, it's you…\p"
+	.string "I still have the gift I wanted to\n"
+	.string "give you.$"
 
 FiveIsland_MemorialPillar_Text_ScrubScrubTectonix::
 	.string "Scrub, scrub…\p"

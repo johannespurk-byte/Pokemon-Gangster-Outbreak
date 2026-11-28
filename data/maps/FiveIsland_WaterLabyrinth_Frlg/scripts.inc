@@ -74,11 +74,10 @@ FiveIsland_WaterLabyrinth_Text_HmmISeeIsee::
 	.string "I see, I see…$"
 
 FiveIsland_WaterLabyrinth_Text_TreatMonRightHaveThis::
-	.string "Oh, impressive.\n"
-	.string "You treat your POKéMON right.\p"
-	.string "I think you can be entrusted with\n"
-	.string "this.\p"
-	.string "Please, I'd like you to have this.$"
+	.string "Oh, impressive. You treat your\n"
+	.string "POKéMON right. Not like the gangs.\p"
+	.string "I think I can trust you with this.\p"
+	.string "Please, take it.$"
 
 FiveIsland_WaterLabyrinth_Text_ReceivedEggFromMan::
 	.string "{PLAYER} received an EGG\n"
@@ -97,9 +96,9 @@ FiveIsland_WaterLabyrinth_Text_YouveComeBackForTheEgg::
 	.string "きて　くれたんだね$"
 
 FiveIsland_WaterLabyrinth_Text_GladIMetSomeoneLikeYou::
-	.string "I received that EGG while I was\n"
-	.string "traveling.\p"
-	.string "I'm glad I met someone like you.$"
+	.string "I got that EGG while traveling.\p"
+	.string "Better with you than with\n"
+	.string "poachers. I'm glad I met you.$"
 
 FiveIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy::
 	.string "Oh, hello.\n"

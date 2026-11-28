@@ -39,8 +39,7 @@ VermilionCity_House3_Text_DearPippiLetter::
 	.string "Stay inside after dark!$"
 
 VermilionCity_House3_Text_SendMyPidgeyToUnionRoom::
-	.string "I want to exchange MAIL with all\n"
-	.string "sorts of people.\p"
-	.string "I send my PIDGEY to a UNION ROOM\n"
-	.string "to exchange MAIL for me.$"
+	.string "I send my PIDGEY out with MAIL.\p"
+	.string "The ROCKETS read every letter at\n"
+	.string "the harbor, so birds are safer.$"
 

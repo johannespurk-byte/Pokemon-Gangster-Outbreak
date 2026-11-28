@@ -147,10 +147,9 @@ Route4_PokemonCenter_1F_EventScript_Newspaper::
 	end
 
 Route4_PokemonCenter_1F_Text_CanHaveSixMonsWithYou::
-	.string "Okay, set six POKé BALLS in my\n"
-	.string "belt…\p"
-	.string "Yeah, that'll do it. At most, you\n"
-	.string "can have six POKéMON with you.$"
+	.string "Six POKé BALLS on my belt…\p"
+	.string "That's the limit. Even gang bosses\n"
+	.string "carry only six POKéMON.$"
 
 Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
 	.string "TEAM SKULL took over CERULEAN…\p"
@@ -176,8 +175,8 @@ Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp::
 	.string "and bought the MAGIKARP…$"
 
 Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou::
-	.string "No? You say no? I'm only doing this\n"
-	.string "as a favor to you!$"
+	.string "No? You say no? I'm doing you a\n"
+	.string "favor here, kid!$"
 
 Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon::
 	.string "There's no more room for any more\n"
@@ -187,14 +186,13 @@ Route4_PokemonCenter_1F_Text_YoullNeedMoreMoney::
 	.string "You'll need more money than that!$"
 
 Route4_PokemonCenter_1F_Text_IDontGiveRefunds::
-	.string "MAN: Well, I don't give refunds.\n"
-	.string "You knew what you were getting!$"
+	.string "MAN: No refunds. This is TEAM YELL\n"
+	.string "business. You knew the deal!$"
 
 Route4_PokemonCenter_1F_Text_ShouldStoreMonsUsingPC::
-	.string "Sometimes, you'll have too many\n"
-	.string "POKéMON with you to add any more.\p"
-	.string "In that case, you should just\n"
-	.string "store some using any PC.$"
+	.string "Too many POKéMON on you?\p"
+	.string "Store them in a PC. Or use the BOX\n"
+	.string "option in your POKéMON menu.$"
 
 Route4_PokemonCenter_1F_Text_ItsANewspaper::
 	.string "It's a newspaper.\p"

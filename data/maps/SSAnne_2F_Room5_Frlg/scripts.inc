@@ -16,7 +16,8 @@ SSAnne_2F_Room5_Text_HaveYouGoneToSafariZone::
 	.string "the POKéMON!$"
 
 SSAnne_2F_Room5_Text_WeThinkSafariZoneIsAwesome::
-	.string "Me and my daddy think the SAFARI\n"
-	.string "ZONE is awesome!\l"
-	.string "I wish we could go there again.$"
+	.string "Me and my daddy loved the SAFARI\n"
+	.string "ZONE!\p"
+	.string "Then TEAM PLASMA “freed” all the\n"
+	.string "POKéMON.$"
 

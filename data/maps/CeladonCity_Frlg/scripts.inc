@@ -104,8 +104,8 @@ CeladonCity_EventScript_GameCornerSign::
 
 CeladonCity_Text_GotMyKoffingInCinnabar::
 	.string "I got my KOFFING in CINNABAR.\p"
-	.string "It's usually nice, but it breathes\n"
-	.string "poison when it's angry.$"
+	.string "It's nice, but it breathes poison\n"
+	.string "on anyone in a gang jacket.$"
 
 CeladonCity_Text_GymIsGreatFullOfWomen::
 	.string "TEAM AQUA and TEAM MAGMA share\n"
@@ -120,15 +120,14 @@ CeladonCity_Text_GameCornerIsBadForCitysImage::
 	.string "the middle.$"
 
 CeladonCity_Text_BlewItAllAtSlots::
-	.string "Moan…\n"
-	.string "I blew it all at the slots!\p"
-	.string "I knew I should have cashed in my\n"
-	.string "COINS for prizes!$"
+	.string "Moan… I blew it all at the slots!\p"
+	.string "The ROCKETS rig them, everybody\n"
+	.string "knows!$"
 
 CeladonCity_Text_MyTrustedPalPoliwrath::
 	.string "This is my trusted pal, POLIWRATH.\p"
-	.string "It evolved from a POLIWHIRL when\n"
-	.string "I used a WATER STONE.$"
+	.string "It evolved with a WATER STONE.\n"
+	.string "AQUA wanted to buy it. I said no.$"
 
 CeladonCity_Text_Poliwrath::
 	.string "POLIWRATH: Ribi ribit!$"
@@ -185,12 +184,11 @@ CeladonCity_Text_GameCornerSign::
 	.string "Everybody Loses. We Win.$"
 
 CeladonCity_Text_ScaldedTongueOnTea::
-	.string "Aaaagh, ow…\n"
-	.string "I scalded my tongue!\p"
-	.string "This nice old lady in the MANSION\n"
-	.string "gave me some TEA.\p"
-	.string "But it was boiling hot!\n"
-	.string "Gotta cool it to drink it.$"
+	.string "Aaaagh, ow… I scalded my tongue!\p"
+	.string "An old lady in the MANSION gave me\n"
+	.string "TEA.\p"
+	.string "It was boiling hot! Hotter than\n"
+	.string "MAGMA's temper!$"
 
 Text_SoftboiledTeach::
 	.string "Hello, there!\p"

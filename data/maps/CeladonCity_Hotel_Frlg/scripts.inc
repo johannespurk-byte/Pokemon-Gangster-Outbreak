@@ -29,8 +29,8 @@ CeladonCity_Hotel_Text_OnVacationWithBrotherAndBoyfriend::
 	.string "Now we can't leave!$"
 
 CeladonCity_Hotel_Text_WhyDidSheBringBrother::
-	.string "Why?\n"
-	.string "Why did she bring her brother?$"
+	.string "Why? Why did she bring her brother\n"
+	.string "to a gang war?$"
 
 CeladonCity_Hotel_Text_SisBroughtMeOnVacation::
 	.string "Yippee! A real gang war!\n"

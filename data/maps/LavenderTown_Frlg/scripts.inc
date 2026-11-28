@@ -56,7 +56,7 @@ LavenderTown_Text_SoThereAreBelievers::
 LavenderTown_Text_JustImaginingWhiteHand::
 	.string "Hahaha, I guess not.\p"
 	.string "That white hand on your shoulder…\n"
-	.string "I'm just imagining it.$"
+	.string "I'm just imagining it. Right?$"
 
 LavenderTown_Text_TownKnownAsMonGraveSite::
 	.string "This town is the grave site of\n"
@@ -66,8 +66,8 @@ LavenderTown_Text_TownKnownAsMonGraveSite::
 
 LavenderTown_Text_GhostsAppearedInTower::
 	.string "Ghosts appeared in POKéMON TOWER.\p"
-	.string "I think they're the spirits of\n"
-	.string "POKéMON that the ROCKETS killed.$"
+	.string "They're the spirits of POKéMON\n"
+	.string "the gangs killed.$"
 
 LavenderTown_Text_TownSign::
 	.string "LAVENDER TOWN\p"

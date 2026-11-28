@@ -27,10 +27,10 @@ FuchsiaCity_PokemonCenter_1F_EventScript_Youngster::
 	end
 
 FuchsiaCity_PokemonCenter_1F_Text_CantBecomeGoodTrainerWithOneMon::
-	.string "You can't become a good TRAINER\n"
-	.string "with just one strong POKéMON.\p"
-	.string "But raising many POKéMON evenly\n"
-	.string "is no easy task, either.$"
+	.string "One strong POKéMON isn't enough.\n"
+	.string "The gangs always come in numbers.\p"
+	.string "But raising many POKéMON evenly is\n"
+	.string "hard, too.$"
 
 FuchsiaCity_PokemonCenter_1F_Text_PokemonLeagueWestOfViridian::
 	.string "There's a narrow trail west of\n"
@@ -40,8 +40,8 @@ FuchsiaCity_PokemonCenter_1F_Text_PokemonLeagueWestOfViridian::
 	.string "it.$"
 
 FuchsiaCity_PokemonCenter_1F_Text_VisitSafariZoneForPokedex::
-	.string "If you're working on a POKéDEX,\n"
-	.string "visit the SAFARI ZONE.\p"
-	.string "All sorts of rare POKéMON breed\n"
-	.string "there.$"
+	.string "Working on a POKéDEX? Visit the\n"
+	.string "SAFARI ZONE.\p"
+	.string "Rare POKéMON still live there. The\n"
+	.string "ones PLASMA hasn't “freed” yet.$"
 

@@ -79,7 +79,9 @@ CeruleanCity_Gym_Text_MistyIntro::
 
 CeruleanCity_Gym_Text_ExplainTM03::
 	.string "TM03 teaches WATER PULSE.\p"
-	.string "Use it on an aquatic POKéMON!$"
+	.string "It can confuse the foe. GUZMA\n"
+	.string "says confusion is half of every\p"
+	.string "fight.$"
 
 CeruleanCity_Gym_Text_ExplainCascadeBadge::
 	.string "The RUNNER RANK raises your level\n"

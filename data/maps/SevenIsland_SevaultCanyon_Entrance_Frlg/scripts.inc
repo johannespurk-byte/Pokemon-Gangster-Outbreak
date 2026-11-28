@@ -63,8 +63,7 @@ SevenIsland_SevaultCanyon_Entrance_Text_EvePostBattle::
 	.string "Not from you, though!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_EveNotEnoughMons::
-	.string "EVE: I want to team up with JON\n"
-	.string "when I battle you.\p"
+	.string "EVE: I fight together with JON.\p"
 	.string "Come back with two POKéMON, okay?$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonIntro::
@@ -80,10 +79,9 @@ SevenIsland_SevaultCanyon_Entrance_Text_JonPostBattle::
 	.string "Watch out!$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_JonNotEnoughMons::
-	.string "JON: If it's with EVE, I'll be\n"
-	.string "happy to battle with you.\p"
-	.string "So, I'd like to make it a\n"
-	.string "two-on-two battle, if I may.$"
+	.string "JON: Only with EVE.\p"
+	.string "So it's two-on-two, if you don't\n"
+	.string "mind.$"
 
 SevenIsland_SevaultCanyon_Entrance_Text_RouteSign::
 	.string "SEVAULT CANYON ENTRANCE\p"

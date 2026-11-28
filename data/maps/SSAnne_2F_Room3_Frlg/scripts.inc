@@ -10,8 +10,9 @@ SSAnne_2F_Room3_EventScript_OldMan::
 	end
 
 SSAnne_2F_Room3_Text_SeenMonsFerryPeople::
-	.string "Ah, yes, I have seen some POKéMON\n"
-	.string "ferry people across the water!$"
+	.string "Ah, yes. I've seen POKéMON ferry\n"
+	.string "people across the water.\p"
+	.string "And smuggle goods for ARCHER.$"
 
 SSAnne_2F_Room3_Text_SomeTreesCanBeCutDown::
 	.string "Small trees can be chopped down\n"

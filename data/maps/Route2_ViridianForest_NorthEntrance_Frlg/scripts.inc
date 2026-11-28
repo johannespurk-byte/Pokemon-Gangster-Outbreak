@@ -25,10 +25,9 @@ Route2_ViridianForest_NorthEntrance_Text_CanCutSkinnyTrees::
 	.string "POKéMON move, I hear.$"
 
 Route2_ViridianForest_NorthEntrance_Text_CanCancelEvolution::
-	.string "Do you know the evolution-cancel\n"
-	.string "technique?\p"
-	.string "When a POKéMON is evolving, you\n"
-	.string "can stop the process.\p"
-	.string "It's a technique for raising\n"
-	.string "POKéMON the way they are.$"
+	.string "Know the evolution-cancel trick?\p"
+	.string "Press B while a POKéMON evolves to\n"
+	.string "stop it.\p"
+	.string "Some bosses like their POKéMON\n"
+	.string "small and mean.$"
 

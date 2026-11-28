@@ -151,24 +151,21 @@ CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked::
 
 CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom::
 	.string "Do you have lots of friends?\p"
-	.string "Linking up with the usual friends\n"
-	.string "is fun, of course.\p"
-	.string "But how about visiting the\n"
-	.string "UNION ROOM every so often?\p"
-	.string "Who knows, you may end up making\n"
-	.string "new friends.\p"
-	.string "I think it would be worth your time\n"
-	.string "to check the UNION ROOM.$"
+	.string "Out here, you need people you can\n"
+	.string "trust.\p"
+	.string "Visit the UNION ROOM sometime.\p"
+	.string "You may meet TRAINERS who aren't\n"
+	.string "in a gang.\p"
+	.string "It's worth your time.$"
 
 CinnabarIsland_PokemonCenter_1F_Text_EvolutionCanWaitForNewMoves::
-	.string "POKéMON can still learn techniques\n"
-	.string "after canceling evolution.\p"
-	.string "Evolution can wait until new moves\n"
-	.string "have been learned.$"
+	.string "Cancel an evolution, and your\n"
+	.string "POKéMON can learn moves sooner.\p"
+	.string "Evolve it later, when it's ready.$"
 
 CinnabarIsland_PokemonCenter_1F_Text_ReadyToSailToOneIsland::
-	.string "BILL: Hey, you kept me waiting!\n"
-	.string "Ready to set sail to ONE ISLAND?$"
+	.string "BILL: There you are! Ready to sail\n"
+	.string "to ONE ISLAND?$"
 
 CinnabarIsland_PokemonCenter_1F_Text_OhNotDoneYet::
 	.string "Oh, you're still not done yet?$"

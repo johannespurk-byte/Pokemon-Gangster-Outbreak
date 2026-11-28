@@ -25,10 +25,9 @@ SaffronCity_CopycatsHouse_1F_Text_DaughterIsSelfCentered::
 	.string "TEAM FLARE grunt. In red!$"
 
 SaffronCity_CopycatsHouse_1F_Text_DaughterLikesToMimicPeople::
-	.string "My daughter likes to mimic people.\n"
-	.string "It's rather vexing.\p"
-	.string "Her mimicry has earned her the\n"
-	.string "nickname COPYCAT around here.$"
+	.string "My daughter mimics people.\p"
+	.string "She does a perfect LYSANDRE. TEAM\n"
+	.string "FLARE is not amused.$"
 
 SaffronCity_CopycatsHouse_1F_Text_Chansey::
 	.string "CHANSEY: Chaan! Sii!$"

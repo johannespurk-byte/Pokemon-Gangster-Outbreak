@@ -39,12 +39,10 @@ LavenderTown_Mart_Items::
 	end
 
 LavenderTown_Mart_Text_SearchingForStatRaiseItems::
-	.string "I'm searching for items that raise\n"
-	.string "the stats of POKéMON.\p"
-	.string "They're effective over the course\n"
-	.string "of a single battle.\p"
-	.string "X ATTACK, X DEFEND, X SPEED, \n"
-	.string "and X SPECIAL are what I'm after.\p"
+	.string "I'm looking for items that raise\n"
+	.string "stats during a battle.\p"
+	.string "X ATTACK, X DEFEND, X SPEED… The\n"
+	.string "gangs bought them all.\p"
 	.string "Do you know where I can get them?$"
 
 LavenderTown_Mart_Text_DidYouBuyRevives::
@@ -53,11 +51,9 @@ LavenderTown_Mart_Text_DidYouBuyRevives::
 	.string "one.$"
 
 LavenderTown_Mart_Text_TrainerDuosCanChallengeYou::
-	.string "Sometimes, a TRAINER duo will\n"
-	.string "challenge you with two POKéMON\l"
-	.string "at the same time.\p"
-	.string "If that happens, you have to send\n"
-	.string "out two POKéMON to battle, too.$"
+	.string "Gangs like to jump you in pairs.\p"
+	.string "Then you must send out two\n"
+	.string "POKéMON, too.$"
 
 LavenderTown_Mart_Text_SoldNuggetFromMountainsFor5000::
 	.string "この　あいだ　やまおくで\n"

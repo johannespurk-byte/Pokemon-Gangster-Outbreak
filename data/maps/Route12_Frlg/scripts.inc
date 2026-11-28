@@ -57,8 +57,9 @@ Route12_EventScript_FishingSign::
 	end
 
 Route12_Text_MonSprawledOutInSlumber::
-	.string "A POKéMON is sprawled out in\n"
-	.string "a deep and comfortable slumber.$"
+	.string "A POKéMON is sprawled out in a\n"
+	.string "deep, comfortable slumber. It\p"
+	.string "blocks the whole road.$"
 
 Text_SnorlaxWokeUp::
 	.string "SNORLAX woke up!\p"
@@ -171,10 +172,9 @@ Route12_Text_JesPostBattle::
 	.string "older?$"
 
 Route12_Text_JesNotEnoughMons::
-	.string "JES: GIA and I, we'll be\n"
-	.string "together forever.\p"
+	.string "JES: GIA and I fight as a team.\p"
 	.string "We won't battle unless you have\n"
-	.string "two POKéMON of your own.$"
+	.string "two POKéMON.$"
 
 Route12_Text_GiaIntro::
 	.string "My big brother rides with TEAM\n"
@@ -190,6 +190,6 @@ Route12_Text_GiaPostBattle::
 	.string "Or maybe your crew!$"
 
 Route12_Text_GiaNotEnoughMons::
-	.string "GIA: I can't bear to battle\n"
-	.string "without my JES!\p"
+	.string "GIA: I won't battle without my\n"
+	.string "JES!\p"
 	.string "Don't you have one more POKéMON?$"

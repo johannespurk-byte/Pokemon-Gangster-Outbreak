@@ -134,8 +134,8 @@ Route15_Text_MyaPostBattle::
 	.string "TEAM PLASMA!$"
 
 Route15_Text_MyaNotEnoughMons::
-	.string "MYA: Do you want to challenge us?\n"
-	.string "You'll need two POKéMON, though.$"
+	.string "MYA: Want to challenge us? You'll\n"
+	.string "need two POKéMON.$"
 
 Route15_Text_RonIntro::
 	.string "Wrong turf, rookie. Nobody passes\n"
@@ -149,6 +149,6 @@ Route15_Text_RonPostBattle::
 	.string "own road.$"
 
 Route15_Text_RonNotEnoughMons::
-	.string "RON: Did you want to battle with\n"
-	.string "my sister and me?\p"
-	.string "You need two POKéMON, then.$"
+	.string "RON: My sister and I fight\n"
+	.string "together.\p"
+	.string "You need two POKéMON for that.$"

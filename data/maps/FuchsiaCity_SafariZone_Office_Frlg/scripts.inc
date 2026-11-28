@@ -24,21 +24,20 @@ FuchsiaCity_SafariZone_Office_Text_NicknamedWardenSlowpoke::
 	.string "Into their own BALLS, of course.$"
 
 FuchsiaCity_SafariZone_Office_Text_WardenIsVeryKnowledgeable::
-	.string "WARDEN SLOWPOKE is very\n"
-	.string "knowledgeable about POKéMON.\p"
-	.string "He even has some fossils of rare,\n"
-	.string "extinct POKéMON.$"
+	.string "WARDEN SLOWPOKE knows everything\n"
+	.string "about POKéMON.\p"
+	.string "He hid his fossils before TEAM\n"
+	.string "PLASMA came.$"
 
 FuchsiaCity_SafariZone_Office_Text_CouldntUnderstandWarden::
-	.string "WARDEN SLOWPOKE came in, but\n"
-	.string "I couldn't understand him.\p"
-	.string "I think he's got a speech problem!$"
+	.string "WARDEN SLOWPOKE came in, but I\n"
+	.string "couldn't understand him.\p"
+	.string "TEAM PLASMA stole his GOLD TEETH!$"
 
 FuchsiaCity_SafariZone_Office_Text_PrizeInSafariZone::
 	.string "WARDEN SLOWPOKE is running a\n"
-	.string "promotion campaign right now.\p"
-	.string "Try to get to the farthest corner\n"
-	.string "of the SAFARI ZONE.\p"
-	.string "If you can make it, you'll win a\n"
-	.string "very convenient prize.$"
+	.string "promotion.\p"
+	.string "Reach the farthest corner of the\n"
+	.string "SAFARI ZONE.\p"
+	.string "You'll win a very handy prize!$"
 

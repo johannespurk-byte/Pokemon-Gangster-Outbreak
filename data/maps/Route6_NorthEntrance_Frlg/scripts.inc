@@ -89,20 +89,15 @@ Route6_NorthEntrance_Text_ThirstyOnGuardDuty::
 	.string "Oh, wait there, the road's closed.$"
 
 Route6_NorthEntrance_Text_ThatTeaLooksTasty::
-	.string "Oh, that TEA…\n"
-	.string "It looks awfully tasty…$"
+	.string "Oh, that TEA… It looks awfully\n"
+	.string "tasty… Better than ROCKET\p"
+	.string "coffee.$"
 
 Route6_NorthEntrance_Text_ThanksIllShareTeaWithGuards::
-	.string "Huh? I can have this drink?\n"
-	.string "Gee, thanks!\l"
-	.string "… …\l"
-	.string "Glug, glug…\l"
-	.string "… …\l"
-	.string "Gulp…\l"
-	.string "If you want to go to SAFFRON\l"
-	.string "CITY…\l"
-	.string "… …\l"
-	.string "You can go on through.\p"
+	.string "Huh? For me? Gee, thanks! … … Glug,\n"
+	.string "glug… … … Gulp…\p"
+	.string "Going to SAFFRON? TEAM FLARE runs\n"
+	.string "it now… … … Go on through.\p"
 	.string "I'll share this TEA with the other\n"
 	.string "guards!$"
 

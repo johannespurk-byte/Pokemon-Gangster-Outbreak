@@ -31,10 +31,10 @@ CinnabarIsland_PokemonLab_Entrance_EventScript_TestingRoomSign::
 	end
 
 CinnabarIsland_Gym_Text_PhotoOfBlaineAndFuji::
-	.string "It's a photo of BLAINE and\n"
-	.string "MR. FUJI.\p"
-	.string "They're standing shoulder to\n"
-	.string "shoulder with big grins.$"
+	.string "A photo of BLAINE and MR. FUJI,\n"
+	.string "grinning.\p"
+	.string "Taken before TEAM GALACTIC took\n"
+	.string "the island.$"
 
 CinnabarIsland_PokemonLab_Entrance_Text_StudyMonsExtensively::
 	.string "TEAM GALACTIC took over the LAB.\p"

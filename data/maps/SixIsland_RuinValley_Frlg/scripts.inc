@@ -42,13 +42,13 @@ SixIsland_RuinValley_EventScript_IgnoreDottedHoleDoor::
 	end
 
 SixIsland_RuinValley_Text_CantFigureOutHowToGetInside::
-	.string "I can't figure out how I'm supposed\n"
-	.string "to get inside.$"
+	.string "I can't figure out how to get\n"
+	.string "inside.$"
 
 SixIsland_RuinValley_Text_IFoundThisPlace::
-	.string "Let me tell you, I found this\n"
-	.string "place.\p"
-	.string "Don't look so envious, will you?$"
+	.string "I found this place first.\p"
+	.string "Don't look so envious. And don't\n"
+	.string "tell the ROCKETS.$"
 
 SixIsland_RuinValley_Text_CheckDoorMoreThoroughly::
 	.string "The door doesn't budge at all.\n"

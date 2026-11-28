@@ -60,34 +60,29 @@ ThreeIsland_BerryForest_EventScript_BewareSign::
 	end
 
 ThreeIsland_BerryForest_Text_HelpScaryPokemon::
-	.string "LOSTELLE: Whimper… Sniff…\n"
-	.string "Oh! Please, help!\p"
-	.string "A scary POKéMON appeared there\n"
-	.string "a little while ago.\p"
-	.string "It kept scaring.\n"
-	.string "It made LOSTELLE scared.\p"
-	.string "I'm too scared to move!\n"
-	.string "But I want to go home…$"
+	.string "LOSTELLE: Whimper… Sniff… Oh!\n"
+	.string "Please, help!\p"
+	.string "A scary POKéMON showed up a little\n"
+	.string "while ago.\p"
+	.string "It kept scaring LOSTELLE.\p"
+	.string "I'm too scared to move! I want to\n"
+	.string "go home…$"
 
 ThreeIsland_BerryForest_Text_HereItComesAgain::
-	.string "Oh! Here it comes again!\n"
-	.string "No! Go away! It's scaring me!\p"
-	.string "Waaaaaaah!\n"
-	.string "I want my daddy!$"
+	.string "Oh! Here it comes again! No! Go\n"
+	.string "away!\p"
+	.string "Waaaaaaah! I want my daddy!$"
 
 ThreeIsland_BerryForest_Text_ThankYouHaveThis::
-	.string "Ohh! That was so scary!\n"
-	.string "Thank you!\p"
-	.string "LOSTELLE came to pick some\n"
-	.string "BERRIES.\p"
+	.string "Ohh! That was so scary! Thank you!\p"
+	.string "LOSTELLE came to pick BERRIES.\p"
 	.string "You can have this!$"
 
 ThreeIsland_BerryForest_Text_LetsGoHome::
 	.string "What's your name?\p"
-	.string "LOSTELLE's scared, so can I go\n"
-	.string "with you to my daddy's house?\p"
-	.string "Okay!\n"
-	.string "Let's go home!$"
+	.string "LOSTELLE's scared. Can I go with\n"
+	.string "you to my daddy's house?\p"
+	.string "Okay! Let's go home!$"
 
 ThreeIsland_BerryForest_Text_BerryPouchIsFull::
 	.string "Your BERRY POUCH is full.\n"

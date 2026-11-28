@@ -42,11 +42,11 @@ CeladonCity_DepartmentStore_4F_Text_GettingPokeDollAsPresent::
 	.string "“I survived” like a doll.$"
 
 CeladonCity_DepartmentStore_4F_Text_CanRunAwayWithPokeDoll::
-	.string "I heard something useful.\p"
-	.string "If a wild POKéMON appears, you can\n"
-	.string "distract it with a POKé DOLL.\p"
-	.string "You can run away while the wild\n"
-	.string "POKéMON is distracted.$"
+	.string "Here's a trick.\p"
+	.string "A POKé DOLL distracts a wild\n"
+	.string "POKéMON.\p"
+	.string "Then you run away. Works on gang\n"
+	.string "grunts too, sometimes.$"
 
 CeladonCity_DepartmentStore_4F_Text_FloorSign::
 	.string "Gifts for the hard times!\n"

@@ -135,7 +135,7 @@ Route14_Text_KiriPostBattle::
 	.string "older?$"
 
 Route14_Text_KiriNotEnoughMons::
-	.string "KIRI: We can battle if you have\n"
+	.string "KIRI: We fight two-on-two. Bring\n"
 	.string "two POKéMON.$"
 
 Route14_Text_JanIntro::
@@ -152,5 +152,5 @@ Route14_Text_JanPostBattle::
 	.string "Or maybe your crew!$"
 
 Route14_Text_JanNotEnoughMons::
-	.string "JAN: You want to battle?\n"
-	.string "You don't have enough POKéMON.$"
+	.string "JAN: You want to fight? You don't\n"
+	.string "have enough POKéMON.$"

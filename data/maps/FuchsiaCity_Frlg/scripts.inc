@@ -144,20 +144,18 @@ FuchsiaCity_Text_DidYouTrySafariGame::
 	.string "the POKéMON.$"
 
 FuchsiaCity_Text_SafariZoneZooInFront::
-	.string "The SAFARI ZONE has a zoo in front\n"
-	.string "of the entrance.\p"
-	.string "Out back is the SAFARI GAME for\n"
-	.string "catching POKéMON.$"
+	.string "The SAFARI ZONE has a zoo out\n"
+	.string "front.\p"
+	.string "TEAM PLASMA “freed” half of it.\n"
+	.string "Out back is the SAFARI GAME.$"
 
 FuchsiaCity_Text_WheresSara::
-	.string "ERIK: Where's SARA?\n"
-	.string "I said I'd meet her here.$"
+	.string "ERIK: Where's SARA? I said I'd\n"
+	.string "meet her here. If PLASMA took her…$"
 
 FuchsiaCity_Text_ItemBallInThere::
-	.string "That item ball in there…\n"
-	.string "Were you wanting that?\p"
-	.string "Me, too!\n"
-	.string "…Huh? That's a POKéMON?$"
+	.string "That item ball in there… Want it?\p"
+	.string "Me, too! …Huh? That's a POKéMON?$"
 
 FuchsiaCity_Text_CitySign::
 	.string "FUCHSIA CITY\p"
@@ -194,8 +192,8 @@ FuchsiaCity_Text_VoltorbSign::
 
 FuchsiaCity_Text_KangaskhanSign::
 	.string "Name: KANGASKHAN\p"
-	.string "A maternal POKéMON that raises its\n"
-	.string "young in a pouch on its belly.$"
+	.string "It raises its young in its pouch.\n"
+	.string "TEAM PLASMA “freed” the baby.$"
 
 FuchsiaCity_Text_SlowpokeSign::
 	.string "Name: SLOWPOKE\n"

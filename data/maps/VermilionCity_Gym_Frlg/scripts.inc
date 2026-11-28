@@ -308,7 +308,8 @@ VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
 
 VermilionCity_Gym_Text_ExplainTM34::
 	.string "TM34 contains SHOCK WAVE!\p"
-	.string "Teach it to an ELECTRIC POKéMON!$"
+	.string "It never misses. ARCHER likes\n"
+	.string "things that never miss.$"
 
 VermilionCity_Gym_Text_MakeRoomInYourBag::
 	.string "Yo, kid, make room in your BAG!$"

@@ -45,8 +45,8 @@ SilphCo_9F_EventScript_Grunt2::
 	end
 
 SilphCo_9F_Text_YouShouldTakeQuickNap::
-	.string "You look tired.\n"
-	.string "You should take a quick nap.$"
+	.string "You look tired. Take a quick nap.\n"
+	.string "I'll keep watch for ROCKETS.$"
 
 SilphCo_9F_Text_DontGiveUp::
 	.string "Don't give up!$"

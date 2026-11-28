@@ -50,9 +50,9 @@ SSAnne_CaptainsOffice_EventScript_Book::
 	end
 
 SSAnne_CaptainsOffice_Text_CaptainIFeelSeasick::
-	.string "CAPTAIN: Ooargh…\n"
-	.string "I feel hideous…\l"
-	.string "Urrp! Seasick…$"
+	.string "CAPTAIN: Ooargh… I feel hideous…\p"
+	.string "ARCHER keeps me drinking at his\n"
+	.string "party… Urrp!$"
 
 SSAnne_CaptainsOffice_Text_RubbedCaptainsBack::
 	.string "{PLAYER} rubbed the CAPTAIN's\n"
@@ -84,11 +84,12 @@ SSAnne_CaptainsOffice_Text_ExplainCut::
 
 SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon::
 	.string "CAPTAIN: …Whew!\p"
-	.string "Now that I'm not sick anymore,\n"
-	.string "I guess it's time.\p"
-	.string "The S.S. ANNE will set sail soon!\p"
-	.string "Farewell, until our return to\n"
-	.string "VERMILION CITY!$"
+	.string "I'm feeling much better. Time to\n"
+	.string "get out of here.\p"
+	.string "The S.S. ANNE will set sail soon.\n"
+	.string "With or without ARCHER!\p"
+	.string "Farewell, until we return to\n"
+	.string "VERMILION!$"
 
 SSAnne_CaptainsOffice_Text_YouHaveNoRoomForThis::
 	.string "Oh, no!\n"
@@ -99,6 +100,7 @@ SSAnne_CaptainsOffice_Text_YuckShouldntHaveLooked::
 	.string "Shouldn't have looked!$"
 
 SSAnne_CaptainsOffice_Text_HowToConquerSeasickness::
-	.string "How to Conquer Seasickness…\n"
-	.string "The CAPTAIN's reading this!$"
+	.string "“How to Conquer Seasickness… and\n"
+	.string "Gangsters.” The CAPTAIN's\p"
+	.string "reading this!$"
 

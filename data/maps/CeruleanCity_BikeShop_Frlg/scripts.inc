@@ -73,10 +73,10 @@ CeruleanCity_BikeShop_EventScript_Bicycle::
 	end
 
 CeruleanCity_BikeShop_Text_WelcomeToBikeShop::
-	.string "Hi!\n"
-	.string "Welcome to our BIKE SHOP.\p"
-	.string "Have we got just the BIKE for\n"
-	.string "you!$"
+	.string "Hi! Welcome to our BIKE SHOP.\p"
+	.string "TEAM SKULL “borrowed” half the\n"
+	.string "stock, but we still have the best\p"
+	.string "BIKE for you!$"
 
 CeruleanCity_BikeShop_Text_SorryYouCantAffordIt::
 	.string "Sorry!\n"
@@ -84,23 +84,22 @@ CeruleanCity_BikeShop_Text_SorryYouCantAffordIt::
 
 CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo::
 	.string "Oh, that's…\p"
-	.string "A BIKE VOUCHER!\p"
-	.string "Okay!\n"
-	.string "Here you go!$"
+	.string "A BIKE VOUCHER! A real one, not a\n"
+	.string "SKULL forgery!\p"
+	.string "Okay! Here you go!$"
 
 CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle::
 	.string "{PLAYER} exchanged the\n"
 	.string "BIKE VOUCHER for a BICYCLE.$"
 
 CeruleanCity_BikeShop_Text_ThankYouComeAgain::
-	.string "Thank you!\n"
-	.string "Come back again sometime!$"
+	.string "Thank you! Lock it up tight. TEAM\n"
+	.string "SKULL loves bikes.$"
 
 CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle::
-	.string "How do you like your new BICYCLE?\n"
-	.string "Do you like how it rides?\p"
-	.string "You can take it out on CYCLING\n"
-	.string "ROAD and even into caves!$"
+	.string "How's your new BICYCLE?\p"
+	.string "Nothing outruns a gang faster.\n"
+	.string "Try CYCLING ROAD, or even caves!$"
 
 CeruleanCity_BikeShop_Text_MakeRoomForBicycle::
 	.string "You better make room for your\n"

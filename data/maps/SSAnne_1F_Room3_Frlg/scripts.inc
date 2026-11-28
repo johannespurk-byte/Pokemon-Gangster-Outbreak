@@ -26,7 +26,7 @@ SSAnne_1F_Room3_Text_CruiseIsElegantAndCozy::
 
 SSAnne_1F_Room3_Text_AlwaysTravelWithWigglytuff::
 	.string "I always travel with WIGGLYTUFF.\n"
-	.string "I never leave home without it.$"
+	.string "Bodyguards cost too much.$"
 
 SSAnne_1F_Room3_Text_Wigglytuff::
 	.string "WIGGLYTUFF: Puup pupuu!$"

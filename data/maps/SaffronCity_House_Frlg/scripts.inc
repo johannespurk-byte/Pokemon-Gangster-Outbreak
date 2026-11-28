@@ -24,10 +24,10 @@ SaffronCity_House_EventScript_Letter::
 	end
 
 SaffronCity_House_Text_DontLookAtMyLetter::
-	.string "…Thank you for writing.\n"
-	.string "I hope to see you soon!\p"
-	.string "…Hey!\n"
-	.string "Don't look at my letter!$"
+	.string "…Stay safe. The gangs are\n"
+	.string "everywhere. I hope to see you\p"
+	.string "soon!\p"
+	.string "…Hey! Don't read my letter!$"
 
 SaffronCity_House_Text_Pidgey::
 	.string "PIDGEY: Kurukkoo!$"

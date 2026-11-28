@@ -110,8 +110,9 @@ Route18_EastEntrance_1F_Movement_WalkRight::
 	step_end
 
 Route18_EastEntrance_1F_Text_NeedBicycleForCyclingRoad::
-	.string "You need a BICYCLE to go out on\n"
-	.string "CYCLING ROAD!$"
+	.string "You need a BICYCLE for CYCLING\n"
+	.string "ROAD! Don't let TEAM MAGMA catch\p"
+	.string "you on foot!$"
 
 Route18_EastEntrance_1F_Text_CyclingRoadAllUphillFromHere::
 	.string "CYCLING ROAD is all uphill from\n"

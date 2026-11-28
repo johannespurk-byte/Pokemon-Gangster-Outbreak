@@ -33,14 +33,14 @@ FourIsland_LoreleisHouse_EventScript_Doll::
 	end
 
 FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland::
-	.string "LORELEI: There's something weighing\n"
-	.string "heavily on my mind.\p"
-	.string "If anything were to happen on\n"
-	.string "the island where I was born…\p"
-	.string "I wouldn't know about it if I were\n"
-	.string "in the POKéMON LEAGUE.\p"
-	.string "I wonder if that would make me\n"
-	.string "irresponsible to my home…$"
+	.string "LORELEI: Something weighs on my\n"
+	.string "mind.\p"
+	.string "If the gangs come to the island\n"
+	.string "where I was born…\p"
+	.string "I wouldn't know about it at the\n"
+	.string "LEAGUE.\p"
+	.string "Maybe I've neglected my home for\n"
+	.string "too long…$"
 
 FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile::
 	.string "LORELEI: You solved all the\n"
@@ -52,10 +52,10 @@ FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile::
 	.string "back.$"
 
 FourIsland_LoreleisHouse_Text_WillDoWhatICanHereAndNow::
-	.string "I don't know what will happen in\n"
-	.string "the future, but…\p"
-	.string "I will do what I can here and now.\n"
-	.string "That's all I can do.$"
+	.string "I don't know what the future\n"
+	.string "holds, but…\p"
+	.string "I'll protect this island here and\n"
+	.string "now. That's all I can do.$"
 
 FourIsland_LoreleisHouse_Text_StuffedMonDollsGalore::
 	.string "Stuffed POKéMON dolls galore!$"

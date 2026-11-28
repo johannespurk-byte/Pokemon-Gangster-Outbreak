@@ -189,10 +189,10 @@ TwoIsland_JoyfulGameCorner_EventScript_Lostelle::
 	end
 
 TwoIsland_JoyfulGameCorner_Text_WhereHasLostelleGottenTo::
-	.string "Now, where's LOSTELLE gotten to\n"
-	.string "today?\p"
-	.string "She always brings me lunch every\n"
-	.string "day right about now…$"
+	.string "Where's LOSTELLE today?\p"
+	.string "She always brings me lunch around\n"
+	.string "now… I hope those bikers didn't\p"
+	.string "scare her.$"
 
 TwoIsland_JoyfulGameCorner_Text_PleaseHelpFindLostelle::
 	.string "Hm? You, there!\n"

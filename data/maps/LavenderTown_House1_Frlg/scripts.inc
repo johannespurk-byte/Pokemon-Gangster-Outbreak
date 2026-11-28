@@ -37,6 +37,6 @@ LavenderTown_House1_Text_RocketsKilledCubonesMother::
 LavenderTown_House1_Text_GhostOfPokemonTowerIsGone::
 	.string "The ghost of POKéMON TOWER is\n"
 	.string "gone!\p"
-	.string "Someone must have soothed its\n"
-	.string "restless spirit!$"
+	.string "Someone stood up to the ROCKETS\n"
+	.string "and soothed its spirit!$"
 

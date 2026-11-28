@@ -354,12 +354,11 @@ CeladonCity_GameCorner_PrizeRoom_Text_YouWantPrize::
 	.string "So, you want the {STR_VAR_1}?$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_YouWantTM::
-	.string "Okay, a TM of {STR_VAR_2}\n"
-	.string "is what you want?$"
+	.string "A TM of {STR_VAR_2}? Good choice.$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_NeedMoreCoins::
-	.string "Sorry, you'll need more COINS\n"
-	.string "than that.$"
+	.string "Not enough COINS, high roller.\n"
+	.string "Back to the slots!$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_OopsNotEnoughRoom::
 	.string "おきゃくさん もう もてないよ$"

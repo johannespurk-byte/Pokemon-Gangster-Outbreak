@@ -27,11 +27,11 @@ CinnabarIsland_PokemonLab_ResearchRoom_Text_LegendaryBirdEmail::
 	.string "… … …\p"
 	.string "There are three legendary bird\n"
 	.string "POKéMON.\p"
-	.string "They are ARTICUNO, ZAPDOS, and\n"
-	.string "MOLTRES.\p"
-	.string "Their whereabouts are unknown.\p"
-	.string "We plan to explore the cavern\n"
-	.string "close to CERULEAN.\p"
+	.string "ARTICUNO, ZAPDOS, and MOLTRES.\p"
+	.string "Every gang in KANTO is hunting\n"
+	.string "them.\p"
+	.string "We plan to explore the cavern near\n"
+	.string "CERULEAN first.\p"
 	.string "From: POKéMON RESEARCH TEAM…$"
 
 CinnabarIsland_PokemonLab_ResearchRoom_Text_AnAmberPipe::

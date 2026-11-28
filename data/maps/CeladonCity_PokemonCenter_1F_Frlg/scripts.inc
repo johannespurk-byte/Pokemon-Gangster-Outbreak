@@ -39,6 +39,6 @@ CeladonCity_PokemonCenter_1F_Text_RodeHereFromFuchsia::
 	.string "way!$"
 
 CeladonCity_PokemonCenter_1F_Text_GoToCyclingRoadIfIHadBike::
-	.string "If I had a BIKE, I would go to\n"
-	.string "CYCLING ROAD!$"
+	.string "If I had a BIKE, I'd race the\n"
+	.string "gangs on CYCLING ROAD!$"
 

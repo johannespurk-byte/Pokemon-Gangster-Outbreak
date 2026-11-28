@@ -39,10 +39,11 @@ SevenIsland_Mart_EventScript_Fisher::
 	end
 
 SevenIsland_Mart_Text_MonHavePersonalitiesOfTheirOwn::
-	.string "POKéMON have personalities of their\n"
-	.string "own, just like people.\p"
-	.string "My PIKACHU has a HASTY nature,\n"
-	.string "so it grew to be a speedy POKéMON.$"
+	.string "POKéMON have personalities, just\n"
+	.string "like people.\p"
+	.string "My PIKACHU is HASTY, so it grew\n"
+	.string "fast. Great for running from\p"
+	.string "poachers.$"
 
 SevenIsland_Mart_Text_PreparationsCompleteForRuins::
 	.string "Preparations complete! I'll\n"

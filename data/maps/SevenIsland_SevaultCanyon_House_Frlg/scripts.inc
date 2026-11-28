@@ -81,10 +81,9 @@ SevenIsland_SevaultCanyon_House_EventScript_Chansey::
 	end
 
 SevenIsland_SevaultCanyon_House_Text_ChanseyDanceJoinIn::
-	.string "Dance, dance!\n"
-	.string "CHANSEY Dance!\p"
-	.string "You join in, too!\n"
-	.string "Dance, dance!$"
+	.string "Dance, dance! CHANSEY Dance!\p"
+	.string "Forget the gangs! Join in! Dance,\n"
+	.string "dance!$"
 
 SevenIsland_SevaultCanyon_House_Text_WouldYouLikeToDance::
 	.string "Would you like to dance?$"

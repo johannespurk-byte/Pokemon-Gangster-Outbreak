@@ -60,6 +60,8 @@ FuchsiaCity_House3_Text_WouldYouLikeToForgetMove::
 	.string "Would you like me to do that?$"
 
 FuchsiaCity_House3_Text_WhichMonShouldForgetMove::
+	.string "I make POKéMON forget moves. The\n"
+	.string "gangs pay well for it.\p"
 	.string "Which POKéMON should forget a\n"
 	.string "move?$"
 
@@ -81,7 +83,8 @@ FuchsiaCity_House3_Text_MonHasForgottenMoveCompletely::
 
 FuchsiaCity_House3_Text_ComeAgainToForgetOtherMoves::
 	.string "Come again if there are other\n"
-	.string "moves to be forgotten.$"
+	.string "moves to forget. No questions\p"
+	.string "asked.$"
 
 FuchsiaCity_House3_Text_NoEggShouldKnowMoves::
 	.string "What?\n"

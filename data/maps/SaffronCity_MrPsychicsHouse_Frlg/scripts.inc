@@ -34,10 +34,11 @@ SaffronCity_MrPsychicsHouse_Text_ReceivedTM29FromMrPsychic::
 	.string "from MR. PSYCHIC.$"
 
 SaffronCity_MrPsychicsHouse_Text_ExplainTM29::
-	.string "You already know, don't you?\n"
-	.string "TM29 is PSYCHIC.\p"
-	.string "It's an attack that may also lower\n"
-	.string "the target's special stats.$"
+	.string "You already know, don't you? TM29\n"
+	.string "is PSYCHIC.\p"
+	.string "It may also lower the target's SP.\n"
+	.string "DEF. TEAM FLARE wanted it. I gave\p"
+	.string "it to you instead.$"
 
 SaffronCity_MrPsychicsHouse_Text_YouveNoRoom::
 	.string "Where do you plan to put this?\n"

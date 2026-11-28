@@ -281,8 +281,8 @@ CeladonCity_DepartmentStore_Roof_EventScript_ExitVendingMachine::
 	end
 
 CeladonCity_DepartmentStore_Roof_Text_ImThirstyGiveHerDrink::
-	.string "I'm thirsty!\n"
-	.string "I want something to drink!\p"
+	.string "I'm thirsty! The gangs drank all\n"
+	.string "the good stuff!\p"
 	.string "{FONT_NORMAL}Give her a drink?$"
 
 CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink::
@@ -291,8 +291,8 @@ CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink::
 CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis::
 	.string "Yay!\p"
 	.string "FRESH WATER!\p"
-	.string "Thank you!\n"
-	.string "You can have this from me!$"
+	.string "Thank you! Here, take this. I\n"
+	.string "nicked it from MAGMA!$"
 
 Text_ReceivedItemFromLittleGirl::
 	.string "{PLAYER} received a {STR_VAR_2}\n"
@@ -300,37 +300,39 @@ Text_ReceivedItemFromLittleGirl::
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM16::
 	.string "TM16 contains LIGHT SCREEN.\p"
-	.string "It's a move that weakens the power\n"
-	.string "of special attacks by your foe.$"
+	.string "It weakens special attacks\n"
+	.string "against your team. Good against\p"
+	.string "AQUA's water blasts!$"
 
 CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis::
 	.string "Yay!\p"
 	.string "SODA POP!\p"
-	.string "Thank you!\n"
-	.string "You can have this from me!$"
+	.string "Thank you! Here, take this. I\n"
+	.string "nicked it from AQUA!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM20::
 	.string "TM20 contains SAFEGUARD.\p"
-	.string "It's a move that prevents status\n"
-	.string "problems among your POKéMON.$"
+	.string "It protects your team from status\n"
+	.string "problems. The gangs hate it!$"
 
 CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis::
 	.string "Yay!\p"
 	.string "LEMONADE!\p"
-	.string "Thank you!\n"
-	.string "You can have this from me!$"
+	.string "Thank you! Here, take this. Don't\n"
+	.string "tell the gangs where you got it!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM33::
 	.string "TM33 contains REFLECT.\p"
-	.string "It's a move that weakens the power\n"
-	.string "of physical attacks by your foe.$"
+	.string "It weakens physical attacks\n"
+	.string "against your team. Good against\p"
+	.string "MAGMA's brutes!$"
 
 CeladonCity_DepartmentStore_Roof_Text_DontHaveSpaceForThis::
 	.string "You don't have space for this!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ImNotThirstyAfterAll::
-	.string "No, thank you!\n"
-	.string "I'm not thirsty after all!$"
+	.string "No, thank you! I'm not thirsty\n"
+	.string "after all!$"
 
 CeladonCity_DepartmentStore_Roof_Text_MySisterIsImmature::
 	.string "My sister wants to join a gang.\p"
@@ -338,16 +340,17 @@ CeladonCity_DepartmentStore_Roof_Text_MySisterIsImmature::
 	.string "It drives me nuts!$"
 
 CeladonCity_DepartmentStore_Roof_Text_ImThirstyIWantDrink::
-	.string "I'm thirsty!\n"
-	.string "I want something to drink!$"
+	.string "I'm thirsty! The gangs drank\n"
+	.string "everything!$"
 
 CeladonCity_DepartmentStore_Roof_Text_FloorSign::
 	.string "ROOFTOP SQUARE:\n"
 	.string "VENDING MACHINES$"
 
 CeladonCity_DepartmentStore_Roof_Text_VendingMachineWhatDoesItHave::
-	.string "A vending machine!\n"
-	.string "What does it have?$"
+	.string "A vending machine! Somebody\n"
+	.string "kicked it a lot. What does it still\p"
+	.string "have?$"
 
 CeladonCity_DepartmentStore_Roof_Text_NotEnoughMoney::
 	.string "Oops, not enough money!$"

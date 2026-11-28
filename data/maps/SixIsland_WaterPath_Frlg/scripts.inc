@@ -77,8 +77,8 @@ SixIsland_WaterPath_Text_MiuPostBattle::
 	.string "Are you scared?$"
 
 SixIsland_WaterPath_Text_MiuNotEnoughMons::
-	.string "MIU: MIA and I are TWINS.\n"
-	.string "We want to battle together.$"
+	.string "MIU: MIA and I are TWINS. We fight\n"
+	.string "together.$"
 
 SixIsland_WaterPath_Text_MiaIntro::
 	.string "Mom says stay inside.\p"
@@ -92,9 +92,8 @@ SixIsland_WaterPath_Text_MiaPostBattle::
 	.string "Not from you, though!$"
 
 SixIsland_WaterPath_Text_MiaNotEnoughMons::
-	.string "MIA: Oh, you only have one\n"
-	.string "POKéMON?\p"
-	.string "Don't you feel lonesome?$"
+	.string "MIA: Only one POKéMON?\p"
+	.string "Don't you feel lonely?$"
 
 SixIsland_WaterPath_Text_WantedUltimateHorn::
 	.string "Wanted! The Ultimate Horn!\p"

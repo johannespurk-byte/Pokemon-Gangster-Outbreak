@@ -129,8 +129,8 @@ Route19_Text_LiaPostBattle::
 	.string "Are you scared?$"
 
 Route19_Text_LiaNotEnoughMons::
-	.string "LIA: I want to battle together\n"
-	.string "with my little brother.\p"
+	.string "LIA: I fight together with my\n"
+	.string "little brother.\p"
 	.string "Don't you have two POKéMON?$"
 
 Route19_Text_LucIntro::
@@ -145,6 +145,5 @@ Route19_Text_LucPostBattle::
 	.string "Not from you, though!$"
 
 Route19_Text_LucNotEnoughMons::
-	.string "LUC: I don't want to if I can't\n"
-	.string "battle you with my big sis.\p"
+	.string "LUC: I only fight with my big sis.\p"
 	.string "Don't you have two POKéMON?$"

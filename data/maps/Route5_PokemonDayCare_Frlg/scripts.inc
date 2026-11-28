@@ -4,8 +4,9 @@ Route5_PokemonDayCare_Frlg_MapScripts::
 	.byte 0
 
 Route5_PokemonDayCare_Text_WantMeToRaiseMon::
-	.string "I run the DAY-CARE service.\p"
-	.string "Would you like me to raise one of\n"
+	.string "I run the DAY-CARE.\p"
+	.string "Safer here than out with the\n"
+	.string "gangs. Want me to raise one of\p"
 	.string "your POKéMON?$"
 
 Route5_PokemonDayCare_Text_ComeAgain::
@@ -20,19 +21,20 @@ Route5_PokemonDayCare_Text_ComeAnytimeYouLike::
 
 Route5_PokemonDayCare_Text_LookAfterMonForAWhile::
 	.string "Fine, I'll look after your\n"
-	.string "{STR_VAR_1} for a while.$"
+	.string "{STR_VAR_1}. No gang gets past\p"
+	.string "me!$"
 
 Route5_PokemonDayCare_Text_ComeSeeMeInAWhile::
 	.string "Come see me in a while.$"
 
 Route5_PokemonDayCare_Text_MonNeedsToSpendMoreTime::
-	.string "You're back already?\p"
+	.string "Back already?\p"
 	.string "Your {STR_VAR_1} needs to spend\n"
-	.string "some more time with me.$"
+	.string "more time with me.$"
 
 Route5_PokemonDayCare_Text_OweMeXForMonsReturn::
-	.string "You owe me ¥{STR_VAR_2} for the return\n"
-	.string "of this POKéMON.$"
+	.string "That'll be ¥{STR_VAR_2}.\n"
+	.string "Protection isn't free.$"
 
 Route5_PokemonDayCare_Text_ThankYouHeresMon::
 	.string "Thank you!\n"
@@ -48,13 +50,13 @@ Route5_PokemonDayCare_Text_OnlyHaveOneMonWithYou::
 
 Route5_PokemonDayCare_Text_WhatWillYouBattleWith::
 	.string "If you leave me that POKéMON,\n"
-	.string "what will you battle with?$"
+	.string "what will you fight the gangs\p"
+	.string "with?$"
 
 Route5_PokemonDayCare_Text_MonHasGrownByXLevels::
-	.string "Your {STR_VAR_1} has grown a lot.\n"
-	.string "Yes, quite a lot, I'd say.\p"
-	.string "Let me see…\n"
-	.string "By level, it's grown by {STR_VAR_2}.\p"
+	.string "Your {STR_VAR_1} has grown a lot.\p"
+	.string "Let me see… It's grown by\n"
+	.string "{STR_VAR_2} levels.\p"
 	.string "Aren't I great?$"
 
 Route5_PokemonDayCare_Text_YouveGotNoRoomForIt::

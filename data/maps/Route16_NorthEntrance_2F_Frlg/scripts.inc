@@ -60,32 +60,30 @@ Route16_NorthEntrance_2F_Text_RidingTogetherOnNewBikes::
 	.string "TEAM SKULL!$"
 
 Route16_NorthEntrance_2F_Text_ItsCeladonDeptStore::
-	.string "Let's see what the binoculars have\n"
-	.string "to show…\p"
-	.string "It's the CELADON DEPT. STORE!$"
+	.string "Let's look through the\n"
+	.string "binoculars…\p"
+	.string "It's the CELADON DEPT. STORE!\n"
+	.string "There's an AQUA flag on the roof!$"
 
 Route16_NorthEntrance_2F_Text_LongPathOverWater::
-	.string "Let's see what the binoculars have\n"
-	.string "to show…\p"
-	.string "There's a long path over water far\n"
-	.string "away.$"
+	.string "Let's look through the\n"
+	.string "binoculars…\p"
+	.string "A long path over water. TEAM MAGMA\n"
+	.string "patrols it.$"
 
 Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
-	.string "Hi! Remember me?\n"
-	.string "I'm one of PROF. OAK's AIDES.\p"
-	.string "If your POKéDEX has complete data\n"
-	.string "on 40 species, I'm supposed to\l"
-	.string "give you a reward.\p"
-	.string "PROF. OAK entrusted me with an\n"
-	.string "AMULET COIN for you.\p"
+	.string "Hi! I'm one of PROF. OAK's AIDES.\p"
+	.string "If your POKéDEX has data on 40\n"
+	.string "species, I have a reward.\p"
+	.string "PROF. OAK left an AMULET COIN for\n"
+	.string "you.\p"
 	.string "So, {PLAYER}, let me ask you.\p"
-	.string "Have you gathered data on at least\n"
-	.string "40 kinds of POKéMON?$"
+	.string "Have you gathered data on at\n"
+	.string "least 40 kinds of POKéMON?$"
 
 Route16_NorthEntrance_2F_Text_GreatHereYouGo::
 	.string "Great! You have caught or owned\n"
 	.string "{STR_VAR_3} kinds of POKéMON!\p"
-	.string "Congratulations!\n"
 	.string "Here you go!$"
 
 Route16_NorthEntrance_2F_Text_ReceivedAmuletCoinFromAide::
@@ -93,8 +91,8 @@ Route16_NorthEntrance_2F_Text_ReceivedAmuletCoinFromAide::
 	.string "from the AIDE.$"
 
 Route16_NorthEntrance_2F_Text_ExplainAmuletCoin::
-	.string "An AMULET COIN is an item to be\n"
-	.string "held by a POKéMON.\p"
-	.string "If the POKéMON appears in a winning\n"
-	.string "battle, you will earn more money.$"
+	.string "A POKéMON holds the AMULET COIN.\p"
+	.string "If it takes part in a winning\n"
+	.string "battle, you earn more money.\p"
+	.string "Gangster money!$"
 
